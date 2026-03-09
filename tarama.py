@@ -206,11 +206,8 @@ def tarama_yap():
                 if uc_siyah_karga(v): sinyaller.append("3 Siyah Karga")
                 if kara_bulut_ortusu(v): sinyaller.append("Kara Bulut Örtüsü")
 
-                altin_skor = len(sinyaller)
-                if altin_skor >= 7: altin = "🥇 Altın"
-                elif altin_skor >= 5: altin = "🥈 Gümüş"
-                elif altin_skor >= 3: altin = "🥉 Bronz"
-                else: altin = None
+                ayi_sinyaller = ["MACD Sat Kesişimi","MACD Negatif","Fiyat EMA20 Altında","EMA20 < EMA50","Death Cross","Yutan Ayı","Asılan Adam","Akşam Yıldızı","Ayı Harami","3 Siyah Karga","Kara Bulut Örtüsü","RSI Aşırı Alım","BB Üst Bant"]
+                altin_skor = len([s for s in sinyaller if s not in ayi_sinyaller])
 
                 if sinyaller:
                     sonuclar[ad] = {
