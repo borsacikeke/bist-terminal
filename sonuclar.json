@@ -1,14 +1,14 @@
 {
-  "tarih": "2026-03-09 18:12",
+  "tarih": "2026-03-09 18:15",
   "hisseler": {
     "A1CAP": {
-      "kapanis": 16.34,
-      "rsi": 49.68,
+      "kapanis": 16.31,
+      "rsi": 49.49,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.01,
+      "hacim_orani": 1.02,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -20,13 +20,13 @@
       "altin": null
     },
     "A1YEN": {
-      "kapanis": 29.58,
-      "rsi": 44.85,
+      "kapanis": 29.6,
+      "rsi": 44.97,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.59,
+      "hacim_orani": 0.62,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -36,13 +36,13 @@
       "altin": null
     },
     "ACSEL": {
-      "kapanis": 102.6,
-      "rsi": 43.35,
+      "kapanis": 102.5,
+      "rsi": 43.18,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": true,
       "bb_alt_bant": false,
-      "hacim_orani": 0.74,
+      "hacim_orani": 0.75,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -53,20 +53,19 @@
       "altin": null
     },
     "ADEL": {
-      "kapanis": 32.76,
-      "rsi": 42.59,
+      "kapanis": 32.7,
+      "rsi": 42.32,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.6,
+      "hacim_orani": 0.61,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
-        "EMA20 < EMA50",
-        "Delikli Bulut"
+        "EMA20 < EMA50"
       ],
-      "sinyal_sayisi": 1,
+      "sinyal_sayisi": 0,
       "altin": null
     },
     "ADESE": {
@@ -86,8 +85,8 @@
       "altin": null
     },
     "ADGYO": {
-      "kapanis": 50.45,
-      "rsi": 33.32,
+      "kapanis": 50.7,
+      "rsi": 33.77,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -102,13 +101,13 @@
       "altin": null
     },
     "AFYON": {
-      "kapanis": 15.16,
-      "rsi": 57.81,
+      "kapanis": 15.2,
+      "rsi": 58.32,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.26,
+      "hacim_orani": 1.32,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -121,13 +120,13 @@
       "altin": "Gumus"
     },
     "AGESA": {
-      "kapanis": 210.2,
-      "rsi": 30.41,
+      "kapanis": 210.1,
+      "rsi": 30.35,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.74,
+      "hacim_orani": 0.75,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -143,7 +142,7 @@
       "golden_cross": false,
       "death_cross": true,
       "bb_alt_bant": true,
-      "hacim_orani": 0.81,
+      "hacim_orani": 0.83,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -162,7 +161,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.42,
+      "hacim_orani": 0.43,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -172,20 +171,19 @@
       "altin": null
     },
     "AHGAZ": {
-      "kapanis": 23.52,
-      "rsi": 40.15,
+      "kapanis": 23.66,
+      "rsi": 41.17,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
-      "bb_alt_bant": true,
-      "hacim_orani": 0.4,
+      "bb_alt_bant": false,
+      "hacim_orani": 0.41,
       "sinyaller": [
         "MACD Negatif",
-        "BB Alt Bant",
         "Fiyat EMA20 Altinda",
         "EMA20 > EMA50"
       ],
-      "sinyal_sayisi": 2,
+      "sinyal_sayisi": 1,
       "altin": null
     },
     "AHSGY": {
@@ -207,13 +205,13 @@
       "altin": null
     },
     "AKCNS": {
-      "kapanis": 202.8,
-      "rsi": 49.92,
+      "kapanis": 202.4,
+      "rsi": 49.42,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": true,
-      "hacim_orani": 0.5,
+      "hacim_orani": 0.51,
       "sinyaller": [
         "MACD Negatif",
         "BB Alt Bant",
@@ -225,30 +223,29 @@
       "altin": null
     },
     "AKENR": {
-      "kapanis": 9.78,
-      "rsi": 31.23,
+      "kapanis": 9.81,
+      "rsi": 31.6,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
-      "bb_alt_bant": true,
-      "hacim_orani": 0.61,
+      "bb_alt_bant": false,
+      "hacim_orani": 0.62,
       "sinyaller": [
         "MACD Negatif",
-        "BB Alt Bant",
         "Fiyat EMA20 Altinda",
         "EMA20 < EMA50"
       ],
-      "sinyal_sayisi": 1,
+      "sinyal_sayisi": 0,
       "altin": null
     },
     "AKFGY": {
-      "kapanis": 2.8,
-      "rsi": 41.59,
+      "kapanis": 2.78,
+      "rsi": 40.37,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": true,
       "bb_alt_bant": false,
-      "hacim_orani": 0.59,
+      "hacim_orani": 0.6,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -259,13 +256,13 @@
       "altin": null
     },
     "AKFIS": {
-      "kapanis": 32.18,
-      "rsi": 65.47,
+      "kapanis": 32.94,
+      "rsi": 66.84,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 2.17,
+      "hacim_orani": 2.22,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -277,13 +274,13 @@
       "altin": "Gumus"
     },
     "AKFYE": {
-      "kapanis": 20.18,
-      "rsi": 61.87,
+      "kapanis": 20.26,
+      "rsi": 62.31,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 2.03,
+      "hacim_orani": 2.04,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -295,8 +292,8 @@
       "altin": "Gumus"
     },
     "AKGRT": {
-      "kapanis": 7.34,
-      "rsi": 34.4,
+      "kapanis": 7.33,
+      "rsi": 34.19,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -318,7 +315,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.96,
+      "hacim_orani": 0.97,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -328,13 +325,13 @@
       "altin": null
     },
     "AKSEN": {
-      "kapanis": 67.5,
-      "rsi": 44.94,
+      "kapanis": 67.3,
+      "rsi": 44.33,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.71,
+      "hacim_orani": 0.73,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -344,13 +341,13 @@
       "altin": null
     },
     "AKSGY": {
-      "kapanis": 8.22,
-      "rsi": 44.67,
+      "kapanis": 8.23,
+      "rsi": 44.95,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": true,
       "bb_alt_bant": false,
-      "hacim_orani": 0.57,
+      "hacim_orani": 0.61,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -364,13 +361,13 @@
       "altin": null
     },
     "AKSUE": {
-      "kapanis": 26.74,
-      "rsi": 64.1,
+      "kapanis": 26.86,
+      "rsi": 64.6,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.73,
+      "hacim_orani": 0.74,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -380,13 +377,13 @@
       "altin": "Bronz"
     },
     "AKYHO": {
-      "kapanis": 2.52,
-      "rsi": 33.06,
+      "kapanis": 2.53,
+      "rsi": 33.5,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.81,
+      "hacim_orani": 0.82,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -396,8 +393,8 @@
       "altin": null
     },
     "ALARK": {
-      "kapanis": 92.75,
-      "rsi": 25.99,
+      "kapanis": 92.8,
+      "rsi": 26.05,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -413,32 +410,30 @@
       "altin": null
     },
     "ALCAR": {
-      "kapanis": 751.5,
-      "rsi": 27.07,
+      "kapanis": 747.0,
+      "rsi": 26.5,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.54,
+      "hacim_orani": 0.55,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
-        "EMA20 < EMA50",
-        "Cekic",
-        "Asilan Adam"
+        "EMA20 < EMA50"
       ],
-      "sinyal_sayisi": 2,
+      "sinyal_sayisi": 1,
       "altin": null
     },
     "ALCTL": {
-      "kapanis": 117.0,
-      "rsi": 36.52,
+      "kapanis": 116.9,
+      "rsi": 36.45,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": true,
-      "hacim_orani": 0.39,
+      "hacim_orani": 0.4,
       "sinyaller": [
         "MACD Negatif",
         "BB Alt Bant",
@@ -449,13 +444,13 @@
       "altin": null
     },
     "ALFAS": {
-      "kapanis": 36.64,
-      "rsi": 28.24,
+      "kapanis": 36.76,
+      "rsi": 28.62,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.74,
+      "hacim_orani": 0.76,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -466,13 +461,13 @@
       "altin": null
     },
     "ALGYO": {
-      "kapanis": 5.0,
-      "rsi": 46.04,
+      "kapanis": 5.01,
+      "rsi": 46.29,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": true,
       "bb_alt_bant": false,
-      "hacim_orani": 0.89,
+      "hacim_orani": 0.9,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -484,13 +479,13 @@
       "altin": null
     },
     "ALKA": {
-      "kapanis": 10.45,
-      "rsi": 33.05,
+      "kapanis": 10.43,
+      "rsi": 32.89,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.31,
+      "hacim_orani": 0.32,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -500,13 +495,13 @@
       "altin": null
     },
     "ALKIM": {
-      "kapanis": 16.55,
-      "rsi": 26.52,
+      "kapanis": 16.58,
+      "rsi": 26.74,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.48,
+      "hacim_orani": 0.49,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -517,13 +512,13 @@
       "altin": null
     },
     "ALKLC": {
-      "kapanis": 272.25,
-      "rsi": 58.16,
+      "kapanis": 273.5,
+      "rsi": 58.78,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.03,
+      "hacim_orani": 1.05,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Ustunde",
@@ -539,7 +534,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.07,
+      "hacim_orani": 1.08,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -555,7 +550,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.44,
+      "hacim_orani": 0.45,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -566,13 +561,13 @@
       "altin": null
     },
     "ANELE": {
-      "kapanis": 14.09,
-      "rsi": 31.18,
+      "kapanis": 14.04,
+      "rsi": 30.77,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.39,
+      "hacim_orani": 0.4,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -582,13 +577,13 @@
       "altin": null
     },
     "ANGEN": {
-      "kapanis": 10.07,
-      "rsi": 32.72,
+      "kapanis": 10.09,
+      "rsi": 32.97,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.45,
+      "hacim_orani": 0.47,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -598,13 +593,13 @@
       "altin": null
     },
     "ANHYT": {
-      "kapanis": 108.3,
-      "rsi": 38.56,
+      "kapanis": 108.6,
+      "rsi": 39.03,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.57,
+      "hacim_orani": 0.59,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -614,29 +609,29 @@
       "altin": null
     },
     "ANSGR": {
-      "kapanis": 26.42,
-      "rsi": 49.95,
+      "kapanis": 26.38,
+      "rsi": 49.54,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.68,
+      "hacim_orani": 0.69,
       "sinyaller": [
         "MACD Negatif",
-        "Fiyat EMA20 Ustunde",
+        "Fiyat EMA20 Altinda",
         "EMA20 > EMA50"
       ],
-      "sinyal_sayisi": 2,
+      "sinyal_sayisi": 1,
       "altin": null
     },
     "ARASE": {
-      "kapanis": 83.25,
-      "rsi": 52.11,
+      "kapanis": 83.3,
+      "rsi": 52.3,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.66,
+      "hacim_orani": 0.67,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -647,13 +642,13 @@
       "altin": null
     },
     "ARCLK": {
-      "kapanis": 107.8,
-      "rsi": 35.87,
+      "kapanis": 107.7,
+      "rsi": 35.76,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": true,
       "bb_alt_bant": false,
-      "hacim_orani": 0.48,
+      "hacim_orani": 0.49,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -664,8 +659,8 @@
       "altin": null
     },
     "ARDYZ": {
-      "kapanis": 39.38,
-      "rsi": 42.73,
+      "kapanis": 39.34,
+      "rsi": 42.61,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -674,21 +669,19 @@
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
-        "EMA20 < EMA50",
-        "Cekic",
-        "Asilan Adam"
+        "EMA20 < EMA50"
       ],
-      "sinyal_sayisi": 1,
+      "sinyal_sayisi": 0,
       "altin": null
     },
     "ARENA": {
-      "kapanis": 24.1,
-      "rsi": 27.17,
+      "kapanis": 23.98,
+      "rsi": 26.67,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.55,
+      "hacim_orani": 0.56,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -699,8 +692,8 @@
       "altin": null
     },
     "ARMGD": {
-      "kapanis": 78.45,
-      "rsi": 45.16,
+      "kapanis": 78.1,
+      "rsi": 44.54,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -715,13 +708,13 @@
       "altin": null
     },
     "ARSAN": {
-      "kapanis": 3.49,
-      "rsi": 36.27,
+      "kapanis": 3.51,
+      "rsi": 36.68,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.29,
+      "hacim_orani": 0.3,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -731,8 +724,8 @@
       "altin": null
     },
     "ARTMS": {
-      "kapanis": 34.7,
-      "rsi": 35.89,
+      "kapanis": 34.62,
+      "rsi": 35.68,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -754,7 +747,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.99,
+      "hacim_orani": 1.0,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Ustunde",
@@ -765,13 +758,13 @@
       "altin": "Bronz"
     },
     "ASELS": {
-      "kapanis": 320.75,
-      "rsi": 54.01,
+      "kapanis": 321.0,
+      "rsi": 54.12,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.71,
+      "hacim_orani": 0.72,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -781,13 +774,13 @@
       "altin": "Bronz"
     },
     "ASGYO": {
-      "kapanis": 11.06,
-      "rsi": 44.73,
+      "kapanis": 11.04,
+      "rsi": 44.24,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.58,
+      "hacim_orani": 0.6,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -797,13 +790,13 @@
       "altin": null
     },
     "ASTOR": {
-      "kapanis": 179.6,
-      "rsi": 55.6,
+      "kapanis": 180.5,
+      "rsi": 56.21,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.72,
+      "hacim_orani": 0.74,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Ustunde",
@@ -813,13 +806,13 @@
       "altin": null
     },
     "ASUZU": {
-      "kapanis": 64.55,
-      "rsi": 46.08,
+      "kapanis": 64.65,
+      "rsi": 46.42,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.84,
+      "hacim_orani": 0.86,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -829,13 +822,13 @@
       "altin": null
     },
     "ATAKP": {
-      "kapanis": 52.55,
-      "rsi": 35.24,
+      "kapanis": 52.6,
+      "rsi": 35.35,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.5,
+      "hacim_orani": 0.51,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -845,13 +838,13 @@
       "altin": null
     },
     "ATATP": {
-      "kapanis": 148.1,
-      "rsi": 44.84,
+      "kapanis": 147.5,
+      "rsi": 44.53,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.01,
+      "hacim_orani": 1.02,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -861,13 +854,13 @@
       "altin": null
     },
     "AVGYO": {
-      "kapanis": 12.72,
-      "rsi": 49.95,
+      "kapanis": 12.68,
+      "rsi": 49.52,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.3,
+      "hacim_orani": 0.31,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -877,8 +870,8 @@
       "altin": null
     },
     "AVHOL": {
-      "kapanis": 35.14,
-      "rsi": 35.66,
+      "kapanis": 35.24,
+      "rsi": 36.05,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -895,13 +888,13 @@
       "altin": null
     },
     "AVOD": {
-      "kapanis": 4.75,
-      "rsi": 53.4,
+      "kapanis": 4.77,
+      "rsi": 53.84,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.17,
+      "hacim_orani": 1.18,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -912,13 +905,13 @@
       "altin": "Bronz"
     },
     "AVPGY": {
-      "kapanis": 48.36,
-      "rsi": 27.47,
+      "kapanis": 48.56,
+      "rsi": 28.0,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.82,
+      "hacim_orani": 0.84,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -929,33 +922,32 @@
       "altin": null
     },
     "AYCES": {
-      "kapanis": 607.0,
-      "rsi": 74.74,
+      "kapanis": 596.0,
+      "rsi": 73.23,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 3.58,
+      "hacim_orani": 3.65,
       "sinyaller": [
         "RSI Asiri Alim",
         "MACD Pozitif",
         "BB Ust Bant",
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
-        "Anormal Hacim 3.58x",
-        "3 Beyaz Asker"
+        "Anormal Hacim 3.65x"
       ],
-      "sinyal_sayisi": 5,
-      "altin": "Gumus"
+      "sinyal_sayisi": 4,
+      "altin": "Bronz"
     },
     "AYDEM": {
-      "kapanis": 27.72,
-      "rsi": 65.35,
+      "kapanis": 27.58,
+      "rsi": 64.69,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.41,
+      "hacim_orani": 1.42,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -968,13 +960,13 @@
       "altin": "Gumus"
     },
     "AYEN": {
-      "kapanis": 28.94,
-      "rsi": 57.25,
+      "kapanis": 28.98,
+      "rsi": 57.48,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 2.37,
+      "hacim_orani": 2.4,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Ustunde",
@@ -985,18 +977,18 @@
       "altin": "Bronz"
     },
     "AYGAZ": {
-      "kapanis": 247.8,
-      "rsi": 54.62,
+      "kapanis": 247.5,
+      "rsi": 54.36,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 3.12,
+      "hacim_orani": 3.13,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
-        "Anormal Hacim 3.12x",
+        "Anormal Hacim 3.13x",
         "Yutan Ayi",
         "Aksam Yildizi"
       ],
@@ -1004,8 +996,8 @@
       "altin": "Bronz"
     },
     "AZTEK": {
-      "kapanis": 4.24,
-      "rsi": 43.39,
+      "kapanis": 4.23,
+      "rsi": 43.11,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -1020,32 +1012,31 @@
       "altin": null
     },
     "BAGFS": {
-      "kapanis": 32.74,
-      "rsi": 52.3,
+      "kapanis": 33.06,
+      "rsi": 53.11,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 4.29,
+      "hacim_orani": 4.31,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
-        "Anormal Hacim 4.29x",
-        "Ters Cekic",
+        "Anormal Hacim 4.31x",
         "3 Siyah Karga"
       ],
-      "sinyal_sayisi": 5,
-      "altin": "Gumus"
+      "sinyal_sayisi": 4,
+      "altin": "Bronz"
     },
     "BAHKM": {
-      "kapanis": 117.0,
-      "rsi": 53.02,
+      "kapanis": 116.3,
+      "rsi": 52.34,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.37,
+      "hacim_orani": 0.38,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Ustunde",
@@ -1055,8 +1046,8 @@
       "altin": null
     },
     "BAKAB": {
-      "kapanis": 37.18,
-      "rsi": 40.61,
+      "kapanis": 37.14,
+      "rsi": 40.42,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -1088,13 +1079,13 @@
       "altin": null
     },
     "BALSU": {
-      "kapanis": 13.97,
-      "rsi": 28.67,
+      "kapanis": 13.96,
+      "rsi": 28.5,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.45,
+      "hacim_orani": 0.46,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -1105,8 +1096,8 @@
       "altin": null
     },
     "BANVT": {
-      "kapanis": 152.2,
-      "rsi": 28.04,
+      "kapanis": 151.8,
+      "rsi": 27.72,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -1122,8 +1113,8 @@
       "altin": null
     },
     "BARMA": {
-      "kapanis": 42.36,
-      "rsi": 47.49,
+      "kapanis": 42.18,
+      "rsi": 46.98,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -1156,13 +1147,13 @@
       "altin": null
     },
     "BASGZ": {
-      "kapanis": 45.94,
-      "rsi": 43.99,
+      "kapanis": 46.0,
+      "rsi": 44.33,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.06,
+      "hacim_orani": 1.08,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -1172,8 +1163,8 @@
       "altin": null
     },
     "BAYRK": {
-      "kapanis": 4.43,
-      "rsi": 42.65,
+      "kapanis": 4.41,
+      "rsi": 42.22,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
@@ -1195,7 +1186,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.57,
+      "hacim_orani": 0.58,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -1205,13 +1196,13 @@
       "altin": null
     },
     "BERA": {
-      "kapanis": 20.04,
-      "rsi": 62.06,
+      "kapanis": 20.18,
+      "rsi": 62.75,
       "macd_pozitif": true,
       "golden_cross": true,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.28,
+      "hacim_orani": 1.33,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -1221,16 +1212,16 @@
         "3 Beyaz Asker"
       ],
       "sinyal_sayisi": 6,
-      "altin": "Gumus"
+      "altin": "Altin"
     },
     "BESLR": {
-      "kapanis": 14.3,
-      "rsi": 47.89,
+      "kapanis": 14.36,
+      "rsi": 48.54,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.44,
+      "hacim_orani": 1.46,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -1241,8 +1232,8 @@
       "altin": null
     },
     "BEYAZ": {
-      "kapanis": 27.42,
-      "rsi": 40.76,
+      "kapanis": 27.38,
+      "rsi": 40.6,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -1257,13 +1248,13 @@
       "altin": null
     },
     "BFREN": {
-      "kapanis": 140.2,
-      "rsi": 26.96,
+      "kapanis": 140.0,
+      "rsi": 26.78,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.68,
+      "hacim_orani": 0.69,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -1274,13 +1265,13 @@
       "altin": null
     },
     "BIENY": {
-      "kapanis": 22.16,
-      "rsi": 41.3,
+      "kapanis": 22.22,
+      "rsi": 41.55,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.69,
+      "hacim_orani": 0.71,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -1290,8 +1281,8 @@
       "altin": null
     },
     "BIGCH": {
-      "kapanis": 7.03,
-      "rsi": 23.03,
+      "kapanis": 7.07,
+      "rsi": 24.0,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -1313,7 +1304,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.47,
+      "hacim_orani": 0.48,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -1323,13 +1314,13 @@
       "altin": null
     },
     "BIMAS": {
-      "kapanis": 638.5,
-      "rsi": 41.82,
+      "kapanis": 639.0,
+      "rsi": 42.0,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.76,
+      "hacim_orani": 0.77,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -1340,29 +1331,30 @@
       "altin": null
     },
     "BINBN": {
-      "kapanis": 162.3,
-      "rsi": 39.63,
+      "kapanis": 162.4,
+      "rsi": 39.79,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.33,
+      "hacim_orani": 0.34,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
-        "EMA20 < EMA50"
+        "EMA20 < EMA50",
+        "Yutan Boga"
       ],
-      "sinyal_sayisi": 0,
+      "sinyal_sayisi": 1,
       "altin": null
     },
     "BINHO": {
-      "kapanis": 8.17,
-      "rsi": 33.14,
+      "kapanis": 8.19,
+      "rsi": 33.36,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.44,
+      "hacim_orani": 0.45,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -1372,29 +1364,30 @@
       "altin": null
     },
     "BIOEN": {
-      "kapanis": 16.51,
-      "rsi": 43.15,
+      "kapanis": 16.56,
+      "rsi": 43.51,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.57,
+      "hacim_orani": 0.58,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
-        "EMA20 < EMA50"
+        "EMA20 < EMA50",
+        "Ayi Harami"
       ],
       "sinyal_sayisi": 0,
       "altin": null
     },
     "BIZIM": {
-      "kapanis": 27.42,
-      "rsi": 36.05,
+      "kapanis": 27.26,
+      "rsi": 35.42,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.22,
+      "hacim_orani": 1.23,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -1410,20 +1403,20 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 3.3,
+      "hacim_orani": 3.31,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
         "EMA20 < EMA50",
-        "Anormal Hacim 3.3x",
+        "Anormal Hacim 3.31x",
         "3 Beyaz Asker"
       ],
       "sinyal_sayisi": 5,
       "altin": "Gumus"
     },
     "BLUME": {
-      "kapanis": 47.1,
+      "kapanis": 47.16,
       "rsi": 0.0,
       "macd_pozitif": false,
       "golden_cross": false,
@@ -1441,13 +1434,13 @@
       "altin": null
     },
     "BMSCH": {
-      "kapanis": 18.73,
-      "rsi": 55.93,
+      "kapanis": 18.76,
+      "rsi": 56.18,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.56,
+      "hacim_orani": 0.57,
       "sinyaller": [
         "MACD Pozitif",
         "BB Ust Bant",
@@ -1458,13 +1451,13 @@
       "altin": null
     },
     "BMSTL": {
-      "kapanis": 80.25,
-      "rsi": 43.76,
+      "kapanis": 80.65,
+      "rsi": 44.17,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.48,
+      "hacim_orani": 1.51,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -1475,20 +1468,19 @@
       "altin": null
     },
     "BNTAS": {
-      "kapanis": 6.41,
-      "rsi": 43.46,
+      "kapanis": 6.4,
+      "rsi": 43.14,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.52,
+      "hacim_orani": 1.54,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
-        "EMA20 < EMA50",
-        "Yutan Boga"
+        "EMA20 < EMA50"
       ],
-      "sinyal_sayisi": 1,
+      "sinyal_sayisi": 0,
       "altin": null
     },
     "BOBET": {
@@ -1498,7 +1490,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.89,
+      "hacim_orani": 0.9,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -1508,13 +1500,13 @@
       "altin": null
     },
     "BORLS": {
-      "kapanis": 2.89,
-      "rsi": 46.15,
+      "kapanis": 2.88,
+      "rsi": 45.82,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.82,
+      "hacim_orani": 0.83,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Altinda",
@@ -1525,13 +1517,13 @@
       "altin": null
     },
     "BORSK": {
-      "kapanis": 5.79,
-      "rsi": 39.1,
+      "kapanis": 5.81,
+      "rsi": 39.48,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.53,
+      "hacim_orani": 0.54,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -1541,8 +1533,8 @@
       "altin": null
     },
     "BOSSA": {
-      "kapanis": 6.33,
-      "rsi": 39.07,
+      "kapanis": 6.34,
+      "rsi": 39.37,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -1557,13 +1549,13 @@
       "altin": null
     },
     "BRISA": {
-      "kapanis": 85.55,
-      "rsi": 39.79,
+      "kapanis": 85.65,
+      "rsi": 40.04,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.94,
+      "hacim_orani": 1.97,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -1573,29 +1565,29 @@
       "altin": null
     },
     "BRKSN": {
-      "kapanis": 8.8,
-      "rsi": 50.98,
+      "kapanis": 8.85,
+      "rsi": 51.94,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.72,
+      "hacim_orani": 0.73,
       "sinyaller": [
         "MACD Negatif",
-        "Fiyat EMA20 Altinda",
+        "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50"
       ],
-      "sinyal_sayisi": 1,
+      "sinyal_sayisi": 2,
       "altin": null
     },
     "BRKVY": {
-      "kapanis": 86.55,
-      "rsi": 33.77,
+      "kapanis": 86.4,
+      "rsi": 33.65,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.44,
+      "hacim_orani": 0.46,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -1605,13 +1597,13 @@
       "altin": null
     },
     "BRLSM": {
-      "kapanis": 14.74,
-      "rsi": 42.19,
+      "kapanis": 14.75,
+      "rsi": 42.26,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.9,
+      "hacim_orani": 0.92,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -1621,13 +1613,13 @@
       "altin": null
     },
     "BRSAN": {
-      "kapanis": 491.75,
-      "rsi": 29.99,
+      "kapanis": 490.75,
+      "rsi": 29.79,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.01,
+      "hacim_orani": 1.02,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -1638,8 +1630,8 @@
       "altin": null
     },
     "BRYAT": {
-      "kapanis": 2147.0,
-      "rsi": 38.05,
+      "kapanis": 2145.0,
+      "rsi": 37.96,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": true,
@@ -1655,13 +1647,13 @@
       "altin": null
     },
     "BSOKE": {
-      "kapanis": 32.72,
-      "rsi": 72.33,
+      "kapanis": 32.76,
+      "rsi": 72.65,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.88,
+      "hacim_orani": 0.89,
       "sinyaller": [
         "RSI Asiri Alim",
         "MACD Al Kesisimi",
@@ -1674,26 +1666,24 @@
       "altin": "Bronz"
     },
     "BTCIM": {
-      "kapanis": 5.41,
-      "rsi": 66.07,
+      "kapanis": 5.42,
+      "rsi": 66.64,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.24,
+      "hacim_orani": 1.28,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "EMA20 > EMA50",
-        "Cekic",
-        "Asilan Adam"
+        "EMA20 > EMA50"
       ],
-      "sinyal_sayisi": 4,
+      "sinyal_sayisi": 3,
       "altin": "Bronz"
     },
     "BUCIM": {
-      "kapanis": 6.09,
-      "rsi": 30.18,
+      "kapanis": 6.1,
+      "rsi": 30.4,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -1710,13 +1700,13 @@
       "altin": null
     },
     "BULGS": {
-      "kapanis": 40.2,
-      "rsi": 31.44,
+      "kapanis": 40.24,
+      "rsi": 31.52,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": true,
-      "hacim_orani": 0.73,
+      "hacim_orani": 0.75,
       "sinyaller": [
         "MACD Negatif",
         "BB Alt Bant",
@@ -1745,13 +1735,13 @@
       "altin": null
     },
     "BURVA": {
-      "kapanis": 982.0,
-      "rsi": 72.48,
+      "kapanis": 975.0,
+      "rsi": 72.14,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.76,
+      "hacim_orani": 0.77,
       "sinyaller": [
         "RSI Asiri Alim",
         "MACD Pozitif",
@@ -1764,13 +1754,13 @@
       "altin": "Bronz"
     },
     "BVSAN": {
-      "kapanis": 104.4,
-      "rsi": 38.56,
+      "kapanis": 104.5,
+      "rsi": 38.69,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.49,
+      "hacim_orani": 0.5,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -1782,8 +1772,8 @@
       "altin": null
     },
     "BYDNR": {
-      "kapanis": 35.84,
-      "rsi": 56.34,
+      "kapanis": 35.02,
+      "rsi": 53.99,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -1799,13 +1789,13 @@
       "altin": "Bronz"
     },
     "CANTE": {
-      "kapanis": 1.47,
-      "rsi": 26.63,
+      "kapanis": 1.46,
+      "rsi": 26.12,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.95,
+      "hacim_orani": 0.96,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -1834,13 +1824,13 @@
       "altin": "Bronz"
     },
     "CCOLA": {
-      "kapanis": 68.4,
-      "rsi": 42.2,
+      "kapanis": 68.5,
+      "rsi": 42.4,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.98,
+      "hacim_orani": 1.04,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -1850,13 +1840,13 @@
       "altin": null
     },
     "CELHA": {
-      "kapanis": 9.82,
-      "rsi": 40.0,
+      "kapanis": 9.87,
+      "rsi": 40.62,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.42,
+      "hacim_orani": 0.43,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -1872,7 +1862,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.3,
+      "hacim_orani": 0.31,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -1882,8 +1872,8 @@
       "altin": null
     },
     "CEMTS": {
-      "kapanis": 10.23,
-      "rsi": 26.33,
+      "kapanis": 10.22,
+      "rsi": 26.23,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -1899,8 +1889,8 @@
       "altin": null
     },
     "CEMZY": {
-      "kapanis": 56.1,
-      "rsi": 50.54,
+      "kapanis": 56.0,
+      "rsi": 50.38,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -1915,8 +1905,8 @@
       "altin": null
     },
     "CEOEM": {
-      "kapanis": 20.4,
-      "rsi": 35.64,
+      "kapanis": 20.44,
+      "rsi": 36.19,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -1931,13 +1921,13 @@
       "altin": null
     },
     "CGCAM": {
-      "kapanis": 36.54,
-      "rsi": 47.23,
+      "kapanis": 36.62,
+      "rsi": 47.58,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.94,
+      "hacim_orani": 0.95,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -1947,13 +1937,13 @@
       "altin": null
     },
     "CIMSA": {
-      "kapanis": 47.28,
-      "rsi": 38.74,
+      "kapanis": 47.12,
+      "rsi": 38.33,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.76,
+      "hacim_orani": 0.77,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -1963,13 +1953,13 @@
       "altin": null
     },
     "CLEBI": {
-      "kapanis": 1725.0,
-      "rsi": 45.97,
+      "kapanis": 1728.0,
+      "rsi": 46.26,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.63,
+      "hacim_orani": 0.65,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -1979,13 +1969,13 @@
       "altin": null
     },
     "CMBTN": {
-      "kapanis": 1702.0,
-      "rsi": 34.02,
+      "kapanis": 1704.0,
+      "rsi": 34.15,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.53,
+      "hacim_orani": 0.54,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -1995,8 +1985,8 @@
       "altin": null
     },
     "CONSE": {
-      "kapanis": 3.21,
-      "rsi": 44.18,
+      "kapanis": 3.22,
+      "rsi": 44.63,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -2005,20 +1995,19 @@
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
-        "EMA20 > EMA50",
-        "Delikli Bulut"
+        "EMA20 > EMA50"
       ],
-      "sinyal_sayisi": 2,
+      "sinyal_sayisi": 1,
       "altin": null
     },
     "COSMO": {
-      "kapanis": 186.8,
-      "rsi": 32.68,
+      "kapanis": 186.9,
+      "rsi": 32.71,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.65,
+      "hacim_orani": 0.66,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -2028,8 +2017,8 @@
       "altin": null
     },
     "CRFSA": {
-      "kapanis": 125.4,
-      "rsi": 45.42,
+      "kapanis": 125.0,
+      "rsi": 44.91,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -2038,15 +2027,14 @@
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
-        "EMA20 > EMA50",
-        "Yutan Boga"
+        "EMA20 > EMA50"
       ],
-      "sinyal_sayisi": 2,
+      "sinyal_sayisi": 1,
       "altin": null
     },
     "CUSAN": {
-      "kapanis": 22.6,
-      "rsi": 39.52,
+      "kapanis": 22.54,
+      "rsi": 39.31,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -2061,13 +2049,13 @@
       "altin": null
     },
     "CVKMD": {
-      "kapanis": 31.82,
-      "rsi": 43.73,
+      "kapanis": 31.88,
+      "rsi": 43.84,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.65,
+      "hacim_orani": 0.66,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -2077,8 +2065,8 @@
       "altin": null
     },
     "CWENE": {
-      "kapanis": 28.3,
-      "rsi": 36.09,
+      "kapanis": 28.44,
+      "rsi": 36.76,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -2094,13 +2082,13 @@
       "altin": null
     },
     "DAGI": {
-      "kapanis": 5.69,
-      "rsi": 34.7,
+      "kapanis": 5.72,
+      "rsi": 35.44,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.33,
+      "hacim_orani": 0.35,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -2110,13 +2098,13 @@
       "altin": null
     },
     "DAPGM": {
-      "kapanis": 11.94,
-      "rsi": 53.69,
+      "kapanis": 11.92,
+      "rsi": 53.48,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.65,
+      "hacim_orani": 0.68,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Ustunde",
@@ -2126,30 +2114,29 @@
       "altin": null
     },
     "DARDL": {
-      "kapanis": 2.04,
-      "rsi": 34.17,
+      "kapanis": 2.03,
+      "rsi": 32.95,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.85,
+      "hacim_orani": 0.87,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
-        "EMA20 < EMA50",
-        "Delikli Bulut"
+        "EMA20 < EMA50"
       ],
-      "sinyal_sayisi": 1,
+      "sinyal_sayisi": 0,
       "altin": null
     },
     "DCTTR": {
-      "kapanis": 8.19,
-      "rsi": 48.91,
+      "kapanis": 8.18,
+      "rsi": 48.69,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.51,
+      "hacim_orani": 0.52,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -2165,7 +2152,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.33,
+      "hacim_orani": 0.34,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -2175,8 +2162,8 @@
       "altin": null
     },
     "DERHL": {
-      "kapanis": 14.65,
-      "rsi": 52.04,
+      "kapanis": 14.66,
+      "rsi": 52.12,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
@@ -2191,19 +2178,21 @@
       "altin": "Bronz"
     },
     "DERIM": {
-      "kapanis": 34.9,
-      "rsi": 40.04,
+      "kapanis": 35.18,
+      "rsi": 40.92,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.74,
+      "hacim_orani": 0.76,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
-        "EMA20 > EMA50"
+        "EMA20 > EMA50",
+        "Cekic",
+        "Asilan Adam"
       ],
-      "sinyal_sayisi": 1,
+      "sinyal_sayisi": 2,
       "altin": null
     },
     "DESA": {
@@ -2225,13 +2214,13 @@
       "altin": null
     },
     "DESPC": {
-      "kapanis": 38.02,
-      "rsi": 21.8,
+      "kapanis": 38.12,
+      "rsi": 21.95,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.98,
+      "hacim_orani": 0.99,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -2242,13 +2231,13 @@
       "altin": null
     },
     "DEVA": {
-      "kapanis": 59.5,
-      "rsi": 27.37,
+      "kapanis": 59.45,
+      "rsi": 27.31,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": true,
       "bb_alt_bant": true,
-      "hacim_orani": 2.15,
+      "hacim_orani": 2.17,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -2261,31 +2250,29 @@
       "altin": null
     },
     "DGATE": {
-      "kapanis": 66.95,
-      "rsi": 41.09,
+      "kapanis": 65.65,
+      "rsi": 38.56,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.76,
+      "hacim_orani": 0.81,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
-        "EMA20 < EMA50",
-        "Cekic",
-        "Asilan Adam"
+        "EMA20 < EMA50"
       ],
-      "sinyal_sayisi": 1,
+      "sinyal_sayisi": 0,
       "altin": null
     },
     "DGNMO": {
-      "kapanis": 4.27,
-      "rsi": 28.52,
+      "kapanis": 4.25,
+      "rsi": 28.05,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.36,
+      "hacim_orani": 1.38,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -2296,8 +2283,8 @@
       "altin": null
     },
     "DITAS": {
-      "kapanis": 46.16,
-      "rsi": 51.55,
+      "kapanis": 46.2,
+      "rsi": 51.64,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -2313,13 +2300,13 @@
       "altin": "Bronz"
     },
     "DMRGD": {
-      "kapanis": 3.56,
-      "rsi": 39.79,
+      "kapanis": 3.57,
+      "rsi": 40.08,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.58,
+      "hacim_orani": 0.61,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -2335,7 +2322,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": true,
-      "hacim_orani": 0.38,
+      "hacim_orani": 0.39,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -2350,13 +2337,13 @@
       "altin": "Bronz"
     },
     "DNISI": {
-      "kapanis": 19.62,
-      "rsi": 31.74,
+      "kapanis": 19.6,
+      "rsi": 31.62,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.57,
+      "hacim_orani": 0.58,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -2372,7 +2359,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.73,
+      "hacim_orani": 0.74,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -2385,13 +2372,13 @@
       "altin": null
     },
     "DOCO": {
-      "kapanis": 8925.0,
-      "rsi": 34.06,
+      "kapanis": 8932.5,
+      "rsi": 34.12,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": true,
-      "hacim_orani": 1.57,
+      "hacim_orani": 1.63,
       "sinyaller": [
         "MACD Negatif",
         "BB Alt Bant",
@@ -2402,8 +2389,8 @@
       "altin": null
     },
     "DOFER": {
-      "kapanis": 33.04,
-      "rsi": 47.01,
+      "kapanis": 33.36,
+      "rsi": 48.34,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
@@ -2418,13 +2405,13 @@
       "altin": null
     },
     "DOFRB": {
-      "kapanis": 83.35,
-      "rsi": 40.52,
+      "kapanis": 84.15,
+      "rsi": 41.33,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.38,
+      "hacim_orani": 0.4,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -2452,13 +2439,13 @@
       "altin": "Bronz"
     },
     "DOHOL": {
-      "kapanis": 20.12,
-      "rsi": 46.26,
+      "kapanis": 20.1,
+      "rsi": 46.05,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.58,
+      "hacim_orani": 0.59,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -2469,13 +2456,13 @@
       "altin": null
     },
     "DOKTA": {
-      "kapanis": 22.12,
-      "rsi": 37.5,
+      "kapanis": 22.14,
+      "rsi": 37.61,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.54,
+      "hacim_orani": 0.55,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -2485,13 +2472,13 @@
       "altin": null
     },
     "DSTKF": {
-      "kapanis": 1763.0,
-      "rsi": 88.36,
+      "kapanis": 1764.0,
+      "rsi": 88.38,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.43,
+      "hacim_orani": 0.44,
       "sinyaller": [
         "RSI Asiri Alim",
         "MACD Pozitif",
@@ -2503,26 +2490,24 @@
       "altin": "Bronz"
     },
     "DURDO": {
-      "kapanis": 3.62,
-      "rsi": 44.52,
+      "kapanis": 3.64,
+      "rsi": 45.19,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.43,
+      "hacim_orani": 0.46,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
-        "EMA20 < EMA50",
-        "Cekic",
-        "Asilan Adam"
+        "EMA20 < EMA50"
       ],
-      "sinyal_sayisi": 1,
+      "sinyal_sayisi": 0,
       "altin": null
     },
     "DURKN": {
-      "kapanis": 17.16,
-      "rsi": 40.56,
+      "kapanis": 17.13,
+      "rsi": 40.36,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -2543,7 +2528,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.47,
+      "hacim_orani": 0.48,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -2569,13 +2554,13 @@
       "altin": null
     },
     "EBEBK": {
-      "kapanis": 60.95,
-      "rsi": 45.38,
+      "kapanis": 61.1,
+      "rsi": 45.83,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": true,
-      "hacim_orani": 0.57,
+      "hacim_orani": 0.59,
       "sinyaller": [
         "MACD Negatif",
         "BB Alt Bant",
@@ -2586,22 +2571,20 @@
       "altin": null
     },
     "ECILC": {
-      "kapanis": 110.5,
-      "rsi": 43.92,
+      "kapanis": 110.3,
+      "rsi": 43.69,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.46,
+      "hacim_orani": 0.47,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
         "EMA20 > EMA50",
-        "Cekic",
-        "Asilan Adam",
         "3 Siyah Karga"
       ],
-      "sinyal_sayisi": 2,
+      "sinyal_sayisi": 1,
       "altin": null
     },
     "ECZYT": {
@@ -2611,7 +2594,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.33,
+      "hacim_orani": 0.35,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -2625,13 +2608,13 @@
       "altin": "Bronz"
     },
     "EDATA": {
-      "kapanis": 13.45,
-      "rsi": 62.21,
+      "kapanis": 13.23,
+      "rsi": 60.5,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.55,
+      "hacim_orani": 1.56,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -2641,13 +2624,13 @@
       "altin": "Bronz"
     },
     "EDIP": {
-      "kapanis": 34.4,
-      "rsi": 40.04,
+      "kapanis": 34.48,
+      "rsi": 40.28,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.77,
+      "hacim_orani": 0.78,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -2657,13 +2640,13 @@
       "altin": null
     },
     "EGEEN": {
-      "kapanis": 5762.5,
-      "rsi": 17.83,
+      "kapanis": 5770.0,
+      "rsi": 17.91,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.83,
+      "hacim_orani": 0.84,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -2674,13 +2657,13 @@
       "altin": null
     },
     "EGEGY": {
-      "kapanis": 27.74,
-      "rsi": 38.88,
+      "kapanis": 27.9,
+      "rsi": 39.38,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.62,
+      "hacim_orani": 0.64,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -2709,33 +2692,33 @@
       "altin": "Bronz"
     },
     "EGGUB": {
-      "kapanis": 106.6,
-      "rsi": 70.34,
+      "kapanis": 108.1,
+      "rsi": 71.65,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 11.88,
+      "hacim_orani": 12.35,
       "sinyaller": [
         "RSI Asiri Alim",
         "MACD Pozitif",
         "BB Ust Bant",
         "Fiyat EMA20 Ustunde",
         "EMA20 < EMA50",
-        "Anormal Hacim 11.88x",
+        "Anormal Hacim 12.35x",
         "Sabah Yildizi"
       ],
       "sinyal_sayisi": 4,
       "altin": "Bronz"
     },
     "EGPRO": {
-      "kapanis": 25.26,
-      "rsi": 40.34,
+      "kapanis": 25.3,
+      "rsi": 40.72,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.52,
+      "hacim_orani": 0.53,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -2753,7 +2736,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.68,
+      "hacim_orani": 0.69,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -2763,32 +2746,31 @@
       "altin": null
     },
     "EKGYO": {
-      "kapanis": 20.56,
-      "rsi": 28.86,
+      "kapanis": 20.74,
+      "rsi": 29.63,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": true,
-      "bb_alt_bant": true,
-      "hacim_orani": 0.87,
+      "bb_alt_bant": false,
+      "hacim_orani": 0.9,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
-        "BB Alt Bant",
         "Fiyat EMA20 Altinda",
         "EMA20 < EMA50",
         "Death Cross"
       ],
-      "sinyal_sayisi": 2,
+      "sinyal_sayisi": 1,
       "altin": null
     },
     "EKOS": {
-      "kapanis": 5.81,
-      "rsi": 44.88,
+      "kapanis": 5.84,
+      "rsi": 45.41,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.9,
+      "hacim_orani": 0.91,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -2798,13 +2780,13 @@
       "altin": null
     },
     "EKSUN": {
-      "kapanis": 5.67,
-      "rsi": 53.16,
+      "kapanis": 5.66,
+      "rsi": 52.86,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 2.6,
+      "hacim_orani": 2.64,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Ustunde",
@@ -2815,13 +2797,13 @@
       "altin": null
     },
     "ELITE": {
-      "kapanis": 28.92,
-      "rsi": 37.31,
+      "kapanis": 29.04,
+      "rsi": 38.29,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.73,
+      "hacim_orani": 0.74,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -2831,13 +2813,13 @@
       "altin": null
     },
     "EMKEL": {
-      "kapanis": 18.14,
-      "rsi": 26.29,
+      "kapanis": 18.44,
+      "rsi": 27.33,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.35,
+      "hacim_orani": 0.37,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Pozitif",
@@ -2848,13 +2830,13 @@
       "altin": null
     },
     "ENDAE": {
-      "kapanis": 13.39,
-      "rsi": 38.99,
+      "kapanis": 13.27,
+      "rsi": 36.94,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.83,
+      "hacim_orani": 0.85,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -2865,8 +2847,8 @@
       "altin": null
     },
     "ENERY": {
-      "kapanis": 8.93,
-      "rsi": 36.94,
+      "kapanis": 8.95,
+      "rsi": 37.2,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -2888,7 +2870,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.07,
+      "hacim_orani": 1.09,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -2899,13 +2881,13 @@
       "altin": null
     },
     "ENKAI": {
-      "kapanis": 91.6,
-      "rsi": 42.07,
+      "kapanis": 91.5,
+      "rsi": 41.83,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.9,
+      "hacim_orani": 0.92,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -2916,13 +2898,13 @@
       "altin": null
     },
     "ENSRI": {
-      "kapanis": 30.42,
-      "rsi": 59.71,
+      "kapanis": 30.6,
+      "rsi": 60.24,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.57,
+      "hacim_orani": 0.58,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Ustunde",
@@ -2932,13 +2914,13 @@
       "altin": null
     },
     "ENTRA": {
-      "kapanis": 10.3,
-      "rsi": 42.22,
+      "kapanis": 10.28,
+      "rsi": 41.84,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.13,
+      "hacim_orani": 1.14,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -2949,31 +2931,30 @@
       "altin": null
     },
     "EPLAS": {
-      "kapanis": 6.09,
-      "rsi": 43.85,
+      "kapanis": 6.04,
+      "rsi": 42.67,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": true,
       "bb_alt_bant": false,
-      "hacim_orani": 0.33,
+      "hacim_orani": 0.35,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
         "EMA20 < EMA50",
-        "Death Cross",
-        "Delikli Bulut"
+        "Death Cross"
       ],
-      "sinyal_sayisi": 1,
+      "sinyal_sayisi": 0,
       "altin": null
     },
     "ERBOS": {
-      "kapanis": 176.5,
-      "rsi": 36.74,
+      "kapanis": 176.9,
+      "rsi": 37.04,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.59,
+      "hacim_orani": 0.6,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -3000,13 +2981,13 @@
       "altin": null
     },
     "EREGL": {
-      "kapanis": 28.32,
-      "rsi": 43.93,
+      "kapanis": 28.3,
+      "rsi": 43.8,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.77,
+      "hacim_orani": 0.78,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -3016,13 +2997,13 @@
       "altin": null
     },
     "ERSU": {
-      "kapanis": 19.96,
-      "rsi": 58.44,
+      "kapanis": 19.95,
+      "rsi": 58.4,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 2.01,
+      "hacim_orani": 2.04,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -3033,13 +3014,13 @@
       "altin": "Bronz"
     },
     "ESCAR": {
-      "kapanis": 27.6,
-      "rsi": 56.46,
+      "kapanis": 27.62,
+      "rsi": 56.58,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.63,
+      "hacim_orani": 0.64,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -3049,13 +3030,13 @@
       "altin": "Bronz"
     },
     "ESCOM": {
-      "kapanis": 5.6,
-      "rsi": 63.02,
+      "kapanis": 5.61,
+      "rsi": 63.2,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.95,
+      "hacim_orani": 1.97,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -3066,13 +3047,13 @@
       "altin": "Bronz"
     },
     "ESEN": {
-      "kapanis": 3.83,
-      "rsi": 39.79,
+      "kapanis": 3.82,
+      "rsi": 39.47,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.37,
+      "hacim_orani": 0.39,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Altinda",
@@ -3082,13 +3063,13 @@
       "altin": null
     },
     "ETILR": {
-      "kapanis": 3.82,
-      "rsi": 47.24,
+      "kapanis": 3.81,
+      "rsi": 46.8,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.54,
+      "hacim_orani": 0.56,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -3099,13 +3080,13 @@
       "altin": null
     },
     "EUPWR": {
-      "kapanis": 35.38,
-      "rsi": 43.22,
+      "kapanis": 35.56,
+      "rsi": 43.76,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.63,
+      "hacim_orani": 0.64,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -3115,13 +3096,13 @@
       "altin": null
     },
     "EUREN": {
-      "kapanis": 4.54,
-      "rsi": 32.17,
+      "kapanis": 4.53,
+      "rsi": 31.99,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.32,
+      "hacim_orani": 0.33,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -3131,33 +3112,33 @@
       "altin": null
     },
     "EYGYO": {
-      "kapanis": 4.59,
-      "rsi": 70.35,
+      "kapanis": 4.58,
+      "rsi": 70.22,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 3.76,
+      "hacim_orani": 3.8,
       "sinyaller": [
         "RSI Asiri Alim",
         "MACD Pozitif",
         "BB Ust Bant",
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
-        "Anormal Hacim 3.76x",
+        "Anormal Hacim 3.8x",
         "3 Beyaz Asker"
       ],
       "sinyal_sayisi": 5,
       "altin": "Gumus"
     },
     "FADE": {
-      "kapanis": 14.23,
-      "rsi": 39.86,
+      "kapanis": 14.2,
+      "rsi": 39.41,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": true,
       "bb_alt_bant": false,
-      "hacim_orani": 1.71,
+      "hacim_orani": 1.72,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -3169,13 +3150,13 @@
       "altin": null
     },
     "FLAP": {
-      "kapanis": 9.83,
-      "rsi": 46.86,
+      "kapanis": 9.82,
+      "rsi": 46.72,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.53,
+      "hacim_orani": 0.56,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -3185,13 +3166,13 @@
       "altin": null
     },
     "FMIZP": {
-      "kapanis": 286.5,
-      "rsi": 35.52,
+      "kapanis": 286.25,
+      "rsi": 35.42,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.6,
+      "hacim_orani": 0.61,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -3201,13 +3182,13 @@
       "altin": null
     },
     "FONET": {
-      "kapanis": 4.23,
-      "rsi": 64.88,
+      "kapanis": 4.21,
+      "rsi": 64.31,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 2.14,
+      "hacim_orani": 2.16,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -3240,7 +3221,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.68,
+      "hacim_orani": 0.69,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -3250,13 +3231,13 @@
       "altin": null
     },
     "FRIGO": {
-      "kapanis": 8.62,
-      "rsi": 40.82,
+      "kapanis": 8.65,
+      "rsi": 41.12,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.39,
+      "hacim_orani": 0.41,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Altinda",
@@ -3266,13 +3247,13 @@
       "altin": null
     },
     "FROTO": {
-      "kapanis": 108.6,
-      "rsi": 41.01,
+      "kapanis": 108.7,
+      "rsi": 41.19,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.64,
+      "hacim_orani": 0.65,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -3282,13 +3263,13 @@
       "altin": null
     },
     "FZLGY": {
-      "kapanis": 12.49,
-      "rsi": 46.32,
+      "kapanis": 12.47,
+      "rsi": 46.09,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.76,
+      "hacim_orani": 0.77,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Altinda",
@@ -3298,36 +3279,37 @@
       "altin": null
     },
     "GEDIK": {
-      "kapanis": 5.44,
-      "rsi": 35.76,
+      "kapanis": 5.51,
+      "rsi": 38.13,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.58,
+      "hacim_orani": 0.6,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
-        "EMA20 < EMA50"
+        "EMA20 < EMA50",
+        "Cekic",
+        "Asilan Adam"
       ],
-      "sinyal_sayisi": 0,
+      "sinyal_sayisi": 1,
       "altin": null
     },
     "GEDZA": {
-      "kapanis": 27.94,
-      "rsi": 44.37,
+      "kapanis": 28.1,
+      "rsi": 44.92,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.6,
+      "hacim_orani": 1.65,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
-        "EMA20 > EMA50",
-        "Ters Cekic"
+        "EMA20 > EMA50"
       ],
-      "sinyal_sayisi": 2,
+      "sinyal_sayisi": 1,
       "altin": null
     },
     "GENIL": {
@@ -3337,7 +3319,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.7,
+      "hacim_orani": 1.73,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -3348,8 +3330,8 @@
       "altin": "Bronz"
     },
     "GENTS": {
-      "kapanis": 9.0,
-      "rsi": 37.53,
+      "kapanis": 8.98,
+      "rsi": 37.35,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -3365,8 +3347,8 @@
       "altin": null
     },
     "GEREL": {
-      "kapanis": 25.12,
-      "rsi": 58.81,
+      "kapanis": 25.1,
+      "rsi": 58.7,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -3387,7 +3369,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.78,
+      "hacim_orani": 0.81,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -3414,13 +3396,13 @@
       "altin": null
     },
     "GLCVY": {
-      "kapanis": 66.4,
-      "rsi": 35.37,
+      "kapanis": 66.25,
+      "rsi": 35.13,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.51,
+      "hacim_orani": 1.53,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -3436,7 +3418,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.97,
+      "hacim_orani": 0.98,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -3446,13 +3428,13 @@
       "altin": null
     },
     "GLRYH": {
-      "kapanis": 4.27,
-      "rsi": 45.77,
+      "kapanis": 4.3,
+      "rsi": 46.71,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.8,
+      "hacim_orani": 0.82,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -3462,13 +3444,13 @@
       "altin": null
     },
     "GLYHO": {
-      "kapanis": 13.91,
-      "rsi": 33.73,
+      "kapanis": 13.93,
+      "rsi": 33.92,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": true,
-      "hacim_orani": 1.08,
+      "hacim_orani": 1.11,
       "sinyaller": [
         "MACD Negatif",
         "BB Alt Bant",
@@ -3486,7 +3468,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.69,
+      "hacim_orani": 0.7,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Ustunde",
@@ -3503,7 +3485,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.87,
+      "hacim_orani": 0.89,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -3513,13 +3495,13 @@
       "altin": null
     },
     "GOLTS": {
-      "kapanis": 329.75,
-      "rsi": 34.52,
+      "kapanis": 330.5,
+      "rsi": 34.91,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": true,
       "bb_alt_bant": false,
-      "hacim_orani": 1.03,
+      "hacim_orani": 1.04,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -3530,8 +3512,8 @@
       "altin": null
     },
     "GOODY": {
-      "kapanis": 13.93,
-      "rsi": 31.94,
+      "kapanis": 13.89,
+      "rsi": 31.59,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -3546,13 +3528,13 @@
       "altin": null
     },
     "GOZDE": {
-      "kapanis": 21.56,
-      "rsi": 28.85,
+      "kapanis": 21.44,
+      "rsi": 27.7,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.78,
+      "hacim_orani": 0.8,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -3569,7 +3551,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": true,
-      "hacim_orani": 2.06,
+      "hacim_orani": 2.1,
       "sinyaller": [
         "MACD Negatif",
         "BB Alt Bant",
@@ -3580,13 +3562,13 @@
       "altin": null
     },
     "GRTHO": {
-      "kapanis": 249.2,
-      "rsi": 55.77,
+      "kapanis": 249.8,
+      "rsi": 56.09,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.95,
+      "hacim_orani": 0.96,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -3597,13 +3579,13 @@
       "altin": "Bronz"
     },
     "GSDDE": {
-      "kapanis": 9.38,
-      "rsi": 41.93,
+      "kapanis": 9.34,
+      "rsi": 41.21,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.57,
+      "hacim_orani": 0.58,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -3613,13 +3595,13 @@
       "altin": null
     },
     "GSDHO": {
-      "kapanis": 4.48,
-      "rsi": 39.77,
+      "kapanis": 4.46,
+      "rsi": 38.94,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.63,
+      "hacim_orani": 0.64,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -3635,7 +3617,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.42,
+      "hacim_orani": 0.43,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -3645,13 +3627,13 @@
       "altin": null
     },
     "GUBRF": {
-      "kapanis": 486.75,
-      "rsi": 45.83,
+      "kapanis": 487.25,
+      "rsi": 45.94,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": true,
-      "hacim_orani": 1.24,
+      "hacim_orani": 1.26,
       "sinyaller": [
         "MACD Negatif",
         "BB Alt Bant",
@@ -3662,13 +3644,13 @@
       "altin": null
     },
     "GUNDG": {
-      "kapanis": 651.0,
-      "rsi": 88.13,
+      "kapanis": 668.0,
+      "rsi": 91.52,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.2,
+      "hacim_orani": 0.22,
       "sinyaller": [
         "RSI Asiri Alim",
         "MACD Pozitif",
@@ -3685,7 +3667,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.09,
+      "hacim_orani": 1.1,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -3695,13 +3677,13 @@
       "altin": null
     },
     "GZNMI": {
-      "kapanis": 58.25,
-      "rsi": 53.03,
+      "kapanis": 58.45,
+      "rsi": 53.27,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.92,
+      "hacim_orani": 0.93,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -3711,8 +3693,8 @@
       "altin": "Bronz"
     },
     "HATEK": {
-      "kapanis": 14.07,
-      "rsi": 39.1,
+      "kapanis": 14.05,
+      "rsi": 38.98,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -3727,13 +3709,13 @@
       "altin": null
     },
     "HATSN": {
-      "kapanis": 36.62,
-      "rsi": 35.66,
+      "kapanis": 36.68,
+      "rsi": 35.88,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.45,
+      "hacim_orani": 0.47,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -3743,8 +3725,8 @@
       "altin": null
     },
     "HDFGS": {
-      "kapanis": 3.07,
-      "rsi": 40.36,
+      "kapanis": 3.09,
+      "rsi": 40.94,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -3765,7 +3747,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.62,
+      "hacim_orani": 0.68,
       "sinyaller": [
         "RSI Asiri Alim",
         "MACD Pozitif",
@@ -3782,7 +3764,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.83,
+      "hacim_orani": 0.85,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -3792,13 +3774,13 @@
       "altin": null
     },
     "HKTM": {
-      "kapanis": 10.95,
-      "rsi": 37.53,
+      "kapanis": 10.93,
+      "rsi": 37.32,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.3,
+      "hacim_orani": 0.31,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -3808,13 +3790,13 @@
       "altin": null
     },
     "HOROZ": {
-      "kapanis": 56.6,
-      "rsi": 33.09,
+      "kapanis": 56.65,
+      "rsi": 33.17,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": true,
-      "hacim_orani": 1.18,
+      "hacim_orani": 1.19,
       "sinyaller": [
         "MACD Negatif",
         "BB Alt Bant",
@@ -3825,13 +3807,13 @@
       "altin": null
     },
     "HRKET": {
-      "kapanis": 67.9,
-      "rsi": 26.52,
+      "kapanis": 68.05,
+      "rsi": 26.75,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.83,
+      "hacim_orani": 0.85,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -3842,13 +3824,13 @@
       "altin": null
     },
     "HTTBT": {
-      "kapanis": 38.7,
-      "rsi": 34.78,
+      "kapanis": 38.9,
+      "rsi": 35.67,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.63,
+      "hacim_orani": 1.65,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -3859,13 +3841,13 @@
       "altin": null
     },
     "HUBVC": {
-      "kapanis": 4.64,
-      "rsi": 64.37,
+      "kapanis": 4.59,
+      "rsi": 62.48,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.62,
+      "hacim_orani": 0.64,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Ustunde",
@@ -3875,13 +3857,13 @@
       "altin": null
     },
     "HUNER": {
-      "kapanis": 3.09,
-      "rsi": 37.34,
+      "kapanis": 3.1,
+      "rsi": 38.19,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.68,
+      "hacim_orani": 0.69,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -3891,13 +3873,13 @@
       "altin": null
     },
     "HURGZ": {
-      "kapanis": 5.19,
-      "rsi": 41.44,
+      "kapanis": 5.2,
+      "rsi": 41.78,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.37,
+      "hacim_orani": 0.38,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -3907,8 +3889,8 @@
       "altin": null
     },
     "ICUGS": {
-      "kapanis": 2.71,
-      "rsi": 41.45,
+      "kapanis": 2.72,
+      "rsi": 41.74,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -3923,13 +3905,13 @@
       "altin": null
     },
     "IEYHO": {
-      "kapanis": 84.65,
-      "rsi": 99.41,
+      "kapanis": 84.85,
+      "rsi": 99.43,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.79,
+      "hacim_orani": 0.85,
       "sinyaller": [
         "RSI Asiri Alim",
         "MACD Negatif",
@@ -3940,8 +3922,8 @@
       "altin": null
     },
     "IHAAS": {
-      "kapanis": 86.2,
-      "rsi": 68.21,
+      "kapanis": 87.0,
+      "rsi": 69.31,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
@@ -3950,20 +3932,19 @@
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "EMA20 > EMA50",
-        "Ters Cekic"
+        "EMA20 > EMA50"
       ],
-      "sinyal_sayisi": 4,
+      "sinyal_sayisi": 3,
       "altin": "Bronz"
     },
     "IHEVA": {
-      "kapanis": 2.19,
-      "rsi": 39.02,
+      "kapanis": 2.2,
+      "rsi": 39.84,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.38,
+      "hacim_orani": 0.39,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -3973,19 +3954,21 @@
       "altin": null
     },
     "IHGZT": {
-      "kapanis": 1.42,
-      "rsi": 33.46,
+      "kapanis": 1.41,
+      "rsi": 32.48,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.43,
+      "hacim_orani": 0.46,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
-        "EMA20 < EMA50"
+        "EMA20 < EMA50",
+        "Cekic",
+        "Asilan Adam"
       ],
-      "sinyal_sayisi": 0,
+      "sinyal_sayisi": 1,
       "altin": null
     },
     "IHLAS": {
@@ -3995,7 +3978,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.28,
+      "hacim_orani": 0.3,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -4012,7 +3995,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.36,
+      "hacim_orani": 0.37,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -4022,8 +4005,8 @@
       "altin": null
     },
     "IHYAY": {
-      "kapanis": 1.67,
-      "rsi": 26.78,
+      "kapanis": 1.68,
+      "rsi": 27.48,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -4033,19 +4016,21 @@
         "RSI Asiri Satim",
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
-        "EMA20 < EMA50"
+        "EMA20 < EMA50",
+        "Cekic",
+        "Asilan Adam"
       ],
-      "sinyal_sayisi": 1,
+      "sinyal_sayisi": 2,
       "altin": null
     },
     "IMASM": {
-      "kapanis": 3.58,
-      "rsi": 27.58,
+      "kapanis": 3.59,
+      "rsi": 27.74,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.69,
+      "hacim_orani": 0.71,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -4056,8 +4041,8 @@
       "altin": null
     },
     "INDES": {
-      "kapanis": 7.33,
-      "rsi": 35.12,
+      "kapanis": 7.37,
+      "rsi": 35.73,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -4078,14 +4063,14 @@
       "golden_cross": false,
       "death_cross": true,
       "bb_alt_bant": true,
-      "hacim_orani": 3.67,
+      "hacim_orani": 3.68,
       "sinyaller": [
         "MACD Negatif",
         "BB Alt Bant",
         "Fiyat EMA20 Altinda",
         "EMA20 < EMA50",
         "Death Cross",
-        "Anormal Hacim 3.67x"
+        "Anormal Hacim 3.68x"
       ],
       "sinyal_sayisi": 2,
       "altin": null
@@ -4097,7 +4082,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.67,
+      "hacim_orani": 0.69,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -4108,13 +4093,13 @@
       "altin": null
     },
     "INTEM": {
-      "kapanis": 270.0,
-      "rsi": 33.14,
+      "kapanis": 270.5,
+      "rsi": 33.19,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": true,
-      "hacim_orani": 2.11,
+      "hacim_orani": 2.13,
       "sinyaller": [
         "MACD Negatif",
         "BB Alt Bant",
@@ -4125,13 +4110,13 @@
       "altin": null
     },
     "INVEO": {
-      "kapanis": 7.18,
-      "rsi": 30.57,
+      "kapanis": 7.25,
+      "rsi": 31.29,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.57,
+      "hacim_orani": 0.59,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -4141,13 +4126,13 @@
       "altin": null
     },
     "INVES": {
-      "kapanis": 343.25,
-      "rsi": 76.82,
+      "kapanis": 359.25,
+      "rsi": 79.11,
       "macd_pozitif": true,
       "golden_cross": true,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.35,
+      "hacim_orani": 1.56,
       "sinyaller": [
         "RSI Asiri Alim",
         "MACD Pozitif",
@@ -4161,13 +4146,13 @@
       "altin": "Gumus"
     },
     "ISDMR": {
-      "kapanis": 41.24,
-      "rsi": 43.06,
+      "kapanis": 41.26,
+      "rsi": 43.16,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.97,
+      "hacim_orani": 0.98,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -4177,13 +4162,13 @@
       "altin": null
     },
     "ISKPL": {
-      "kapanis": 11.17,
-      "rsi": 46.91,
+      "kapanis": 11.27,
+      "rsi": 47.9,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.98,
+      "hacim_orani": 1.02,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -4216,7 +4201,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.32,
+      "hacim_orani": 0.33,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -4226,13 +4211,13 @@
       "altin": null
     },
     "IZFAS": {
-      "kapanis": 52.1,
-      "rsi": 47.98,
+      "kapanis": 52.25,
+      "rsi": 48.49,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.68,
+      "hacim_orani": 0.7,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Altinda",
@@ -4242,13 +4227,13 @@
       "altin": null
     },
     "IZINV": {
-      "kapanis": 57.3,
-      "rsi": 35.39,
+      "kapanis": 57.45,
+      "rsi": 35.63,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.5,
+      "hacim_orani": 0.51,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -4264,7 +4249,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": true,
-      "hacim_orani": 1.21,
+      "hacim_orani": 1.22,
       "sinyaller": [
         "MACD Negatif",
         "BB Alt Bant",
@@ -4275,13 +4260,13 @@
       "altin": null
     },
     "JANTS": {
-      "kapanis": 16.53,
-      "rsi": 23.83,
+      "kapanis": 16.48,
+      "rsi": 23.54,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.65,
+      "hacim_orani": 0.67,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -4292,13 +4277,13 @@
       "altin": null
     },
     "KAPLM": {
-      "kapanis": 335.75,
-      "rsi": 36.4,
+      "kapanis": 336.0,
+      "rsi": 36.46,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": true,
       "bb_alt_bant": false,
-      "hacim_orani": 0.27,
+      "hacim_orani": 0.29,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -4312,13 +4297,13 @@
       "altin": null
     },
     "KAREL": {
-      "kapanis": 8.55,
-      "rsi": 34.84,
+      "kapanis": 8.53,
+      "rsi": 34.6,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": true,
-      "hacim_orani": 0.66,
+      "hacim_orani": 0.71,
       "sinyaller": [
         "MACD Negatif",
         "BB Alt Bant",
@@ -4330,13 +4315,13 @@
       "altin": null
     },
     "KARSN": {
-      "kapanis": 10.03,
-      "rsi": 44.72,
+      "kapanis": 10.06,
+      "rsi": 45.25,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.0,
+      "hacim_orani": 1.02,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -4346,13 +4331,13 @@
       "altin": null
     },
     "KARTN": {
-      "kapanis": 68.55,
-      "rsi": 20.69,
+      "kapanis": 68.7,
+      "rsi": 20.88,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": true,
-      "hacim_orani": 1.03,
+      "hacim_orani": 1.04,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -4364,13 +4349,13 @@
       "altin": null
     },
     "KATMR": {
-      "kapanis": 2.61,
-      "rsi": 35.84,
+      "kapanis": 2.63,
+      "rsi": 36.79,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.72,
+      "hacim_orani": 0.74,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -4380,13 +4365,13 @@
       "altin": null
     },
     "KAYSE": {
-      "kapanis": 5.12,
-      "rsi": 47.25,
+      "kapanis": 5.11,
+      "rsi": 47.0,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.61,
+      "hacim_orani": 0.62,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -4396,13 +4381,13 @@
       "altin": null
     },
     "KBORU": {
-      "kapanis": 18.79,
-      "rsi": 48.27,
+      "kapanis": 18.78,
+      "rsi": 48.21,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.47,
+      "hacim_orani": 1.5,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -4412,13 +4397,13 @@
       "altin": null
     },
     "KCAER": {
-      "kapanis": 11.07,
-      "rsi": 48.83,
+      "kapanis": 11.06,
+      "rsi": 48.7,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.0,
+      "hacim_orani": 1.01,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -4428,13 +4413,13 @@
       "altin": null
     },
     "KCHOL": {
-      "kapanis": 187.1,
-      "rsi": 33.65,
+      "kapanis": 187.4,
+      "rsi": 34.02,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.72,
+      "hacim_orani": 0.73,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -4444,8 +4429,8 @@
       "altin": null
     },
     "KFEIN": {
-      "kapanis": 8.88,
-      "rsi": 41.85,
+      "kapanis": 8.87,
+      "rsi": 41.71,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": true,
@@ -4461,13 +4446,13 @@
       "altin": null
     },
     "KGYO": {
-      "kapanis": 7.7,
-      "rsi": 63.4,
+      "kapanis": 7.69,
+      "rsi": 63.08,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.73,
+      "hacim_orani": 0.75,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -4477,13 +4462,13 @@
       "altin": "Bronz"
     },
     "KIMMR": {
-      "kapanis": 16.01,
-      "rsi": 50.96,
+      "kapanis": 16.17,
+      "rsi": 52.2,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 2.6,
+      "hacim_orani": 2.63,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Ustunde",
@@ -4494,13 +4479,13 @@
       "altin": "Bronz"
     },
     "KLGYO": {
-      "kapanis": 5.93,
-      "rsi": 36.32,
+      "kapanis": 5.96,
+      "rsi": 36.82,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.52,
+      "hacim_orani": 0.54,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -4510,13 +4495,13 @@
       "altin": null
     },
     "KLKIM": {
-      "kapanis": 34.42,
-      "rsi": 24.87,
+      "kapanis": 34.44,
+      "rsi": 24.93,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": true,
       "bb_alt_bant": true,
-      "hacim_orani": 1.56,
+      "hacim_orani": 1.57,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -4530,48 +4515,48 @@
       "altin": null
     },
     "KLMSN": {
-      "kapanis": 31.52,
-      "rsi": 50.91,
+      "kapanis": 31.56,
+      "rsi": 51.03,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.6,
+      "hacim_orani": 0.61,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "EMA20 > EMA50"
+        "EMA20 > EMA50",
+        "Cekic",
+        "Asilan Adam"
       ],
-      "sinyal_sayisi": 3,
+      "sinyal_sayisi": 4,
       "altin": "Bronz"
     },
     "KLRHO": {
-      "kapanis": 165.0,
-      "rsi": 25.14,
+      "kapanis": 165.4,
+      "rsi": 25.16,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.44,
+      "hacim_orani": 0.9,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
-        "EMA20 < EMA50",
-        "Ters Cekic",
-        "3 Siyah Karga"
+        "EMA20 < EMA50"
       ],
-      "sinyal_sayisi": 2,
+      "sinyal_sayisi": 1,
       "altin": null
     },
     "KLSER": {
-      "kapanis": 25.12,
-      "rsi": 28.29,
+      "kapanis": 25.08,
+      "rsi": 28.09,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.22,
+      "hacim_orani": 1.24,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -4582,13 +4567,13 @@
       "altin": null
     },
     "KLSYN": {
-      "kapanis": 9.01,
-      "rsi": 55.62,
+      "kapanis": 8.95,
+      "rsi": 54.69,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.51,
+      "hacim_orani": 0.52,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Ustunde",
@@ -4600,13 +4585,13 @@
       "altin": "Bronz"
     },
     "KLYPV": {
-      "kapanis": 55.7,
-      "rsi": 35.46,
+      "kapanis": 56.45,
+      "rsi": 37.07,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.63,
+      "hacim_orani": 0.65,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -4616,26 +4601,25 @@
       "altin": null
     },
     "KMPUR": {
-      "kapanis": 13.38,
-      "rsi": 29.05,
+      "kapanis": 13.37,
+      "rsi": 28.85,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.63,
+      "hacim_orani": 0.64,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
-        "EMA20 < EMA50",
-        "Delikli Bulut"
+        "EMA20 < EMA50"
       ],
-      "sinyal_sayisi": 2,
+      "sinyal_sayisi": 1,
       "altin": null
     },
     "KNFRT": {
-      "kapanis": 10.66,
-      "rsi": 36.8,
+      "kapanis": 10.63,
+      "rsi": 36.23,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -4650,13 +4634,13 @@
       "altin": null
     },
     "KOCMT": {
-      "kapanis": 2.41,
-      "rsi": 33.96,
+      "kapanis": 2.42,
+      "rsi": 34.45,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.57,
+      "hacim_orani": 0.6,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -4672,7 +4656,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.59,
+      "hacim_orani": 1.62,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Ustunde",
@@ -4683,8 +4667,8 @@
       "altin": null
     },
     "KONTR": {
-      "kapanis": 8.25,
-      "rsi": 25.81,
+      "kapanis": 8.26,
+      "rsi": 25.89,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -4706,7 +4690,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.6,
+      "hacim_orani": 0.61,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -4723,7 +4707,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.59,
+      "hacim_orani": 0.61,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -4734,13 +4718,13 @@
       "altin": null
     },
     "KORDS": {
-      "kapanis": 51.1,
-      "rsi": 45.96,
+      "kapanis": 50.85,
+      "rsi": 45.25,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.38,
+      "hacim_orani": 1.41,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -4756,7 +4740,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.67,
+      "hacim_orani": 0.68,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -4767,13 +4751,13 @@
       "altin": null
     },
     "KRDMD": {
-      "kapanis": 29.62,
-      "rsi": 45.09,
+      "kapanis": 29.72,
+      "rsi": 45.68,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.76,
+      "hacim_orani": 0.77,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -4783,13 +4767,13 @@
       "altin": null
     },
     "KRGYO": {
-      "kapanis": 2.85,
-      "rsi": 39.75,
+      "kapanis": 2.86,
+      "rsi": 40.63,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.73,
+      "hacim_orani": 0.74,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -4805,7 +4789,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.2,
+      "hacim_orani": 1.25,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -4815,19 +4799,19 @@
       "altin": "Bronz"
     },
     "KRPLS": {
-      "kapanis": 8.74,
-      "rsi": 56.24,
+      "kapanis": 8.72,
+      "rsi": 55.94,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 3.53,
+      "hacim_orani": 3.56,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
         "EMA20 < EMA50",
-        "Anormal Hacim 3.53x"
+        "Anormal Hacim 3.56x"
       ],
       "sinyal_sayisi": 4,
       "altin": "Bronz"
@@ -4839,7 +4823,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.13,
+      "hacim_orani": 1.16,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -4855,7 +4839,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.6,
+      "hacim_orani": 0.61,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -4865,13 +4849,13 @@
       "altin": null
     },
     "KRVGD": {
-      "kapanis": 2.94,
-      "rsi": 42.77,
+      "kapanis": 2.93,
+      "rsi": 41.99,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": true,
-      "hacim_orani": 0.53,
+      "hacim_orani": 0.54,
       "sinyaller": [
         "MACD Negatif",
         "BB Alt Bant",
@@ -4900,8 +4884,8 @@
       "altin": "Bronz"
     },
     "KTSKR": {
-      "kapanis": 64.55,
-      "rsi": 31.76,
+      "kapanis": 64.7,
+      "rsi": 32.25,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -4916,13 +4900,13 @@
       "altin": null
     },
     "KUTPO": {
-      "kapanis": 99.25,
-      "rsi": 36.34,
+      "kapanis": 99.35,
+      "rsi": 36.46,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.54,
+      "hacim_orani": 0.55,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -4932,13 +4916,13 @@
       "altin": null
     },
     "KUYAS": {
-      "kapanis": 68.7,
-      "rsi": 54.17,
+      "kapanis": 68.85,
+      "rsi": 54.55,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.68,
+      "hacim_orani": 0.71,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Ustunde",
@@ -4949,13 +4933,13 @@
       "altin": null
     },
     "KZBGY": {
-      "kapanis": 3.64,
-      "rsi": 44.25,
+      "kapanis": 3.62,
+      "rsi": 43.44,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.62,
+      "hacim_orani": 0.63,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -4965,13 +4949,13 @@
       "altin": null
     },
     "KZGYO": {
-      "kapanis": 20.96,
-      "rsi": 26.96,
+      "kapanis": 20.94,
+      "rsi": 26.88,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.81,
+      "hacim_orani": 0.82,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -4982,13 +4966,13 @@
       "altin": null
     },
     "LIDER": {
-      "kapanis": 79.75,
-      "rsi": 52.62,
+      "kapanis": 79.85,
+      "rsi": 52.79,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.5,
+      "hacim_orani": 0.51,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Ustunde",
@@ -4998,8 +4982,8 @@
       "altin": null
     },
     "LILAK": {
-      "kapanis": 29.48,
-      "rsi": 38.39,
+      "kapanis": 29.56,
+      "rsi": 38.71,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -5015,13 +4999,13 @@
       "altin": null
     },
     "LINK": {
-      "kapanis": 225.0,
-      "rsi": 46.29,
+      "kapanis": 225.2,
+      "rsi": 46.45,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.62,
+      "hacim_orani": 0.63,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -5032,13 +5016,13 @@
       "altin": null
     },
     "LKMNH": {
-      "kapanis": 15.8,
-      "rsi": 35.23,
+      "kapanis": 15.99,
+      "rsi": 37.45,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.76,
+      "hacim_orani": 0.81,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -5048,13 +5032,13 @@
       "altin": null
     },
     "LMKDC": {
-      "kapanis": 33.0,
-      "rsi": 61.99,
+      "kapanis": 33.02,
+      "rsi": 62.08,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.36,
+      "hacim_orani": 1.39,
       "sinyaller": [
         "MACD Pozitif",
         "BB Ust Bant",
@@ -5066,13 +5050,13 @@
       "altin": "Bronz"
     },
     "LOGO": {
-      "kapanis": 136.1,
-      "rsi": 27.27,
+      "kapanis": 136.2,
+      "rsi": 27.36,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.95,
+      "hacim_orani": 0.96,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -5091,7 +5075,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.87,
+      "hacim_orani": 0.88,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -5101,29 +5085,31 @@
       "altin": null
     },
     "LUKSK": {
-      "kapanis": 93.65,
-      "rsi": 30.39,
+      "kapanis": 93.75,
+      "rsi": 30.51,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.36,
+      "hacim_orani": 0.37,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
-        "EMA20 < EMA50"
+        "EMA20 < EMA50",
+        "Cekic",
+        "Asilan Adam"
       ],
-      "sinyal_sayisi": 0,
+      "sinyal_sayisi": 1,
       "altin": null
     },
     "LYDHO": {
-      "kapanis": 204.0,
-      "rsi": 59.02,
+      "kapanis": 204.3,
+      "rsi": 59.33,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.79,
+      "hacim_orani": 1.8,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -5133,8 +5119,8 @@
       "altin": "Bronz"
     },
     "MAALT": {
-      "kapanis": 899.0,
-      "rsi": 37.56,
+      "kapanis": 895.5,
+      "rsi": 36.87,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -5149,13 +5135,13 @@
       "altin": null
     },
     "MACKO": {
-      "kapanis": 31.72,
-      "rsi": 49.07,
+      "kapanis": 31.76,
+      "rsi": 49.2,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.53,
+      "hacim_orani": 0.54,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -5166,19 +5152,19 @@
       "altin": null
     },
     "MAGEN": {
-      "kapanis": 45.82,
-      "rsi": 51.59,
+      "kapanis": 46.16,
+      "rsi": 52.96,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.26,
+      "hacim_orani": 1.27,
       "sinyaller": [
         "MACD Negatif",
-        "Fiyat EMA20 Altinda",
+        "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50"
       ],
-      "sinyal_sayisi": 1,
+      "sinyal_sayisi": 2,
       "altin": null
     },
     "MAKIM": {
@@ -5199,13 +5185,13 @@
       "altin": null
     },
     "MAKTK": {
-      "kapanis": 13.08,
-      "rsi": 34.05,
+      "kapanis": 13.06,
+      "rsi": 33.95,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.85,
+      "hacim_orani": 0.86,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -5221,7 +5207,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 2.32,
+      "hacim_orani": 2.33,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -5231,8 +5217,8 @@
       "altin": "Bronz"
     },
     "MARBL": {
-      "kapanis": 11.57,
-      "rsi": 34.38,
+      "kapanis": 11.56,
+      "rsi": 34.29,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -5253,7 +5239,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.18,
+      "hacim_orani": 0.19,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -5269,7 +5255,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.37,
+      "hacim_orani": 1.4,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -5280,20 +5266,19 @@
       "altin": null
     },
     "MAVI": {
-      "kapanis": 40.88,
-      "rsi": 29.82,
+      "kapanis": 41.0,
+      "rsi": 30.14,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.9,
+      "hacim_orani": 0.92,
       "sinyaller": [
-        "RSI Asiri Satim",
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
         "EMA20 < EMA50"
       ],
-      "sinyal_sayisi": 1,
+      "sinyal_sayisi": 0,
       "altin": null
     },
     "MEDTR": {
@@ -5320,7 +5305,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.57,
+      "hacim_orani": 0.58,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -5336,7 +5321,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.62,
+      "hacim_orani": 1.63,
       "sinyaller": [
         "RSI Asiri Alim",
         "MACD Pozitif",
@@ -5348,29 +5333,31 @@
       "altin": "Bronz"
     },
     "MERCN": {
-      "kapanis": 17.98,
-      "rsi": 55.43,
-      "macd_pozitif": false,
-      "golden_cross": false,
-      "death_cross": false,
-      "bb_alt_bant": false,
-      "hacim_orani": 1.21,
-      "sinyaller": [
-        "MACD Negatif",
-        "Fiyat EMA20 Ustunde",
-        "EMA20 > EMA50"
-      ],
-      "sinyal_sayisi": 2,
-      "altin": null
-    },
-    "MERIT": {
-      "kapanis": 17.9,
-      "rsi": 57.13,
+      "kapanis": 18.06,
+      "rsi": 56.0,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.12,
+      "hacim_orani": 1.22,
+      "sinyaller": [
+        "MACD Al Kesisimi",
+        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "EMA20 > EMA50",
+        "3 Beyaz Asker"
+      ],
+      "sinyal_sayisi": 5,
+      "altin": "Gumus"
+    },
+    "MERIT": {
+      "kapanis": 18.02,
+      "rsi": 57.92,
+      "macd_pozitif": true,
+      "golden_cross": false,
+      "death_cross": false,
+      "bb_alt_bant": false,
+      "hacim_orani": 1.15,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -5380,13 +5367,13 @@
       "altin": null
     },
     "MERKO": {
-      "kapanis": 16.53,
-      "rsi": 50.02,
+      "kapanis": 16.45,
+      "rsi": 49.02,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.62,
+      "hacim_orani": 0.63,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -5397,13 +5384,13 @@
       "altin": null
     },
     "METRO": {
-      "kapanis": 5.63,
-      "rsi": 54.5,
+      "kapanis": 5.62,
+      "rsi": 54.29,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.66,
+      "hacim_orani": 0.67,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -5413,13 +5400,13 @@
       "altin": "Bronz"
     },
     "MGROS": {
-      "kapanis": 574.0,
-      "rsi": 27.57,
+      "kapanis": 576.0,
+      "rsi": 28.55,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": true,
-      "hacim_orani": 0.91,
+      "hacim_orani": 0.93,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -5431,13 +5418,13 @@
       "altin": "Bronz"
     },
     "MHRGY": {
-      "kapanis": 3.43,
-      "rsi": 44.68,
+      "kapanis": 3.4,
+      "rsi": 43.43,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.94,
+      "hacim_orani": 0.96,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -5447,13 +5434,13 @@
       "altin": null
     },
     "MIATK": {
-      "kapanis": 36.92,
-      "rsi": 47.04,
+      "kapanis": 36.82,
+      "rsi": 46.59,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.65,
+      "hacim_orani": 0.66,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -5465,13 +5452,13 @@
       "altin": null
     },
     "MNDRS": {
-      "kapanis": 13.55,
-      "rsi": 33.83,
+      "kapanis": 13.66,
+      "rsi": 34.77,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": true,
-      "hacim_orani": 1.95,
+      "hacim_orani": 1.98,
       "sinyaller": [
         "MACD Negatif",
         "BB Alt Bant",
@@ -5488,7 +5475,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.61,
+      "hacim_orani": 0.62,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -5499,8 +5486,8 @@
       "altin": null
     },
     "MOBTL": {
-      "kapanis": 9.62,
-      "rsi": 38.65,
+      "kapanis": 9.61,
+      "rsi": 38.47,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -5516,13 +5503,13 @@
       "altin": null
     },
     "MOGAN": {
-      "kapanis": 9.79,
-      "rsi": 48.92,
+      "kapanis": 9.82,
+      "rsi": 49.27,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.87,
+      "hacim_orani": 0.88,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -5532,37 +5519,39 @@
       "altin": null
     },
     "MOPAS": {
-      "kapanis": 48.86,
-      "rsi": 43.67,
+      "kapanis": 49.1,
+      "rsi": 43.97,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": true,
-      "hacim_orani": 3.07,
+      "hacim_orani": 3.08,
       "sinyaller": [
         "MACD Negatif",
         "BB Alt Bant",
         "Fiyat EMA20 Altinda",
         "EMA20 > EMA50",
-        "Anormal Hacim 3.07x"
+        "Anormal Hacim 3.08x"
       ],
       "sinyal_sayisi": 3,
       "altin": "Bronz"
     },
     "MPARK": {
-      "kapanis": 415.0,
-      "rsi": 34.37,
+      "kapanis": 416.0,
+      "rsi": 35.1,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.25,
+      "hacim_orani": 1.28,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
-        "EMA20 > EMA50"
+        "EMA20 > EMA50",
+        "Cekic",
+        "Asilan Adam"
       ],
-      "sinyal_sayisi": 1,
+      "sinyal_sayisi": 2,
       "altin": null
     },
     "MRGYO": {
@@ -5572,7 +5561,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 2.84,
+      "hacim_orani": 2.86,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Altinda",
@@ -5583,8 +5572,8 @@
       "altin": null
     },
     "MRSHL": {
-      "kapanis": 1371.0,
-      "rsi": 27.97,
+      "kapanis": 1376.0,
+      "rsi": 28.38,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -5600,8 +5589,8 @@
       "altin": null
     },
     "MSGYO": {
-      "kapanis": 5.75,
-      "rsi": 39.01,
+      "kapanis": 5.74,
+      "rsi": 38.5,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -5617,8 +5606,8 @@
       "altin": null
     },
     "MTRKS": {
-      "kapanis": 20.74,
-      "rsi": 37.51,
+      "kapanis": 20.7,
+      "rsi": 37.24,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -5649,31 +5638,32 @@
       "altin": null
     },
     "NATEN": {
-      "kapanis": 7.24,
-      "rsi": 24.49,
+      "kapanis": 7.26,
+      "rsi": 24.78,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
-      "bb_alt_bant": true,
-      "hacim_orani": 0.47,
+      "bb_alt_bant": false,
+      "hacim_orani": 0.48,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
-        "BB Alt Bant",
         "Fiyat EMA20 Altinda",
-        "EMA20 < EMA50"
+        "EMA20 < EMA50",
+        "Cekic",
+        "Asilan Adam"
       ],
       "sinyal_sayisi": 2,
       "altin": null
     },
     "NETAS": {
-      "kapanis": 53.9,
-      "rsi": 29.57,
+      "kapanis": 53.8,
+      "rsi": 29.37,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.56,
+      "hacim_orani": 0.57,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -5691,7 +5681,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.7,
+      "hacim_orani": 0.75,
       "sinyaller": [
         "RSI Asiri Alim",
         "MACD Pozitif",
@@ -5703,13 +5693,13 @@
       "altin": "Bronz"
     },
     "NTGAZ": {
-      "kapanis": 11.62,
-      "rsi": 47.39,
+      "kapanis": 11.63,
+      "rsi": 47.48,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 2.75,
+      "hacim_orani": 2.78,
       "sinyaller": [
         "MACD Sat Kesisimi",
         "MACD Negatif",
@@ -5721,24 +5711,26 @@
       "altin": null
     },
     "NTHOL": {
-      "kapanis": 43.84,
-      "rsi": 35.83,
+      "kapanis": 43.98,
+      "rsi": 36.29,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.55,
+      "hacim_orani": 0.56,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
-        "EMA20 < EMA50"
+        "EMA20 < EMA50",
+        "Cekic",
+        "Asilan Adam"
       ],
-      "sinyal_sayisi": 0,
+      "sinyal_sayisi": 1,
       "altin": null
     },
     "NUGYO": {
-      "kapanis": 8.86,
-      "rsi": 29.59,
+      "kapanis": 8.84,
+      "rsi": 29.37,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -5754,13 +5746,13 @@
       "altin": null
     },
     "NUHCM": {
-      "kapanis": 276.5,
-      "rsi": 60.43,
+      "kapanis": 276.0,
+      "rsi": 60.11,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.89,
+      "hacim_orani": 1.92,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -5770,13 +5762,13 @@
       "altin": "Bronz"
     },
     "OBAMS": {
-      "kapanis": 7.44,
-      "rsi": 37.59,
+      "kapanis": 7.46,
+      "rsi": 38.0,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.66,
+      "hacim_orani": 0.67,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -5786,8 +5778,8 @@
       "altin": null
     },
     "OBASE": {
-      "kapanis": 33.56,
-      "rsi": 40.22,
+      "kapanis": 33.64,
+      "rsi": 40.44,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -5804,31 +5796,31 @@
       "altin": null
     },
     "ODAS": {
-      "kapanis": 6.05,
-      "rsi": 56.65,
+      "kapanis": 6.06,
+      "rsi": 56.92,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 3.2,
+      "hacim_orani": 3.24,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
-        "Anormal Hacim 3.2x",
+        "Anormal Hacim 3.24x",
         "Ters Cekic"
       ],
       "sinyal_sayisi": 4,
       "altin": "Bronz"
     },
     "ODINE": {
-      "kapanis": 639.0,
-      "rsi": 77.79,
+      "kapanis": 642.0,
+      "rsi": 78.49,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.89,
+      "hacim_orani": 0.93,
       "sinyaller": [
         "RSI Asiri Alim",
         "MACD Pozitif",
@@ -5839,13 +5831,13 @@
       "altin": "Bronz"
     },
     "OFSYM": {
-      "kapanis": 63.45,
-      "rsi": 35.88,
+      "kapanis": 63.6,
+      "rsi": 36.15,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.53,
+      "hacim_orani": 0.55,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -5855,13 +5847,13 @@
       "altin": null
     },
     "ONCSM": {
-      "kapanis": 229.2,
-      "rsi": 33.09,
+      "kapanis": 229.6,
+      "rsi": 33.18,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.51,
+      "hacim_orani": 0.52,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -5872,13 +5864,13 @@
       "altin": null
     },
     "ONRYT": {
-      "kapanis": 61.4,
-      "rsi": 35.87,
+      "kapanis": 61.65,
+      "rsi": 36.3,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.79,
+      "hacim_orani": 0.8,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -5888,13 +5880,13 @@
       "altin": null
     },
     "ORCAY": {
-      "kapanis": 3.25,
-      "rsi": 31.86,
+      "kapanis": 3.28,
+      "rsi": 34.18,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.67,
+      "hacim_orani": 0.68,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -5904,13 +5896,13 @@
       "altin": null
     },
     "ORGE": {
-      "kapanis": 66.35,
-      "rsi": 37.81,
+      "kapanis": 66.25,
+      "rsi": 37.53,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.99,
+      "hacim_orani": 1.0,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -5920,8 +5912,8 @@
       "altin": null
     },
     "OSMEN": {
-      "kapanis": 7.62,
-      "rsi": 35.95,
+      "kapanis": 7.63,
+      "rsi": 36.11,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -5936,13 +5928,13 @@
       "altin": null
     },
     "OSTIM": {
-      "kapanis": 2.72,
-      "rsi": 31.67,
+      "kapanis": 2.73,
+      "rsi": 32.1,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.71,
+      "hacim_orani": 0.72,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -5952,8 +5944,8 @@
       "altin": null
     },
     "OTKAR": {
-      "kapanis": 360.25,
-      "rsi": 27.33,
+      "kapanis": 359.75,
+      "rsi": 27.2,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -5963,21 +5955,19 @@
         "RSI Asiri Satim",
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
-        "EMA20 < EMA50",
-        "Cekic",
-        "Asilan Adam"
+        "EMA20 < EMA50"
       ],
-      "sinyal_sayisi": 2,
+      "sinyal_sayisi": 1,
       "altin": null
     },
     "OYAKC": {
-      "kapanis": 22.7,
-      "rsi": 32.52,
+      "kapanis": 22.72,
+      "rsi": 32.62,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.76,
+      "hacim_orani": 0.8,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -5987,13 +5977,13 @@
       "altin": null
     },
     "OYLUM": {
-      "kapanis": 8.24,
-      "rsi": 46.72,
+      "kapanis": 8.25,
+      "rsi": 46.9,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.34,
+      "hacim_orani": 0.36,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Altinda",
@@ -6003,8 +5993,8 @@
       "altin": null
     },
     "OYYAT": {
-      "kapanis": 59.85,
-      "rsi": 53.16,
+      "kapanis": 60.3,
+      "rsi": 54.04,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -6012,15 +6002,15 @@
       "hacim_orani": 0.76,
       "sinyaller": [
         "MACD Negatif",
-        "Fiyat EMA20 Altinda",
+        "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50"
       ],
-      "sinyal_sayisi": 1,
+      "sinyal_sayisi": 2,
       "altin": null
     },
     "OZATD": {
-      "kapanis": 210.4,
-      "rsi": 80.32,
+      "kapanis": 210.1,
+      "rsi": 80.19,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
@@ -6036,13 +6026,13 @@
       "altin": "Bronz"
     },
     "OZGYO": {
-      "kapanis": 2.01,
-      "rsi": 46.92,
+      "kapanis": 2.0,
+      "rsi": 45.93,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.43,
+      "hacim_orani": 0.44,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -6052,13 +6042,13 @@
       "altin": null
     },
     "OZKGY": {
-      "kapanis": 13.08,
-      "rsi": 31.3,
+      "kapanis": 13.1,
+      "rsi": 31.66,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.32,
+      "hacim_orani": 1.34,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -6068,13 +6058,13 @@
       "altin": null
     },
     "OZRDN": {
-      "kapanis": 24.0,
-      "rsi": 53.72,
+      "kapanis": 24.6,
+      "rsi": 55.85,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.56,
+      "hacim_orani": 0.61,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Ustunde",
@@ -6084,8 +6074,8 @@
       "altin": null
     },
     "OZSUB": {
-      "kapanis": 19.65,
-      "rsi": 51.09,
+      "kapanis": 19.69,
+      "rsi": 51.4,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -6100,13 +6090,13 @@
       "altin": null
     },
     "OZYSR": {
-      "kapanis": 45.44,
-      "rsi": 36.97,
+      "kapanis": 45.14,
+      "rsi": 36.22,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.54,
+      "hacim_orani": 0.55,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -6116,8 +6106,8 @@
       "altin": null
     },
     "PAGYO": {
-      "kapanis": 88.25,
-      "rsi": 41.76,
+      "kapanis": 88.4,
+      "rsi": 42.06,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -6138,7 +6128,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": true,
-      "hacim_orani": 0.31,
+      "hacim_orani": 0.32,
       "sinyaller": [
         "MACD Negatif",
         "BB Alt Bant",
@@ -6151,8 +6141,8 @@
       "altin": null
     },
     "PAMEL": {
-      "kapanis": 78.6,
-      "rsi": 32.39,
+      "kapanis": 78.85,
+      "rsi": 33.34,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -6167,13 +6157,13 @@
       "altin": null
     },
     "PAPIL": {
-      "kapanis": 16.52,
-      "rsi": 36.49,
+      "kapanis": 16.57,
+      "rsi": 36.74,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": true,
-      "hacim_orani": 0.89,
+      "hacim_orani": 0.9,
       "sinyaller": [
         "MACD Negatif",
         "BB Alt Bant",
@@ -6185,8 +6175,8 @@
       "altin": null
     },
     "PARSN": {
-      "kapanis": 79.35,
-      "rsi": 26.11,
+      "kapanis": 79.15,
+      "rsi": 25.9,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -6202,31 +6192,29 @@
       "altin": null
     },
     "PASEU": {
-      "kapanis": 120.5,
-      "rsi": 40.09,
+      "kapanis": 123.5,
+      "rsi": 42.67,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 2.45,
+      "hacim_orani": 2.58,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
-        "EMA20 < EMA50",
-        "Cekic",
-        "Asilan Adam"
+        "EMA20 < EMA50"
       ],
-      "sinyal_sayisi": 1,
+      "sinyal_sayisi": 0,
       "altin": null
     },
     "PATEK": {
-      "kapanis": 17.29,
-      "rsi": 32.82,
+      "kapanis": 17.31,
+      "rsi": 32.92,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": true,
-      "hacim_orani": 0.5,
+      "hacim_orani": 0.51,
       "sinyaller": [
         "MACD Negatif",
         "BB Alt Bant",
@@ -6237,13 +6225,13 @@
       "altin": null
     },
     "PCILT": {
-      "kapanis": 23.7,
-      "rsi": 45.02,
+      "kapanis": 23.68,
+      "rsi": 44.94,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.52,
+      "hacim_orani": 1.54,
       "sinyaller": [
         "MACD Sat Kesisimi",
         "MACD Negatif",
@@ -6255,13 +6243,13 @@
       "altin": null
     },
     "PEKGY": {
-      "kapanis": 13.18,
-      "rsi": 65.11,
+      "kapanis": 13.17,
+      "rsi": 65.02,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.64,
+      "hacim_orani": 0.65,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -6278,7 +6266,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.04,
+      "hacim_orani": 1.07,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -6288,21 +6276,19 @@
       "altin": null
     },
     "PENTA": {
-      "kapanis": 12.78,
-      "rsi": 36.15,
+      "kapanis": 12.73,
+      "rsi": 35.76,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.02,
+      "hacim_orani": 1.04,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
-        "EMA20 < EMA50",
-        "Cekic",
-        "Asilan Adam"
+        "EMA20 < EMA50"
       ],
-      "sinyal_sayisi": 1,
+      "sinyal_sayisi": 0,
       "altin": null
     },
     "PETKM": {
@@ -6312,7 +6298,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 2.05,
+      "hacim_orani": 2.07,
       "sinyaller": [
         "MACD Sat Kesisimi",
         "MACD Negatif",
@@ -6323,31 +6309,31 @@
       "altin": null
     },
     "PETUN": {
-      "kapanis": 11.72,
-      "rsi": 40.16,
+      "kapanis": 11.78,
+      "rsi": 41.62,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 6.06,
+      "hacim_orani": 6.12,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
         "EMA20 < EMA50",
-        "Anormal Hacim 6.06x",
+        "Anormal Hacim 6.12x",
         "Delikli Bulut"
       ],
       "sinyal_sayisi": 2,
       "altin": null
     },
     "PGSUS": {
-      "kapanis": 173.5,
-      "rsi": 25.96,
+      "kapanis": 173.9,
+      "rsi": 26.17,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.96,
+      "hacim_orani": 0.97,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -6374,13 +6360,13 @@
       "altin": null
     },
     "PKART": {
-      "kapanis": 72.8,
-      "rsi": 44.44,
+      "kapanis": 72.85,
+      "rsi": 44.51,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.77,
+      "hacim_orani": 0.78,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -6390,13 +6376,13 @@
       "altin": null
     },
     "PKENT": {
-      "kapanis": 150.0,
-      "rsi": 45.56,
+      "kapanis": 149.6,
+      "rsi": 45.27,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.68,
+      "hacim_orani": 0.69,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -6407,8 +6393,8 @@
       "altin": null
     },
     "PLTUR": {
-      "kapanis": 21.16,
-      "rsi": 40.85,
+      "kapanis": 21.28,
+      "rsi": 41.54,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -6417,21 +6403,19 @@
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
-        "EMA20 > EMA50",
-        "Cekic",
-        "Asilan Adam"
+        "EMA20 > EMA50"
       ],
-      "sinyal_sayisi": 2,
+      "sinyal_sayisi": 1,
       "altin": null
     },
     "PNLSN": {
-      "kapanis": 46.8,
-      "rsi": 51.86,
+      "kapanis": 47.3,
+      "rsi": 52.88,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.12,
+      "hacim_orani": 1.15,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Ustunde",
@@ -6441,13 +6425,13 @@
       "altin": null
     },
     "PNSUT": {
-      "kapanis": 10.85,
-      "rsi": 37.29,
+      "kapanis": 10.83,
+      "rsi": 36.86,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.9,
+      "hacim_orani": 1.91,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -6457,13 +6441,13 @@
       "altin": null
     },
     "POLHO": {
-      "kapanis": 16.45,
-      "rsi": 45.2,
+      "kapanis": 16.44,
+      "rsi": 45.12,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.13,
+      "hacim_orani": 1.15,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Altinda",
@@ -6491,13 +6475,13 @@
       "altin": null
     },
     "PRDGS": {
-      "kapanis": 6.73,
-      "rsi": 47.59,
+      "kapanis": 6.79,
+      "rsi": 48.67,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.04,
+      "hacim_orani": 1.06,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -6508,13 +6492,13 @@
       "altin": null
     },
     "PRKAB": {
-      "kapanis": 41.0,
-      "rsi": 40.4,
+      "kapanis": 40.92,
+      "rsi": 40.27,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.23,
+      "hacim_orani": 0.24,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -6531,7 +6515,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.97,
+      "hacim_orani": 0.98,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -6561,13 +6545,13 @@
       "altin": "Bronz"
     },
     "PSDTC": {
-      "kapanis": 123.2,
-      "rsi": 49.29,
+      "kapanis": 123.3,
+      "rsi": 49.41,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.08,
+      "hacim_orani": 1.09,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -6579,13 +6563,13 @@
       "altin": "Bronz"
     },
     "PSGYO": {
-      "kapanis": 2.06,
-      "rsi": 26.73,
+      "kapanis": 2.07,
+      "rsi": 27.08,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.72,
+      "hacim_orani": 0.73,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -6602,7 +6586,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.32,
+      "hacim_orani": 1.33,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -6612,13 +6596,13 @@
       "altin": null
     },
     "RALYH": {
-      "kapanis": 138.4,
-      "rsi": 23.62,
+      "kapanis": 138.0,
+      "rsi": 23.43,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.53,
+      "hacim_orani": 0.54,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Sat Kesisimi",
@@ -6630,13 +6614,13 @@
       "altin": null
     },
     "RAYSG": {
-      "kapanis": 193.5,
-      "rsi": 32.95,
+      "kapanis": 193.8,
+      "rsi": 33.08,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.83,
+      "hacim_orani": 0.84,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -6663,19 +6647,18 @@
       "altin": null
     },
     "RGYAS": {
-      "kapanis": 151.7,
-      "rsi": 41.14,
+      "kapanis": 152.8,
+      "rsi": 42.35,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": true,
-      "hacim_orani": 1.21,
+      "hacim_orani": 1.22,
       "sinyaller": [
         "MACD Negatif",
         "BB Alt Bant",
         "Fiyat EMA20 Altinda",
-        "EMA20 > EMA50",
-        "3 Siyah Karga"
+        "EMA20 > EMA50"
       ],
       "sinyal_sayisi": 2,
       "altin": null
@@ -6687,7 +6670,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.04,
+      "hacim_orani": 1.05,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -6697,8 +6680,8 @@
       "altin": null
     },
     "RUBNS": {
-      "kapanis": 32.54,
-      "rsi": 45.49,
+      "kapanis": 32.8,
+      "rsi": 46.26,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -6709,15 +6692,14 @@
         "Fiyat EMA20 Altinda",
         "EMA20 > EMA50",
         "Cekic",
-        "Asilan Adam",
-        "Aksam Yildizi"
+        "Asilan Adam"
       ],
       "sinyal_sayisi": 2,
       "altin": null
     },
     "RUZYE": {
-      "kapanis": 11.36,
-      "rsi": 41.43,
+      "kapanis": 11.35,
+      "rsi": 41.25,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -6732,13 +6714,13 @@
       "altin": null
     },
     "RYGYO": {
-      "kapanis": 30.68,
-      "rsi": 56.66,
+      "kapanis": 31.02,
+      "rsi": 58.26,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.75,
+      "hacim_orani": 0.83,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Ustunde",
@@ -6749,32 +6731,31 @@
       "altin": "Bronz"
     },
     "RYSAS": {
-      "kapanis": 17.32,
-      "rsi": 42.45,
+      "kapanis": 17.36,
+      "rsi": 42.68,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
-      "bb_alt_bant": true,
-      "hacim_orani": 0.21,
+      "bb_alt_bant": false,
+      "hacim_orani": 0.22,
       "sinyaller": [
         "MACD Negatif",
-        "BB Alt Bant",
         "Fiyat EMA20 Altinda",
         "EMA20 > EMA50",
         "Cekic",
         "Asilan Adam"
       ],
-      "sinyal_sayisi": 3,
-      "altin": "Bronz"
+      "sinyal_sayisi": 2,
+      "altin": null
     },
     "SAFKR": {
-      "kapanis": 26.72,
-      "rsi": 47.98,
+      "kapanis": 26.68,
+      "rsi": 47.77,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.81,
+      "hacim_orani": 0.82,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -6785,13 +6766,13 @@
       "altin": null
     },
     "SAHOL": {
-      "kapanis": 91.1,
-      "rsi": 34.56,
+      "kapanis": 91.15,
+      "rsi": 34.67,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": true,
       "bb_alt_bant": false,
-      "hacim_orani": 1.04,
+      "hacim_orani": 1.05,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -6802,8 +6783,8 @@
       "altin": null
     },
     "SAMAT": {
-      "kapanis": 5.39,
-      "rsi": 37.65,
+      "kapanis": 5.45,
+      "rsi": 39.06,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -6818,13 +6799,13 @@
       "altin": null
     },
     "SANEL": {
-      "kapanis": 34.9,
-      "rsi": 41.24,
+      "kapanis": 35.76,
+      "rsi": 44.43,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.67,
+      "hacim_orani": 0.69,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -6834,13 +6815,13 @@
       "altin": null
     },
     "SANFM": {
-      "kapanis": 6.81,
-      "rsi": 40.32,
+      "kapanis": 6.8,
+      "rsi": 40.16,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": true,
-      "hacim_orani": 1.02,
+      "hacim_orani": 1.03,
       "sinyaller": [
         "MACD Negatif",
         "BB Alt Bant",
@@ -6851,8 +6832,8 @@
       "altin": null
     },
     "SANKO": {
-      "kapanis": 19.8,
-      "rsi": 33.47,
+      "kapanis": 19.72,
+      "rsi": 32.9,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -6873,7 +6854,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": true,
-      "hacim_orani": 0.32,
+      "hacim_orani": 0.33,
       "sinyaller": [
         "MACD Negatif",
         "BB Alt Bant",
@@ -6890,24 +6871,24 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 4.01,
+      "hacim_orani": 4.12,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
         "EMA20 < EMA50",
-        "Anormal Hacim 4.01x"
+        "Anormal Hacim 4.12x"
       ],
       "sinyal_sayisi": 1,
       "altin": null
     },
     "SAYAS": {
-      "kapanis": 38.82,
-      "rsi": 43.0,
+      "kapanis": 38.88,
+      "rsi": 43.27,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.52,
+      "hacim_orani": 1.53,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -6917,13 +6898,13 @@
       "altin": null
     },
     "SDTTR": {
-      "kapanis": 235.0,
-      "rsi": 54.13,
+      "kapanis": 234.7,
+      "rsi": 53.99,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.51,
+      "hacim_orani": 1.54,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -6934,8 +6915,8 @@
       "altin": "Bronz"
     },
     "SEGMN": {
-      "kapanis": 49.82,
-      "rsi": 61.8,
+      "kapanis": 49.7,
+      "rsi": 61.58,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -6950,13 +6931,13 @@
       "altin": null
     },
     "SEKUR": {
-      "kapanis": 5.31,
-      "rsi": 54.17,
+      "kapanis": 5.28,
+      "rsi": 53.56,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.53,
+      "hacim_orani": 0.58,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Ustunde",
@@ -6966,8 +6947,8 @@
       "altin": null
     },
     "SELEC": {
-      "kapanis": 76.9,
-      "rsi": 35.66,
+      "kapanis": 77.0,
+      "rsi": 35.8,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -6977,43 +6958,42 @@
         "MACD Negatif",
         "BB Alt Bant",
         "Fiyat EMA20 Altinda",
-        "EMA20 > EMA50",
-        "3 Siyah Karga"
+        "EMA20 > EMA50"
       ],
       "sinyal_sayisi": 2,
       "altin": null
     },
     "SELVA": {
-      "kapanis": 2.23,
-      "rsi": 39.91,
+      "kapanis": 2.24,
+      "rsi": 40.32,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.21,
+      "hacim_orani": 1.22,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Altinda",
-        "EMA20 < EMA50"
+        "EMA20 < EMA50",
+        "Boga Harami"
       ],
-      "sinyal_sayisi": 1,
+      "sinyal_sayisi": 2,
       "altin": null
     },
     "SERNT": {
-      "kapanis": 7.13,
-      "rsi": 29.99,
+      "kapanis": 7.15,
+      "rsi": 30.28,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
       "hacim_orani": 0.73,
       "sinyaller": [
-        "RSI Asiri Satim",
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
         "EMA20 < EMA50"
       ],
-      "sinyal_sayisi": 1,
+      "sinyal_sayisi": 0,
       "altin": null
     },
     "SEYKM": {
@@ -7050,13 +7030,13 @@
       "altin": null
     },
     "SISE": {
-      "kapanis": 40.46,
-      "rsi": 34.48,
+      "kapanis": 40.52,
+      "rsi": 34.81,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.43,
+      "hacim_orani": 0.44,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -7066,25 +7046,24 @@
       "altin": null
     },
     "SKTAS": {
-      "kapanis": 3.38,
-      "rsi": 41.69,
+      "kapanis": 3.36,
+      "rsi": 40.82,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.21,
+      "hacim_orani": 1.22,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
-        "EMA20 < EMA50",
-        "Yutan Boga"
+        "EMA20 < EMA50"
       ],
-      "sinyal_sayisi": 1,
+      "sinyal_sayisi": 0,
       "altin": null
     },
     "SKYLP": {
-      "kapanis": 274.5,
-      "rsi": 49.0,
+      "kapanis": 273.75,
+      "rsi": 48.79,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -7099,18 +7078,18 @@
       "altin": null
     },
     "SMART": {
-      "kapanis": 37.98,
-      "rsi": 67.25,
+      "kapanis": 38.04,
+      "rsi": 67.43,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 3.15,
+      "hacim_orani": 3.16,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
-        "Anormal Hacim 3.15x"
+        "Anormal Hacim 3.16x"
       ],
       "sinyal_sayisi": 4,
       "altin": "Bronz"
@@ -7132,8 +7111,8 @@
       "altin": null
     },
     "SMRVA": {
-      "kapanis": 54.75,
-      "rsi": 29.64,
+      "kapanis": 54.9,
+      "rsi": 29.93,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
@@ -7155,7 +7134,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.18,
+      "hacim_orani": 1.19,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -7166,13 +7145,13 @@
       "altin": null
     },
     "SNICA": {
-      "kapanis": 3.71,
-      "rsi": 31.18,
+      "kapanis": 3.69,
+      "rsi": 30.61,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.46,
+      "hacim_orani": 0.48,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -7182,32 +7161,32 @@
       "altin": null
     },
     "SOKE": {
-      "kapanis": 14.93,
-      "rsi": 77.68,
+      "kapanis": 14.99,
+      "rsi": 78.11,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 6.32,
+      "hacim_orani": 6.55,
       "sinyaller": [
         "RSI Asiri Alim",
         "MACD Pozitif",
         "BB Ust Bant",
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
-        "Anormal Hacim 6.32x"
+        "Anormal Hacim 6.55x"
       ],
       "sinyal_sayisi": 4,
       "altin": "Bronz"
     },
     "SOKM": {
-      "kapanis": 58.9,
-      "rsi": 34.0,
+      "kapanis": 58.95,
+      "rsi": 34.11,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": true,
-      "hacim_orani": 1.29,
+      "hacim_orani": 1.32,
       "sinyaller": [
         "MACD Negatif",
         "BB Alt Bant",
@@ -7218,13 +7197,13 @@
       "altin": null
     },
     "SRVGY": {
-      "kapanis": 2.88,
-      "rsi": 33.27,
+      "kapanis": 2.87,
+      "rsi": 32.98,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.44,
+      "hacim_orani": 0.45,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -7234,13 +7213,13 @@
       "altin": null
     },
     "SUNTK": {
-      "kapanis": 36.42,
-      "rsi": 39.23,
+      "kapanis": 36.4,
+      "rsi": 39.12,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.6,
+      "hacim_orani": 0.61,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -7256,7 +7235,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.34,
+      "hacim_orani": 1.36,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -7273,7 +7252,7 @@
       "golden_cross": false,
       "death_cross": true,
       "bb_alt_bant": false,
-      "hacim_orani": 0.46,
+      "hacim_orani": 0.47,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Altinda",
@@ -7284,29 +7263,31 @@
       "altin": null
     },
     "TABGD": {
-      "kapanis": 245.7,
-      "rsi": 40.72,
+      "kapanis": 246.3,
+      "rsi": 41.11,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.24,
+      "hacim_orani": 1.25,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
-        "EMA20 > EMA50"
+        "EMA20 > EMA50",
+        "Cekic",
+        "Asilan Adam"
       ],
-      "sinyal_sayisi": 1,
+      "sinyal_sayisi": 2,
       "altin": null
     },
     "TARKM": {
-      "kapanis": 367.5,
-      "rsi": 34.5,
+      "kapanis": 368.25,
+      "rsi": 34.75,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": true,
-      "hacim_orani": 0.44,
+      "hacim_orani": 0.45,
       "sinyaller": [
         "MACD Negatif",
         "BB Alt Bant",
@@ -7335,13 +7316,13 @@
       "altin": "Bronz"
     },
     "TATGD": {
-      "kapanis": 17.55,
-      "rsi": 63.8,
+      "kapanis": 17.59,
+      "rsi": 64.06,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 2.23,
+      "hacim_orani": 2.25,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Ustunde",
@@ -7352,24 +7333,26 @@
       "altin": "Bronz"
     },
     "TAVHL": {
-      "kapanis": 287.0,
-      "rsi": 31.44,
+      "kapanis": 288.0,
+      "rsi": 31.76,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.82,
+      "hacim_orani": 0.83,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
-        "EMA20 < EMA50"
+        "EMA20 < EMA50",
+        "Cekic",
+        "Asilan Adam"
       ],
-      "sinyal_sayisi": 0,
+      "sinyal_sayisi": 1,
       "altin": null
     },
     "TCELL": {
-      "kapanis": 106.6,
-      "rsi": 31.86,
+      "kapanis": 106.7,
+      "rsi": 31.99,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -7385,15 +7368,16 @@
       "altin": null
     },
     "TCKRC": {
-      "kapanis": 93.35,
-      "rsi": 60.09,
+      "kapanis": 94.0,
+      "rsi": 60.93,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.27,
+      "hacim_orani": 1.29,
       "sinyaller": [
         "MACD Negatif",
+        "BB Ust Bant",
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
         "Cekic",
@@ -7404,8 +7388,8 @@
       "altin": "Bronz"
     },
     "TEHOL": {
-      "kapanis": 15.19,
-      "rsi": 47.73,
+      "kapanis": 15.21,
+      "rsi": 47.86,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
@@ -7420,8 +7404,8 @@
       "altin": null
     },
     "TEKTU": {
-      "kapanis": 8.79,
-      "rsi": 46.87,
+      "kapanis": 8.8,
+      "rsi": 46.97,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
@@ -7437,8 +7421,8 @@
       "altin": null
     },
     "TERA": {
-      "kapanis": 288.0,
-      "rsi": 81.85,
+      "kapanis": 287.75,
+      "rsi": 81.54,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
@@ -7454,13 +7438,13 @@
       "altin": "Bronz"
     },
     "TEZOL": {
-      "kapanis": 16.0,
-      "rsi": 78.71,
+      "kapanis": 15.99,
+      "rsi": 78.64,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.75,
+      "hacim_orani": 1.77,
       "sinyaller": [
         "RSI Asiri Alim",
         "MACD Al Kesisimi",
@@ -7474,8 +7458,8 @@
       "altin": "Gumus"
     },
     "THYAO": {
-      "kapanis": 280.75,
-      "rsi": 34.35,
+      "kapanis": 281.75,
+      "rsi": 35.19,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -7491,13 +7475,13 @@
       "altin": null
     },
     "TKFEN": {
-      "kapanis": 76.8,
-      "rsi": 50.01,
+      "kapanis": 76.85,
+      "rsi": 50.08,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.51,
+      "hacim_orani": 1.52,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Ustunde",
@@ -7508,32 +7492,30 @@
       "altin": "Bronz"
     },
     "TKNSA": {
-      "kapanis": 26.26,
-      "rsi": 62.46,
+      "kapanis": 25.74,
+      "rsi": 60.5,
       "macd_pozitif": true,
-      "golden_cross": true,
+      "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 5.7,
+      "hacim_orani": 5.85,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "EMA20 > EMA50",
-        "Golden Cross",
-        "Anormal Hacim 5.7x",
-        "3 Beyaz Asker"
+        "EMA20 < EMA50",
+        "Anormal Hacim 5.85x"
       ],
-      "sinyal_sayisi": 6,
-      "altin": "Gumus"
+      "sinyal_sayisi": 3,
+      "altin": "Bronz"
     },
     "TLMAN": {
-      "kapanis": 85.3,
-      "rsi": 28.19,
+      "kapanis": 85.35,
+      "rsi": 28.25,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.68,
+      "hacim_orani": 0.69,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -7564,13 +7546,13 @@
       "altin": "Gumus"
     },
     "TMSN": {
-      "kapanis": 104.2,
-      "rsi": 46.15,
+      "kapanis": 104.3,
+      "rsi": 46.34,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.87,
+      "hacim_orani": 0.88,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -7580,8 +7562,8 @@
       "altin": null
     },
     "TNZTP": {
-      "kapanis": 24.94,
-      "rsi": 47.83,
+      "kapanis": 24.88,
+      "rsi": 47.49,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -7597,13 +7579,13 @@
       "altin": null
     },
     "TOASO": {
-      "kapanis": 288.25,
-      "rsi": 34.63,
+      "kapanis": 288.5,
+      "rsi": 34.75,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.73,
+      "hacim_orani": 0.74,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -7619,24 +7601,24 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 4.97,
+      "hacim_orani": 4.99,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
         "EMA20 > EMA50",
-        "Anormal Hacim 4.97x"
+        "Anormal Hacim 4.99x"
       ],
       "sinyal_sayisi": 2,
       "altin": null
     },
     "TRGYO": {
-      "kapanis": 77.7,
-      "rsi": 36.32,
+      "kapanis": 77.9,
+      "rsi": 36.76,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": true,
-      "hacim_orani": 0.92,
+      "hacim_orani": 0.93,
       "sinyaller": [
         "MACD Negatif",
         "BB Alt Bant",
@@ -7665,29 +7647,13 @@
       "altin": null
     },
     "TRILC": {
-      "kapanis": 15.28,
-      "rsi": 33.41,
+      "kapanis": 15.33,
+      "rsi": 34.05,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
       "hacim_orani": 0.57,
-      "sinyaller": [
-        "MACD Negatif",
-        "Fiyat EMA20 Altinda",
-        "EMA20 < EMA50"
-      ],
-      "sinyal_sayisi": 0,
-      "altin": null
-    },
-    "TSGYO": {
-      "kapanis": 6.6,
-      "rsi": 34.94,
-      "macd_pozitif": false,
-      "golden_cross": false,
-      "death_cross": false,
-      "bb_alt_bant": false,
-      "hacim_orani": 0.47,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -7698,21 +7664,38 @@
       "sinyal_sayisi": 1,
       "altin": null
     },
-    "TSPOR": {
-      "kapanis": 0.92,
-      "rsi": 21.9,
+    "TSGYO": {
+      "kapanis": 6.61,
+      "rsi": 35.11,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.69,
+      "hacim_orani": 0.47,
       "sinyaller": [
-        "RSI Asiri Satim",
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
         "EMA20 < EMA50"
       ],
-      "sinyal_sayisi": 1,
+      "sinyal_sayisi": 0,
+      "altin": null
+    },
+    "TSPOR": {
+      "kapanis": 0.91,
+      "rsi": 20.87,
+      "macd_pozitif": false,
+      "golden_cross": false,
+      "death_cross": false,
+      "bb_alt_bant": true,
+      "hacim_orani": 0.7,
+      "sinyaller": [
+        "RSI Asiri Satim",
+        "MACD Negatif",
+        "BB Alt Bant",
+        "Fiyat EMA20 Altinda",
+        "EMA20 < EMA50"
+      ],
+      "sinyal_sayisi": 2,
       "altin": null
     },
     "TTKOM": {
@@ -7722,7 +7705,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": true,
-      "hacim_orani": 0.57,
+      "hacim_orani": 0.58,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -7734,13 +7717,13 @@
       "altin": "Bronz"
     },
     "TTRAK": {
-      "kapanis": 446.0,
-      "rsi": 23.43,
+      "kapanis": 446.25,
+      "rsi": 23.47,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.12,
+      "hacim_orani": 1.13,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -7751,8 +7734,8 @@
       "altin": null
     },
     "TUCLK": {
-      "kapanis": 4.25,
-      "rsi": 35.13,
+      "kapanis": 4.26,
+      "rsi": 35.34,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -7773,7 +7756,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.58,
+      "hacim_orani": 0.6,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -7784,13 +7767,13 @@
       "altin": null
     },
     "TUPRS": {
-      "kapanis": 251.75,
-      "rsi": 66.44,
+      "kapanis": 252.0,
+      "rsi": 66.65,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 2.31,
+      "hacim_orani": 2.32,
       "sinyaller": [
         "MACD Pozitif",
         "BB Ust Bant",
@@ -7802,13 +7785,13 @@
       "altin": "Bronz"
     },
     "TUREX": {
-      "kapanis": 6.72,
-      "rsi": 34.18,
+      "kapanis": 6.73,
+      "rsi": 34.36,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.54,
+      "hacim_orani": 0.55,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -7818,29 +7801,30 @@
       "altin": null
     },
     "TURGG": {
-      "kapanis": 27.48,
-      "rsi": 43.07,
+      "kapanis": 27.56,
+      "rsi": 43.49,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.45,
+      "hacim_orani": 0.46,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
-        "EMA20 > EMA50"
+        "EMA20 > EMA50",
+        "Delikli Bulut"
       ],
-      "sinyal_sayisi": 1,
+      "sinyal_sayisi": 2,
       "altin": null
     },
     "TURSG": {
-      "kapanis": 12.07,
-      "rsi": 45.69,
+      "kapanis": 12.06,
+      "rsi": 45.48,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": true,
-      "hacim_orani": 0.34,
+      "hacim_orani": 0.35,
       "sinyaller": [
         "MACD Negatif",
         "BB Alt Bant",
@@ -7851,13 +7835,13 @@
       "altin": null
     },
     "ULAS": {
-      "kapanis": 32.16,
-      "rsi": 47.38,
+      "kapanis": 32.2,
+      "rsi": 47.56,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.48,
+      "hacim_orani": 0.49,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -7867,13 +7851,13 @@
       "altin": null
     },
     "ULKER": {
-      "kapanis": 114.9,
-      "rsi": 32.96,
+      "kapanis": 115.0,
+      "rsi": 33.06,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.95,
+      "hacim_orani": 0.97,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -7883,13 +7867,13 @@
       "altin": null
     },
     "ULUSE": {
-      "kapanis": 185.5,
-      "rsi": 51.18,
+      "kapanis": 185.4,
+      "rsi": 51.1,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.41,
+      "hacim_orani": 1.42,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Ustunde",
@@ -7918,13 +7902,13 @@
       "altin": "Gumus"
     },
     "UNLU": {
-      "kapanis": 14.18,
-      "rsi": 35.91,
+      "kapanis": 14.15,
+      "rsi": 35.72,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.43,
+      "hacim_orani": 0.44,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -7934,13 +7918,13 @@
       "altin": null
     },
     "USAK": {
-      "kapanis": 1.55,
-      "rsi": 27.03,
+      "kapanis": 1.56,
+      "rsi": 27.43,
       "macd_pozitif": true,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.55,
+      "hacim_orani": 0.56,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Pozitif",
@@ -7968,8 +7952,8 @@
       "altin": null
     },
     "VBTYZ": {
-      "kapanis": 20.4,
-      "rsi": 47.97,
+      "kapanis": 20.46,
+      "rsi": 48.36,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -7985,8 +7969,8 @@
       "altin": null
     },
     "VERTU": {
-      "kapanis": 37.16,
-      "rsi": 33.27,
+      "kapanis": 37.12,
+      "rsi": 33.11,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -8001,13 +7985,13 @@
       "altin": null
     },
     "VERUS": {
-      "kapanis": 331.25,
-      "rsi": 73.61,
+      "kapanis": 332.0,
+      "rsi": 73.99,
       "macd_pozitif": true,
       "golden_cross": true,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.71,
+      "hacim_orani": 0.72,
       "sinyaller": [
         "RSI Asiri Alim",
         "MACD Pozitif",
@@ -8020,8 +8004,8 @@
       "altin": "Bronz"
     },
     "VESBE": {
-      "kapanis": 7.17,
-      "rsi": 29.47,
+      "kapanis": 7.16,
+      "rsi": 29.32,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -8043,7 +8027,7 @@
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.46,
+      "hacim_orani": 0.47,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -8053,13 +8037,13 @@
       "altin": null
     },
     "VRGYO": {
-      "kapanis": 2.16,
-      "rsi": 29.67,
+      "kapanis": 2.15,
+      "rsi": 29.14,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.58,
+      "hacim_orani": 0.59,
       "sinyaller": [
         "RSI Asiri Satim",
         "MACD Negatif",
@@ -8070,8 +8054,8 @@
       "altin": null
     },
     "VSNMD": {
-      "kapanis": 73.2,
-      "rsi": 26.64,
+      "kapanis": 73.15,
+      "rsi": 26.59,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -8089,13 +8073,13 @@
       "altin": null
     },
     "YAPRK": {
-      "kapanis": 10.3,
-      "rsi": 30.35,
+      "kapanis": 10.33,
+      "rsi": 30.48,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.84,
+      "hacim_orani": 0.85,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -8105,13 +8089,13 @@
       "altin": null
     },
     "YATAS": {
-      "kapanis": 41.24,
-      "rsi": 34.87,
+      "kapanis": 41.36,
+      "rsi": 35.26,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": true,
-      "hacim_orani": 0.99,
+      "hacim_orani": 1.0,
       "sinyaller": [
         "MACD Negatif",
         "BB Alt Bant",
@@ -8140,21 +8124,22 @@
       "altin": null
     },
     "YEOTK": {
-      "kapanis": 39.52,
-      "rsi": 46.31,
+      "kapanis": 39.62,
+      "rsi": 46.75,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.73,
+      "hacim_orani": 0.74,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
         "EMA20 < EMA50",
         "Cekic",
+        "Delikli Bulut",
         "Asilan Adam"
       ],
-      "sinyal_sayisi": 1,
+      "sinyal_sayisi": 2,
       "altin": null
     },
     "YESIL": {
@@ -8174,13 +8159,13 @@
       "altin": null
     },
     "YGGYO": {
-      "kapanis": 151.2,
-      "rsi": 55.36,
+      "kapanis": 151.5,
+      "rsi": 55.74,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.69,
+      "hacim_orani": 1.7,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Ustunde",
@@ -8190,8 +8175,8 @@
       "altin": null
     },
     "YIGIT": {
-      "kapanis": 21.98,
-      "rsi": 32.64,
+      "kapanis": 21.92,
+      "rsi": 32.32,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
@@ -8208,13 +8193,13 @@
       "altin": null
     },
     "YKSLN": {
-      "kapanis": 3.12,
-      "rsi": 41.97,
+      "kapanis": 3.11,
+      "rsi": 41.43,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.31,
+      "hacim_orani": 0.33,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -8224,13 +8209,13 @@
       "altin": null
     },
     "YUNSA": {
-      "kapanis": 8.72,
-      "rsi": 44.87,
+      "kapanis": 8.73,
+      "rsi": 45.0,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.66,
+      "hacim_orani": 0.68,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -8256,13 +8241,13 @@
       "altin": null
     },
     "YYLGD": {
-      "kapanis": 10.98,
-      "rsi": 34.08,
+      "kapanis": 11.04,
+      "rsi": 35.17,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 1.25,
+      "hacim_orani": 1.27,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -8273,13 +8258,13 @@
       "altin": null
     },
     "ZEDUR": {
-      "kapanis": 8.05,
-      "rsi": 41.81,
+      "kapanis": 8.06,
+      "rsi": 42.03,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,
       "bb_alt_bant": false,
-      "hacim_orani": 0.56,
+      "hacim_orani": 0.57,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -8289,8 +8274,8 @@
       "altin": null
     },
     "ZERGY": {
-      "kapanis": 19.64,
-      "rsi": 60.31,
+      "kapanis": 19.65,
+      "rsi": 60.34,
       "macd_pozitif": false,
       "golden_cross": false,
       "death_cross": false,

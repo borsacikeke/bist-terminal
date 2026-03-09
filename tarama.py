@@ -215,7 +215,7 @@ def tarama_yap():
                                  "3 Siyah Karga","Kara Bulut Ortusu","RSI Asiri Alim","BB Ust Bant"]
                 altin_skor = len([s for s in sinyaller if s not in ayi_sinyaller])
 
-                if altin_skor >= 7: altin = "Altin"
+                if altin_skor >= 6: altin = "Altin"
                 elif altin_skor >= 5: altin = "Gumus"
                 elif altin_skor >= 3: altin = "Bronz"
                 else: altin = None
