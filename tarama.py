@@ -10,6 +10,10 @@ from datetime import datetime
 
 hisseler = ["A1CAP.IS","A1YEN.IS","ACSEL.IS","ADEL.IS","ADESE.IS","ADGYO.IS","AFYON.IS","AGESA.IS","AGHOL.IS","AGROT.IS","AHGAZ.IS","AHSGY.IS","AKCNS.IS","AKENR.IS","AKFGY.IS","AKFIS.IS","AKFYE.IS","AKGRT.IS","AKSA.IS","AKSEN.IS","AKSGY.IS","AKSUE.IS","AKYHO.IS","ALARK.IS","ALCAR.IS","ALCTL.IS","ALFAS.IS","ALGYO.IS","ALKA.IS","ALKIM.IS","ALKLC.IS","ALTNY.IS","ALVES.IS","ANELE.IS","ANGEN.IS","ANHYT.IS","ANSGR.IS","ARASE.IS","ARCLK.IS","ARDYZ.IS","ARENA.IS","ARFYE.IS","ARMGD.IS","ARSAN.IS","ARTMS.IS","ARZUM.IS","ASELS.IS","ASGYO.IS","ASTOR.IS","ASUZU.IS","ATAKP.IS","ATATP.IS","ATATR.IS","AVGYO.IS","AVHOL.IS","AVOD.IS","AVPGY.IS","AYCES.IS","AYDEM.IS","AYEN.IS","AYGAZ.IS","AZTEK.IS","BAGFS.IS","BAHKM.IS","BAKAB.IS","BALAT.IS","BALSU.IS","BANVT.IS","BARMA.IS","BASCM.IS","BASGZ.IS","BAYRK.IS","BEGYO.IS","BERA.IS","BESLR.IS","BEYAZ.IS","BFREN.IS","BIENY.IS","BIGCH.IS","BIGEN.IS","BIMAS.IS","BINBN.IS","BINHO.IS","BIOEN.IS","BIZIM.IS","BLCYT.IS","BLUME.IS","BMSCH.IS","BMSTL.IS","BNTAS.IS","BOBET.IS","BORLS.IS","BORSK.IS","BOSSA.IS","BRISA.IS","BRKSN.IS","BRKVY.IS","BRLSM.IS","BRSAN.IS","BRYAT.IS","BSOKE.IS","BTCIM.IS","BUCIM.IS","BULGS.IS","BURCE.IS","BURVA.IS","BVSAN.IS","BYDNR.IS","CANTE.IS","CATES.IS","CCOLA.IS","CELHA.IS","CEMAS.IS","CEMTS.IS","CEMZY.IS","CEOEM.IS","CGCAM.IS","CIMSA.IS","CLEBI.IS","CMBTN.IS","CONSE.IS","COSMO.IS","CRFSA.IS","CUSAN.IS","CVKMD.IS","CWENE.IS","DAGI.IS","DAPGM.IS","DARDL.IS","DCTTR.IS","DENGE.IS","DERHL.IS","DERIM.IS","DESA.IS","DESPC.IS","DEVA.IS","DGATE.IS","DGNMO.IS","DITAS.IS","DMRGD.IS","DMSAS.IS","DNISI.IS","DOAS.IS","DOCO.IS","DOFER.IS","DOFRB.IS","DOGUB.IS","DOHOL.IS","DOKTA.IS","DSTKF.IS","DURDO.IS","DURKN.IS","DYOBY.IS","DZGYO.IS","EBEBK.IS","ECILC.IS","ECZYT.IS","EDATA.IS","EDIP.IS","EGEEN.IS","EGEGY.IS","EGEPO.IS","EGGUB.IS","EGPRO.IS","EGSER.IS","EKGYO.IS","EKOS.IS","EKSUN.IS","ELITE.IS","EMKEL.IS","ENDAE.IS","ENERY.IS","ENJSA.IS","ENKAI.IS","ENSRI.IS","ENTRA.IS","EPLAS.IS","ERBOS.IS","ERCB.IS","EREGL.IS","ERSU.IS","ESCAR.IS","ESCOM.IS","ESEN.IS","ETILR.IS","EUPWR.IS","EUREN.IS","EYGYO.IS","FADE.IS","FLAP.IS","FMIZP.IS","FONET.IS","FORMT.IS","FORTE.IS","FRIGO.IS","FROTO.IS","FZLGY.IS","GEDIK.IS","GEDZA.IS","GENIL.IS","GENTS.IS","GEREL.IS","GESAN.IS","GIPTA.IS","GLCVY.IS","GLRMK.IS","GLRYH.IS","GLYHO.IS","GMTAS.IS","GOKNR.IS","GOLTS.IS","GOODY.IS","GOZDE.IS","GRSEL.IS","GRTHO.IS","GSDDE.IS","GSDHO.IS","GSRAY.IS","GUBRF.IS","GUNDG.IS","GWIND.IS","GZNMI.IS","HATEK.IS","HATSN.IS","HDFGS.IS","HEDEF.IS","HEKTS.IS","HKTM.IS","HOROZ.IS","HRKET.IS","HTTBT.IS","HUBVC.IS","HUNER.IS","HURGZ.IS","ICUGS.IS","IEYHO.IS","IHAAS.IS","IHEVA.IS","IHGZT.IS","IHLAS.IS","IHLGM.IS","IHYAY.IS","IMASM.IS","INDES.IS","INFO.IS","INGRM.IS","INTEM.IS","INVEO.IS","INVES.IS","ISDMR.IS","ISKPL.IS","ISSEN.IS","IZENR.IS","IZFAS.IS","IZINV.IS","IZMDC.IS","JANTS.IS","KAPLM.IS","KAREL.IS","KARSN.IS","KARTN.IS","KATMR.IS","KAYSE.IS","KBORU.IS","KCAER.IS","KCHOL.IS","KFEIN.IS","KGYO.IS","KIMMR.IS","KLGYO.IS","KLKIM.IS","KLMSN.IS","KLRHO.IS","KLSER.IS","KLSYN.IS","KLYPV.IS","KMPUR.IS","KNFRT.IS","KOCMT.IS","KONKA.IS","KONTR.IS","KONYA.IS","KOPOL.IS","KORDS.IS","KOTON.IS","KRDMD.IS","KRGYO.IS","KRONT.IS","KRPLS.IS","KRSTL.IS","KRTEK.IS","KRVGD.IS","KTLEV.IS","KTSKR.IS","KUTPO.IS","KUYAS.IS","KZBGY.IS","KZGYO.IS","LIDER.IS","LILAK.IS","LINK.IS","LKMNH.IS","LMKDC.IS","LOGO.IS","LRSHO.IS","LUKSK.IS","LYDHO.IS","MAALT.IS","MACKO.IS","MAGEN.IS","MAKIM.IS","MAKTK.IS","MANAS.IS","MARBL.IS","MARMR.IS","MARTI.IS","MAVI.IS","MEDTR.IS","MEGMT.IS","MEKAG.IS","MERCN.IS","MERIT.IS","MERKO.IS","METRO.IS","MEYSU.IS","MGROS.IS","MHRGY.IS","MIATK.IS","MNDRS.IS","MNDTR.IS","MOBTL.IS","MOGAN.IS","MOPAS.IS","MPARK.IS","MRGYO.IS","MRSHL.IS","MSGYO.IS","MTRKS.IS","MTRYO.IS","NATEN.IS","NETAS.IS","NIBAS.IS","NTGAZ.IS","NTHOL.IS","NUGYO.IS","NUHCM.IS","OBAMS.IS","OBASE.IS","ODAS.IS","ODINE.IS","OFSYM.IS","ONCSM.IS","ONRYT.IS","ORCAY.IS","ORGE.IS","OSMEN.IS","OSTIM.IS","OTKAR.IS","OYAKC.IS","OYLUM.IS","OYYAT.IS","OZATD.IS","OZGYO.IS","OZKGY.IS","OZRDN.IS","OZSUB.IS","OZYSR.IS","PAGYO.IS","PAHOL.IS","PAMEL.IS","PAPIL.IS","PARSN.IS","PASEU.IS","PATEK.IS","PCILT.IS","PEKGY.IS","PENGD.IS","PENTA.IS","PETKM.IS","PETUN.IS","PGSUS.IS","PINSU.IS","PKART.IS","PKENT.IS","PLTUR.IS","PNLSN.IS","PNSUT.IS","POLHO.IS","POLTK.IS","PRDGS.IS","PRKAB.IS","PRKME.IS","PRZMA.IS","PSDTC.IS","PSGYO.IS","QUAGR.IS","RALYH.IS","RAYSG.IS","REEDR.IS","RGYAS.IS","RTALB.IS","RUBNS.IS","RUZYE.IS","RYGYO.IS","RYSAS.IS","SAFKR.IS","SAHOL.IS","SAMAT.IS","SANEL.IS","SANFM.IS","SANKO.IS","SARKY.IS","SASA.IS","SAYAS.IS","SDTTR.IS","SEGMN.IS","SEKUR.IS","SELEC.IS","SELVA.IS","SERNT.IS","SEYKM.IS","SILVR.IS","SISE.IS","SKTAS.IS","SKYLP.IS","SMART.IS","SMRTG.IS","SMRVA.IS","SNGYO.IS","SNICA.IS","SOKE.IS","SOKM.IS","SRVGY.IS","SUNTK.IS","SURGY.IS","SUWEN.IS","TABGD.IS","TARKM.IS","TATEN.IS","TATGD.IS","TAVHL.IS","TCELL.IS","TCKRC.IS","TEHOL.IS","TEKTU.IS","TERA.IS","TEZOL.IS","THYAO.IS","TKFEN.IS","TKNSA.IS","TLMAN.IS","TMPOL.IS","TMSN.IS","TNZTP.IS","TOASO.IS","TRCAS.IS","TRGYO.IS","TRHOL.IS","TRILC.IS","TSGYO.IS","TSPOR.IS","TTKOM.IS","TTRAK.IS","TUCLK.IS","TUKAS.IS","TUPRS.IS","TUREX.IS","TURGG.IS","TURSG.IS","ULAS.IS","ULKER.IS","ULUSE.IS","ULUUN.IS","UNLU.IS","USAK.IS","VAKKO.IS","VBTYZ.IS","VERTU.IS","VERUS.IS","VESBE.IS","VESTL.IS","VRGYO.IS","VSNMD.IS","YAPRK.IS","YATAS.IS","YBTAS.IS","YEOTK.IS","YESIL.IS","YGGYO.IS","YIGIT.IS","YKSLN.IS","YUNSA.IS","YYAPI.IS","YYLGD.IS","ZEDUR.IS","ZERGY.IS","ZGYO.IS"]
 
+AYI_SINYALLER = ["MACD Sat Kesişimi","MACD Negatif","Fiyat EMA20 Altında","EMA20 < EMA50",
+                 "Death Cross","Yutan Ayı","Asılan Adam","Akşam Yıldızı","Ayı Harami",
+                 "3 Siyah Karga","Kara Bulut Örtüsü","RSI Aşırı Alım","BB Üst Bant"]
+
 def grafik_ciz(ad, v):
     try:
         v20 = v.tail(20).copy()
@@ -39,7 +43,7 @@ def grafik_ciz(ad, v):
             ax1.plot([i, i], [row["Low"], row["High"]], color=renk, linewidth=0.8)
             ax1.bar(i, row["Close"] - row["Open"], bottom=row["Open"], color=renk, width=0.6)
 
-        ax1.set_title(f"{ad} — 🥇 Altın Sinyal", color="white", fontsize=10, pad=8)
+        ax1.set_title(f"{ad} - Altin Sinyal", color="white", fontsize=10, pad=8)
         ax1.set_ylabel("Fiyat", color="#aaaaaa", fontsize=7)
 
         renkler = ["#26a69a" if v20["Close"].iloc[i] >= v20["Open"].iloc[i] else "#ef5350" for i in range(len(v20))]
@@ -70,12 +74,12 @@ def grafik_ciz(ad, v):
         os.makedirs("C:/bist_terminal/grafikler", exist_ok=True)
         plt.savefig(f"C:/bist_terminal/grafikler/{ad}.png", dpi=150, bbox_inches="tight", facecolor="#0d1117")
         plt.close()
-        print(f"  📊 {ad} grafiği kaydedildi")
+        print(f"  {ad} grafigi kaydedildi")
     except Exception as e:
-        print(f"  ⚠️ {ad} grafik hatası: {e}")
+        print(f"  {ad} grafik hatasi: {e}")
 
 def tarama_yap():
-    print(f"\n🔄 Tarama başladı — {datetime.now().strftime('%d.%m.%Y %H:%M')}")
+    print(f"\nTarama basladi — {datetime.now().strftime('%d.%m.%Y %H:%M')}")
 
     def yutan_boga(v):
         s, o = v.iloc[-1], v.iloc[-2]
@@ -177,37 +181,44 @@ def tarama_yap():
                 hacim_orani = round(hacim_son / hacim_ort, 2) if hacim_ort > 0 else 0
 
                 sinyaller = []
-                if rsi < 30: sinyaller.append("RSI Aşırı Satım")
-                if rsi > 70: sinyaller.append("RSI Aşırı Alım")
-                if macd_hist_onceki < 0 and macd_hist_son > 0: sinyaller.append("MACD Al Kesişimi")
-                if macd_hist_onceki > 0 and macd_hist_son < 0: sinyaller.append("MACD Sat Kesişimi")
+                if rsi < 30: sinyaller.append("RSI Asiri Satim")
+                if rsi > 70: sinyaller.append("RSI Asiri Alim")
+                if macd_hist_onceki < 0 and macd_hist_son > 0: sinyaller.append("MACD Al Kesisimi")
+                if macd_hist_onceki > 0 and macd_hist_son < 0: sinyaller.append("MACD Sat Kesisimi")
                 if macd_val > macd_sig: sinyaller.append("MACD Pozitif")
                 if macd_val < macd_sig: sinyaller.append("MACD Negatif")
                 if kapanis <= bb_alt * 1.01: sinyaller.append("BB Alt Bant")
-                if kapanis >= bb_ust * 0.99: sinyaller.append("BB Üst Bant")
-                if kapanis > ema20: sinyaller.append("Fiyat EMA20 Üstünde")
-                if kapanis < ema20: sinyaller.append("Fiyat EMA20 Altında")
+                if kapanis >= bb_ust * 0.99: sinyaller.append("BB Ust Bant")
+                if kapanis > ema20: sinyaller.append("Fiyat EMA20 Ustunde")
+                if kapanis < ema20: sinyaller.append("Fiyat EMA20 Altinda")
                 if ema20 > ema50: sinyaller.append("EMA20 > EMA50")
                 if ema20 < ema50: sinyaller.append("EMA20 < EMA50")
                 if ema20_onceki < ema50_onceki and ema20 > ema50: sinyaller.append("Golden Cross")
                 if ema20_onceki > ema50_onceki and ema20 < ema50: sinyaller.append("Death Cross")
                 if hacim_orani >= 3: sinyaller.append(f"Anormal Hacim {hacim_orani}x")
-                if yutan_boga(v): sinyaller.append("Yutan Boğa")
-                if cekic(v): sinyaller.append("Çekiç")
-                if ters_cekic(v): sinyaller.append("Ters Çekiç")
-                if sabah_yildizi(v): sinyaller.append("Sabah Yıldızı")
-                if boga_harami(v): sinyaller.append("Boğa Harami")
+                if yutan_boga(v): sinyaller.append("Yutan Boga")
+                if cekic(v): sinyaller.append("Cekic")
+                if ters_cekic(v): sinyaller.append("Ters Cekic")
+                if sabah_yildizi(v): sinyaller.append("Sabah Yildizi")
+                if boga_harami(v): sinyaller.append("Boga Harami")
                 if uc_beyaz_asker(v): sinyaller.append("3 Beyaz Asker")
                 if delikli_bulut(v): sinyaller.append("Delikli Bulut")
-                if yutan_ayi(v): sinyaller.append("Yutan Ayı")
-                if asilan_adam(v): sinyaller.append("Asılan Adam")
-                if aksam_yildizi(v): sinyaller.append("Akşam Yıldızı")
-                if ayi_harami(v): sinyaller.append("Ayı Harami")
+                if yutan_ayi(v): sinyaller.append("Yutan Ayi")
+                if asilan_adam(v): sinyaller.append("Asilan Adam")
+                if aksam_yildizi(v): sinyaller.append("Aksam Yildizi")
+                if ayi_harami(v): sinyaller.append("Ayi Harami")
                 if uc_siyah_karga(v): sinyaller.append("3 Siyah Karga")
-                if kara_bulut_ortusu(v): sinyaller.append("Kara Bulut Örtüsü")
+                if kara_bulut_ortusu(v): sinyaller.append("Kara Bulut Ortusu")
 
-                ayi_sinyaller = ["MACD Sat Kesişimi","MACD Negatif","Fiyat EMA20 Altında","EMA20 < EMA50","Death Cross","Yutan Ayı","Asılan Adam","Akşam Yıldızı","Ayı Harami","3 Siyah Karga","Kara Bulut Örtüsü","RSI Aşırı Alım","BB Üst Bant"]
+                ayi_sinyaller = ["MACD Sat Kesisimi","MACD Negatif","Fiyat EMA20 Altinda","EMA20 < EMA50",
+                                 "Death Cross","Yutan Ayi","Asilan Adam","Aksam Yildizi","Ayi Harami",
+                                 "3 Siyah Karga","Kara Bulut Ortusu","RSI Asiri Alim","BB Ust Bant"]
                 altin_skor = len([s for s in sinyaller if s not in ayi_sinyaller])
+
+                if altin_skor >= 7: altin = "Altin"
+                elif altin_skor >= 5: altin = "Gumus"
+                elif altin_skor >= 3: altin = "Bronz"
+                else: altin = None
 
                 if sinyaller:
                     sonuclar[ad] = {
@@ -222,11 +233,11 @@ def tarama_yap():
                         "sinyal_sayisi": altin_skor,
                         "altin": altin
                     }
-                    if altin == "🥇 Altın":
+                    if altin == "Altin":
                         grafik_ciz(ad, v)
 
-            except:
-                pass
+            except Exception as e:
+                print(f"HATA: {hisse} — {e}")
         time.sleep(3)
 
     with open("C:/bist_terminal/sonuclar.json", "w", encoding="utf-8") as f:
@@ -235,17 +246,17 @@ def tarama_yap():
     os.system("copy C:\\bist_terminal\\sonuclar.json C:\\bist_terminal\\bist-terminal\\sonuclar.json /Y")
     os.system('cd C:\\bist_terminal\\bist-terminal && git add . && git commit -m "otomatik guncelleme" && git push')
 
-    altin_liste = [(k, v) for k, v in sonuclar.items() if v["altin"] == "🥇 Altın"]
-    gumus_liste = [(k, v) for k, v in sonuclar.items() if v["altin"] == "🥈 Gümüş"]
-    bronz_liste = [(k, v) for k, v in sonuclar.items() if v["altin"] == "🥉 Bronz"]
+    altin_liste = [k for k, v in sonuclar.items() if v["altin"] == "Altin"]
+    gumus_liste = [k for k, v in sonuclar.items() if v["altin"] == "Gumus"]
+    bronz_liste = [k for k, v in sonuclar.items() if v["altin"] == "Bronz"]
 
-    print(f"\n✅ TARAMA TAMAMLANDI — {datetime.now().strftime('%d.%m.%Y %H:%M')}")
-    print(f"🥇 Altın: {len(altin_liste)} | 🥈 Gümüş: {len(gumus_liste)} | 🥉 Bronz: {len(bronz_liste)}")
-    print("💾 Sonuçlar kaydedildi!")
+    print(f"\nTARAMA TAMAMLANDI — {datetime.now().strftime('%d.%m.%Y %H:%M')}")
+    print(f"Altin: {len(altin_liste)} | Gumus: {len(gumus_liste)} | Bronz: {len(bronz_liste)}")
+    print("Sonuclar kaydedildi!")
 
 schedule.every().day.at("18:26").do(tarama_yap)
-print("⏰ Zamanlayıcı aktif — her gün 18:26'da tarama başlar")
-print("💡 Şimdi test için tarama başlıyor...\n")
+print("Zamanlayici aktif — her gun 18:26'da tarama baslar")
+print("Test icin tarama basliyor...\n")
 tarama_yap()
 
 while True:
