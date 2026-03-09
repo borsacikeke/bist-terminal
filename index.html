@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIST Teknik Analiz Terminali</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #0d1117; color: #e6edf3; font-family: 'Segoe UI', sans-serif; }
+        .header { background: #161b22; padding: 16px; border-bottom: 1px solid #30363d; text-align: center; }
+        .header h1 { font-size: 16px; color: #58a6ff; letter-spacing: 1px; }
+        .header p { font-size: 11px; color: #8b949e; margin-top: 4px; }
+        .menu { padding: 12px; }
+        .menu-item { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 14px 16px; margin-bottom: 8px; display: flex; align-items: center; cursor: pointer; transition: all 0.2s; }
+        .menu-item:hover { border-color: #58a6ff; background: #1c2128; }
+        .menu-item .icon { font-size: 22px; margin-right: 14px; }
+        .menu-item .text h3 { font-size: 14px; color: #e6edf3; }
+        .menu-item .text p { font-size: 11px; color: #8b949e; margin-top: 2px; }
+        .menu-item .arrow { margin-left: auto; color: #8b949e; font-size: 12px; }
+        .section { display: none; padding: 12px; }
+        .section.active { display: block; }
+        .back-btn { background: #21262d; border: 1px solid #30363d; color: #58a6ff; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 13px; margin-bottom: 12px; }
+        .hisse-kart { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 12px; margin-bottom: 8px; }
+        .hisse-kart .ad { font-size: 14px; font-weight: bold; color: #58a6ff; }
+        .hisse-kart .fiyat { font-size: 12px; color: #8b949e; margin-top: 2px; }
+        .hisse-kart .sinyaller { font-size: 11px; color: #3fb950; margin-top: 6px; }
+        .fav-btn { float: right; background: none; border: none; font-size: 18px; cursor: pointer; }
+        .yukleniyor { text-align: center; padding: 40px; color: #8b949e; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>📊 BIST TEKNİK ANALİZ TERMİNALİ</h1>
+    <p id="tarih">Yükleniyor...</p>
+</div>
+
+<div id="menu" class="menu">
+    <div class="menu-item" onclick="goster('altin')">
+        <span class="icon">🥇</span>
+        <div class="text"><h3>Altın Sinyaller</h3><p>En güçlü çoklu sinyaller</p></div>
+        <span class="arrow">›</span>
+    </div>
+    <div class="menu-item" onclick="goster('gumus')">
+        <span class="icon">🥈</span>
+        <div class="text"><h3>Gümüş Sinyaller</h3><p>Güçlü teknik sinyaller</p></div>
+        <span class="arrow">›</span>
+    </div>
+    <div class="menu-item" onclick="goster('bronz')">
+        <span class="icon">🥉</span>
+        <div class="text"><h3>Bronz Sinyaller</h3><p>Teknik sinyal veren hisseler</p></div>
+        <span class="arrow">›</span>
+    </div>
+    <div class="menu-item" onclick="goster('mum')">
+        <span class="icon">🕯️</span>
+        <div class="text"><h3>Mum Formasyonları</h3><p>Boğa formasyon taraması</p></div>
+        <span class="arrow">›</span>
+    </div>
+    <div class="menu-item" onclick="goster('hacim')">
+        <span class="icon">🔥</span>
+        <div class="text"><h3>Anormal Hacim</h3><p>Hacim patlaması tespiti</p></div>
+        <span class="arrow">›</span>
+    </div>
+    <div class="menu-item" onclick="goster('rsi')">
+        <span class="icon">📉</span>
+        <div class="text"><h3>RSI Aşırı Satım</h3><p>RSI 30 altındaki hisseler</p></div>
+        <span class="arrow">›</span>
+    </div>
+    <div class="menu-item" onclick="goster('favoriler')">
+        <span class="icon">⭐</span>
+        <div class="text"><h3>Favorilerim</h3><p>Kaydettiğin hisseler</p></div>
+        <span class="arrow">›</span>
+    </div>
+</div>
+
+<div id="sonuc" class="section">
+    <button class="back-btn" onclick="geriDon()">← Geri</button>
+    <div id="liste"></div>
+</div>
+
+<script>
+    const tg = window.Telegram.WebApp;
+    tg.expand();
+
+    let veri = null;
+    let favoriler = JSON.parse(localStorage.getItem('favoriler') || '[]');
+
+    fetch('sonuclar.json')
+        .then(r => r.json())
+        .then(d => {
+            veri = d;
+            document.getElementById('tarih').textContent = '📅 Son güncelleme: ' + d.tarih;
+        });
+
+    function goster(tip) {
+        document.getElementById('menu').style.display = 'none';
+        document.getElementById('sonuc').classList.add('active');
+        const liste = document.getElementById('liste');
+        liste.innerHTML = '<div class="yukleniyor">Yükleniyor...</div>';
+
+        if (!veri) { liste.innerHTML = '<div class="yukleniyor">Veri bulunamadı.</div>'; return; }
+
+        const hisseler = veri.hisseler;
+        const mum_list = ["Yutan Boğa","Çekiç","Ters Çekiç","Sabah Yıldızı","Boğa Harami","3 Beyaz Asker","Delikli Bulut"];
+        let liste_html = '';
+
+        for (const [ad, h] of Object.entries(hisseler)) {
+            let goster = false;
+            if (tip === 'altin' && h.altin === '🥇 Altın') goster = true;
+            if (tip === 'gumus' && h.altin === '🥈 Gümüş') goster = true;
+            if (tip === 'bronz' && h.altin === '🥉 Bronz') goster = true;
+            if (tip === 'mum' && h.sinyaller.some(s => mum_list.includes(s))) goster = true;
+            if (tip === 'hacim' && h.sinyaller.some(s => s.includes('Anormal Hacim'))) goster = true;
+            if (tip === 'rsi' && h.sinyaller.includes('RSI Aşırı Satım')) goster = true;
+            if (tip === 'favoriler' && favoriler.includes(ad)) goster = true;
+
+            if (goster) {
+                const favIcon = favoriler.includes(ad) ? '⭐' : '☆';
+                liste_html += `
+                <div class="hisse-kart">
+                    <button class="fav-btn" onclick="favToggle('${ad}')" id="fav_${ad}">${favIcon}</button>
+                    <div class="ad">${ad}</div>
+                    <div class="fiyat">${h.kapanis} TL</div>
+                    <div class="sinyaller">${h.sinyaller.join(' · ')}</div>
+                </div>`;
+            }
+        }
+
+        liste.innerHTML = liste_html || '<div class="yukleniyor">Sinyal bulunamadı.</div>';
+    }
+
+    function favToggle(ad) {
+        if (favoriler.includes(ad)) {
+            favoriler = favoriler.filter(f => f !== ad);
+        } else {
+            favoriler.push(ad);
+        }
+        localStorage.setItem('favoriler', JSON.stringify(favoriler));
+        document.getElementById('fav_' + ad).textContent = favoriler.includes(ad) ? '⭐' : '☆';
+    }
+
+    function geriDon() {
+        document.getElementById('menu').style.display = 'block';
+        document.getElementById('sonuc').classList.remove('active');
+    }
+</script>
+</body>
+</html>
