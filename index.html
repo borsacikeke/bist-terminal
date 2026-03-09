@@ -8,64 +8,59 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background: #0a0a0f; color: #e0e0e0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
-
         .header { padding: 20px 16px 8px; }
-        .header h1 { font-size: 13px; color: #555; text-transform: uppercase; letter-spacing: 2px; }
+        .header h1 { font-size: 12px; color: #444; text-transform: uppercase; letter-spacing: 2px; }
         .header h2 { font-size: 22px; color: #fff; font-weight: 700; margin-top: 4px; }
-
-        .kategori-baslik { font-size: 11px; color: #555; text-transform: uppercase; letter-spacing: 1.5px; padding: 20px 16px 8px; }
-
+        .kategori-baslik { font-size: 11px; color: #444; text-transform: uppercase; letter-spacing: 1.5px; padding: 18px 16px 6px; }
         .kart-listesi { padding: 0 12px; display: flex; flex-direction: column; gap: 2px; }
-
-        .kart { background: #111118; border-radius: 14px; padding: 16px; display: flex; align-items: center; gap: 14px; cursor: pointer; transition: background 0.15s; }
+        .kart { background: #111118; border-radius: 14px; padding: 14px 16px; display: flex; align-items: center; gap: 14px; cursor: pointer; transition: background 0.15s; }
         .kart:active { background: #1a1a24; }
-
         .kart-ikon { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
-        .ikon-altin { background: linear-gradient(135deg, #3d2e00, #7a5c00); }
-        .ikon-gumus { background: linear-gradient(135deg, #1a1a2e, #2d2d4a); }
-        .ikon-bronz { background: linear-gradient(135deg, #2e1a0a, #5a3a1a); }
-        .ikon-macd { background: linear-gradient(135deg, #001a3d, #003d7a); }
-        .ikon-golden { background: linear-gradient(135deg, #1a2e00, #3d7a00); }
-        .ikon-rsi { background: linear-gradient(135deg, #2e002e, #7a007a); }
-        .ikon-bb { background: linear-gradient(135deg, #002e2e, #007a7a); }
-        .ikon-hacim { background: linear-gradient(135deg, #2e1000, #7a2800); }
-        .ikon-mum { background: linear-gradient(135deg, #002e1a, #007a3d); }
-        .ikon-death { background: linear-gradient(135deg, #2e0000, #7a0000); }
-        .ikon-fav { background: linear-gradient(135deg, #2e2e00, #6a6a00); }
-
+        .ikon-altin  { background: linear-gradient(135deg, #3d2e00, #7a5c00); }
+        .ikon-gumus  { background: linear-gradient(135deg, #1a1a2e, #2d2d4a); }
+        .ikon-bronz  { background: linear-gradient(135deg, #2e1a0a, #5a3a1a); }
+        .ikon-dip    { background: linear-gradient(135deg, #002e1a, #007a3d); }
+        .ikon-pat    { background: linear-gradient(135deg, #001a3d, #003d7a); }
+        .ikon-roket  { background: linear-gradient(135deg, #2e1000, #7a2800); }
+        .ikon-destek { background: linear-gradient(135deg, #1a002e, #4a007a); }
+        .ikon-akilli { background: linear-gradient(135deg, #002e2e, #007a7a); }
+        .ikon-trend  { background: linear-gradient(135deg, #1a2e00, #3d7a00); }
+        .ikon-golden { background: linear-gradient(135deg, #2e2800, #7a6800); }
+        .ikon-death  { background: linear-gradient(135deg, #2e0000, #7a0000); }
+        .ikon-macd   { background: linear-gradient(135deg, #00182e, #003d6a); }
+        .ikon-rsi    { background: linear-gradient(135deg, #2e002e, #6a006a); }
+        .ikon-bb     { background: linear-gradient(135deg, #002e2a, #006a60); }
+        .ikon-hacim  { background: linear-gradient(135deg, #2e1800, #6a3800); }
+        .ikon-mum    { background: linear-gradient(135deg, #0a2e1a, #1a6a3a); }
+        .ikon-fav    { background: linear-gradient(135deg, #2e2a00, #6a6000); }
         .kart-icerik { flex: 1; }
         .kart-baslik { font-size: 15px; font-weight: 600; color: #fff; }
-        .kart-aciklama { font-size: 12px; color: #666; margin-top: 3px; line-height: 1.4; }
-
-        .kart-ok { color: #333; font-size: 16px; }
-
-        .ayrac { height: 1px; background: #1a1a1a; margin: 4px 16px; }
-
-        .sonuc-ekran { display: none; }
-        .sonuc-header { padding: 16px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid #1a1a1a; }
-        .geri-btn { background: #1a1a24; border: none; color: #888; width: 36px; height: 36px; border-radius: 10px; font-size: 18px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+        .kart-aciklama { font-size: 12px; color: #555; margin-top: 3px; line-height: 1.4; }
+        .kart-ok { color: #2a2a3a; font-size: 18px; }
+        .ayrac { height: 1px; background: #111118; margin: 6px 16px; }
+        .sonuc-ekran { display: none; min-height: 100vh; }
+        .sonuc-header { padding: 14px 16px; display: flex; align-items: center; gap: 12px; background: #0a0a0f; position: sticky; top: 0; z-index: 10; border-bottom: 1px solid #111118; }
+        .geri-btn { background: #111118; border: none; color: #888; width: 36px; height: 36px; border-radius: 10px; font-size: 18px; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
         .sonuc-baslik { font-size: 16px; font-weight: 600; color: #fff; }
-        .sonuc-tarih { font-size: 11px; color: #555; }
-
-        .hisse-listesi { padding: 8px 12px; }
-        .hisse-kart { background: #111118; border-radius: 12px; padding: 14px; margin-bottom: 6px; display: flex; align-items: center; gap: 12px; }
-        .hisse-kart-sol { flex: 1; }
-        .hisse-ad { font-size: 15px; font-weight: 700; color: #fff; }
-        .hisse-fiyat { font-size: 12px; color: #666; margin-top: 2px; }
-        .badge-listesi { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
-        .badge { font-size: 10px; padding: 3px 7px; border-radius: 6px; font-weight: 500; }
-        .badge-boga { background: #0a2e1a; color: #26a69a; }
-        .badge-notr { background: #1a1a2e; color: #6677aa; }
-        .fav-btn { background: none; border: none; font-size: 22px; cursor: pointer; color: #f0c000; padding: 4px; }
-
-        .bos-mesaj { text-align: center; padding: 60px 20px; color: #444; font-size: 14px; }
-
-        .ana-ekran { }
+        .sonuc-tarih { font-size: 11px; color: #444; margin-top: 1px; }
+        .hisse-listesi { padding: 8px 12px 20px; }
+        .hisse-kart { background: #111118; border-radius: 12px; padding: 14px; margin-bottom: 6px; }
+        .hisse-ust { display: flex; align-items: center; justify-content: space-between; }
+        .hisse-ad { font-size: 16px; font-weight: 700; color: #fff; }
+        .hisse-fiyat { font-size: 12px; color: #555; margin-top: 3px; }
+        .badge-listesi { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 10px; }
+        .badge { font-size: 10px; padding: 3px 8px; border-radius: 6px; font-weight: 500; }
+        .badge-boga    { background: #0a2e1a; color: #26a69a; }
+        .badge-strateji{ background: #1a1a0a; color: #f0c000; }
+        .badge-notr    { background: #1a1a2e; color: #5566aa; }
+        .fav-btn { background: none; border: none; font-size: 22px; cursor: pointer; padding: 2px 4px; }
+        .bos-mesaj { text-align: center; padding: 60px 20px; color: #333; font-size: 14px; }
+        .sayac { font-size: 11px; color: #444; padding: 4px 16px 0; }
     </style>
 </head>
 <body>
 
-<div class="ana-ekran" id="ana">
+<div id="ana">
     <div class="header">
         <h1>BIST Teknik Analiz</h1>
         <h2 id="karsilama_baslik">Terminali</h2>
@@ -77,7 +72,7 @@
             <div class="kart-ikon ikon-altin">🏆</div>
             <div class="kart-icerik">
                 <div class="kart-baslik">Altın Tarama</div>
-                <div class="kart-aciklama">Birden fazla göstergenin aynı anda olumlu olduğu güçlü sinyaller</div>
+                <div class="kart-aciklama">Birden fazla göstergenin aynı anda olumlu olduğu en güçlü sinyaller</div>
             </div>
             <div class="kart-ok">›</div>
         </div>
@@ -93,67 +88,73 @@
             <div class="kart-ikon ikon-bronz">🥉</div>
             <div class="kart-icerik">
                 <div class="kart-baslik">Bronz Tarama</div>
-                <div class="kart-aciklama">Teknik sinyal başlangıcındaki hisseler</div>
+                <div class="kart-aciklama">Sinyal başlangıcındaki hisseler</div>
             </div>
             <div class="kart-ok">›</div>
         </div>
     </div>
 
     <div class="ayrac"></div>
-
-    <div class="kategori-baslik">Teknik Göstergeler</div>
+    <div class="kategori-baslik">Stratejiler</div>
     <div class="kart-listesi">
-        <div class="kart" onclick="goster('macd_al')">
-            <div class="kart-ikon ikon-macd">📉</div>
+        <div class="kart" onclick="goster('dip_avcisi')">
+            <div class="kart-ikon ikon-dip">🎣</div>
             <div class="kart-icerik">
-                <div class="kart-baslik">MACD Al Kesişimi</div>
-                <div class="kart-aciklama">MACD sinyal çizgisini yukarı kesen hisseler</div>
+                <div class="kart-baslik">Dip Avcısı</div>
+                <div class="kart-aciklama">RSI 25-42, SMA200 üstünde — uzun vadeli dip fırsatları</div>
             </div>
             <div class="kart-ok">›</div>
         </div>
+        <div class="kart" onclick="goster('patlama_oncesi')">
+            <div class="kart-ikon ikon-pat">💥</div>
+            <div class="kart-icerik">
+                <div class="kart-baslik">Patlama Öncesi</div>
+                <div class="kart-aciklama">Bollinger bandı sıkışmış — yakında sert hareket bekleniyor</div>
+            </div>
+            <div class="kart-ok">›</div>
+        </div>
+        <div class="kart" onclick="goster('roket_rampa')">
+            <div class="kart-ikon ikon-roket">🚀</div>
+            <div class="kart-icerik">
+                <div class="kart-baslik">Roket Rampa</div>
+                <div class="kart-aciklama">BB üst bandı kırıldı, yüksek hacim, RSI güçlü</div>
+            </div>
+            <div class="kart-ok">›</div>
+        </div>
+        <div class="kart" onclick="goster('destek_kalkani')">
+            <div class="kart-ikon ikon-destek">🛡️</div>
+            <div class="kart-icerik">
+                <div class="kart-baslik">Destek Kalkanı</div>
+                <div class="kart-aciklama">SMA200'e yakın fiyat, RSI düşük — güçlü destek bölgesi</div>
+            </div>
+            <div class="kart-ok">›</div>
+        </div>
+        <div class="kart" onclick="goster('akilli_para')">
+            <div class="kart-ikon ikon-akilli">💰</div>
+            <div class="kart-icerik">
+                <div class="kart-baslik">Akıllı Para</div>
+                <div class="kart-aciklama">Normalin 2x+ hacim, pozitif kapanış, EMA20 üstü</div>
+            </div>
+            <div class="kart-ok">›</div>
+        </div>
+        <div class="kart" onclick="goster('trend_sorfcusu')">
+            <div class="kart-ikon ikon-trend">🏄</div>
+            <div class="kart-icerik">
+                <div class="kart-baslik">Trend Sörfçüsü</div>
+                <div class="kart-aciklama">EMA20>EMA50, MACD pozitif, RSI 48-72 — trend uyumlu</div>
+            </div>
+            <div class="kart-ok">›</div>
+        </div>
+    </div>
+
+    <div class="ayrac"></div>
+    <div class="kategori-baslik">Teknik Göstergeler</div>
+    <div class="kart-listesi">
         <div class="kart" onclick="goster('golden_cross')">
             <div class="kart-ikon ikon-golden">✨</div>
             <div class="kart-icerik">
                 <div class="kart-baslik">Golden Cross</div>
-                <div class="kart-aciklama">EMA20 EMA50'yi yukarı kesti — uzun vadeli yükseliş sinyali</div>
-            </div>
-            <div class="kart-ok">›</div>
-        </div>
-        <div class="kart" onclick="goster('rsi_satim')">
-            <div class="kart-ikon ikon-rsi">📊</div>
-            <div class="kart-icerik">
-                <div class="kart-baslik">RSI Aşırı Satım</div>
-                <div class="kart-aciklama">RSI 30 altına düşmüş, dönüş potansiyeli olan hisseler</div>
-            </div>
-            <div class="kart-ok">›</div>
-        </div>
-        <div class="kart" onclick="goster('bb_alt')">
-            <div class="kart-ikon ikon-bb">🎯</div>
-            <div class="kart-icerik">
-                <div class="kart-baslik">Bollinger Alt Bant</div>
-                <div class="kart-aciklama">Alt banda dokunan, aşırı satım bölgesindeki hisseler</div>
-            </div>
-            <div class="kart-ok">›</div>
-        </div>
-        <div class="kart" onclick="goster('hacim')">
-            <div class="kart-ikon ikon-hacim">🔥</div>
-            <div class="kart-icerik">
-                <div class="kart-baslik">Anormal Hacim</div>
-                <div class="kart-aciklama">50 günlük ortalamanın 3 katı üzerinde hacim gelen hisseler</div>
-            </div>
-            <div class="kart-ok">›</div>
-        </div>
-    </div>
-
-    <div class="ayrac"></div>
-
-    <div class="kategori-baslik">Mum Formasyonları</div>
-    <div class="kart-listesi">
-        <div class="kart" onclick="goster('mum_boga')">
-            <div class="kart-ikon ikon-mum">🕯️</div>
-            <div class="kart-icerik">
-                <div class="kart-baslik">Boğa Formasyonları</div>
-                <div class="kart-aciklama">Yutan Boğa, Çekiç, Sabah Yıldızı, 3 Beyaz Asker ve daha fazlası</div>
+                <div class="kart-aciklama">EMA20 EMA50'yi yukarı kesti</div>
             </div>
             <div class="kart-ok">›</div>
         </div>
@@ -161,21 +162,60 @@
             <div class="kart-ikon ikon-death">💀</div>
             <div class="kart-icerik">
                 <div class="kart-baslik">Death Cross</div>
-                <div class="kart-aciklama">EMA20 EMA50'yi aşağı kesti — dikkat gerektiren hisseler</div>
+                <div class="kart-aciklama">EMA20 EMA50'yi aşağı kesti — dikkat</div>
+            </div>
+            <div class="kart-ok">›</div>
+        </div>
+        <div class="kart" onclick="goster('macd_al')">
+            <div class="kart-ikon ikon-macd">📉</div>
+            <div class="kart-icerik">
+                <div class="kart-baslik">MACD Al Kesişimi</div>
+                <div class="kart-aciklama">MACD sinyal çizgisini yukarı kesti</div>
+            </div>
+            <div class="kart-ok">›</div>
+        </div>
+        <div class="kart" onclick="goster('rsi_satim')">
+            <div class="kart-ikon ikon-rsi">📊</div>
+            <div class="kart-icerik">
+                <div class="kart-baslik">RSI Aşırı Satım</div>
+                <div class="kart-aciklama">RSI 30 altına düşmüş hisseler</div>
+            </div>
+            <div class="kart-ok">›</div>
+        </div>
+        <div class="kart" onclick="goster('bb_alt')">
+            <div class="kart-ikon ikon-bb">🎯</div>
+            <div class="kart-icerik">
+                <div class="kart-baslik">Bollinger Alt Bant</div>
+                <div class="kart-aciklama">Alt banda dokunan hisseler</div>
+            </div>
+            <div class="kart-ok">›</div>
+        </div>
+        <div class="kart" onclick="goster('hacim')">
+            <div class="kart-ikon ikon-hacim">🔥</div>
+            <div class="kart-icerik">
+                <div class="kart-baslik">Anormal Hacim</div>
+                <div class="kart-aciklama">50 günlük ortalamanın 3x+ üzerinde hacim</div>
+            </div>
+            <div class="kart-ok">›</div>
+        </div>
+        <div class="kart" onclick="goster('mum_boga')">
+            <div class="kart-ikon ikon-mum">🕯️</div>
+            <div class="kart-icerik">
+                <div class="kart-baslik">Boğa Formasyonları</div>
+                <div class="kart-aciklama">Yutan Boğa, Çekiç, Sabah Yıldızı ve daha fazlası</div>
             </div>
             <div class="kart-ok">›</div>
         </div>
     </div>
 
     <div class="ayrac"></div>
-
     <div class="kategori-baslik">Favoriler</div>
-    <div class="kart-listesi" style="margin-bottom: 20px;">
+    <div class="kart-listesi" style="margin-bottom:24px">
         <div class="kart" onclick="goster('favoriler')">
             <div class="kart-ikon ikon-fav">⭐</div>
             <div class="kart-icerik">
                 <div class="kart-baslik">Favorilerim</div>
-                <div class="kart-aciklama">Yıldızladığın hisseler burada listelenir</div>
+                <div class="kart-aciklama">Yıldızladığın hisseler</div>
             </div>
             <div class="kart-ok">›</div>
         </div>
@@ -190,13 +230,13 @@
             <div class="sonuc-tarih" id="sonuc-tarih"></div>
         </div>
     </div>
+    <div class="sayac" id="sayac"></div>
     <div class="hisse-listesi" id="liste"></div>
 </div>
 
 <script>
     const tg = window.Telegram.WebApp;
     tg.expand();
-    tg.setHeaderColor('#0a0a0f');
 
     const isim = tg.initDataUnsafe?.user?.first_name || "Yatırımcı";
     document.getElementById('karsilama_baslik').textContent = 'Merhaba, ' + isim + '!';
@@ -204,30 +244,34 @@
     let veri = null;
     let favoriler = JSON.parse(localStorage.getItem('favoriler') || '[]');
 
-    fetch('sonuclar.json')
+    fetch('sonuclar.json?t=' + Date.now())
         .then(r => r.json())
         .then(d => { veri = d; });
 
-    const boga_list = ["Yutan Boğa","Çekiç","Ters Çekiç","Sabah Yıldızı","Boğa Harami","3 Beyaz Asker","Delikli Bulut"];
+    const BOGA_LIST = ["Yutan Boga","Cekic","Ters Cekic","Sabah Yildizi","Boga Harami","3 Beyaz Asker","Delikli Bulut"];
+    const STRATEJI_LIST = ["Dip Avcisi","Patlama Oncesi","Roket Rampa","Destek Kalkani","Akilli Para","Trend Sorfcusu"];
 
-    const basliklar = {
-        altin: "🏆 Altın Tarama",
-        gumus: "🥈 Gümüş Tarama",
-        bronz: "🥉 Bronz Tarama",
-        macd_al: "📉 MACD Al Kesişimi",
-        golden_cross: "✨ Golden Cross",
-        rsi_satim: "📊 RSI Aşırı Satım",
-        bb_alt: "🎯 Bollinger Alt Bant",
-        hacim: "🔥 Anormal Hacim",
-        mum_boga: "🕯️ Boğa Formasyonları",
-        death_cross: "💀 Death Cross",
-        favoriler: "⭐ Favorilerim"
+    const BASLIKLAR = {
+        altin: "🏆 Altın Tarama", gumus: "🥈 Gümüş Tarama", bronz: "🥉 Bronz Tarama",
+        dip_avcisi: "🎣 Dip Avcısı", patlama_oncesi: "💥 Patlama Öncesi",
+        roket_rampa: "🚀 Roket Rampa", destek_kalkani: "🛡️ Destek Kalkanı",
+        akilli_para: "💰 Akıllı Para", trend_sorfcusu: "🏄 Trend Sörfçüsü",
+        golden_cross: "✨ Golden Cross", death_cross: "💀 Death Cross",
+        macd_al: "📉 MACD Al Kesişimi", rsi_satim: "📊 RSI Aşırı Satım",
+        bb_alt: "🎯 Bollinger Alt Bant", hacim: "🔥 Anormal Hacim",
+        mum_boga: "🕯️ Boğa Formasyonları", favoriler: "⭐ Favorilerim"
     };
+
+    function getBadgeClass(s) {
+        if (STRATEJI_LIST.includes(s)) return "badge-strateji";
+        if (BOGA_LIST.includes(s) || ["MACD Al Kesisimi","Golden Cross","RSI Asiri Satim","BB Alt Bant","MACD Pozitif","Fiyat EMA20 Ustunde","EMA20 > EMA50","Fiyat SMA200 Ustunde"].includes(s) || s.includes("Anormal Hacim")) return "badge-boga";
+        return "badge-notr";
+    }
 
     function goster(tip) {
         document.getElementById('ana').style.display = 'none';
         document.getElementById('sonuc').style.display = 'block';
-        document.getElementById('sonuc-baslik').textContent = basliklar[tip] || tip;
+        document.getElementById('sonuc-baslik').textContent = BASLIKLAR[tip] || tip;
         document.getElementById('sonuc-tarih').textContent = veri ? veri.tarih : '';
 
         const liste = document.getElementById('liste');
@@ -235,37 +279,48 @@
 
         const hisseler = veri.hisseler;
         let html = '';
+        let sayac = 0;
 
         for (const [ad, h] of Object.entries(hisseler)) {
             let goster_mi = false;
-            if (tip === 'altin' && h.altin === '🥇 Altın') goster_mi = true;
-            if (tip === 'gumus' && h.altin === '🥈 Gümüş') goster_mi = true;
-            if (tip === 'bronz' && h.altin === '🥉 Bronz') goster_mi = true;
-            if (tip === 'macd_al' && h.sinyaller.includes('MACD Al Kesişimi')) goster_mi = true;
+            if (tip === 'altin' && h.altin === 'Altin') goster_mi = true;
+            if (tip === 'gumus' && h.altin === 'Gumus') goster_mi = true;
+            if (tip === 'bronz' && h.altin === 'Bronz') goster_mi = true;
+            if (tip === 'dip_avcisi' && h.dip_avcisi) goster_mi = true;
+            if (tip === 'patlama_oncesi' && h.patlama_oncesi) goster_mi = true;
+            if (tip === 'roket_rampa' && h.roket_rampa) goster_mi = true;
+            if (tip === 'destek_kalkani' && h.destek_kalkani) goster_mi = true;
+            if (tip === 'akilli_para' && h.akilli_para) goster_mi = true;
+            if (tip === 'trend_sorfcusu' && h.trend_sorfcusu) goster_mi = true;
             if (tip === 'golden_cross' && h.sinyaller.includes('Golden Cross')) goster_mi = true;
-            if (tip === 'rsi_satim' && h.sinyaller.includes('RSI Aşırı Satım')) goster_mi = true;
+            if (tip === 'death_cross' && h.sinyaller.includes('Death Cross')) goster_mi = true;
+            if (tip === 'macd_al' && h.sinyaller.includes('MACD Al Kesisimi')) goster_mi = true;
+            if (tip === 'rsi_satim' && h.sinyaller.includes('RSI Asiri Satim')) goster_mi = true;
             if (tip === 'bb_alt' && h.sinyaller.includes('BB Alt Bant')) goster_mi = true;
             if (tip === 'hacim' && h.sinyaller.some(s => s.includes('Anormal Hacim'))) goster_mi = true;
-            if (tip === 'mum_boga' && h.sinyaller.some(s => boga_list.includes(s))) goster_mi = true;
-            if (tip === 'death_cross' && h.sinyaller.includes('Death Cross')) goster_mi = true;
+            if (tip === 'mum_boga' && h.sinyaller.some(s => BOGA_LIST.includes(s))) goster_mi = true;
             if (tip === 'favoriler' && favoriler.includes(ad)) goster_mi = true;
 
             if (goster_mi) {
+                sayac++;
                 const favIcon = favoriler.includes(ad) ? '⭐' : '☆';
-                const boga_sinyaller = h.sinyaller.filter(s => boga_list.includes(s) || ["MACD Al Kesişimi","Golden Cross","RSI Aşırı Satım","BB Alt Bant","MACD Pozitif","Fiyat EMA20 Üstünde","EMA20 > EMA50"].includes(s) || s.includes('Anormal Hacim'));
-                const badges = boga_sinyaller.slice(0,5).map(s => `<span class="badge badge-boga">${s}</span>`).join('');
+                const gosterilecek = h.sinyaller.filter(s => getBadgeClass(s) !== 'badge-notr').slice(0, 6);
+                const badges = gosterilecek.map(s => `<span class="badge ${getBadgeClass(s)}">${s}</span>`).join('');
                 html += `
                 <div class="hisse-kart">
-                    <div class="hisse-kart-sol">
-                        <div class="hisse-ad">${ad}</div>
-                        <div class="hisse-fiyat">${h.kapanis} TL &nbsp;·&nbsp; RSI: ${h.rsi}</div>
-                        <div class="badge-listesi">${badges}</div>
+                    <div class="hisse-ust">
+                        <div>
+                            <div class="hisse-ad">${ad}</div>
+                            <div class="hisse-fiyat">${h.kapanis} TL &nbsp;·&nbsp; RSI: ${h.rsi}</div>
+                        </div>
+                        <button class="fav-btn" onclick="favToggle('${ad}')" id="fav_${ad}">${favIcon}</button>
                     </div>
-                    <button class="fav-btn" onclick="favToggle('${ad}')" id="fav_${ad}">${favIcon}</button>
+                    <div class="badge-listesi">${badges}</div>
                 </div>`;
             }
         }
 
+        document.getElementById('sayac').textContent = sayac > 0 ? sayac + ' hisse bulundu' : '';
         liste.innerHTML = html || '<div class="bos-mesaj">Bu kategoride sinyal bulunamadı.</div>';
     }
 
@@ -282,4 +337,3 @@
 </script>
 </body>
 </html>
-```
