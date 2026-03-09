@@ -11,6 +11,7 @@
         .header { padding: 20px 16px 8px; }
         .header h1 { font-size: 12px; color: #444; text-transform: uppercase; letter-spacing: 2px; }
         .header h2 { font-size: 22px; color: #fff; font-weight: 700; margin-top: 4px; }
+        .uyari-banner { background: #1a1200; border: 1px solid #3a2800; border-radius: 10px; margin: 8px 12px; padding: 10px 14px; font-size: 11px; color: #888; line-height: 1.5; }
         .kategori-baslik { font-size: 11px; color: #444; text-transform: uppercase; letter-spacing: 1.5px; padding: 18px 16px 6px; }
         .kart-listesi { padding: 0 12px; display: flex; flex-direction: column; gap: 2px; }
         .kart { background: #111118; border-radius: 14px; padding: 14px 16px; display: flex; align-items: center; gap: 14px; cursor: pointer; transition: background 0.15s; }
@@ -20,17 +21,16 @@
         .ikon-gumus  { background: linear-gradient(135deg, #1a1a2e, #2d2d4a); }
         .ikon-bronz  { background: linear-gradient(135deg, #2e1a0a, #5a3a1a); }
         .ikon-dip    { background: linear-gradient(135deg, #002e1a, #007a3d); }
-        .ikon-pat    { background: linear-gradient(135deg, #001a3d, #003d7a); }
-        .ikon-roket  { background: linear-gradient(135deg, #2e1000, #7a2800); }
+        .ikon-bant   { background: linear-gradient(135deg, #001a3d, #003d7a); }
+        .ikon-guc    { background: linear-gradient(135deg, #2e1000, #7a2800); }
         .ikon-destek { background: linear-gradient(135deg, #1a002e, #4a007a); }
-        .ikon-akilli { background: linear-gradient(135deg, #002e2e, #007a7a); }
+        .ikon-hacim  { background: linear-gradient(135deg, #002e2e, #007a7a); }
         .ikon-trend  { background: linear-gradient(135deg, #1a2e00, #3d7a00); }
         .ikon-golden { background: linear-gradient(135deg, #2e2800, #7a6800); }
         .ikon-death  { background: linear-gradient(135deg, #2e0000, #7a0000); }
         .ikon-macd   { background: linear-gradient(135deg, #00182e, #003d6a); }
         .ikon-rsi    { background: linear-gradient(135deg, #2e002e, #6a006a); }
         .ikon-bb     { background: linear-gradient(135deg, #002e2a, #006a60); }
-        .ikon-hacim  { background: linear-gradient(135deg, #2e1800, #6a3800); }
         .ikon-mum    { background: linear-gradient(135deg, #0a2e1a, #1a6a3a); }
         .ikon-fav    { background: linear-gradient(135deg, #2e2a00, #6a6000); }
         .kart-icerik { flex: 1; }
@@ -50,12 +50,13 @@
         .hisse-fiyat { font-size: 12px; color: #555; margin-top: 3px; }
         .badge-listesi { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 10px; }
         .badge { font-size: 10px; padding: 3px 8px; border-radius: 6px; font-weight: 500; }
-        .badge-boga    { background: #0a2e1a; color: #26a69a; }
-        .badge-strateji{ background: #1a1a0a; color: #f0c000; }
-        .badge-notr    { background: #1a1a2e; color: #5566aa; }
+        .badge-boga     { background: #0a2e1a; color: #26a69a; }
+        .badge-strateji { background: #1a1a0a; color: #f0c000; }
+        .badge-notr     { background: #1a1a2e; color: #5566aa; }
         .fav-btn { background: none; border: none; font-size: 22px; cursor: pointer; padding: 2px 4px; }
         .bos-mesaj { text-align: center; padding: 60px 20px; color: #333; font-size: 14px; }
-        .sayac { font-size: 11px; color: #444; padding: 4px 16px 0; }
+        .sayac { font-size: 11px; color: #444; padding: 6px 16px 2px; }
+        .alt-uyari { font-size: 10px; color: #333; text-align: center; padding: 16px; line-height: 1.6; margin-bottom: 8px; }
     </style>
 </head>
 <body>
@@ -66,13 +67,17 @@
         <h2 id="karsilama_baslik">Terminali</h2>
     </div>
 
+    <div class="uyari-banner">
+        ⚠️ Bu platform yatırım tavsiyesi vermez. Tüm göstergeler algoritmik olup hata içerebilir. İşlemlerinizde kendi analizinizi yapınız.
+    </div>
+
     <div class="kategori-baslik">Sinyal Gücü</div>
     <div class="kart-listesi">
         <div class="kart" onclick="goster('altin')">
             <div class="kart-ikon ikon-altin">🏆</div>
             <div class="kart-icerik">
                 <div class="kart-baslik">Altın Tarama</div>
-                <div class="kart-aciklama">Birden fazla göstergenin aynı anda olumlu olduğu en güçlü sinyaller</div>
+                <div class="kart-aciklama">Çoklu göstergenin aynı anda uyum sağladığı hisseler</div>
             </div>
             <div class="kart-ok">›</div>
         </div>
@@ -97,51 +102,51 @@
     <div class="ayrac"></div>
     <div class="kategori-baslik">Stratejiler</div>
     <div class="kart-listesi">
-        <div class="kart" onclick="goster('dip_avcisi')">
+        <div class="kart" onclick="goster('dip_vurusu')">
             <div class="kart-ikon ikon-dip">🎣</div>
             <div class="kart-icerik">
-                <div class="kart-baslik">Dip Avcısı</div>
-                <div class="kart-aciklama">RSI 25-42, SMA200 üstünde — uzun vadeli dip fırsatları</div>
+                <div class="kart-baslik">Dip Vuruşu</div>
+                <div class="kart-aciklama">Olası dönüş noktasına yaklaşan hisseler</div>
             </div>
             <div class="kart-ok">›</div>
         </div>
-        <div class="kart" onclick="goster('patlama_oncesi')">
-            <div class="kart-ikon ikon-pat">💥</div>
+        <div class="kart" onclick="goster('bant_sikismasi')">
+            <div class="kart-ikon ikon-bant">💥</div>
             <div class="kart-icerik">
-                <div class="kart-baslik">Patlama Öncesi</div>
-                <div class="kart-aciklama">Bollinger bandı sıkışmış — yakında sert hareket bekleniyor</div>
+                <div class="kart-baslik">Bant Sıkışması</div>
+                <div class="kart-aciklama">Yakında sert hareket beklenen hisseler</div>
             </div>
             <div class="kart-ok">›</div>
         </div>
-        <div class="kart" onclick="goster('roket_rampa')">
-            <div class="kart-ikon ikon-roket">🚀</div>
+        <div class="kart" onclick="goster('guc_patlamasi')">
+            <div class="kart-ikon ikon-guc">🚀</div>
             <div class="kart-icerik">
-                <div class="kart-baslik">Roket Rampa</div>
-                <div class="kart-aciklama">BB üst bandı kırıldı, yüksek hacim, RSI güçlü</div>
+                <div class="kart-baslik">Güç Patlaması</div>
+                <div class="kart-aciklama">Güçlü momentum sinyali veren hisseler</div>
             </div>
             <div class="kart-ok">›</div>
         </div>
-        <div class="kart" onclick="goster('destek_kalkani')">
+        <div class="kart" onclick="goster('destek_testi')">
             <div class="kart-ikon ikon-destek">🛡️</div>
             <div class="kart-icerik">
-                <div class="kart-baslik">Destek Kalkanı</div>
-                <div class="kart-aciklama">SMA200'e yakın fiyat, RSI düşük — güçlü destek bölgesi</div>
+                <div class="kart-baslik">Destek Testi</div>
+                <div class="kart-aciklama">Kritik destek bölgesini test eden hisseler</div>
             </div>
             <div class="kart-ok">›</div>
         </div>
-        <div class="kart" onclick="goster('akilli_para')">
-            <div class="kart-ikon ikon-akilli">💰</div>
+        <div class="kart" onclick="goster('hacim_bombasi')">
+            <div class="kart-ikon ikon-hacim">💰</div>
             <div class="kart-icerik">
-                <div class="kart-baslik">Akıllı Para</div>
-                <div class="kart-aciklama">Normalin 2x+ hacim, pozitif kapanış, EMA20 üstü</div>
+                <div class="kart-baslik">Hacim Bombası</div>
+                <div class="kart-aciklama">Dikkat çekici hacim hareketi olan hisseler</div>
             </div>
             <div class="kart-ok">›</div>
         </div>
-        <div class="kart" onclick="goster('trend_sorfcusu')">
+        <div class="kart" onclick="goster('trend_uyumu')">
             <div class="kart-ikon ikon-trend">🏄</div>
             <div class="kart-icerik">
-                <div class="kart-baslik">Trend Sörfçüsü</div>
-                <div class="kart-aciklama">EMA20>EMA50, MACD pozitif, RSI 48-72 — trend uyumlu</div>
+                <div class="kart-baslik">Trend Uyumu</div>
+                <div class="kart-aciklama">Trend ile uyumlu hareket eden hisseler</div>
             </div>
             <div class="kart-ok">›</div>
         </div>
@@ -154,7 +159,7 @@
             <div class="kart-ikon ikon-golden">✨</div>
             <div class="kart-icerik">
                 <div class="kart-baslik">Golden Cross</div>
-                <div class="kart-aciklama">EMA20 EMA50'yi yukarı kesti</div>
+                <div class="kart-aciklama">Kısa vade uzun vadeyi yukarı kesti</div>
             </div>
             <div class="kart-ok">›</div>
         </div>
@@ -162,7 +167,7 @@
             <div class="kart-ikon ikon-death">💀</div>
             <div class="kart-icerik">
                 <div class="kart-baslik">Death Cross</div>
-                <div class="kart-aciklama">EMA20 EMA50'yi aşağı kesti — dikkat</div>
+                <div class="kart-aciklama">Kısa vade uzun vadeyi aşağı kesti</div>
             </div>
             <div class="kart-ok">›</div>
         </div>
@@ -170,7 +175,7 @@
             <div class="kart-ikon ikon-macd">📉</div>
             <div class="kart-icerik">
                 <div class="kart-baslik">MACD Al Kesişimi</div>
-                <div class="kart-aciklama">MACD sinyal çizgisini yukarı kesti</div>
+                <div class="kart-aciklama">Momentum göstergesi al sinyali verdi</div>
             </div>
             <div class="kart-ok">›</div>
         </div>
@@ -178,23 +183,23 @@
             <div class="kart-ikon ikon-rsi">📊</div>
             <div class="kart-icerik">
                 <div class="kart-baslik">RSI Aşırı Satım</div>
-                <div class="kart-aciklama">RSI 30 altına düşmüş hisseler</div>
+                <div class="kart-aciklama">Güç göstergesi aşırı satım bölgesinde</div>
             </div>
             <div class="kart-ok">›</div>
         </div>
         <div class="kart" onclick="goster('bb_alt')">
             <div class="kart-ikon ikon-bb">🎯</div>
             <div class="kart-icerik">
-                <div class="kart-baslik">Bollinger Alt Bant</div>
-                <div class="kart-aciklama">Alt banda dokunan hisseler</div>
+                <div class="kart-baslik">Volatilite Alt Bandı</div>
+                <div class="kart-aciklama">Fiyat volatilite alt bandına ulaştı</div>
             </div>
             <div class="kart-ok">›</div>
         </div>
-        <div class="kart" onclick="goster('hacim')">
+        <div class="kart" onclick="goster('hacim_alarmi')">
             <div class="kart-ikon ikon-hacim">🔥</div>
             <div class="kart-icerik">
-                <div class="kart-baslik">Anormal Hacim</div>
-                <div class="kart-aciklama">50 günlük ortalamanın 3x+ üzerinde hacim</div>
+                <div class="kart-baslik">Hacim Alarmı</div>
+                <div class="kart-aciklama">Dikkat çekici hacim hareketi tespit edildi</div>
             </div>
             <div class="kart-ok">›</div>
         </div>
@@ -202,7 +207,7 @@
             <div class="kart-ikon ikon-mum">🕯️</div>
             <div class="kart-icerik">
                 <div class="kart-baslik">Boğa Formasyonları</div>
-                <div class="kart-aciklama">Yutan Boğa, Çekiç, Sabah Yıldızı ve daha fazlası</div>
+                <div class="kart-aciklama">Yükseliş mum formasyonu tespit edildi</div>
             </div>
             <div class="kart-ok">›</div>
         </div>
@@ -210,7 +215,7 @@
 
     <div class="ayrac"></div>
     <div class="kategori-baslik">Favoriler</div>
-    <div class="kart-listesi" style="margin-bottom:24px">
+    <div class="kart-listesi">
         <div class="kart" onclick="goster('favoriler')">
             <div class="kart-ikon ikon-fav">⭐</div>
             <div class="kart-icerik">
@@ -219,6 +224,12 @@
             </div>
             <div class="kart-ok">›</div>
         </div>
+    </div>
+
+    <div class="alt-uyari">
+        Bu platform yalnızca teknik analiz sinyalleri sunar.<br>
+        Yatırım tavsiyesi değildir. Sermaye piyasası işlemleri risk içerir.<br>
+        Kararlarınızı kendi analizinize ve danışmanınıza göre alınız.
     </div>
 </div>
 
@@ -232,6 +243,7 @@
     </div>
     <div class="sayac" id="sayac"></div>
     <div class="hisse-listesi" id="liste"></div>
+    <div class="alt-uyari">⚠️ Yatırım tavsiyesi değildir. Tüm göstergeler algoritmik olup hata içerebilir.</div>
 </div>
 
 <script>
@@ -249,22 +261,22 @@
         .then(d => { veri = d; });
 
     const BOGA_LIST = ["Yutan Boga","Cekic","Ters Cekic","Sabah Yildizi","Boga Harami","3 Beyaz Asker","Delikli Bulut"];
-    const STRATEJI_LIST = ["Dip Avcisi","Patlama Oncesi","Roket Rampa","Destek Kalkani","Akilli Para","Trend Sorfcusu"];
+    const STRATEJI_LIST = ["Dip Vurusu","Bant Sikismasi","Guc Patlamasi","Destek Testi","Hacim Bombasi","Trend Uyumu"];
 
     const BASLIKLAR = {
         altin: "🏆 Altın Tarama", gumus: "🥈 Gümüş Tarama", bronz: "🥉 Bronz Tarama",
-        dip_avcisi: "🎣 Dip Avcısı", patlama_oncesi: "💥 Patlama Öncesi",
-        roket_rampa: "🚀 Roket Rampa", destek_kalkani: "🛡️ Destek Kalkanı",
-        akilli_para: "💰 Akıllı Para", trend_sorfcusu: "🏄 Trend Sörfçüsü",
+        dip_vurusu: "🎣 Dip Vuruşu", bant_sikismasi: "💥 Bant Sıkışması",
+        guc_patlamasi: "🚀 Güç Patlaması", destek_testi: "🛡️ Destek Testi",
+        hacim_bombasi: "💰 Hacim Bombası", trend_uyumu: "🏄 Trend Uyumu",
         golden_cross: "✨ Golden Cross", death_cross: "💀 Death Cross",
         macd_al: "📉 MACD Al Kesişimi", rsi_satim: "📊 RSI Aşırı Satım",
-        bb_alt: "🎯 Bollinger Alt Bant", hacim: "🔥 Anormal Hacim",
+        bb_alt: "🎯 Volatilite Alt Bandı", hacim_alarmi: "🔥 Hacim Alarmı",
         mum_boga: "🕯️ Boğa Formasyonları", favoriler: "⭐ Favorilerim"
     };
 
     function getBadgeClass(s) {
         if (STRATEJI_LIST.includes(s)) return "badge-strateji";
-        if (BOGA_LIST.includes(s) || ["MACD Al Kesisimi","Golden Cross","RSI Asiri Satim","BB Alt Bant","MACD Pozitif","Fiyat EMA20 Ustunde","EMA20 > EMA50","Fiyat SMA200 Ustunde"].includes(s) || s.includes("Anormal Hacim")) return "badge-boga";
+        if (BOGA_LIST.includes(s) || ["MACD Al Kesisimi","Golden Cross","RSI Asiri Satim","BB Alt Bant","MACD Pozitif","Fiyat EMA20 Ustunde","EMA20 > EMA50","Fiyat SMA200 Ustunde","Hacim Alarmi"].includes(s)) return "badge-boga";
         return "badge-notr";
     }
 
@@ -286,18 +298,18 @@
             if (tip === 'altin' && h.altin === 'Altin') goster_mi = true;
             if (tip === 'gumus' && h.altin === 'Gumus') goster_mi = true;
             if (tip === 'bronz' && h.altin === 'Bronz') goster_mi = true;
-            if (tip === 'dip_avcisi' && h.dip_avcisi) goster_mi = true;
-            if (tip === 'patlama_oncesi' && h.patlama_oncesi) goster_mi = true;
-            if (tip === 'roket_rampa' && h.roket_rampa) goster_mi = true;
-            if (tip === 'destek_kalkani' && h.destek_kalkani) goster_mi = true;
-            if (tip === 'akilli_para' && h.akilli_para) goster_mi = true;
-            if (tip === 'trend_sorfcusu' && h.trend_sorfcusu) goster_mi = true;
+            if (tip === 'dip_vurusu' && h.dip_vurusu) goster_mi = true;
+            if (tip === 'bant_sikismasi' && h.bant_sikismasi) goster_mi = true;
+            if (tip === 'guc_patlamasi' && h.guc_patlamasi) goster_mi = true;
+            if (tip === 'destek_testi' && h.destek_testi) goster_mi = true;
+            if (tip === 'hacim_bombasi' && h.hacim_bombasi) goster_mi = true;
+            if (tip === 'trend_uyumu' && h.trend_uyumu) goster_mi = true;
             if (tip === 'golden_cross' && h.sinyaller.includes('Golden Cross')) goster_mi = true;
             if (tip === 'death_cross' && h.sinyaller.includes('Death Cross')) goster_mi = true;
             if (tip === 'macd_al' && h.sinyaller.includes('MACD Al Kesisimi')) goster_mi = true;
             if (tip === 'rsi_satim' && h.sinyaller.includes('RSI Asiri Satim')) goster_mi = true;
             if (tip === 'bb_alt' && h.sinyaller.includes('BB Alt Bant')) goster_mi = true;
-            if (tip === 'hacim' && h.sinyaller.some(s => s.includes('Anormal Hacim'))) goster_mi = true;
+            if (tip === 'hacim_alarmi' && h.sinyaller.includes('Hacim Alarmi')) goster_mi = true;
             if (tip === 'mum_boga' && h.sinyaller.some(s => BOGA_LIST.includes(s))) goster_mi = true;
             if (tip === 'favoriler' && favoriler.includes(ad)) goster_mi = true;
 

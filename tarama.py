@@ -71,65 +71,53 @@ def tarama_yap():
     def yutan_boga(v):
         s, o = v.iloc[-1], v.iloc[-2]
         return (o["Close"] < o["Open"] and s["Close"] > s["Open"] and s["Open"] < o["Close"] and s["Close"] > o["Open"])
-
     def cekic(v):
         s = v.iloc[-1]
         govde = abs(s["Close"] - s["Open"])
         alt_fitil = min(s["Close"], s["Open"]) - s["Low"]
         ust_fitil = s["High"] - max(s["Close"], s["Open"])
         return govde > 0 and alt_fitil >= 2 * govde and ust_fitil <= govde * 0.3
-
     def ters_cekic(v):
         s = v.iloc[-1]
         govde = abs(s["Close"] - s["Open"])
         ust_fitil = s["High"] - max(s["Close"], s["Open"])
         alt_fitil = min(s["Close"], s["Open"]) - s["Low"]
         return govde > 0 and ust_fitil >= 2 * govde and alt_fitil <= govde * 0.3
-
     def sabah_yildizi(v):
         if len(v) < 3: return False
         a, b, c = v.iloc[-3], v.iloc[-2], v.iloc[-1]
         return (a["Open"] > a["Close"] and abs(b["Close"] - b["Open"]) <= abs(a["Close"] - a["Open"]) * 0.3 and c["Close"] > c["Open"] and c["Close"] > (a["Open"] + a["Close"]) / 2)
-
     def boga_harami(v):
         s, o = v.iloc[-1], v.iloc[-2]
         return (o["Close"] < o["Open"] and s["Close"] > s["Open"] and s["Open"] > o["Close"] and s["Close"] < o["Open"] and abs(s["Close"] - s["Open"]) < abs(o["Close"] - o["Open"]))
-
     def uc_beyaz_asker(v):
         if len(v) < 3: return False
         a, b, c = v.iloc[-3], v.iloc[-2], v.iloc[-1]
         return (a["Close"] > a["Open"] and b["Close"] > b["Open"] and c["Close"] > c["Open"] and b["Close"] > a["Close"] and c["Close"] > b["Close"] and b["Open"] > a["Open"] and c["Open"] > b["Open"])
-
     def delikli_bulut(v):
         s, o = v.iloc[-1], v.iloc[-2]
         orta = (o["Open"] + o["Close"]) / 2
         return (o["Close"] < o["Open"] and s["Close"] > s["Open"] and s["Open"] < o["Close"] and s["Close"] > orta and s["Close"] < o["Open"])
-
     def yutan_ayi(v):
         s, o = v.iloc[-1], v.iloc[-2]
         return (o["Close"] > o["Open"] and s["Close"] < s["Open"] and s["Open"] > o["Close"] and s["Close"] < o["Open"])
-
     def asilan_adam(v):
         s = v.iloc[-1]
         govde = abs(s["Close"] - s["Open"])
         alt_fitil = min(s["Close"], s["Open"]) - s["Low"]
         ust_fitil = s["High"] - max(s["Close"], s["Open"])
         return govde > 0 and alt_fitil >= 2 * govde and ust_fitil <= govde * 0.3
-
     def aksam_yildizi(v):
         if len(v) < 3: return False
         a, b, c = v.iloc[-3], v.iloc[-2], v.iloc[-1]
         return (a["Close"] > a["Open"] and abs(b["Close"] - b["Open"]) <= abs(a["Close"] - a["Open"]) * 0.3 and c["Close"] < c["Open"] and c["Close"] < (a["Open"] + a["Close"]) / 2)
-
     def ayi_harami(v):
         s, o = v.iloc[-1], v.iloc[-2]
         return (o["Close"] > o["Open"] and s["Close"] < s["Open"] and s["Open"] < o["Close"] and s["Close"] > o["Open"] and abs(s["Close"] - s["Open"]) < abs(o["Close"] - o["Open"]))
-
     def uc_siyah_karga(v):
         if len(v) < 3: return False
         a, b, c = v.iloc[-3], v.iloc[-2], v.iloc[-1]
         return (a["Close"] < a["Open"] and b["Close"] < b["Open"] and c["Close"] < c["Open"] and b["Close"] < a["Close"] and c["Close"] < b["Close"] and b["Open"] < a["Open"] and c["Open"] < b["Open"])
-
     def kara_bulut_ortusu(v):
         s, o = v.iloc[-1], v.iloc[-2]
         orta = (o["Open"] + o["Close"]) / 2
@@ -194,7 +182,7 @@ def tarama_yap():
                 if ema20 < ema50: sinyaller.append("EMA20 < EMA50")
                 if ema20_onceki < ema50_onceki and ema20 > ema50: sinyaller.append("Golden Cross")
                 if ema20_onceki > ema50_onceki and ema20 < ema50: sinyaller.append("Death Cross")
-                if hacim_orani >= 3: sinyaller.append(f"Anormal Hacim {hacim_orani}x")
+                if hacim_orani >= 3: sinyaller.append("Hacim Alarmi")
                 if sma200_gecerli:
                     if kapanis > sma200: sinyaller.append("Fiyat SMA200 Ustunde")
                     if kapanis < sma200: sinyaller.append("Fiyat SMA200 Altinda")
@@ -212,19 +200,19 @@ def tarama_yap():
                 if uc_siyah_karga(v): sinyaller.append("3 Siyah Karga")
                 if kara_bulut_ortusu(v): sinyaller.append("Kara Bulut Ortusu")
 
-                dip_avcisi = bool(25 <= rsi <= 42 and sma200_gecerli and kapanis > sma200 * 0.97)
-                patlama_oncesi = bool(not (bb_width_ort != bb_width_ort) and bb_width < bb_width_ort * 0.7)
-                roket_rampa = bool(kapanis >= bb_ust * 0.98 and hacim_orani >= 2 and rsi > 55)
-                destek_kalkani = bool(sma200_gecerli and abs(kapanis - sma200) / sma200 < 0.04 and rsi < 48)
-                akilli_para = bool(hacim_orani >= 2 and float(v["Close"].iloc[-1]) > float(v["Open"].iloc[-1]) and kapanis > ema20)
-                trend_sorfcusu = bool(ema20 > ema50 and macd_val > macd_sig_val and 48 <= rsi <= 72)
+                dip_vurusu = bool(25 <= rsi <= 42 and sma200_gecerli and kapanis > sma200 * 0.97)
+                bant_sikismasi = bool(not (bb_width_ort != bb_width_ort) and bb_width < bb_width_ort * 0.7)
+                guc_patlamasi = bool(kapanis >= bb_ust * 0.98 and hacim_orani >= 2 and rsi > 55)
+                destek_testi = bool(sma200_gecerli and abs(kapanis - sma200) / sma200 < 0.04 and rsi < 48)
+                hacim_bombasi = bool(hacim_orani >= 2 and float(v["Close"].iloc[-1]) > float(v["Open"].iloc[-1]) and kapanis > ema20)
+                trend_uyumu = bool(ema20 > ema50 and macd_val > macd_sig_val and 48 <= rsi <= 72)
 
-                if dip_avcisi: sinyaller.append("Dip Avcisi")
-                if patlama_oncesi: sinyaller.append("Patlama Oncesi")
-                if roket_rampa: sinyaller.append("Roket Rampa")
-                if destek_kalkani: sinyaller.append("Destek Kalkani")
-                if akilli_para: sinyaller.append("Akilli Para")
-                if trend_sorfcusu: sinyaller.append("Trend Sorfcusu")
+                if dip_vurusu: sinyaller.append("Dip Vurusu")
+                if bant_sikismasi: sinyaller.append("Bant Sikismasi")
+                if guc_patlamasi: sinyaller.append("Guc Patlamasi")
+                if destek_testi: sinyaller.append("Destek Testi")
+                if hacim_bombasi: sinyaller.append("Hacim Bombasi")
+                if trend_uyumu: sinyaller.append("Trend Uyumu")
 
                 ayi_sinyaller = ["MACD Sat Kesisimi","MACD Negatif","Fiyat EMA20 Altinda","EMA20 < EMA50",
                                  "Death Cross","Yutan Ayi","Asilan Adam","Aksam Yildizi","Ayi Harami",
@@ -233,7 +221,7 @@ def tarama_yap():
 
                 if altin_skor >= 7: altin = "Altin"
                 elif altin_skor >= 5: altin = "Gumus"
-                elif altin_skor >= 3    : altin = "Bronz"
+                elif altin_skor >= 3: altin = "Bronz"
                 else: altin = None
 
                 if sinyaller:
@@ -243,12 +231,12 @@ def tarama_yap():
                         "sinyaller": sinyaller,
                         "sinyal_sayisi": altin_skor,
                         "altin": altin,
-                        "dip_avcisi": dip_avcisi,
-                        "patlama_oncesi": patlama_oncesi,
-                        "roket_rampa": roket_rampa,
-                        "destek_kalkani": destek_kalkani,
-                        "akilli_para": akilli_para,
-                        "trend_sorfcusu": trend_sorfcusu,
+                        "dip_vurusu": dip_vurusu,
+                        "bant_sikismasi": bant_sikismasi,
+                        "guc_patlamasi": guc_patlamasi,
+                        "destek_testi": destek_testi,
+                        "hacim_bombasi": hacim_bombasi,
+                        "trend_uyumu": trend_uyumu,
                         "golden_cross": bool(ema20_onceki < ema50_onceki and ema20 > ema50),
                         "death_cross": bool(ema20_onceki > ema50_onceki and ema20 < ema50),
                     }
