@@ -1,5 +1,5 @@
 {
-  "tarih": "2026-03-09 19:16",
+  "tarih": "2026-03-09 19:20",
   "hisseler": {
     "A1CAP": {
       "kapanis": 16.26,
@@ -14,7 +14,7 @@
         "Patlama Oncesi"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": false,
       "patlama_oncesi": true,
       "roket_rampa": false,
@@ -122,7 +122,7 @@
         "Dip Avcisi"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -190,7 +190,7 @@
         "Destek Kalkani"
       ],
       "sinyal_sayisi": 5,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -233,7 +233,7 @@
         "Asilan Adam"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -278,7 +278,7 @@
         "Patlama Oncesi"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": false,
       "patlama_oncesi": true,
       "roket_rampa": false,
@@ -321,7 +321,7 @@
         "Destek Kalkani"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -432,7 +432,7 @@
         "Fiyat SMA200 Ustunde"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -475,7 +475,7 @@
         "Trend Sorfcusu"
       ],
       "sinyal_sayisi": 5,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -518,7 +518,7 @@
         "Destek Kalkani"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -541,7 +541,7 @@
         "Asilan Adam"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -564,7 +564,7 @@
         "Destek Kalkani"
       ],
       "sinyal_sayisi": 5,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -606,7 +606,7 @@
         "Ayi Harami"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -793,7 +793,7 @@
         "Fiyat SMA200 Ustunde"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -897,7 +897,7 @@
         "Fiyat SMA200 Ustunde"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -919,7 +919,7 @@
         "Dip Avcisi"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -962,7 +962,7 @@
         "3 Beyaz Asker"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -983,7 +983,7 @@
         "Trend Sorfcusu"
       ],
       "sinyal_sayisi": 5,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -1025,7 +1025,7 @@
         "Patlama Oncesi"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": false,
       "patlama_oncesi": true,
       "roket_rampa": false,
@@ -1045,7 +1045,7 @@
         "Fiyat SMA200 Ustunde"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -1087,7 +1087,7 @@
         "Fiyat SMA200 Ustunde"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -1152,7 +1152,7 @@
         "Trend Sorfcusu"
       ],
       "sinyal_sayisi": 6,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -1245,7 +1245,7 @@
         "Akilli Para"
       ],
       "sinyal_sayisi": 5,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -1267,7 +1267,7 @@
         "Yutan Ayi"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -1310,7 +1310,7 @@
         "Trend Sorfcusu"
       ],
       "sinyal_sayisi": 6,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -1438,7 +1438,7 @@
         "Ayi Harami"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -1480,7 +1480,7 @@
         "Fiyat SMA200 Ustunde"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -1565,7 +1565,7 @@
         "Yutan Boga"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -1587,7 +1587,7 @@
         "Destek Kalkani"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -1775,7 +1775,7 @@
         "Destek Kalkani"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -1823,7 +1823,7 @@
         "Fiyat SMA200 Altinda"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -1845,7 +1845,7 @@
         "Patlama Oncesi"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": false,
       "patlama_oncesi": true,
       "roket_rampa": false,
@@ -1866,7 +1866,7 @@
         "3 Beyaz Asker"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -1948,7 +1948,7 @@
         "Dip Avcisi"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -2011,7 +2011,7 @@
         "Patlama Oncesi"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": false,
       "patlama_oncesi": true,
       "roket_rampa": false,
@@ -2033,7 +2033,7 @@
         "Destek Kalkani"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -2056,7 +2056,7 @@
         "Destek Kalkani"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -2078,7 +2078,7 @@
         "Dip Avcisi"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -2101,7 +2101,7 @@
         "Destek Kalkani"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -2124,7 +2124,7 @@
         "Fiyat SMA200 Ustunde"
       ],
       "sinyal_sayisi": 5,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -2147,7 +2147,7 @@
         "Trend Sorfcusu"
       ],
       "sinyal_sayisi": 6,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -2238,7 +2238,7 @@
         "3 Beyaz Asker"
       ],
       "sinyal_sayisi": 5,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -2283,7 +2283,7 @@
         "3 Beyaz Asker"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -2327,7 +2327,7 @@
         "Trend Sorfcusu"
       ],
       "sinyal_sayisi": 6,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -2349,7 +2349,7 @@
         "Dip Avcisi"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -2474,7 +2474,7 @@
         "Patlama Oncesi"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": false,
       "patlama_oncesi": true,
       "roket_rampa": false,
@@ -2516,7 +2516,7 @@
         "Fiyat SMA200 Ustunde"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -2579,7 +2579,7 @@
         "Dip Avcisi"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -2640,7 +2640,7 @@
         "Fiyat SMA200 Ustunde"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -2783,7 +2783,7 @@
         "Trend Sorfcusu"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -2932,7 +2932,7 @@
         "Patlama Oncesi"
       ],
       "sinyal_sayisi": 5,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": true,
       "roket_rampa": false,
@@ -2954,7 +2954,7 @@
         "Destek Kalkani"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -2977,7 +2977,7 @@
         "3 Siyah Karga"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -3021,7 +3021,7 @@
         "Destek Kalkani"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -3063,7 +3063,7 @@
         "Fiyat SMA200 Altinda"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -3105,7 +3105,7 @@
         "Fiyat SMA200 Ustunde"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -3169,7 +3169,7 @@
         "3 Beyaz Asker"
       ],
       "sinyal_sayisi": 6,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -3255,7 +3255,7 @@
         "Destek Kalkani"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -3322,7 +3322,7 @@
         "Dip Avcisi"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -3343,7 +3343,7 @@
         "Trend Sorfcusu"
       ],
       "sinyal_sayisi": 5,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -3366,7 +3366,7 @@
         "Destek Kalkani"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -3430,7 +3430,7 @@
         "Fiyat SMA200 Ustunde"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -3601,7 +3601,7 @@
         "Fiyat SMA200 Altinda"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -3644,7 +3644,7 @@
         "Destek Kalkani"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -3707,7 +3707,7 @@
         "Patlama Oncesi"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": false,
       "patlama_oncesi": true,
       "roket_rampa": false,
@@ -3813,7 +3813,7 @@
         "Fiyat SMA200 Ustunde"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -3857,7 +3857,7 @@
         "Trend Sorfcusu"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -3879,7 +3879,7 @@
         "Trend Sorfcusu"
       ],
       "sinyal_sayisi": 5,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -3900,7 +3900,7 @@
         "Patlama Oncesi"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": true,
       "roket_rampa": false,
@@ -3941,7 +3941,7 @@
         "Fiyat SMA200 Ustunde"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -4012,7 +4012,7 @@
         "Destek Kalkani"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -4075,7 +4075,7 @@
         "Trend Sorfcusu"
       ],
       "sinyal_sayisi": 6,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -4115,7 +4115,7 @@
         "Fiyat SMA200 Ustunde"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -4136,7 +4136,7 @@
         "Patlama Oncesi"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": true,
       "roket_rampa": false,
@@ -4218,7 +4218,7 @@
         "Fiyat SMA200 Ustunde"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -4282,7 +4282,7 @@
         "Patlama Oncesi"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": false,
       "patlama_oncesi": true,
       "roket_rampa": false,
@@ -4323,7 +4323,7 @@
         "Yutan Boga"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -4408,7 +4408,7 @@
         "Dip Avcisi"
       ],
       "sinyal_sayisi": 5,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -4430,7 +4430,7 @@
         "Patlama Oncesi"
       ],
       "sinyal_sayisi": 5,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": true,
       "roket_rampa": false,
@@ -4473,7 +4473,7 @@
         "Destek Kalkani"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -4539,7 +4539,7 @@
         "Dip Avcisi"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -4602,7 +4602,7 @@
         "Destek Kalkani"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -4644,7 +4644,7 @@
         "Patlama Oncesi"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": false,
       "patlama_oncesi": true,
       "roket_rampa": false,
@@ -4665,7 +4665,7 @@
         "Fiyat SMA200 Ustunde"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -4706,7 +4706,7 @@
         "Fiyat SMA200 Altinda"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -4768,7 +4768,7 @@
         "Dip Avcisi"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -4789,7 +4789,7 @@
         "Fiyat SMA200 Ustunde"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -4852,7 +4852,7 @@
         "Ters Cekic"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -4916,7 +4916,7 @@
         "Patlama Oncesi"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": false,
       "patlama_oncesi": true,
       "roket_rampa": false,
@@ -5020,7 +5020,7 @@
         "Trend Sorfcusu"
       ],
       "sinyal_sayisi": 6,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -5126,7 +5126,7 @@
         "Asilan Adam"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -5149,7 +5149,7 @@
         "Asilan Adam"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -5193,7 +5193,7 @@
         "Fiyat SMA200 Altinda"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -5214,7 +5214,7 @@
         "Fiyat SMA200 Altinda"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -5237,7 +5237,7 @@
         "Destek Kalkani"
       ],
       "sinyal_sayisi": 5,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -5281,7 +5281,7 @@
         "3 Beyaz Asker"
       ],
       "sinyal_sayisi": 6,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -5301,7 +5301,7 @@
         "Fiyat SMA200 Ustunde"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -5363,7 +5363,7 @@
         "Destek Kalkani"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -5384,7 +5384,7 @@
         "Trend Sorfcusu"
       ],
       "sinyal_sayisi": 5,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -5427,7 +5427,7 @@
         "Destek Kalkani"
       ],
       "sinyal_sayisi": 5,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -5494,7 +5494,7 @@
         "3 Siyah Karga"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -5515,7 +5515,7 @@
         "Destek Kalkani"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -5537,7 +5537,7 @@
         "Fiyat SMA200 Altinda"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -5577,7 +5577,7 @@
         "Fiyat SMA200 Ustunde"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -5681,7 +5681,7 @@
         "Trend Sorfcusu"
       ],
       "sinyal_sayisi": 5,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -5703,7 +5703,7 @@
         "Akilli Para"
       ],
       "sinyal_sayisi": 5,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -5748,7 +5748,7 @@
         "Destek Kalkani"
       ],
       "sinyal_sayisi": 6,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -5769,7 +5769,7 @@
         "Trend Sorfcusu"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -5834,7 +5834,7 @@
         "Patlama Oncesi"
       ],
       "sinyal_sayisi": 5,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": true,
       "roket_rampa": false,
@@ -5876,7 +5876,7 @@
         "Delikli Bulut"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -6062,7 +6062,7 @@
         "Fiyat SMA200 Ustunde"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -6103,7 +6103,7 @@
         "Trend Sorfcusu"
       ],
       "sinyal_sayisi": 5,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -6126,7 +6126,7 @@
         "Akilli Para"
       ],
       "sinyal_sayisi": 6,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -6211,7 +6211,7 @@
         "Fiyat SMA200 Ustunde"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -6255,7 +6255,7 @@
         "Destek Kalkani"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -6276,7 +6276,7 @@
         "Patlama Oncesi"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": false,
       "patlama_oncesi": true,
       "roket_rampa": false,
@@ -6423,7 +6423,7 @@
         "Trend Sorfcusu"
       ],
       "sinyal_sayisi": 6,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -6507,7 +6507,7 @@
         "Trend Sorfcusu"
       ],
       "sinyal_sayisi": 5,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -6548,7 +6548,7 @@
         "Yutan Boga"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -6630,7 +6630,7 @@
         "Trend Sorfcusu"
       ],
       "sinyal_sayisi": 5,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -6755,7 +6755,7 @@
         "Fiyat SMA200 Ustunde"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -6778,7 +6778,7 @@
         "Trend Sorfcusu"
       ],
       "sinyal_sayisi": 5,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -6800,7 +6800,7 @@
         "3 Beyaz Asker"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -6820,7 +6820,7 @@
         "Fiyat SMA200 Altinda"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -6840,7 +6840,7 @@
         "Fiyat SMA200 Ustunde"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -6861,7 +6861,7 @@
         "Trend Sorfcusu"
       ],
       "sinyal_sayisi": 5,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -6884,7 +6884,7 @@
         "Dip Avcisi"
       ],
       "sinyal_sayisi": 5,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -6950,7 +6950,7 @@
         "Destek Kalkani"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -6993,7 +6993,7 @@
         "Dip Avcisi"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -7013,7 +7013,7 @@
         "Fiyat SMA200 Ustunde"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -7035,7 +7035,7 @@
         "Fiyat SMA200 Ustunde"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -7078,7 +7078,7 @@
         "Patlama Oncesi"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": true,
       "roket_rampa": false,
@@ -7121,7 +7121,7 @@
         "Dip Avcisi"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -7163,7 +7163,7 @@
         "Dip Avcisi"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -7186,7 +7186,7 @@
         "Asilan Adam"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -7230,7 +7230,7 @@
         "Yutan Boga"
       ],
       "sinyal_sayisi": 5,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -7252,7 +7252,7 @@
         "3 Siyah Karga"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -7314,7 +7314,7 @@
         "Trend Sorfcusu"
       ],
       "sinyal_sayisi": 5,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -7399,7 +7399,7 @@
         "Fiyat SMA200 Ustunde"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -7420,7 +7420,7 @@
         "Dip Avcisi"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -7442,7 +7442,7 @@
         "Dip Avcisi"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -7585,7 +7585,7 @@
         "Destek Kalkani"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -7646,7 +7646,7 @@
         "Fiyat SMA200 Ustunde"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -7727,7 +7727,7 @@
         "Fiyat SMA200 Altinda"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -7768,7 +7768,7 @@
         "Fiyat SMA200 Ustunde"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -7790,7 +7790,7 @@
         "Asilan Adam"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -7832,7 +7832,7 @@
         "3 Siyah Karga"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -7874,7 +7874,7 @@
         "Fiyat SMA200 Ustunde"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -7916,7 +7916,7 @@
         "Fiyat SMA200 Ustunde"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -8004,7 +8004,7 @@
         "Destek Kalkani"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -8028,7 +8028,7 @@
         "Destek Kalkani"
       ],
       "sinyal_sayisi": 5,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -8090,7 +8090,7 @@
         "Destek Kalkani"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -8217,7 +8217,7 @@
         "Fiyat SMA200 Altinda"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -8282,7 +8282,7 @@
         "Patlama Oncesi"
       ],
       "sinyal_sayisi": 5,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": true,
       "roket_rampa": false,
@@ -8329,7 +8329,7 @@
         "Yutan Boga"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -8457,7 +8457,7 @@
         "Asilan Adam"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -8477,7 +8477,7 @@
         "Fiyat SMA200 Ustunde"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -8543,7 +8543,7 @@
         "Yutan Boga"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -8585,7 +8585,7 @@
         "3 Beyaz Asker"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -8607,7 +8607,7 @@
         "Destek Kalkani"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -8712,7 +8712,7 @@
         "Dip Avcisi"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -8775,7 +8775,7 @@
         "Trend Sorfcusu"
       ],
       "sinyal_sayisi": 5,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -8796,7 +8796,7 @@
         "Patlama Oncesi"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": false,
       "patlama_oncesi": true,
       "roket_rampa": false,
@@ -8838,7 +8838,7 @@
         "Fiyat SMA200 Altinda"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -8983,7 +8983,7 @@
         "Fiyat SMA200 Ustunde"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -9005,7 +9005,7 @@
         "Trend Sorfcusu"
       ],
       "sinyal_sayisi": 6,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -9135,7 +9135,7 @@
         "Dip Avcisi"
       ],
       "sinyal_sayisi": 5,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -9240,7 +9240,7 @@
         "Dip Avcisi"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -9264,7 +9264,7 @@
         "Destek Kalkani"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -9307,7 +9307,7 @@
         "Akilli Para"
       ],
       "sinyal_sayisi": 5,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -9328,7 +9328,7 @@
         "Dip Avcisi"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -9350,7 +9350,7 @@
         "Dip Avcisi"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -9374,7 +9374,7 @@
         "Asilan Adam"
       ],
       "sinyal_sayisi": 5,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -9394,7 +9394,7 @@
         "Fiyat SMA200 Altinda"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -9435,7 +9435,7 @@
         "Fiyat SMA200 Ustunde"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -9481,7 +9481,7 @@
         "Delikli Bulut"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -9502,7 +9502,7 @@
         "Delikli Bulut"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -9524,7 +9524,7 @@
         "Ayi Harami"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -9569,7 +9569,7 @@
         "Yutan Boga"
       ],
       "sinyal_sayisi": 6,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -9611,7 +9611,7 @@
         "Destek Kalkani"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -9654,7 +9654,7 @@
         "Dip Avcisi"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -9676,7 +9676,7 @@
         "Dip Avcisi"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -9785,7 +9785,7 @@
         "Destek Kalkani"
       ],
       "sinyal_sayisi": 6,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -9807,7 +9807,7 @@
         "Fiyat SMA200 Altinda"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -9872,7 +9872,7 @@
         "Trend Sorfcusu"
       ],
       "sinyal_sayisi": 6,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": true,
@@ -9934,7 +9934,7 @@
         "Patlama Oncesi"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": false,
       "patlama_oncesi": true,
       "roket_rampa": false,
@@ -9954,7 +9954,7 @@
         "Fiyat SMA200 Ustunde"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -10108,7 +10108,7 @@
         "Patlama Oncesi"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": false,
       "patlama_oncesi": true,
       "roket_rampa": false,
@@ -10150,7 +10150,7 @@
         "Fiyat SMA200 Ustunde"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -10235,7 +10235,7 @@
         "Asilan Adam"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -10277,7 +10277,7 @@
         "Dip Avcisi"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -10299,7 +10299,7 @@
         "Fiyat SMA200 Altinda"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -10323,7 +10323,7 @@
         "Destek Kalkani"
       ],
       "sinyal_sayisi": 5,
-      "altin": "Altin",
+      "altin": "Gumus",
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -10426,7 +10426,7 @@
         "Fiyat SMA200 Ustunde"
       ],
       "sinyal_sayisi": 2,
-      "altin": "Bronz",
+      "altin": null,
       "dip_avcisi": false,
       "patlama_oncesi": false,
       "roket_rampa": false,
@@ -10470,7 +10470,7 @@
         "Destek Kalkani"
       ],
       "sinyal_sayisi": 4,
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_avcisi": true,
       "patlama_oncesi": false,
       "roket_rampa": false,
