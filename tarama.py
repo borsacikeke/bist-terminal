@@ -1,69 +1,16 @@
+import matplotlib
+matplotlib.use('Agg')
+
 import yfinance as yf
 import ta
 import time
 import json
-import schedule
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 import os
 from datetime import datetime
 
 hisseler = ["A1CAP.IS","A1YEN.IS","ACSEL.IS","ADEL.IS","ADESE.IS","ADGYO.IS","AFYON.IS","AGESA.IS","AGHOL.IS","AGROT.IS","AHGAZ.IS","AHSGY.IS","AKCNS.IS","AKENR.IS","AKFGY.IS","AKFIS.IS","AKFYE.IS","AKGRT.IS","AKSA.IS","AKSEN.IS","AKSGY.IS","AKSUE.IS","AKYHO.IS","ALARK.IS","ALCAR.IS","ALCTL.IS","ALFAS.IS","ALGYO.IS","ALKA.IS","ALKIM.IS","ALKLC.IS","ALTNY.IS","ALVES.IS","ANELE.IS","ANGEN.IS","ANHYT.IS","ANSGR.IS","ARASE.IS","ARCLK.IS","ARDYZ.IS","ARENA.IS","ARFYE.IS","ARMGD.IS","ARSAN.IS","ARTMS.IS","ARZUM.IS","ASELS.IS","ASGYO.IS","ASTOR.IS","ASUZU.IS","ATAKP.IS","ATATP.IS","ATATR.IS","AVGYO.IS","AVHOL.IS","AVOD.IS","AVPGY.IS","AYCES.IS","AYDEM.IS","AYEN.IS","AYGAZ.IS","AZTEK.IS","BAGFS.IS","BAHKM.IS","BAKAB.IS","BALAT.IS","BALSU.IS","BANVT.IS","BARMA.IS","BASCM.IS","BASGZ.IS","BAYRK.IS","BEGYO.IS","BERA.IS","BESLR.IS","BEYAZ.IS","BFREN.IS","BIENY.IS","BIGCH.IS","BIGEN.IS","BIMAS.IS","BINBN.IS","BINHO.IS","BIOEN.IS","BIZIM.IS","BLCYT.IS","BLUME.IS","BMSCH.IS","BMSTL.IS","BNTAS.IS","BOBET.IS","BORLS.IS","BORSK.IS","BOSSA.IS","BRISA.IS","BRKSN.IS","BRKVY.IS","BRLSM.IS","BRSAN.IS","BRYAT.IS","BSOKE.IS","BTCIM.IS","BUCIM.IS","BULGS.IS","BURCE.IS","BURVA.IS","BVSAN.IS","BYDNR.IS","CANTE.IS","CATES.IS","CCOLA.IS","CELHA.IS","CEMAS.IS","CEMTS.IS","CEMZY.IS","CEOEM.IS","CGCAM.IS","CIMSA.IS","CLEBI.IS","CMBTN.IS","CONSE.IS","COSMO.IS","CRFSA.IS","CUSAN.IS","CVKMD.IS","CWENE.IS","DAGI.IS","DAPGM.IS","DARDL.IS","DCTTR.IS","DENGE.IS","DERHL.IS","DERIM.IS","DESA.IS","DESPC.IS","DEVA.IS","DGATE.IS","DGNMO.IS","DITAS.IS","DMRGD.IS","DMSAS.IS","DNISI.IS","DOAS.IS","DOCO.IS","DOFER.IS","DOFRB.IS","DOGUB.IS","DOHOL.IS","DOKTA.IS","DSTKF.IS","DURDO.IS","DURKN.IS","DYOBY.IS","DZGYO.IS","EBEBK.IS","ECILC.IS","ECZYT.IS","EDATA.IS","EDIP.IS","EGEEN.IS","EGEGY.IS","EGEPO.IS","EGGUB.IS","EGPRO.IS","EGSER.IS","EKGYO.IS","EKOS.IS","EKSUN.IS","ELITE.IS","EMKEL.IS","ENDAE.IS","ENERY.IS","ENJSA.IS","ENKAI.IS","ENSRI.IS","ENTRA.IS","EPLAS.IS","ERBOS.IS","ERCB.IS","EREGL.IS","ERSU.IS","ESCAR.IS","ESCOM.IS","ESEN.IS","ETILR.IS","EUPWR.IS","EUREN.IS","EYGYO.IS","FADE.IS","FLAP.IS","FMIZP.IS","FONET.IS","FORMT.IS","FORTE.IS","FRIGO.IS","FROTO.IS","FZLGY.IS","GEDIK.IS","GEDZA.IS","GENIL.IS","GENTS.IS","GEREL.IS","GESAN.IS","GIPTA.IS","GLCVY.IS","GLRMK.IS","GLRYH.IS","GLYHO.IS","GMTAS.IS","GOKNR.IS","GOLTS.IS","GOODY.IS","GOZDE.IS","GRSEL.IS","GRTHO.IS","GSDDE.IS","GSDHO.IS","GSRAY.IS","GUBRF.IS","GUNDG.IS","GWIND.IS","GZNMI.IS","HATEK.IS","HATSN.IS","HDFGS.IS","HEDEF.IS","HEKTS.IS","HKTM.IS","HOROZ.IS","HRKET.IS","HTTBT.IS","HUBVC.IS","HUNER.IS","HURGZ.IS","ICUGS.IS","IEYHO.IS","IHAAS.IS","IHEVA.IS","IHGZT.IS","IHLAS.IS","IHLGM.IS","IHYAY.IS","IMASM.IS","INDES.IS","INFO.IS","INGRM.IS","INTEM.IS","INVEO.IS","INVES.IS","ISDMR.IS","ISKPL.IS","ISSEN.IS","IZENR.IS","IZFAS.IS","IZINV.IS","IZMDC.IS","JANTS.IS","KAPLM.IS","KAREL.IS","KARSN.IS","KARTN.IS","KATMR.IS","KAYSE.IS","KBORU.IS","KCAER.IS","KCHOL.IS","KFEIN.IS","KGYO.IS","KIMMR.IS","KLGYO.IS","KLKIM.IS","KLMSN.IS","KLRHO.IS","KLSER.IS","KLSYN.IS","KLYPV.IS","KMPUR.IS","KNFRT.IS","KOCMT.IS","KONKA.IS","KONTR.IS","KONYA.IS","KOPOL.IS","KORDS.IS","KOTON.IS","KRDMD.IS","KRGYO.IS","KRONT.IS","KRPLS.IS","KRSTL.IS","KRTEK.IS","KRVGD.IS","KTLEV.IS","KTSKR.IS","KUTPO.IS","KUYAS.IS","KZBGY.IS","KZGYO.IS","LIDER.IS","LILAK.IS","LINK.IS","LKMNH.IS","LMKDC.IS","LOGO.IS","LRSHO.IS","LUKSK.IS","LYDHO.IS","MAALT.IS","MACKO.IS","MAGEN.IS","MAKIM.IS","MAKTK.IS","MANAS.IS","MARBL.IS","MARMR.IS","MARTI.IS","MAVI.IS","MEDTR.IS","MEGMT.IS","MEKAG.IS","MERCN.IS","MERIT.IS","MERKO.IS","METRO.IS","MEYSU.IS","MGROS.IS","MHRGY.IS","MIATK.IS","MNDRS.IS","MNDTR.IS","MOBTL.IS","MOGAN.IS","MOPAS.IS","MPARK.IS","MRGYO.IS","MRSHL.IS","MSGYO.IS","MTRKS.IS","MTRYO.IS","NATEN.IS","NETAS.IS","NIBAS.IS","NTGAZ.IS","NTHOL.IS","NUGYO.IS","NUHCM.IS","OBAMS.IS","OBASE.IS","ODAS.IS","ODINE.IS","OFSYM.IS","ONCSM.IS","ONRYT.IS","ORCAY.IS","ORGE.IS","OSMEN.IS","OSTIM.IS","OTKAR.IS","OYAKC.IS","OYLUM.IS","OYYAT.IS","OZATD.IS","OZGYO.IS","OZKGY.IS","OZRDN.IS","OZSUB.IS","OZYSR.IS","PAGYO.IS","PAHOL.IS","PAMEL.IS","PAPIL.IS","PARSN.IS","PASEU.IS","PATEK.IS","PCILT.IS","PEKGY.IS","PENGD.IS","PENTA.IS","PETKM.IS","PETUN.IS","PGSUS.IS","PINSU.IS","PKART.IS","PKENT.IS","PLTUR.IS","PNLSN.IS","PNSUT.IS","POLHO.IS","POLTK.IS","PRDGS.IS","PRKAB.IS","PRKME.IS","PRZMA.IS","PSDTC.IS","PSGYO.IS","QUAGR.IS","RALYH.IS","RAYSG.IS","REEDR.IS","RGYAS.IS","RTALB.IS","RUBNS.IS","RUZYE.IS","RYGYO.IS","RYSAS.IS","SAFKR.IS","SAHOL.IS","SAMAT.IS","SANEL.IS","SANFM.IS","SANKO.IS","SARKY.IS","SASA.IS","SAYAS.IS","SDTTR.IS","SEGMN.IS","SEKUR.IS","SELEC.IS","SELVA.IS","SERNT.IS","SEYKM.IS","SILVR.IS","SISE.IS","SKTAS.IS","SKYLP.IS","SMART.IS","SMRTG.IS","SMRVA.IS","SNGYO.IS","SNICA.IS","SOKE.IS","SOKM.IS","SRVGY.IS","SUNTK.IS","SURGY.IS","SUWEN.IS","TABGD.IS","TARKM.IS","TATEN.IS","TATGD.IS","TAVHL.IS","TCELL.IS","TCKRC.IS","TEHOL.IS","TEKTU.IS","TERA.IS","TEZOL.IS","THYAO.IS","TKFEN.IS","TKNSA.IS","TLMAN.IS","TMPOL.IS","TMSN.IS","TNZTP.IS","TOASO.IS","TRCAS.IS","TRGYO.IS","TRHOL.IS","TRILC.IS","TSGYO.IS","TSPOR.IS","TTKOM.IS","TTRAK.IS","TUCLK.IS","TUKAS.IS","TUPRS.IS","TUREX.IS","TURGG.IS","TURSG.IS","ULAS.IS","ULKER.IS","ULUSE.IS","ULUUN.IS","UNLU.IS","USAK.IS","VAKKO.IS","VBTYZ.IS","VERTU.IS","VERUS.IS","VESBE.IS","VESTL.IS","VRGYO.IS","VSNMD.IS","YAPRK.IS","YATAS.IS","YBTAS.IS","YEOTK.IS","YESIL.IS","YGGYO.IS","YIGIT.IS","YKSLN.IS","YUNSA.IS","YYAPI.IS","YYLGD.IS","ZEDUR.IS","ZERGY.IS","ZGYO.IS"]
-
-def grafik_ciz(ad, v):
-    try:
-        v20 = v.tail(20).copy()
-        v20["RSI"] = ta.momentum.RSIIndicator(v["Close"], window=14).rsi().tail(20).values
-        v20["RSI_EMA"] = v20["RSI"].ewm(span=9).mean()
-        macd = ta.trend.MACD(v["Close"])
-        v20["MACD"] = macd.macd().tail(20).values
-        v20["MACD_S"] = macd.macd_signal().tail(20).values
-        v20["MACD_H"] = macd.macd_diff().tail(20).values
-        fig = plt.figure(figsize=(12, 9), facecolor="#0d1117")
-        gs = gridspec.GridSpec(4, 1, height_ratios=[3, 1, 1, 1], hspace=0.05)
-        ax1 = fig.add_subplot(gs[0])
-        ax2 = fig.add_subplot(gs[1], sharex=ax1)
-        ax3 = fig.add_subplot(gs[2], sharex=ax1)
-        ax4 = fig.add_subplot(gs[3], sharex=ax1)
-        for ax in [ax1, ax2, ax3, ax4]:
-            ax.set_facecolor("#0d1117")
-            ax.tick_params(colors="#aaaaaa", labelsize=7)
-            ax.yaxis.label.set_color("#aaaaaa")
-            for spine in ax.spines.values():
-                spine.set_edgecolor("#333333")
-        for i, (_, row) in enumerate(v20.iterrows()):
-            renk = "#26a69a" if row["Close"] >= row["Open"] else "#ef5350"
-            ax1.plot([i, i], [row["Low"], row["High"]], color=renk, linewidth=0.8)
-            ax1.bar(i, row["Close"] - row["Open"], bottom=row["Open"], color=renk, width=0.6)
-        ax1.set_title(f"{ad} - Altin Sinyal", color="white", fontsize=10, pad=8)
-        ax1.set_ylabel("Fiyat", color="#aaaaaa", fontsize=7)
-        renkler = ["#26a69a" if v20["Close"].iloc[i] >= v20["Open"].iloc[i] else "#ef5350" for i in range(len(v20))]
-        ax2.bar(range(len(v20)), v20["Volume"], color=renkler, alpha=0.6, width=0.6)
-        ax2.set_ylabel("Hacim", color="#aaaaaa", fontsize=7)
-        ax3.plot(range(len(v20)), v20["MACD"], color="#2196f3", linewidth=1)
-        ax3.plot(range(len(v20)), v20["MACD_S"], color="#ff9800", linewidth=1)
-        hist_renkler = ["#26a69a" if x >= 0 else "#ef5350" for x in v20["MACD_H"]]
-        ax3.bar(range(len(v20)), v20["MACD_H"], color=hist_renkler, alpha=0.5, width=0.6)
-        ax3.axhline(0, color="#444444", linewidth=0.5)
-        ax3.set_ylabel("MACD", color="#aaaaaa", fontsize=7)
-        ax4.plot(range(len(v20)), v20["RSI"], color="#ce93d8", linewidth=1)
-        ax4.plot(range(len(v20)), v20["RSI_EMA"], color="#ffeb3b", linewidth=1, linestyle="--")
-        ax4.axhline(70, color="#ef5350", linewidth=0.5, linestyle="--")
-        ax4.axhline(30, color="#26a69a", linewidth=0.5, linestyle="--")
-        ax4.set_ylim(0, 100)
-        ax4.set_ylabel("RSI", color="#aaaaaa", fontsize=7)
-        tarihler = [v20.index[i].strftime("%d/%m") for i in range(len(v20))]
-        ax4.set_xticks(range(len(v20)))
-        ax4.set_xticklabels(tarihler, rotation=45, fontsize=6)
-        plt.setp(ax1.get_xticklabels(), visible=False)
-        plt.setp(ax2.get_xticklabels(), visible=False)
-        plt.setp(ax3.get_xticklabels(), visible=False)
-        os.makedirs("C:/bist_terminal/grafikler", exist_ok=True)
-        plt.savefig(f"C:/bist_terminal/grafikler/{ad}.png", dpi=150, bbox_inches="tight", facecolor="#0d1117")
-        plt.close()
-        print(f"  {ad} grafigi kaydedildi")
-    except Exception as e:
-        print(f"  {ad} grafik hatasi: {e}")
 
 def tarama_yap():
     print(f"\nTarama basladi — {datetime.now().strftime('%d.%m.%Y %H:%M')}")
@@ -240,18 +187,13 @@ def tarama_yap():
                         "golden_cross": bool(ema20_onceki < ema50_onceki and ema20 > ema50),
                         "death_cross": bool(ema20_onceki > ema50_onceki and ema20 < ema50),
                     }
-                    if altin == "Altin":
-                        grafik_ciz(ad, v)
 
             except Exception as e:
                 print(f"HATA: {hisse} — {e}")
         time.sleep(3)
 
-    with open("C:/bist_terminal/sonuclar.json", "w", encoding="utf-8") as f:
+    with open("sonuclar.json", "w", encoding="utf-8") as f:
         json.dump({"tarih": datetime.now().strftime("%Y-%m-%d %H:%M"), "hisseler": sonuclar}, f, ensure_ascii=False, indent=2)
-
-    os.system("copy C:\\bist_terminal\\sonuclar.json C:\\bist_terminal\\bist-terminal\\sonuclar.json /Y")
-    os.system('cd C:\\bist_terminal\\bist-terminal && git add . && git commit -m "otomatik guncelleme" && git push')
 
     altin_liste = [k for k, v in sonuclar.items() if v["altin"] == "Altin"]
     gumus_liste = [k for k, v in sonuclar.items() if v["altin"] == "Gumus"]
@@ -259,13 +201,6 @@ def tarama_yap():
 
     print(f"\nTARAMA TAMAMLANDI — {datetime.now().strftime('%d.%m.%Y %H:%M')}")
     print(f"Altin: {len(altin_liste)} | Gumus: {len(gumus_liste)} | Bronz: {len(bronz_liste)}")
-    print("Sonuclar kaydedildi!")
+    print("sonuclar.json kaydedildi!")
 
-schedule.every().day.at("18:26").do(tarama_yap)
-print("Zamanlayici aktif — her gun 18:26'da tarama baslar")
-print("Test icin tarama basliyor...\n")
 tarama_yap()
-
-while True:
-    schedule.run_pending()
-    time.sleep(30)
