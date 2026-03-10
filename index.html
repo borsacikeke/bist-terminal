@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BIST Teknik Analiz Terminali</title>
+    <title>BİST Teknik Analiz Terminali</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background: #0a0a0f; color: #e0e0e0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
         .header { padding: 20px 16px 8px; }
-        .header h1 { font-size: 12px; color: #ffffff; text-transform: uppercase; letter-spacing: 2px; }
+        .header h1 { font-size: 12px; color: #ffffff; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; }
         .header h2 { font-size: 22px; color: #fff; font-weight: 700; margin-top: 4px; }
         .uyari-banner { background: #1a1200; border: 1px solid #3a2800; border-radius: 10px; margin: 8px 12px; padding: 10px 14px; font-size: 13px; color: #ffffff; font-weight: 700; line-height: 1.5; }
         .kategori-baslik { font-size: 11px; color: #ffffff; text-transform: uppercase; letter-spacing: 1.5px; padding: 18px 16px 6px; font-weight: 700; }
@@ -38,27 +38,10 @@
         .kart-aciklama { font-size: 12px; color: #555; margin-top: 3px; line-height: 1.4; }
         .kart-ok { color: #2a2a3a; font-size: 18px; }
         .ayrac { height: 1px; background: #111118; margin: 6px 16px; }
-
         .sonuc-ekran { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #0a0a0f; overflow-y: auto; z-index: 100; }
         .sonuc-header { padding: 14px 16px; display: flex; align-items: center; gap: 12px; background: #0a0a0f; position: sticky; top: 0; z-index: 10; border-bottom: 1px solid #1a1a24; }
-        .geri-btn {
-            background: #1a1a2e;
-            border: 1px solid #2a2a4a;
-            color: #aaa;
-            height: 36px;
-            padding: 0 14px;
-            border-radius: 10px;
-            font-size: 14px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            flex-shrink: 0;
-            font-weight: 500;
-            transition: background 0.15s;
-        }
+        .geri-btn { background: #1a1a2e; border: 1px solid #2a2a4a; color: #aaa; height: 36px; padding: 0 14px; border-radius: 10px; font-size: 14px; cursor: pointer; display: flex; align-items: center; gap: 6px; flex-shrink: 0; font-weight: 500; transition: background 0.15s; }
         .geri-btn:active { background: #22223a; }
-        .geri-ok { font-size: 16px; }
         .sonuc-baslik { font-size: 16px; font-weight: 600; color: #fff; }
         .sonuc-tarih { font-size: 11px; color: #444; margin-top: 1px; }
         .hisse-listesi { padding: 8px 12px 20px; }
@@ -254,7 +237,7 @@
 <div class="sonuc-ekran" id="sonuc">
     <div class="sonuc-header">
         <button class="geri-btn" onclick="geriDon()">
-            <span class="geri-ok">←</span> Geri
+            <span>←</span> Geri
         </button>
         <div>
             <div class="sonuc-baslik" id="sonuc-baslik">Sonuçlar</div>
