@@ -39,7 +39,19 @@
         .kart-ok { color: #2a2a3a; font-size: 18px; }
         .ayrac { height: 1px; background: #111118; margin: 6px 16px; }
         .sonuc-ekran { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #0a0a0f; overflow-y: auto; z-index: 100; }
-        .sonuc-header { padding: 14px 16px; padding-top: max(14px, env(safe-area-inset-top, 0px) + 14px); display: flex; align-items: center; gap: 12px; background: #0a0a0f; position: sticky; top: 0; z-index: 10; border-bottom: 1px solid #1a1a24; flex-wrap: nowrap; }
+        .sonuc-header { 
+            padding: 14px 16px; 
+            padding-top: 54px;
+            display: flex; 
+            align-items: center; 
+            gap: 12px; 
+            background: #0a0a0f; 
+            position: sticky; 
+            top: 0; 
+            z-index: 10; 
+            border-bottom: 1px solid #1a1a24; 
+            flex-wrap: nowrap; 
+        }
         .geri-btn { background: #1a1a2e; border: 1px solid #2a2a4a; color: #aaa; height: 36px; padding: 0 14px; border-radius: 10px; font-size: 14px; cursor: pointer; display: flex; align-items: center; gap: 6px; flex-shrink: 0; font-weight: 500; transition: background 0.15s; white-space: nowrap; }
         .geri-btn:active { background: #22223a; }
         .sonuc-baslik-wrap { flex: 1; min-width: 0; }
@@ -55,7 +67,8 @@
         .badge-boga     { background: #0a2e1a; color: #26a69a; }
         .badge-strateji { background: #1a1a0a; color: #f0c000; }
         .badge-notr     { background: #1a1a2e; color: #5566aa; }
-        .fav-btn { background: none; border: none; font-size: 22px; cursor: pointer; padding: 2px 4px; }
+        .fav-btn { background: none; border: none; font-size: 22px; cursor: pointer; padding: 2px 4px; color: #f0c000; opacity: 0.35; transition: opacity 0.15s; }
+        .fav-btn.aktif { opacity: 1; }
         .bos-mesaj { text-align: center; padding: 60px 20px; color: #333; font-size: 14px; }
         .sayac { font-size: 11px; color: #444; padding: 6px 16px 2px; }
         .alt-uyari { font-size: 10px; color: #333; text-align: center; padding: 16px; line-height: 1.6; margin-bottom: 8px; }
@@ -236,7 +249,7 @@
 </div>
 
 <div class="sonuc-ekran" id="sonuc">
-    <div class="sonuc-header">
+    <div class="sonuc-header" id="sonuc-header">
         <button class="geri-btn" onclick="geriDon()">
             <span>←</span> Geri
         </button>
@@ -253,6 +266,15 @@
 <script>
     const tg = window.Telegram.WebApp;
     tg.expand();
+
+    // Telegram header yüksekliğine göre padding ayarla
+    function headerPaddingAyarla() {
+        const header = document.getElementById('sonuc-header');
+        const yukseklik = tg.isExpanded ? 54 : 14;
+        header.style.paddingTop = yukseklik + 'px';
+    }
+    headerPaddingAyarla();
+    tg.onEvent('viewportChanged', headerPaddingAyarla);
 
     const isim = tg.initDataUnsafe?.user?.first_name || "Yatırımcı";
     document.getElementById('karsilama_baslik').textContent = 'Merhaba, ' + isim + '!';
@@ -322,7 +344,7 @@
 
             if (goster_mi) {
                 sayac++;
-                const favIcon = favoriler.includes(ad) ? '⭐' : '☆';
+                const favAktif = favoriler.includes(ad);
                 const gosterilecek = h.sinyaller.filter(s => getBadgeClass(s) !== 'badge-notr').slice(0, 6);
                 const badges = gosterilecek.map(s => `<span class="badge ${getBadgeClass(s)}">${s}</span>`).join('');
                 html += `
@@ -332,7 +354,7 @@
                             <div class="hisse-ad">${ad}</div>
                             <div class="hisse-fiyat">${h.kapanis} TL &nbsp;·&nbsp; RSI: ${h.rsi}</div>
                         </div>
-                        <button class="fav-btn" onclick="favToggle('${ad}')" id="fav_${ad}">${favIcon}</button>
+                        <button class="fav-btn ${favAktif ? 'aktif' : ''}" onclick="favToggle('${ad}')" id="fav_${ad}">⭐</button>
                     </div>
                     <div class="badge-listesi">${badges}</div>
                 </div>`;
@@ -346,7 +368,10 @@
     function favToggle(ad) {
         favoriler = favoriler.includes(ad) ? favoriler.filter(f => f !== ad) : [...favoriler, ad];
         localStorage.setItem('favoriler', JSON.stringify(favoriler));
-        document.getElementById('fav_' + ad).textContent = favoriler.includes(ad) ? '⭐' : '☆';
+        const btn = document.getElementById('fav_' + ad);
+        if (btn) {
+            btn.classList.toggle('aktif', favoriler.includes(ad));
+        }
     }
 
     function geriDon() {
