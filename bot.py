@@ -4,7 +4,7 @@ import requests
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, WebAppInfo
 from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandler, ContextTypes
 
-TOKEN = os.environ.get("TOKEN", "8739320823:AAFHMgR7xSRO3J3ZPzmCOhT1MeQFXc6zPmM")
+TOKEN = os.environ.get("TOKEN", "")
 WEBAPP_URL = "https://borsacikeke.github.io/bist-terminal"
 BOT_USERNAME = "BistTerminalBot"
 KANAL = "@ekonomiveborsa"
