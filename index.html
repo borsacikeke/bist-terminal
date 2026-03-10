@@ -39,21 +39,7 @@
         .kart-ok { color: #2a2a3a; font-size: 18px; }
         .ayrac { height: 1px; background: #111118; margin: 6px 16px; }
         .sonuc-ekran { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #0a0a0f; overflow-y: auto; z-index: 100; }
-        .sonuc-header { 
-            padding: 14px 16px; 
-            padding-top: 54px;
-            display: flex; 
-            align-items: center; 
-            gap: 12px; 
-            background: #0a0a0f; 
-            position: sticky; 
-            top: 0; 
-            z-index: 10; 
-            border-bottom: 1px solid #1a1a24; 
-            flex-wrap: nowrap; 
-        }
-        .geri-btn { background: #1a1a2e; border: 1px solid #2a2a4a; color: #aaa; height: 36px; padding: 0 14px; border-radius: 10px; font-size: 14px; cursor: pointer; display: flex; align-items: center; gap: 6px; flex-shrink: 0; font-weight: 500; transition: background 0.15s; white-space: nowrap; }
-        .geri-btn:active { background: #22223a; }
+        .sonuc-header { padding: 16px 16px 12px; display: flex; align-items: center; gap: 12px; background: #0a0a0f; position: sticky; top: 0; z-index: 10; border-bottom: 1px solid #1a1a24; }
         .sonuc-baslik-wrap { flex: 1; min-width: 0; }
         .sonuc-baslik { font-size: 16px; font-weight: 600; color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .sonuc-tarih { font-size: 11px; color: #444; margin-top: 1px; }
@@ -67,7 +53,7 @@
         .badge-boga     { background: #0a2e1a; color: #26a69a; }
         .badge-strateji { background: #1a1a0a; color: #f0c000; }
         .badge-notr     { background: #1a1a2e; color: #5566aa; }
-        .fav-btn { background: none; border: none; font-size: 22px; cursor: pointer; padding: 2px 4px; color: #f0c000; opacity: 0.35; transition: opacity 0.15s; }
+        .fav-btn { background: none; border: none; font-size: 22px; cursor: pointer; padding: 2px 4px; opacity: 0.25; transition: opacity 0.2s; }
         .fav-btn.aktif { opacity: 1; }
         .bos-mesaj { text-align: center; padding: 60px 20px; color: #333; font-size: 14px; }
         .sayac { font-size: 11px; color: #444; padding: 6px 16px 2px; }
@@ -81,166 +67,109 @@
         <h1>BİST Teknik Analiz</h1>
         <h2 id="karsilama_baslik">Terminali</h2>
     </div>
-
     <div class="uyari-banner">
         ⚠️ Bu platform yatırım tavsiyesi vermez. Tüm göstergeler algoritmik olup hata içerebilir. İşlemlerinizde kendi analizinizi yapınız.
     </div>
-
     <div class="kategori-baslik">Sinyal Gücü</div>
     <div class="kart-listesi">
         <div class="kart" onclick="goster('altin')">
             <div class="kart-ikon ikon-altin">🏆</div>
-            <div class="kart-icerik">
-                <div class="kart-baslik">Altın Tarama</div>
-                <div class="kart-aciklama">Çoklu göstergenin aynı anda uyum sağladığı hisseler</div>
-            </div>
+            <div class="kart-icerik"><div class="kart-baslik">Altın Tarama</div><div class="kart-aciklama">Çoklu göstergenin aynı anda uyum sağladığı hisseler</div></div>
             <div class="kart-ok">›</div>
         </div>
         <div class="kart" onclick="goster('gumus')">
             <div class="kart-ikon ikon-gumus">🥈</div>
-            <div class="kart-icerik">
-                <div class="kart-baslik">Gümüş Tarama</div>
-                <div class="kart-aciklama">Güçlü teknik sinyal veren hisseler</div>
-            </div>
+            <div class="kart-icerik"><div class="kart-baslik">Gümüş Tarama</div><div class="kart-aciklama">Güçlü teknik sinyal veren hisseler</div></div>
             <div class="kart-ok">›</div>
         </div>
         <div class="kart" onclick="goster('bronz')">
             <div class="kart-ikon ikon-bronz">🥉</div>
-            <div class="kart-icerik">
-                <div class="kart-baslik">Bronz Tarama</div>
-                <div class="kart-aciklama">Sinyal başlangıcındaki hisseler</div>
-            </div>
+            <div class="kart-icerik"><div class="kart-baslik">Bronz Tarama</div><div class="kart-aciklama">Sinyal başlangıcındaki hisseler</div></div>
             <div class="kart-ok">›</div>
         </div>
     </div>
-
     <div class="ayrac"></div>
     <div class="kategori-baslik">Stratejiler</div>
     <div class="kart-listesi">
         <div class="kart" onclick="goster('dip_vurusu')">
             <div class="kart-ikon ikon-dip">🎣</div>
-            <div class="kart-icerik">
-                <div class="kart-baslik">Dip Vuruşu</div>
-                <div class="kart-aciklama">Olası dönüş noktasına yaklaşan hisseler</div>
-            </div>
+            <div class="kart-icerik"><div class="kart-baslik">Dip Vuruşu</div><div class="kart-aciklama">Olası dönüş noktasına yaklaşan hisseler</div></div>
             <div class="kart-ok">›</div>
         </div>
         <div class="kart" onclick="goster('bant_sikismasi')">
             <div class="kart-ikon ikon-bant">💥</div>
-            <div class="kart-icerik">
-                <div class="kart-baslik">Bant Sıkışması</div>
-                <div class="kart-aciklama">Yakında sert hareket beklenen hisseler</div>
-            </div>
+            <div class="kart-icerik"><div class="kart-baslik">Bant Sıkışması</div><div class="kart-aciklama">Yakında sert hareket beklenen hisseler</div></div>
             <div class="kart-ok">›</div>
         </div>
         <div class="kart" onclick="goster('guc_patlamasi')">
             <div class="kart-ikon ikon-guc">🚀</div>
-            <div class="kart-icerik">
-                <div class="kart-baslik">Güç Patlaması</div>
-                <div class="kart-aciklama">Güçlü momentum sinyali veren hisseler</div>
-            </div>
+            <div class="kart-icerik"><div class="kart-baslik">Güç Patlaması</div><div class="kart-aciklama">Güçlü momentum sinyali veren hisseler</div></div>
             <div class="kart-ok">›</div>
         </div>
         <div class="kart" onclick="goster('destek_testi')">
             <div class="kart-ikon ikon-destek">🛡️</div>
-            <div class="kart-icerik">
-                <div class="kart-baslik">Destek Testi</div>
-                <div class="kart-aciklama">Kritik destek bölgesini test eden hisseler</div>
-            </div>
+            <div class="kart-icerik"><div class="kart-baslik">Destek Testi</div><div class="kart-aciklama">Kritik destek bölgesini test eden hisseler</div></div>
             <div class="kart-ok">›</div>
         </div>
         <div class="kart" onclick="goster('hacim_bombasi')">
             <div class="kart-ikon ikon-hacim">💰</div>
-            <div class="kart-icerik">
-                <div class="kart-baslik">Hacim Bombası</div>
-                <div class="kart-aciklama">Dikkat çekici hacim hareketi olan hisseler</div>
-            </div>
+            <div class="kart-icerik"><div class="kart-baslik">Hacim Bombası</div><div class="kart-aciklama">Dikkat çekici hacim hareketi olan hisseler</div></div>
             <div class="kart-ok">›</div>
         </div>
         <div class="kart" onclick="goster('trend_uyumu')">
             <div class="kart-ikon ikon-trend">🏄</div>
-            <div class="kart-icerik">
-                <div class="kart-baslik">Trend Uyumu</div>
-                <div class="kart-aciklama">Trend ile uyumlu hareket eden hisseler</div>
-            </div>
+            <div class="kart-icerik"><div class="kart-baslik">Trend Uyumu</div><div class="kart-aciklama">Trend ile uyumlu hareket eden hisseler</div></div>
             <div class="kart-ok">›</div>
         </div>
     </div>
-
     <div class="ayrac"></div>
     <div class="kategori-baslik">Teknik Göstergeler</div>
     <div class="kart-listesi">
         <div class="kart" onclick="goster('golden_cross')">
             <div class="kart-ikon ikon-golden">✨</div>
-            <div class="kart-icerik">
-                <div class="kart-baslik">Golden Cross</div>
-                <div class="kart-aciklama">Kısa vade uzun vadeyi yukarı kesti</div>
-            </div>
+            <div class="kart-icerik"><div class="kart-baslik">Golden Cross</div><div class="kart-aciklama">Kısa vade uzun vadeyi yukarı kesti</div></div>
             <div class="kart-ok">›</div>
         </div>
         <div class="kart" onclick="goster('death_cross')">
             <div class="kart-ikon ikon-death">💀</div>
-            <div class="kart-icerik">
-                <div class="kart-baslik">Death Cross</div>
-                <div class="kart-aciklama">Kısa vade uzun vadeyi aşağı kesti</div>
-            </div>
+            <div class="kart-icerik"><div class="kart-baslik">Death Cross</div><div class="kart-aciklama">Kısa vade uzun vadeyi aşağı kesti</div></div>
             <div class="kart-ok">›</div>
         </div>
         <div class="kart" onclick="goster('macd_al')">
             <div class="kart-ikon ikon-macd">📉</div>
-            <div class="kart-icerik">
-                <div class="kart-baslik">MACD Al Kesişimi</div>
-                <div class="kart-aciklama">Momentum göstergesi al sinyali verdi</div>
-            </div>
+            <div class="kart-icerik"><div class="kart-baslik">MACD Al Kesişimi</div><div class="kart-aciklama">Momentum göstergesi al sinyali verdi</div></div>
             <div class="kart-ok">›</div>
         </div>
         <div class="kart" onclick="goster('rsi_satim')">
             <div class="kart-ikon ikon-rsi">📊</div>
-            <div class="kart-icerik">
-                <div class="kart-baslik">RSI Aşırı Satım</div>
-                <div class="kart-aciklama">Güç göstergesi aşırı satım bölgesinde</div>
-            </div>
+            <div class="kart-icerik"><div class="kart-baslik">RSI Aşırı Satım</div><div class="kart-aciklama">Güç göstergesi aşırı satım bölgesinde</div></div>
             <div class="kart-ok">›</div>
         </div>
         <div class="kart" onclick="goster('bb_alt')">
             <div class="kart-ikon ikon-bb">🎯</div>
-            <div class="kart-icerik">
-                <div class="kart-baslik">Volatilite Alt Bandı</div>
-                <div class="kart-aciklama">Fiyat volatilite alt bandına ulaştı</div>
-            </div>
+            <div class="kart-icerik"><div class="kart-baslik">Volatilite Alt Bandı</div><div class="kart-aciklama">Fiyat volatilite alt bandına ulaştı</div></div>
             <div class="kart-ok">›</div>
         </div>
         <div class="kart" onclick="goster('hacim_alarmi')">
             <div class="kart-ikon ikon-hacim">🔥</div>
-            <div class="kart-icerik">
-                <div class="kart-baslik">Hacim Alarmı</div>
-                <div class="kart-aciklama">Dikkat çekici hacim hareketi tespit edildi</div>
-            </div>
+            <div class="kart-icerik"><div class="kart-baslik">Hacim Alarmı</div><div class="kart-aciklama">Dikkat çekici hacim hareketi tespit edildi</div></div>
             <div class="kart-ok">›</div>
         </div>
         <div class="kart" onclick="goster('mum_boga')">
             <div class="kart-ikon ikon-mum">🕯️</div>
-            <div class="kart-icerik">
-                <div class="kart-baslik">Boğa Formasyonları</div>
-                <div class="kart-aciklama">Yükseliş mum formasyonu tespit edildi</div>
-            </div>
+            <div class="kart-icerik"><div class="kart-baslik">Boğa Formasyonları</div><div class="kart-aciklama">Yükseliş mum formasyonu tespit edildi</div></div>
             <div class="kart-ok">›</div>
         </div>
     </div>
-
     <div class="ayrac"></div>
     <div class="kategori-baslik">Favoriler</div>
     <div class="kart-listesi">
         <div class="kart" onclick="goster('favoriler')">
             <div class="kart-ikon ikon-fav">⭐</div>
-            <div class="kart-icerik">
-                <div class="kart-baslik">Favorilerim</div>
-                <div class="kart-aciklama">Yıldızladığın hisseler</div>
-            </div>
+            <div class="kart-icerik"><div class="kart-baslik">Favorilerim</div><div class="kart-aciklama">Yıldızladığın hisseler</div></div>
             <div class="kart-ok">›</div>
         </div>
     </div>
-
     <div class="alt-uyari">
         Bu platform yalnızca teknik analiz sinyalleri sunar.<br>
         Yatırım tavsiyesi değildir. Sermaye piyasası işlemleri risk içerir.<br>
@@ -249,10 +178,7 @@
 </div>
 
 <div class="sonuc-ekran" id="sonuc">
-    <div class="sonuc-header" id="sonuc-header">
-        <button class="geri-btn" onclick="geriDon()">
-            <span>←</span> Geri
-        </button>
+    <div class="sonuc-header">
         <div class="sonuc-baslik-wrap">
             <div class="sonuc-baslik" id="sonuc-baslik">Sonuçlar</div>
             <div class="sonuc-tarih" id="sonuc-tarih"></div>
@@ -267,15 +193,6 @@
     const tg = window.Telegram.WebApp;
     tg.expand();
 
-    // Telegram header yüksekliğine göre padding ayarla
-    function headerPaddingAyarla() {
-        const header = document.getElementById('sonuc-header');
-        const yukseklik = tg.isExpanded ? 54 : 14;
-        header.style.paddingTop = yukseklik + 'px';
-    }
-    headerPaddingAyarla();
-    tg.onEvent('viewportChanged', headerPaddingAyarla);
-
     const isim = tg.initDataUnsafe?.user?.first_name || "Yatırımcı";
     document.getElementById('karsilama_baslik').textContent = 'Merhaba, ' + isim + '!';
 
@@ -285,6 +202,11 @@
     fetch('sonuclar.json?t=' + Date.now())
         .then(r => r.json())
         .then(d => { veri = d; });
+
+    // Telegram BackButton ile geri navigasyon
+    tg.BackButton.onClick(function() {
+        geriDon();
+    });
 
     const BOGA_LIST = ["Yutan Boga","Cekic","Ters Cekic","Sabah Yildizi","Boga Harami","3 Beyaz Asker","Delikli Bulut"];
     const STRATEJI_LIST = ["Dip Vurusu","Bant Sikismasi","Guc Patlamasi","Destek Testi","Hacim Bombasi","Trend Uyumu"];
@@ -311,6 +233,9 @@
         const sonucEkran = document.getElementById('sonuc');
         sonucEkran.style.display = 'block';
         sonucEkran.scrollTop = 0;
+
+        // Telegram BackButton göster, Kapat butonu kaybolur
+        tg.BackButton.show();
 
         document.getElementById('sonuc-baslik').textContent = BASLIKLAR[tip] || tip;
         document.getElementById('sonuc-tarih').textContent = veri ? veri.tarih : '';
@@ -369,14 +294,14 @@
         favoriler = favoriler.includes(ad) ? favoriler.filter(f => f !== ad) : [...favoriler, ad];
         localStorage.setItem('favoriler', JSON.stringify(favoriler));
         const btn = document.getElementById('fav_' + ad);
-        if (btn) {
-            btn.classList.toggle('aktif', favoriler.includes(ad));
-        }
+        if (btn) btn.classList.toggle('aktif', favoriler.includes(ad));
     }
 
     function geriDon() {
         document.getElementById('ana').style.display = 'block';
         document.getElementById('sonuc').style.display = 'none';
+        // Telegram BackButton gizle, Kapat butonu geri gelir
+        tg.BackButton.hide();
     }
 </script>
 </body>
