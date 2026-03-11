@@ -20,6 +20,7 @@
         .kart:active { background: #1a1a24; }
         .kart.pasif { opacity: 0.35; cursor: not-allowed; }
         .kart-ikon { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+        .ikon-ozel   { background: linear-gradient(135deg, #1a0a2e, #4a0080); }
         .ikon-altin  { background: linear-gradient(135deg, #3d2e00, #7a5c00); }
         .ikon-gumus  { background: linear-gradient(135deg, #1a1a2e, #2d2d4a); }
         .ikon-bronz  { background: linear-gradient(135deg, #2e1a0a, #5a3a1a); }
@@ -41,11 +42,18 @@
         .kart-baslik { font-size: 15px; font-weight: 600; color: #fff; }
         .kart-aciklama { font-size: 12px; color: #555; margin-top: 3px; line-height: 1.4; }
         .kart-durum { font-size: 10px; margin-top: 3px; }
-        .kart-durum.aktif-yazi { color: #26a69a; }
+        .kart-durum.aktif-yazi { color: #a855f7; }
         .kart-durum.pasif-yazi { color: #555; }
         .kart-ok { color: #2a2a3a; font-size: 18px; }
         .ayrac { height: 1px; background: #1a1a24; margin: 6px 16px; }
         .bolum-ayrac { height: 6px; background: #050508; margin: 8px 0; }
+        .ozel-banner { background: linear-gradient(135deg, #0d0020, #1a0035); border: 1px solid #6a00b0; border-radius: 14px; margin: 8px 12px; padding: 16px; }
+        .ozel-banner-baslik { font-size: 14px; font-weight: 800; color: #c084fc; letter-spacing: 1px; text-transform: uppercase; }
+        .ozel-banner-alt { font-size: 11px; color: #7c3aed; margin-top: 4px; }
+        .ozel-kilitli-banner { background: #0d0020; border: 1px solid #3a0060; border-radius: 14px; margin: 8px 12px; padding: 14px 16px; display: flex; align-items: center; gap: 12px; }
+        .ozel-kilitli-ikon { font-size: 28px; }
+        .ozel-kilitli-yazi { font-size: 12px; color: #7c3aed; line-height: 1.5; }
+        .ozel-kilitli-yazi strong { color: #c084fc; }
         .sonuc-ekran { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #0a0a0f; overflow-y: auto; z-index: 100; }
         .sonuc-header { padding: 16px 16px 12px; display: flex; align-items: center; gap: 12px; background: #0a0a0f; position: sticky; top: 0; z-index: 10; border-bottom: 1px solid #1a1a24; }
         .sonuc-baslik-wrap { flex: 1; min-width: 0; }
@@ -53,6 +61,7 @@
         .sonuc-tarih { font-size: 11px; color: #444; margin-top: 1px; }
         .hisse-listesi { padding: 8px 12px 20px; }
         .hisse-kart { background: #111118; border-radius: 12px; padding: 14px; margin-bottom: 6px; }
+        .hisse-kart.ozel-kart { background: #0d0020; border: 1px solid #3a0060; }
         .hisse-ust { display: flex; align-items: center; justify-content: space-between; }
         .hisse-ad { font-size: 16px; font-weight: 700; color: #fff; }
         .hisse-fiyat { font-size: 12px; color: #555; margin-top: 3px; }
@@ -61,14 +70,13 @@
         .badge-boga     { background: #0a2e1a; color: #26a69a; }
         .badge-strateji { background: #1a1a0a; color: #f0c000; }
         .badge-notr     { background: #1a1a2e; color: #5566aa; }
+        .badge-ozel     { background: #1a0030; color: #c084fc; }
         .fav-btn { background: none; border: none; font-size: 22px; cursor: pointer; padding: 2px 4px; opacity: 0.25; transition: opacity 0.2s; }
         .fav-btn.aktif { opacity: 1; }
         .bos-mesaj { text-align: center; padding: 60px 20px; color: #333; font-size: 14px; }
         .sayac { font-size: 11px; color: #444; padding: 6px 16px 2px; }
         .alt-uyari { font-size: 10px; color: #333; text-align: center; padding: 16px; line-height: 1.6; margin-bottom: 8px; }
-        .durum-satir { display: flex; align-items: center; justify-content: space-between; padding: 6px 16px; font-size: 11px; color: #444; }
-        .durum-aktif { color: #26a69a; font-weight: 600; }
-        .durum-pasif { color: #555; }
+        .ozel-sayac { font-size: 11px; color: #7c3aed; padding: 6px 16px 2px; }
     </style>
 </head>
 <body>
@@ -80,6 +88,40 @@
     </div>
     <div class="uyari-banner">
         ⚠️ Bu platform yatırım tavsiyesi vermez. Tüm göstergeler algoritmik olup hata içerebilir.
+    </div>
+
+    <!-- ÖZEL BÖLÜM -->
+    <div id="ozel-bolum-acik" style="display:none;">
+        <div class="bolum-baslik" style="color:#c084fc;border-color:#3a0060;">
+            <span>🏅</span> TAVAN TARAMA ÖZEL BÖLÜM
+        </div>
+        <div class="kart-listesi">
+            <div class="kart" style="background:#0d0020;border:1px solid #3a0060;" onclick="goster('ozel_tarama', this)">
+                <div class="kart-ikon ikon-ozel">🏅</div>
+                <div class="kart-icerik">
+                    <div class="kart-baslik" style="color:#c084fc;">Özel Tarama</div>
+                    <div class="kart-aciklama" style="color:#5b21b6;">Algoritmik özel sinyal listesi</div>
+                    <div class="kart-durum aktif-yazi" id="d-ozel"></div>
+                </div>
+                <div class="kart-ok" style="color:#3a0060;">›</div>
+            </div>
+        </div>
+        <div class="bolum-ayrac"></div>
+    </div>
+
+    <div id="ozel-bolum-kilitli" style="display:none;">
+        <div class="bolum-baslik" style="color:#3a0060;border-color:#1a0030;">
+            <span>🔒</span> TAVAN TARAMA ÖZEL BÖLÜM
+        </div>
+        <div class="ozel-kilitli-banner">
+            <div class="ozel-kilitli-ikon">🔒</div>
+            <div class="ozel-kilitli-yazi">
+                <strong>Bu bölüm kilitli</strong><br>
+                Özel taramaya erişmek için<br>
+                <strong>10 farklı kişiyi</strong> davet et
+            </div>
+        </div>
+        <div class="bolum-ayrac"></div>
     </div>
 
     <div class="bolum-baslik"><span>📅</span> GÜNLÜK ANALİZ</div>
@@ -207,29 +249,17 @@
     <div class="kart-listesi">
         <div class="kart" id="k-4h-altin" onclick="kartTikla('4h_altin', this)">
             <div class="kart-ikon ikon-4h">🏆</div>
-            <div class="kart-icerik">
-                <div class="kart-baslik">4S Altın Tarama</div>
-                <div class="kart-aciklama">4 saatlik mumda altın sinyal</div>
-                <div class="kart-durum" id="d-4h-altin"></div>
-            </div>
+            <div class="kart-icerik"><div class="kart-baslik">4S Altın Tarama</div><div class="kart-aciklama">4 saatlik mumda altın sinyal</div><div class="kart-durum" id="d-4h-altin"></div></div>
             <div class="kart-ok">›</div>
         </div>
         <div class="kart" id="k-4h-gumus" onclick="kartTikla('4h_gumus', this)">
             <div class="kart-ikon ikon-4h">🥈</div>
-            <div class="kart-icerik">
-                <div class="kart-baslik">4S Gümüş Tarama</div>
-                <div class="kart-aciklama">4 saatlik mumda gümüş sinyal</div>
-                <div class="kart-durum" id="d-4h-gumus"></div>
-            </div>
+            <div class="kart-icerik"><div class="kart-baslik">4S Gümüş Tarama</div><div class="kart-aciklama">4 saatlik mumda gümüş sinyal</div><div class="kart-durum" id="d-4h-gumus"></div></div>
             <div class="kart-ok">›</div>
         </div>
         <div class="kart" id="k-4h-bronz" onclick="kartTikla('4h_bronz', this)">
             <div class="kart-ikon ikon-4h">🥉</div>
-            <div class="kart-icerik">
-                <div class="kart-baslik">4S Bronz Tarama</div>
-                <div class="kart-aciklama">4 saatlik mumda bronz sinyal</div>
-                <div class="kart-durum" id="d-4h-bronz"></div>
-            </div>
+            <div class="kart-icerik"><div class="kart-baslik">4S Bronz Tarama</div><div class="kart-aciklama">4 saatlik mumda bronz sinyal</div><div class="kart-durum" id="d-4h-bronz"></div></div>
             <div class="kart-ok">›</div>
         </div>
     </div>
@@ -239,65 +269,37 @@
     <div class="kart-listesi">
         <div class="kart" id="k-4h-macd" onclick="kartTikla('4h_macd', this)">
             <div class="kart-ikon ikon-macd">📉</div>
-            <div class="kart-icerik">
-                <div class="kart-baslik">4S MACD Al Kesişimi</div>
-                <div class="kart-aciklama">4 saatlik mumda MACD al sinyali</div>
-                <div class="kart-durum" id="d-4h-macd"></div>
-            </div>
+            <div class="kart-icerik"><div class="kart-baslik">4S MACD Al Kesişimi</div><div class="kart-aciklama">4 saatlik mumda MACD al sinyali</div><div class="kart-durum" id="d-4h-macd"></div></div>
             <div class="kart-ok">›</div>
         </div>
         <div class="kart" id="k-4h-rsi" onclick="kartTikla('4h_rsi', this)">
             <div class="kart-ikon ikon-rsi">📊</div>
-            <div class="kart-icerik">
-                <div class="kart-baslik">4S RSI Aşırı Satım</div>
-                <div class="kart-aciklama">4 saatlik mumda RSI aşırı satım</div>
-                <div class="kart-durum" id="d-4h-rsi"></div>
-            </div>
+            <div class="kart-icerik"><div class="kart-baslik">4S RSI Aşırı Satım</div><div class="kart-aciklama">4 saatlik mumda RSI aşırı satım</div><div class="kart-durum" id="d-4h-rsi"></div></div>
             <div class="kart-ok">›</div>
         </div>
         <div class="kart" id="k-4h-bb" onclick="kartTikla('4h_bb', this)">
             <div class="kart-ikon ikon-bb">🎯</div>
-            <div class="kart-icerik">
-                <div class="kart-baslik">4S Volatilite Alt Bandı</div>
-                <div class="kart-aciklama">4 saatlik mumda BB alt banda değdi</div>
-                <div class="kart-durum" id="d-4h-bb"></div>
-            </div>
+            <div class="kart-icerik"><div class="kart-baslik">4S Volatilite Alt Bandı</div><div class="kart-aciklama">4 saatlik mumda BB alt banda değdi</div><div class="kart-durum" id="d-4h-bb"></div></div>
             <div class="kart-ok">›</div>
         </div>
         <div class="kart" id="k-4h-hacim" onclick="kartTikla('4h_hacim', this)">
             <div class="kart-ikon ikon-hacim">🔥</div>
-            <div class="kart-icerik">
-                <div class="kart-baslik">4S Hacim Alarmı</div>
-                <div class="kart-aciklama">4 saatlik mumda dikkat çekici hacim</div>
-                <div class="kart-durum" id="d-4h-hacim"></div>
-            </div>
+            <div class="kart-icerik"><div class="kart-baslik">4S Hacim Alarmı</div><div class="kart-aciklama">4 saatlik mumda dikkat çekici hacim</div><div class="kart-durum" id="d-4h-hacim"></div></div>
             <div class="kart-ok">›</div>
         </div>
         <div class="kart" id="k-4h-mum" onclick="kartTikla('4h_mum', this)">
             <div class="kart-ikon ikon-mum">🕯️</div>
-            <div class="kart-icerik">
-                <div class="kart-baslik">4S Boğa Formasyonları</div>
-                <div class="kart-aciklama">4 saatlik mumda boğa formasyonu</div>
-                <div class="kart-durum" id="d-4h-mum"></div>
-            </div>
+            <div class="kart-icerik"><div class="kart-baslik">4S Boğa Formasyonları</div><div class="kart-aciklama">4 saatlik mumda boğa formasyonu</div><div class="kart-durum" id="d-4h-mum"></div></div>
             <div class="kart-ok">›</div>
         </div>
         <div class="kart" id="k-4h-dip" onclick="kartTikla('4h_dip', this)">
             <div class="kart-ikon ikon-dip">🎣</div>
-            <div class="kart-icerik">
-                <div class="kart-baslik">4S Dip Vuruşu</div>
-                <div class="kart-aciklama">4 saatlik mumda dip vuruşu</div>
-                <div class="kart-durum" id="d-4h-dip"></div>
-            </div>
+            <div class="kart-icerik"><div class="kart-baslik">4S Dip Vuruşu</div><div class="kart-aciklama">4 saatlik mumda dip vuruşu</div><div class="kart-durum" id="d-4h-dip"></div></div>
             <div class="kart-ok">›</div>
         </div>
         <div class="kart" id="k-4h-guc" onclick="kartTikla('4h_guc', this)">
             <div class="kart-ikon ikon-guc">🚀</div>
-            <div class="kart-icerik">
-                <div class="kart-baslik">4S Güç Patlaması</div>
-                <div class="kart-aciklama">4 saatlik mumda güç patlaması</div>
-                <div class="kart-durum" id="d-4h-guc"></div>
-            </div>
+            <div class="kart-icerik"><div class="kart-baslik">4S Güç Patlaması</div><div class="kart-aciklama">4 saatlik mumda güç patlaması</div><div class="kart-durum" id="d-4h-guc"></div></div>
             <div class="kart-ok">›</div>
         </div>
     </div>
@@ -326,84 +328,71 @@
     const isim = tg.initDataUnsafe?.user?.first_name || "Yatırımcı";
     document.getElementById('karsilama_baslik').textContent = 'Merhaba, ' + isim + '!';
 
+    // URL'den erişim parametrelerini oku
+    const urlParams = new URLSearchParams(window.location.search);
+    const ozelAcik  = urlParams.get('ozel')  === '1';
+    const altinAcik = urlParams.get('altin') === '1';
+
+    // Özel bölümü göster/gizle
+    document.getElementById('ozel-bolum-acik').style.display   = ozelAcik  ? 'block' : 'none';
+    document.getElementById('ozel-bolum-kilitli').style.display = !ozelAcik ? 'block' : 'none';
+
     let veri = null;
     let veri4h = null;
     let favoriler = JSON.parse(localStorage.getItem('favoriler') || '[]');
-    let aktifTip = null; // o an hangi liste açık
+    let aktifTip = null;
 
-    // ── Veri çekme — her seferinde Date.now() ile cache bypass ──────────────
     function veriCek() {
         fetch('sonuclar.json?t=' + Date.now())
             .then(r => r.json())
             .then(d => {
-                const yeniTarih = d.tarih;
-                const eskiTarih = veri ? veri.tarih : null;
                 veri = d;
                 gunlukDurumGuncelle();
-                // Liste açıksa ve günlük tip ise yenile
                 if (aktifTip && !aktifTip.startsWith('4h_') && aktifTip !== 'favoriler') {
-                    if (yeniTarih !== eskiTarih) goster(aktifTip);
+                    goster(aktifTip);
                 }
-            })
-            .catch(() => {});
+            }).catch(() => {});
 
         fetch('sonuclar4h.json?t=' + Date.now())
             .then(r => r.json())
             .then(d => {
-                const yeniTarih = d.tarih;
-                const eskiTarih = veri4h ? veri4h.tarih : null;
                 veri4h = d;
                 dortSaatDurumGuncelle();
-                // Liste açıksa ve 4h tip ise yenile
-                if (aktifTip && aktifTip.startsWith('4h_')) {
-                    if (yeniTarih !== eskiTarih) goster(aktifTip);
-                }
-            })
-            .catch(() => { veri4h = null; dortSaatDurumGuncelle(); });
+                if (aktifTip && aktifTip.startsWith('4h_')) goster(aktifTip);
+            }).catch(() => { veri4h = null; dortSaatDurumGuncelle(); });
     }
 
-    // Sayfa açılışında hemen çek, sonra her 5 dakikada bir otomatik yenile
     veriCek();
     setInterval(veriCek, 5 * 60 * 1000);
-
     tg.BackButton.onClick(function() { geriDon(); });
 
-    const DORT_SAAT_KARTLAR = [
-        'k-4h-altin','k-4h-gumus','k-4h-bronz',
-        'k-4h-macd','k-4h-rsi','k-4h-bb','k-4h-hacim','k-4h-mum','k-4h-dip','k-4h-guc'
-    ];
-    const DORT_SAAT_DURUMLAR = [
-        'd-4h-altin','d-4h-gumus','d-4h-bronz',
-        'd-4h-macd','d-4h-rsi','d-4h-bb','d-4h-hacim','d-4h-mum','d-4h-dip','d-4h-guc'
-    ];
+    const DORT_SAAT_KARTLAR  = ['k-4h-altin','k-4h-gumus','k-4h-bronz','k-4h-macd','k-4h-rsi','k-4h-bb','k-4h-hacim','k-4h-mum','k-4h-dip','k-4h-guc'];
+    const DORT_SAAT_DURUMLAR = ['d-4h-altin','d-4h-gumus','d-4h-bronz','d-4h-macd','d-4h-rsi','d-4h-bb','d-4h-hacim','d-4h-mum','d-4h-dip','d-4h-guc'];
 
     function dortSaatlikAktifMi() {
-        const simdi = new Date();
-        const tr = new Date(simdi.toLocaleString("en-US", {timeZone: "Europe/Istanbul"}));
-        const toplam = tr.getHours() * 60 + tr.getMinutes();
-        if (toplam >= 8*60+50 && toplam < 9*60+20) return false;
-        if (toplam >= 12*60+50 && toplam < 13*60+20) return false;
-        if (toplam >= 16*60+50 && toplam < 17*60+20) return false;
+        const tr = new Date(new Date().toLocaleString("en-US", {timeZone: "Europe/Istanbul"}));
+        const t  = tr.getHours() * 60 + tr.getMinutes();
+        if (t >= 8*60+50 && t < 9*60+20)   return false;
+        if (t >= 12*60+50 && t < 13*60+20) return false;
+        if (t >= 16*60+50 && t < 17*60+20) return false;
         return true;
     }
 
     function dortSaatDurumGuncelle() {
         const aktif = dortSaatlikAktifMi();
         const durum = document.getElementById('4h-durum-yazi');
-
         DORT_SAAT_KARTLAR.forEach((id, i) => {
             const kart = document.getElementById(id);
-            const durumEl = document.getElementById(DORT_SAAT_DURUMLAR[i]);
+            const el   = document.getElementById(DORT_SAAT_DURUMLAR[i]);
             if (!kart) return;
             if (aktif && veri4h) {
                 kart.classList.remove('pasif');
-                if (durumEl) { durumEl.textContent = '✅ ' + (veri4h.tarih || ''); durumEl.className = 'kart-durum aktif-yazi'; }
+                if (el) { el.textContent = '✅ ' + (veri4h.tarih || ''); el.className = 'kart-durum aktif-yazi'; }
             } else {
                 kart.classList.add('pasif');
-                if (durumEl) { durumEl.textContent = '⏳ Güncelleniyor...'; durumEl.className = 'kart-durum pasif-yazi'; }
+                if (el) { el.textContent = '⏳ Güncelleniyor...'; el.className = 'kart-durum pasif-yazi'; }
             }
         });
-
         if (durum) {
             durum.textContent = aktif && veri4h ? '✅ ' + (veri4h.tarih || '') : '⏳ Güncelleniyor...';
             durum.style.color = aktif && veri4h ? '#26a69a' : '#555';
@@ -416,15 +405,20 @@
             const d = document.getElementById('d-' + id);
             if (d) { d.textContent = '✅ ' + (veri.tarih || ''); d.className = 'kart-durum aktif-yazi'; }
         });
+        if (ozelAcik) {
+            const ozelSayi = Object.values(veri.hisseler || {}).filter(h => h.ozel_tarama).length;
+            const d = document.getElementById('d-ozel');
+            if (d) { d.textContent = '✅ ' + ozelSayi + ' hisse · ' + (veri.tarih || ''); }
+        }
     }
 
-    // Durum satırı UI güncellemesi dakikada bir
     setInterval(dortSaatDurumGuncelle, 60 * 1000);
 
-    const BOGA_LIST = ["Yutan Boga","Cekic","Ters Cekic","Sabah Yildizi","Boga Harami","3 Beyaz Asker"];
+    const BOGA_LIST     = ["Yutan Boga","Cekic","Ters Cekic","Sabah Yildizi","Boga Harami","3 Beyaz Asker"];
     const STRATEJI_LIST = ["Dip Vurusu","Bant Sikismasi","Guc Patlamasi","Destek Testi","Hacim Bombasi","Trend Uyumu"];
 
     const BASLIKLAR = {
+        ozel_tarama: "🏅 Özel Tarama",
         altin: "🏆 Altın Tarama", gumus: "🥈 Gümüş Tarama", bronz: "🥉 Bronz Tarama",
         dip_vurusu: "🎣 Dip Vuruşu", bant_sikismasi: "💥 Bant Sıkışması",
         guc_patlamasi: "🚀 Güç Patlaması", destek_testi: "🛡️ Destek Testi",
@@ -442,7 +436,7 @@
 
     function getBadgeClass(s) {
         if (STRATEJI_LIST.includes(s)) return "badge-strateji";
-        if (BOGA_LIST.includes(s) || ["MACD Al Kesisimi","Golden Cross","RSI Asiri Satim","BB Alt Bant","MACD Pozitif","Fiyat EMA20 Ustunde","EMA20 > EMA50","Fiyat SMA200 Ustunde","Hacim Alarmi"].includes(s)) return "badge-boga";
+        if (BOGA_LIST.includes(s) || ["MACD Al Kesisimi","Golden Cross","RSI Asiri Satim","BB Alt Bant","Hacim Alarmi"].includes(s)) return "badge-boga";
         return "badge-notr";
     }
 
@@ -463,10 +457,13 @@
         tg.BackButton.show();
 
         const is4h = tip.startsWith('4h_');
+        const isOzel = tip === 'ozel_tarama';
         const kaynakVeri = is4h ? veri4h : veri;
 
         document.getElementById('sonuc-baslik').textContent = BASLIKLAR[tip] || tip;
-        document.getElementById('sonuc-tarih').textContent = kaynakVeri ? (is4h ? '⏱️ 4 Saatlik — ' : '📅 Günlük — ') + kaynakVeri.tarih : '';
+        document.getElementById('sonuc-tarih').textContent = kaynakVeri
+            ? (is4h ? '⏱️ 4 Saatlik — ' : '📅 Günlük — ') + kaynakVeri.tarih
+            : '';
 
         const liste = document.getElementById('liste');
         if (!kaynakVeri) { liste.innerHTML = '<div class="bos-mesaj">Veri bulunamadı.</div>'; return; }
@@ -476,41 +473,51 @@
 
         for (const [ad, h] of Object.entries(hisseler)) {
             let goster_mi = false;
-            if (tip === 'altin'          && h.altin === 'Altin') goster_mi = true;
-            if (tip === 'gumus'          && h.altin === 'Gumus') goster_mi = true;
-            if (tip === 'bronz'          && h.altin === 'Bronz') goster_mi = true;
-            if (tip === '4h_altin'       && h.altin === 'Altin') goster_mi = true;
-            if (tip === '4h_gumus'       && h.altin === 'Gumus') goster_mi = true;
-            if (tip === '4h_bronz'       && h.altin === 'Bronz') goster_mi = true;
-            if (tip === '4h_macd'        && h.sinyaller.includes('MACD Al Kesisimi')) goster_mi = true;
-            if (tip === '4h_rsi'         && h.sinyaller.includes('RSI Asiri Satim')) goster_mi = true;
-            if (tip === '4h_bb'          && h.sinyaller.includes('BB Alt Bant')) goster_mi = true;
-            if (tip === '4h_hacim'       && h.sinyaller.includes('Hacim Alarmi')) goster_mi = true;
-            if (tip === '4h_mum'         && h.sinyaller.some(s => BOGA_LIST.includes(s))) goster_mi = true;
-            if (tip === '4h_dip'         && h.dip_vurusu) goster_mi = true;
-            if (tip === '4h_guc'         && h.guc_patlamasi) goster_mi = true;
-            if (tip === 'dip_vurusu'     && h.dip_vurusu) goster_mi = true;
-            if (tip === 'bant_sikismasi' && h.bant_sikismasi) goster_mi = true;
-            if (tip === 'guc_patlamasi'  && h.guc_patlamasi) goster_mi = true;
-            if (tip === 'destek_testi'   && h.destek_testi) goster_mi = true;
-            if (tip === 'hacim_bombasi'  && h.hacim_bombasi) goster_mi = true;
-            if (tip === 'trend_uyumu'    && h.trend_uyumu) goster_mi = true;
-            if (tip === 'golden_cross'   && h.sinyaller.includes('Golden Cross')) goster_mi = true;
-            if (tip === 'death_cross'    && h.sinyaller.includes('Death Cross')) goster_mi = true;
-            if (tip === 'macd_al'        && h.sinyaller.includes('MACD Al Kesisimi')) goster_mi = true;
-            if (tip === 'rsi_satim'      && h.sinyaller.includes('RSI Asiri Satim')) goster_mi = true;
-            if (tip === 'bb_alt'         && h.sinyaller.includes('BB Alt Bant')) goster_mi = true;
-            if (tip === 'hacim_alarmi'   && h.sinyaller.includes('Hacim Alarmi')) goster_mi = true;
-            if (tip === 'mum_boga'       && h.sinyaller.some(s => BOGA_LIST.includes(s))) goster_mi = true;
-            if (tip === 'favoriler'      && favoriler.includes(ad)) goster_mi = true;
+            if (tip === 'ozel_tarama'     && h.ozel_tarama) goster_mi = true;
+            if (tip === 'altin'           && h.altin === 'Altin') goster_mi = true;
+            if (tip === 'gumus'           && h.altin === 'Gumus') goster_mi = true;
+            if (tip === 'bronz'           && h.altin === 'Bronz') goster_mi = true;
+            if (tip === '4h_altin'        && h.altin === 'Altin') goster_mi = true;
+            if (tip === '4h_gumus'        && h.altin === 'Gumus') goster_mi = true;
+            if (tip === '4h_bronz'        && h.altin === 'Bronz') goster_mi = true;
+            if (tip === '4h_macd'         && h.sinyaller.includes('MACD Al Kesisimi')) goster_mi = true;
+            if (tip === '4h_rsi'          && h.sinyaller.includes('RSI Asiri Satim')) goster_mi = true;
+            if (tip === '4h_bb'           && h.sinyaller.includes('BB Alt Bant')) goster_mi = true;
+            if (tip === '4h_hacim'        && h.sinyaller.includes('Hacim Alarmi')) goster_mi = true;
+            if (tip === '4h_mum'          && h.sinyaller.some(s => BOGA_LIST.includes(s))) goster_mi = true;
+            if (tip === '4h_dip'          && h.dip_vurusu) goster_mi = true;
+            if (tip === '4h_guc'          && h.guc_patlamasi) goster_mi = true;
+            if (tip === 'dip_vurusu'      && h.dip_vurusu) goster_mi = true;
+            if (tip === 'bant_sikismasi'  && h.bant_sikismasi) goster_mi = true;
+            if (tip === 'guc_patlamasi'   && h.guc_patlamasi) goster_mi = true;
+            if (tip === 'destek_testi'    && h.destek_testi) goster_mi = true;
+            if (tip === 'hacim_bombasi'   && h.hacim_bombasi) goster_mi = true;
+            if (tip === 'trend_uyumu'     && h.trend_uyumu) goster_mi = true;
+            if (tip === 'golden_cross'    && h.sinyaller.includes('Golden Cross')) goster_mi = true;
+            if (tip === 'death_cross'     && h.sinyaller.includes('Death Cross')) goster_mi = true;
+            if (tip === 'macd_al'         && h.sinyaller.includes('MACD Al Kesisimi')) goster_mi = true;
+            if (tip === 'rsi_satim'       && h.sinyaller.includes('RSI Asiri Satim')) goster_mi = true;
+            if (tip === 'bb_alt'          && h.sinyaller.includes('BB Alt Bant')) goster_mi = true;
+            if (tip === 'hacim_alarmi'    && h.sinyaller.includes('Hacim Alarmi')) goster_mi = true;
+            if (tip === 'mum_boga'        && h.sinyaller.some(s => BOGA_LIST.includes(s))) goster_mi = true;
+            if (tip === 'favoriler'       && favoriler.includes(ad)) goster_mi = true;
 
             if (goster_mi) {
                 sayac++;
                 const favAktif = favoriler.includes(ad);
-                const gosterilecek = h.sinyaller.filter(s => getBadgeClass(s) !== 'badge-notr').slice(0, 6);
-                const badges = gosterilecek.map(s => `<span class="badge ${getBadgeClass(s)}">${s}</span>`).join('');
+                const kartClass = isOzel ? 'hisse-kart ozel-kart' : 'hisse-kart';
+
+                let badgeHTML = '';
+                if (isOzel) {
+                    // Özel taramada strateji detayı gösterilmez
+                    badgeHTML = '<span class="badge badge-ozel">🏅 Özel Sinyal</span>';
+                } else {
+                    const gosterilecek = h.sinyaller.filter(s => getBadgeClass(s) !== 'badge-notr').slice(0, 6);
+                    badgeHTML = gosterilecek.map(s => `<span class="badge ${getBadgeClass(s)}">${s}</span>`).join('');
+                }
+
                 html += `
-                <div class="hisse-kart">
+                <div class="${kartClass}">
                     <div class="hisse-ust">
                         <div>
                             <div class="hisse-ad">${ad}</div>
@@ -518,7 +525,7 @@
                         </div>
                         <button class="fav-btn ${favAktif ? 'aktif' : ''}" onclick="favToggle('${ad}')" id="fav_${ad}">⭐</button>
                     </div>
-                    <div class="badge-listesi">${badges}</div>
+                    <div class="badge-listesi">${badgeHTML}</div>
                 </div>`;
             }
         }
