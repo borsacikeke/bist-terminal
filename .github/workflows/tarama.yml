@@ -21,7 +21,7 @@ jobs:
           python-version: '3.11'
 
       - name: Kütüphaneleri yükle
-        run: pip install yfinance ta matplotlib requests pandas numpy
+        run: pip install yfinance ta matplotlib requests pandas numpy pytz
 
       - name: Taramayı çalıştır
         run: python tarama.py
