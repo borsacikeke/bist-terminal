@@ -10,14 +10,15 @@ simdi = datetime.now(TR_TZ)
 saat = simdi.hour
 dakika = simdi.minute
 
-if saat == 18 and dakika >= 25:
+# 18:00 ve sonrası = günlük tarama, öncesi = 4h tarama
+if saat >= 18:
     PERIYOT = "1d"
 else:
     PERIYOT = "4h"
 
-# Borsa saatleri dışındaysa 4h taramayı atla (09:00 - 18:30 arası değilse)
+# Borsa saatleri dışındaysa 4h taramayı atla
 if PERIYOT == "4h":
-    if not (9 <= saat < 19):
+    if not (9 <= saat < 18):
         print(f"Borsa saatleri dışında ({simdi.strftime('%H:%M')}), 4h tarama atlanıyor.")
         exit(0)
 
@@ -79,20 +80,12 @@ HISSELER = [h + ".IS" for h in [
 
 
 def bist_4h_olustur(df_1h):
-    """
-    1h verisini BIST saatlerine göre 4h mumlarına dönüştürür.
-    BIST seans başlangıcı 09:00 TR = 06:00 UTC
-    Mumlar: 09:00-13:00 / 13:00-17:00 / 17:00-21:00 TR saati
-    Sadece tamamen kapanmış mumlar alınır.
-    """
     if df_1h.empty:
         return pd.DataFrame()
-
     if df_1h.index.tz is None:
         df_1h.index = df_1h.index.tz_localize('UTC')
     else:
         df_1h.index = df_1h.index.tz_convert('UTC')
-
     # offset='6h' → 06:00 UTC = 09:00 TR başlangıcı
     df_4h = df_1h.resample('4h', offset='6h').agg(
         Open=('Open', 'first'),
@@ -101,12 +94,9 @@ def bist_4h_olustur(df_1h):
         Close=('Close', 'last'),
         Volume=('Volume', 'sum')
     ).dropna(subset=['Open', 'Close'])
-
-    # Sadece tamamen kapanmış mumları al
     simdi_utc = pd.Timestamp.now(tz='UTC')
     df_4h = df_4h[df_4h.index + pd.Timedelta(hours=4) <= simdi_utc]
     df_4h = df_4h[df_4h['Volume'] > 0]
-
     return df_4h.reset_index(drop=True)
 
 
@@ -115,34 +105,28 @@ def hesapla_gosterge(df):
     high   = df['High']
     low    = df['Low']
     volume = df['Volume']
-
     ema20  = close.ewm(span=20).mean()
     ema50  = close.ewm(span=50).mean()
     sma200 = close.rolling(200).mean()
-
-    delta = close.diff()
-    gain  = delta.clip(lower=0).rolling(14).mean()
-    loss  = (-delta.clip(upper=0)).rolling(14).mean()
-    rs    = gain / loss
-    rsi   = 100 - (100 / (1 + rs))
-
+    delta  = close.diff()
+    gain   = delta.clip(lower=0).rolling(14).mean()
+    loss   = (-delta.clip(upper=0)).rolling(14).mean()
+    rs     = gain / loss
+    rsi    = 100 - (100 / (1 + rs))
     ema12  = close.ewm(span=12).mean()
     ema26  = close.ewm(span=26).mean()
     macd   = ema12 - ema26
     signal = macd.ewm(span=9).mean()
-
     sma20    = close.rolling(20).mean()
     std20    = close.rolling(20).std()
     bb_lower = sma20 - 2 * std20
     bb_upper = sma20 + 2 * std20
-
     tr = pd.concat([
         high - low,
         (high - close.shift()).abs(),
         (low  - close.shift()).abs()
     ], axis=1).max(axis=1)
     atr = tr.rolling(14).mean()
-
     return {
         'close': close, 'high': high, 'low': low, 'volume': volume,
         'ema20': ema20, 'ema50': ema50, 'sma200': sma200,
@@ -155,13 +139,11 @@ def sinyal_uret(df, g):
     sinyaller = []
     close = g['close']
     n = -1
-
     if len(close) < 3:
         return sinyaller
 
     avg_vol = g['volume'].rolling(20).mean().iloc[n]
 
-    # ── Teknik göstergeler ──────────────────────────────────────────────────
     if g['macd'].iloc[n] > g['signal'].iloc[n] and g['macd'].iloc[n-1] <= g['signal'].iloc[n-1]:
         sinyaller.append("MACD Al Kesisimi")
     if g['macd'].iloc[n] > g['signal'].iloc[n]:
@@ -183,12 +165,10 @@ def sinyal_uret(df, g):
     if pd.notna(avg_vol) and avg_vol > 0 and g['volume'].iloc[n] > avg_vol * 2:
         sinyaller.append("Hacim Alarmi")
 
-    # ── Mum verileri ────────────────────────────────────────────────────────
     o  = df['Open'].iloc[n];   h  = df['High'].iloc[n]
     l  = df['Low'].iloc[n];    c  = df['Close'].iloc[n]
     o1 = df['Open'].iloc[n-1]; h1 = df['High'].iloc[n-1]
     l1 = df['Low'].iloc[n-1];  c1 = df['Close'].iloc[n-1]
-
     body  = abs(c  - o)
     body1 = abs(c1 - o1)
     range_ = h - l
@@ -197,72 +177,37 @@ def sinyal_uret(df, g):
         lower_shadow = min(o, c) - l
         upper_shadow = h - max(o, c)
 
-        # ── Çekiç (Bullish Hammer) ──────────────────────────────────────────
-        # Alt gölge >= 2x gövde, üst gölge <= 0.5x gövde
         if lower_shadow >= body * 2 and upper_shadow <= body * 0.5:
             sinyaller.append("Cekic")
-
-        # ── Ters Çekiç (Bullish Inverted Hammer) ───────────────────────────
-        # Üst gölge >= 2x gövde, alt gölge <= 0.5x gövde
         if upper_shadow >= body * 2 and lower_shadow <= body * 0.5:
             sinyaller.append("Ters Cekic")
-
-        # ── Yutan Boğa (Bullish Engulfing) ─────────────────────────────────
-        # Önceki bearish, şimdiki bullish, şimdiki gövde öncekini tamamen yutuyor
-        if (c1 < o1 and          # önceki mum bearish
-            c  > o  and          # şimdiki mum bullish
-            o  < c1 and          # şimdiki açılış < önceki kapanış (aşağıda açılır)
-            c  > o1):            # şimdiki kapanış > önceki açılış (yukarıda kapanır)
+        if (c1 < o1 and c > o and o < c1 and c > o1):
             sinyaller.append("Yutan Boga")
-
-        # ── Boğa Haramisi (Bullish Harami) ─────────────────────────────────
-        # Önceki büyük bearish gövde, şimdiki küçük bullish gövde tamamen içinde
-        if (c1 < o1 and          # önceki mum bearish
-            c  > o  and          # şimdiki mum bullish
-            o  > c1 and          # şimdiki açılış > önceki kapanış (içeride)
-            c  < o1 and          # şimdiki kapanış < önceki açılış (içeride)
-            body < body1 * 0.5): # şimdiki gövde öncekinin yarısından küçük
+        if (c1 < o1 and c > o and o > c1 and c < o1 and body < body1 * 0.5):
             sinyaller.append("Boga Harami")
 
         if len(df) >= 3:
-            o2 = df['Open'].iloc[n-2]
-            c2 = df['Close'].iloc[n-2]
+            o2    = df['Open'].iloc[n-2]
+            c2    = df['Close'].iloc[n-2]
             body2 = abs(c2 - o2)
-
-            # ── Sabah Yıldızı (Bullish Morning Star) ───────────────────────
-            # 1. bearish büyük mum, 2. küçük gövdeli mum (yıldız), 3. bullish mum
-            # 3. mumun kapanışı 1. mumun orta noktasının üstünde olmalı
-            if (c2 < o2 and                      # 1. mum bearish
-                body1 < body2 * 0.3 and          # 2. mum küçük gövde (yıldız)
-                c  > o and                        # 3. mum bullish
-                c  > (o2 + c2) / 2):             # 3. mum 1. mumun orta noktasının üstünde
+            if (c2 < o2 and body1 < body2 * 0.3 and c > o and c > (o2 + c2) / 2):
                 sinyaller.append("Sabah Yildizi")
-
-            # ── Üç Beyaz Asker (Three White Soldiers) ──────────────────────
-            # 3 ardışık bullish mum, her biri öncekinden yüksek açılış ve kapanış
-            if (c2 > o2 and c1 > o1 and c > o and   # hepsi bullish
-                c1 > c2 and c > c1 and              # her kapanış öncekinden yüksek
-                o1 > o2 and o > o1):                # her açılış öncekinden yüksek
+            if (c2 > o2 and c1 > o1 and c > o and
+                c1 > c2 and c > c1 and o1 > o2 and o > o1):
                 sinyaller.append("3 Beyaz Asker")
 
-    # ── Strateji sinyalleri ─────────────────────────────────────────────────
     if g['rsi'].iloc[n] < 35 and close.iloc[n] <= g['bb_lower'].iloc[n]:
         sinyaller.append("Dip Vurusu")
-
     bb_width = (g['bb_upper'] - g['bb_lower']) / g['bb_lower'].rolling(20).mean()
     if pd.notna(bb_width.iloc[n]) and pd.notna(bb_width.rolling(20).mean().iloc[n]):
         if bb_width.iloc[n] < bb_width.rolling(20).mean().iloc[n] * 0.7:
             sinyaller.append("Bant Sikismasi")
-
     if g['rsi'].iloc[n] > 55 and g['macd'].iloc[n] > g['signal'].iloc[n] and close.iloc[n] > g['ema20'].iloc[n]:
         sinyaller.append("Guc Patlamasi")
-
     if close.iloc[n] > g['ema20'].iloc[n] * 0.98 and close.iloc[n] < g['ema20'].iloc[n] * 1.02:
         sinyaller.append("Destek Testi")
-
     if pd.notna(avg_vol) and avg_vol > 0 and g['volume'].iloc[n] > avg_vol * 2.5:
         sinyaller.append("Hacim Bombasi")
-
     if (close.iloc[n] > g['ema20'].iloc[n] and
         g['ema20'].iloc[n] > g['ema50'].iloc[n] and
         g['macd'].iloc[n] > g['signal'].iloc[n]):
@@ -286,13 +231,11 @@ def altin_seviye(sinyaller):
     return None
 
 
-# ── Ana tarama döngüsü ───────────────────────────────────────────────────────
 sonuclar = {}
 
 for ticker in HISSELER:
     try:
         if PERIYOT == "1d":
-            # end = yarın → bugünün kapanış verisini kesinlikle çeker
             bugun_str = (simdi + pd.Timedelta(days=1)).strftime('%Y-%m-%d')
             df = yf.download(
                 ticker,
@@ -305,8 +248,7 @@ for ticker in HISSELER:
             if df is None or len(df) < 30:
                 continue
             df.columns = [c[0] if isinstance(c, tuple) else c for c in df.columns]
-
-        else:  # 4h
+        else:
             df_1h = yf.download(
                 ticker,
                 period="60d",
@@ -321,31 +263,30 @@ for ticker in HISSELER:
             if df is None or len(df) < 20:
                 continue
 
-        g        = hesapla_gosterge(df)
+        g         = hesapla_gosterge(df)
         sinyaller = sinyal_uret(df, g)
-        seviye   = altin_seviye(sinyaller)
-        ad       = ticker.replace(".IS", "")
+        seviye    = altin_seviye(sinyaller)
+        ad        = ticker.replace(".IS", "")
 
         sonuclar[ad] = {
-            "kapanis":       round(float(g['close'].iloc[-1]), 2),
-            "rsi":           round(float(g['rsi'].iloc[-1]),   1),
-            "sinyaller":     sinyaller,
-            "altin":         seviye,
-            "dip_vurusu":    "Dip Vurusu"    in sinyaller,
-            "bant_sikismasi":"Bant Sikismasi" in sinyaller,
-            "guc_patlamasi": "Guc Patlamasi"  in sinyaller,
-            "destek_testi":  "Destek Testi"   in sinyaller,
-            "hacim_bombasi": "Hacim Bombasi"  in sinyaller,
-            "trend_uyumu":   "Trend Uyumu"    in sinyaller,
+            "kapanis":        round(float(g['close'].iloc[-1]), 2),
+            "rsi":            round(float(g['rsi'].iloc[-1]),   1),
+            "sinyaller":      sinyaller,
+            "altin":          seviye,
+            "dip_vurusu":     "Dip Vurusu"     in sinyaller,
+            "bant_sikismasi": "Bant Sikismasi"  in sinyaller,
+            "guc_patlamasi":  "Guc Patlamasi"   in sinyaller,
+            "destek_testi":   "Destek Testi"    in sinyaller,
+            "hacim_bombasi":  "Hacim Bombasi"   in sinyaller,
+            "trend_uyumu":    "Trend Uyumu"     in sinyaller,
         }
 
     except Exception as e:
         print(f"Hata {ticker}: {e}")
 
-# ── Sonuçları kaydet ─────────────────────────────────────────────────────────
 cikti = {
-    "tarih":   simdi.strftime("%d.%m.%Y %H:%M"),
-    "periyot": "gunluk" if PERIYOT == "1d" else "4h",
+    "tarih":    simdi.strftime("%d.%m.%Y %H:%M"),
+    "periyot":  "gunluk" if PERIYOT == "1d" else "4h",
     "hisseler": sonuclar
 }
 
