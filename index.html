@@ -82,7 +82,6 @@
         ⚠️ Bu platform yatırım tavsiyesi vermez. Tüm göstergeler algoritmik olup hata içerebilir.
     </div>
 
-    <!-- GÜNLÜK BÖLÜM -->
     <div class="bolum-baslik"><span>📅</span> GÜNLÜK ANALİZ</div>
 
     <div class="kategori-baslik">Sinyal Gücü</div>
@@ -201,7 +200,6 @@
         </div>
     </div>
 
-    <!-- 4 SAATLİK BÖLÜM -->
     <div class="bolum-ayrac"></div>
     <div class="bolum-baslik"><span>⏱️</span> 4 SAATLİK ANALİZ <span id="4h-durum-yazi" style="font-size:11px;font-weight:400;color:#555;text-transform:none;letter-spacing:0;margin-left:8px;"></span></div>
 
@@ -331,15 +329,42 @@
     let veri = null;
     let veri4h = null;
     let favoriler = JSON.parse(localStorage.getItem('favoriler') || '[]');
+    let aktifTip = null; // o an hangi liste açık
 
-    fetch('sonuclar.json?t=' + Date.now())
-        .then(r => r.json())
-        .then(d => { veri = d; gunlukDurumGuncelle(); });
+    // ── Veri çekme — her seferinde Date.now() ile cache bypass ──────────────
+    function veriCek() {
+        fetch('sonuclar.json?t=' + Date.now())
+            .then(r => r.json())
+            .then(d => {
+                const yeniTarih = d.tarih;
+                const eskiTarih = veri ? veri.tarih : null;
+                veri = d;
+                gunlukDurumGuncelle();
+                // Liste açıksa ve günlük tip ise yenile
+                if (aktifTip && !aktifTip.startsWith('4h_') && aktifTip !== 'favoriler') {
+                    if (yeniTarih !== eskiTarih) goster(aktifTip);
+                }
+            })
+            .catch(() => {});
 
-    fetch('sonuclar4h.json?t=' + Date.now())
-        .then(r => r.json())
-        .then(d => { veri4h = d; dortSaatDurumGuncelle(); })
-        .catch(() => { veri4h = null; dortSaatDurumGuncelle(); });
+        fetch('sonuclar4h.json?t=' + Date.now())
+            .then(r => r.json())
+            .then(d => {
+                const yeniTarih = d.tarih;
+                const eskiTarih = veri4h ? veri4h.tarih : null;
+                veri4h = d;
+                dortSaatDurumGuncelle();
+                // Liste açıksa ve 4h tip ise yenile
+                if (aktifTip && aktifTip.startsWith('4h_')) {
+                    if (yeniTarih !== eskiTarih) goster(aktifTip);
+                }
+            })
+            .catch(() => { veri4h = null; dortSaatDurumGuncelle(); });
+    }
+
+    // Sayfa açılışında hemen çek, sonra her 5 dakikada bir otomatik yenile
+    veriCek();
+    setInterval(veriCek, 5 * 60 * 1000);
 
     tg.BackButton.onClick(function() { geriDon(); });
 
@@ -393,9 +418,10 @@
         });
     }
 
-    setInterval(dortSaatDurumGuncelle, 60000);
+    // Durum satırı UI güncellemesi dakikada bir
+    setInterval(dortSaatDurumGuncelle, 60 * 1000);
 
-    const BOGA_LIST = ["Yutan Boga","Cekic","Ters Cekic","Sabah Yildizi","Boga Harami","3 Beyaz Asker","Delikli Bulut"];
+    const BOGA_LIST = ["Yutan Boga","Cekic","Ters Cekic","Sabah Yildizi","Boga Harami","3 Beyaz Asker"];
     const STRATEJI_LIST = ["Dip Vurusu","Bant Sikismasi","Guc Patlamasi","Destek Testi","Hacim Bombasi","Trend Uyumu"];
 
     const BASLIKLAR = {
@@ -429,6 +455,7 @@
     }
 
     function goster(tip) {
+        aktifTip = tip;
         document.getElementById('ana').style.display = 'none';
         const sonucEkran = document.getElementById('sonuc');
         sonucEkran.style.display = 'block';
@@ -449,33 +476,33 @@
 
         for (const [ad, h] of Object.entries(hisseler)) {
             let goster_mi = false;
-            if (tip === 'altin' && h.altin === 'Altin') goster_mi = true;
-            if (tip === 'gumus' && h.altin === 'Gumus') goster_mi = true;
-            if (tip === 'bronz' && h.altin === 'Bronz') goster_mi = true;
-            if (tip === '4h_altin' && h.altin === 'Altin') goster_mi = true;
-            if (tip === '4h_gumus' && h.altin === 'Gumus') goster_mi = true;
-            if (tip === '4h_bronz' && h.altin === 'Bronz') goster_mi = true;
-            if (tip === '4h_macd' && h.sinyaller.includes('MACD Al Kesisimi')) goster_mi = true;
-            if (tip === '4h_rsi' && h.sinyaller.includes('RSI Asiri Satim')) goster_mi = true;
-            if (tip === '4h_bb' && h.sinyaller.includes('BB Alt Bant')) goster_mi = true;
-            if (tip === '4h_hacim' && h.sinyaller.includes('Hacim Alarmi')) goster_mi = true;
-            if (tip === '4h_mum' && h.sinyaller.some(s => BOGA_LIST.includes(s))) goster_mi = true;
-            if (tip === '4h_dip' && h.dip_vurusu) goster_mi = true;
-            if (tip === '4h_guc' && h.guc_patlamasi) goster_mi = true;
-            if (tip === 'dip_vurusu' && h.dip_vurusu) goster_mi = true;
+            if (tip === 'altin'          && h.altin === 'Altin') goster_mi = true;
+            if (tip === 'gumus'          && h.altin === 'Gumus') goster_mi = true;
+            if (tip === 'bronz'          && h.altin === 'Bronz') goster_mi = true;
+            if (tip === '4h_altin'       && h.altin === 'Altin') goster_mi = true;
+            if (tip === '4h_gumus'       && h.altin === 'Gumus') goster_mi = true;
+            if (tip === '4h_bronz'       && h.altin === 'Bronz') goster_mi = true;
+            if (tip === '4h_macd'        && h.sinyaller.includes('MACD Al Kesisimi')) goster_mi = true;
+            if (tip === '4h_rsi'         && h.sinyaller.includes('RSI Asiri Satim')) goster_mi = true;
+            if (tip === '4h_bb'          && h.sinyaller.includes('BB Alt Bant')) goster_mi = true;
+            if (tip === '4h_hacim'       && h.sinyaller.includes('Hacim Alarmi')) goster_mi = true;
+            if (tip === '4h_mum'         && h.sinyaller.some(s => BOGA_LIST.includes(s))) goster_mi = true;
+            if (tip === '4h_dip'         && h.dip_vurusu) goster_mi = true;
+            if (tip === '4h_guc'         && h.guc_patlamasi) goster_mi = true;
+            if (tip === 'dip_vurusu'     && h.dip_vurusu) goster_mi = true;
             if (tip === 'bant_sikismasi' && h.bant_sikismasi) goster_mi = true;
-            if (tip === 'guc_patlamasi' && h.guc_patlamasi) goster_mi = true;
-            if (tip === 'destek_testi' && h.destek_testi) goster_mi = true;
-            if (tip === 'hacim_bombasi' && h.hacim_bombasi) goster_mi = true;
-            if (tip === 'trend_uyumu' && h.trend_uyumu) goster_mi = true;
-            if (tip === 'golden_cross' && h.sinyaller.includes('Golden Cross')) goster_mi = true;
-            if (tip === 'death_cross' && h.sinyaller.includes('Death Cross')) goster_mi = true;
-            if (tip === 'macd_al' && h.sinyaller.includes('MACD Al Kesisimi')) goster_mi = true;
-            if (tip === 'rsi_satim' && h.sinyaller.includes('RSI Asiri Satim')) goster_mi = true;
-            if (tip === 'bb_alt' && h.sinyaller.includes('BB Alt Bant')) goster_mi = true;
-            if (tip === 'hacim_alarmi' && h.sinyaller.includes('Hacim Alarmi')) goster_mi = true;
-            if (tip === 'mum_boga' && h.sinyaller.some(s => BOGA_LIST.includes(s))) goster_mi = true;
-            if (tip === 'favoriler' && favoriler.includes(ad)) goster_mi = true;
+            if (tip === 'guc_patlamasi'  && h.guc_patlamasi) goster_mi = true;
+            if (tip === 'destek_testi'   && h.destek_testi) goster_mi = true;
+            if (tip === 'hacim_bombasi'  && h.hacim_bombasi) goster_mi = true;
+            if (tip === 'trend_uyumu'    && h.trend_uyumu) goster_mi = true;
+            if (tip === 'golden_cross'   && h.sinyaller.includes('Golden Cross')) goster_mi = true;
+            if (tip === 'death_cross'    && h.sinyaller.includes('Death Cross')) goster_mi = true;
+            if (tip === 'macd_al'        && h.sinyaller.includes('MACD Al Kesisimi')) goster_mi = true;
+            if (tip === 'rsi_satim'      && h.sinyaller.includes('RSI Asiri Satim')) goster_mi = true;
+            if (tip === 'bb_alt'         && h.sinyaller.includes('BB Alt Bant')) goster_mi = true;
+            if (tip === 'hacim_alarmi'   && h.sinyaller.includes('Hacim Alarmi')) goster_mi = true;
+            if (tip === 'mum_boga'       && h.sinyaller.some(s => BOGA_LIST.includes(s))) goster_mi = true;
+            if (tip === 'favoriler'      && favoriler.includes(ad)) goster_mi = true;
 
             if (goster_mi) {
                 sayac++;
@@ -508,6 +535,7 @@
     }
 
     function geriDon() {
+        aktifTip = null;
         document.getElementById('ana').style.display = 'block';
         document.getElementById('sonuc').style.display = 'none';
         tg.BackButton.hide();
