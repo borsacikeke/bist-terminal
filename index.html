@@ -47,9 +47,6 @@
         .kart-ok { color: #2a2a3a; font-size: 18px; }
         .ayrac { height: 1px; background: #1a1a24; margin: 6px 16px; }
         .bolum-ayrac { height: 6px; background: #050508; margin: 8px 0; }
-        .ozel-banner { background: linear-gradient(135deg, #0d0020, #1a0035); border: 1px solid #6a00b0; border-radius: 14px; margin: 8px 12px; padding: 16px; }
-        .ozel-banner-baslik { font-size: 14px; font-weight: 800; color: #c084fc; letter-spacing: 1px; text-transform: uppercase; }
-        .ozel-banner-alt { font-size: 11px; color: #7c3aed; margin-top: 4px; }
         .ozel-kilitli-banner { background: #0d0020; border: 1px solid #3a0060; border-radius: 14px; margin: 8px 12px; padding: 14px 16px; display: flex; align-items: center; gap: 12px; }
         .ozel-kilitli-ikon { font-size: 28px; }
         .ozel-kilitli-yazi { font-size: 12px; color: #7c3aed; line-height: 1.5; }
@@ -76,7 +73,6 @@
         .bos-mesaj { text-align: center; padding: 60px 20px; color: #333; font-size: 14px; }
         .sayac { font-size: 11px; color: #444; padding: 6px 16px 2px; }
         .alt-uyari { font-size: 10px; color: #333; text-align: center; padding: 16px; line-height: 1.6; margin-bottom: 8px; }
-        .ozel-sayac { font-size: 11px; color: #7c3aed; padding: 6px 16px 2px; }
     </style>
 </head>
 <body>
@@ -90,7 +86,7 @@
         ⚠️ Bu platform yatırım tavsiyesi vermez. Tüm göstergeler algoritmik olup hata içerebilir.
     </div>
 
-    <!-- ÖZEL BÖLÜM -->
+    <!-- ÖZEL BÖLÜM AÇIK -->
     <div id="ozel-bolum-acik" style="display:none;">
         <div class="bolum-baslik" style="color:#ffffff;border-color:#3a0060;">
             <span>🏅</span> TAVAN TARAMA ÖZEL BÖLÜM
@@ -109,8 +105,9 @@
         <div class="bolum-ayrac"></div>
     </div>
 
+    <!-- ÖZEL BÖLÜM KİLİTLİ -->
     <div id="ozel-bolum-kilitli" style="display:none;">
-        <div class="bolum-baslik" style="color:#3a0060;border-color:#1a0030;">
+        <div class="bolum-baslik" style="color:#ffffff;border-color:#1a0030;">
             <span>🔒</span> TAVAN TARAMA ÖZEL BÖLÜM
         </div>
         <div class="ozel-kilitli-banner">
@@ -328,12 +325,10 @@
     const isim = tg.initDataUnsafe?.user?.first_name || "Yatırımcı";
     document.getElementById('karsilama_baslik').textContent = 'Merhaba, ' + isim + '!';
 
-    // URL'den erişim parametrelerini oku
     const urlParams = new URLSearchParams(window.location.search);
     const ozelAcik  = urlParams.get('ozel')  === '1';
     const altinAcik = urlParams.get('altin') === '1';
 
-    // Özel bölümü göster/gizle
     document.getElementById('ozel-bolum-acik').style.display   = ozelAcik  ? 'block' : 'none';
     document.getElementById('ozel-bolum-kilitli').style.display = !ozelAcik ? 'block' : 'none';
 
@@ -456,7 +451,7 @@
         sonucEkran.scrollTop = 0;
         tg.BackButton.show();
 
-        const is4h = tip.startsWith('4h_');
+        const is4h   = tip.startsWith('4h_');
         const isOzel = tip === 'ozel_tarama';
         const kaynakVeri = is4h ? veri4h : veri;
 
@@ -473,43 +468,42 @@
 
         for (const [ad, h] of Object.entries(hisseler)) {
             let goster_mi = false;
-            if (tip === 'ozel_tarama'     && h.ozel_tarama) goster_mi = true;
-            if (tip === 'altin'           && h.altin === 'Altin') goster_mi = true;
-            if (tip === 'gumus'           && h.altin === 'Gumus') goster_mi = true;
-            if (tip === 'bronz'           && h.altin === 'Bronz') goster_mi = true;
-            if (tip === '4h_altin'        && h.altin === 'Altin') goster_mi = true;
-            if (tip === '4h_gumus'        && h.altin === 'Gumus') goster_mi = true;
-            if (tip === '4h_bronz'        && h.altin === 'Bronz') goster_mi = true;
-            if (tip === '4h_macd'         && h.sinyaller.includes('MACD Al Kesisimi')) goster_mi = true;
-            if (tip === '4h_rsi'          && h.sinyaller.includes('RSI Asiri Satim')) goster_mi = true;
-            if (tip === '4h_bb'           && h.sinyaller.includes('BB Alt Bant')) goster_mi = true;
-            if (tip === '4h_hacim'        && h.sinyaller.includes('Hacim Alarmi')) goster_mi = true;
-            if (tip === '4h_mum'          && h.sinyaller.some(s => BOGA_LIST.includes(s))) goster_mi = true;
-            if (tip === '4h_dip'          && h.dip_vurusu) goster_mi = true;
-            if (tip === '4h_guc'          && h.guc_patlamasi) goster_mi = true;
-            if (tip === 'dip_vurusu'      && h.dip_vurusu) goster_mi = true;
-            if (tip === 'bant_sikismasi'  && h.bant_sikismasi) goster_mi = true;
-            if (tip === 'guc_patlamasi'   && h.guc_patlamasi) goster_mi = true;
-            if (tip === 'destek_testi'    && h.destek_testi) goster_mi = true;
-            if (tip === 'hacim_bombasi'   && h.hacim_bombasi) goster_mi = true;
-            if (tip === 'trend_uyumu'     && h.trend_uyumu) goster_mi = true;
-            if (tip === 'golden_cross'    && h.sinyaller.includes('Golden Cross')) goster_mi = true;
-            if (tip === 'death_cross'     && h.sinyaller.includes('Death Cross')) goster_mi = true;
-            if (tip === 'macd_al'         && h.sinyaller.includes('MACD Al Kesisimi')) goster_mi = true;
-            if (tip === 'rsi_satim'       && h.sinyaller.includes('RSI Asiri Satim')) goster_mi = true;
-            if (tip === 'bb_alt'          && h.sinyaller.includes('BB Alt Bant')) goster_mi = true;
-            if (tip === 'hacim_alarmi'    && h.sinyaller.includes('Hacim Alarmi')) goster_mi = true;
-            if (tip === 'mum_boga'        && h.sinyaller.some(s => BOGA_LIST.includes(s))) goster_mi = true;
-            if (tip === 'favoriler'       && favoriler.includes(ad)) goster_mi = true;
+            if (tip === 'ozel_tarama'    && h.ozel_tarama) goster_mi = true;
+            if (tip === 'altin'          && h.altin === 'Altin') goster_mi = true;
+            if (tip === 'gumus'          && h.altin === 'Gumus') goster_mi = true;
+            if (tip === 'bronz'          && h.altin === 'Bronz') goster_mi = true;
+            if (tip === '4h_altin'       && h.altin === 'Altin') goster_mi = true;
+            if (tip === '4h_gumus'       && h.altin === 'Gumus') goster_mi = true;
+            if (tip === '4h_bronz'       && h.altin === 'Bronz') goster_mi = true;
+            if (tip === '4h_macd'        && h.sinyaller.includes('MACD Al Kesisimi')) goster_mi = true;
+            if (tip === '4h_rsi'         && h.sinyaller.includes('RSI Asiri Satim')) goster_mi = true;
+            if (tip === '4h_bb'          && h.sinyaller.includes('BB Alt Bant')) goster_mi = true;
+            if (tip === '4h_hacim'       && h.sinyaller.includes('Hacim Alarmi')) goster_mi = true;
+            if (tip === '4h_mum'         && h.sinyaller.some(s => BOGA_LIST.includes(s))) goster_mi = true;
+            if (tip === '4h_dip'         && h.dip_vurusu) goster_mi = true;
+            if (tip === '4h_guc'         && h.guc_patlamasi) goster_mi = true;
+            if (tip === 'dip_vurusu'     && h.dip_vurusu) goster_mi = true;
+            if (tip === 'bant_sikismasi' && h.bant_sikismasi) goster_mi = true;
+            if (tip === 'guc_patlamasi'  && h.guc_patlamasi) goster_mi = true;
+            if (tip === 'destek_testi'   && h.destek_testi) goster_mi = true;
+            if (tip === 'hacim_bombasi'  && h.hacim_bombasi) goster_mi = true;
+            if (tip === 'trend_uyumu'    && h.trend_uyumu) goster_mi = true;
+            if (tip === 'golden_cross'   && h.sinyaller.includes('Golden Cross')) goster_mi = true;
+            if (tip === 'death_cross'    && h.sinyaller.includes('Death Cross')) goster_mi = true;
+            if (tip === 'macd_al'        && h.sinyaller.includes('MACD Al Kesisimi')) goster_mi = true;
+            if (tip === 'rsi_satim'      && h.sinyaller.includes('RSI Asiri Satim')) goster_mi = true;
+            if (tip === 'bb_alt'         && h.sinyaller.includes('BB Alt Bant')) goster_mi = true;
+            if (tip === 'hacim_alarmi'   && h.sinyaller.includes('Hacim Alarmi')) goster_mi = true;
+            if (tip === 'mum_boga'       && h.sinyaller.some(s => BOGA_LIST.includes(s))) goster_mi = true;
+            if (tip === 'favoriler'      && favoriler.includes(ad)) goster_mi = true;
 
             if (goster_mi) {
                 sayac++;
-                const favAktif = favoriler.includes(ad);
+                const favAktif  = favoriler.includes(ad);
                 const kartClass = isOzel ? 'hisse-kart ozel-kart' : 'hisse-kart';
 
                 let badgeHTML = '';
                 if (isOzel) {
-                    // Özel taramada strateji detayı gösterilmez
                     badgeHTML = '<span class="badge badge-ozel">🏅 Özel Sinyal</span>';
                 } else {
                     const gosterilecek = h.sinyaller.filter(s => getBadgeClass(s) !== 'badge-notr').slice(0, 6);
