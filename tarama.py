@@ -74,22 +74,12 @@ HISSELER = [h + ".IS" for h in [
 
 
 def bist_4h_olustur(df_1h):
-    """
-    1h veriden BIST 4h mumlarını oluştur.
-    BIST saatleri: 10:00-18:00 TR (07:00-15:00 UTC)
-    4h mumlar UTC'de: 07:00-11:00 ve 11:00-15:00
-    offset='7H' ile bu saatlere hizalanır.
-    """
     if df_1h.empty:
         return pd.DataFrame()
-
-    # Timezone normalizasyonu
     if df_1h.index.tz is None:
         df_1h.index = df_1h.index.tz_localize('UTC')
     else:
         df_1h.index = df_1h.index.tz_convert('UTC')
-
-    # 4h resample — offset=7H ile BIST saatlerine (10:00 TR / 07:00 UTC) hizala
     df_4h = df_1h.resample('4H', offset='7H').agg(
         Open=('Open', 'first'),
         High=('High', 'max'),
@@ -97,14 +87,9 @@ def bist_4h_olustur(df_1h):
         Close=('Close', 'last'),
         Volume=('Volume', 'sum')
     ).dropna(subset=['Open', 'Close'])
-
-    # Sadece tamamen kapanmış mumları al
     simdi_utc = pd.Timestamp.now(tz='UTC')
     df_4h = df_4h[df_4h.index + pd.Timedelta(hours=4) <= simdi_utc]
-
-    # Sıfır hacimli (veri gelmemiş) mumları çıkar
     df_4h = df_4h[df_4h['Volume'] > 0]
-
     return df_4h.reset_index(drop=True)
 
 
@@ -150,7 +135,8 @@ def sinyal_uret(df, g):
     if len(close) < 3:
         return sinyaller
 
-    # --- Teknik göstergeler ---
+    avg_vol = g['volume'].rolling(20).mean().iloc[n]
+
     if g['macd'].iloc[n] > g['signal'].iloc[n] and g['macd'].iloc[n-1] <= g['signal'].iloc[n-1]:
         sinyaller.append("MACD Al Kesisimi")
     if g['macd'].iloc[n] > g['signal'].iloc[n]:
@@ -169,98 +155,66 @@ def sinyal_uret(df, g):
         sinyaller.append("Golden Cross")
     if g['ema20'].iloc[n-1] >= g['ema50'].iloc[n-1] and g['ema20'].iloc[n] < g['ema50'].iloc[n]:
         sinyaller.append("Death Cross")
-    avg_vol = g['volume'].rolling(20).mean().iloc[n]
     if pd.notna(avg_vol) and avg_vol > 0 and g['volume'].iloc[n] > avg_vol * 2:
         sinyaller.append("Hacim Alarmi")
 
-    # --- Mum formasyonları (kapanmış son 3 mum) ---
     o  = df['Open'].iloc[n];   h  = df['High'].iloc[n]
     l  = df['Low'].iloc[n];    c  = df['Close'].iloc[n]
     o1 = df['Open'].iloc[n-1]; h1 = df['High'].iloc[n-1]
     l1 = df['Low'].iloc[n-1];  c1 = df['Close'].iloc[n-1]
-
     body  = abs(c - o)
     body1 = abs(c1 - o1)
     range_ = h - l
 
-if body > 0 and range_ > 0:
-        # Yutan Boğa: önceki bearish, şimdiki bullish, şimdiki gövde öncekini TAMAMEN yutuyor
-        if (c1 < o1 and
-            c  > o  and
-            o  < c1 and
-            c  > o1):
+    if body > 0 and range_ > 0:
+        if c1 < o1 and c > o and o < c1 and c > o1:
             sinyaller.append("Yutan Boga")
-
-        # Çekiç: küçük gövde, uzun alt gölge, kısa üst gölge
         lower_shadow = min(o, c) - l
         upper_shadow = h - max(o, c)
-        if lower_shadow >= body * 2 and upper_shadow <= body * 0.5 and body > 0:
+        if lower_shadow >= body * 2 and upper_shadow <= body * 0.5:
             sinyaller.append("Cekic")
-
-        # Ters Çekiç: küçük gövde, uzun üst gölge, kısa alt gölge
-        if upper_shadow >= body * 2 and lower_shadow <= body * 0.5 and body > 0:
+        if upper_shadow >= body * 2 and lower_shadow <= body * 0.5:
             sinyaller.append("Ters Cekic")
-
-        # Sabah Yıldızı: bearish → küçük gövde → bullish (gapli)
         if len(df) >= 3:
-            o2 = df['Open'].iloc[n-2]; c2 = df['Close'].iloc[n-2]
+            o2 = df['Open'].iloc[n-2]
+            c2 = df['Close'].iloc[n-2]
             body2 = abs(c2 - o2)
-            if (c2 < o2 and                    # 2 mum önce bearish
-                body1 < body2 * 0.3 and        # orta mum küçük gövde
-                c  > o  and                    # şimdiki bullish
-                c  > (o2 + c2) / 2):           # şimdiki close bearish mumun ortasını geçti
+            if c2 < o2 and body1 < body2 * 0.3 and c > o and c > (o2 + c2) / 2:
                 sinyaller.append("Sabah Yildizi")
-
-        # Boğa Haramisi: büyük bearish içinde küçük bullish
-        if (c1 < o1 and            # önceki bearish
-            c  > o  and            # şimdiki bullish
-            o  > c1 and            # şimdiki open > önceki close (içeride başlıyor)
-            c  < o1 and            # şimdiki close < önceki open (içeride bitiyor)
-            body < body1 * 0.5):   # şimdiki gövde öncekinin yarısından küçük
+            if c2 > o2 and c1 > o1 and c > o and c1 > c2 and c > c1 and o1 > o2 and o > o1:
+                sinyaller.append("3 Beyaz Asker")
+        if c1 < o1 and c > o and o > c1 and c < o1 and body < body1 * 0.5:
             sinyaller.append("Boga Harami")
 
-        # 3 Beyaz Asker: üç ardışık yükseliş mumu
-        if len(df) >= 3:
-            o2 = df['Open'].iloc[n-2]; c2 = df['Close'].iloc[n-2]
-            if (c2 > o2 and c1 > o1 and c > o and  # hepsi yükseliş
-                c1 > c2 and c > c1 and              # her biri bir öncekinden yüksek kapandı
-                o1 > o2 and o > o1):                # her biri bir öncekinden yüksek açıldı
-                sinyaller.append("3 Beyaz Asker")
-
-    # --- Strateji sinyalleri ---
     if g['rsi'].iloc[n] < 35 and close.iloc[n] <= g['bb_lower'].iloc[n]:
         sinyaller.append("Dip Vurusu")
-
     bb_width = (g['bb_upper'] - g['bb_lower']) / g['bb_lower'].rolling(20).mean()
     if pd.notna(bb_width.iloc[n]) and pd.notna(bb_width.rolling(20).mean().iloc[n]):
         if bb_width.iloc[n] < bb_width.rolling(20).mean().iloc[n] * 0.7:
             sinyaller.append("Bant Sikismasi")
-
     if g['rsi'].iloc[n] > 55 and g['macd'].iloc[n] > g['signal'].iloc[n] and close.iloc[n] > g['ema20'].iloc[n]:
         sinyaller.append("Guc Patlamasi")
-
     if close.iloc[n] > g['ema20'].iloc[n] * 0.98 and close.iloc[n] < g['ema20'].iloc[n] * 1.02:
         sinyaller.append("Destek Testi")
-
     if pd.notna(avg_vol) and avg_vol > 0 and g['volume'].iloc[n] > avg_vol * 2.5:
         sinyaller.append("Hacim Bombasi")
-
-    if (close.iloc[n] > g['ema20'].iloc[n] and
-        g['ema20'].iloc[n] > g['ema50'].iloc[n] and
-        g['macd'].iloc[n] > g['signal'].iloc[n]):
+    if close.iloc[n] > g['ema20'].iloc[n] and g['ema20'].iloc[n] > g['ema50'].iloc[n] and g['macd'].iloc[n] > g['signal'].iloc[n]:
         sinyaller.append("Trend Uyumu")
 
     return sinyaller
 
 
 def altin_seviye(sinyaller):
-    boga = ["Yutan Boga","Cekic","Ters Cekic","Sabah Yildizi","Boga Harami","3 Beyaz Asker",
-            "MACD Al Kesisimi","Golden Cross","RSI Asiri Satim","BB Alt Bant",
-            "Hacim Alarmi","Dip Vurusu","Guc Patlamasi"]
+    boga = ["Yutan Boga", "Cekic", "Ters Cekic", "Sabah Yildizi", "Boga Harami", "3 Beyaz Asker",
+            "MACD Al Kesisimi", "Golden Cross", "RSI Asiri Satim", "BB Alt Bant",
+            "Hacim Alarmi", "Dip Vurusu", "Guc Patlamasi"]
     puan = sum(1 for s in sinyaller if s in boga)
-    if puan >= 5: return "Altin"
-    if puan >= 3: return "Gumus"
-    if puan >= 1: return "Bronz"
+    if puan >= 5:
+        return "Altin"
+    if puan >= 3:
+        return "Gumus"
+    if puan >= 1:
+        return "Bronz"
     return None
 
 
@@ -273,7 +227,6 @@ for ticker in HISSELER:
                 continue
             df.columns = [c[0] if isinstance(c, tuple) else c for c in df.columns]
         else:
-            # 1h veri çek, sonra 4h mumlarını oluştur
             df_1h = yf.download(ticker, period="60d", interval="1h", progress=False, auto_adjust=True)
             if df_1h is None or len(df_1h) < 20:
                 continue
