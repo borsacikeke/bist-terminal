@@ -5,7 +5,7 @@ on:
     - cron: '20 6 * * 1-5'   # 09:20 TR - 4h mumu
     - cron: '20 10 * * 1-5'  # 13:20 TR - 4h mumu
     - cron: '20 14 * * 1-5'  # 17:20 TR - 4h mumu
-    - cron: '25 15 * * 1-5'  # 18:25 TR - günlük kapanış
+    - cron: '0 16 * * 1-5'   # 19:00 TR - günlük kapanış
   workflow_dispatch:
 
 permissions:
