@@ -223,7 +223,8 @@ cikti = {
     "hisseler": sonuclar
 }
 
-with open("sonuclar.json", "w", encoding="utf-8") as f:
+dosya_adi = "sonuclar4h.json" if PERIYOT == "4h" else "sonuclar.json"
+with open(dosya_adi, "w", encoding="utf-8") as f:
     json.dump(cikti, f, ensure_ascii=False, indent=2)
 
 print(f"Tamamlandı! {len(sonuclar)} hisse işlendi.")
