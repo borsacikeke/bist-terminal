@@ -80,7 +80,7 @@ def bist_4h_olustur(df_1h):
         df_1h.index = df_1h.index.tz_localize('UTC')
     else:
         df_1h.index = df_1h.index.tz_convert('UTC')
-    df_4h = df_1h.resample('4H', offset='7H').agg(
+    df_4h = df_1h.resample('4h', offset='7h').agg(
         Open=('Open', 'first'),
         High=('High', 'max'),
         Low=('Low', 'min'),
