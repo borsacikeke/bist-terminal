@@ -1,10 +1,10 @@
 {
-  "tarih": "11.03.2026 11:01",
-  "periyot": "4h_sabah",
+  "tarih": "11.03.2026 14:50",
+  "periyot": "4h_ogleden_sonra",
   "hisseler": {
     "ACSEL": {
-      "kapanis": 105.6,
-      "rsi": 66.4,
+      "kapanis": 105.2,
+      "rsi": 63.7,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -21,25 +21,8 @@
       "trend_uyumu": false
     },
     "ADEL": {
-      "kapanis": 33.64,
-      "rsi": 60.6,
-      "sinyaller": [
-        "MACD Pozitif",
-        "Fiyat EMA20 Ustunde",
-        "Guc Patlamasi",
-        "Destek Testi"
-      ],
-      "altin": "Bronz",
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": true,
-      "destek_testi": true,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "ADESE": {
-      "kapanis": 1.04,
-      "rsi": 61.5,
+      "kapanis": 33.12,
+      "rsi": 55.2,
       "sinyaller": [
         "MACD Pozitif",
         "Bant Sikismasi",
@@ -53,9 +36,24 @@
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
+    "ADESE": {
+      "kapanis": 1.03,
+      "rsi": 50.0,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Bant Sikismasi"
+      ],
+      "altin": null,
+      "dip_vurusu": false,
+      "bant_sikismasi": true,
+      "guc_patlamasi": false,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
     "AEFES": {
-      "kapanis": 17.73,
-      "rsi": 43.9,
+      "kapanis": 17.53,
+      "rsi": 42.8,
       "sinyaller": [],
       "altin": null,
       "dip_vurusu": false,
@@ -66,8 +64,8 @@
       "trend_uyumu": false
     },
     "AFYON": {
-      "kapanis": 15.96,
-      "rsi": 79.4,
+      "kapanis": 15.86,
+      "rsi": 71.4,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -84,25 +82,27 @@
       "trend_uyumu": true
     },
     "AGESA": {
-      "kapanis": 215.7,
-      "rsi": 48.5,
+      "kapanis": 221.9,
+      "rsi": 55.3,
       "sinyaller": [
-        "MACD Al Kesisimi",
-        "MACD Pozitif"
+        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "Guc Patlamasi",
+        "Destek Testi"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": false,
+      "guc_patlamasi": true,
+      "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "AGHOL": {
-      "kapanis": 29.88,
-      "rsi": 35.1,
+      "kapanis": 29.62,
+      "rsi": 30.9,
       "sinyaller": [
-        "Ters Cekic"
+        "RSI Asiri Satim"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
@@ -113,27 +113,32 @@
       "trend_uyumu": false
     },
     "AGROT": {
-      "kapanis": 2.88,
-      "rsi": 60.0,
+      "kapanis": 2.89,
+      "rsi": 59.7,
       "sinyaller": [
         "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "Guc Patlamasi",
         "Destek Testi"
       ],
-      "altin": null,
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
-      "guc_patlamasi": false,
+      "guc_patlamasi": true,
       "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "AGYO": {
-      "kapanis": 7.9,
-      "rsi": 67.5,
+      "kapanis": 7.93,
+      "rsi": 74.8,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "Guc Patlamasi"
+        "EMA20 > EMA50",
+        "Golden Cross",
+        "Guc Patlamasi",
+        "Trend Uyumu"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
@@ -141,11 +146,11 @@
       "guc_patlamasi": true,
       "destek_testi": false,
       "hacim_bombasi": false,
-      "trend_uyumu": false
+      "trend_uyumu": true
     },
     "AHGAZ": {
-      "kapanis": 23.52,
-      "rsi": 40.4,
+      "kapanis": 23.64,
+      "rsi": 43.3,
       "sinyaller": [
         "MACD Pozitif",
         "Destek Testi"
@@ -159,14 +164,13 @@
       "trend_uyumu": false
     },
     "AKCNS": {
-      "kapanis": 206.4,
-      "rsi": 55.8,
+      "kapanis": 205.1,
+      "rsi": 48.7,
       "sinyaller": [
         "EMA20 > EMA50",
-        "Ters Cekic",
         "Destek Testi"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -175,26 +179,24 @@
       "trend_uyumu": false
     },
     "AKFGY": {
-      "kapanis": 2.92,
-      "rsi": 62.5,
+      "kapanis": 2.95,
+      "rsi": 61.1,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "Bant Sikismasi",
-        "Guc Patlamasi",
-        "Destek Testi"
+        "Guc Patlamasi"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
-      "bant_sikismasi": true,
+      "bant_sikismasi": false,
       "guc_patlamasi": true,
-      "destek_testi": true,
+      "destek_testi": false,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "AKFYE": {
-      "kapanis": 20.16,
-      "rsi": 87.1,
+      "kapanis": 20.06,
+      "rsi": 84.5,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -211,8 +213,8 @@
       "trend_uyumu": true
     },
     "AKGRT": {
-      "kapanis": 7.69,
-      "rsi": 61.5,
+      "kapanis": 7.7,
+      "rsi": 56.6,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -229,12 +231,11 @@
       "trend_uyumu": false
     },
     "AKSA": {
-      "kapanis": 10.27,
-      "rsi": 68.1,
+      "kapanis": 10.17,
+      "rsi": 67.7,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "Sabah Yildizi",
         "Bant Sikismasi",
         "Guc Patlamasi",
         "Destek Testi"
@@ -248,12 +249,12 @@
       "trend_uyumu": false
     },
     "AKSEN": {
-      "kapanis": 72.2,
-      "rsi": 72.4,
+      "kapanis": 72.85,
+      "rsi": 72.2,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "Ters Cekic",
+        "Sabah Yildizi",
         "Guc Patlamasi"
       ],
       "altin": "Bronz",
@@ -265,8 +266,8 @@
       "trend_uyumu": false
     },
     "AKSGY": {
-      "kapanis": 8.38,
-      "rsi": 65.8,
+      "kapanis": 8.4,
+      "rsi": 68.5,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -282,8 +283,8 @@
       "trend_uyumu": false
     },
     "AKSUE": {
-      "kapanis": 28.34,
-      "rsi": 63.3,
+      "kapanis": 28.98,
+      "rsi": 63.8,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -300,10 +301,11 @@
       "trend_uyumu": true
     },
     "ALARK": {
-      "kapanis": 92.7,
-      "rsi": 28.3,
+      "kapanis": 93.65,
+      "rsi": 30.9,
       "sinyaller": [
-        "RSI Asiri Satim"
+        "RSI Asiri Satim",
+        "Cekic"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
@@ -314,23 +316,23 @@
       "trend_uyumu": false
     },
     "ALBRK": {
-      "kapanis": 8.39,
-      "rsi": 42.4,
+      "kapanis": 8.45,
+      "rsi": 47.8,
       "sinyaller": [
-        "MACD Al Kesisimi",
-        "MACD Pozitif"
+        "MACD Pozitif",
+        "Destek Testi"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
-      "destek_testi": false,
+      "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "ALCAR": {
-      "kapanis": 771.0,
-      "rsi": 49.4,
+      "kapanis": 769.5,
+      "rsi": 46.7,
       "sinyaller": [
         "MACD Pozitif"
       ],
@@ -343,8 +345,8 @@
       "trend_uyumu": false
     },
     "ALFAS": {
-      "kapanis": 38.06,
-      "rsi": 49.1,
+      "kapanis": 37.98,
+      "rsi": 49.3,
       "sinyaller": [
         "MACD Pozitif",
         "Destek Testi"
@@ -358,25 +360,25 @@
       "trend_uyumu": false
     },
     "ALGYO": {
-      "kapanis": 5.19,
-      "rsi": 69.9,
+      "kapanis": 5.12,
+      "rsi": 62.9,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "Bant Sikismasi",
-        "Guc Patlamasi"
+        "Guc Patlamasi",
+        "Destek Testi"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
-      "bant_sikismasi": true,
+      "bant_sikismasi": false,
       "guc_patlamasi": true,
-      "destek_testi": false,
+      "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "ALKA": {
-      "kapanis": 11.54,
-      "rsi": 68.5,
+      "kapanis": 11.52,
+      "rsi": 69.0,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -392,22 +394,24 @@
       "trend_uyumu": false
     },
     "ALKIM": {
-      "kapanis": 16.55,
-      "rsi": 42.9,
+      "kapanis": 16.48,
+      "rsi": 37.7,
       "sinyaller": [
-        "MACD Pozitif"
+        "MACD Pozitif",
+        "Boga Harami",
+        "Bant Sikismasi"
       ],
-      "altin": null,
+      "altin": "Bronz",
       "dip_vurusu": false,
-      "bant_sikismasi": false,
+      "bant_sikismasi": true,
       "guc_patlamasi": false,
       "destek_testi": false,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "ALKLC": {
-      "kapanis": 282.0,
-      "rsi": 76.1,
+      "kapanis": 282.75,
+      "rsi": 75.4,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -424,10 +428,11 @@
       "trend_uyumu": true
     },
     "ALTNY": {
-      "kapanis": 15.25,
-      "rsi": 12.2,
+      "kapanis": 15.23,
+      "rsi": 13.3,
       "sinyaller": [
-        "RSI Asiri Satim"
+        "RSI Asiri Satim",
+        "Ters Cekic"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
@@ -439,13 +444,11 @@
     },
     "ALVES": {
       "kapanis": 3.09,
-      "rsi": 36.2,
+      "rsi": 41.2,
       "sinyaller": [
-        "MACD Al Kesisimi",
-        "MACD Pozitif",
-        "Ters Cekic"
+        "MACD Pozitif"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -454,15 +457,14 @@
       "trend_uyumu": false
     },
     "ANELE": {
-      "kapanis": 14.38,
-      "rsi": 58.0,
+      "kapanis": 14.37,
+      "rsi": 56.4,
       "sinyaller": [
         "MACD Pozitif",
-        "Ters Cekic",
         "Bant Sikismasi",
         "Destek Testi"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": true,
       "guc_patlamasi": false,
@@ -470,9 +472,9 @@
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
-    "ANSGR": {
-      "kapanis": 116.6,
-      "rsi": 62.3,
+    "ANHYT": {
+      "kapanis": 117.6,
+      "rsi": 61.4,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -486,14 +488,31 @@
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
-    "ARASE": {
-      "kapanis": 27.86,
-      "rsi": 70.8,
+    "ANSGR": {
+      "kapanis": 28.06,
+      "rsi": 72.9,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
-        "Golden Cross",
+        "Guc Patlamasi",
+        "Trend Uyumu"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": true,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": true
+    },
+    "ARASE": {
+      "kapanis": 85.55,
+      "rsi": 60.9,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "EMA20 > EMA50",
         "Guc Patlamasi",
         "Trend Uyumu"
       ],
@@ -506,44 +525,28 @@
       "trend_uyumu": true
     },
     "ARCLK": {
-      "kapanis": 85.3,
-      "rsi": 62.6,
+      "kapanis": 112.2,
+      "rsi": 50.5,
       "sinyaller": [
         "MACD Pozitif",
-        "Fiyat EMA20 Ustunde",
-        "EMA20 > EMA50",
-        "Guc Patlamasi",
-        "Trend Uyumu"
-      ],
-      "altin": "Bronz",
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": true,
-      "destek_testi": false,
-      "hacim_bombasi": false,
-      "trend_uyumu": true
-    },
-    "ARDYZ": {
-      "kapanis": 113.0,
-      "rsi": 54.8,
-      "sinyaller": [
-        "MACD Pozitif",
+        "Bant Sikismasi",
         "Destek Testi"
       ],
       "altin": null,
       "dip_vurusu": false,
-      "bant_sikismasi": false,
+      "bant_sikismasi": true,
       "guc_patlamasi": false,
       "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
-    "ARENA": {
-      "kapanis": 41.18,
-      "rsi": 67.5,
+    "ARDYZ": {
+      "kapanis": 40.88,
+      "rsi": 64.5,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
+        "Boga Harami",
         "Bant Sikismasi",
         "Guc Patlamasi",
         "Destek Testi"
@@ -556,9 +559,25 @@
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
+    "ARENA": {
+      "kapanis": 24.68,
+      "rsi": 52.7,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Boga Harami",
+        "Destek Testi"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": false,
+      "destek_testi": true,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
     "ARSAN": {
-      "kapanis": 24.72,
-      "rsi": 52.2,
+      "kapanis": 3.64,
+      "rsi": 44.6,
       "sinyaller": [
         "MACD Pozitif",
         "Destek Testi"
@@ -572,22 +591,8 @@
       "trend_uyumu": false
     },
     "ASELS": {
-      "kapanis": 3.62,
-      "rsi": 48.9,
-      "sinyaller": [
-        "MACD Pozitif"
-      ],
-      "altin": null,
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": false,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "ASLAN": {
-      "kapanis": 331.75,
-      "rsi": 49.8,
+      "kapanis": 332.25,
+      "rsi": 50.0,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -601,9 +606,9 @@
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
-    "ATAGY": {
-      "kapanis": 192.4,
-      "rsi": 58.7,
+    "ASTOR": {
+      "kapanis": 191.0,
+      "rsi": 61.2,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -619,11 +624,43 @@
       "hacim_bombasi": false,
       "trend_uyumu": true
     },
-    "ATATP": {
-      "kapanis": 152.3,
-      "rsi": 58.0,
+    "ATAGY": {
+      "kapanis": 12.94,
+      "rsi": 36.0,
       "sinyaller": [
-        "Boga Harami",
+        "MACD Pozitif",
+        "Cekic",
+        "Destek Testi"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": false,
+      "destek_testi": true,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "ATAKP": {
+      "kapanis": 53.7,
+      "rsi": 53.8,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Destek Testi"
+      ],
+      "altin": null,
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": false,
+      "destek_testi": true,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "ATATP": {
+      "kapanis": 154.3,
+      "rsi": 58.8,
+      "sinyaller": [
+        "MACD Al Kesisimi",
+        "MACD Pozitif",
         "Destek Testi"
       ],
       "altin": "Bronz",
@@ -635,8 +672,8 @@
       "trend_uyumu": false
     },
     "ATEKS": {
-      "kapanis": 87.9,
-      "rsi": 33.4,
+      "kapanis": 79.45,
+      "rsi": 29.8,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -649,26 +686,29 @@
       "trend_uyumu": false
     },
     "ATLAS": {
-      "kapanis": 8.42,
-      "rsi": 70.1,
+      "kapanis": 8.25,
+      "rsi": 58.3,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
         "Bant Sikismasi",
-        "Guc Patlamasi"
+        "Guc Patlamasi",
+        "Destek Testi"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": true,
       "guc_patlamasi": true,
-      "destek_testi": false,
+      "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "ATSYH": {
-      "kapanis": 52.3,
-      "rsi": 30.0,
+      "kapanis": 52.35,
+      "rsi": 29.4,
       "sinyaller": [
+        "MACD Al Kesisimi",
+        "MACD Pozitif",
         "RSI Asiri Satim"
       ],
       "altin": "Bronz",
@@ -680,31 +720,32 @@
       "trend_uyumu": false
     },
     "AVHOL": {
-      "kapanis": 36.58,
-      "rsi": 58.8,
+      "kapanis": 37.3,
+      "rsi": 64.8,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "Guc Patlamasi",
-        "Destek Testi"
+        "Guc Patlamasi"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": true,
-      "destek_testi": true,
+      "destek_testi": false,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "AVGYO": {
-      "kapanis": 12.95,
-      "rsi": 60.1,
+      "kapanis": 12.94,
+      "rsi": 55.3,
       "sinyaller": [
+        "MACD Al Kesisimi",
+        "MACD Pozitif",
         "EMA20 > EMA50",
         "Bant Sikismasi",
         "Destek Testi"
       ],
-      "altin": null,
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": true,
       "guc_patlamasi": false,
@@ -713,8 +754,24 @@
       "trend_uyumu": false
     },
     "AVOD": {
-      "kapanis": 4.58,
-      "rsi": 68.2,
+      "kapanis": 4.71,
+      "rsi": 68.4,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "Guc Patlamasi"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": true,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "AVPGY": {
+      "kapanis": 50.2,
+      "rsi": 51.8,
       "sinyaller": [
         "MACD Pozitif",
         "Destek Testi"
@@ -727,26 +784,11 @@
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
-    "AVPGY": {
-      "kapanis": 50.35,
-      "rsi": 51.3,
-      "sinyaller": [
-        "MACD Pozitif",
-        "Ters Cekic",
-        "Destek Testi"
-      ],
-      "altin": "Bronz",
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": true,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
     "AVTUR": {
-      "kapanis": 19.8,
-      "rsi": 54.5,
+      "kapanis": 20.44,
+      "rsi": 57.5,
       "sinyaller": [
+        "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
         "Destek Testi"
       ],
@@ -759,8 +801,8 @@
       "trend_uyumu": false
     },
     "AYCES": {
-      "kapanis": 643.5,
-      "rsi": 88.3,
+      "kapanis": 683.0,
+      "rsi": 89.7,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -777,13 +819,16 @@
       "trend_uyumu": true
     },
     "AYEN": {
-      "kapanis": 28.3,
-      "rsi": 68.2,
+      "kapanis": 28.52,
+      "rsi": 70.4,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
+        "EMA20 > EMA50",
+        "Golden Cross",
         "Guc Patlamasi",
-        "Destek Testi"
+        "Destek Testi",
+        "Trend Uyumu"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
@@ -791,18 +836,16 @@
       "guc_patlamasi": true,
       "destek_testi": true,
       "hacim_bombasi": false,
-      "trend_uyumu": false
+      "trend_uyumu": true
     },
     "AYGAZ": {
-      "kapanis": 247.6,
-      "rsi": 53.1,
+      "kapanis": 249.3,
+      "rsi": 49.2,
       "sinyaller": [
         "EMA20 > EMA50",
-        "Yutan Boga",
-        "Sabah Yildizi",
         "Destek Testi"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -811,8 +854,8 @@
       "trend_uyumu": false
     },
     "BAGFS": {
-      "kapanis": 32.96,
-      "rsi": 42.7,
+      "kapanis": 33.0,
+      "rsi": 41.6,
       "sinyaller": [
         "EMA20 > EMA50"
       ],
@@ -825,23 +868,24 @@
       "trend_uyumu": false
     },
     "BAKAB": {
-      "kapanis": 37.42,
-      "rsi": 54.1,
+      "kapanis": 37.36,
+      "rsi": 60.6,
       "sinyaller": [
         "MACD Pozitif",
+        "Bant Sikismasi",
         "Destek Testi"
       ],
       "altin": null,
       "dip_vurusu": false,
-      "bant_sikismasi": false,
+      "bant_sikismasi": true,
       "guc_patlamasi": false,
       "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "BALAT": {
-      "kapanis": 94.65,
-      "rsi": 61.9,
+      "kapanis": 93.55,
+      "rsi": 45.8,
       "sinyaller": [
         "MACD Pozitif",
         "Bant Sikismasi",
@@ -856,8 +900,8 @@
       "trend_uyumu": false
     },
     "BANVT": {
-      "kapanis": 157.7,
-      "rsi": 48.1,
+      "kapanis": 158.0,
+      "rsi": 38.9,
       "sinyaller": [
         "MACD Pozitif",
         "Destek Testi"
@@ -871,13 +915,12 @@
       "trend_uyumu": false
     },
     "BARMA": {
-      "kapanis": 43.7,
-      "rsi": 66.2,
+      "kapanis": 44.48,
+      "rsi": 65.7,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
-        "Ters Cekic",
         "Guc Patlamasi",
         "Destek Testi",
         "Trend Uyumu"
@@ -891,29 +934,33 @@
       "trend_uyumu": true
     },
     "BASCM": {
-      "kapanis": 14.8,
-      "rsi": 67.5,
+      "kapanis": 14.49,
+      "rsi": 59.4,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "Guc Patlamasi"
+        "Guc Patlamasi",
+        "Destek Testi"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": true,
-      "destek_testi": false,
+      "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "BASGZ": {
-      "kapanis": 47.06,
-      "rsi": 58.6,
+      "kapanis": 46.88,
+      "rsi": 41.3,
       "sinyaller": [
+        "MACD Al Kesisimi",
+        "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
         "Golden Cross",
-        "Destek Testi"
+        "Destek Testi",
+        "Trend Uyumu"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
@@ -921,13 +968,12 @@
       "guc_patlamasi": false,
       "destek_testi": true,
       "hacim_bombasi": false,
-      "trend_uyumu": false
+      "trend_uyumu": true
     },
     "BAYRK": {
-      "kapanis": 4.6,
+      "kapanis": 4.61,
       "rsi": 63.3,
       "sinyaller": [
-        "MACD Al Kesisimi",
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
         "Guc Patlamasi",
@@ -942,8 +988,8 @@
       "trend_uyumu": false
     },
     "BEGYO": {
-      "kapanis": 4.19,
-      "rsi": 58.5,
+      "kapanis": 4.23,
+      "rsi": 58.1,
       "sinyaller": [
         "MACD Pozitif",
         "Destek Testi"
@@ -957,8 +1003,8 @@
       "trend_uyumu": false
     },
     "BERA": {
-      "kapanis": 20.98,
-      "rsi": 89.5,
+      "kapanis": 20.94,
+      "rsi": 86.7,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -975,8 +1021,8 @@
       "trend_uyumu": true
     },
     "BEYAZ": {
-      "kapanis": 28.58,
-      "rsi": 56.1,
+      "kapanis": 28.82,
+      "rsi": 57.1,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -992,8 +1038,8 @@
       "trend_uyumu": false
     },
     "BFREN": {
-      "kapanis": 143.5,
-      "rsi": 48.3,
+      "kapanis": 144.1,
+      "rsi": 47.9,
       "sinyaller": [
         "MACD Pozitif",
         "Destek Testi"
@@ -1007,14 +1053,13 @@
       "trend_uyumu": false
     },
     "BIMAS": {
-      "kapanis": 680.5,
-      "rsi": 53.1,
+      "kapanis": 679.5,
+      "rsi": 50.5,
       "sinyaller": [
-        "MACD Al Kesisimi",
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -1023,8 +1068,8 @@
       "trend_uyumu": false
     },
     "BIOEN": {
-      "kapanis": 16.88,
-      "rsi": 66.1,
+      "kapanis": 16.74,
+      "rsi": 63.7,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -1040,8 +1085,8 @@
       "trend_uyumu": false
     },
     "BIZIM": {
-      "kapanis": 27.88,
-      "rsi": 52.5,
+      "kapanis": 27.9,
+      "rsi": 50.5,
       "sinyaller": [
         "MACD Pozitif"
       ],
@@ -1055,13 +1100,12 @@
     },
     "BJKAS": {
       "kapanis": 1.48,
-      "rsi": 51.9,
+      "rsi": 50.0,
       "sinyaller": [
-        "MACD Al Kesisimi",
         "MACD Pozitif",
         "Destek Testi"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -1070,8 +1114,8 @@
       "trend_uyumu": false
     },
     "BLCYT": {
-      "kapanis": 41.02,
-      "rsi": 72.4,
+      "kapanis": 40.96,
+      "rsi": 72.7,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -1086,24 +1130,25 @@
       "trend_uyumu": false
     },
     "BMSCH": {
-      "kapanis": 18.53,
-      "rsi": 80.1,
+      "kapanis": 18.17,
+      "rsi": 68.8,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "Guc Patlamasi"
+        "Guc Patlamasi",
+        "Destek Testi"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": true,
-      "destek_testi": false,
+      "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "BMSTL": {
-      "kapanis": 83.7,
-      "rsi": 74.7,
+      "kapanis": 83.2,
+      "rsi": 84.5,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -1119,7 +1164,7 @@
     },
     "BNTAS": {
       "kapanis": 6.44,
-      "rsi": 60.0,
+      "rsi": 58.8,
       "sinyaller": [
         "MACD Pozitif",
         "Destek Testi"
@@ -1133,8 +1178,8 @@
       "trend_uyumu": false
     },
     "BOBET": {
-      "kapanis": 19.71,
-      "rsi": 50.8,
+      "kapanis": 19.88,
+      "rsi": 53.5,
       "sinyaller": [
         "MACD Pozitif",
         "Bant Sikismasi",
@@ -1149,8 +1194,8 @@
       "trend_uyumu": false
     },
     "BOSSA": {
-      "kapanis": 6.46,
-      "rsi": 54.9,
+      "kapanis": 6.48,
+      "rsi": 55.3,
       "sinyaller": [
         "MACD Pozitif",
         "Destek Testi"
@@ -1164,8 +1209,8 @@
       "trend_uyumu": false
     },
     "BRISA": {
-      "kapanis": 88.95,
-      "rsi": 57.0,
+      "kapanis": 90.05,
+      "rsi": 61.3,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -1181,8 +1226,8 @@
       "trend_uyumu": false
     },
     "BRKO": {
-      "kapanis": 13.99,
-      "rsi": 34.0,
+      "kapanis": 13.92,
+      "rsi": 29.5,
       "sinyaller": [
         "EMA20 > EMA50",
         "RSI Asiri Satim",
@@ -1197,8 +1242,8 @@
       "trend_uyumu": false
     },
     "BRKSN": {
-      "kapanis": 9.02,
-      "rsi": 66.9,
+      "kapanis": 8.97,
+      "rsi": 63.0,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -1216,56 +1261,64 @@
       "trend_uyumu": true
     },
     "BRKVY": {
-      "kapanis": 91.4,
-      "rsi": 60.0,
+      "kapanis": 92.0,
+      "rsi": 58.6,
       "sinyaller": [
         "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "Boga Harami",
         "Bant Sikismasi",
+        "Guc Patlamasi",
         "Destek Testi"
       ],
-      "altin": null,
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": true,
-      "guc_patlamasi": false,
+      "guc_patlamasi": true,
       "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "BRLSM": {
-      "kapanis": 16.53,
-      "rsi": 53.9,
+      "kapanis": 16.72,
+      "rsi": 52.6,
       "sinyaller": [
+        "MACD Al Kesisimi",
+        "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "EMA20 > EMA50"
+        "EMA20 > EMA50",
+        "Trend Uyumu"
       ],
-      "altin": null,
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
       "destek_testi": false,
       "hacim_bombasi": false,
-      "trend_uyumu": false
+      "trend_uyumu": true
     },
     "BRMEN": {
-      "kapanis": 7.3,
-      "rsi": 40.1,
+      "kapanis": 7.93,
+      "rsi": 55.2,
       "sinyaller": [
-        "MACD Pozitif"
+        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "Guc Patlamasi"
       ],
-      "altin": null,
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
-      "guc_patlamasi": false,
+      "guc_patlamasi": true,
       "destek_testi": false,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "BRSAN": {
-      "kapanis": 533.0,
-      "rsi": 36.4,
+      "kapanis": 533.5,
+      "rsi": 36.6,
       "sinyaller": [
-        "MACD Al Kesisimi",
-        "MACD Pozitif"
+        "MACD Pozitif",
+        "Boga Harami"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
@@ -1276,25 +1329,24 @@
       "trend_uyumu": false
     },
     "BRYAT": {
-      "kapanis": 2269.0,
-      "rsi": 60.3,
+      "kapanis": 2246.0,
+      "rsi": 55.5,
       "sinyaller": [
         "MACD Pozitif",
-        "Fiyat EMA20 Ustunde",
-        "Guc Patlamasi",
+        "Boga Harami",
         "Destek Testi"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
-      "guc_patlamasi": true,
+      "guc_patlamasi": false,
       "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "BSOKE": {
-      "kapanis": 32.96,
-      "rsi": 76.4,
+      "kapanis": 34.3,
+      "rsi": 81.2,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -1311,8 +1363,8 @@
       "trend_uyumu": true
     },
     "BTCIM": {
-      "kapanis": 5.84,
-      "rsi": 66.1,
+      "kapanis": 5.95,
+      "rsi": 65.3,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -1329,23 +1381,24 @@
       "trend_uyumu": true
     },
     "BUCIM": {
-      "kapanis": 6.18,
-      "rsi": 61.3,
+      "kapanis": 6.19,
+      "rsi": 59.2,
       "sinyaller": [
         "MACD Pozitif",
+        "Bant Sikismasi",
         "Destek Testi"
       ],
       "altin": null,
       "dip_vurusu": false,
-      "bant_sikismasi": false,
+      "bant_sikismasi": true,
       "guc_patlamasi": false,
       "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "BURCE": {
-      "kapanis": 42.04,
-      "rsi": 33.0,
+      "kapanis": 40.98,
+      "rsi": 32.0,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -1358,8 +1411,8 @@
       "trend_uyumu": false
     },
     "BURVA": {
-      "kapanis": 932.5,
-      "rsi": 73.4,
+      "kapanis": 902.0,
+      "rsi": 69.7,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -1376,29 +1429,31 @@
       "trend_uyumu": true
     },
     "BVSAN": {
-      "kapanis": 111.7,
-      "rsi": 66.9,
+      "kapanis": 112.0,
+      "rsi": 65.7,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "Bant Sikismasi",
         "Guc Patlamasi"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
-      "bant_sikismasi": true,
+      "bant_sikismasi": false,
       "guc_patlamasi": true,
       "destek_testi": false,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "BYDNR": {
-      "kapanis": 36.24,
-      "rsi": 78.2,
+      "kapanis": 36.32,
+      "rsi": 79.8,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "Guc Patlamasi"
+        "EMA20 > EMA50",
+        "Golden Cross",
+        "Guc Patlamasi",
+        "Trend Uyumu"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
@@ -1406,56 +1461,58 @@
       "guc_patlamasi": true,
       "destek_testi": false,
       "hacim_bombasi": false,
-      "trend_uyumu": false
+      "trend_uyumu": true
     },
     "CANTE": {
       "kapanis": 1.52,
-      "rsi": 55.0,
+      "rsi": 52.6,
       "sinyaller": [
-        "MACD Pozitif"
+        "MACD Pozitif",
+        "Destek Testi"
       ],
       "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
-      "destek_testi": false,
+      "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "CEMAS": {
       "kapanis": 4.8,
-      "rsi": 56.2,
+      "rsi": 52.0,
       "sinyaller": [
         "MACD Pozitif",
-        "Ters Cekic",
+        "Bant Sikismasi",
         "Destek Testi"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
-      "bant_sikismasi": false,
+      "bant_sikismasi": true,
       "guc_patlamasi": false,
       "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "CEMTS": {
-      "kapanis": 10.51,
-      "rsi": 53.2,
+      "kapanis": 10.57,
+      "rsi": 50.7,
       "sinyaller": [
         "MACD Pozitif",
+        "Bant Sikismasi",
         "Destek Testi"
       ],
       "altin": null,
       "dip_vurusu": false,
-      "bant_sikismasi": false,
+      "bant_sikismasi": true,
       "guc_patlamasi": false,
       "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "CEOEM": {
-      "kapanis": 20.62,
-      "rsi": 62.3,
+      "kapanis": 20.6,
+      "rsi": 51.0,
       "sinyaller": [
         "MACD Pozitif",
         "Bant Sikismasi",
@@ -1470,8 +1527,8 @@
       "trend_uyumu": false
     },
     "CIMSA": {
-      "kapanis": 48.56,
-      "rsi": 49.2,
+      "kapanis": 48.68,
+      "rsi": 47.1,
       "sinyaller": [
         "MACD Pozitif",
         "Destek Testi"
@@ -1485,45 +1542,44 @@
       "trend_uyumu": false
     },
     "CLEBI": {
-      "kapanis": 1779.0,
-      "rsi": 68.6,
+      "kapanis": 1855.0,
+      "rsi": 76.3,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "Guc Patlamasi",
-        "Destek Testi"
+        "Guc Patlamasi"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": true,
-      "destek_testi": true,
+      "destek_testi": false,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "CMBTN": {
-      "kapanis": 1710.0,
-      "rsi": 46.8,
+      "kapanis": 1738.0,
+      "rsi": 47.7,
       "sinyaller": [
-        "MACD Pozitif"
+        "MACD Pozitif",
+        "Destek Testi"
       ],
       "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
-      "destek_testi": false,
+      "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "CMENT": {
       "kapanis": 325.0,
-      "rsi": 63.5,
+      "rsi": 61.0,
       "sinyaller": [
-        "MACD Al Kesisimi",
         "MACD Pozitif",
         "Destek Testi"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -1532,28 +1588,28 @@
       "trend_uyumu": false
     },
     "CONSE": {
-      "kapanis": 3.26,
-      "rsi": 64.6,
+      "kapanis": 3.25,
+      "rsi": 61.3,
       "sinyaller": [
         "MACD Pozitif",
+        "Bant Sikismasi",
         "Destek Testi"
       ],
       "altin": null,
       "dip_vurusu": false,
-      "bant_sikismasi": false,
+      "bant_sikismasi": true,
       "guc_patlamasi": false,
       "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "COSMO": {
-      "kapanis": 193.2,
-      "rsi": 41.2,
+      "kapanis": 191.8,
+      "rsi": 37.3,
       "sinyaller": [
-        "MACD Al Kesisimi",
         "MACD Pozitif"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -1562,8 +1618,8 @@
       "trend_uyumu": false
     },
     "CRDFA": {
-      "kapanis": 73.95,
-      "rsi": 63.3,
+      "kapanis": 74.5,
+      "rsi": 65.4,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -1581,58 +1637,60 @@
       "trend_uyumu": true
     },
     "CRFSA": {
-      "kapanis": 128.5,
-      "rsi": 60.7,
+      "kapanis": 127.8,
+      "rsi": 52.5,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "Ters Cekic",
-        "Guc Patlamasi",
         "Destek Testi"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
-      "guc_patlamasi": true,
+      "guc_patlamasi": false,
       "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "CUSAN": {
-      "kapanis": 23.48,
-      "rsi": 58.8,
+      "kapanis": 23.5,
+      "rsi": 60.4,
       "sinyaller": [
         "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
         "Bant Sikismasi",
+        "Guc Patlamasi",
         "Destek Testi"
       ],
-      "altin": null,
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": true,
-      "guc_patlamasi": false,
+      "guc_patlamasi": true,
       "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "CVKMD": {
-      "kapanis": 31.76,
-      "rsi": 51.5,
+      "kapanis": 32.5,
+      "rsi": 60.3,
       "sinyaller": [
         "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
         "Bant Sikismasi",
+        "Guc Patlamasi",
         "Destek Testi"
       ],
-      "altin": null,
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": true,
-      "guc_patlamasi": false,
+      "guc_patlamasi": true,
       "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "CWENE": {
-      "kapanis": 29.12,
-      "rsi": 49.3,
+      "kapanis": 29.2,
+      "rsi": 55.6,
       "sinyaller": [
         "MACD Pozitif",
         "Destek Testi"
@@ -1647,7 +1705,7 @@
     },
     "DAGI": {
       "kapanis": 5.87,
-      "rsi": 62.2,
+      "rsi": 66.7,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -1664,7 +1722,7 @@
     },
     "DARDL": {
       "kapanis": 2.1,
-      "rsi": 62.2,
+      "rsi": 61.1,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -1681,8 +1739,8 @@
       "trend_uyumu": false
     },
     "DENGE": {
-      "kapanis": 2.55,
-      "rsi": 57.9,
+      "kapanis": 2.56,
+      "rsi": 58.3,
       "sinyaller": [
         "MACD Pozitif",
         "Bant Sikismasi",
@@ -1697,12 +1755,13 @@
       "trend_uyumu": false
     },
     "DERHL": {
-      "kapanis": 14.86,
-      "rsi": 60.6,
+      "kapanis": 14.91,
+      "rsi": 64.7,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
+        "Boga Harami",
         "Bant Sikismasi",
         "Guc Patlamasi",
         "Destek Testi",
@@ -1717,10 +1776,12 @@
       "trend_uyumu": true
     },
     "DERIM": {
-      "kapanis": 35.72,
-      "rsi": 56.4,
-      "sinyaller": [],
-      "altin": null,
+      "kapanis": 35.4,
+      "rsi": 52.9,
+      "sinyaller": [
+        "Ters Cekic"
+      ],
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -1729,29 +1790,25 @@
       "trend_uyumu": false
     },
     "DESA": {
-      "kapanis": 12.49,
-      "rsi": 66.0,
+      "kapanis": 12.46,
+      "rsi": 66.8,
       "sinyaller": [
-        "MACD Al Kesisimi",
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "Hacim Alarmi",
-        "Guc Patlamasi",
-        "Hacim Bombasi"
+        "Guc Patlamasi"
       ],
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": true,
       "destek_testi": false,
-      "hacim_bombasi": true,
+      "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "DESPC": {
-      "kapanis": 39.84,
-      "rsi": 26.2,
+      "kapanis": 39.46,
+      "rsi": 22.3,
       "sinyaller": [
-        "MACD Al Kesisimi",
         "MACD Pozitif",
         "RSI Asiri Satim"
       ],
@@ -1764,8 +1821,8 @@
       "trend_uyumu": false
     },
     "DEVA": {
-      "kapanis": 60.4,
-      "rsi": 25.7,
+      "kapanis": 60.5,
+      "rsi": 27.0,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -1778,12 +1835,12 @@
       "trend_uyumu": false
     },
     "DGATE": {
-      "kapanis": 71.95,
-      "rsi": 65.0,
+      "kapanis": 73.35,
+      "rsi": 68.6,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "Hacim Alarmi",
+        "Boga Harami",
         "Guc Patlamasi"
       ],
       "altin": "Bronz",
@@ -1795,54 +1852,8 @@
       "trend_uyumu": false
     },
     "DGNMO": {
-      "kapanis": 4.1,
-      "rsi": 34.8,
-      "sinyaller": [
-        "RSI Asiri Satim"
-      ],
-      "altin": "Bronz",
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": false,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "DIRIT": {
-      "kapanis": 27.5,
-      "rsi": 63.7,
-      "sinyaller": [
-        "EMA20 > EMA50",
-        "Destek Testi"
-      ],
-      "altin": null,
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": true,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "DITAS": {
-      "kapanis": 47.56,
-      "rsi": 77.7,
-      "sinyaller": [
-        "MACD Pozitif",
-        "Fiyat EMA20 Ustunde",
-        "Sabah Yildizi",
-        "Guc Patlamasi"
-      ],
-      "altin": "Bronz",
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": true,
-      "destek_testi": false,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "DMSAS": {
-      "kapanis": 8.2,
-      "rsi": 36.4,
+      "kapanis": 4.11,
+      "rsi": 36.8,
       "sinyaller": [],
       "altin": null,
       "dip_vurusu": false,
@@ -1852,172 +1863,10 @@
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
-    "DNISI": {
-      "kapanis": 20.22,
-      "rsi": 64.4,
+    "DIRIT": {
+      "kapanis": 26.9,
+      "rsi": 55.5,
       "sinyaller": [
-        "MACD Pozitif",
-        "Destek Testi"
-      ],
-      "altin": null,
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": true,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "DOAS": {
-      "kapanis": 200.4,
-      "rsi": 46.5,
-      "sinyaller": [
-        "MACD Pozitif",
-        "Destek Testi"
-      ],
-      "altin": null,
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": true,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "DOGUB": {
-      "kapanis": 67.75,
-      "rsi": 78.2,
-      "sinyaller": [
-        "MACD Pozitif",
-        "Fiyat EMA20 Ustunde",
-        "EMA20 > EMA50",
-        "Guc Patlamasi",
-        "Trend Uyumu"
-      ],
-      "altin": "Bronz",
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": true,
-      "destek_testi": false,
-      "hacim_bombasi": false,
-      "trend_uyumu": true
-    },
-    "DOHOL": {
-      "kapanis": 21.36,
-      "rsi": 73.6,
-      "sinyaller": [
-        "MACD Pozitif",
-        "Fiyat EMA20 Ustunde",
-        "Guc Patlamasi"
-      ],
-      "altin": "Bronz",
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": true,
-      "destek_testi": false,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "DURDO": {
-      "kapanis": 3.69,
-      "rsi": 59.3,
-      "sinyaller": [
-        "MACD Pozitif",
-        "Destek Testi"
-      ],
-      "altin": null,
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": true,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "DYOBY": {
-      "kapanis": 13.26,
-      "rsi": 59.2,
-      "sinyaller": [
-        "MACD Pozitif",
-        "Fiyat EMA20 Ustunde",
-        "Guc Patlamasi",
-        "Destek Testi"
-      ],
-      "altin": "Bronz",
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": true,
-      "destek_testi": true,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "DZGYO": {
-      "kapanis": 7.54,
-      "rsi": 27.1,
-      "sinyaller": [
-        "RSI Asiri Satim"
-      ],
-      "altin": "Bronz",
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": false,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "EBEBK": {
-      "kapanis": 62.8,
-      "rsi": 49.1,
-      "sinyaller": [
-        "Fiyat EMA20 Ustunde",
-        "EMA20 > EMA50",
-        "Destek Testi"
-      ],
-      "altin": null,
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": true,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "ECILC": {
-      "kapanis": 115.2,
-      "rsi": 64.1,
-      "sinyaller": [
-        "MACD Pozitif",
-        "Fiyat EMA20 Ustunde",
-        "Ters Cekic",
-        "Bant Sikismasi",
-        "Guc Patlamasi",
-        "Destek Testi"
-      ],
-      "altin": "Bronz",
-      "dip_vurusu": false,
-      "bant_sikismasi": true,
-      "guc_patlamasi": true,
-      "destek_testi": true,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "ECZYT": {
-      "kapanis": 287.25,
-      "rsi": 57.7,
-      "sinyaller": [
-        "MACD Pozitif",
-        "Bant Sikismasi",
-        "Destek Testi"
-      ],
-      "altin": null,
-      "dip_vurusu": false,
-      "bant_sikismasi": true,
-      "guc_patlamasi": false,
-      "destek_testi": true,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "EDATA": {
-      "kapanis": 13.76,
-      "rsi": 58.9,
-      "sinyaller": [
-        "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50"
       ],
       "altin": null,
@@ -2028,179 +1877,9 @@
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
-    "EDIP": {
-      "kapanis": 35.24,
-      "rsi": 59.3,
-      "sinyaller": [
-        "MACD Pozitif",
-        "Bant Sikismasi",
-        "Destek Testi"
-      ],
-      "altin": null,
-      "dip_vurusu": false,
-      "bant_sikismasi": true,
-      "guc_patlamasi": false,
-      "destek_testi": true,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "EGEEN": {
-      "kapanis": 5920.0,
-      "rsi": 38.7,
-      "sinyaller": [
-        "MACD Pozitif"
-      ],
-      "altin": null,
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": false,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "EGGUB": {
-      "kapanis": 107.3,
-      "rsi": 92.6,
-      "sinyaller": [
-        "MACD Pozitif",
-        "Fiyat EMA20 Ustunde",
-        "EMA20 > EMA50",
-        "Ters Cekic",
-        "Guc Patlamasi",
-        "Trend Uyumu"
-      ],
-      "altin": "Bronz",
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": true,
-      "destek_testi": false,
-      "hacim_bombasi": false,
-      "trend_uyumu": true
-    },
-    "EGPRO": {
-      "kapanis": 27.1,
-      "rsi": 58.2,
-      "sinyaller": [
-        "MACD Al Kesisimi",
-        "MACD Pozitif",
-        "Fiyat EMA20 Ustunde",
-        "Guc Patlamasi"
-      ],
-      "altin": "Bronz",
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": true,
-      "destek_testi": false,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "EGSER": {
-      "kapanis": 2.89,
-      "rsi": 47.5,
-      "sinyaller": [
-        "MACD Pozitif",
-        "Destek Testi"
-      ],
-      "altin": null,
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": true,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "EKGYO": {
-      "kapanis": 21.22,
-      "rsi": 38.7,
-      "sinyaller": [],
-      "altin": null,
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": false,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "EKSUN": {
-      "kapanis": 5.58,
-      "rsi": 80.5,
-      "sinyaller": [
-        "MACD Pozitif",
-        "Fiyat EMA20 Ustunde",
-        "Guc Patlamasi",
-        "Destek Testi"
-      ],
-      "altin": "Bronz",
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": true,
-      "destek_testi": true,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "ELITE": {
-      "kapanis": 30.12,
-      "rsi": 59.5,
-      "sinyaller": [
-        "MACD Pozitif",
-        "Fiyat EMA20 Ustunde",
-        "Guc Patlamasi",
-        "Destek Testi"
-      ],
-      "altin": "Bronz",
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": true,
-      "destek_testi": true,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "EMKEL": {
-      "kapanis": 18.68,
-      "rsi": 52.7,
-      "sinyaller": [
-        "MACD Pozitif"
-      ],
-      "altin": null,
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": false,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "EMNIS": {
-      "kapanis": 152.0,
-      "rsi": 48.5,
-      "sinyaller": [
-        "MACD Pozitif",
-        "Destek Testi"
-      ],
-      "altin": null,
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": true,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "ENERY": {
-      "kapanis": 9.08,
-      "rsi": 27.8,
-      "sinyaller": [
-        "RSI Asiri Satim"
-      ],
-      "altin": "Bronz",
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": false,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "ENJSA": {
-      "kapanis": 113.0,
-      "rsi": 72.1,
+    "DITAS": {
+      "kapanis": 48.32,
+      "rsi": 78.9,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -2217,11 +1896,13 @@
       "hacim_bombasi": false,
       "trend_uyumu": true
     },
-    "ENKAI": {
-      "kapanis": 91.9,
-      "rsi": 36.1,
-      "sinyaller": [],
-      "altin": null,
+    "DMSAS": {
+      "kapanis": 8.17,
+      "rsi": 34.6,
+      "sinyaller": [
+        "RSI Asiri Satim"
+      ],
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -2229,8 +1910,38 @@
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
-    "ENSRI": {
-      "kapanis": 31.7,
+    "DNISI": {
+      "kapanis": 20.16,
+      "rsi": 58.6,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Destek Testi"
+      ],
+      "altin": null,
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": false,
+      "destek_testi": true,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "DOAS": {
+      "kapanis": 199.7,
+      "rsi": 45.9,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Destek Testi"
+      ],
+      "altin": null,
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": false,
+      "destek_testi": true,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "DOGUB": {
+      "kapanis": 67.25,
       "rsi": 77.2,
       "sinyaller": [
         "MACD Pozitif",
@@ -2247,9 +1958,139 @@
       "hacim_bombasi": false,
       "trend_uyumu": true
     },
-    "EPLAS": {
-      "kapanis": 6.16,
-      "rsi": 62.5,
+    "DOHOL": {
+      "kapanis": 21.4,
+      "rsi": 72.4,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "Guc Patlamasi"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": true,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "DURDO": {
+      "kapanis": 3.73,
+      "rsi": 61.0,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "Guc Patlamasi",
+        "Destek Testi"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": true,
+      "destek_testi": true,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "DYOBY": {
+      "kapanis": 13.21,
+      "rsi": 56.0,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Destek Testi"
+      ],
+      "altin": null,
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": false,
+      "destek_testi": true,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "DZGYO": {
+      "kapanis": 7.54,
+      "rsi": 28.5,
+      "sinyaller": [
+        "MACD Al Kesisimi",
+        "MACD Pozitif",
+        "RSI Asiri Satim"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": false,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "EBEBK": {
+      "kapanis": 62.2,
+      "rsi": 45.8,
+      "sinyaller": [
+        "EMA20 > EMA50",
+        "Destek Testi"
+      ],
+      "altin": null,
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": false,
+      "destek_testi": true,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "ECILC": {
+      "kapanis": 115.2,
+      "rsi": 60.8,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "Bant Sikismasi",
+        "Guc Patlamasi",
+        "Destek Testi"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": true,
+      "guc_patlamasi": true,
+      "destek_testi": true,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "ECZYT": {
+      "kapanis": 288.75,
+      "rsi": 56.0,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Boga Harami",
+        "Bant Sikismasi",
+        "Destek Testi"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": true,
+      "guc_patlamasi": false,
+      "destek_testi": true,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "EDATA": {
+      "kapanis": 13.57,
+      "rsi": 56.7,
+      "sinyaller": [
+        "Fiyat EMA20 Ustunde",
+        "EMA20 > EMA50",
+        "Destek Testi"
+      ],
+      "altin": null,
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": false,
+      "destek_testi": true,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "EDIP": {
+      "kapanis": 35.36,
+      "rsi": 60.1,
       "sinyaller": [
         "MACD Pozitif",
         "Bant Sikismasi",
@@ -2259,35 +2100,264 @@
       "dip_vurusu": false,
       "bant_sikismasi": true,
       "guc_patlamasi": false,
+      "destek_testi": true,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "EGEEN": {
+      "kapanis": 5897.5,
+      "rsi": 36.9,
+      "sinyaller": [
+        "MACD Pozitif"
+      ],
+      "altin": null,
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": false,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "EGGUB": {
+      "kapanis": 107.9,
+      "rsi": 92.0,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "EMA20 > EMA50",
+        "Guc Patlamasi",
+        "Trend Uyumu"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": true,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": true
+    },
+    "EGPRO": {
+      "kapanis": 26.86,
+      "rsi": 59.5,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "Guc Patlamasi"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": true,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "EGSER": {
+      "kapanis": 2.9,
+      "rsi": 48.8,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Destek Testi"
+      ],
+      "altin": null,
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": false,
+      "destek_testi": true,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "EKGYO": {
+      "kapanis": 21.16,
+      "rsi": 37.9,
+      "sinyaller": [
+        "MACD Al Kesisimi",
+        "MACD Pozitif",
+        "Boga Harami"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": false,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "EKSUN": {
+      "kapanis": 5.58,
+      "rsi": 78.1,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "Guc Patlamasi",
+        "Destek Testi"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": true,
+      "destek_testi": true,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "ELITE": {
+      "kapanis": 30.42,
+      "rsi": 62.9,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "Bant Sikismasi",
+        "Guc Patlamasi",
+        "Destek Testi"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": true,
+      "guc_patlamasi": true,
+      "destek_testi": true,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "EMKEL": {
+      "kapanis": 18.81,
+      "rsi": 52.7,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Yutan Boga",
+        "Destek Testi"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": false,
+      "destek_testi": true,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "EMNIS": {
+      "kapanis": 151.3,
+      "rsi": 46.3,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Destek Testi"
+      ],
+      "altin": null,
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": false,
+      "destek_testi": true,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "ENERY": {
+      "kapanis": 9.13,
+      "rsi": 32.7,
+      "sinyaller": [
+        "RSI Asiri Satim"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": false,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "ENJSA": {
+      "kapanis": 113.1,
+      "rsi": 70.5,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "EMA20 > EMA50",
+        "Guc Patlamasi",
+        "Trend Uyumu"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": true,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": true
+    },
+    "ENKAI": {
+      "kapanis": 91.25,
+      "rsi": 30.4,
+      "sinyaller": [
+        "RSI Asiri Satim"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": false,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "ENSRI": {
+      "kapanis": 31.48,
+      "rsi": 74.7,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "EMA20 > EMA50",
+        "Guc Patlamasi",
+        "Trend Uyumu"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": true,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": true
+    },
+    "EPLAS": {
+      "kapanis": 6.18,
+      "rsi": 64.3,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "Bant Sikismasi",
+        "Guc Patlamasi",
+        "Destek Testi"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": true,
+      "guc_patlamasi": true,
       "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "ERBOS": {
-      "kapanis": 178.0,
-      "rsi": 65.7,
+      "kapanis": 174.9,
+      "rsi": 57.4,
       "sinyaller": [
         "MACD Pozitif",
-        "Bant Sikismasi",
-        "Destek Testi"
+        "Ters Cekic",
+        "Boga Harami",
+        "Bant Sikismasi"
       ],
-      "altin": null,
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": true,
       "guc_patlamasi": false,
-      "destek_testi": true,
+      "destek_testi": false,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "ERCB": {
-      "kapanis": 53.8,
-      "rsi": 55.7,
+      "kapanis": 53.75,
+      "rsi": 53.3,
       "sinyaller": [
         "MACD Pozitif",
+        "Boga Harami",
         "Bant Sikismasi",
         "Destek Testi"
       ],
-      "altin": null,
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": true,
       "guc_patlamasi": false,
@@ -2296,8 +2366,8 @@
       "trend_uyumu": false
     },
     "EREGL": {
-      "kapanis": 29.1,
-      "rsi": 25.8,
+      "kapanis": 29.08,
+      "rsi": 28.4,
       "sinyaller": [
         "EMA20 > EMA50",
         "RSI Asiri Satim",
@@ -2312,8 +2382,8 @@
       "trend_uyumu": false
     },
     "ERSU": {
-      "kapanis": 20.04,
-      "rsi": 66.7,
+      "kapanis": 21.56,
+      "rsi": 74.9,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -2330,7 +2400,7 @@
       "trend_uyumu": true
     },
     "ESCAR": {
-      "kapanis": 27.82,
+      "kapanis": 27.42,
       "rsi": 55.8,
       "sinyaller": [
         "MACD Pozitif",
@@ -2350,8 +2420,8 @@
       "trend_uyumu": true
     },
     "ESCOM": {
-      "kapanis": 6.51,
-      "rsi": 68.1,
+      "kapanis": 6.24,
+      "rsi": 61.7,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50"
@@ -2365,8 +2435,8 @@
       "trend_uyumu": false
     },
     "ESEN": {
-      "kapanis": 3.95,
-      "rsi": 70.4,
+      "kapanis": 3.99,
+      "rsi": 71.4,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -2381,12 +2451,11 @@
       "trend_uyumu": false
     },
     "ETILR": {
-      "kapanis": 4.04,
-      "rsi": 74.1,
+      "kapanis": 4.01,
+      "rsi": 70.3,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "Hacim Alarmi",
         "Guc Patlamasi"
       ],
       "altin": "Bronz",
@@ -2398,23 +2467,26 @@
       "trend_uyumu": false
     },
     "ETYAT": {
-      "kapanis": 22.7,
-      "rsi": 49.2,
+      "kapanis": 23.12,
+      "rsi": 57.0,
       "sinyaller": [
         "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "Ters Cekic",
+        "Guc Patlamasi",
         "Destek Testi"
       ],
-      "altin": null,
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
-      "guc_patlamasi": false,
+      "guc_patlamasi": true,
       "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "EUHOL": {
-      "kapanis": 14.9,
-      "rsi": 55.7,
+      "kapanis": 15.1,
+      "rsi": 55.2,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -2429,8 +2501,57 @@
       "trend_uyumu": false
     },
     "EUKYO": {
-      "kapanis": 17.96,
-      "rsi": 55.6,
+      "kapanis": 18.02,
+      "rsi": 53.6,
+      "sinyaller": [
+        "Fiyat EMA20 Ustunde",
+        "EMA20 > EMA50",
+        "Cekic",
+        "Destek Testi"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": false,
+      "destek_testi": true,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "EUPWR": {
+      "kapanis": 36.12,
+      "rsi": 64.2,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "Bant Sikismasi",
+        "Guc Patlamasi",
+        "Destek Testi"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": true,
+      "guc_patlamasi": true,
+      "destek_testi": true,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "EUREN": {
+      "kapanis": 4.62,
+      "rsi": 41.8,
+      "sinyaller": [
+        "MACD Pozitif"
+      ],
+      "altin": null,
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": false,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "EUYO": {
+      "kapanis": 18.19,
+      "rsi": 53.1,
       "sinyaller": [
         "EMA20 > EMA50",
         "Destek Testi"
@@ -2443,61 +2564,10 @@
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
-    "EUPWR": {
-      "kapanis": 36.4,
-      "rsi": 65.9,
-      "sinyaller": [
-        "MACD Pozitif",
-        "Fiyat EMA20 Ustunde",
-        "Bant Sikismasi",
-        "Guc Patlamasi"
-      ],
-      "altin": "Bronz",
-      "dip_vurusu": false,
-      "bant_sikismasi": true,
-      "guc_patlamasi": true,
-      "destek_testi": false,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "EUREN": {
-      "kapanis": 4.64,
-      "rsi": 43.3,
-      "sinyaller": [
-        "MACD Al Kesisimi",
-        "MACD Pozitif",
-        "Ters Cekic"
-      ],
-      "altin": "Bronz",
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": false,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "EUYO": {
-      "kapanis": 18.32,
-      "rsi": 58.1,
-      "sinyaller": [
-        "Fiyat EMA20 Ustunde",
-        "EMA20 > EMA50",
-        "Yutan Boga",
-        "Destek Testi"
-      ],
-      "altin": "Bronz",
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": true,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
     "EYGYO": {
       "kapanis": 3.79,
-      "rsi": 49.4,
+      "rsi": 48.6,
       "sinyaller": [
-        "MACD Pozitif",
         "EMA20 > EMA50"
       ],
       "altin": null,
@@ -2509,8 +2579,8 @@
       "trend_uyumu": false
     },
     "FADE": {
-      "kapanis": 14.32,
-      "rsi": 61.0,
+      "kapanis": 14.31,
+      "rsi": 57.6,
       "sinyaller": [
         "MACD Pozitif",
         "Bant Sikismasi",
@@ -2526,7 +2596,7 @@
     },
     "FENER": {
       "kapanis": 2.9,
-      "rsi": 52.9,
+      "rsi": 50.7,
       "sinyaller": [
         "MACD Pozitif"
       ],
@@ -2539,24 +2609,28 @@
       "trend_uyumu": false
     },
     "FLAP": {
-      "kapanis": 10.13,
-      "rsi": 48.6,
+      "kapanis": 10.46,
+      "rsi": 62.9,
       "sinyaller": [
+        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
+        "Cekic",
         "Bant Sikismasi",
-        "Destek Testi"
+        "Guc Patlamasi",
+        "Trend Uyumu"
       ],
-      "altin": null,
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": true,
-      "guc_patlamasi": false,
-      "destek_testi": true,
+      "guc_patlamasi": true,
+      "destek_testi": false,
       "hacim_bombasi": false,
-      "trend_uyumu": false
+      "trend_uyumu": true
     },
     "FMIZP": {
-      "kapanis": 294.0,
-      "rsi": 62.1,
+      "kapanis": 296.0,
+      "rsi": 62.5,
       "sinyaller": [
         "MACD Pozitif",
         "Bant Sikismasi",
@@ -2571,8 +2645,8 @@
       "trend_uyumu": false
     },
     "FONET": {
-      "kapanis": 4.94,
-      "rsi": 73.2,
+      "kapanis": 4.73,
+      "rsi": 69.1,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -2590,7 +2664,7 @@
     },
     "FORMT": {
       "kapanis": 2.89,
-      "rsi": 59.3,
+      "rsi": 54.7,
       "sinyaller": [
         "MACD Pozitif",
         "Bant Sikismasi",
@@ -2605,8 +2679,8 @@
       "trend_uyumu": false
     },
     "FORTE": {
-      "kapanis": 90.95,
-      "rsi": 25.9,
+      "kapanis": 90.45,
+      "rsi": 25.4,
       "sinyaller": [
         "RSI Asiri Satim",
         "Destek Testi"
@@ -2621,7 +2695,7 @@
     },
     "FROTO": {
       "kapanis": 112.2,
-      "rsi": 51.1,
+      "rsi": 50.8,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -2636,10 +2710,9 @@
       "trend_uyumu": false
     },
     "FZLGY": {
-      "kapanis": 12.84,
-      "rsi": 59.9,
+      "kapanis": 12.65,
+      "rsi": 49.8,
       "sinyaller": [
-        "Fiyat EMA20 Ustunde",
         "Destek Testi"
       ],
       "altin": null,
@@ -2651,10 +2724,11 @@
       "trend_uyumu": false
     },
     "GARAN": {
-      "kapanis": 140.2,
-      "rsi": 34.4,
+      "kapanis": 139.9,
+      "rsi": 38.9,
       "sinyaller": [
-        "RSI Asiri Satim"
+        "MACD Al Kesisimi",
+        "MACD Pozitif"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
@@ -2665,16 +2739,16 @@
       "trend_uyumu": false
     },
     "GARFA": {
-      "kapanis": 26.3,
-      "rsi": 53.1,
+      "kapanis": 26.4,
+      "rsi": 55.1,
       "sinyaller": [
         "MACD Pozitif",
-        "Ters Cekic",
+        "Bant Sikismasi",
         "Destek Testi"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
-      "bant_sikismasi": false,
+      "bant_sikismasi": true,
       "guc_patlamasi": false,
       "destek_testi": true,
       "hacim_bombasi": false,
@@ -2682,7 +2756,7 @@
     },
     "GEDIK": {
       "kapanis": 5.64,
-      "rsi": 61.0,
+      "rsi": 58.9,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -2698,8 +2772,8 @@
       "trend_uyumu": false
     },
     "GEDZA": {
-      "kapanis": 31.12,
-      "rsi": 77.1,
+      "kapanis": 30.24,
+      "rsi": 68.8,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -2714,8 +2788,8 @@
       "trend_uyumu": false
     },
     "GENIL": {
-      "kapanis": 9.83,
-      "rsi": 92.6,
+      "kapanis": 9.69,
+      "rsi": 89.7,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -2732,8 +2806,8 @@
       "trend_uyumu": true
     },
     "GENTS": {
-      "kapanis": 9.14,
-      "rsi": 57.4,
+      "kapanis": 9.11,
+      "rsi": 54.8,
       "sinyaller": [
         "MACD Pozitif"
       ],
@@ -2746,8 +2820,8 @@
       "trend_uyumu": false
     },
     "GEREL": {
-      "kapanis": 29.92,
-      "rsi": 78.3,
+      "kapanis": 29.44,
+      "rsi": 73.8,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -2764,8 +2838,8 @@
       "trend_uyumu": true
     },
     "GESAN": {
-      "kapanis": 45.38,
-      "rsi": 56.6,
+      "kapanis": 45.54,
+      "rsi": 58.3,
       "sinyaller": [
         "MACD Pozitif",
         "Bant Sikismasi",
@@ -2780,8 +2854,8 @@
       "trend_uyumu": false
     },
     "GLBMD": {
-      "kapanis": 11.86,
-      "rsi": 57.6,
+      "kapanis": 11.88,
+      "rsi": 55.1,
       "sinyaller": [
         "MACD Pozitif",
         "Destek Testi"
@@ -2795,14 +2869,13 @@
       "trend_uyumu": false
     },
     "GLCVY": {
-      "kapanis": 67.4,
-      "rsi": 46.7,
+      "kapanis": 68.7,
+      "rsi": 45.3,
       "sinyaller": [
-        "MACD Al Kesisimi",
         "MACD Pozitif",
         "Destek Testi"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -2811,29 +2884,26 @@
       "trend_uyumu": false
     },
     "GLRYH": {
-      "kapanis": 4.95,
-      "rsi": 77.9,
+      "kapanis": 4.93,
+      "rsi": 73.6,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
-        "Golden Cross",
-        "Hacim Alarmi",
         "Guc Patlamasi",
-        "Hacim Bombasi",
         "Trend Uyumu"
       ],
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": true,
       "destek_testi": false,
-      "hacim_bombasi": true,
+      "hacim_bombasi": false,
       "trend_uyumu": true
     },
     "GLYHO": {
-      "kapanis": 14.09,
-      "rsi": 31.9,
+      "kapanis": 14.24,
+      "rsi": 30.1,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -2846,8 +2916,8 @@
       "trend_uyumu": false
     },
     "GMTAS": {
-      "kapanis": 27.98,
-      "rsi": 80.1,
+      "kapanis": 27.82,
+      "rsi": 73.5,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -2864,11 +2934,12 @@
       "trend_uyumu": true
     },
     "GOKNR": {
-      "kapanis": 22.32,
-      "rsi": 71.9,
+      "kapanis": 22.4,
+      "rsi": 71.8,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
+        "Boga Harami",
         "Bant Sikismasi",
         "Guc Patlamasi"
       ],
@@ -2882,7 +2953,7 @@
     },
     "GOLTS": {
       "kapanis": 340.0,
-      "rsi": 57.7,
+      "rsi": 57.4,
       "sinyaller": [
         "MACD Pozitif",
         "Bant Sikismasi",
@@ -2897,25 +2968,26 @@
       "trend_uyumu": false
     },
     "GOODY": {
-      "kapanis": 14.18,
-      "rsi": 41.5,
+      "kapanis": 14.17,
+      "rsi": 44.4,
       "sinyaller": [
-        "MACD Pozitif"
+        "MACD Pozitif",
+        "Destek Testi"
       ],
       "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
-      "destek_testi": false,
+      "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "GOZDE": {
-      "kapanis": 21.96,
-      "rsi": 35.8,
+      "kapanis": 21.82,
+      "rsi": 33.0,
       "sinyaller": [
-        "MACD Al Kesisimi",
-        "MACD Pozitif"
+        "MACD Pozitif",
+        "RSI Asiri Satim"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
@@ -2926,8 +2998,8 @@
       "trend_uyumu": false
     },
     "GRTHO": {
-      "kapanis": 255.5,
-      "rsi": 68.8,
+      "kapanis": 255.25,
+      "rsi": 67.8,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -2944,8 +3016,8 @@
       "trend_uyumu": true
     },
     "GSDDE": {
-      "kapanis": 9.54,
-      "rsi": 58.8,
+      "kapanis": 9.56,
+      "rsi": 57.0,
       "sinyaller": [
         "MACD Pozitif",
         "Destek Testi"
@@ -2959,8 +3031,8 @@
       "trend_uyumu": false
     },
     "GSDHO": {
-      "kapanis": 4.66,
-      "rsi": 68.0,
+      "kapanis": 4.63,
+      "rsi": 64.9,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -2977,14 +3049,13 @@
       "trend_uyumu": false
     },
     "GSRAY": {
-      "kapanis": 1.16,
-      "rsi": 50.0,
+      "kapanis": 1.15,
+      "rsi": 46.7,
       "sinyaller": [
-        "MACD Al Kesisimi",
         "MACD Pozitif",
         "Destek Testi"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -2993,8 +3064,8 @@
       "trend_uyumu": false
     },
     "GUBRF": {
-      "kapanis": 519.5,
-      "rsi": 47.8,
+      "kapanis": 515.5,
+      "rsi": 45.7,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -3013,24 +3084,23 @@
     },
     "GWIND": {
       "kapanis": 25.3,
-      "rsi": 56.1,
+      "rsi": 54.9,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "Guc Patlamasi",
         "Destek Testi"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
-      "guc_patlamasi": true,
+      "guc_patlamasi": false,
       "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "GZNMI": {
-      "kapanis": 64.0,
-      "rsi": 76.4,
+      "kapanis": 65.95,
+      "rsi": 77.5,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -3047,16 +3117,15 @@
       "trend_uyumu": true
     },
     "HALKB": {
-      "kapanis": 49.8,
-      "rsi": 54.9,
+      "kapanis": 49.02,
+      "rsi": 48.7,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
-        "Boga Harami",
         "Trend Uyumu"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -3065,10 +3134,13 @@
       "trend_uyumu": true
     },
     "HATEK": {
-      "kapanis": 14.42,
-      "rsi": 52.6,
-      "sinyaller": [],
-      "altin": null,
+      "kapanis": 14.45,
+      "rsi": 52.1,
+      "sinyaller": [
+        "MACD Al Kesisimi",
+        "MACD Pozitif"
+      ],
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -3078,7 +3150,7 @@
     },
     "HDFGS": {
       "kapanis": 3.2,
-      "rsi": 53.2,
+      "rsi": 42.9,
       "sinyaller": [],
       "altin": null,
       "dip_vurusu": false,
@@ -3089,23 +3161,24 @@
       "trend_uyumu": false
     },
     "HEDEF": {
-      "kapanis": 110.6,
-      "rsi": 72.0,
+      "kapanis": 109.5,
+      "rsi": 66.5,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
-        "EMA20 > EMA50"
+        "EMA20 > EMA50",
+        "Bant Sikismasi"
       ],
       "altin": null,
       "dip_vurusu": false,
-      "bant_sikismasi": false,
+      "bant_sikismasi": true,
       "guc_patlamasi": false,
       "destek_testi": false,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "HEKTS": {
-      "kapanis": 2.94,
-      "rsi": 56.4,
+      "kapanis": 2.92,
+      "rsi": 57.5,
       "sinyaller": [
         "MACD Pozitif",
         "Bant Sikismasi",
@@ -3120,13 +3193,12 @@
       "trend_uyumu": false
     },
     "HLGYO": {
-      "kapanis": 5.75,
-      "rsi": 85.4,
+      "kapanis": 5.6,
+      "rsi": 77.4,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
-        "Hacim Alarmi",
         "Guc Patlamasi",
         "Trend Uyumu"
       ],
@@ -3139,8 +3211,8 @@
       "trend_uyumu": true
     },
     "HOROZ": {
-      "kapanis": 57.3,
-      "rsi": 35.8,
+      "kapanis": 57.95,
+      "rsi": 42.6,
       "sinyaller": [],
       "altin": null,
       "dip_vurusu": false,
@@ -3152,7 +3224,7 @@
     },
     "HRKET": {
       "kapanis": 70.3,
-      "rsi": 60.3,
+      "rsi": 57.4,
       "sinyaller": [
         "MACD Pozitif",
         "Bant Sikismasi",
@@ -3168,12 +3240,11 @@
     },
     "HTTBT": {
       "kapanis": 39.22,
-      "rsi": 46.9,
+      "rsi": 43.1,
       "sinyaller": [
-        "MACD Al Kesisimi",
         "MACD Pozitif"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -3182,8 +3253,8 @@
       "trend_uyumu": false
     },
     "HUBVC": {
-      "kapanis": 4.72,
-      "rsi": 61.8,
+      "kapanis": 4.71,
+      "rsi": 61.9,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50"
@@ -3197,40 +3268,45 @@
       "trend_uyumu": false
     },
     "HUNER": {
-      "kapanis": 3.16,
-      "rsi": 65.9,
+      "kapanis": 3.19,
+      "rsi": 67.5,
       "sinyaller": [
         "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
         "Bant Sikismasi",
+        "Guc Patlamasi",
         "Destek Testi"
       ],
-      "altin": null,
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": true,
-      "guc_patlamasi": false,
+      "guc_patlamasi": true,
       "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "HURGZ": {
-      "kapanis": 5.26,
-      "rsi": 54.4,
+      "kapanis": 5.47,
+      "rsi": 57.6,
       "sinyaller": [
         "MACD Pozitif",
-        "Destek Testi"
+        "Fiyat EMA20 Ustunde",
+        "Guc Patlamasi"
       ],
-      "altin": null,
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": true,
+      "guc_patlamasi": true,
+      "destek_testi": false,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "ICBCT": {
-      "kapanis": 13.14,
-      "rsi": 46.1,
+      "kapanis": 13.49,
+      "rsi": 51.9,
       "sinyaller": [
+        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
         "Destek Testi"
       ],
       "altin": null,
@@ -3242,8 +3318,8 @@
       "trend_uyumu": false
     },
     "ICUGS": {
-      "kapanis": 2.75,
-      "rsi": 39.1,
+      "kapanis": 2.78,
+      "rsi": 44.6,
       "sinyaller": [],
       "altin": null,
       "dip_vurusu": false,
@@ -3254,14 +3330,13 @@
       "trend_uyumu": false
     },
     "IEYHO": {
-      "kapanis": 85.8,
-      "rsi": 87.0,
+      "kapanis": 85.85,
+      "rsi": 85.0,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
-        "EMA20 > EMA50",
-        "Ters Cekic"
+        "EMA20 > EMA50"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -3270,8 +3345,8 @@
       "trend_uyumu": false
     },
     "IHAAS": {
-      "kapanis": 84.4,
-      "rsi": 56.8,
+      "kapanis": 83.75,
+      "rsi": 56.1,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -3286,8 +3361,8 @@
       "trend_uyumu": false
     },
     "IHEVA": {
-      "kapanis": 2.27,
-      "rsi": 81.0,
+      "kapanis": 2.26,
+      "rsi": 75.0,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -3303,55 +3378,24 @@
       "trend_uyumu": false
     },
     "IHGZT": {
-      "kapanis": 1.45,
-      "rsi": 55.6,
-      "sinyaller": [
-        "MACD Pozitif",
-        "Destek Testi"
-      ],
-      "altin": null,
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": true,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "IHLAS": {
-      "kapanis": 2.02,
-      "rsi": 55.2,
-      "sinyaller": [
-        "MACD Pozitif",
-        "Destek Testi"
-      ],
-      "altin": null,
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": true,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "IHLGM": {
-      "kapanis": 2.0,
-      "rsi": 63.9,
+      "kapanis": 1.48,
+      "rsi": 64.7,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "Hacim Alarmi",
         "Guc Patlamasi",
-        "Hacim Bombasi"
+        "Destek Testi"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": true,
-      "destek_testi": false,
-      "hacim_bombasi": true,
+      "destek_testi": true,
+      "hacim_bombasi": false,
       "trend_uyumu": false
     },
-    "IHYAY": {
-      "kapanis": 1.74,
+    "IHLAS": {
+      "kapanis": 2.05,
       "rsi": 59.3,
       "sinyaller": [
         "MACD Pozitif",
@@ -3365,13 +3409,46 @@
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
-    "IMASM": {
-      "kapanis": 3.79,
-      "rsi": 47.9,
+    "IHLGM": {
+      "kapanis": 2.02,
+      "rsi": 64.9,
       "sinyaller": [
-        "MACD Pozitif"
+        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "Ters Cekic",
+        "Guc Patlamasi"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": true,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "IHYAY": {
+      "kapanis": 1.74,
+      "rsi": 57.1,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Destek Testi"
       ],
       "altin": null,
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": false,
+      "destek_testi": true,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "IMASM": {
+      "kapanis": 3.8,
+      "rsi": 47.4,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Boga Harami"
+      ],
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -3381,27 +3458,27 @@
     },
     "INDES": {
       "kapanis": 8.47,
-      "rsi": 72.9,
+      "rsi": 73.3,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "Hacim Alarmi",
-        "Guc Patlamasi",
-        "Hacim Bombasi"
+        "Guc Patlamasi"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": true,
       "destek_testi": false,
-      "hacim_bombasi": true,
+      "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "INFO": {
-      "kapanis": 3.56,
-      "rsi": 36.3,
-      "sinyaller": [],
-      "altin": null,
+      "kapanis": 3.57,
+      "rsi": 32.7,
+      "sinyaller": [
+        "RSI Asiri Satim"
+      ],
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -3410,8 +3487,8 @@
       "trend_uyumu": false
     },
     "INTEM": {
-      "kapanis": 278.25,
-      "rsi": 22.6,
+      "kapanis": 281.5,
+      "rsi": 23.0,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -3425,7 +3502,7 @@
     },
     "INVEO": {
       "kapanis": 7.39,
-      "rsi": 56.4,
+      "rsi": 54.1,
       "sinyaller": [
         "MACD Pozitif",
         "Bant Sikismasi"
@@ -3439,8 +3516,8 @@
       "trend_uyumu": false
     },
     "INVES": {
-      "kapanis": 328.0,
-      "rsi": 86.0,
+      "kapanis": 366.25,
+      "rsi": 90.6,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -3457,8 +3534,8 @@
       "trend_uyumu": true
     },
     "ISBIR": {
-      "kapanis": 74.25,
-      "rsi": 57.0,
+      "kapanis": 73.9,
+      "rsi": 55.9,
       "sinyaller": [
         "MACD Pozitif",
         "Destek Testi"
@@ -3472,13 +3549,14 @@
       "trend_uyumu": false
     },
     "ISYAT": {
-      "kapanis": 8.34,
-      "rsi": 56.5,
+      "kapanis": 8.29,
+      "rsi": 53.4,
       "sinyaller": [
         "MACD Pozitif",
+        "Boga Harami",
         "Destek Testi"
       ],
-      "altin": null,
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -3487,8 +3565,8 @@
       "trend_uyumu": false
     },
     "IZENR": {
-      "kapanis": 9.0,
-      "rsi": 49.6,
+      "kapanis": 9.08,
+      "rsi": 50.9,
       "sinyaller": [
         "MACD Pozitif",
         "Bant Sikismasi",
@@ -3503,8 +3581,8 @@
       "trend_uyumu": false
     },
     "IZFAS": {
-      "kapanis": 51.0,
-      "rsi": 68.9,
+      "kapanis": 50.9,
+      "rsi": 63.8,
       "sinyaller": [
         "MACD Pozitif",
         "Destek Testi"
@@ -3518,8 +3596,8 @@
       "trend_uyumu": false
     },
     "IZINV": {
-      "kapanis": 59.4,
-      "rsi": 56.4,
+      "kapanis": 59.5,
+      "rsi": 55.8,
       "sinyaller": [
         "MACD Pozitif",
         "Destek Testi"
@@ -3533,24 +3611,8 @@
       "trend_uyumu": false
     },
     "IZMDC": {
-      "kapanis": 7.01,
-      "rsi": 48.3,
-      "sinyaller": [
-        "MACD Al Kesisimi",
-        "MACD Pozitif",
-        "Destek Testi"
-      ],
-      "altin": "Bronz",
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": true,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "JANTS": {
-      "kapanis": 16.82,
-      "rsi": 44.6,
+      "kapanis": 6.85,
+      "rsi": 43.7,
       "sinyaller": [
         "MACD Pozitif"
       ],
@@ -3562,9 +3624,24 @@
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
+    "JANTS": {
+      "kapanis": 16.88,
+      "rsi": 44.7,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Boga Harami"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": false,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
     "KAPLM": {
-      "kapanis": 373.5,
-      "rsi": 65.6,
+      "kapanis": 388.75,
+      "rsi": 71.7,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -3579,8 +3656,8 @@
       "trend_uyumu": false
     },
     "KAREL": {
-      "kapanis": 8.98,
-      "rsi": 51.0,
+      "kapanis": 8.94,
+      "rsi": 48.2,
       "sinyaller": [
         "Destek Testi"
       ],
@@ -3593,30 +3670,28 @@
       "trend_uyumu": false
     },
     "KARSN": {
-      "kapanis": 10.5,
-      "rsi": 59.8,
+      "kapanis": 10.58,
+      "rsi": 63.0,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "Yutan Boga",
-        "Guc Patlamasi",
-        "Destek Testi"
+        "Guc Patlamasi"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": true,
-      "destek_testi": true,
+      "destek_testi": false,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "KARTN": {
-      "kapanis": 69.95,
-      "rsi": 33.5,
+      "kapanis": 70.3,
+      "rsi": 35.1,
       "sinyaller": [
-        "RSI Asiri Satim"
+        "MACD Pozitif"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -3626,14 +3701,12 @@
     },
     "KATMR": {
       "kapanis": 2.68,
-      "rsi": 33.3,
+      "rsi": 35.0,
       "sinyaller": [
-        "MACD Al Kesisimi",
         "MACD Pozitif",
-        "RSI Asiri Satim",
         "Destek Testi"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -3642,38 +3715,36 @@
       "trend_uyumu": false
     },
     "KAYSE": {
-      "kapanis": 5.29,
-      "rsi": 67.7,
+      "kapanis": 5.42,
+      "rsi": 65.9,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
+        "Golden Cross",
         "Bant Sikismasi",
         "Guc Patlamasi",
-        "Destek Testi",
         "Trend Uyumu"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": true,
       "guc_patlamasi": true,
-      "destek_testi": true,
+      "destek_testi": false,
       "hacim_bombasi": false,
       "trend_uyumu": true
     },
     "KCAER": {
-      "kapanis": 11.88,
-      "rsi": 68.1,
+      "kapanis": 12.15,
+      "rsi": 70.2,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
-        "Golden Cross",
-        "Ters Cekic",
         "Guc Patlamasi",
         "Trend Uyumu"
       ],
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": true,
@@ -3682,8 +3753,8 @@
       "trend_uyumu": true
     },
     "KCHOL": {
-      "kapanis": 192.2,
-      "rsi": 48.7,
+      "kapanis": 191.3,
+      "rsi": 45.9,
       "sinyaller": [
         "MACD Pozitif",
         "Destek Testi"
@@ -3697,8 +3768,8 @@
       "trend_uyumu": false
     },
     "KENT": {
-      "kapanis": 455.0,
-      "rsi": 53.9,
+      "kapanis": 456.5,
+      "rsi": 52.0,
       "sinyaller": [
         "MACD Pozitif"
       ],
@@ -3711,8 +3782,8 @@
       "trend_uyumu": false
     },
     "KERVN": {
-      "kapanis": 2.9,
-      "rsi": 67.2,
+      "kapanis": 3.12,
+      "rsi": 70.7,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50"
@@ -3726,8 +3797,8 @@
       "trend_uyumu": false
     },
     "KFEIN": {
-      "kapanis": 8.9,
-      "rsi": 59.4,
+      "kapanis": 8.75,
+      "rsi": 54.2,
       "sinyaller": [
         "MACD Pozitif",
         "Bant Sikismasi"
@@ -3741,8 +3812,8 @@
       "trend_uyumu": false
     },
     "KGYO": {
-      "kapanis": 7.71,
-      "rsi": 68.6,
+      "kapanis": 7.78,
+      "rsi": 68.5,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -3759,8 +3830,8 @@
       "trend_uyumu": true
     },
     "KIMMR": {
-      "kapanis": 17.28,
-      "rsi": 73.0,
+      "kapanis": 17.03,
+      "rsi": 69.0,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -3777,8 +3848,8 @@
       "trend_uyumu": true
     },
     "KLGYO": {
-      "kapanis": 6.07,
-      "rsi": 60.1,
+      "kapanis": 6.1,
+      "rsi": 58.5,
       "sinyaller": [
         "MACD Pozitif",
         "Bant Sikismasi",
@@ -3793,25 +3864,24 @@
       "trend_uyumu": false
     },
     "KLKIM": {
-      "kapanis": 39.52,
-      "rsi": 54.5,
+      "kapanis": 40.38,
+      "rsi": 58.1,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "Hacim Alarmi",
-        "Hacim Bombasi"
+        "Guc Patlamasi"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
-      "guc_patlamasi": false,
+      "guc_patlamasi": true,
       "destek_testi": false,
-      "hacim_bombasi": true,
+      "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "KLMSN": {
-      "kapanis": 30.76,
-      "rsi": 52.7,
+      "kapanis": 30.78,
+      "rsi": 52.4,
       "sinyaller": [
         "EMA20 > EMA50"
       ],
@@ -3824,29 +3894,27 @@
       "trend_uyumu": false
     },
     "KLNMA": {
-      "kapanis": 12.05,
-      "rsi": 63.9,
+      "kapanis": 12.2,
+      "rsi": 64.2,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
         "Guc Patlamasi",
-        "Destek Testi",
         "Trend Uyumu"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": true,
-      "destek_testi": true,
+      "destek_testi": false,
       "hacim_bombasi": false,
       "trend_uyumu": true
     },
     "KLRHO": {
-      "kapanis": 169.6,
-      "rsi": 4.0,
+      "kapanis": 179.3,
+      "rsi": 11.2,
       "sinyaller": [
-        "MACD Al Kesisimi",
         "MACD Pozitif",
         "RSI Asiri Satim"
       ],
@@ -3859,42 +3927,8 @@
       "trend_uyumu": false
     },
     "KLSER": {
-      "kapanis": 25.88,
-      "rsi": 50.0,
-      "sinyaller": [
-        "MACD Al Kesisimi",
-        "MACD Pozitif",
-        "Destek Testi"
-      ],
-      "altin": "Bronz",
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": true,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "KLSYN": {
-      "kapanis": 9.43,
-      "rsi": 54.0,
-      "sinyaller": [
-        "MACD Al Kesisimi",
-        "MACD Pozitif",
-        "Fiyat EMA20 Ustunde",
-        "EMA20 > EMA50",
-        "Trend Uyumu"
-      ],
-      "altin": "Bronz",
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": false,
-      "hacim_bombasi": false,
-      "trend_uyumu": true
-    },
-    "KMPUR": {
-      "kapanis": 13.71,
-      "rsi": 48.0,
+      "kapanis": 25.92,
+      "rsi": 48.9,
       "sinyaller": [
         "MACD Pozitif",
         "Destek Testi"
@@ -3907,27 +3941,59 @@
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
-    "KNFRT": {
-      "kapanis": 11.04,
-      "rsi": 64.6,
+    "KLSYN": {
+      "kapanis": 9.43,
+      "rsi": 52.8,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "Bant Sikismasi",
+        "EMA20 > EMA50",
+        "Trend Uyumu"
+      ],
+      "altin": null,
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": false,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": true
+    },
+    "KMPUR": {
+      "kapanis": 13.99,
+      "rsi": 57.0,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
         "Guc Patlamasi",
         "Destek Testi"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
-      "bant_sikismasi": true,
+      "bant_sikismasi": false,
       "guc_patlamasi": true,
       "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
+    "KNFRT": {
+      "kapanis": 11.44,
+      "rsi": 70.6,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "Guc Patlamasi"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": true,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
     "KONYA": {
-      "kapanis": 4077.5,
-      "rsi": 48.6,
+      "kapanis": 4072.5,
+      "rsi": 49.8,
       "sinyaller": [
         "MACD Pozitif"
       ],
@@ -3940,9 +4006,10 @@
       "trend_uyumu": false
     },
     "KOPOL": {
-      "kapanis": 6.15,
-      "rsi": 58.1,
+      "kapanis": 6.29,
+      "rsi": 61.2,
       "sinyaller": [
+        "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
         "Destek Testi"
       ],
@@ -3955,8 +4022,8 @@
       "trend_uyumu": false
     },
     "KORDS": {
-      "kapanis": 54.25,
-      "rsi": 64.3,
+      "kapanis": 53.6,
+      "rsi": 61.1,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -3971,8 +4038,8 @@
       "trend_uyumu": false
     },
     "KOTON": {
-      "kapanis": 14.96,
-      "rsi": 48.9,
+      "kapanis": 15.01,
+      "rsi": 48.8,
       "sinyaller": [
         "MACD Pozitif",
         "Destek Testi"
@@ -3986,16 +4053,15 @@
       "trend_uyumu": false
     },
     "KRDMA": {
-      "kapanis": 30.28,
-      "rsi": 53.7,
+      "kapanis": 30.1,
+      "rsi": 52.7,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
-        "Golden Cross",
         "Trend Uyumu"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -4004,13 +4070,12 @@
       "trend_uyumu": true
     },
     "KRDMB": {
-      "kapanis": 39.78,
-      "rsi": 73.0,
+      "kapanis": 39.68,
+      "rsi": 69.7,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
-        "Cekic",
         "Guc Patlamasi",
         "Trend Uyumu"
       ],
@@ -4023,17 +4088,16 @@
       "trend_uyumu": true
     },
     "KRDMD": {
-      "kapanis": 31.12,
-      "rsi": 43.9,
+      "kapanis": 31.06,
+      "rsi": 43.7,
       "sinyaller": [
-        "MACD Al Kesisimi",
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
         "Destek Testi",
         "Trend Uyumu"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -4042,41 +4106,38 @@
       "trend_uyumu": true
     },
     "KRPLS": {
-      "kapanis": 8.7,
-      "rsi": 66.8,
+      "kapanis": 8.42,
+      "rsi": 60.4,
       "sinyaller": [
         "MACD Pozitif",
-        "Fiyat EMA20 Ustunde",
-        "Guc Patlamasi"
+        "Destek Testi"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
-      "guc_patlamasi": true,
-      "destek_testi": false,
+      "guc_patlamasi": false,
+      "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "KRSTL": {
-      "kapanis": 9.79,
-      "rsi": 50.5,
+      "kapanis": 9.78,
+      "rsi": 48.9,
       "sinyaller": [
         "MACD Pozitif",
-        "Hacim Alarmi",
-        "Bant Sikismasi",
-        "Hacim Bombasi"
+        "Bant Sikismasi"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": true,
       "guc_patlamasi": false,
       "destek_testi": false,
-      "hacim_bombasi": true,
+      "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "KRTEK": {
-      "kapanis": 27.38,
-      "rsi": 69.2,
+      "kapanis": 27.58,
+      "rsi": 68.5,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -4092,22 +4153,8 @@
       "trend_uyumu": false
     },
     "KRVGD": {
-      "kapanis": 2.99,
-      "rsi": 54.3,
-      "sinyaller": [
-        "Destek Testi"
-      ],
-      "altin": null,
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": true,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "KSTUR": {
-      "kapanis": 3040.0,
-      "rsi": 63.9,
+      "kapanis": 3.01,
+      "rsi": 53.5,
       "sinyaller": [
         "MACD Pozitif",
         "Destek Testi"
@@ -4120,9 +4167,23 @@
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
+    "KSTUR": {
+      "kapanis": 3000.0,
+      "rsi": 52.2,
+      "sinyaller": [
+        "MACD Pozitif"
+      ],
+      "altin": null,
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": false,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
     "KTLEV": {
-      "kapanis": 54.95,
-      "rsi": 81.9,
+      "kapanis": 55.55,
+      "rsi": 81.0,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -4139,8 +4200,8 @@
       "trend_uyumu": true
     },
     "KTSKR": {
-      "kapanis": 69.3,
-      "rsi": 54.3,
+      "kapanis": 69.2,
+      "rsi": 51.5,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -4155,75 +4216,8 @@
       "trend_uyumu": false
     },
     "KUTPO": {
-      "kapanis": 98.55,
-      "rsi": 45.2,
-      "sinyaller": [
-        "MACD Pozitif",
-        "Hacim Alarmi",
-        "Hacim Bombasi"
-      ],
-      "altin": "Bronz",
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": false,
-      "hacim_bombasi": true,
-      "trend_uyumu": false
-    },
-    "KUVVA": {
-      "kapanis": 125.1,
-      "rsi": 76.1,
-      "sinyaller": [
-        "MACD Pozitif",
-        "Fiyat EMA20 Ustunde",
-        "EMA20 > EMA50",
-        "Yutan Boga",
-        "Sabah Yildizi",
-        "Guc Patlamasi",
-        "Trend Uyumu"
-      ],
-      "altin": "Gumus",
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": true,
-      "destek_testi": false,
-      "hacim_bombasi": false,
-      "trend_uyumu": true
-    },
-    "KUYAS": {
-      "kapanis": 72.35,
-      "rsi": 59.6,
-      "sinyaller": [
-        "Fiyat EMA20 Ustunde",
-        "EMA20 > EMA50"
-      ],
-      "altin": null,
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": false,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "KZBGY": {
-      "kapanis": 3.81,
-      "rsi": 66.4,
-      "sinyaller": [
-        "MACD Pozitif",
-        "Fiyat EMA20 Ustunde",
-        "Guc Patlamasi"
-      ],
-      "altin": "Bronz",
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": true,
-      "destek_testi": false,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "KZGYO": {
-      "kapanis": 21.54,
-      "rsi": 51.2,
+      "kapanis": 98.9,
+      "rsi": 45.5,
       "sinyaller": [
         "MACD Pozitif"
       ],
@@ -4235,91 +4229,8 @@
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
-    "LIDER": {
-      "kapanis": 81.05,
-      "rsi": 50.7,
-      "sinyaller": [
-        "Fiyat EMA20 Ustunde",
-        "EMA20 > EMA50",
-        "Bant Sikismasi",
-        "Destek Testi"
-      ],
-      "altin": null,
-      "dip_vurusu": false,
-      "bant_sikismasi": true,
-      "guc_patlamasi": false,
-      "destek_testi": true,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "LIDFA": {
-      "kapanis": 3.12,
-      "rsi": 44.4,
-      "sinyaller": [
-        "EMA20 > EMA50",
-        "Destek Testi"
-      ],
-      "altin": null,
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": true,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "LILAK": {
-      "kapanis": 30.52,
-      "rsi": 57.7,
-      "sinyaller": [
-        "MACD Pozitif",
-        "Destek Testi"
-      ],
-      "altin": null,
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": true,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "LINK": {
-      "kapanis": 232.6,
-      "rsi": 69.1,
-      "sinyaller": [
-        "MACD Pozitif",
-        "Fiyat EMA20 Ustunde",
-        "Hacim Alarmi",
-        "Guc Patlamasi",
-        "Hacim Bombasi"
-      ],
-      "altin": "Bronz",
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": true,
-      "destek_testi": false,
-      "hacim_bombasi": true,
-      "trend_uyumu": false
-    },
-    "LKMNH": {
-      "kapanis": 16.46,
-      "rsi": 63.7,
-      "sinyaller": [
-        "MACD Pozitif",
-        "Fiyat EMA20 Ustunde",
-        "Bant Sikismasi",
-        "Guc Patlamasi",
-        "Destek Testi"
-      ],
-      "altin": "Bronz",
-      "dip_vurusu": false,
-      "bant_sikismasi": true,
-      "guc_patlamasi": true,
-      "destek_testi": true,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "LMKDC": {
-      "kapanis": 34.18,
+    "KUVVA": {
+      "kapanis": 122.5,
       "rsi": 71.8,
       "sinyaller": [
         "MACD Pozitif",
@@ -4336,9 +4247,41 @@
       "hacim_bombasi": false,
       "trend_uyumu": true
     },
-    "LOGO": {
-      "kapanis": 139.4,
-      "rsi": 58.5,
+    "KUYAS": {
+      "kapanis": 72.15,
+      "rsi": 58.7,
+      "sinyaller": [
+        "Fiyat EMA20 Ustunde",
+        "EMA20 > EMA50",
+        "Destek Testi"
+      ],
+      "altin": null,
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": false,
+      "destek_testi": true,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "KZBGY": {
+      "kapanis": 3.88,
+      "rsi": 58.3,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "Guc Patlamasi"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": true,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "KZGYO": {
+      "kapanis": 21.88,
+      "rsi": 55.6,
       "sinyaller": [
         "MACD Pozitif",
         "Bant Sikismasi",
@@ -4352,26 +4295,56 @@
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
-    "LUKSK": {
-      "kapanis": 97.2,
-      "rsi": 60.1,
+    "LIDER": {
+      "kapanis": 82.45,
+      "rsi": 56.0,
       "sinyaller": [
-        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "EMA20 > EMA50",
         "Ters Cekic",
-        "Bant Sikismasi",
         "Destek Testi"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
-      "bant_sikismasi": true,
+      "bant_sikismasi": false,
       "guc_patlamasi": false,
       "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
-    "MAALT": {
-      "kapanis": 941.5,
-      "rsi": 72.0,
+    "LIDFA": {
+      "kapanis": 3.15,
+      "rsi": 50.6,
+      "sinyaller": [
+        "Fiyat EMA20 Ustunde",
+        "EMA20 > EMA50",
+        "Destek Testi"
+      ],
+      "altin": null,
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": false,
+      "destek_testi": true,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "LILAK": {
+      "kapanis": 30.0,
+      "rsi": 53.5,
+      "sinyaller": [
+        "MACD Pozitif"
+      ],
+      "altin": null,
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": false,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "LINK": {
+      "kapanis": 226.9,
+      "rsi": 63.3,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -4386,11 +4359,94 @@
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
-    "MACKO": {
-      "kapanis": 33.7,
-      "rsi": 63.1,
+    "LKMNH": {
+      "kapanis": 16.39,
+      "rsi": 61.1,
       "sinyaller": [
-        "MACD Al Kesisimi",
+        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "Bant Sikismasi",
+        "Guc Patlamasi",
+        "Destek Testi"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": true,
+      "guc_patlamasi": true,
+      "destek_testi": true,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "LMKDC": {
+      "kapanis": 34.52,
+      "rsi": 71.0,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "EMA20 > EMA50",
+        "Guc Patlamasi",
+        "Trend Uyumu"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": true,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": true
+    },
+    "LOGO": {
+      "kapanis": 139.9,
+      "rsi": 57.9,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Bant Sikismasi",
+        "Destek Testi"
+      ],
+      "altin": null,
+      "dip_vurusu": false,
+      "bant_sikismasi": true,
+      "guc_patlamasi": false,
+      "destek_testi": true,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "LUKSK": {
+      "kapanis": 97.75,
+      "rsi": 59.6,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Bant Sikismasi",
+        "Destek Testi"
+      ],
+      "altin": null,
+      "dip_vurusu": false,
+      "bant_sikismasi": true,
+      "guc_patlamasi": false,
+      "destek_testi": true,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "MAALT": {
+      "kapanis": 991.0,
+      "rsi": 78.2,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "Guc Patlamasi"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": true,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "MACKO": {
+      "kapanis": 34.7,
+      "rsi": 69.1,
+      "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -4406,27 +4462,28 @@
       "trend_uyumu": true
     },
     "MAGEN": {
-      "kapanis": 47.74,
-      "rsi": 61.4,
+      "kapanis": 47.3,
+      "rsi": 59.0,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
         "Guc Patlamasi",
+        "Destek Testi",
         "Trend Uyumu"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": true,
-      "destek_testi": false,
+      "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": true
     },
     "MAKIM": {
-      "kapanis": 16.26,
-      "rsi": 80.6,
+      "kapanis": 16.91,
+      "rsi": 86.2,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -4441,27 +4498,28 @@
       "trend_uyumu": false
     },
     "MAKTK": {
-      "kapanis": 13.71,
-      "rsi": 54.0,
+      "kapanis": 13.95,
+      "rsi": 55.3,
       "sinyaller": [
         "MACD Pozitif",
-        "Ters Cekic"
+        "Destek Testi"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
-      "destek_testi": false,
+      "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "MANAS": {
-      "kapanis": 17.0,
-      "rsi": 40.1,
+      "kapanis": 16.93,
+      "rsi": 39.9,
       "sinyaller": [
-        "EMA20 > EMA50"
+        "EMA20 > EMA50",
+        "Cekic"
       ],
-      "altin": null,
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -4470,15 +4528,13 @@
       "trend_uyumu": false
     },
     "MARKA": {
-      "kapanis": 25.5,
-      "rsi": 12.4,
+      "kapanis": 25.14,
+      "rsi": 14.0,
       "sinyaller": [
-        "RSI Asiri Satim",
-        "BB Alt Bant",
-        "Dip Vurusu"
+        "RSI Asiri Satim"
       ],
-      "altin": "Gumus",
-      "dip_vurusu": true,
+      "altin": "Bronz",
+      "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
       "destek_testi": false,
@@ -4486,8 +4542,23 @@
       "trend_uyumu": false
     },
     "MARTI": {
-      "kapanis": 1.42,
-      "rsi": 62.5,
+      "kapanis": 1.46,
+      "rsi": 70.4,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Bant Sikismasi"
+      ],
+      "altin": null,
+      "dip_vurusu": false,
+      "bant_sikismasi": true,
+      "guc_patlamasi": false,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "MAVI": {
+      "kapanis": 41.7,
+      "rsi": 37.3,
       "sinyaller": [
         "MACD Pozitif"
       ],
@@ -4499,24 +4570,9 @@
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
-    "MAVI": {
-      "kapanis": 42.0,
-      "rsi": 37.8,
-      "sinyaller": [
-        "MACD Al Kesisimi",
-        "MACD Pozitif"
-      ],
-      "altin": "Bronz",
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": false,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
     "MEDTR": {
-      "kapanis": 28.08,
-      "rsi": 59.5,
+      "kapanis": 28.1,
+      "rsi": 58.8,
       "sinyaller": [
         "MACD Pozitif",
         "Destek Testi"
@@ -4530,24 +4586,25 @@
       "trend_uyumu": false
     },
     "MEGAP": {
-      "kapanis": 2.9,
-      "rsi": 71.6,
+      "kapanis": 2.85,
+      "rsi": 65.5,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "Guc Patlamasi"
+        "Guc Patlamasi",
+        "Destek Testi"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": true,
-      "destek_testi": false,
+      "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "MEKAG": {
-      "kapanis": 7.5,
-      "rsi": 68.7,
+      "kapanis": 7.42,
+      "rsi": 65.1,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -4564,8 +4621,8 @@
       "trend_uyumu": true
     },
     "METRO": {
-      "kapanis": 5.82,
-      "rsi": 68.7,
+      "kapanis": 5.81,
+      "rsi": 63.7,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -4582,12 +4639,13 @@
       "trend_uyumu": true
     },
     "MGROS": {
-      "kapanis": 614.0,
-      "rsi": 37.7,
+      "kapanis": 606.0,
+      "rsi": 32.6,
       "sinyaller": [
+        "RSI Asiri Satim",
         "Destek Testi"
       ],
-      "altin": null,
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -4596,8 +4654,8 @@
       "trend_uyumu": false
     },
     "MHRGY": {
-      "kapanis": 3.43,
-      "rsi": 60.5,
+      "kapanis": 3.42,
+      "rsi": 55.1,
       "sinyaller": [
         "MACD Pozitif",
         "Destek Testi"
@@ -4611,11 +4669,12 @@
       "trend_uyumu": false
     },
     "MIATK": {
-      "kapanis": 40.66,
-      "rsi": 76.0,
+      "kapanis": 39.98,
+      "rsi": 67.8,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
+        "Ters Cekic",
         "Guc Patlamasi"
       ],
       "altin": "Bronz",
@@ -4627,8 +4686,8 @@
       "trend_uyumu": false
     },
     "MMCAS": {
-      "kapanis": 104.9,
-      "rsi": 68.3,
+      "kapanis": 104.0,
+      "rsi": 59.9,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -4643,41 +4702,43 @@
       "trend_uyumu": false
     },
     "MNDRS": {
-      "kapanis": 14.04,
-      "rsi": 44.3,
-      "sinyaller": [],
+      "kapanis": 14.13,
+      "rsi": 45.0,
+      "sinyaller": [
+        "Destek Testi"
+      ],
       "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
-      "destek_testi": false,
+      "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "MNDTR": {
-      "kapanis": 5.83,
-      "rsi": 54.0,
+      "kapanis": 5.86,
+      "rsi": 58.3,
       "sinyaller": [
-        "MACD Pozitif"
+        "MACD Pozitif",
+        "Destek Testi"
       ],
       "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
-      "destek_testi": false,
+      "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "MOBTL": {
-      "kapanis": 10.28,
-      "rsi": 42.5,
+      "kapanis": 10.3,
+      "rsi": 43.8,
       "sinyaller": [
-        "MACD Al Kesisimi",
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
         "Destek Testi"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -4686,27 +4747,31 @@
       "trend_uyumu": false
     },
     "MOGAN": {
-      "kapanis": 10.34,
-      "rsi": 68.2,
+      "kapanis": 10.3,
+      "rsi": 64.3,
       "sinyaller": [
-        "Fiyat EMA20 Ustunde",
-        "EMA20 > EMA50",
-        "Bant Sikismasi"
-      ],
-      "altin": null,
-      "dip_vurusu": false,
-      "bant_sikismasi": true,
-      "guc_patlamasi": false,
-      "destek_testi": false,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "MPARK": {
-      "kapanis": 434.5,
-      "rsi": 50.3,
-      "sinyaller": [
+        "MACD Al Kesisimi",
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
+        "EMA20 > EMA50",
+        "Bant Sikismasi",
+        "Guc Patlamasi",
+        "Destek Testi",
+        "Trend Uyumu"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": true,
+      "guc_patlamasi": true,
+      "destek_testi": true,
+      "hacim_bombasi": false,
+      "trend_uyumu": true
+    },
+    "MPARK": {
+      "kapanis": 433.5,
+      "rsi": 49.1,
+      "sinyaller": [
+        "MACD Pozitif",
         "Destek Testi"
       ],
       "altin": null,
@@ -4718,28 +4783,30 @@
       "trend_uyumu": false
     },
     "MRGYO": {
-      "kapanis": 1.49,
-      "rsi": 67.5,
+      "kapanis": 1.52,
+      "rsi": 68.3,
       "sinyaller": [
         "MACD Pozitif",
-        "Bant Sikismasi"
+        "Bant Sikismasi",
+        "Destek Testi"
       ],
       "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": true,
       "guc_patlamasi": false,
-      "destek_testi": false,
+      "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "MRSHL": {
-      "kapanis": 1415.0,
-      "rsi": 48.4,
+      "kapanis": 1414.0,
+      "rsi": 46.5,
       "sinyaller": [
         "MACD Pozitif",
+        "Boga Harami",
         "Destek Testi"
       ],
-      "altin": null,
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -4748,8 +4815,24 @@
       "trend_uyumu": false
     },
     "MSGYO": {
-      "kapanis": 6.0,
-      "rsi": 60.4,
+      "kapanis": 6.37,
+      "rsi": 73.3,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "Guc Patlamasi"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": true,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "MTRKS": {
+      "kapanis": 21.5,
+      "rsi": 65.1,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -4764,28 +4847,13 @@
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
-    "MTRKS": {
-      "kapanis": 21.24,
-      "rsi": 63.5,
-      "sinyaller": [
-        "MACD Pozitif",
-        "Ters Cekic",
-        "Destek Testi"
-      ],
-      "altin": "Bronz",
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": true,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
     "MZHLD": {
       "kapanis": 6.4,
-      "rsi": 75.5,
+      "rsi": 69.6,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
+        "Boga Harami",
         "Bant Sikismasi",
         "Guc Patlamasi"
       ],
@@ -4798,22 +4866,23 @@
       "trend_uyumu": false
     },
     "NATEN": {
-      "kapanis": 7.44,
-      "rsi": 47.5,
+      "kapanis": 7.48,
+      "rsi": 50.0,
       "sinyaller": [
-        "MACD Pozitif"
+        "MACD Pozitif",
+        "Destek Testi"
       ],
       "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
-      "destek_testi": false,
+      "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "NETAS": {
-      "kapanis": 55.6,
-      "rsi": 55.7,
+      "kapanis": 55.95,
+      "rsi": 57.4,
       "sinyaller": [
         "MACD Pozitif",
         "Destek Testi"
@@ -4827,8 +4896,8 @@
       "trend_uyumu": false
     },
     "NIBAS": {
-      "kapanis": 7.65,
-      "rsi": 66.7,
+      "kapanis": 7.72,
+      "rsi": 61.0,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -4843,39 +4912,42 @@
       "trend_uyumu": false
     },
     "NTHOL": {
-      "kapanis": 46.32,
-      "rsi": 63.4,
+      "kapanis": 45.24,
+      "rsi": 55.9,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "Guc Patlamasi"
+        "Bant Sikismasi",
+        "Guc Patlamasi",
+        "Destek Testi"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
-      "bant_sikismasi": false,
+      "bant_sikismasi": true,
       "guc_patlamasi": true,
-      "destek_testi": false,
+      "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "NUGYO": {
-      "kapanis": 9.21,
-      "rsi": 60.1,
+      "kapanis": 9.19,
+      "rsi": 57.7,
       "sinyaller": [
         "MACD Pozitif",
+        "Bant Sikismasi",
         "Destek Testi"
       ],
       "altin": null,
       "dip_vurusu": false,
-      "bant_sikismasi": false,
+      "bant_sikismasi": true,
       "guc_patlamasi": false,
       "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "NUHCM": {
-      "kapanis": 293.25,
-      "rsi": 68.6,
+      "kapanis": 299.25,
+      "rsi": 71.3,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -4892,14 +4964,13 @@
       "trend_uyumu": true
     },
     "OBAMS": {
-      "kapanis": 7.77,
-      "rsi": 46.7,
+      "kapanis": 7.79,
+      "rsi": 47.1,
       "sinyaller": [
-        "MACD Al Kesisimi",
         "MACD Pozitif",
         "Destek Testi"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -4908,8 +4979,8 @@
       "trend_uyumu": false
     },
     "OBASE": {
-      "kapanis": 35.0,
-      "rsi": 66.9,
+      "kapanis": 34.96,
+      "rsi": 64.7,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -4927,7 +4998,7 @@
     },
     "ODAS": {
       "kapanis": 6.11,
-      "rsi": 79.1,
+      "rsi": 74.7,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -4944,8 +5015,8 @@
       "trend_uyumu": true
     },
     "ODINE": {
-      "kapanis": 638.5,
-      "rsi": 77.2,
+      "kapanis": 640.0,
+      "rsi": 75.7,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50"
@@ -4959,10 +5030,9 @@
       "trend_uyumu": false
     },
     "OFSYM": {
-      "kapanis": 63.65,
-      "rsi": 48.1,
+      "kapanis": 63.1,
+      "rsi": 46.6,
       "sinyaller": [
-        "MACD Pozitif",
         "Bant Sikismasi"
       ],
       "altin": null,
@@ -4974,8 +5044,8 @@
       "trend_uyumu": false
     },
     "ONCSM": {
-      "kapanis": 231.5,
-      "rsi": 34.7,
+      "kapanis": 229.1,
+      "rsi": 34.1,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -4988,15 +5058,13 @@
       "trend_uyumu": false
     },
     "ONRYT": {
-      "kapanis": 58.75,
-      "rsi": 16.9,
+      "kapanis": 58.65,
+      "rsi": 18.0,
       "sinyaller": [
-        "RSI Asiri Satim",
-        "BB Alt Bant",
-        "Dip Vurusu"
+        "RSI Asiri Satim"
       ],
-      "altin": "Gumus",
-      "dip_vurusu": true,
+      "altin": "Bronz",
+      "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
       "destek_testi": false,
@@ -5004,26 +5072,45 @@
       "trend_uyumu": false
     },
     "ORCAY": {
-      "kapanis": 3.32,
-      "rsi": 60.5,
+      "kapanis": 3.36,
+      "rsi": 61.0,
       "sinyaller": [
         "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "Bant Sikismasi",
+        "Guc Patlamasi",
         "Destek Testi"
       ],
-      "altin": null,
+      "altin": "Bronz",
       "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": false,
+      "bant_sikismasi": true,
+      "guc_patlamasi": true,
       "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "ORGE": {
-      "kapanis": 68.65,
-      "rsi": 54.6,
+      "kapanis": 68.9,
+      "rsi": 57.1,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
+        "Guc Patlamasi",
+        "Destek Testi"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": true,
+      "destek_testi": true,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "ORMA": {
+      "kapanis": 163.1,
+      "rsi": 69.3,
+      "sinyaller": [
+        "MACD Pozitif",
         "Destek Testi"
       ],
       "altin": null,
@@ -5034,60 +5121,41 @@
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
-    "ORMA": {
-      "kapanis": 164.9,
-      "rsi": 55.2,
-      "sinyaller": [
-        "MACD Pozitif",
-        "Fiyat EMA20 Ustunde",
-        "Guc Patlamasi",
-        "Destek Testi"
-      ],
-      "altin": "Bronz",
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": true,
-      "destek_testi": true,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
     "OSMEN": {
-      "kapanis": 8.0,
-      "rsi": 59.8,
+      "kapanis": 7.9,
+      "rsi": 60.6,
       "sinyaller": [
         "MACD Pozitif",
-        "Fiyat EMA20 Ustunde",
-        "Guc Patlamasi",
+        "Boga Harami",
         "Destek Testi"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
-      "guc_patlamasi": true,
+      "guc_patlamasi": false,
       "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "OSTIM": {
-      "kapanis": 2.89,
-      "rsi": 61.4,
+      "kapanis": 2.99,
+      "rsi": 63.5,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "Guc Patlamasi",
-        "Destek Testi"
+        "Guc Patlamasi"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": true,
-      "destek_testi": true,
+      "destek_testi": false,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "OTKAR": {
-      "kapanis": 374.75,
-      "rsi": 48.0,
+      "kapanis": 375.5,
+      "rsi": 50.4,
       "sinyaller": [
         "MACD Pozitif",
         "Bant Sikismasi",
@@ -5102,8 +5170,8 @@
       "trend_uyumu": false
     },
     "OTTO": {
-      "kapanis": 324.0,
-      "rsi": 77.5,
+      "kapanis": 326.75,
+      "rsi": 77.3,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -5119,8 +5187,8 @@
       "trend_uyumu": false
     },
     "OYAKC": {
-      "kapanis": 23.22,
-      "rsi": 43.6,
+      "kapanis": 23.1,
+      "rsi": 43.8,
       "sinyaller": [
         "MACD Pozitif"
       ],
@@ -5133,8 +5201,8 @@
       "trend_uyumu": false
     },
     "OYAYO": {
-      "kapanis": 59.7,
-      "rsi": 59.9,
+      "kapanis": 59.25,
+      "rsi": 57.8,
       "sinyaller": [
         "EMA20 > EMA50",
         "Bant Sikismasi",
@@ -5149,8 +5217,8 @@
       "trend_uyumu": false
     },
     "OYLUM": {
-      "kapanis": 8.35,
-      "rsi": 69.3,
+      "kapanis": 8.33,
+      "rsi": 68.8,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -5166,14 +5234,15 @@
       "trend_uyumu": false
     },
     "OYYAT": {
-      "kapanis": 63.7,
-      "rsi": 60.2,
+      "kapanis": 63.25,
+      "rsi": 55.5,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
+        "Ters Cekic",
         "Bant Sikismasi"
       ],
-      "altin": null,
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": true,
       "guc_patlamasi": false,
@@ -5183,7 +5252,7 @@
     },
     "OZGYO": {
       "kapanis": 2.07,
-      "rsi": 78.6,
+      "rsi": 76.7,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -5198,11 +5267,10 @@
       "trend_uyumu": false
     },
     "OZKGY": {
-      "kapanis": 13.87,
-      "rsi": 50.8,
+      "kapanis": 13.69,
+      "rsi": 51.2,
       "sinyaller": [
         "MACD Pozitif",
-        "Fiyat EMA20 Ustunde",
         "Destek Testi"
       ],
       "altin": null,
@@ -5214,29 +5282,30 @@
       "trend_uyumu": false
     },
     "OZRDN": {
-      "kapanis": 25.4,
-      "rsi": 49.5,
+      "kapanis": 27.46,
+      "rsi": 62.9,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
-        "EMA20 > EMA50",
-        "Bant Sikismasi",
-        "Destek Testi"
+        "EMA20 > EMA50"
       ],
       "altin": null,
       "dip_vurusu": false,
-      "bant_sikismasi": true,
+      "bant_sikismasi": false,
       "guc_patlamasi": false,
-      "destek_testi": true,
+      "destek_testi": false,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "OZSUB": {
-      "kapanis": 21.72,
-      "rsi": 82.8,
+      "kapanis": 21.56,
+      "rsi": 74.7,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "Guc Patlamasi"
+        "EMA20 > EMA50",
+        "Golden Cross",
+        "Guc Patlamasi",
+        "Trend Uyumu"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
@@ -5244,15 +5313,18 @@
       "guc_patlamasi": true,
       "destek_testi": false,
       "hacim_bombasi": false,
-      "trend_uyumu": false
+      "trend_uyumu": true
     },
     "PAGYO": {
-      "kapanis": 98.05,
-      "rsi": 67.2,
+      "kapanis": 98.4,
+      "rsi": 67.7,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "Guc Patlamasi"
+        "EMA20 > EMA50",
+        "Golden Cross",
+        "Guc Patlamasi",
+        "Trend Uyumu"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
@@ -5260,15 +5332,14 @@
       "guc_patlamasi": true,
       "destek_testi": false,
       "hacim_bombasi": false,
-      "trend_uyumu": false
+      "trend_uyumu": true
     },
     "PAMEL": {
-      "kapanis": 81.5,
-      "rsi": 68.4,
+      "kapanis": 81.9,
+      "rsi": 67.6,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "Ters Cekic",
         "Bant Sikismasi",
         "Guc Patlamasi",
         "Destek Testi"
@@ -5282,8 +5353,8 @@
       "trend_uyumu": false
     },
     "PAPIL": {
-      "kapanis": 16.54,
-      "rsi": 12.1,
+      "kapanis": 16.5,
+      "rsi": 12.7,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -5296,8 +5367,8 @@
       "trend_uyumu": false
     },
     "PARSN": {
-      "kapanis": 81.3,
-      "rsi": 45.4,
+      "kapanis": 80.9,
+      "rsi": 43.6,
       "sinyaller": [
         "MACD Pozitif"
       ],
@@ -5310,12 +5381,13 @@
       "trend_uyumu": false
     },
     "PASEU": {
-      "kapanis": 115.9,
-      "rsi": 56.2,
+      "kapanis": 116.6,
+      "rsi": 54.7,
       "sinyaller": [
-        "MACD Pozitif"
+        "MACD Pozitif",
+        "Boga Harami"
       ],
-      "altin": null,
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -5324,8 +5396,8 @@
       "trend_uyumu": false
     },
     "PCILT": {
-      "kapanis": 24.92,
-      "rsi": 35.9,
+      "kapanis": 25.24,
+      "rsi": 36.7,
       "sinyaller": [
         "EMA20 > EMA50",
         "Destek Testi"
@@ -5339,8 +5411,8 @@
       "trend_uyumu": false
     },
     "PEKGY": {
-      "kapanis": 13.95,
-      "rsi": 91.3,
+      "kapanis": 14.39,
+      "rsi": 92.1,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -5357,59 +5429,55 @@
       "trend_uyumu": true
     },
     "PENGD": {
-      "kapanis": 9.14,
-      "rsi": 66.0,
+      "kapanis": 9.12,
+      "rsi": 66.9,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
-        "Bant Sikismasi",
         "Guc Patlamasi",
         "Destek Testi",
         "Trend Uyumu"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
-      "bant_sikismasi": true,
+      "bant_sikismasi": false,
       "guc_patlamasi": true,
       "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": true
     },
     "PENTA": {
-      "kapanis": 13.17,
-      "rsi": 53.8,
+      "kapanis": 13.11,
+      "rsi": 51.0,
       "sinyaller": [
-        "MACD Al Kesisimi",
-        "MACD Pozitif",
-        "Destek Testi"
-      ],
-      "altin": "Bronz",
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": true,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "PETKM": {
-      "kapanis": 17.94,
-      "rsi": 51.4,
-      "sinyaller": [
-        "EMA20 > EMA50",
-        "Destek Testi"
+        "MACD Pozitif"
       ],
       "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
-      "destek_testi": true,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "PETKM": {
+      "kapanis": 17.83,
+      "rsi": 49.1,
+      "sinyaller": [
+        "EMA20 > EMA50"
+      ],
+      "altin": null,
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": false,
+      "destek_testi": false,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "PETUN": {
-      "kapanis": 11.7,
-      "rsi": 52.7,
+      "kapanis": 11.76,
+      "rsi": 51.4,
       "sinyaller": [
         "MACD Pozitif",
         "Bant Sikismasi",
@@ -5424,11 +5492,11 @@
       "trend_uyumu": false
     },
     "PGSUS": {
-      "kapanis": 177.9,
-      "rsi": 36.7,
+      "kapanis": 178.3,
+      "rsi": 40.2,
       "sinyaller": [
-        "MACD Al Kesisimi",
-        "MACD Pozitif"
+        "MACD Pozitif",
+        "Boga Harami"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
@@ -5439,8 +5507,8 @@
       "trend_uyumu": false
     },
     "PINSU": {
-      "kapanis": 10.48,
-      "rsi": 67.6,
+      "kapanis": 10.44,
+      "rsi": 63.9,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -5456,14 +5524,13 @@
       "trend_uyumu": false
     },
     "PKART": {
-      "kapanis": 74.95,
-      "rsi": 29.6,
+      "kapanis": 75.35,
+      "rsi": 37.5,
       "sinyaller": [
         "EMA20 > EMA50",
-        "RSI Asiri Satim",
         "Destek Testi"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -5472,8 +5539,8 @@
       "trend_uyumu": false
     },
     "PKENT": {
-      "kapanis": 158.9,
-      "rsi": 63.3,
+      "kapanis": 159.8,
+      "rsi": 63.6,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -5488,111 +5555,8 @@
       "trend_uyumu": false
     },
     "PLTUR": {
-      "kapanis": 22.38,
-      "rsi": 65.1,
-      "sinyaller": [
-        "MACD Pozitif",
-        "Fiyat EMA20 Ustunde",
-        "Guc Patlamasi",
-        "Destek Testi"
-      ],
-      "altin": "Bronz",
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": true,
-      "destek_testi": true,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "PNLSN": {
-      "kapanis": 52.25,
-      "rsi": 56.1,
-      "sinyaller": [
-        "Fiyat EMA20 Ustunde",
-        "EMA20 > EMA50"
-      ],
-      "altin": null,
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": false,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "POLHO": {
-      "kapanis": 19.24,
-      "rsi": 78.2,
-      "sinyaller": [
-        "MACD Pozitif",
-        "Fiyat EMA20 Ustunde",
-        "EMA20 > EMA50",
-        "Golden Cross",
-        "Hacim Alarmi",
-        "Guc Patlamasi",
-        "Hacim Bombasi",
-        "Trend Uyumu"
-      ],
-      "altin": "Gumus",
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": true,
-      "destek_testi": false,
-      "hacim_bombasi": true,
-      "trend_uyumu": true
-    },
-    "POLTK": {
-      "kapanis": 5210.0,
-      "rsi": 34.1,
-      "sinyaller": [
-        "RSI Asiri Satim"
-      ],
-      "altin": "Bronz",
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": false,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "PRDGS": {
-      "kapanis": 7.72,
-      "rsi": 74.8,
-      "sinyaller": [
-        "MACD Pozitif",
-        "Fiyat EMA20 Ustunde",
-        "Hacim Alarmi",
-        "Guc Patlamasi",
-        "Hacim Bombasi"
-      ],
-      "altin": "Bronz",
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": true,
-      "destek_testi": false,
-      "hacim_bombasi": true,
-      "trend_uyumu": false
-    },
-    "PRZMA": {
-      "kapanis": 15.17,
-      "rsi": 88.5,
-      "sinyaller": [
-        "MACD Pozitif",
-        "Fiyat EMA20 Ustunde",
-        "EMA20 > EMA50",
-        "Guc Patlamasi",
-        "Trend Uyumu"
-      ],
-      "altin": "Bronz",
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": true,
-      "destek_testi": false,
-      "hacim_bombasi": false,
-      "trend_uyumu": true
-    },
-    "PSDTC": {
-      "kapanis": 125.5,
-      "rsi": 75.2,
+      "kapanis": 22.76,
+      "rsi": 67.5,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -5606,9 +5570,114 @@
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
+    "PNLSN": {
+      "kapanis": 51.1,
+      "rsi": 54.7,
+      "sinyaller": [
+        "MACD Al Kesisimi",
+        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "EMA20 > EMA50",
+        "Bant Sikismasi",
+        "Trend Uyumu"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": true,
+      "guc_patlamasi": false,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": true
+    },
+    "POLHO": {
+      "kapanis": 19.73,
+      "rsi": 80.4,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "EMA20 > EMA50",
+        "Cekic",
+        "Guc Patlamasi",
+        "Trend Uyumu"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": true,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": true
+    },
+    "POLTK": {
+      "kapanis": 5185.0,
+      "rsi": 29.7,
+      "sinyaller": [
+        "RSI Asiri Satim",
+        "Boga Harami"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": false,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "PRDGS": {
+      "kapanis": 7.45,
+      "rsi": 70.0,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "Guc Patlamasi"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": true,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "PRZMA": {
+      "kapanis": 15.19,
+      "rsi": 86.9,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "EMA20 > EMA50",
+        "Cekic",
+        "Guc Patlamasi",
+        "Trend Uyumu"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": true,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": true
+    },
+    "PSDTC": {
+      "kapanis": 126.5,
+      "rsi": 77.5,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "Cekic",
+        "Guc Patlamasi"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": true,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
     "PSGYO": {
       "kapanis": 2.13,
-      "rsi": 51.4,
+      "rsi": 50.0,
       "sinyaller": [
         "MACD Pozitif",
         "Bant Sikismasi"
@@ -5622,8 +5691,8 @@
       "trend_uyumu": false
     },
     "RALYH": {
-      "kapanis": 138.1,
-      "rsi": 37.3,
+      "kapanis": 141.4,
+      "rsi": 37.0,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif"
@@ -5637,10 +5706,13 @@
       "trend_uyumu": false
     },
     "RAYSG": {
-      "kapanis": 199.2,
-      "rsi": 41.3,
-      "sinyaller": [],
-      "altin": null,
+      "kapanis": 198.8,
+      "rsi": 40.5,
+      "sinyaller": [
+        "MACD Al Kesisimi",
+        "MACD Pozitif"
+      ],
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -5649,27 +5721,25 @@
       "trend_uyumu": false
     },
     "REEDR": {
-      "kapanis": 6.23,
-      "rsi": 61.1,
+      "kapanis": 6.17,
+      "rsi": 59.8,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "Hacim Alarmi",
         "Guc Patlamasi",
-        "Destek Testi",
-        "Hacim Bombasi"
+        "Destek Testi"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": true,
       "destek_testi": true,
-      "hacim_bombasi": true,
+      "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "RGYAS": {
-      "kapanis": 156.2,
-      "rsi": 39.3,
+      "kapanis": 157.6,
+      "rsi": 42.0,
       "sinyaller": [
         "Destek Testi"
       ],
@@ -5682,8 +5752,8 @@
       "trend_uyumu": false
     },
     "RODRG": {
-      "kapanis": 20.82,
-      "rsi": 52.3,
+      "kapanis": 20.98,
+      "rsi": 54.8,
       "sinyaller": [
         "MACD Pozitif",
         "Bant Sikismasi",
@@ -5698,27 +5768,29 @@
       "trend_uyumu": false
     },
     "RTALB": {
-      "kapanis": 3.96,
-      "rsi": 64.1,
+      "kapanis": 3.94,
+      "rsi": 61.6,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
+        "Bant Sikismasi",
         "Guc Patlamasi",
         "Destek Testi"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
-      "bant_sikismasi": false,
+      "bant_sikismasi": true,
       "guc_patlamasi": true,
       "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "RUBNS": {
-      "kapanis": 32.7,
-      "rsi": 47.2,
+      "kapanis": 32.98,
+      "rsi": 51.7,
       "sinyaller": [
-        "Cekic",
+        "MACD Al Kesisimi",
+        "MACD Pozitif",
         "Destek Testi"
       ],
       "altin": "Bronz",
@@ -5730,8 +5802,8 @@
       "trend_uyumu": false
     },
     "RYSAS": {
-      "kapanis": 17.49,
-      "rsi": 28.6,
+      "kapanis": 17.32,
+      "rsi": 29.5,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -5744,8 +5816,8 @@
       "trend_uyumu": false
     },
     "SAFKR": {
-      "kapanis": 26.72,
-      "rsi": 71.3,
+      "kapanis": 26.6,
+      "rsi": 76.4,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -5761,8 +5833,8 @@
       "trend_uyumu": false
     },
     "SAHOL": {
-      "kapanis": 94.7,
-      "rsi": 45.9,
+      "kapanis": 95.4,
+      "rsi": 49.0,
       "sinyaller": [
         "MACD Pozitif",
         "Destek Testi"
@@ -5776,8 +5848,8 @@
       "trend_uyumu": false
     },
     "SAMAT": {
-      "kapanis": 5.52,
-      "rsi": 58.6,
+      "kapanis": 5.54,
+      "rsi": 59.4,
       "sinyaller": [
         "MACD Pozitif",
         "Destek Testi"
@@ -5791,25 +5863,23 @@
       "trend_uyumu": false
     },
     "SANEL": {
-      "kapanis": 37.3,
-      "rsi": 67.3,
+      "kapanis": 36.08,
+      "rsi": 57.9,
       "sinyaller": [
         "MACD Pozitif",
-        "Fiyat EMA20 Ustunde",
-        "Guc Patlamasi",
         "Destek Testi"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
-      "guc_patlamasi": true,
+      "guc_patlamasi": false,
       "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "SANFM": {
-      "kapanis": 7.08,
-      "rsi": 48.0,
+      "kapanis": 7.03,
+      "rsi": 43.0,
       "sinyaller": [
         "Destek Testi"
       ],
@@ -5823,7 +5893,7 @@
     },
     "SANKO": {
       "kapanis": 20.44,
-      "rsi": 63.5,
+      "rsi": 60.1,
       "sinyaller": [
         "MACD Pozitif",
         "Destek Testi"
@@ -5837,10 +5907,11 @@
       "trend_uyumu": false
     },
     "SARKY": {
-      "kapanis": 32.04,
-      "rsi": 32.9,
+      "kapanis": 31.92,
+      "rsi": 35.1,
       "sinyaller": [
-        "RSI Asiri Satim"
+        "MACD Al Kesisimi",
+        "MACD Pozitif"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
@@ -5852,9 +5923,10 @@
     },
     "SASA": {
       "kapanis": 2.22,
-      "rsi": 33.3,
+      "rsi": 35.1,
       "sinyaller": [
-        "RSI Asiri Satim"
+        "MACD Al Kesisimi",
+        "MACD Pozitif"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
@@ -5865,25 +5937,24 @@
       "trend_uyumu": false
     },
     "SAYAS": {
-      "kapanis": 39.42,
-      "rsi": 57.6,
+      "kapanis": 41.44,
+      "rsi": 71.6,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "Guc Patlamasi",
-        "Destek Testi"
+        "Guc Patlamasi"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": true,
-      "destek_testi": true,
+      "destek_testi": false,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "SDTTR": {
-      "kapanis": 229.1,
-      "rsi": 25.6,
+      "kapanis": 228.3,
+      "rsi": 25.3,
       "sinyaller": [
         "EMA20 > EMA50",
         "RSI Asiri Satim"
@@ -5897,23 +5968,8 @@
       "trend_uyumu": false
     },
     "SEGYO": {
-      "kapanis": 6.14,
-      "rsi": 48.3,
-      "sinyaller": [
-        "Fiyat EMA20 Ustunde",
-        "EMA20 > EMA50"
-      ],
-      "altin": null,
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": false,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "SEKFK": {
-      "kapanis": 9.8,
-      "rsi": 67.0,
+      "kapanis": 6.11,
+      "rsi": 42.8,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -5927,29 +5983,49 @@
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
+    "SEKFK": {
+      "kapanis": 9.99,
+      "rsi": 71.9,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "EMA20 > EMA50",
+        "Cekic",
+        "Guc Patlamasi",
+        "Destek Testi",
+        "Trend Uyumu"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": true,
+      "destek_testi": true,
+      "hacim_bombasi": false,
+      "trend_uyumu": true
+    },
     "SEKUR": {
-      "kapanis": 5.6,
-      "rsi": 62.5,
+      "kapanis": 5.55,
+      "rsi": 59.0,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
-        "EMA20 > EMA50"
+        "EMA20 > EMA50",
+        "Destek Testi"
       ],
       "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
-      "destek_testi": false,
+      "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "SELEC": {
-      "kapanis": 81.05,
-      "rsi": 47.7,
+      "kapanis": 80.55,
+      "rsi": 49.5,
       "sinyaller": [
-        "Yutan Boga",
         "Destek Testi"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -5958,11 +6034,10 @@
       "trend_uyumu": false
     },
     "SELVA": {
-      "kapanis": 2.32,
-      "rsi": 50.6,
+      "kapanis": 2.31,
+      "rsi": 36.6,
       "sinyaller": [
         "MACD Pozitif",
-        "Fiyat EMA20 Ustunde",
         "Destek Testi"
       ],
       "altin": null,
@@ -5974,23 +6049,23 @@
       "trend_uyumu": false
     },
     "SEYKM": {
-      "kapanis": 4.64,
-      "rsi": 53.1,
+      "kapanis": 4.67,
+      "rsi": 58.2,
       "sinyaller": [
         "MACD Pozitif",
-        "Boga Harami"
+        "Destek Testi"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
-      "destek_testi": false,
+      "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "SILVR": {
-      "kapanis": 2.48,
-      "rsi": 48.7,
+      "kapanis": 2.47,
+      "rsi": 43.6,
       "sinyaller": [
         "MACD Pozitif"
       ],
@@ -6004,7 +6079,7 @@
     },
     "SISE": {
       "kapanis": 41.9,
-      "rsi": 44.2,
+      "rsi": 46.0,
       "sinyaller": [
         "MACD Pozitif",
         "Destek Testi"
@@ -6018,8 +6093,8 @@
       "trend_uyumu": false
     },
     "SKBNK": {
-      "kapanis": 10.46,
-      "rsi": 27.9,
+      "kapanis": 10.55,
+      "rsi": 32.9,
       "sinyaller": [
         "EMA20 > EMA50",
         "RSI Asiri Satim"
@@ -6033,8 +6108,8 @@
       "trend_uyumu": false
     },
     "SKTAS": {
-      "kapanis": 3.31,
-      "rsi": 60.5,
+      "kapanis": 3.3,
+      "rsi": 57.8,
       "sinyaller": [
         "MACD Pozitif",
         "Bant Sikismasi",
@@ -6049,38 +6124,34 @@
       "trend_uyumu": false
     },
     "SMART": {
-      "kapanis": 38.92,
-      "rsi": 73.4,
+      "kapanis": 38.44,
+      "rsi": 70.9,
       "sinyaller": [
-        "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "EMA20 > EMA50",
-        "Guc Patlamasi",
-        "Trend Uyumu"
+        "EMA20 > EMA50"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
-      "guc_patlamasi": true,
+      "guc_patlamasi": false,
       "destek_testi": false,
       "hacim_bombasi": false,
-      "trend_uyumu": true
+      "trend_uyumu": false
     },
     "SNGYO": {
-      "kapanis": 4.47,
+      "kapanis": 4.52,
       "rsi": 59.6,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
         "Bant Sikismasi",
-        "Guc Patlamasi",
-        "Destek Testi"
+        "Guc Patlamasi"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": true,
       "guc_patlamasi": true,
-      "destek_testi": true,
+      "destek_testi": false,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
@@ -6104,7 +6175,7 @@
     },
     "SODSN": {
       "kapanis": 9.98,
-      "rsi": 60.2,
+      "rsi": 58.3,
       "sinyaller": [
         "MACD Pozitif"
       ],
@@ -6117,10 +6188,10 @@
       "trend_uyumu": false
     },
     "SOKM": {
-      "kapanis": 59.75,
-      "rsi": 37.0,
+      "kapanis": 59.2,
+      "rsi": 28.4,
       "sinyaller": [
-        "Sabah Yildizi"
+        "RSI Asiri Satim"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
@@ -6131,8 +6202,25 @@
       "trend_uyumu": false
     },
     "SONME": {
-      "kapanis": 153.7,
-      "rsi": 67.4,
+      "kapanis": 152.7,
+      "rsi": 64.6,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "Guc Patlamasi",
+        "Destek Testi"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": true,
+      "destek_testi": true,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "SRVGY": {
+      "kapanis": 3.26,
+      "rsi": 66.7,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -6146,27 +6234,9 @@
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
-    "SRVGY": {
-      "kapanis": 3.25,
-      "rsi": 66.2,
-      "sinyaller": [
-        "MACD Pozitif",
-        "Fiyat EMA20 Ustunde",
-        "Hacim Alarmi",
-        "Guc Patlamasi",
-        "Hacim Bombasi"
-      ],
-      "altin": "Bronz",
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": true,
-      "destek_testi": false,
-      "hacim_bombasi": true,
-      "trend_uyumu": false
-    },
     "SUMAS": {
-      "kapanis": 270.5,
-      "rsi": 61.2,
+      "kapanis": 272.25,
+      "rsi": 57.4,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -6182,23 +6252,25 @@
       "trend_uyumu": false
     },
     "SUNTK": {
-      "kapanis": 36.54,
-      "rsi": 59.0,
+      "kapanis": 36.7,
+      "rsi": 60.7,
       "sinyaller": [
         "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "Guc Patlamasi",
         "Destek Testi"
       ],
-      "altin": null,
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
-      "guc_patlamasi": false,
+      "guc_patlamasi": true,
       "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "SURGY": {
-      "kapanis": 59.5,
-      "rsi": 29.3,
+      "kapanis": 59.3,
+      "rsi": 28.7,
       "sinyaller": [
         "EMA20 > EMA50",
         "RSI Asiri Satim"
@@ -6212,10 +6284,9 @@
       "trend_uyumu": false
     },
     "SUWEN": {
-      "kapanis": 9.34,
-      "rsi": 59.3,
+      "kapanis": 9.25,
+      "rsi": 48.9,
       "sinyaller": [
-        "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
         "Destek Testi"
       ],
@@ -6228,8 +6299,8 @@
       "trend_uyumu": false
     },
     "TABGD": {
-      "kapanis": 253.5,
-      "rsi": 58.4,
+      "kapanis": 254.25,
+      "rsi": 56.8,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -6245,22 +6316,22 @@
       "trend_uyumu": false
     },
     "TARKM": {
-      "kapanis": 382.75,
-      "rsi": 50.9,
+      "kapanis": 377.25,
+      "rsi": 34.5,
       "sinyaller": [
-        "Destek Testi"
+        "RSI Asiri Satim"
       ],
-      "altin": null,
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
-      "destek_testi": true,
+      "destek_testi": false,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "TATGD": {
-      "kapanis": 18.8,
-      "rsi": 64.0,
+      "kapanis": 18.75,
+      "rsi": 65.0,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -6277,14 +6348,13 @@
       "trend_uyumu": true
     },
     "TAVHL": {
-      "kapanis": 302.0,
-      "rsi": 52.9,
+      "kapanis": 299.25,
+      "rsi": 48.5,
       "sinyaller": [
         "MACD Pozitif",
-        "Cekic",
         "Destek Testi"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -6293,31 +6363,31 @@
       "trend_uyumu": false
     },
     "TBORG": {
-      "kapanis": 163.1,
-      "rsi": 61.8,
+      "kapanis": 163.7,
+      "rsi": 62.2,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
+        "Bant Sikismasi",
         "Guc Patlamasi",
         "Destek Testi"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
-      "bant_sikismasi": false,
+      "bant_sikismasi": true,
       "guc_patlamasi": true,
       "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "TCELL": {
-      "kapanis": 111.2,
-      "rsi": 42.0,
+      "kapanis": 109.8,
+      "rsi": 38.1,
       "sinyaller": [
-        "MACD Al Kesisimi",
         "MACD Pozitif",
         "Destek Testi"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -6326,13 +6396,13 @@
       "trend_uyumu": false
     },
     "TCKRC": {
-      "kapanis": 102.6,
-      "rsi": 77.9,
+      "kapanis": 99.7,
+      "rsi": 74.8,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
-        "Hacim Alarmi",
+        "Ters Cekic",
         "Guc Patlamasi",
         "Trend Uyumu"
       ],
@@ -6345,8 +6415,8 @@
       "trend_uyumu": true
     },
     "TDGYO": {
-      "kapanis": 18.01,
-      "rsi": 51.1,
+      "kapanis": 18.07,
+      "rsi": 56.4,
       "sinyaller": [
         "MACD Pozitif",
         "Bant Sikismasi"
@@ -6360,30 +6430,28 @@
       "trend_uyumu": false
     },
     "TEKTU": {
-      "kapanis": 9.05,
-      "rsi": 60.5,
+      "kapanis": 9.16,
+      "rsi": 62.6,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "Guc Patlamasi",
-        "Destek Testi"
+        "Guc Patlamasi"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": true,
-      "destek_testi": true,
+      "destek_testi": false,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "TERA": {
-      "kapanis": 301.0,
-      "rsi": 88.8,
+      "kapanis": 303.25,
+      "rsi": 85.3,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
-        "Cekic",
         "Guc Patlamasi",
         "Trend Uyumu"
       ],
@@ -6396,12 +6464,13 @@
       "trend_uyumu": true
     },
     "TEZOL": {
-      "kapanis": 16.32,
-      "rsi": 84.0,
+      "kapanis": 16.42,
+      "rsi": 83.7,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
+        "Ters Cekic",
         "Guc Patlamasi",
         "Trend Uyumu"
       ],
@@ -6414,8 +6483,8 @@
       "trend_uyumu": true
     },
     "TGSAS": {
-      "kapanis": 174.0,
-      "rsi": 52.3,
+      "kapanis": 173.7,
+      "rsi": 43.9,
       "sinyaller": [
         "EMA20 > EMA50",
         "Bant Sikismasi",
@@ -6430,24 +6499,25 @@
       "trend_uyumu": false
     },
     "THYAO": {
-      "kapanis": 293.75,
-      "rsi": 52.8,
+      "kapanis": 293.25,
+      "rsi": 55.9,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
+        "Guc Patlamasi",
         "Destek Testi"
       ],
-      "altin": null,
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
-      "guc_patlamasi": false,
+      "guc_patlamasi": true,
       "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "TKFEN": {
-      "kapanis": 83.05,
-      "rsi": 74.9,
+      "kapanis": 83.3,
+      "rsi": 75.2,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -6462,13 +6532,12 @@
       "trend_uyumu": false
     },
     "TKNSA": {
-      "kapanis": 23.96,
-      "rsi": 64.9,
+      "kapanis": 24.22,
+      "rsi": 65.2,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
-        "Cekic",
         "Guc Patlamasi",
         "Destek Testi",
         "Trend Uyumu"
@@ -6482,14 +6551,13 @@
       "trend_uyumu": true
     },
     "TLMAN": {
-      "kapanis": 88.35,
-      "rsi": 48.3,
+      "kapanis": 87.95,
+      "rsi": 46.7,
       "sinyaller": [
         "MACD Pozitif",
-        "Ters Cekic",
         "Destek Testi"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -6498,32 +6566,30 @@
       "trend_uyumu": false
     },
     "TMSN": {
-      "kapanis": 105.3,
-      "rsi": 61.5,
+      "kapanis": 105.6,
+      "rsi": 63.5,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "Bant Sikismasi",
         "Guc Patlamasi",
         "Destek Testi"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
-      "bant_sikismasi": true,
+      "bant_sikismasi": false,
       "guc_patlamasi": true,
       "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "TOASO": {
-      "kapanis": 300.25,
-      "rsi": 43.8,
+      "kapanis": 302.0,
+      "rsi": 42.1,
       "sinyaller": [
-        "MACD Al Kesisimi",
         "MACD Pozitif",
         "Destek Testi"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -6532,12 +6598,10 @@
       "trend_uyumu": false
     },
     "TRCAS": {
-      "kapanis": 44.26,
-      "rsi": 31.4,
-      "sinyaller": [
-        "RSI Asiri Satim"
-      ],
-      "altin": "Bronz",
+      "kapanis": 44.6,
+      "rsi": 37.8,
+      "sinyaller": [],
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -6546,8 +6610,8 @@
       "trend_uyumu": false
     },
     "TRGYO": {
-      "kapanis": 81.6,
-      "rsi": 54.5,
+      "kapanis": 81.2,
+      "rsi": 53.0,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -6562,8 +6626,8 @@
       "trend_uyumu": false
     },
     "TRILC": {
-      "kapanis": 15.61,
-      "rsi": 59.0,
+      "kapanis": 15.71,
+      "rsi": 64.9,
       "sinyaller": [
         "MACD Pozitif",
         "Bant Sikismasi",
@@ -6578,30 +6642,29 @@
       "trend_uyumu": false
     },
     "TSPOR": {
-      "kapanis": 1.0,
-      "rsi": 57.1,
+      "kapanis": 0.95,
+      "rsi": 48.0,
       "sinyaller": [
-        "MACD Pozitif",
-        "Fiyat EMA20 Ustunde",
-        "Hacim Alarmi",
-        "Guc Patlamasi",
-        "Destek Testi"
+        "MACD Pozitif"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
-      "guc_patlamasi": true,
-      "destek_testi": true,
+      "guc_patlamasi": false,
+      "destek_testi": false,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "TTKOM": {
-      "kapanis": 62.4,
-      "rsi": 36.9,
+      "kapanis": 62.05,
+      "rsi": 34.4,
       "sinyaller": [
+        "MACD Al Kesisimi",
+        "MACD Pozitif",
+        "RSI Asiri Satim",
         "Destek Testi"
       ],
-      "altin": null,
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -6610,9 +6673,11 @@
       "trend_uyumu": false
     },
     "TTRAK": {
-      "kapanis": 448.75,
-      "rsi": 25.5,
+      "kapanis": 454.75,
+      "rsi": 31.4,
       "sinyaller": [
+        "MACD Al Kesisimi",
+        "MACD Pozitif",
         "RSI Asiri Satim"
       ],
       "altin": "Bronz",
@@ -6624,8 +6689,8 @@
       "trend_uyumu": false
     },
     "TUCLK": {
-      "kapanis": 4.34,
-      "rsi": 47.6,
+      "kapanis": 4.32,
+      "rsi": 44.3,
       "sinyaller": [
         "MACD Pozitif"
       ],
@@ -6639,21 +6704,23 @@
     },
     "TUKAS": {
       "kapanis": 2.33,
-      "rsi": 55.0,
+      "rsi": 53.5,
       "sinyaller": [
-        "MACD Pozitif"
+        "MACD Pozitif",
+        "Boga Harami",
+        "Bant Sikismasi"
       ],
-      "altin": null,
+      "altin": "Bronz",
       "dip_vurusu": false,
-      "bant_sikismasi": false,
+      "bant_sikismasi": true,
       "guc_patlamasi": false,
       "destek_testi": false,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "TUPRS": {
-      "kapanis": 249.9,
-      "rsi": 63.0,
+      "kapanis": 252.5,
+      "rsi": 63.5,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -6670,30 +6737,33 @@
       "trend_uyumu": true
     },
     "TUREX": {
-      "kapanis": 6.96,
-      "rsi": 58.3,
+      "kapanis": 7.0,
+      "rsi": 58.6,
       "sinyaller": [
         "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
         "Bant Sikismasi",
+        "Guc Patlamasi",
         "Destek Testi"
       ],
-      "altin": null,
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": true,
-      "guc_patlamasi": false,
+      "guc_patlamasi": true,
       "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "TURGG": {
-      "kapanis": 27.6,
-      "rsi": 57.4,
+      "kapanis": 27.64,
+      "rsi": 56.8,
       "sinyaller": [
         "MACD Pozitif",
+        "Ters Cekic",
         "Bant Sikismasi",
         "Destek Testi"
       ],
-      "altin": null,
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": true,
       "guc_patlamasi": false,
@@ -6702,8 +6772,8 @@
       "trend_uyumu": false
     },
     "TURSG": {
-      "kapanis": 12.18,
-      "rsi": 58.8,
+      "kapanis": 12.35,
+      "rsi": 61.9,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -6719,8 +6789,8 @@
       "trend_uyumu": false
     },
     "ULUFA": {
-      "kapanis": 3.92,
-      "rsi": 59.7,
+      "kapanis": 3.9,
+      "rsi": 55.2,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -6737,11 +6807,12 @@
       "trend_uyumu": false
     },
     "ULUSE": {
-      "kapanis": 189.6,
-      "rsi": 61.3,
+      "kapanis": 193.3,
+      "rsi": 69.4,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
+        "Boga Harami",
         "Guc Patlamasi"
       ],
       "altin": "Bronz",
@@ -6753,12 +6824,13 @@
       "trend_uyumu": false
     },
     "ULUUN": {
-      "kapanis": 7.84,
-      "rsi": 77.2,
+      "kapanis": 7.83,
+      "rsi": 74.6,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
+        "Boga Harami",
         "Guc Patlamasi",
         "Trend Uyumu"
       ],
@@ -6771,8 +6843,8 @@
       "trend_uyumu": true
     },
     "UNLU": {
-      "kapanis": 14.33,
-      "rsi": 38.8,
+      "kapanis": 14.35,
+      "rsi": 41.8,
       "sinyaller": [
         "MACD Pozitif"
       ],
@@ -6785,8 +6857,8 @@
       "trend_uyumu": false
     },
     "USAK": {
-      "kapanis": 1.62,
-      "rsi": 57.6,
+      "kapanis": 1.63,
+      "rsi": 55.9,
       "sinyaller": [
         "MACD Pozitif",
         "Bant Sikismasi",
@@ -6801,14 +6873,15 @@
       "trend_uyumu": false
     },
     "USDTR": {
-      "kapanis": 4119.0,
-      "rsi": 51.0,
+      "kapanis": 4128.0,
+      "rsi": 54.9,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
+        "Ters Cekic",
         "Destek Testi"
       ],
-      "altin": null,
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -6817,22 +6890,22 @@
       "trend_uyumu": false
     },
     "VAKBN": {
-      "kapanis": 36.28,
-      "rsi": 38.2,
+      "kapanis": 35.3,
+      "rsi": 32.9,
       "sinyaller": [
-        "Destek Testi"
+        "RSI Asiri Satim"
       ],
-      "altin": null,
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
-      "destek_testi": true,
+      "destek_testi": false,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "VAKFN": {
-      "kapanis": 1.89,
-      "rsi": 53.8,
+      "kapanis": 1.88,
+      "rsi": 50.0,
       "sinyaller": [
         "MACD Pozitif",
         "Destek Testi"
@@ -6846,11 +6919,12 @@
       "trend_uyumu": false
     },
     "VAKKO": {
-      "kapanis": 66.3,
-      "rsi": 30.5,
+      "kapanis": 67.7,
+      "rsi": 29.3,
       "sinyaller": [
         "EMA20 > EMA50",
-        "RSI Asiri Satim"
+        "RSI Asiri Satim",
+        "Boga Harami"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
@@ -6861,8 +6935,8 @@
       "trend_uyumu": false
     },
     "VANGD": {
-      "kapanis": 73.5,
-      "rsi": 68.6,
+      "kapanis": 74.05,
+      "rsi": 72.5,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -6879,20 +6953,24 @@
       "trend_uyumu": true
     },
     "VERTU": {
-      "kapanis": 37.76,
-      "rsi": 51.7,
-      "sinyaller": [],
-      "altin": null,
+      "kapanis": 40.46,
+      "rsi": 59.5,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "Guc Patlamasi"
+      ],
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
-      "guc_patlamasi": false,
+      "guc_patlamasi": true,
       "destek_testi": false,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "VERUS": {
-      "kapanis": 331.0,
-      "rsi": 86.8,
+      "kapanis": 358.0,
+      "rsi": 87.5,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -6909,8 +6987,8 @@
       "trend_uyumu": true
     },
     "VESBE": {
-      "kapanis": 7.35,
-      "rsi": 47.4,
+      "kapanis": 7.33,
+      "rsi": 48.5,
       "sinyaller": [
         "MACD Pozitif"
       ],
@@ -6923,13 +7001,14 @@
       "trend_uyumu": false
     },
     "VESTL": {
-      "kapanis": 28.38,
-      "rsi": 52.1,
+      "kapanis": 28.3,
+      "rsi": 50.5,
       "sinyaller": [
         "MACD Pozitif",
+        "Boga Harami",
         "Destek Testi"
       ],
-      "altin": null,
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -6938,12 +7017,13 @@
       "trend_uyumu": false
     },
     "VKFYO": {
-      "kapanis": 33.4,
-      "rsi": 63.8,
+      "kapanis": 32.84,
+      "rsi": 58.3,
       "sinyaller": [
-        "MACD Pozitif"
+        "MACD Pozitif",
+        "Ters Cekic"
       ],
-      "altin": null,
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -6952,8 +7032,8 @@
       "trend_uyumu": false
     },
     "VKGYO": {
-      "kapanis": 2.86,
-      "rsi": 71.7,
+      "kapanis": 2.84,
+      "rsi": 69.8,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -6968,17 +7048,19 @@
       "trend_uyumu": false
     },
     "VRGYO": {
-      "kapanis": 2.21,
-      "rsi": 57.9,
+      "kapanis": 2.26,
+      "rsi": 59.5,
       "sinyaller": [
         "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
         "Bant Sikismasi",
+        "Guc Patlamasi",
         "Destek Testi"
       ],
-      "altin": null,
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": true,
-      "guc_patlamasi": false,
+      "guc_patlamasi": true,
       "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
@@ -6987,7 +7069,6 @@
       "kapanis": 12.58,
       "rsi": 55.9,
       "sinyaller": [
-        "MACD Al Kesisimi",
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
         "Guc Patlamasi"
@@ -7001,25 +7082,25 @@
       "trend_uyumu": false
     },
     "YATAS": {
-      "kapanis": 43.38,
-      "rsi": 52.7,
+      "kapanis": 44.4,
+      "rsi": 57.1,
       "sinyaller": [
-        "MACD Al Kesisimi",
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "Destek Testi"
+        "Yutan Boga",
+        "Guc Patlamasi"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": true,
+      "guc_patlamasi": true,
+      "destek_testi": false,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "YAYLA": {
-      "kapanis": 24.74,
-      "rsi": 64.5,
+      "kapanis": 24.66,
+      "rsi": 62.7,
       "sinyaller": [
         "MACD Pozitif",
         "Destek Testi"
@@ -7033,19 +7114,21 @@
       "trend_uyumu": false
     },
     "YBTAS": {
-      "kapanis": 19.74,
-      "rsi": 64.8,
+      "kapanis": 21.04,
+      "rsi": 69.9,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "Guc Patlamasi"
+        "Hacim Alarmi",
+        "Guc Patlamasi",
+        "Hacim Bombasi"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": true,
       "destek_testi": false,
-      "hacim_bombasi": false,
+      "hacim_bombasi": true,
       "trend_uyumu": false
     },
     "YESIL": {
@@ -7063,8 +7146,8 @@
       "trend_uyumu": false
     },
     "YGGYO": {
-      "kapanis": 160.5,
-      "rsi": 78.2,
+      "kapanis": 165.6,
+      "rsi": 80.0,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -7099,8 +7182,8 @@
       "trend_uyumu": true
     },
     "YKSLN": {
-      "kapanis": 3.23,
-      "rsi": 59.7,
+      "kapanis": 3.21,
+      "rsi": 58.7,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -7116,8 +7199,8 @@
       "trend_uyumu": false
     },
     "YONGA": {
-      "kapanis": 53.8,
-      "rsi": 55.6,
+      "kapanis": 54.0,
+      "rsi": 56.3,
       "sinyaller": [
         "MACD Pozitif",
         "Bant Sikismasi",
@@ -7132,32 +7215,36 @@
       "trend_uyumu": false
     },
     "ZEDUR": {
-      "kapanis": 8.15,
-      "rsi": 72.3,
+      "kapanis": 8.21,
+      "rsi": 70.5,
       "sinyaller": [
         "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
         "Bant Sikismasi",
+        "Guc Patlamasi",
         "Destek Testi"
       ],
-      "altin": null,
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": true,
-      "guc_patlamasi": false,
+      "guc_patlamasi": true,
       "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
     "ZRGYO": {
-      "kapanis": 22.02,
-      "rsi": 54.6,
+      "kapanis": 22.36,
+      "rsi": 61.2,
       "sinyaller": [
         "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "Guc Patlamasi",
         "Destek Testi"
       ],
-      "altin": null,
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
-      "guc_patlamasi": false,
+      "guc_patlamasi": true,
       "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false
