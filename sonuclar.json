@@ -1,5 +1,5 @@
 {
-  "tarih": "11.03.2026 22:43",
+  "tarih": "11.03.2026 22:55",
   "periyot": "gunluk",
   "hisseler": {
     "ACSEL": {
@@ -2300,22 +2300,6 @@
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
-    "EREGL": {
-      "kapanis": 28.96,
-      "rsi": 47.8,
-      "sinyaller": [
-        "EMA20 > EMA50",
-        "Fiyat SMA200 Ustunde",
-        "Destek Testi"
-      ],
-      "altin": null,
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": true,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
     "ERSU": {
       "kapanis": 21.3,
       "rsi": 62.5,
@@ -2337,6 +2321,22 @@
       "trend_uyumu": true
     },
     "ESCAR": {
+      "kapanis": 28.96,
+      "rsi": 47.8,
+      "sinyaller": [
+        "EMA20 > EMA50",
+        "Fiyat SMA200 Ustunde",
+        "Destek Testi"
+      ],
+      "altin": null,
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": false,
+      "destek_testi": true,
+      "hacim_bombasi": false,
+      "trend_uyumu": false
+    },
+    "ESCOM": {
       "kapanis": 27.42,
       "rsi": 70.5,
       "sinyaller": [
@@ -2355,7 +2355,7 @@
       "hacim_bombasi": false,
       "trend_uyumu": true
     },
-    "ESCOM": {
+    "ESEN": {
       "kapanis": 6.07,
       "rsi": 73.8,
       "sinyaller": [
@@ -2374,7 +2374,7 @@
       "hacim_bombasi": false,
       "trend_uyumu": true
     },
-    "ESEN": {
+    "ETILR": {
       "kapanis": 4.0,
       "rsi": 55.8,
       "sinyaller": [
@@ -2390,21 +2390,6 @@
       "bant_sikismasi": true,
       "guc_patlamasi": true,
       "destek_testi": true,
-      "hacim_bombasi": false,
-      "trend_uyumu": false
-    },
-    "ETILR": {
-      "kapanis": 4.01,
-      "rsi": 51.7,
-      "sinyaller": [
-        "MACD Pozitif",
-        "Fiyat EMA20 Ustunde"
-      ],
-      "altin": null,
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": false,
       "hacim_bombasi": false,
       "trend_uyumu": false
     },
@@ -3471,7 +3456,7 @@
     },
     "ISATR": {
       "kapanis": 4950000.0,
-      "rsi": NaN,
+      "rsi": null,
       "sinyaller": [
         "MACD Pozitif",
         "BB Alt Bant",
@@ -6749,7 +6734,7 @@
     },
     "UMPAS": {
       "kapanis": 9.3,
-      "rsi": NaN,
+      "rsi": null,
       "sinyaller": [
         "MACD Pozitif",
         "BB Alt Bant",
@@ -7081,7 +7066,7 @@
     },
     "YGYO": {
       "kapanis": 1.8,
-      "rsi": NaN,
+      "rsi": null,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
