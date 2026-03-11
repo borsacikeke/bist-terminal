@@ -1,206 +1,229 @@
-import matplotlib
-matplotlib.use('Agg')
-
-import yfinance as yf
-import ta
-import time
 import json
-import matplotlib.pyplot as plt
-import matplotlib.gridspec as gridspec
-import os
+import yfinance as yf
+import pandas as pd
+import numpy as np
 from datetime import datetime
+import pytz
 
-hisseler = ["A1CAP.IS","A1YEN.IS","ACSEL.IS","ADEL.IS","ADESE.IS","ADGYO.IS","AFYON.IS","AGESA.IS","AGHOL.IS","AGROT.IS","AHGAZ.IS","AHSGY.IS","AKCNS.IS","AKENR.IS","AKFGY.IS","AKFIS.IS","AKFYE.IS","AKGRT.IS","AKSA.IS","AKSEN.IS","AKSGY.IS","AKSUE.IS","AKYHO.IS","ALARK.IS","ALCAR.IS","ALCTL.IS","ALFAS.IS","ALGYO.IS","ALKA.IS","ALKIM.IS","ALKLC.IS","ALTNY.IS","ALVES.IS","ANELE.IS","ANGEN.IS","ANHYT.IS","ANSGR.IS","ARASE.IS","ARCLK.IS","ARDYZ.IS","ARENA.IS","ARFYE.IS","ARMGD.IS","ARSAN.IS","ARTMS.IS","ARZUM.IS","ASELS.IS","ASGYO.IS","ASTOR.IS","ASUZU.IS","ATAKP.IS","ATATP.IS","ATATR.IS","AVGYO.IS","AVHOL.IS","AVOD.IS","AVPGY.IS","AYCES.IS","AYDEM.IS","AYEN.IS","AYGAZ.IS","AZTEK.IS","BAGFS.IS","BAHKM.IS","BAKAB.IS","BALAT.IS","BALSU.IS","BANVT.IS","BARMA.IS","BASCM.IS","BASGZ.IS","BAYRK.IS","BEGYO.IS","BERA.IS","BESLR.IS","BEYAZ.IS","BFREN.IS","BIENY.IS","BIGCH.IS","BIGEN.IS","BIMAS.IS","BINBN.IS","BINHO.IS","BIOEN.IS","BIZIM.IS","BLCYT.IS","BLUME.IS","BMSCH.IS","BMSTL.IS","BNTAS.IS","BOBET.IS","BORLS.IS","BORSK.IS","BOSSA.IS","BRISA.IS","BRKSN.IS","BRKVY.IS","BRLSM.IS","BRSAN.IS","BRYAT.IS","BSOKE.IS","BTCIM.IS","BUCIM.IS","BULGS.IS","BURCE.IS","BURVA.IS","BVSAN.IS","BYDNR.IS","CANTE.IS","CATES.IS","CCOLA.IS","CELHA.IS","CEMAS.IS","CEMTS.IS","CEMZY.IS","CEOEM.IS","CGCAM.IS","CIMSA.IS","CLEBI.IS","CMBTN.IS","CONSE.IS","COSMO.IS","CRFSA.IS","CUSAN.IS","CVKMD.IS","CWENE.IS","DAGI.IS","DAPGM.IS","DARDL.IS","DCTTR.IS","DENGE.IS","DERHL.IS","DERIM.IS","DESA.IS","DESPC.IS","DEVA.IS","DGATE.IS","DGNMO.IS","DITAS.IS","DMRGD.IS","DMSAS.IS","DNISI.IS","DOAS.IS","DOCO.IS","DOFER.IS","DOFRB.IS","DOGUB.IS","DOHOL.IS","DOKTA.IS","DSTKF.IS","DURDO.IS","DURKN.IS","DYOBY.IS","DZGYO.IS","EBEBK.IS","ECILC.IS","ECZYT.IS","EDATA.IS","EDIP.IS","EGEEN.IS","EGEGY.IS","EGEPO.IS","EGGUB.IS","EGPRO.IS","EGSER.IS","EKGYO.IS","EKOS.IS","EKSUN.IS","ELITE.IS","EMKEL.IS","ENDAE.IS","ENERY.IS","ENJSA.IS","ENKAI.IS","ENSRI.IS","ENTRA.IS","EPLAS.IS","ERBOS.IS","ERCB.IS","EREGL.IS","ERSU.IS","ESCAR.IS","ESCOM.IS","ESEN.IS","ETILR.IS","EUPWR.IS","EUREN.IS","EYGYO.IS","FADE.IS","FLAP.IS","FMIZP.IS","FONET.IS","FORMT.IS","FORTE.IS","FRIGO.IS","FROTO.IS","FZLGY.IS","GEDIK.IS","GEDZA.IS","GENIL.IS","GENTS.IS","GEREL.IS","GESAN.IS","GIPTA.IS","GLCVY.IS","GLRMK.IS","GLRYH.IS","GLYHO.IS","GMTAS.IS","GOKNR.IS","GOLTS.IS","GOODY.IS","GOZDE.IS","GRSEL.IS","GRTHO.IS","GSDDE.IS","GSDHO.IS","GSRAY.IS","GUBRF.IS","GUNDG.IS","GWIND.IS","GZNMI.IS","HATEK.IS","HATSN.IS","HDFGS.IS","HEDEF.IS","HEKTS.IS","HKTM.IS","HOROZ.IS","HRKET.IS","HTTBT.IS","HUBVC.IS","HUNER.IS","HURGZ.IS","ICUGS.IS","IEYHO.IS","IHAAS.IS","IHEVA.IS","IHGZT.IS","IHLAS.IS","IHLGM.IS","IHYAY.IS","IMASM.IS","INDES.IS","INFO.IS","INGRM.IS","INTEM.IS","INVEO.IS","INVES.IS","ISDMR.IS","ISKPL.IS","ISSEN.IS","IZENR.IS","IZFAS.IS","IZINV.IS","IZMDC.IS","JANTS.IS","KAPLM.IS","KAREL.IS","KARSN.IS","KARTN.IS","KATMR.IS","KAYSE.IS","KBORU.IS","KCAER.IS","KCHOL.IS","KFEIN.IS","KGYO.IS","KIMMR.IS","KLGYO.IS","KLKIM.IS","KLMSN.IS","KLRHO.IS","KLSER.IS","KLSYN.IS","KLYPV.IS","KMPUR.IS","KNFRT.IS","KOCMT.IS","KONKA.IS","KONTR.IS","KONYA.IS","KOPOL.IS","KORDS.IS","KOTON.IS","KRDMD.IS","KRGYO.IS","KRONT.IS","KRPLS.IS","KRSTL.IS","KRTEK.IS","KRVGD.IS","KTLEV.IS","KTSKR.IS","KUTPO.IS","KUYAS.IS","KZBGY.IS","KZGYO.IS","LIDER.IS","LILAK.IS","LINK.IS","LKMNH.IS","LMKDC.IS","LOGO.IS","LRSHO.IS","LUKSK.IS","LYDHO.IS","MAALT.IS","MACKO.IS","MAGEN.IS","MAKIM.IS","MAKTK.IS","MANAS.IS","MARBL.IS","MARMR.IS","MARTI.IS","MAVI.IS","MEDTR.IS","MEGMT.IS","MEKAG.IS","MERCN.IS","MERIT.IS","MERKO.IS","METRO.IS","MEYSU.IS","MGROS.IS","MHRGY.IS","MIATK.IS","MNDRS.IS","MNDTR.IS","MOBTL.IS","MOGAN.IS","MOPAS.IS","MPARK.IS","MRGYO.IS","MRSHL.IS","MSGYO.IS","MTRKS.IS","MTRYO.IS","NATEN.IS","NETAS.IS","NIBAS.IS","NTGAZ.IS","NTHOL.IS","NUGYO.IS","NUHCM.IS","OBAMS.IS","OBASE.IS","ODAS.IS","ODINE.IS","OFSYM.IS","ONCSM.IS","ONRYT.IS","ORCAY.IS","ORGE.IS","OSMEN.IS","OSTIM.IS","OTKAR.IS","OYAKC.IS","OYLUM.IS","OYYAT.IS","OZATD.IS","OZGYO.IS","OZKGY.IS","OZRDN.IS","OZSUB.IS","OZYSR.IS","PAGYO.IS","PAHOL.IS","PAMEL.IS","PAPIL.IS","PARSN.IS","PASEU.IS","PATEK.IS","PCILT.IS","PEKGY.IS","PENGD.IS","PENTA.IS","PETKM.IS","PETUN.IS","PGSUS.IS","PINSU.IS","PKART.IS","PKENT.IS","PLTUR.IS","PNLSN.IS","PNSUT.IS","POLHO.IS","POLTK.IS","PRDGS.IS","PRKAB.IS","PRKME.IS","PRZMA.IS","PSDTC.IS","PSGYO.IS","QUAGR.IS","RALYH.IS","RAYSG.IS","REEDR.IS","RGYAS.IS","RTALB.IS","RUBNS.IS","RUZYE.IS","RYGYO.IS","RYSAS.IS","SAFKR.IS","SAHOL.IS","SAMAT.IS","SANEL.IS","SANFM.IS","SANKO.IS","SARKY.IS","SASA.IS","SAYAS.IS","SDTTR.IS","SEGMN.IS","SEKUR.IS","SELEC.IS","SELVA.IS","SERNT.IS","SEYKM.IS","SILVR.IS","SISE.IS","SKTAS.IS","SKYLP.IS","SMART.IS","SMRTG.IS","SMRVA.IS","SNGYO.IS","SNICA.IS","SOKE.IS","SOKM.IS","SRVGY.IS","SUNTK.IS","SURGY.IS","SUWEN.IS","TABGD.IS","TARKM.IS","TATEN.IS","TATGD.IS","TAVHL.IS","TCELL.IS","TCKRC.IS","TEHOL.IS","TEKTU.IS","TERA.IS","TEZOL.IS","THYAO.IS","TKFEN.IS","TKNSA.IS","TLMAN.IS","TMPOL.IS","TMSN.IS","TNZTP.IS","TOASO.IS","TRCAS.IS","TRGYO.IS","TRHOL.IS","TRILC.IS","TSGYO.IS","TSPOR.IS","TTKOM.IS","TTRAK.IS","TUCLK.IS","TUKAS.IS","TUPRS.IS","TUREX.IS","TURGG.IS","TURSG.IS","ULAS.IS","ULKER.IS","ULUSE.IS","ULUUN.IS","UNLU.IS","USAK.IS","VAKKO.IS","VBTYZ.IS","VERTU.IS","VERUS.IS","VESBE.IS","VESTL.IS","VRGYO.IS","VSNMD.IS","YAPRK.IS","YATAS.IS","YBTAS.IS","YEOTK.IS","YESIL.IS","YGGYO.IS","YIGIT.IS","YKSLN.IS","YUNSA.IS","YYAPI.IS","YYLGD.IS","ZEDUR.IS","ZERGY.IS","ZGYO.IS"]
+TR_TZ = pytz.timezone('Europe/Istanbul')
+simdi = datetime.now(TR_TZ)
+saat = simdi.hour
+dakika = simdi.minute
+toplam_dakika = saat * 60 + dakika
 
-def tarama_yap():
-    print(f"\nTarama basladi — {datetime.now().strftime('%d.%m.%Y %H:%M')}")
+if toplam_dakika >= 9*60+20 and toplam_dakika < 13*60+20:
+    PERIYOT = "4h"
+    MUM_ETIKET = "4h_sabah"
+elif toplam_dakika >= 13*60+20 and toplam_dakika < 17*60+20:
+    PERIYOT = "4h"
+    MUM_ETIKET = "4h_ogleden_sonra"
+elif toplam_dakika >= 17*60+20:
+    PERIYOT = "4h"
+    MUM_ETIKET = "4h_gece"
+else:
+    PERIYOT = "4h"
+    MUM_ETIKET = "4h_gece"
 
-    def yutan_boga(v):
-        s, o = v.iloc[-1], v.iloc[-2]
-        return (o["Close"] < o["Open"] and s["Close"] > s["Open"] and s["Open"] < o["Close"] and s["Close"] > o["Open"])
-    def cekic(v):
-        s = v.iloc[-1]
-        govde = abs(s["Close"] - s["Open"])
-        alt_fitil = min(s["Close"], s["Open"]) - s["Low"]
-        ust_fitil = s["High"] - max(s["Close"], s["Open"])
-        return govde > 0 and alt_fitil >= 2 * govde and ust_fitil <= govde * 0.3
-    def ters_cekic(v):
-        s = v.iloc[-1]
-        govde = abs(s["Close"] - s["Open"])
-        ust_fitil = s["High"] - max(s["Close"], s["Open"])
-        alt_fitil = min(s["Close"], s["Open"]) - s["Low"]
-        return govde > 0 and ust_fitil >= 2 * govde and alt_fitil <= govde * 0.3
-    def sabah_yildizi(v):
-        if len(v) < 3: return False
-        a, b, c = v.iloc[-3], v.iloc[-2], v.iloc[-1]
-        return (a["Open"] > a["Close"] and abs(b["Close"] - b["Open"]) <= abs(a["Close"] - a["Open"]) * 0.3 and c["Close"] > c["Open"] and c["Close"] > (a["Open"] + a["Close"]) / 2)
-    def boga_harami(v):
-        s, o = v.iloc[-1], v.iloc[-2]
-        return (o["Close"] < o["Open"] and s["Close"] > s["Open"] and s["Open"] > o["Close"] and s["Close"] < o["Open"] and abs(s["Close"] - s["Open"]) < abs(o["Close"] - o["Open"]))
-    def uc_beyaz_asker(v):
-        if len(v) < 3: return False
-        a, b, c = v.iloc[-3], v.iloc[-2], v.iloc[-1]
-        return (a["Close"] > a["Open"] and b["Close"] > b["Open"] and c["Close"] > c["Open"] and b["Close"] > a["Close"] and c["Close"] > b["Close"] and b["Open"] > a["Open"] and c["Open"] > b["Open"])
-    def delikli_bulut(v):
-        s, o = v.iloc[-1], v.iloc[-2]
-        orta = (o["Open"] + o["Close"]) / 2
-        return (o["Close"] < o["Open"] and s["Close"] > s["Open"] and s["Open"] < o["Close"] and s["Close"] > orta and s["Close"] < o["Open"])
-    def yutan_ayi(v):
-        s, o = v.iloc[-1], v.iloc[-2]
-        return (o["Close"] > o["Open"] and s["Close"] < s["Open"] and s["Open"] > o["Close"] and s["Close"] < o["Open"])
-    def asilan_adam(v):
-        s = v.iloc[-1]
-        govde = abs(s["Close"] - s["Open"])
-        alt_fitil = min(s["Close"], s["Open"]) - s["Low"]
-        ust_fitil = s["High"] - max(s["Close"], s["Open"])
-        return govde > 0 and alt_fitil >= 2 * govde and ust_fitil <= govde * 0.3
-    def aksam_yildizi(v):
-        if len(v) < 3: return False
-        a, b, c = v.iloc[-3], v.iloc[-2], v.iloc[-1]
-        return (a["Close"] > a["Open"] and abs(b["Close"] - b["Open"]) <= abs(a["Close"] - a["Open"]) * 0.3 and c["Close"] < c["Open"] and c["Close"] < (a["Open"] + a["Close"]) / 2)
-    def ayi_harami(v):
-        s, o = v.iloc[-1], v.iloc[-2]
-        return (o["Close"] > o["Open"] and s["Close"] < s["Open"] and s["Open"] < o["Close"] and s["Close"] > o["Open"] and abs(s["Close"] - s["Open"]) < abs(o["Close"] - o["Open"]))
-    def uc_siyah_karga(v):
-        if len(v) < 3: return False
-        a, b, c = v.iloc[-3], v.iloc[-2], v.iloc[-1]
-        return (a["Close"] < a["Open"] and b["Close"] < b["Open"] and c["Close"] < c["Open"] and b["Close"] < a["Close"] and c["Close"] < b["Close"] and b["Open"] < a["Open"] and c["Open"] < b["Open"])
-    def kara_bulut_ortusu(v):
-        s, o = v.iloc[-1], v.iloc[-2]
-        orta = (o["Open"] + o["Close"]) / 2
-        return (o["Close"] > o["Open"] and s["Close"] < s["Open"] and s["Open"] > o["Close"] and s["Close"] < orta and s["Close"] > o["Open"])
+if saat == 18 and dakika >= 25:
+    PERIYOT = "1d"
+    MUM_ETIKET = "gunluk"
 
-    sonuclar = {}
-    gruplar = [hisseler[i:i+100] for i in range(0, len(hisseler), 100)]
+HISSELER = [h + ".IS" for h in [
+    "ACSEL","ADEL","ADESE","AEFES","AFYON","AGESA","AGHOL","AGROT","AGYO","AHGAZ",
+    "AKCNS","AKFGY","AKFYE","AKGRT","AKIS","AKSA","AKSEN","AKSGY","AKSUE","AKTIF",
+    "ALARK","ALBRK","ALCAR","ALFAS","ALGYO","ALKA","ALKIM","ALKLC","ALMAD","ALOKA",
+    "ALTINS","ALTNY","ALVES","ANELE","ANENR","ANHYT","ANSGR","ARASE","ARCLK","ARDYZ",
+    "ARENA","ARSAN","ASELS","ASLAN","ASTOR","ATAGY","ATAKP","ATATP","ATEKS","ATLAS",
+    "ATSYH","AVHOL","AVGYO","AVOD","AVPGY","AVTUR","AYCES","AYEN","AYGAZ","AYGLD",
+    "AYNES","AYYGE","BAGFS","BAKAB","BALAT","BANVT","BARMA","BASCM","BASGZ","BAYRK",
+    "BEGYO","BERA","BEYAZ","BFREN","BIMAS","BIOEN","BIZIM","BJKAS","BLCYT","BMSCH",
+    "BMSTL","BNTAS","BOBET","BOSSA","BRISA","BRKO","BRKSN","BRKVY","BRLSM","BRMEN",
+    "BRSAN","BRYAT","BSOKE","BTCIM","BUCIM","BURCE","BURVA","BVSAN","BYDNR","CAFER",
+    "CANTE","CARFA","CEMAS","CEMTS","CEOEM","CIMSA","CLEBI","CMBTN","CMENT","CONSE",
+    "COSMO","CRDFA","CRFSA","CUSAN","CVKMD","CWENE","DAGHL","DAGI","DARDL","DENGE",
+    "DERHL","DERIM","DESA","DESPC","DEVA","DGATE","DGNMO","DIRIT","DITAS","DMSAS",
+    "DNISI","DOAS","DOBUR","DOGUB","DOHOL","DOKTH","DURDO","DYOBY","DZGYO","EBEBK",
+    "ECILC","ECZYT","EDATA","EDIP","EFORC","EGEEN","EGGUB","EGPRO","EGSER","EKGYO",
+    "EKSUN","ELITE","EMKEL","EMNIS","ENERY","ENJSA","ENKAI","ENSRI","EPLAS","ERBOS",
+    "ERCB","ERDMR","EREGL","ERSU","ESCAR","ESCOM","ESEN","ETILR","ETYAT","EUHOL",
+    "EUKYO","EUPWR","EUREN","EUYO","EYGYO","FADE","FENER","FLAP","FMIZP","FONET",
+    "FORMT","FORTE","FROTO","FZLGY","GARAN","GARFA","GEDIK","GEDZA","GENIL","GENTS",
+    "GEREL","GESAN","GLBMD","GLCVY","GLRYH","GLYHO","GMTAS","GOKNR","GOLTS","GOODY",
+    "GOZDE","GRTHO","GRTRK","GSDDE","GSDHO","GSRAY","GUBRF","GWIND","GZNMI","HALKB",
+    "HATEK","HDFGS","HEDEF","HEKTS","HLGYO","HOROZ","HRKET","HTTBT","HUBVC","HUNER",
+    "HURGZ","ICBCT","ICUGS","IDEAS","IEYHO","IHAAS","IHEVA","IHGZT","IHLAS","IHLGM",
+    "IHYAY","IISBF","IKNAS","IMASM","INDES","INFO","INTEM","INVEO","INVES","IPEKE",
+    "ISATR","ISBIR","ISYAT","ITTFK","IZENR","IZFAS","IZGYO","IZINV","IZMDC","IZTAR",
+    "JANTS","KAPLM","KAREL","KARSN","KARTN","KATMR","KAYSE","KCAER","KCHOL","KENT",
+    "KERVN","KERVT","KFEIN","KGYO","KIMMR","KLGYO","KLKIM","KLMSN","KLNMA","KLRHO",
+    "KLSER","KLSYN","KMPUR","KNFRT","KONYA","KOPOL","KORDS","KOTON","KRDMA","KRDMB",
+    "KRDMD","KRPLS","KRSTL","KRTEK","KRVGD","KSTUR","KTLEV","KTSKR","KUTPO","KUVVA",
+    "KUYAS","KZBGY","KZGYO","LIDER","LIDFA","LILAK","LINK","LKMNH","LMKDC","LOGO",
+    "LRESY","LUKSK","MAALT","MACKO","MAGEN","MAKIM","MAKTK","MANAS","MARKA","MARTI",
+    "MAVI","MEDTR","MEGAP","MEKAG","METEM","METRO","METUR","MGROS","MHRGY","MIATK",
+    "MIGRS","MMCAS","MNDRS","MNDTR","MOBTL","MOGAN","MPARK","MRGYO","MRSHL","MSGYO",
+    "MTRKS","MTSGY","MZHLD","NATEN","NETAS","NIBAS","NILFE","NTHOL","NUGYO","NUHCM",
+    "OBAMS","OBASE","ODAS","ODINE","OFSYM","ONCSM","ONRYT","ORCAY","ORGE","ORMA",
+    "OSMEN","OSTIM","OTKAR","OTTO","OYAKC","OYAYO","OYLUM","OYYAT","OZGYO","OZKGY",
+    "OZRDN","OZSUB","PAGYO","PAMEL","PAPIL","PARSN","PASEU","PCILT","PEHOL","PEKGY",
+    "PENGD","PENTA","PETKM","PETUN","PGSUS","PINSU","PKART","PKENT","PLTUR","PNLSN",
+    "POLHO","POLTK","PRDGS","PRKAR","PRZMA","PSDTC","PSGYO","PTOFS","QNBFB","QNBFL",
+    "RALYH","RAYSG","REEDR","RGYAS","RODRG","RTALB","RUBNS","RYSAS","SAFKR","SAHOL",
+    "SAMAT","SANEL","SANFM","SANKO","SARKY","SASA","SAYAS","SDTTR","SEGYO","SEKFK",
+    "SEKUR","SELEC","SELGD","SELVA","SEYKM","SILVR","SISE","SKBNK","SKTAS","SMART",
+    "SNGYO","SNKRN","SODSN","SOKM","SONME","SRVGY","SUMAS","SUNTK","SURGY","SUWEN",
+    "TABGD","TARKM","TATGD","TAVHL","TBORG","TCELL","TCKRC","TDGYO","TEKTU","TERA",
+    "TEZOL","TGSAS","THYAO","TKFEN","TKNSA","TLMAN","TMSN","TOASO","TRCAS","TRGYO",
+    "TRILC","TSPOR","TTKOM","TTRAK","TUCLK","TUKAS","TUPRS","TUREX","TURGG","TURSG",
+    "ULUFA","ULUSE","ULUUN","UMPAS","UNLU","USAK","USDTR","UTPYA","UVDDE","UYUM",
+    "UZERT","VAKBN","VAKFN","VAKKO","VANGD","VBTS","VERTU","VERUS","VESBE","VESTL",
+    "VKFYO","VKGYO","VRGYO","YAPRK","YATAS","YAYLA","YBTAS","YELCO","YESIL","YETAR",
+    "YGGYO","YGYO","YKSLN","YLDNM","YLGYO","YONGA","YORSA","YSDNM","YSLTM","YTKYO",
+    "YUFER","ZEDUR","ZRGYO","ZYMRT"
+]]
 
-    for g, grup in enumerate(gruplar):
-        print(f"Grup {g+1}/5 taranıyor...")
-        for hisse in grup:
-            try:
-                v = yf.Ticker(hisse).history(period="1y")
-                if len(v) < 60:
-                    continue
+def hesapla_gosterge(df):
+    close = df['Close']
+    high = df['High']
+    low = df['Low']
+    volume = df['Volume']
+    ema20 = close.ewm(span=20).mean()
+    ema50 = close.ewm(span=50).mean()
+    sma200 = close.rolling(200).mean()
+    delta = close.diff()
+    gain = delta.clip(lower=0).rolling(14).mean()
+    loss = (-delta.clip(upper=0)).rolling(14).mean()
+    rs = gain / loss
+    rsi = 100 - (100 / (1 + rs))
+    ema12 = close.ewm(span=12).mean()
+    ema26 = close.ewm(span=26).mean()
+    macd = ema12 - ema26
+    signal = macd.ewm(span=9).mean()
+    sma20 = close.rolling(20).mean()
+    std20 = close.rolling(20).std()
+    bb_lower = sma20 - 2 * std20
+    bb_upper = sma20 + 2 * std20
+    tr = pd.concat([
+        high - low,
+        (high - close.shift()).abs(),
+        (low - close.shift()).abs()
+    ], axis=1).max(axis=1)
+    atr = tr.rolling(14).mean()
+    return {
+        'close': close, 'high': high, 'low': low, 'volume': volume,
+        'ema20': ema20, 'ema50': ema50, 'sma200': sma200,
+        'rsi': rsi, 'macd': macd, 'signal': signal,
+        'bb_lower': bb_lower, 'bb_upper': bb_upper, 'atr': atr
+    }
 
-                ad = hisse.replace(".IS", "")
-                kapanis = round(float(v["Close"].iloc[-1]), 2)
+def sinyal_uret(df, g):
+    sinyaller = []
+    close = g['close']
+    n = -1
+    if len(close) < 3:
+        return sinyaller
+    if g['macd'].iloc[n] > g['signal'].iloc[n] and g['macd'].iloc[n-1] <= g['signal'].iloc[n-1]:
+        sinyaller.append("MACD Al Kesisimi")
+    if g['macd'].iloc[n] > g['signal'].iloc[n]:
+        sinyaller.append("MACD Pozitif")
+    if close.iloc[n] > g['ema20'].iloc[n]:
+        sinyaller.append("Fiyat EMA20 Ustunde")
+    if g['ema20'].iloc[n] > g['ema50'].iloc[n]:
+        sinyaller.append("EMA20 > EMA50")
+    if close.iloc[n] > g['sma200'].iloc[n]:
+        sinyaller.append("Fiyat SMA200 Ustunde")
+    if g['rsi'].iloc[n] < 35:
+        sinyaller.append("RSI Asiri Satim")
+    if close.iloc[n] <= g['bb_lower'].iloc[n]:
+        sinyaller.append("BB Alt Bant")
+    if g['ema20'].iloc[n-1] <= g['ema50'].iloc[n-1] and g['ema20'].iloc[n] > g['ema50'].iloc[n]:
+        sinyaller.append("Golden Cross")
+    if g['ema20'].iloc[n-1] >= g['ema50'].iloc[n-1] and g['ema20'].iloc[n] < g['ema50'].iloc[n]:
+        sinyaller.append("Death Cross")
+    avg_vol = g['volume'].rolling(20).mean().iloc[n]
+    if g['volume'].iloc[n] > avg_vol * 2:
+        sinyaller.append("Hacim Alarmi")
+    o = df['Open'].iloc[n]; h = df['High'].iloc[n]
+    l = df['Low'].iloc[n]; c = df['Close'].iloc[n]
+    o1 = df['Open'].iloc[n-1]; c1 = df['Close'].iloc[n-1]
+    body = abs(c - o); body1 = abs(c1 - o1)
+    if body > 0 and (h - l) > 0:
+        if c1 < o1 and c > o and c > o1 and o < c1:
+            sinyaller.append("Yutan Boga")
+        lower_shadow = min(o, c) - l
+        upper_shadow = h - max(o, c)
+        if lower_shadow > body * 2 and upper_shadow < body * 0.5:
+            sinyaller.append("Cekic")
+        if upper_shadow > body * 2 and lower_shadow < body * 0.5:
+            sinyaller.append("Ters Cekic")
+        if len(df) >= 3:
+            o2 = df['Open'].iloc[n-2]; c2 = df['Close'].iloc[n-2]
+            if c2 < o2 and abs(c1-o1) < abs(c2-o2)*0.3 and c > o and c > (o2+c2)/2:
+                sinyaller.append("Sabah Yildizi")
+        if c1 < o1 and c > o and c < o1 and o > c1 and body < body1 * 0.5:
+            sinyaller.append("Boga Harami")
+    if g['rsi'].iloc[n] < 35 and close.iloc[n] <= g['bb_lower'].iloc[n]:
+        sinyaller.append("Dip Vurusu")
+    bb_width = (g['bb_upper'] - g['bb_lower']) / g['bb_lower'].rolling(20).mean()
+    if bb_width.iloc[n] < bb_width.rolling(20).mean().iloc[n] * 0.7:
+        sinyaller.append("Bant Sikismasi")
+    if g['rsi'].iloc[n] > 55 and g['macd'].iloc[n] > g['signal'].iloc[n] and close.iloc[n] > g['ema20'].iloc[n]:
+        sinyaller.append("Guc Patlamasi")
+    if close.iloc[n] > g['ema20'].iloc[n] * 0.98 and close.iloc[n] < g['ema20'].iloc[n] * 1.02:
+        sinyaller.append("Destek Testi")
+    if g['volume'].iloc[n] > g['volume'].rolling(20).mean().iloc[n] * 2.5:
+        sinyaller.append("Hacim Bombasi")
+    if close.iloc[n] > g['ema20'].iloc[n] and g['ema20'].iloc[n] > g['ema50'].iloc[n] and g['macd'].iloc[n] > g['signal'].iloc[n]:
+        sinyaller.append("Trend Uyumu")
+    return sinyaller
 
-                rsi_seri = ta.momentum.RSIIndicator(v["Close"], window=14).rsi()
-                rsi = round(float(rsi_seri.iloc[-1]), 2)
+def altin_seviye(sinyaller):
+    boga = ["Yutan Boga","Cekic","Ters Cekic","Sabah Yildizi","Boga Harami","MACD Al Kesisimi",
+            "Golden Cross","RSI Asiri Satim","BB Alt Bant","Hacim Alarmi","Dip Vurusu","Guc Patlamasi"]
+    puan = sum(1 for s in sinyaller if s in boga)
+    if puan >= 5: return "Altin"
+    if puan >= 3: return "Gumus"
+    if puan >= 1: return "Bronz"
+    return None
 
-                macd_obj = ta.trend.MACD(v["Close"])
-                macd_val = float(macd_obj.macd().iloc[-1])
-                macd_sig_val = float(macd_obj.macd_signal().iloc[-1])
-                macd_hist_onceki = float(macd_obj.macd_diff().iloc[-2])
-                macd_hist_son = float(macd_obj.macd_diff().iloc[-1])
+print(f"Tarama başlıyor... {simdi.strftime('%d.%m.%Y %H:%M')} | Periyot: {PERIYOT} | Etiket: {MUM_ETIKET}")
 
-                bb = ta.volatility.BollingerBands(v["Close"], window=20)
-                bb_alt = float(bb.bollinger_lband().iloc[-1])
-                bb_ust = float(bb.bollinger_hband().iloc[-1])
-                bb_width = float(bb.bollinger_wband().iloc[-1])
-                bb_width_ort = float(bb.bollinger_wband().rolling(20).mean().iloc[-1])
+sonuclar = {}
+for ticker in HISSELER:
+    try:
+        if PERIYOT == "1d":
+            df = yf.download(ticker, period="2y", interval="1d", progress=False, auto_adjust=True)
+        else:
+            df = yf.download(ticker, period="60d", interval="4h", progress=False, auto_adjust=True)
+        if df is None or len(df) < 30:
+            continue
+        df.columns = [c[0] if isinstance(c, tuple) else c for c in df.columns]
+        g = hesapla_gosterge(df)
+        sinyaller = sinyal_uret(df, g)
+        seviye = altin_seviye(sinyaller)
+        ad = ticker.replace(".IS", "")
+        sonuclar[ad] = {
+            "kapanis": round(float(g['close'].iloc[-1]), 2),
+            "rsi": round(float(g['rsi'].iloc[-1]), 1),
+            "sinyaller": sinyaller,
+            "altin": seviye,
+            "dip_vurusu": "Dip Vurusu" in sinyaller,
+            "bant_sikismasi": "Bant Sikismasi" in sinyaller,
+            "guc_patlamasi": "Guc Patlamasi" in sinyaller,
+            "destek_testi": "Destek Testi" in sinyaller,
+            "hacim_bombasi": "Hacim Bombasi" in sinyaller,
+            "trend_uyumu": "Trend Uyumu" in sinyaller,
+        }
+    except Exception as e:
+        print(f"Hata {ticker}: {e}")
 
-                ema20_seri = v["Close"].ewm(span=20).mean()
-                ema50_seri = v["Close"].ewm(span=50).mean()
-                sma200_seri = v["Close"].rolling(window=200).mean()
-                ema20 = float(ema20_seri.iloc[-1])
-                ema50 = float(ema50_seri.iloc[-1])
-                sma200 = float(sma200_seri.iloc[-1])
-                ema20_onceki = float(ema20_seri.iloc[-2])
-                ema50_onceki = float(ema50_seri.iloc[-2])
+cikti = {
+    "tarih": simdi.strftime("%d.%m.%Y %H:%M"),
+    "periyot": MUM_ETIKET,
+    "hisseler": sonuclar
+}
 
-                hacim_ort = float(v["Volume"].iloc[-51:-1].mean())
-                hacim_son = float(v["Volume"].iloc[-1])
-                hacim_orani = round(hacim_son / hacim_ort, 2) if hacim_ort > 0 else 0
+with open("sonuclar.json", "w", encoding="utf-8") as f:
+    json.dump(cikti, f, ensure_ascii=False, indent=2)
 
-                sma200_gecerli = not (sma200 != sma200)
-
-                sinyaller = []
-                if rsi < 30: sinyaller.append("RSI Asiri Satim")
-                if rsi > 70: sinyaller.append("RSI Asiri Alim")
-                if macd_hist_onceki < 0 and macd_hist_son > 0: sinyaller.append("MACD Al Kesisimi")
-                if macd_hist_onceki > 0 and macd_hist_son < 0: sinyaller.append("MACD Sat Kesisimi")
-                if macd_val > macd_sig_val: sinyaller.append("MACD Pozitif")
-                if macd_val < macd_sig_val: sinyaller.append("MACD Negatif")
-                if kapanis <= bb_alt * 1.01: sinyaller.append("BB Alt Bant")
-                if kapanis >= bb_ust * 0.99: sinyaller.append("BB Ust Bant")
-                if kapanis > ema20: sinyaller.append("Fiyat EMA20 Ustunde")
-                if kapanis < ema20: sinyaller.append("Fiyat EMA20 Altinda")
-                if ema20 > ema50: sinyaller.append("EMA20 > EMA50")
-                if ema20 < ema50: sinyaller.append("EMA20 < EMA50")
-                if ema20_onceki < ema50_onceki and ema20 > ema50: sinyaller.append("Golden Cross")
-                if ema20_onceki > ema50_onceki and ema20 < ema50: sinyaller.append("Death Cross")
-                if hacim_orani >= 3: sinyaller.append("Hacim Alarmi")
-                if sma200_gecerli:
-                    if kapanis > sma200: sinyaller.append("Fiyat SMA200 Ustunde")
-                    if kapanis < sma200: sinyaller.append("Fiyat SMA200 Altinda")
-                if yutan_boga(v): sinyaller.append("Yutan Boga")
-                if cekic(v): sinyaller.append("Cekic")
-                if ters_cekic(v): sinyaller.append("Ters Cekic")
-                if sabah_yildizi(v): sinyaller.append("Sabah Yildizi")
-                if boga_harami(v): sinyaller.append("Boga Harami")
-                if uc_beyaz_asker(v): sinyaller.append("3 Beyaz Asker")
-                if delikli_bulut(v): sinyaller.append("Delikli Bulut")
-                if yutan_ayi(v): sinyaller.append("Yutan Ayi")
-                if asilan_adam(v): sinyaller.append("Asilan Adam")
-                if aksam_yildizi(v): sinyaller.append("Aksam Yildizi")
-                if ayi_harami(v): sinyaller.append("Ayi Harami")
-                if uc_siyah_karga(v): sinyaller.append("3 Siyah Karga")
-                if kara_bulut_ortusu(v): sinyaller.append("Kara Bulut Ortusu")
-
-                dip_vurusu = bool(25 <= rsi <= 42 and sma200_gecerli and kapanis > sma200 * 0.97)
-                bant_sikismasi = bool(not (bb_width_ort != bb_width_ort) and bb_width < bb_width_ort * 0.7)
-                guc_patlamasi = bool(kapanis >= bb_ust * 0.98 and hacim_orani >= 2 and rsi > 55)
-                destek_testi = bool(sma200_gecerli and abs(kapanis - sma200) / sma200 < 0.04 and rsi < 48)
-                hacim_bombasi = bool(hacim_orani >= 2 and float(v["Close"].iloc[-1]) > float(v["Open"].iloc[-1]) and kapanis > ema20)
-                trend_uyumu = bool(ema20 > ema50 and macd_val > macd_sig_val and 48 <= rsi <= 72)
-
-                if dip_vurusu: sinyaller.append("Dip Vurusu")
-                if bant_sikismasi: sinyaller.append("Bant Sikismasi")
-                if guc_patlamasi: sinyaller.append("Guc Patlamasi")
-                if destek_testi: sinyaller.append("Destek Testi")
-                if hacim_bombasi: sinyaller.append("Hacim Bombasi")
-                if trend_uyumu: sinyaller.append("Trend Uyumu")
-
-                ayi_sinyaller = ["MACD Sat Kesisimi","MACD Negatif","Fiyat EMA20 Altinda","EMA20 < EMA50",
-                                 "Death Cross","Yutan Ayi","Asilan Adam","Aksam Yildizi","Ayi Harami",
-                                 "3 Siyah Karga","Kara Bulut Ortusu","RSI Asiri Alim","BB Ust Bant","Fiyat SMA200 Altinda"]
-                altin_skor = len([s for s in sinyaller if s not in ayi_sinyaller])
-
-                if altin_skor >= 7: altin = "Altin"
-                elif altin_skor >= 5: altin = "Gumus"
-                elif altin_skor >= 3: altin = "Bronz"
-                else: altin = None
-
-                if sinyaller:
-                    sonuclar[ad] = {
-                        "kapanis": kapanis,
-                        "rsi": rsi,
-                        "sinyaller": sinyaller,
-                        "sinyal_sayisi": altin_skor,
-                        "altin": altin,
-                        "dip_vurusu": dip_vurusu,
-                        "bant_sikismasi": bant_sikismasi,
-                        "guc_patlamasi": guc_patlamasi,
-                        "destek_testi": destek_testi,
-                        "hacim_bombasi": hacim_bombasi,
-                        "trend_uyumu": trend_uyumu,
-                        "golden_cross": bool(ema20_onceki < ema50_onceki and ema20 > ema50),
-                        "death_cross": bool(ema20_onceki > ema50_onceki and ema20 < ema50),
-                    }
-
-            except Exception as e:
-                print(f"HATA: {hisse} — {e}")
-        time.sleep(3)
-
-    with open("sonuclar.json", "w", encoding="utf-8") as f:
-        json.dump({"tarih": datetime.now().strftime("%Y-%m-%d %H:%M"), "hisseler": sonuclar}, f, ensure_ascii=False, indent=2)
-
-    altin_liste = [k for k, v in sonuclar.items() if v["altin"] == "Altin"]
-    gumus_liste = [k for k, v in sonuclar.items() if v["altin"] == "Gumus"]
-    bronz_liste = [k for k, v in sonuclar.items() if v["altin"] == "Bronz"]
-
-    print(f"\nTARAMA TAMAMLANDI — {datetime.now().strftime('%d.%m.%Y %H:%M')}")
-    print(f"Altin: {len(altin_liste)} | Gumus: {len(gumus_liste)} | Bronz: {len(bronz_liste)}")
-    print("sonuclar.json kaydedildi!")
-
-tarama_yap()
+print(f"Tamamlandı! {len(sonuclar)} hisse işlendi.")
