@@ -5,20 +5,22 @@ import pandas as pd
 import numpy as np
 from datetime import datetime
 import pytz
+import os
 
 TR_TZ = pytz.timezone('Europe/Istanbul')
 simdi = datetime.now(TR_TZ)
 saat = simdi.hour
 
-if saat >= 18:
+if saat >= 19:
     PERIYOT = "1d"
 else:
     PERIYOT = "4h"
 
 if PERIYOT == "4h":
-    if not (9 <= saat < 18):
-        print(f"Borsa saatleri dışında ({simdi.strftime('%H:%M')}), 4h tarama atlanıyor.")
-        exit(0)
+    if not (9 <= saat < 19):
+        if os.environ.get("GITHUB_EVENT_NAME") != "workflow_dispatch":
+            print(f"Borsa saatleri dışında ({simdi.strftime('%H:%M')}), 4h tarama atlanıyor.")
+            exit(0)
 
 print(f"Tarama başlıyor... {simdi.strftime('%d.%m.%Y %H:%M')} | Periyot: {PERIYOT}")
 
@@ -204,16 +206,13 @@ def mum_formasyonlari(df):
     alt_golge = min(o, c) - l
 
     # ─── ÇEKİÇ (tek mum) ────────────────────────────────────────────────────
-    # PDF: "barın en üstünde küçük gövde, uzun alt gölge"
     if (body >= min_body and
             alt_golge >= body * 2.0 and
             ust_golge <= body * 0.3):
         sinyaller.append("Cekic")
 
     # ─── TERS ÇEKİÇ (2 mum) ─────────────────────────────────────────────────
-    # PDF: "Siyah bir gövde ve onu takip eden ters çekiç görünümünde
-    #       uzun üst gölge ve küçük gövdeden oluşan ÇİFT mum formasyonu"
-    # → Önceki mum MUTLAKA siyah (ayı) olmalı
+    # PDF: önceki mum mutlaka siyah (ayı) olmalı
     if (ayi1 and
             body >= min_body and
             ust_golge >= body * 2.0 and
@@ -221,7 +220,6 @@ def mum_formasyonlari(df):
         sinyaller.append("Ters Cekic")
 
     # ─── YUTAN BOĞA (2 mum) ─────────────────────────────────────────────────
-    # PDF: "Kendisinden önce gelen daha küçük siyah gövdeyi içine alan büyük beyaz gövde"
     if (body1 >= min_body and body >= min_body and
             ayi1 and boga and
             o <= c1 and
@@ -229,7 +227,6 @@ def mum_formasyonlari(df):
         sinyaller.append("Yutan Boga")
 
     # ─── BOĞA HARAMİSİ (2 mum) ──────────────────────────────────────────────
-    # PDF: "Siyah gövde içinde tamamen kalan beyaz küçük gövde"
     if (body1 >= min_body and body >= min_body and
             ayi1 and boga and
             o >= c1 and
@@ -238,9 +235,7 @@ def mum_formasyonlari(df):
         sinyaller.append("Boga Harami")
 
     # ─── SABAH YILDIZI (3 mum) ──────────────────────────────────────────────
-    # PDF: "Siyah mum → aşağı boşluk bırakan küçük yıldız → beyaz mum
-    #       (ilk siyah mumun gövdesinin içine kapanır)"
-    # → Yıldız gövdesi 1. mumun kapanışının altında olmalı (boşluk)
+    # PDF: yıldız gövdesi 1. mumun kapanışının altında olmalı (boşluk)
     orta2 = (o2 + c2) / 2
     yildiz_tepesi = max(o1, c1)
     if (body2 >= min_body and
@@ -252,8 +247,6 @@ def mum_formasyonlari(df):
         sinyaller.append("Sabah Yildizi")
 
     # ─── 3 BEYAZ ASKER (3 mum) ──────────────────────────────────────────────
-    # PDF: "merdiveni anımsatan şekille yükselen, her biri diğerinden daha yüksek
-    #       üç normal boy veya uzun mum"
     if (body2 >= min_body and body1 >= min_body and body >= min_body and
             c2 > o2 and boga1 and boga and
             c > c1 > c2 and
@@ -304,10 +297,8 @@ def sinyal_uret(df, g):
     if pd.notna(vol_ort) and vol_ort > 0 and g['volume'].iloc[n] > vol_ort * 2:
         sinyaller.append("Hacim Alarmi")
 
-    # Mum formasyonları (PDF'e göre düzeltilmiş)
     sinyaller += mum_formasyonlari(df)
 
-    # Kombine sinyaller
     if pd.notna(g['rsi'].iloc[n]) and pd.notna(g['bb_lower'].iloc[n]):
         if g['rsi'].iloc[n] < 35 and close.iloc[n] <= g['bb_lower'].iloc[n]:
             sinyaller.append("Dip Vurusu")
