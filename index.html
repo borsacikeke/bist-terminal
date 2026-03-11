@@ -16,6 +16,7 @@
         .kart-listesi { padding: 0 12px; display: flex; flex-direction: column; gap: 2px; }
         .kart { background: #111118; border-radius: 14px; padding: 14px 16px; display: flex; align-items: center; gap: 14px; cursor: pointer; transition: background 0.15s; }
         .kart:active { background: #1a1a24; }
+        .kart.pasif { opacity: 0.35; cursor: not-allowed; }
         .kart-ikon { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
         .ikon-altin  { background: linear-gradient(135deg, #3d2e00, #7a5c00); }
         .ikon-gumus  { background: linear-gradient(135deg, #1a1a2e, #2d2d4a); }
@@ -33,10 +34,14 @@
         .ikon-bb     { background: linear-gradient(135deg, #002e2a, #006a60); }
         .ikon-mum    { background: linear-gradient(135deg, #0a2e1a, #1a6a3a); }
         .ikon-fav    { background: linear-gradient(135deg, #2e2a00, #6a6000); }
+        .ikon-4h     { background: linear-gradient(135deg, #002040, #004080); }
         .kart-icerik { flex: 1; }
         .kart-baslik { font-size: 15px; font-weight: 600; color: #fff; }
         .kart-aciklama { font-size: 12px; color: #555; margin-top: 3px; line-height: 1.4; }
         .kart-ok { color: #2a2a3a; font-size: 18px; }
+        .kart-durum { font-size: 10px; margin-top: 3px; }
+        .kart-durum.aktif-yazi { color: #26a69a; }
+        .kart-durum.pasif-yazi { color: #555; }
         .ayrac { height: 1px; background: #111118; margin: 6px 16px; }
         .sonuc-ekran { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #0a0a0f; overflow-y: auto; z-index: 100; }
         .sonuc-header { padding: 16px 16px 12px; display: flex; align-items: center; gap: 12px; background: #0a0a0f; position: sticky; top: 0; z-index: 10; border-bottom: 1px solid #1a1a24; }
@@ -58,6 +63,7 @@
         .bos-mesaj { text-align: center; padding: 60px 20px; color: #333; font-size: 14px; }
         .sayac { font-size: 11px; color: #444; padding: 6px 16px 2px; }
         .alt-uyari { font-size: 10px; color: #333; text-align: center; padding: 16px; line-height: 1.6; margin-bottom: 8px; }
+        .periyot-badge { display: inline-block; font-size: 10px; padding: 2px 8px; border-radius: 6px; background: #003060; color: #4aa8ff; margin-left: 8px; vertical-align: middle; }
     </style>
 </head>
 <body>
@@ -68,112 +74,160 @@
         <h2 id="karsilama_baslik">Terminali</h2>
     </div>
     <div class="uyari-banner">
-        ⚠️ Bu platform yatırım tavsiyesi vermez. Tüm göstergeler algoritmik olup hata içerebilir. İşlemlerinizde kendi analizinizi yapınız.
+        ⚠️ Bu platform yatırım tavsiyesi vermez. Tüm göstergeler algoritmik olup hata içerebilir.
     </div>
-    <div class="kategori-baslik">Sinyal Gücü</div>
+
+    <div class="kategori-baslik">📅 Günlük Tarama</div>
     <div class="kart-listesi">
-        <div class="kart" onclick="goster('altin')">
+        <div class="kart" id="k-altin" onclick="kartTikla('altin', this)">
             <div class="kart-ikon ikon-altin">🏆</div>
-            <div class="kart-icerik"><div class="kart-baslik">Altın Tarama</div><div class="kart-aciklama">Çoklu göstergenin aynı anda uyum sağladığı hisseler</div></div>
+            <div class="kart-icerik">
+                <div class="kart-baslik">Altın Tarama</div>
+                <div class="kart-aciklama">Çoklu göstergenin uyum sağladığı hisseler</div>
+                <div class="kart-durum" id="d-altin"></div>
+            </div>
             <div class="kart-ok">›</div>
         </div>
-        <div class="kart" onclick="goster('gumus')">
+        <div class="kart" id="k-gumus" onclick="kartTikla('gumus', this)">
             <div class="kart-ikon ikon-gumus">🥈</div>
-            <div class="kart-icerik"><div class="kart-baslik">Gümüş Tarama</div><div class="kart-aciklama">Güçlü teknik sinyal veren hisseler</div></div>
+            <div class="kart-icerik">
+                <div class="kart-baslik">Gümüş Tarama</div>
+                <div class="kart-aciklama">Güçlü teknik sinyal veren hisseler</div>
+                <div class="kart-durum" id="d-gumus"></div>
+            </div>
             <div class="kart-ok">›</div>
         </div>
-        <div class="kart" onclick="goster('bronz')">
+        <div class="kart" id="k-bronz" onclick="kartTikla('bronz', this)">
             <div class="kart-ikon ikon-bronz">🥉</div>
-            <div class="kart-icerik"><div class="kart-baslik">Bronz Tarama</div><div class="kart-aciklama">Sinyal başlangıcındaki hisseler</div></div>
+            <div class="kart-icerik">
+                <div class="kart-baslik">Bronz Tarama</div>
+                <div class="kart-aciklama">Sinyal başlangıcındaki hisseler</div>
+                <div class="kart-durum" id="d-bronz"></div>
+            </div>
             <div class="kart-ok">›</div>
         </div>
     </div>
+
+    <div class="ayrac"></div>
+    <div class="kategori-baslik">⏱️ 4 Saatlik Tarama <span id="4h-durum-badge"></span></div>
+    <div class="kart-listesi">
+        <div class="kart" id="k-4h-altin" onclick="kartTikla('4h_altin', this)">
+            <div class="kart-ikon ikon-4h">🏆</div>
+            <div class="kart-icerik">
+                <div class="kart-baslik">4S Altın Tarama</div>
+                <div class="kart-aciklama">4 saatlik mumda altın sinyal</div>
+                <div class="kart-durum" id="d-4h-altin"></div>
+            </div>
+            <div class="kart-ok">›</div>
+        </div>
+        <div class="kart" id="k-4h-gumus" onclick="kartTikla('4h_gumus', this)">
+            <div class="kart-ikon ikon-4h">🥈</div>
+            <div class="kart-icerik">
+                <div class="kart-baslik">4S Gümüş Tarama</div>
+                <div class="kart-aciklama">4 saatlik mumda gümüş sinyal</div>
+                <div class="kart-durum" id="d-4h-gumus"></div>
+            </div>
+            <div class="kart-ok">›</div>
+        </div>
+        <div class="kart" id="k-4h-mum" onclick="kartTikla('4h_mum', this)">
+            <div class="kart-ikon ikon-mum">🕯️</div>
+            <div class="kart-icerik">
+                <div class="kart-baslik">4S Boğa Formasyonları</div>
+                <div class="kart-aciklama">4 saatlik mumda boğa formasyonu</div>
+                <div class="kart-durum" id="d-4h-mum"></div>
+            </div>
+            <div class="kart-ok">›</div>
+        </div>
+    </div>
+
     <div class="ayrac"></div>
     <div class="kategori-baslik">Stratejiler</div>
     <div class="kart-listesi">
-        <div class="kart" onclick="goster('dip_vurusu')">
+        <div class="kart" id="k-dip_vurusu" onclick="kartTikla('dip_vurusu', this)">
             <div class="kart-ikon ikon-dip">🎣</div>
             <div class="kart-icerik"><div class="kart-baslik">Dip Vuruşu</div><div class="kart-aciklama">Olası dönüş noktasına yaklaşan hisseler</div></div>
             <div class="kart-ok">›</div>
         </div>
-        <div class="kart" onclick="goster('bant_sikismasi')">
+        <div class="kart" id="k-bant_sikismasi" onclick="kartTikla('bant_sikismasi', this)">
             <div class="kart-ikon ikon-bant">💥</div>
             <div class="kart-icerik"><div class="kart-baslik">Bant Sıkışması</div><div class="kart-aciklama">Yakında sert hareket beklenen hisseler</div></div>
             <div class="kart-ok">›</div>
         </div>
-        <div class="kart" onclick="goster('guc_patlamasi')">
+        <div class="kart" id="k-guc_patlamasi" onclick="kartTikla('guc_patlamasi', this)">
             <div class="kart-ikon ikon-guc">🚀</div>
             <div class="kart-icerik"><div class="kart-baslik">Güç Patlaması</div><div class="kart-aciklama">Güçlü momentum sinyali veren hisseler</div></div>
             <div class="kart-ok">›</div>
         </div>
-        <div class="kart" onclick="goster('destek_testi')">
+        <div class="kart" id="k-destek_testi" onclick="kartTikla('destek_testi', this)">
             <div class="kart-ikon ikon-destek">🛡️</div>
             <div class="kart-icerik"><div class="kart-baslik">Destek Testi</div><div class="kart-aciklama">Kritik destek bölgesini test eden hisseler</div></div>
             <div class="kart-ok">›</div>
         </div>
-        <div class="kart" onclick="goster('hacim_bombasi')">
+        <div class="kart" id="k-hacim_bombasi" onclick="kartTikla('hacim_bombasi', this)">
             <div class="kart-ikon ikon-hacim">💰</div>
             <div class="kart-icerik"><div class="kart-baslik">Hacim Bombası</div><div class="kart-aciklama">Dikkat çekici hacim hareketi olan hisseler</div></div>
             <div class="kart-ok">›</div>
         </div>
-        <div class="kart" onclick="goster('trend_uyumu')">
+        <div class="kart" id="k-trend_uyumu" onclick="kartTikla('trend_uyumu', this)">
             <div class="kart-ikon ikon-trend">🏄</div>
             <div class="kart-icerik"><div class="kart-baslik">Trend Uyumu</div><div class="kart-aciklama">Trend ile uyumlu hareket eden hisseler</div></div>
             <div class="kart-ok">›</div>
         </div>
     </div>
+
     <div class="ayrac"></div>
     <div class="kategori-baslik">Teknik Göstergeler</div>
     <div class="kart-listesi">
-        <div class="kart" onclick="goster('golden_cross')">
+        <div class="kart" id="k-golden_cross" onclick="kartTikla('golden_cross', this)">
             <div class="kart-ikon ikon-golden">✨</div>
             <div class="kart-icerik"><div class="kart-baslik">Golden Cross</div><div class="kart-aciklama">Kısa vade uzun vadeyi yukarı kesti</div></div>
             <div class="kart-ok">›</div>
         </div>
-        <div class="kart" onclick="goster('death_cross')">
+        <div class="kart" id="k-death_cross" onclick="kartTikla('death_cross', this)">
             <div class="kart-ikon ikon-death">💀</div>
             <div class="kart-icerik"><div class="kart-baslik">Death Cross</div><div class="kart-aciklama">Kısa vade uzun vadeyi aşağı kesti</div></div>
             <div class="kart-ok">›</div>
         </div>
-        <div class="kart" onclick="goster('macd_al')">
+        <div class="kart" id="k-macd_al" onclick="kartTikla('macd_al', this)">
             <div class="kart-ikon ikon-macd">📉</div>
             <div class="kart-icerik"><div class="kart-baslik">MACD Al Kesişimi</div><div class="kart-aciklama">Momentum göstergesi al sinyali verdi</div></div>
             <div class="kart-ok">›</div>
         </div>
-        <div class="kart" onclick="goster('rsi_satim')">
+        <div class="kart" id="k-rsi_satim" onclick="kartTikla('rsi_satim', this)">
             <div class="kart-ikon ikon-rsi">📊</div>
             <div class="kart-icerik"><div class="kart-baslik">RSI Aşırı Satım</div><div class="kart-aciklama">Güç göstergesi aşırı satım bölgesinde</div></div>
             <div class="kart-ok">›</div>
         </div>
-        <div class="kart" onclick="goster('bb_alt')">
+        <div class="kart" id="k-bb_alt" onclick="kartTikla('bb_alt', this)">
             <div class="kart-ikon ikon-bb">🎯</div>
             <div class="kart-icerik"><div class="kart-baslik">Volatilite Alt Bandı</div><div class="kart-aciklama">Fiyat volatilite alt bandına ulaştı</div></div>
             <div class="kart-ok">›</div>
         </div>
-        <div class="kart" onclick="goster('hacim_alarmi')">
+        <div class="kart" id="k-hacim_alarmi" onclick="kartTikla('hacim_alarmi', this)">
             <div class="kart-ikon ikon-hacim">🔥</div>
             <div class="kart-icerik"><div class="kart-baslik">Hacim Alarmı</div><div class="kart-aciklama">Dikkat çekici hacim hareketi tespit edildi</div></div>
             <div class="kart-ok">›</div>
         </div>
-        <div class="kart" onclick="goster('mum_boga')">
+        <div class="kart" id="k-mum_boga" onclick="kartTikla('mum_boga', this)">
             <div class="kart-ikon ikon-mum">🕯️</div>
             <div class="kart-icerik"><div class="kart-baslik">Boğa Formasyonları</div><div class="kart-aciklama">Yükseliş mum formasyonu tespit edildi</div></div>
             <div class="kart-ok">›</div>
         </div>
     </div>
+
     <div class="ayrac"></div>
     <div class="kategori-baslik">Favoriler</div>
     <div class="kart-listesi">
-        <div class="kart" onclick="goster('favoriler')">
+        <div class="kart" id="k-favoriler" onclick="kartTikla('favoriler', this)">
             <div class="kart-ikon ikon-fav">⭐</div>
             <div class="kart-icerik"><div class="kart-baslik">Favorilerim</div><div class="kart-aciklama">Yıldızladığın hisseler</div></div>
             <div class="kart-ok">›</div>
         </div>
     </div>
+
     <div class="alt-uyari">
         Bu platform yalnızca teknik analiz sinyalleri sunar.<br>
-        Yatırım tavsiyesi değildir. Sermaye piyasası işlemleri risk içerir.<br>
-        Kararlarınızı kendi analizinize ve danışmanınıza göre alınız.
+        Yatırım tavsiyesi değildir. Sermaye piyasası işlemleri risk içerir.
     </div>
 </div>
 
@@ -186,27 +240,100 @@
     </div>
     <div class="sayac" id="sayac"></div>
     <div class="hisse-listesi" id="liste"></div>
-    <div class="alt-uyari">⚠️ Yatırım tavsiyesi değildir. Tüm göstergeler algoritmik olup hata içerebilir.</div>
+    <div class="alt-uyari">⚠️ Yatırım tavsiyesi değildir.</div>
 </div>
 
 <script>
     const tg = window.Telegram.WebApp;
     tg.expand();
-
     const isim = tg.initDataUnsafe?.user?.first_name || "Yatırımcı";
     document.getElementById('karsilama_baslik').textContent = 'Merhaba, ' + isim + '!';
 
     let veri = null;
+    let veri4h = null;
     let favoriler = JSON.parse(localStorage.getItem('favoriler') || '[]');
 
+    // Günlük veri
     fetch('sonuclar.json?t=' + Date.now())
         .then(r => r.json())
-        .then(d => { veri = d; });
+        .then(d => {
+            veri = d;
+            kartDurumlariGuncelle();
+        });
 
-    // Telegram BackButton ile geri navigasyon
-    tg.BackButton.onClick(function() {
-        geriDon();
-    });
+    // 4 saatlik veri
+    fetch('sonuclar4h.json?t=' + Date.now())
+        .then(r => r.json())
+        .then(d => {
+            veri4h = d;
+            kart4hDurumGuncelle();
+        })
+        .catch(() => { veri4h = null; });
+
+    tg.BackButton.onClick(function() { geriDon(); });
+
+    // 4 saatlik buton aktif/pasif kontrolü
+    function dortSaatlikAktifMi() {
+        const simdi = new Date();
+        const tr = new Date(simdi.toLocaleString("en-US", {timeZone: "Europe/Istanbul"}));
+        const saat = tr.getHours();
+        const dakika = tr.getMinutes();
+        const toplam = saat * 60 + dakika;
+
+        // Pasif aralıklar: 08:50-09:20, 12:50-13:20, 16:50-17:20
+        if (toplam >= 8*60+50 && toplam < 9*60+20) return false;
+        if (toplam >= 12*60+50 && toplam < 13*60+20) return false;
+        if (toplam >= 16*60+50 && toplam < 17*60+20) return false;
+
+        // Borsa saatleri dışında (17:20'den 09:20'ye kadar aktif — gece mumu var)
+        return true;
+    }
+
+    function kart4hDurumGuncelle() {
+        const aktif = dortSaatlikAktifMi();
+        const kartlar = ['k-4h-altin', 'k-4h-gumus', 'k-4h-mum'];
+        const durumlar = ['d-4h-altin', 'd-4h-gumus', 'd-4h-mum'];
+        const badge = document.getElementById('4h-durum-badge');
+
+        kartlar.forEach((id, i) => {
+            const kart = document.getElementById(id);
+            const durum = document.getElementById(durumlar[i]);
+            if (aktif && veri4h) {
+                kart.classList.remove('pasif');
+                durum.textContent = '✅ Veriler hazır — ' + (veri4h.tarih || '');
+                durum.className = 'kart-durum aktif-yazi';
+            } else if (!aktif) {
+                kart.classList.add('pasif');
+                durum.textContent = '⏳ Veri güncelleniyor...';
+                durum.className = 'kart-durum pasif-yazi';
+            } else {
+                kart.classList.add('pasif');
+                durum.textContent = '⏳ Henüz veri yok';
+                durum.className = 'kart-durum pasif-yazi';
+            }
+        });
+
+        if (badge) {
+            badge.innerHTML = aktif && veri4h
+                ? '<span class="periyot-badge">✅ Aktif</span>'
+                : '<span class="periyot-badge" style="background:#2e1a00;color:#aa6600;">⏳ Güncelleniyor</span>';
+        }
+    }
+
+    function kartDurumlariGuncelle() {
+        if (!veri) return;
+        const tarih = veri.tarih || '';
+        ['altin','gumus','bronz'].forEach(id => {
+            const d = document.getElementById('d-' + id);
+            if (d) {
+                d.textContent = '✅ ' + tarih;
+                d.className = 'kart-durum aktif-yazi';
+            }
+        });
+    }
+
+    // Her dakika kontrol et
+    setInterval(kart4hDurumGuncelle, 60000);
 
     const BOGA_LIST = ["Yutan Boga","Cekic","Ters Cekic","Sabah Yildizi","Boga Harami","3 Beyaz Asker","Delikli Bulut"];
     const STRATEJI_LIST = ["Dip Vurusu","Bant Sikismasi","Guc Patlamasi","Destek Testi","Hacim Bombasi","Trend Uyumu"];
@@ -219,7 +346,9 @@
         golden_cross: "✨ Golden Cross", death_cross: "💀 Death Cross",
         macd_al: "📉 MACD Al Kesişimi", rsi_satim: "📊 RSI Aşırı Satım",
         bb_alt: "🎯 Volatilite Alt Bandı", hacim_alarmi: "🔥 Hacim Alarmı",
-        mum_boga: "🕯️ Boğa Formasyonları", favoriler: "⭐ Favorilerim"
+        mum_boga: "🕯️ Boğa Formasyonları", favoriler: "⭐ Favorilerim",
+        "4h_altin": "🏆 4S Altın Tarama", "4h_gumus": "🥈 4S Gümüş Tarama",
+        "4h_mum": "🕯️ 4S Boğa Formasyonları"
     };
 
     function getBadgeClass(s) {
@@ -228,30 +357,41 @@
         return "badge-notr";
     }
 
+    function kartTikla(tip, el) {
+        if (el && el.classList.contains('pasif')) {
+            tg.showAlert('⏳ Veriler güncelleniyor, lütfen bekleyin.');
+            return;
+        }
+        goster(tip);
+    }
+
     function goster(tip) {
         document.getElementById('ana').style.display = 'none';
         const sonucEkran = document.getElementById('sonuc');
         sonucEkran.style.display = 'block';
         sonucEkran.scrollTop = 0;
-
-        // Telegram BackButton göster, Kapat butonu kaybolur
         tg.BackButton.show();
 
+        const is4h = tip.startsWith('4h_');
+        const kaynakVeri = is4h ? veri4h : veri;
+
         document.getElementById('sonuc-baslik').textContent = BASLIKLAR[tip] || tip;
-        document.getElementById('sonuc-tarih').textContent = veri ? veri.tarih : '';
+        document.getElementById('sonuc-tarih').textContent = kaynakVeri ? kaynakVeri.tarih : '';
 
         const liste = document.getElementById('liste');
-        if (!veri) { liste.innerHTML = '<div class="bos-mesaj">Veri yükleniyor...</div>'; return; }
+        if (!kaynakVeri) { liste.innerHTML = '<div class="bos-mesaj">Veri bulunamadı.</div>'; return; }
 
-        const hisseler = veri.hisseler;
-        let html = '';
-        let sayac = 0;
+        const hisseler = kaynakVeri.hisseler;
+        let html = ''; let sayac = 0;
 
         for (const [ad, h] of Object.entries(hisseler)) {
             let goster_mi = false;
             if (tip === 'altin' && h.altin === 'Altin') goster_mi = true;
             if (tip === 'gumus' && h.altin === 'Gumus') goster_mi = true;
             if (tip === 'bronz' && h.altin === 'Bronz') goster_mi = true;
+            if (tip === '4h_altin' && h.altin === 'Altin') goster_mi = true;
+            if (tip === '4h_gumus' && h.altin === 'Gumus') goster_mi = true;
+            if (tip === '4h_mum' && h.sinyaller.some(s => BOGA_LIST.includes(s))) goster_mi = true;
             if (tip === 'dip_vurusu' && h.dip_vurusu) goster_mi = true;
             if (tip === 'bant_sikismasi' && h.bant_sikismasi) goster_mi = true;
             if (tip === 'guc_patlamasi' && h.guc_patlamasi) goster_mi = true;
@@ -300,7 +440,6 @@
     function geriDon() {
         document.getElementById('ana').style.display = 'block';
         document.getElementById('sonuc').style.display = 'none';
-        // Telegram BackButton gizle, Kapat butonu geri gelir
         tg.BackButton.hide();
     }
 </script>
