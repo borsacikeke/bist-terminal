@@ -5,12 +5,13 @@ from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, WebAppI
 from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandler, ContextTypes
 
 TOKEN = os.environ.get("TOKEN", "")
-WEBAPP_URL = "https://borsacikeke.github.io/bist-terminal?v=3"
+WEBAPP_URL = "https://borsacikeke.github.io/bist-terminal"
 BOT_USERNAME = "BistTerminalBot"
 KANAL = "@ekonomiveborsa"
 KANAL_LINK = "https://t.me/ekonomiveborsa"
 SONUCLAR_URL = "https://borsacikeke.github.io/bist-terminal/sonuclar.json"
 DAVET_DOSYA = "/tmp/davetler.json"
+OZEL_KILIT = 10
 
 YASAL_UYARI = (
     "⚠️ *YASAL UYARI*\n"
@@ -40,6 +41,9 @@ def davet_sayisi(user_id, data):
 def kilitli_mi(user_id, data, gereken=5):
     return davet_sayisi(user_id, data) < gereken
 
+def ozel_kilitli_mi(user_id, data):
+    return davet_sayisi(user_id, data) < OZEL_KILIT
+
 def veri_yukle():
     try:
         r = requests.get(SONUCLAR_URL, timeout=10)
@@ -55,10 +59,10 @@ async def kanal_uye_mi(context, user_id):
         return False
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    user = update.effective_user
+    user    = update.effective_user
     user_id = str(user.id)
-    isim = user.first_name
-    data = davet_yukle()
+    isim    = user.first_name
+    data    = davet_yukle()
 
     if context.args:
         davet_eden_id = context.args[0]
@@ -70,11 +74,17 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 davet_kaydet(data)
                 try:
                     yeni_sayi = len(davet_edilenler)
+                    mesaj = (
+                        f"🎉 Yeni davet! *{isim}* bota katıldı.\n"
+                        f"Toplam davetiniz: *{yeni_sayi}*\n"
+                    )
+                    if yeni_sayi >= OZEL_KILIT:
+                        mesaj += "🏅 Özel Tarama Bölümü açıldı!"
+                    elif yeni_sayi >= 5:
+                        mesaj += "🔓 Altın grafikleri açıldı!"
                     await context.bot.send_message(
                         chat_id=int(davet_eden_id),
-                        text=f"🎉 Yeni davet! *{isim}* bota katıldı.\n"
-                             f"Toplam davetiniz: *{yeni_sayi}/5*" +
-                             (" — 🔓 Özellikler açıldı!" if yeni_sayi >= 5 else ""),
+                        text=mesaj,
                         parse_mode="Markdown"
                     )
                 except:
@@ -89,8 +99,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text(
             f"👋 Merhaba *{isim}*!\n\n"
             f"Botu kullanmak için önce kanalımıza katılman gerekiyor 👇\n\n"
-            f"📢 *Ekonomi ve Borsa Kanalı*\n"
-            f"`{KANAL_LINK}`\n\n"
+            f"📢 *Ekonomi ve Borsa Kanalı*\n`{KANAL_LINK}`\n\n"
             f"Kanala katıldıktan sonra aşağıdaki butona bas ✅",
             reply_markup=InlineKeyboardMarkup(keyboard),
             parse_mode="Markdown"
@@ -104,19 +113,36 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await ana_menu_gonder(update.message, user_id, isim, data)
 
 async def ana_menu_gonder(message, user_id, isim, data):
-    veri = veri_yukle()
-    tarih = veri["tarih"] if veri else "—"
-    altin = [k for k, v in veri["hisseler"].items() if v.get("altin") == "Altin"] if veri else []
-    gumus = [k for k, v in veri["hisseler"].items() if v.get("altin") == "Gumus"] if veri else []
-    bronz = [k for k, v in veri["hisseler"].items() if v.get("altin") == "Bronz"] if veri else []
+    veri   = veri_yukle()
+    tarih  = veri["tarih"] if veri else "—"
+    altin  = [k for k, v in veri["hisseler"].items() if v.get("altin") == "Altin"] if veri else []
+    gumus  = [k for k, v in veri["hisseler"].items() if v.get("altin") == "Gumus"] if veri else []
+    bronz  = [k for k, v in veri["hisseler"].items() if v.get("altin") == "Bronz"] if veri else []
+    ozel   = [k for k, v in veri["hisseler"].items() if v.get("ozel_tarama")] if veri else []
 
-    kilitli = kilitli_mi(user_id, data)
-    sayi = davet_sayisi(user_id, data)
-    durum = f"🔒 *{sayi}/5* davet — özellikler kilitli" if kilitli else f"🔓 *{sayi}* davet — tüm özellikler açık"
+    sayi         = davet_sayisi(user_id, data)
+    altin_kilitli = kilitli_mi(user_id, data)
+    ozel_kilitli  = ozel_kilitli_mi(user_id, data)
+
+    if sayi >= OZEL_KILIT:
+        durum = f"🏅 *{sayi}* davet — tüm özellikler açık"
+    elif sayi >= 5:
+        durum = f"🔓 *{sayi}* davet — altın açık · özel {sayi}/{OZEL_KILIT}"
+    else:
+        durum = f"🔒 *{sayi}/5* davet — özellikler kilitli"
+
+    # WebApp URL'sine özel erişim parametresi ekle
+    ozel_param  = "1" if not ozel_kilitli else "0"
+    altin_param = "1" if not altin_kilitli else "0"
+    webapp_full = f"{WEBAPP_URL}?ozel={ozel_param}&altin={altin_param}"
 
     keyboard = [
-        [InlineKeyboardButton("📊 Terminali Aç", web_app=WebAppInfo(url=WEBAPP_URL))],
-        [InlineKeyboardButton("🏆 Altın Grafikleri" + (" 🔒" if kilitli else ""), callback_data="altin_grafik")],
+        [InlineKeyboardButton(
+            "🏅 Özel Tarama" + (f" ({len(ozel)})" if not ozel_kilitli else " 🔒"),
+            callback_data="ozel_tarama"
+        )],
+        [InlineKeyboardButton("📊 Terminali Aç", web_app=WebAppInfo(url=webapp_full))],
+        [InlineKeyboardButton("🏆 Altın Grafikleri" + (" 🔒" if altin_kilitli else ""), callback_data="altin_grafik")],
         [InlineKeyboardButton("👥 Davet Linkim", callback_data="davet_link")],
         [InlineKeyboardButton("⚠️ Yasal Uyarı", callback_data="yasal_uyari")],
     ]
@@ -127,7 +153,8 @@ async def ana_menu_gonder(message, user_id, isim, data):
         f"👋 Hoş geldin, *{isim}*!\n"
         f"━━━━━━━━━━━━━━━━━━━━\n\n"
         f"📅 Son güncelleme: `{tarih}`\n\n"
-        f"🏆 Altın: *{len(altin)}* · 🥈 Gümüş: *{len(gumus)}* · 🥉 Bronz: *{len(bronz)}*\n\n"
+        f"🏆 Altın: *{len(altin)}* · 🥈 Gümüş: *{len(gumus)}* · 🥉 Bronz: *{len(bronz)}*\n"
+        f"🏅 Özel: *{len(ozel)}* hisse\n\n"
         f"{durum}\n\n"
         f"_Bu platform yatırım tavsiyesi vermez. Risk içerir._",
         reply_markup=InlineKeyboardMarkup(keyboard),
@@ -135,9 +162,9 @@ async def ana_menu_gonder(message, user_id, isim, data):
     )
 
 async def buton(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    query = update.callback_query
+    query   = update.callback_query
     user_id = str(query.from_user.id)
-    isim = query.from_user.first_name
+    isim    = query.from_user.first_name
     await query.answer()
     data = davet_yukle()
 
@@ -150,7 +177,7 @@ async def buton(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 davet_kaydet(data)
             await ana_menu_gonder(query.message, user_id, isim, data)
         else:
-            await query.answer("❌ Henüz kanala katılmadın! Önce kanala katıl.", show_alert=True)
+            await query.answer("❌ Henüz kanala katılmadın!", show_alert=True)
         return
 
     uye = await kanal_uye_mi(context, int(user_id))
@@ -160,7 +187,7 @@ async def buton(update: Update, context: ContextTypes.DEFAULT_TYPE):
             [InlineKeyboardButton("✅ Katıldım, Devam Et", callback_data="kanal_kontrol")],
         ]
         await query.message.reply_text(
-            f"⚠️ Kanaldan ayrılmışsın!\n\nBotu kullanmaya devam etmek için kanala katılman gerekiyor.",
+            "⚠️ Kanaldan ayrılmışsın! Devam etmek için kanala katılman gerekiyor.",
             reply_markup=InlineKeyboardMarkup(keyboard)
         )
         return
@@ -169,19 +196,16 @@ async def buton(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await query.message.reply_text(YASAL_UYARI, parse_mode="Markdown")
 
     elif query.data == "davet_link":
-        sayi = davet_sayisi(user_id, data)
+        sayi       = davet_sayisi(user_id, data)
         davet_link = f"https://t.me/{BOT_USERNAME}?start={user_id}"
         await query.message.reply_text(
             f"👥 *Davet Linkin*\n"
             f"━━━━━━━━━━━━━━━━━━━━\n\n"
-            f"Aşağıdaki linki arkadaşlarınla paylaş:\n\n"
             f"`{davet_link}`\n\n"
-            f"📊 Davet durumun: *{sayi}/5*\n\n"
-            f"5 kişi davet ettiğinde:\n"
-            f"• 🏆 Altın hisse grafikleri\n"
-            f"• 🏆 Altın & Gümüş listeler\n"
-            f"• ⭐ Sınırsız favori\n\n"
-            f"_Linki kopyalayıp Telegram'da paylaşabilirsin._",
+            f"📊 Davet durumun: *{sayi}*\n\n"
+            f"• 5 davet → 🏆 Altın hisse grafikleri\n"
+            f"• 10 davet → 🏅 Özel Tarama Bölümü\n\n"
+            f"_Her davet farklı bir kullanıcı olmalıdır._",
             parse_mode="Markdown"
         )
 
@@ -191,7 +215,7 @@ async def buton(update: Update, context: ContextTypes.DEFAULT_TYPE):
             davet_link = f"https://t.me/{BOT_USERNAME}?start={user_id}"
             await query.message.reply_text(
                 f"🔒 *Bu özellik kilitli!*\n\n"
-                f"Altın hisse grafiklerini görmek için *5 kişi davet* etmen gerekiyor.\n\n"
+                f"Altın grafikleri için *5 kişi davet* gerekiyor.\n\n"
                 f"Davet durumun: *{sayi}/5*\n\n"
                 f"Davet linkin:\n`{davet_link}`",
                 parse_mode="Markdown"
@@ -212,13 +236,55 @@ async def buton(update: Update, context: ContextTypes.DEFAULT_TYPE):
             f"🏆 *{len(altin_hisseler)} Altın Sinyal*\n_Yatırım tavsiyesi değildir._",
             parse_mode="Markdown"
         )
-
         for ad in altin_hisseler:
-            sinyaller = veri["hisseler"][ad]["sinyaller"][:4]
+            h = veri["hisseler"][ad]
+            sinyaller = h["sinyaller"][:4]
             await query.message.reply_text(
-                f"🏆 *{ad}* — {veri['hisseler'][ad]['kapanis']} TL\n"
-                f"RSI: {veri['hisseler'][ad]['rsi']}\n"
+                f"🏆 *{ad}* — {h['kapanis']} TL\n"
+                f"RSI: {h['rsi']}\n"
                 f"_{', '.join(sinyaller)}_\n\n"
+                f"⚠️ _Yatırım tavsiyesi değildir._",
+                parse_mode="Markdown"
+            )
+
+    elif query.data == "ozel_tarama":
+        if ozel_kilitli_mi(user_id, data):
+            sayi = davet_sayisi(user_id, data)
+            davet_link = f"https://t.me/{BOT_USERNAME}?start={user_id}"
+            await query.message.reply_text(
+                f"🔒 *Özel Tarama Bölümü Kilitli!*\n\n"
+                f"Bu özel bölüme erişmek için *{OZEL_KILIT} farklı kişiyi* davet etmen gerekiyor.\n\n"
+                f"Davet durumun: *{sayi}/{OZEL_KILIT}*\n\n"
+                f"Davet linkin:\n`{davet_link}`\n\n"
+                f"_Her davet farklı bir kullanıcı olmalıdır._",
+                parse_mode="Markdown"
+            )
+            return
+
+        veri = veri_yukle()
+        if not veri:
+            await query.message.reply_text("Veri bulunamadı.")
+            return
+
+        ozel_hisseler = [k for k, v in veri["hisseler"].items() if v.get("ozel_tarama")]
+        if not ozel_hisseler:
+            await query.message.reply_text(
+                "🏅 *Özel Tarama*\n\nBugün koşulları sağlayan hisse bulunamadı.",
+                parse_mode="Markdown"
+            )
+            return
+
+        await query.message.reply_text(
+            f"🏅 *ÖZEL TARAMA — {len(ozel_hisseler)} Hisse*\n"
+            f"━━━━━━━━━━━━━━━━━━━━\n"
+            f"_Yatırım tavsiyesi değildir._",
+            parse_mode="Markdown"
+        )
+        for ad in ozel_hisseler:
+            h = veri["hisseler"][ad]
+            await query.message.reply_text(
+                f"🏅 *{ad}* — {h['kapanis']} TL\n"
+                f"RSI: {h['rsi']}\n\n"
                 f"⚠️ _Yatırım tavsiyesi değildir._",
                 parse_mode="Markdown"
             )
