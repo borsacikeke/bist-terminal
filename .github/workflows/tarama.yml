@@ -35,7 +35,10 @@ jobs:
         run: |
           git config user.name "BIST Bot"
           git config user.email "bot@bist.com"
+          git add -f sonuclar.json sonuclar4h.json
+          git stash
           git pull --rebase origin main
+          git stash pop
           git add -f sonuclar.json sonuclar4h.json
           git commit --allow-empty -m "Otomatik guncelleme - $(date +'%d.%m.%Y %H:%M')"
           git push origin main
