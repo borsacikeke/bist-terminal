@@ -183,13 +183,13 @@ def sinyal_uret(df, g):
     body1 = abs(c1 - o1)
     range_ = h - l
 
-    if body > 0 and range_ > 0:
+if body > 0 and range_ > 0:
         # Yutan Boğa: önceki bearish, şimdiki bullish, şimdiki gövde öncekini TAMAMEN yutuyor
         if (c1 < o1 and
             c  > o  and
             o  < c1 and
             c  > o1):
-    sinyaller.append("Yutan Boga")
+            sinyaller.append("Yutan Boga")
 
         # Çekiç: küçük gövde, uzun alt gölge, kısa üst gölge
         lower_shadow = min(o, c) - l
