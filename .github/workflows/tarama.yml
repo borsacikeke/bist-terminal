@@ -2,7 +2,10 @@ name: BIST Gunluk Tarama
 
 on:
   schedule:
-    - cron: '25 15 * * 1-5'
+    - cron: '20 6 * * 1-5'   # 09:20 TR - gece mumu
+    - cron: '20 10 * * 1-5'  # 13:20 TR - sabah mumu
+    - cron: '20 14 * * 1-5'  # 17:20 TR - öğleden sonra mumu
+    - cron: '25 15 * * 1-5'  # 18:25 TR - günlük kapanış
   workflow_dispatch:
 
 jobs:
