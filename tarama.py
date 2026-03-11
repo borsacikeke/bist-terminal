@@ -1,4 +1,5 @@
 import json
+import math
 import yfinance as yf
 import pandas as pd
 import numpy as np
@@ -79,6 +80,17 @@ HISSELER = [h + ".IS" for h in [
 ]]
 
 
+def nan_temizle(obj):
+    """NaN ve Infinity değerlerini None'a çevirir (JSON uyumlu)."""
+    if isinstance(obj, float) and (math.isnan(obj) or math.isinf(obj)):
+        return None
+    if isinstance(obj, dict):
+        return {k: nan_temizle(v) for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [nan_temizle(i) for i in obj]
+    return obj
+
+
 def bist_4h_olustur(df_1h):
     if df_1h.empty:
         return pd.DataFrame()
@@ -154,7 +166,7 @@ def sinyal_uret(df, g):
         sinyaller.append("EMA20 > EMA50")
     if close.iloc[n] > g['sma200'].iloc[n]:
         sinyaller.append("Fiyat SMA200 Ustunde")
-    if g['rsi'].iloc[n] < 35:
+    if pd.notna(g['rsi'].iloc[n]) and g['rsi'].iloc[n] < 35:
         sinyaller.append("RSI Asiri Satim")
     if close.iloc[n] <= g['bb_lower'].iloc[n]:
         sinyaller.append("BB Alt Bant")
@@ -196,13 +208,13 @@ def sinyal_uret(df, g):
                 c1 > c2 and c > c1 and o1 > o2 and o > o1):
                 sinyaller.append("3 Beyaz Asker")
 
-    if g['rsi'].iloc[n] < 35 and close.iloc[n] <= g['bb_lower'].iloc[n]:
+    if pd.notna(g['rsi'].iloc[n]) and g['rsi'].iloc[n] < 35 and close.iloc[n] <= g['bb_lower'].iloc[n]:
         sinyaller.append("Dip Vurusu")
     bb_width = (g['bb_upper'] - g['bb_lower']) / g['bb_lower'].rolling(20).mean()
     if pd.notna(bb_width.iloc[n]) and pd.notna(bb_width.rolling(20).mean().iloc[n]):
         if bb_width.iloc[n] < bb_width.rolling(20).mean().iloc[n] * 0.7:
             sinyaller.append("Bant Sikismasi")
-    if g['rsi'].iloc[n] > 55 and g['macd'].iloc[n] > g['signal'].iloc[n] and close.iloc[n] > g['ema20'].iloc[n]:
+    if pd.notna(g['rsi'].iloc[n]) and g['rsi'].iloc[n] > 55 and g['macd'].iloc[n] > g['signal'].iloc[n] and close.iloc[n] > g['ema20'].iloc[n]:
         sinyaller.append("Guc Patlamasi")
     if close.iloc[n] > g['ema20'].iloc[n] * 0.98 and close.iloc[n] < g['ema20'].iloc[n] * 1.02:
         sinyaller.append("Destek Testi")
@@ -268,17 +280,20 @@ for ticker in HISSELER:
         seviye    = altin_seviye(sinyaller)
         ad        = ticker.replace(".IS", "")
 
+        rsi_raw = g['rsi'].iloc[-1]
+        rsi_val = None if (not pd.notna(rsi_raw)) else round(float(rsi_raw), 1)
+
         sonuclar[ad] = {
             "kapanis":        round(float(g['close'].iloc[-1]), 2),
-            "rsi":            round(float(g['rsi'].iloc[-1]),   1),
+            "rsi":            rsi_val,
             "sinyaller":      sinyaller,
             "altin":          seviye,
-            "dip_vurusu":     "Dip Vurusu"     in sinyaller,
-            "bant_sikismasi": "Bant Sikismasi"  in sinyaller,
-            "guc_patlamasi":  "Guc Patlamasi"   in sinyaller,
-            "destek_testi":   "Destek Testi"    in sinyaller,
-            "hacim_bombasi":  "Hacim Bombasi"   in sinyaller,
-            "trend_uyumu":    "Trend Uyumu"     in sinyaller,
+            "dip_vurusu":     "Dip Vurusu"    in sinyaller,
+            "bant_sikismasi": "Bant Sikismasi" in sinyaller,
+            "guc_patlamasi":  "Guc Patlamasi"  in sinyaller,
+            "destek_testi":   "Destek Testi"   in sinyaller,
+            "hacim_bombasi":  "Hacim Bombasi"  in sinyaller,
+            "trend_uyumu":    "Trend Uyumu"    in sinyaller,
         }
 
     except Exception as e:
@@ -292,6 +307,6 @@ cikti = {
 
 dosya_adi = "sonuclar4h.json" if PERIYOT == "4h" else "sonuclar.json"
 with open(dosya_adi, "w", encoding="utf-8") as f:
-    json.dump(cikti, f, ensure_ascii=False, indent=2)
+    json.dump(nan_temizle(cikti), f, ensure_ascii=False, indent=2)
 
 print(f"Tamamlandı! {len(sonuclar)} hisse işlendi. → {dosya_adi}")
