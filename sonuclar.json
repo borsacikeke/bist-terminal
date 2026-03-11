@@ -1,5 +1,5 @@
 {
-  "tarih": "11.03.2026 23:43",
+  "tarih": "11.03.2026 23:57",
   "periyot": "gunluk",
   "hisseler": {
     "ACSEL": {
@@ -100,9 +100,9 @@
       "kapanis": 29.42,
       "rsi": 17.1,
       "sinyaller": [
+        "Death Cross",
         "Fiyat SMA200 Ustunde",
-        "RSI Asiri Satim",
-        "Death Cross"
+        "RSI Asiri Satim"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
@@ -182,10 +182,9 @@
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
-        "Fiyat SMA200 Ustunde",
-        "3 Beyaz Asker"
+        "Fiyat SMA200 Ustunde"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -232,10 +231,9 @@
       "kapanis": 10.29,
       "rsi": 42.9,
       "sinyaller": [
-        "Sabah Yildizi",
         "Destek Testi"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -507,10 +505,9 @@
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
-        "Fiyat SMA200 Ustunde",
-        "3 Beyaz Asker"
+        "Fiyat SMA200 Ustunde"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -665,12 +662,11 @@
         "BB Alt Bant",
         "Hacim Alarmi",
         "Dip Vurusu",
-        "Bant Sikismasi",
         "Hacim Bombasi"
       ],
       "altin": "Gumus",
       "dip_vurusu": true,
-      "bant_sikismasi": true,
+      "bant_sikismasi": false,
       "guc_patlamasi": false,
       "destek_testi": false,
       "hacim_bombasi": true,
@@ -797,12 +793,11 @@
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
         "Hacim Alarmi",
-        "3 Beyaz Asker",
         "Guc Patlamasi",
         "Hacim Bombasi",
         "Trend Uyumu"
       ],
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": true,
@@ -854,10 +849,9 @@
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
-        "Ters Cekic",
         "Destek Testi"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -1313,7 +1307,6 @@
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
-        "Sabah Yildizi",
         "Guc Patlamasi",
         "Trend Uyumu"
       ],
@@ -1583,12 +1576,11 @@
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
-        "Fiyat SMA200 Ustunde",
-        "Bant Sikismasi"
+        "Fiyat SMA200 Ustunde"
       ],
       "altin": null,
       "dip_vurusu": false,
-      "bant_sikismasi": true,
+      "bant_sikismasi": false,
       "guc_patlamasi": false,
       "destek_testi": false,
       "hacim_bombasi": false,
@@ -1939,11 +1931,8 @@
     "DYOBY": {
       "kapanis": 13.16,
       "rsi": 38.9,
-      "sinyaller": [
-        "Ters Cekic",
-        "Sabah Yildizi"
-      ],
-      "altin": "Bronz",
+      "sinyaller": [],
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -2086,10 +2075,9 @@
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
-        "Fiyat SMA200 Ustunde",
-        "3 Beyaz Asker"
+        "Fiyat SMA200 Ustunde"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -2115,9 +2103,9 @@
       "kapanis": 21.04,
       "rsi": 18.5,
       "sinyaller": [
+        "Death Cross",
         "Fiyat SMA200 Ustunde",
-        "RSI Asiri Satim",
-        "Death Cross"
+        "RSI Asiri Satim"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
@@ -2148,10 +2136,9 @@
       "kapanis": 31.34,
       "rsi": 52.1,
       "sinyaller": [
-        "Fiyat EMA20 Ustunde",
-        "3 Beyaz Asker"
+        "Fiyat EMA20 Ustunde"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -2208,10 +2195,9 @@
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
-        "Fiyat SMA200 Ustunde",
-        "3 Beyaz Asker"
+        "Fiyat SMA200 Ustunde"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -2242,10 +2228,9 @@
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
-        "3 Beyaz Asker",
         "Bant Sikismasi"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": true,
       "guc_patlamasi": false,
@@ -2378,7 +2363,6 @@
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "3 Beyaz Asker",
         "Bant Sikismasi",
         "Guc Patlamasi",
         "Destek Testi"
@@ -2459,8 +2443,8 @@
       "kapanis": 36.68,
       "rsi": 45.4,
       "sinyaller": [
-        "Fiyat SMA200 Ustunde",
         "Death Cross",
+        "Fiyat SMA200 Ustunde",
         "Destek Testi"
       ],
       "altin": null,
@@ -2523,9 +2507,9 @@
       "kapanis": 14.29,
       "rsi": 26.0,
       "sinyaller": [
+        "Death Cross",
         "Fiyat SMA200 Ustunde",
-        "RSI Asiri Satim",
-        "Death Cross"
+        "RSI Asiri Satim"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
@@ -2555,10 +2539,9 @@
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
-        "Fiyat SMA200 Ustunde",
-        "3 Beyaz Asker"
+        "Fiyat SMA200 Ustunde"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -2726,7 +2709,6 @@
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "Ters Cekic",
         "Guc Patlamasi"
       ],
       "altin": "Bronz",
@@ -2759,7 +2741,6 @@
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
-        "3 Beyaz Asker",
         "Bant Sikismasi",
         "Guc Patlamasi",
         "Trend Uyumu"
@@ -2954,10 +2935,9 @@
       "kapanis": 9.58,
       "rsi": 44.7,
       "sinyaller": [
-        "Boga Harami",
         "Destek Testi"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -3034,8 +3014,7 @@
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "Hacim Alarmi",
-        "3 Beyaz Asker"
+        "Hacim Alarmi"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
@@ -3096,7 +3075,6 @@
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
-        "Cekic",
         "Guc Patlamasi",
         "Trend Uyumu"
       ],
@@ -3206,7 +3184,6 @@
       "rsi": 34.2,
       "sinyaller": [
         "RSI Asiri Satim",
-        "3 Beyaz Asker",
         "Destek Testi"
       ],
       "altin": "Bronz",
@@ -3267,7 +3244,7 @@
     },
     "IEYHO": {
       "kapanis": 86.1,
-      "rsi": 100.0,
+      "rsi": null,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -3332,8 +3309,7 @@
       "kapanis": 2.05,
       "rsi": 29.4,
       "sinyaller": [
-        "RSI Asiri Satim",
-        "3 Beyaz Asker"
+        "RSI Asiri Satim"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
@@ -3631,8 +3607,7 @@
       "kapanis": 70.9,
       "rsi": 22.9,
       "sinyaller": [
-        "RSI Asiri Satim",
-        "Sabah Yildizi"
+        "RSI Asiri Satim"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
@@ -3680,11 +3655,10 @@
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
         "Golden Cross",
-        "Sabah Yildizi",
         "Guc Patlamasi",
         "Trend Uyumu"
       ],
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": true,
@@ -3730,7 +3704,6 @@
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
-        "Sabah Yildizi",
         "Guc Patlamasi",
         "Trend Uyumu"
       ],
@@ -3815,7 +3788,6 @@
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
         "Hacim Alarmi",
-        "Sabah Yildizi",
         "Hacim Bombasi"
       ],
       "altin": "Bronz",
@@ -3953,12 +3925,11 @@
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
-        "Bant Sikismasi",
         "Destek Testi"
       ],
       "altin": null,
       "dip_vurusu": false,
-      "bant_sikismasi": true,
+      "bant_sikismasi": false,
       "guc_patlamasi": false,
       "destek_testi": true,
       "hacim_bombasi": false,
@@ -4018,12 +3989,10 @@
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
-        "Cekic",
-        "3 Beyaz Asker",
         "Guc Patlamasi",
         "Trend Uyumu"
       ],
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": true,
@@ -4232,8 +4201,7 @@
       "kapanis": 21.64,
       "rsi": 17.8,
       "sinyaller": [
-        "RSI Asiri Satim",
-        "Ters Cekic"
+        "RSI Asiri Satim"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
@@ -4332,7 +4300,6 @@
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
-        "Cekic",
         "Guc Patlamasi",
         "Trend Uyumu"
       ],
@@ -4378,10 +4345,9 @@
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
         "Hacim Alarmi",
-        "3 Beyaz Asker",
         "Hacim Bombasi"
       ],
-      "altin": "Gumus",
+      "altin": "Bronz",
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -4394,10 +4360,9 @@
       "rsi": 38.1,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
-        "EMA20 > EMA50",
-        "3 Beyaz Asker"
+        "EMA20 > EMA50"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -4428,7 +4393,6 @@
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "3 Beyaz Asker",
         "Guc Patlamasi"
       ],
       "altin": "Bronz",
@@ -4620,8 +4584,8 @@
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
-        "Fiyat SMA200 Ustunde",
         "Golden Cross",
+        "Fiyat SMA200 Ustunde",
         "Guc Patlamasi",
         "Trend Uyumu"
       ],
@@ -4652,9 +4616,9 @@
       "kapanis": 14.12,
       "rsi": 32.2,
       "sinyaller": [
+        "Death Cross",
         "Fiyat SMA200 Ustunde",
-        "RSI Asiri Satim",
-        "Death Cross"
+        "RSI Asiri Satim"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
@@ -4761,10 +4725,9 @@
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
-        "Fiyat SMA200 Ustunde",
-        "3 Beyaz Asker"
+        "Fiyat SMA200 Ustunde"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -4929,12 +4892,11 @@
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
-        "Bant Sikismasi",
         "Destek Testi"
       ],
       "altin": null,
       "dip_vurusu": false,
-      "bant_sikismasi": true,
+      "bant_sikismasi": false,
       "guc_patlamasi": false,
       "destek_testi": true,
       "hacim_bombasi": false,
@@ -5148,12 +5110,11 @@
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
-        "Fiyat SMA200 Ustunde",
-        "Bant Sikismasi"
+        "Fiyat SMA200 Ustunde"
       ],
       "altin": null,
       "dip_vurusu": false,
-      "bant_sikismasi": true,
+      "bant_sikismasi": false,
       "guc_patlamasi": false,
       "destek_testi": false,
       "hacim_bombasi": false,
@@ -5166,8 +5127,7 @@
         "MACD Al Kesisimi",
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "Fiyat SMA200 Ustunde",
-        "Cekic"
+        "Fiyat SMA200 Ustunde"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
@@ -5200,12 +5160,11 @@
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
-        "3 Beyaz Asker",
-        "Bant Sikismasi"
+        "3 Beyaz Asker"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
-      "bant_sikismasi": true,
+      "bant_sikismasi": false,
       "guc_patlamasi": false,
       "destek_testi": false,
       "hacim_bombasi": false,
@@ -5255,10 +5214,9 @@
       "rsi": 38.4,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
-        "3 Beyaz Asker",
         "Destek Testi"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -5270,8 +5228,8 @@
       "kapanis": 16.34,
       "rsi": 30.7,
       "sinyaller": [
-        "RSI Asiri Satim",
-        "Death Cross"
+        "Death Cross",
+        "RSI Asiri Satim"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
@@ -5320,10 +5278,9 @@
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
-        "Fiyat SMA200 Ustunde",
-        "3 Beyaz Asker"
+        "Fiyat SMA200 Ustunde"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -5339,7 +5296,6 @@
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
-        "3 Beyaz Asker",
         "Guc Patlamasi",
         "Trend Uyumu"
       ],
@@ -5412,8 +5368,7 @@
       "kapanis": 180.0,
       "rsi": 27.0,
       "sinyaller": [
-        "RSI Asiri Satim",
-        "Boga Harami"
+        "RSI Asiri Satim"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
@@ -5475,10 +5430,9 @@
       "rsi": 49.5,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
-        "3 Beyaz Asker",
         "Destek Testi"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -5510,8 +5464,8 @@
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
-        "Fiyat SMA200 Ustunde",
         "Golden Cross",
+        "Fiyat SMA200 Ustunde",
         "Hacim Alarmi",
         "Guc Patlamasi",
         "Hacim Bombasi",
@@ -5611,8 +5565,7 @@
       "rsi": 40.9,
       "sinyaller": [
         "MACD Al Kesisimi",
-        "MACD Pozitif",
-        "Sabah Yildizi"
+        "MACD Pozitif"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
@@ -5697,8 +5650,7 @@
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
-        "RSI Asiri Satim",
-        "Sabah Yildizi"
+        "RSI Asiri Satim"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
@@ -5811,12 +5763,11 @@
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
-        "RSI Asiri Satim",
-        "Bant Sikismasi"
+        "RSI Asiri Satim"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
-      "bant_sikismasi": true,
+      "bant_sikismasi": false,
       "guc_patlamasi": false,
       "destek_testi": false,
       "hacim_bombasi": false,
@@ -5843,10 +5794,9 @@
       "rsi": 46.3,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
-        "3 Beyaz Asker",
         "Destek Testi"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -6050,10 +6000,9 @@
       "kapanis": 4.51,
       "rsi": 40.2,
       "sinyaller": [
-        "3 Beyaz Asker",
         "Destek Testi"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -6161,10 +6110,9 @@
       "rsi": 37.6,
       "sinyaller": [
         "MACD Pozitif",
-        "3 Beyaz Asker",
         "Destek Testi"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -6395,7 +6343,7 @@
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
-        "Cekic",
+        "Boga Harami",
         "Destek Testi"
       ],
       "altin": "Bronz",
@@ -6446,7 +6394,6 @@
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "Cekic",
         "Guc Patlamasi",
         "Destek Testi"
       ],
@@ -6479,7 +6426,6 @@
         "MACD Al Kesisimi",
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
-        "3 Beyaz Asker",
         "Destek Testi"
       ],
       "altin": "Bronz",
@@ -6588,8 +6534,7 @@
       "kapanis": 453.75,
       "rsi": 24.5,
       "sinyaller": [
-        "RSI Asiri Satim",
-        "Sabah Yildizi"
+        "RSI Asiri Satim"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
@@ -6840,10 +6785,9 @@
       "rsi": 48.8,
       "sinyaller": [
         "EMA20 > EMA50",
-        "Fiyat SMA200 Ustunde",
-        "Sabah Yildizi"
+        "Fiyat SMA200 Ustunde"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -6952,8 +6896,8 @@
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
-        "Fiyat SMA200 Ustunde",
         "Golden Cross",
+        "Fiyat SMA200 Ustunde",
         "Destek Testi",
         "Trend Uyumu"
       ],
@@ -6969,8 +6913,7 @@
       "kapanis": 2.25,
       "rsi": 30.8,
       "sinyaller": [
-        "RSI Asiri Satim",
-        "3 Beyaz Asker"
+        "RSI Asiri Satim"
       ],
       "altin": "Bronz",
       "dip_vurusu": false,
@@ -7000,10 +6943,9 @@
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
-        "Fiyat SMA200 Ustunde",
-        "3 Beyaz Asker"
+        "Fiyat SMA200 Ustunde"
       ],
-      "altin": "Bronz",
+      "altin": null,
       "dip_vurusu": false,
       "bant_sikismasi": false,
       "guc_patlamasi": false,
@@ -7031,7 +6973,6 @@
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
         "Hacim Alarmi",
-        "3 Beyaz Asker",
         "Guc Patlamasi",
         "Hacim Bombasi"
       ],
