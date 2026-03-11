@@ -2,11 +2,14 @@ name: BIST Gunluk Tarama
 
 on:
   schedule:
-    - cron: '20 6 * * 1-5'   # 09:20 TR - gece mumu
-    - cron: '20 10 * * 1-5'  # 13:20 TR - sabah mumu
-    - cron: '20 14 * * 1-5'  # 17:20 TR - öğleden sonra mumu
+    - cron: '20 6 * * 1-5'   # 09:20 TR - 4h mumu
+    - cron: '20 10 * * 1-5'  # 13:20 TR - 4h mumu
+    - cron: '20 14 * * 1-5'  # 17:20 TR - 4h mumu
     - cron: '25 15 * * 1-5'  # 18:25 TR - günlük kapanış
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   tarama:
@@ -14,6 +17,8 @@ jobs:
     steps:
       - name: Kodu indir
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Python kur
         uses: actions/setup-python@v5
@@ -21,7 +26,7 @@ jobs:
           python-version: '3.11'
 
       - name: Kütüphaneleri yükle
-        run: pip install yfinance ta matplotlib requests pandas numpy pytz
+        run: pip install yfinance requests pandas numpy pytz
 
       - name: Taramayı çalıştır
         run: python tarama.py
@@ -30,6 +35,7 @@ jobs:
         run: |
           git config user.name "BIST Bot"
           git config user.email "bot@bist.com"
-          git add sonuclar.json sonuclar4h.json
+          git pull --rebase origin main
+          git add -f sonuclar.json sonuclar4h.json
           git diff --staged --quiet || git commit -m "Otomatik guncelleme - $(date +'%d.%m.%Y %H:%M')"
-          git push
+          git push origin main
