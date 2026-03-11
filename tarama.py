@@ -9,15 +9,12 @@ import pytz
 TR_TZ = pytz.timezone('Europe/Istanbul')
 simdi = datetime.now(TR_TZ)
 saat = simdi.hour
-dakika = simdi.minute
 
-# 18:00 ve sonrası = günlük tarama, öncesi = 4h tarama
 if saat >= 18:
     PERIYOT = "1d"
 else:
     PERIYOT = "4h"
 
-# Borsa saatleri dışındaysa 4h taramayı atla
 if PERIYOT == "4h":
     if not (9 <= saat < 18):
         print(f"Borsa saatleri dışında ({simdi.strftime('%H:%M')}), 4h tarama atlanıyor.")
@@ -81,7 +78,6 @@ HISSELER = [h + ".IS" for h in [
 
 
 def nan_temizle(obj):
-    """NaN ve Infinity değerlerini None'a çevirir (JSON uyumlu)."""
     if isinstance(obj, float) and (math.isnan(obj) or math.isinf(obj)):
         return None
     if isinstance(obj, dict):
@@ -92,31 +88,70 @@ def nan_temizle(obj):
 
 
 def bist_4h_olustur(df_1h):
+    """
+    yfinance 1h barını İstanbul saatiyle BIST seanslarına böler.
+    yfinance timestamp = bar BAŞI (09:00 → 09:00-10:00 barı)
+    Seans 0: 09:00-13:00  → timestamp saatleri 9,10,11,12
+    Seans 1: 13:00-17:00  → timestamp saatleri 13,14,15,16
+    Seans 2: 17:00-18:00  → timestamp saati 17
+    """
     if df_1h.empty:
         return pd.DataFrame()
+
     if df_1h.index.tz is None:
         df_1h.index = df_1h.index.tz_localize('UTC')
     else:
         df_1h.index = df_1h.index.tz_convert('UTC')
-    # offset='6h' → 06:00 UTC = 09:00 TR başlangıcı
-    df_4h = df_1h.resample('4h', offset='6h').agg(
-        Open=('Open', 'first'),
-        High=('High', 'max'),
-        Low=('Low', 'min'),
-        Close=('Close', 'last'),
-        Volume=('Volume', 'sum')
-    ).dropna(subset=['Open', 'Close'])
-    simdi_utc = pd.Timestamp.now(tz='UTC')
-    df_4h = df_4h[df_4h.index + pd.Timedelta(hours=4) <= simdi_utc]
-    df_4h = df_4h[df_4h['Volume'] > 0]
-    return df_4h.reset_index(drop=True)
+
+    df_ist = df_1h.copy()
+    df_ist.index = df_ist.index.tz_convert('Europe/Istanbul')
+
+    # Sadece borsa saatleri: 09:00-17:59 (timestamp başı)
+    df_ist = df_ist[(df_ist.index.hour >= 9) & (df_ist.index.hour <= 17)]
+    if df_ist.empty:
+        return pd.DataFrame()
+
+    def seans_no(saat):
+        if saat <= 12:   return 0   # 09,10,11,12 → Seans 0
+        elif saat <= 16: return 1   # 13,14,15,16 → Seans 1
+        else:            return 2   # 17           → Seans 2
+
+    df_ist['_tarih'] = df_ist.index.date
+    df_ist['_seans'] = df_ist.index.hour.map(seans_no)
+    df_ist['_key']   = list(zip(df_ist['_tarih'], df_ist['_seans']))
+
+    # Aktif (tamamlanmamış) seansi tespit et
+    simdi_ist  = pd.Timestamp.now(tz='Europe/Istanbul')
+    aktif_key  = None
+    if 9 <= simdi_ist.hour <= 17:
+        aktif_key = (simdi_ist.date(), seans_no(simdi_ist.hour))
+
+    sonuc = []
+    for key, grup in df_ist.groupby('_key', sort=True):
+        if key == aktif_key:
+            continue
+        if len(grup) == 0:
+            continue
+        o = float(grup['Open'].iloc[0])
+        h = float(grup['High'].max())
+        l = float(grup['Low'].min())
+        c = float(grup['Close'].iloc[-1])
+        v = float(grup['Volume'].sum())
+        if v <= 0 or o <= 0 or c <= 0:
+            continue
+        sonuc.append({'Open': o, 'High': h, 'Low': l, 'Close': c, 'Volume': v})
+
+    if not sonuc:
+        return pd.DataFrame()
+
+    return pd.DataFrame(sonuc).reset_index(drop=True)
 
 
 def hesapla_gosterge(df):
-    close  = df['Close']
-    high   = df['High']
-    low    = df['Low']
-    volume = df['Volume']
+    close  = df['Close'].astype(float)
+    high   = df['High'].astype(float)
+    low    = df['Low'].astype(float)
+    volume = df['Volume'].astype(float)
     ema20  = close.ewm(span=20).mean()
     ema50  = close.ewm(span=50).mean()
     sma200 = close.rolling(200).mean()
@@ -154,8 +189,9 @@ def sinyal_uret(df, g):
     if len(close) < 3:
         return sinyaller
 
-    avg_vol = g['volume'].rolling(20).mean().iloc[n]
+    avg_vol = float(g['volume'].rolling(20).mean().iloc[n])
 
+    # --- Teknik göstergeler ---
     if g['macd'].iloc[n] > g['signal'].iloc[n] and g['macd'].iloc[n-1] <= g['signal'].iloc[n-1]:
         sinyaller.append("MACD Al Kesisimi")
     if g['macd'].iloc[n] > g['signal'].iloc[n]:
@@ -164,11 +200,11 @@ def sinyal_uret(df, g):
         sinyaller.append("Fiyat EMA20 Ustunde")
     if g['ema20'].iloc[n] > g['ema50'].iloc[n]:
         sinyaller.append("EMA20 > EMA50")
-    if close.iloc[n] > g['sma200'].iloc[n]:
+    if pd.notna(g['sma200'].iloc[n]) and close.iloc[n] > g['sma200'].iloc[n]:
         sinyaller.append("Fiyat SMA200 Ustunde")
     if pd.notna(g['rsi'].iloc[n]) and g['rsi'].iloc[n] < 35:
         sinyaller.append("RSI Asiri Satim")
-    if close.iloc[n] <= g['bb_lower'].iloc[n]:
+    if pd.notna(g['bb_lower'].iloc[n]) and close.iloc[n] <= g['bb_lower'].iloc[n]:
         sinyaller.append("BB Alt Bant")
     if g['ema20'].iloc[n-1] <= g['ema50'].iloc[n-1] and g['ema20'].iloc[n] > g['ema50'].iloc[n]:
         sinyaller.append("Golden Cross")
@@ -177,52 +213,99 @@ def sinyal_uret(df, g):
     if pd.notna(avg_vol) and avg_vol > 0 and g['volume'].iloc[n] > avg_vol * 2:
         sinyaller.append("Hacim Alarmi")
 
-    o  = df['Open'].iloc[n];   h  = df['High'].iloc[n]
-    l  = df['Low'].iloc[n];    c  = df['Close'].iloc[n]
-    o1 = df['Open'].iloc[n-1]; h1 = df['High'].iloc[n-1]
-    l1 = df['Low'].iloc[n-1];  c1 = df['Close'].iloc[n-1]
-    body  = abs(c  - o)
+    # --- Mum formasyonları: explicit float cast ---
+    o  = float(df['Open'].iloc[n])
+    h  = float(df['High'].iloc[n])
+    l  = float(df['Low'].iloc[n])
+    c  = float(df['Close'].iloc[n])
+    o1 = float(df['Open'].iloc[n-1])
+    h1 = float(df['High'].iloc[n-1])
+    l1 = float(df['Low'].iloc[n-1])
+    c1 = float(df['Close'].iloc[n-1])
+
+    body  = abs(c - o)
     body1 = abs(c1 - o1)
     range_ = h - l
 
-    if body > 0 and range_ > 0:
+    # Minimum gövde filtresi: çok küçük mumları atla (gürültü)
+    avg_close = float(close.tail(20).mean())
+    min_body = avg_close * 0.002  # fiyatın %0.2'si
+
+    if body > min_body and range_ > 0:
         lower_shadow = min(o, c) - l
         upper_shadow = h - max(o, c)
 
+        # Çekiç: alt gölge >= gövde*2, üst gölge <= gövde*0.5
         if lower_shadow >= body * 2 and upper_shadow <= body * 0.5:
             sinyaller.append("Cekic")
+
+        # Ters Çekiç: üst gölge >= gövde*2, alt gölge <= gövde*0.5
         if upper_shadow >= body * 2 and lower_shadow <= body * 0.5:
             sinyaller.append("Ters Cekic")
-        if (c1 < o1 and c > o and o < c1 and c > o1):
+
+        # Yutan Boğa: önceki ayı, şimdiki boğa, şimdiki gövde öncekini tamamen yutar
+        # Önceki: bearish (c1 < o1), Şimdiki: bullish (c > o)
+        # Açılış önceki kapanışın altında, kapanış önceki açılışın üstünde
+        if (body1 > min_body and
+                c1 < o1 and          # önceki ayı mum
+                c > o and            # şimdiki boğa mum
+                o <= c1 and          # açılış önceki kapanış veya altı
+                c >= o1):            # kapanış önceki açılış veya üstü
             sinyaller.append("Yutan Boga")
-        if (c1 < o1 and c > o and o > c1 and c < o1 and body < body1 * 0.5):
+
+        # Boğa Haramisi: önceki büyük ayı, şimdiki küçük boğa gövde içinde
+        if (body1 > min_body and
+                c1 < o1 and          # önceki ayı mum
+                c > o and            # şimdiki boğa mum
+                o >= c1 and          # açılış önceki kapanışın üstünde
+                c <= o1 and          # kapanış önceki açılışın altında
+                body < body1 * 0.5): # şimdiki gövde öncekinin yarısından küçük
             sinyaller.append("Boga Harami")
 
         if len(df) >= 3:
-            o2    = df['Open'].iloc[n-2]
-            c2    = df['Close'].iloc[n-2]
+            o2 = float(df['Open'].iloc[n-2])
+            c2 = float(df['Close'].iloc[n-2])
             body2 = abs(c2 - o2)
-            if (c2 < o2 and body1 < body2 * 0.3 and c > o and c > (o2 + c2) / 2):
+
+            # Sabah Yıldızı: büyük ayı + küçük yıldız + büyük boğa
+            if (body2 > min_body and
+                    c2 < o2 and                  # 1. mum: büyük ayı
+                    body1 < body2 * 0.3 and      # 2. mum: küçük yıldız
+                    c > o and                    # 3. mum: boğa
+                    c > (o2 + c2) / 2):          # kapanış 1. mumun ortasının üstü
                 sinyaller.append("Sabah Yildizi")
-            if (c2 > o2 and c1 > o1 and c > o and
-                c1 > c2 and c > c1 and o1 > o2 and o > o1):
+
+            # 3 Beyaz Asker: üç ardışık yükselen boğa mum
+            if (body2 > min_body and body1 > min_body and
+                    c2 > o2 and c1 > o1 and c > o and  # hepsi boğa
+                    c1 > c2 and c > c1 and              # her biri öncekinden yüksek kapandı
+                    o1 >= o2 and o > o1):               # her biri öncekinin gövdesi içinde açıldı
                 sinyaller.append("3 Beyaz Asker")
 
-    if pd.notna(g['rsi'].iloc[n]) and g['rsi'].iloc[n] < 35 and close.iloc[n] <= g['bb_lower'].iloc[n]:
-        sinyaller.append("Dip Vurusu")
+    # --- Kombine sinyaller ---
+    if pd.notna(g['rsi'].iloc[n]) and pd.notna(g['bb_lower'].iloc[n]):
+        if g['rsi'].iloc[n] < 35 and close.iloc[n] <= g['bb_lower'].iloc[n]:
+            sinyaller.append("Dip Vurusu")
+
     bb_width = (g['bb_upper'] - g['bb_lower']) / g['bb_lower'].rolling(20).mean()
     if pd.notna(bb_width.iloc[n]) and pd.notna(bb_width.rolling(20).mean().iloc[n]):
         if bb_width.iloc[n] < bb_width.rolling(20).mean().iloc[n] * 0.7:
             sinyaller.append("Bant Sikismasi")
-    if pd.notna(g['rsi'].iloc[n]) and g['rsi'].iloc[n] > 55 and g['macd'].iloc[n] > g['signal'].iloc[n] and close.iloc[n] > g['ema20'].iloc[n]:
+
+    if (pd.notna(g['rsi'].iloc[n]) and g['rsi'].iloc[n] > 55 and
+            g['macd'].iloc[n] > g['signal'].iloc[n] and
+            close.iloc[n] > g['ema20'].iloc[n]):
         sinyaller.append("Guc Patlamasi")
+
     if close.iloc[n] > g['ema20'].iloc[n] * 0.98 and close.iloc[n] < g['ema20'].iloc[n] * 1.02:
         sinyaller.append("Destek Testi")
+
     if pd.notna(avg_vol) and avg_vol > 0 and g['volume'].iloc[n] > avg_vol * 2.5:
         sinyaller.append("Hacim Bombasi")
+
     if (close.iloc[n] > g['ema20'].iloc[n] and
-        g['ema20'].iloc[n] > g['ema50'].iloc[n] and
-        g['macd'].iloc[n] > g['signal'].iloc[n]):
+            g['ema20'].iloc[n] > g['ema50'].iloc[n] and
+            g['macd'].iloc[n] > g['signal'].iloc[n]):
         sinyaller.append("Trend Uyumu")
 
     return sinyaller
@@ -281,7 +364,7 @@ for ticker in HISSELER:
         ad        = ticker.replace(".IS", "")
 
         rsi_raw = g['rsi'].iloc[-1]
-        rsi_val = None if (not pd.notna(rsi_raw)) else round(float(rsi_raw), 1)
+        rsi_val = None if not pd.notna(rsi_raw) else round(float(rsi_raw), 1)
 
         sonuclar[ad] = {
             "kapanis":        round(float(g['close'].iloc[-1]), 2),
