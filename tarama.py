@@ -92,22 +92,20 @@ def nan_temizle(obj):
 def bist_4h_olustur(df_1h):
     if df_1h.empty:
         return pd.DataFrame()
-
     if df_1h.index.tz is None:
         df_1h.index = df_1h.index.tz_localize('UTC')
     else:
         df_1h.index = df_1h.index.tz_convert('UTC')
-
     df_ist = df_1h.copy()
     df_ist.index = df_ist.index.tz_convert('Europe/Istanbul')
     df_ist = df_ist[(df_ist.index.hour >= 9) & (df_ist.index.hour <= 17)]
     if df_ist.empty:
         return pd.DataFrame()
 
-    def seans_no(saat):
-        if saat <= 12:   return 0
-        elif saat <= 16: return 1
-        else:            return 2
+    def seans_no(s):
+        if s <= 12: return 0
+        elif s <= 16: return 1
+        else: return 2
 
     df_ist = df_ist.copy()
     df_ist['_tarih'] = df_ist.index.date
@@ -121,9 +119,7 @@ def bist_4h_olustur(df_1h):
 
     sonuc = []
     for key, grup in df_ist.groupby('_key', sort=True):
-        if key == aktif_key:
-            continue
-        if len(grup) == 0:
+        if key == aktif_key or len(grup) == 0:
             continue
         o = float(grup['Open'].iloc[0])
         h = float(grup['High'].max())
@@ -136,7 +132,6 @@ def bist_4h_olustur(df_1h):
 
     if not sonuc:
         return pd.DataFrame()
-
     return pd.DataFrame(sonuc).reset_index(drop=True)
 
 
@@ -178,12 +173,10 @@ def mum_formasyonlari(df):
     h  = float(df['High'].iloc[-1])
     l  = float(df['Low'].iloc[-1])
     c  = float(df['Close'].iloc[-1])
-
     o1 = float(df['Open'].iloc[-2])
     h1 = float(df['High'].iloc[-2])
     l1 = float(df['Low'].iloc[-2])
     c1 = float(df['Close'].iloc[-2])
-
     o2 = float(df['Open'].iloc[-3])
     h2 = float(df['High'].iloc[-3])
     l2 = float(df['Low'].iloc[-3])
@@ -197,64 +190,75 @@ def mum_formasyonlari(df):
     min_body  = ort_fiyat * 0.003
 
     boga  = c  > o
-    ayi   = c  < o
-    boga1 = c1 > o1
     ayi1  = c1 < o1
     ayi2  = c2 < o2
+    boga1 = c1 > o1
 
     ust_golge = h - max(o, c)
     alt_golge = min(o, c) - l
 
-    # ─── ÇEKİÇ (tek mum) ────────────────────────────────────────────────────
-    if (body >= min_body and
-            alt_golge >= body * 2.0 and
-            ust_golge <= body * 0.3):
+    if (body >= min_body and alt_golge >= body * 2.0 and ust_golge <= body * 0.3):
         sinyaller.append("Cekic")
 
-    # ─── TERS ÇEKİÇ (2 mum) ─────────────────────────────────────────────────
-    # PDF: önceki mum mutlaka siyah (ayı) olmalı
-    if (ayi1 and
-            body >= min_body and
-            ust_golge >= body * 2.0 and
-            alt_golge <= body * 0.3):
+    if (ayi1 and body >= min_body and ust_golge >= body * 2.0 and alt_golge <= body * 0.3):
         sinyaller.append("Ters Cekic")
 
-    # ─── YUTAN BOĞA (2 mum) ─────────────────────────────────────────────────
-    if (body1 >= min_body and body >= min_body and
-            ayi1 and boga and
-            o <= c1 and
-            c >= o1):
+    if (body1 >= min_body and body >= min_body and ayi1 and boga and o <= c1 and c >= o1):
         sinyaller.append("Yutan Boga")
 
-    # ─── BOĞA HARAMİSİ (2 mum) ──────────────────────────────────────────────
-    if (body1 >= min_body and body >= min_body and
-            ayi1 and boga and
-            o >= c1 and
-            c <= o1 and
-            body < body1 * 0.6):
+    if (body1 >= min_body and body >= min_body and ayi1 and boga and
+            o >= c1 and c <= o1 and body < body1 * 0.6):
         sinyaller.append("Boga Harami")
 
-    # ─── SABAH YILDIZI (3 mum) ──────────────────────────────────────────────
-    # PDF: yıldız gövdesi 1. mumun kapanışının altında olmalı (boşluk)
     orta2 = (o2 + c2) / 2
     yildiz_tepesi = max(o1, c1)
-    if (body2 >= min_body and
-            ayi2 and
-            body1 < body2 * 0.35 and
-            yildiz_tepesi < c2 and
-            boga and body >= min_body and
-            c > orta2):
+    if (body2 >= min_body and ayi2 and body1 < body2 * 0.35 and
+            yildiz_tepesi < c2 and boga and body >= min_body and c > orta2):
         sinyaller.append("Sabah Yildizi")
 
-    # ─── 3 BEYAZ ASKER (3 mum) ──────────────────────────────────────────────
     if (body2 >= min_body and body1 >= min_body and body >= min_body and
-            c2 > o2 and boga1 and boga and
-            c > c1 > c2 and
-            o > o1 > o2 and
+            c2 > o2 and boga1 and boga and c > c1 > c2 and o > o1 > o2 and
             o <= c1 and o1 <= c2 + body2):
         sinyaller.append("3 Beyaz Asker")
 
     return sinyaller
+
+
+def ozel_tarama_kontrol(df):
+    """Gizli strateji — koşullar dışarıya gösterilmez."""
+    try:
+        if len(df) < 35:
+            return False
+
+        close = df['Close'].astype(float)
+        low   = df['Low'].astype(float)
+        high  = df['High'].astype(float)
+
+        ema5  = close.ewm(span=5,  adjust=False).mean()
+        ema8  = close.ewm(span=8,  adjust=False).mean()
+        ema13 = close.ewm(span=13, adjust=False).mean()
+        ema34 = close.ewm(span=34, adjust=False).mean()
+
+        def temas_var(ema_ser):
+            e  = float(ema_ser.iloc[-1])
+            e1 = float(ema_ser.iloc[-2])
+            l  = float(low.iloc[-1])
+            h  = float(high.iloc[-1])
+            c  = float(close.iloc[-1])
+            c1 = float(close.iloc[-2])
+            temas    = l <= e <= h
+            kesisim  = c > e and c1 <= e1
+            return temas or kesisim
+
+        ema_temas = any(temas_var(e) for e in [ema5, ema8, ema13, ema34])
+        if not ema_temas:
+            return False
+
+        mumlar = mum_formasyonlari(df)
+        return "Yutan Boga" in mumlar or "Sabah Yildizi" in mumlar
+
+    except:
+        return False
 
 
 def sinyal_uret(df, g):
@@ -279,7 +283,7 @@ def sinyal_uret(df, g):
     if pd.notna(g['ema20'].iloc[n]) and pd.notna(g['ema50'].iloc[n]):
         if g['ema20'].iloc[n] > g['ema50'].iloc[n]:
             sinyaller.append("EMA20 > EMA50")
-        if (pd.notna(g['ema20'].iloc[n-1]) and pd.notna(g['ema50'].iloc[n-1])):
+        if pd.notna(g['ema20'].iloc[n-1]) and pd.notna(g['ema50'].iloc[n-1]):
             if g['ema20'].iloc[n-1] <= g['ema50'].iloc[n-1] and g['ema20'].iloc[n] > g['ema50'].iloc[n]:
                 sinyaller.append("Golden Cross")
             if g['ema20'].iloc[n-1] >= g['ema50'].iloc[n-1] and g['ema20'].iloc[n] < g['ema50'].iloc[n]:
@@ -337,10 +341,8 @@ def sinyal_uret(df, g):
 def altin_seviye(sinyaller):
     boga = [
         "Yutan Boga", "Cekic", "Ters Cekic", "Sabah Yildizi",
-        "Boga Harami", "3 Beyaz Asker",
-        "MACD Al Kesisimi", "Golden Cross",
-        "RSI Asiri Satim", "BB Alt Bant",
-        "Hacim Alarmi", "Dip Vurusu", "Guc Patlamasi"
+        "Boga Harami", "3 Beyaz Asker", "MACD Al Kesisimi", "Golden Cross",
+        "RSI Asiri Satim", "BB Alt Bant", "Hacim Alarmi", "Dip Vurusu", "Guc Patlamasi"
     ]
     puan = sum(1 for s in sinyaller if s in boga)
     if puan >= 5: return "Altin"
@@ -356,23 +358,16 @@ for ticker in HISSELER:
         if PERIYOT == "1d":
             bugun_str = (simdi + pd.Timedelta(days=1)).strftime('%Y-%m-%d')
             df = yf.download(
-                ticker,
-                start="2023-01-01",
-                end=bugun_str,
-                interval="1d",
-                progress=False,
-                auto_adjust=True
+                ticker, start="2023-01-01", end=bugun_str,
+                interval="1d", progress=False, auto_adjust=True
             )
             if df is None or len(df) < 30:
                 continue
             df.columns = [c[0] if isinstance(c, tuple) else c for c in df.columns]
         else:
             df_1h = yf.download(
-                ticker,
-                period="60d",
-                interval="1h",
-                progress=False,
-                auto_adjust=True
+                ticker, period="60d", interval="1h",
+                progress=False, auto_adjust=True
             )
             if df_1h is None or len(df_1h) < 20:
                 continue
@@ -381,26 +376,33 @@ for ticker in HISSELER:
             if df is None or len(df) < 20:
                 continue
 
-        g = hesapla_gosterge(df)
+        g         = hesapla_gosterge(df)
         sinyaller = sinyal_uret(df, g)
-        seviye = altin_seviye(sinyaller)
-        ad = ticker.replace(".IS", "")
+        seviye    = altin_seviye(sinyaller)
+        ad        = ticker.replace(".IS", "")
 
         rsi_raw = g['rsi'].iloc[-1]
         rsi_val = None if not pd.notna(rsi_raw) else round(float(rsi_raw), 1)
 
-        sonuclar[ad] = {
+        veri = {
             "kapanis":        round(float(g['close'].iloc[-1]), 2),
             "rsi":            rsi_val,
             "sinyaller":      sinyaller,
             "altin":          seviye,
-            "dip_vurusu":     "Dip Vurusu"     in sinyaller,
-            "bant_sikismasi": "Bant Sikismasi"  in sinyaller,
-            "guc_patlamasi":  "Guc Patlamasi"   in sinyaller,
-            "destek_testi":   "Destek Testi"    in sinyaller,
-            "hacim_bombasi":  "Hacim Bombasi"   in sinyaller,
-            "trend_uyumu":    "Trend Uyumu"     in sinyaller,
+            "dip_vurusu":     "Dip Vurusu"    in sinyaller,
+            "bant_sikismasi": "Bant Sikismasi" in sinyaller,
+            "guc_patlamasi":  "Guc Patlamasi"  in sinyaller,
+            "destek_testi":   "Destek Testi"   in sinyaller,
+            "hacim_bombasi":  "Hacim Bombasi"  in sinyaller,
+            "trend_uyumu":    "Trend Uyumu"    in sinyaller,
+            "ozel_tarama":    False
         }
+
+        # Özel tarama sadece günlük veride çalışır
+        if PERIYOT == "1d":
+            veri["ozel_tarama"] = ozel_tarama_kontrol(df)
+
+        sonuclar[ad] = veri
 
     except Exception as e:
         print(f"Hata {ticker}: {e}")
