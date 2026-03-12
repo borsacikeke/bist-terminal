@@ -117,18 +117,11 @@ def mum_formasyonlari(df):
     if len(df) < 3:
         return sinyaller
 
-    o  = float(df['Open'].iloc[-1])
-    h  = float(df['High'].iloc[-1])
-    l  = float(df['Low'].iloc[-1])
-    c  = float(df['Close'].iloc[-1])
-    o1 = float(df['Open'].iloc[-2])
-    h1 = float(df['High'].iloc[-2])
-    l1 = float(df['Low'].iloc[-2])
-    c1 = float(df['Close'].iloc[-2])
-    o2 = float(df['Open'].iloc[-3])
-    h2 = float(df['High'].iloc[-3])
-    l2 = float(df['Low'].iloc[-3])
-    c2 = float(df['Close'].iloc[-3])
+    o  = float(df['Open'].iloc[-1]);  h  = float(df['High'].iloc[-1])
+    l  = float(df['Low'].iloc[-1]);   c  = float(df['Close'].iloc[-1])
+    o1 = float(df['Open'].iloc[-2]);  h1 = float(df['High'].iloc[-2])
+    l1 = float(df['Low'].iloc[-2]);   c1 = float(df['Close'].iloc[-2])
+    o2 = float(df['Open'].iloc[-3]);  c2 = float(df['Close'].iloc[-3])
 
     body  = abs(c - o)
     body1 = abs(c1 - o1)
@@ -137,43 +130,40 @@ def mum_formasyonlari(df):
     ort_fiyat = float(df['Close'].tail(10).mean())
     min_body  = ort_fiyat * 0.005
 
-    boga  = c  > o
-    ayi1  = c1 < o1
-    ayi2  = c2 < o2
-    boga1 = c1 > o1
-
+    boga  = c > o;   ayi1 = c1 < o1;  ayi2 = c2 < o2;  boga1 = c1 > o1
     ust_golge = h - max(o, c)
     alt_golge = min(o, c) - l
 
+    # Çekiç
     if body >= min_body and alt_golge >= body * 2.0 and ust_golge <= body * 0.3:
         sinyaller.append("Cekic")
 
+    # Ters Çekiç (önceki mum ayı olmalı)
     if ayi1 and body >= min_body and ust_golge >= body * 2.0 and alt_golge <= body * 0.3:
         sinyaller.append("Ters Cekic")
 
+    # Yutan Boğa
     if (body1 >= min_body and body >= min_body and
-            ayi1 and boga and
-            o < c1 and c > o1):
+            ayi1 and boga and o < c1 and c > o1):
         sinyaller.append("Yutan Boga")
 
+    # Boğa Haramisi
     if (body1 >= min_body and body >= min_body and
-            ayi1 and boga and
-            o > c1 and c < o1 and
-            body < body1 * 0.6):
+            ayi1 and boga and o > c1 and c < o1 and body < body1 * 0.6):
         sinyaller.append("Boga Harami")
 
+    # Sabah Yıldızı
     orta2 = (o2 + c2) / 2
     yildiz_tepesi = max(o1, c1)
     if (body2 >= min_body and ayi2 and
-            body1 < body2 * 0.35 and
-            yildiz_tepesi < c2 and
+            body1 < body2 * 0.35 and yildiz_tepesi < c2 and
             boga and body >= min_body and c > orta2):
         sinyaller.append("Sabah Yildizi")
 
+    # 3 Beyaz Asker
     if (body2 >= min_body and body1 >= min_body and body >= min_body and
             c2 > o2 and boga1 and boga and
-            c > c1 > c2 and o > o1 > o2 and
-            o <= c1 and o1 <= c2):
+            c > c1 > c2 and o > o1 > o2 and o <= c1 and o1 <= c2):
         sinyaller.append("3 Beyaz Asker")
 
     return sinyaller
@@ -192,12 +182,9 @@ def ozel_tarama_kontrol(df):
         ema34 = close.ewm(span=34, adjust=False).mean()
 
         def temas_var(ema_ser):
-            e  = float(ema_ser.iloc[-1])
-            e1 = float(ema_ser.iloc[-2])
-            l_ = float(low.iloc[-1])
-            h_ = float(high.iloc[-1])
-            c_ = float(close.iloc[-1])
-            c1 = float(close.iloc[-2])
+            e  = float(ema_ser.iloc[-1]); e1 = float(ema_ser.iloc[-2])
+            l_ = float(low.iloc[-1]);     h_ = float(high.iloc[-1])
+            c_ = float(close.iloc[-1]);   c1 = float(close.iloc[-2])
             return (l_ <= e <= h_) or (c_ > e and c1 <= e1)
 
         if not any(temas_var(e) for e in [ema5, ema8, ema13, ema34]):
@@ -331,15 +318,15 @@ for ticker in HISSELER:
         sinyaller = sinyal_uret(df, g)
         seviye    = altin_seviye(sinyaller)
         ad        = ticker.replace(".IS", "")
-
         n = -1
-        rsi_val    = round(float(g['rsi'].iloc[n]), 1)    if pd.notna(g['rsi'].iloc[n])    else None
-        macd_val   = round(float(g['macd'].iloc[n]), 4)   if pd.notna(g['macd'].iloc[n])   else None
-        signal_val = round(float(g['signal'].iloc[n]), 4) if pd.notna(g['signal'].iloc[n]) else None
+
+        rsi_val    = round(float(g['rsi'].iloc[n]), 1)       if pd.notna(g['rsi'].iloc[n])       else None
+        macd_val   = round(float(g['macd'].iloc[n]), 4)      if pd.notna(g['macd'].iloc[n])      else None
+        signal_val = round(float(g['signal'].iloc[n]), 4)    if pd.notna(g['signal'].iloc[n])    else None
         hist_val   = round(float(g['histogram'].iloc[n]), 4) if pd.notna(g['histogram'].iloc[n]) else None
 
-        vol_bugun = float(g['volume'].iloc[n])
-        vol_ort   = float(g['vol_ort'].iloc[n]) if pd.notna(g['vol_ort'].iloc[n]) else 0
+        vol_bugun  = float(g['volume'].iloc[n])
+        vol_ort    = float(g['vol_ort'].iloc[n]) if pd.notna(g['vol_ort'].iloc[n]) else 0
         hacim_oran = round(vol_bugun / vol_ort, 2) if vol_ort > 0 else None
 
         sonuclar[ad] = {
