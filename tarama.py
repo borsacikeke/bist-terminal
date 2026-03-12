@@ -5,24 +5,11 @@ import pandas as pd
 import numpy as np
 from datetime import datetime
 import pytz
-import os
 
 TR_TZ = pytz.timezone('Europe/Istanbul')
 simdi = datetime.now(TR_TZ)
-saat = simdi.hour
 
-if saat >= 19:
-    PERIYOT = "1d"
-else:
-    PERIYOT = "4h"
-
-if PERIYOT == "4h":
-    if not (9 <= saat < 19):
-        if os.environ.get("GITHUB_EVENT_NAME") != "workflow_dispatch":
-            print(f"Borsa saatleri dışında ({simdi.strftime('%H:%M')}), 4h tarama atlanıyor.")
-            exit(0)
-
-print(f"Tarama başlıyor... {simdi.strftime('%d.%m.%Y %H:%M')} | Periyot: {PERIYOT}")
+print(f"Tarama başlıyor... {simdi.strftime('%d.%m.%Y %H:%M')} | Periyot: Günlük")
 
 HISSELER = [h + ".IS" for h in [
     "ACSEL","ADEL","ADESE","AEFES","AFYON","AGESA","AGHOL","AGROT","AGYO","AHGAZ",
@@ -89,52 +76,6 @@ def nan_temizle(obj):
     return obj
 
 
-def bist_4h_olustur(df_1h):
-    if df_1h.empty:
-        return pd.DataFrame()
-    if df_1h.index.tz is None:
-        df_1h.index = df_1h.index.tz_localize('UTC')
-    else:
-        df_1h.index = df_1h.index.tz_convert('UTC')
-    df_ist = df_1h.copy()
-    df_ist.index = df_ist.index.tz_convert('Europe/Istanbul')
-    df_ist = df_ist[(df_ist.index.hour >= 9) & (df_ist.index.hour <= 17)]
-    if df_ist.empty:
-        return pd.DataFrame()
-
-    def seans_no(s):
-        if s <= 12: return 0
-        elif s <= 16: return 1
-        else: return 2
-
-    df_ist = df_ist.copy()
-    df_ist['_tarih'] = df_ist.index.date
-    df_ist['_seans'] = df_ist.index.hour.map(seans_no)
-    df_ist['_key']   = list(zip(df_ist['_tarih'], df_ist['_seans']))
-
-    simdi_ist = pd.Timestamp.now(tz='Europe/Istanbul')
-    aktif_key = None
-    if 9 <= simdi_ist.hour <= 17:
-        aktif_key = (simdi_ist.date(), seans_no(simdi_ist.hour))
-
-    sonuc = []
-    for key, grup in df_ist.groupby('_key', sort=True):
-        if key == aktif_key or len(grup) == 0:
-            continue
-        o = float(grup['Open'].iloc[0])
-        h = float(grup['High'].max())
-        l = float(grup['Low'].min())
-        c = float(grup['Close'].iloc[-1])
-        v = float(grup['Volume'].sum())
-        if v <= 0 or o <= 0 or c <= 0:
-            continue
-        sonuc.append({'Open': o, 'High': h, 'Low': l, 'Close': c, 'Volume': v})
-
-    if not sonuc:
-        return pd.DataFrame()
-    return pd.DataFrame(sonuc).reset_index(drop=True)
-
-
 def hesapla_gosterge(df):
     close  = df['Close'].astype(float)
     high   = df['High'].astype(float)
@@ -197,13 +138,13 @@ def mum_formasyonlari(df):
     ust_golge = h - max(o, c)
     alt_golge = min(o, c) - l
 
-    if (body >= min_body and alt_golge >= body * 2.0 and ust_golge <= body * 0.3):
+    if body >= min_body and alt_golge >= body * 2.0 and ust_golge <= body * 0.3:
         sinyaller.append("Cekic")
 
-    if (ayi1 and body >= min_body and ust_golge >= body * 2.0 and alt_golge <= body * 0.3):
+    if ayi1 and body >= min_body and ust_golge >= body * 2.0 and alt_golge <= body * 0.3:
         sinyaller.append("Ters Cekic")
 
-    if (body1 >= min_body and body >= min_body and ayi1 and boga and o <= c1 and c >= o1):
+    if body1 >= min_body and body >= min_body and ayi1 and boga and o <= c1 and c >= o1:
         sinyaller.append("Yutan Boga")
 
     if (body1 >= min_body and body >= min_body and ayi1 and boga and
@@ -246,8 +187,8 @@ def ozel_tarama_kontrol(df):
             h  = float(high.iloc[-1])
             c  = float(close.iloc[-1])
             c1 = float(close.iloc[-2])
-            temas    = l <= e <= h
-            kesisim  = c > e and c1 <= e1
+            temas   = l <= e <= h
+            kesisim = c > e and c1 <= e1
             return temas or kesisim
 
         ema_temas = any(temas_var(e) for e in [ema5, ema8, ema13, ema34])
@@ -355,26 +296,18 @@ sonuclar = {}
 
 for ticker in HISSELER:
     try:
-        if PERIYOT == "1d":
-            bugun_str = (simdi + pd.Timedelta(days=1)).strftime('%Y-%m-%d')
-            df = yf.download(
-                ticker, start="2023-01-01", end=bugun_str,
-                interval="1d", progress=False, auto_adjust=True
-            )
-            if df is None or len(df) < 30:
-                continue
-            df.columns = [c[0] if isinstance(c, tuple) else c for c in df.columns]
-        else:
-            df_1h = yf.download(
-                ticker, period="60d", interval="1h",
-                progress=False, auto_adjust=True
-            )
-            if df_1h is None or len(df_1h) < 20:
-                continue
-            df_1h.columns = [c[0] if isinstance(c, tuple) else c for c in df_1h.columns]
-            df = bist_4h_olustur(df_1h)
-            if df is None or len(df) < 20:
-                continue
+        bugun_str = (simdi + pd.Timedelta(days=1)).strftime('%Y-%m-%d')
+        df = yf.download(
+            ticker,
+            start="2023-01-01",
+            end=bugun_str,
+            interval="1d",
+            progress=False,
+            auto_adjust=True
+        )
+        if df is None or len(df) < 30:
+            continue
+        df.columns = [c[0] if isinstance(c, tuple) else c for c in df.columns]
 
         g         = hesapla_gosterge(df)
         sinyaller = sinyal_uret(df, g)
@@ -384,37 +317,30 @@ for ticker in HISSELER:
         rsi_raw = g['rsi'].iloc[-1]
         rsi_val = None if not pd.notna(rsi_raw) else round(float(rsi_raw), 1)
 
-        veri = {
+        sonuclar[ad] = {
             "kapanis":        round(float(g['close'].iloc[-1]), 2),
             "rsi":            rsi_val,
             "sinyaller":      sinyaller,
             "altin":          seviye,
-            "dip_vurusu":     "Dip Vurusu"    in sinyaller,
-            "bant_sikismasi": "Bant Sikismasi" in sinyaller,
-            "guc_patlamasi":  "Guc Patlamasi"  in sinyaller,
-            "destek_testi":   "Destek Testi"   in sinyaller,
-            "hacim_bombasi":  "Hacim Bombasi"  in sinyaller,
-            "trend_uyumu":    "Trend Uyumu"    in sinyaller,
-            "ozel_tarama":    False
+            "dip_vurusu":     "Dip Vurusu"     in sinyaller,
+            "bant_sikismasi": "Bant Sikismasi"  in sinyaller,
+            "guc_patlamasi":  "Guc Patlamasi"   in sinyaller,
+            "destek_testi":   "Destek Testi"    in sinyaller,
+            "hacim_bombasi":  "Hacim Bombasi"   in sinyaller,
+            "trend_uyumu":    "Trend Uyumu"     in sinyaller,
+            "ozel_tarama":    ozel_tarama_kontrol(df),
         }
-
-        # Özel tarama sadece günlük veride çalışır
-        if PERIYOT == "1d":
-            veri["ozel_tarama"] = ozel_tarama_kontrol(df)
-
-        sonuclar[ad] = veri
 
     except Exception as e:
         print(f"Hata {ticker}: {e}")
 
 cikti = {
     "tarih":    simdi.strftime("%d.%m.%Y %H:%M"),
-    "periyot":  "gunluk" if PERIYOT == "1d" else "4h",
+    "periyot":  "gunluk",
     "hisseler": sonuclar
 }
 
-dosya_adi = "sonuclar4h.json" if PERIYOT == "4h" else "sonuclar.json"
-with open(dosya_adi, "w", encoding="utf-8") as f:
+with open("sonuclar.json", "w", encoding="utf-8") as f:
     json.dump(nan_temizle(cikti), f, ensure_ascii=False, indent=2)
 
-print(f"Tamamlandı! {len(sonuclar)} hisse işlendi. → {dosya_adi}")
+print(f"Tamamlandı! {len(sonuclar)} hisse işlendi. → sonuclar.json")
