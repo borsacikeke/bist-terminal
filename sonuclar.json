@@ -1,10 +1,14 @@
 {
-  "tarih": "12.03.2026 21:44",
+  "tarih": "12.03.2026 22:20",
   "periyot": "gunluk",
   "hisseler": {
     "ACSEL": {
       "kapanis": 105.0,
       "rsi": 33.1,
+      "macd": -1.4471,
+      "macd_sinyal": -0.9567,
+      "macd_histogram": -0.4904,
+      "hacim_oran": 0.42,
       "sinyaller": [
         "RSI Asiri Satim",
         "Destek Testi"
@@ -21,6 +25,10 @@
     "ADEL": {
       "kapanis": 32.96,
       "rsi": 42.6,
+      "macd": -0.6735,
+      "macd_sinyal": -0.458,
+      "macd_histogram": -0.2154,
+      "hacim_oran": 0.43,
       "sinyaller": [
         "Fiyat SMA200 Ustunde"
       ],
@@ -36,6 +44,10 @@
     "ADESE": {
       "kapanis": 1.06,
       "rsi": 30.4,
+      "macd": -0.0866,
+      "macd_sinyal": -0.0968,
+      "macd_histogram": 0.0102,
+      "hacim_oran": 0.63,
       "sinyaller": [
         "MACD Pozitif",
         "RSI Asiri Satim"
@@ -52,6 +64,10 @@
     "AEFES": {
       "kapanis": 17.64,
       "rsi": 28.3,
+      "macd": -0.5055,
+      "macd_sinyal": -0.1937,
+      "macd_histogram": -0.3118,
+      "hacim_oran": 0.58,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -69,6 +85,10 @@
     "AFYON": {
       "kapanis": 16.06,
       "rsi": 70.6,
+      "macd": 0.339,
+      "macd_sinyal": 0.2376,
+      "macd_histogram": 0.1014,
+      "hacim_oran": 1.2,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -89,6 +109,10 @@
     "AGESA": {
       "kapanis": 227.7,
       "rsi": 34.4,
+      "macd": -5.1787,
+      "macd_sinyal": -3.953,
+      "macd_histogram": -1.2257,
+      "hacim_oran": 0.78,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "Fiyat SMA200 Ustunde",
@@ -108,6 +132,10 @@
     "AGHOL": {
       "kapanis": 29.3,
       "rsi": 13.9,
+      "macd": -1.1989,
+      "macd_sinyal": -0.6432,
+      "macd_histogram": -0.5557,
+      "hacim_oran": 0.62,
       "sinyaller": [
         "Fiyat SMA200 Ustunde",
         "RSI Asiri Satim"
@@ -124,6 +152,10 @@
     "AGROT": {
       "kapanis": 2.89,
       "rsi": 36.3,
+      "macd": -0.1036,
+      "macd_sinyal": -0.1041,
+      "macd_histogram": 0.0005,
+      "hacim_oran": 0.86,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif"
@@ -140,6 +172,10 @@
     "AGYO": {
       "kapanis": 8.7,
       "rsi": 73.4,
+      "macd": 0.1164,
+      "macd_sinyal": -0.0035,
+      "macd_histogram": 0.1199,
+      "hacim_oran": 2.11,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -161,6 +197,10 @@
     "AHGAZ": {
       "kapanis": 23.46,
       "rsi": 29.7,
+      "macd": -0.3287,
+      "macd_sinyal": -0.177,
+      "macd_histogram": -0.1517,
+      "hacim_oran": 0.52,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -176,6 +216,10 @@
     "AKCNS": {
       "kapanis": 207.7,
       "rsi": 39.2,
+      "macd": 3.7744,
+      "macd_sinyal": 6.0779,
+      "macd_histogram": -2.3035,
+      "hacim_oran": 0.73,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -195,6 +239,10 @@
     "AKFGY": {
       "kapanis": 3.06,
       "rsi": 55.4,
+      "macd": -0.0026,
+      "macd_sinyal": -0.0117,
+      "macd_histogram": 0.0092,
+      "hacim_oran": 0.85,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -217,6 +265,10 @@
     "AKFYE": {
       "kapanis": 20.32,
       "rsi": 62.8,
+      "macd": 0.2972,
+      "macd_sinyal": 0.0744,
+      "macd_histogram": 0.2227,
+      "hacim_oran": 0.8,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -238,6 +290,10 @@
     "AKGRT": {
       "kapanis": 7.79,
       "rsi": 43.5,
+      "macd": -0.1232,
+      "macd_sinyal": -0.1142,
+      "macd_histogram": -0.0091,
+      "hacim_oran": 1.31,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -253,9 +309,35 @@
       "trend_uyumu": false,
       "ozel_tarama": false
     },
+    "AKSA": {
+      "kapanis": 10.83,
+      "rsi": 42.3,
+      "macd": -0.1024,
+      "macd_sinyal": -0.1197,
+      "macd_histogram": 0.0173,
+      "hacim_oran": 1.45,
+      "sinyaller": [
+        "MACD Al Kesisimi",
+        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "Fiyat SMA200 Ustunde"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": false,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": false,
+      "ozel_tarama": false
+    },
     "AKSEN": {
       "kapanis": 78.5,
       "rsi": 68.7,
+      "macd": 0.714,
+      "macd_sinyal": -0.0775,
+      "macd_histogram": 0.7916,
+      "hacim_oran": 1.88,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -274,26 +356,12 @@
       "ozel_tarama": false
     },
     "AKSGY": {
-      "kapanis": 10.83,
-      "rsi": 42.3,
-      "sinyaller": [
-        "MACD Al Kesisimi",
-        "MACD Pozitif",
-        "Fiyat EMA20 Ustunde",
-        "Fiyat SMA200 Ustunde"
-      ],
-      "altin": "Bronz",
-      "dip_vurusu": false,
-      "bant_sikismasi": false,
-      "guc_patlamasi": false,
-      "destek_testi": false,
-      "hacim_bombasi": false,
-      "trend_uyumu": false,
-      "ozel_tarama": false
-    },
-    "AKSUE": {
       "kapanis": 8.49,
       "rsi": 49.7,
+      "macd": -0.0315,
+      "macd_sinyal": -0.045,
+      "macd_histogram": 0.0135,
+      "hacim_oran": 1.0,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -311,9 +379,13 @@
       "trend_uyumu": true,
       "ozel_tarama": false
     },
-    "AKTIF": {
+    "AKSUE": {
       "kapanis": 28.82,
       "rsi": 78.6,
+      "macd": 1.3976,
+      "macd_sinyal": 0.9869,
+      "macd_histogram": 0.4108,
+      "hacim_oran": 0.87,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -334,6 +406,10 @@
     "ALARK": {
       "kapanis": 92.8,
       "rsi": 22.2,
+      "macd": -3.8528,
+      "macd_sinyal": -2.6929,
+      "macd_histogram": -1.1599,
+      "hacim_oran": 0.82,
       "sinyaller": [
         "Fiyat SMA200 Ustunde",
         "RSI Asiri Satim"
@@ -347,9 +423,13 @@
       "trend_uyumu": false,
       "ozel_tarama": false
     },
-    "ALCAR": {
+    "ALBRK": {
       "kapanis": 8.35,
       "rsi": 31.2,
+      "macd": -0.1973,
+      "macd_sinyal": -0.0882,
+      "macd_histogram": -0.1092,
+      "hacim_oran": 0.58,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -364,9 +444,51 @@
       "trend_uyumu": false,
       "ozel_tarama": false
     },
+    "ALCAR": {
+      "kapanis": 770.0,
+      "rsi": 19.5,
+      "macd": -35.9595,
+      "macd_sinyal": -29.9674,
+      "macd_histogram": -5.9921,
+      "hacim_oran": 0.51,
+      "sinyaller": [
+        "RSI Asiri Satim"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": false,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": false,
+      "ozel_tarama": false
+    },
+    "ALFAS": {
+      "kapanis": 38.18,
+      "rsi": 32.1,
+      "macd": -1.111,
+      "macd_sinyal": -0.9332,
+      "macd_histogram": -0.1778,
+      "hacim_oran": 0.76,
+      "sinyaller": [
+        "RSI Asiri Satim"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": false,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": false,
+      "ozel_tarama": false
+    },
     "ALGYO": {
       "kapanis": 5.1,
       "rsi": 50.7,
+      "macd": -0.041,
+      "macd_sinyal": -0.0405,
+      "macd_histogram": -0.0005,
+      "hacim_oran": 0.78,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -384,6 +506,10 @@
     "ALKA": {
       "kapanis": 11.2,
       "rsi": 42.7,
+      "macd": -0.4592,
+      "macd_sinyal": -0.4795,
+      "macd_histogram": 0.0203,
+      "hacim_oran": 0.68,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -401,6 +527,10 @@
     "ALKIM": {
       "kapanis": 16.21,
       "rsi": 21.3,
+      "macd": -0.7367,
+      "macd_sinyal": -0.6019,
+      "macd_histogram": -0.1349,
+      "hacim_oran": 1.0,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -416,6 +546,10 @@
     "ALKLC": {
       "kapanis": 289.75,
       "rsi": 55.7,
+      "macd": 9.9979,
+      "macd_sinyal": 10.0894,
+      "macd_histogram": -0.0915,
+      "hacim_oran": 0.73,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -433,6 +567,10 @@
     "ALTNY": {
       "kapanis": 15.2,
       "rsi": 38.4,
+      "macd": -0.1872,
+      "macd_sinyal": -0.003,
+      "macd_histogram": -0.1842,
+      "hacim_oran": 0.4,
       "sinyaller": [
         "Death Cross"
       ],
@@ -448,6 +586,10 @@
     "ALVES": {
       "kapanis": 3.02,
       "rsi": 27.8,
+      "macd": -0.1748,
+      "macd_sinyal": -0.0959,
+      "macd_histogram": -0.0789,
+      "hacim_oran": 0.44,
       "sinyaller": [
         "Death Cross",
         "RSI Asiri Satim",
@@ -465,6 +607,10 @@
     "ANELE": {
       "kapanis": 14.17,
       "rsi": 24.2,
+      "macd": -0.5775,
+      "macd_sinyal": -0.5328,
+      "macd_histogram": -0.0447,
+      "hacim_oran": 0.56,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -480,6 +626,10 @@
     "ANHYT": {
       "kapanis": 121.4,
       "rsi": 61.6,
+      "macd": 0.2759,
+      "macd_sinyal": -0.0445,
+      "macd_histogram": 0.3204,
+      "hacim_oran": 1.57,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -502,6 +652,10 @@
     "ANSGR": {
       "kapanis": 27.9,
       "rsi": 68.2,
+      "macd": 0.1744,
+      "macd_sinyal": 0.0015,
+      "macd_histogram": 0.1729,
+      "hacim_oran": 1.07,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -522,6 +676,10 @@
     "ARASE": {
       "kapanis": 91.8,
       "rsi": 68.3,
+      "macd": 1.6205,
+      "macd_sinyal": 1.3777,
+      "macd_histogram": 0.2428,
+      "hacim_oran": 2.87,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -545,6 +703,10 @@
     "ARCLK": {
       "kapanis": 111.8,
       "rsi": 37.7,
+      "macd": -2.2067,
+      "macd_sinyal": -1.3299,
+      "macd_histogram": -0.8768,
+      "hacim_oran": 0.65,
       "sinyaller": [],
       "altin": null,
       "dip_vurusu": false,
@@ -558,6 +720,10 @@
     "ARDYZ": {
       "kapanis": 42.5,
       "rsi": 51.6,
+      "macd": -0.4837,
+      "macd_sinyal": -0.5493,
+      "macd_histogram": 0.0655,
+      "hacim_oran": 1.06,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -579,6 +745,10 @@
     "ARENA": {
       "kapanis": 26.36,
       "rsi": 46.7,
+      "macd": -0.9601,
+      "macd_sinyal": -0.9817,
+      "macd_histogram": 0.0216,
+      "hacim_oran": 1.67,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -597,6 +767,10 @@
     "ARSAN": {
       "kapanis": 3.82,
       "rsi": 52.0,
+      "macd": -0.1249,
+      "macd_sinyal": -0.1166,
+      "macd_histogram": -0.0083,
+      "hacim_oran": 1.04,
       "sinyaller": [
         "Fiyat SMA200 Ustunde",
         "3 Beyaz Asker",
@@ -614,6 +788,10 @@
     "ASELS": {
       "kapanis": 330.0,
       "rsi": 56.5,
+      "macd": 10.5175,
+      "macd_sinyal": 10.5271,
+      "macd_histogram": -0.0096,
+      "hacim_oran": 0.54,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -631,6 +809,10 @@
     "ASTOR": {
       "kapanis": 199.5,
       "rsi": 59.4,
+      "macd": 7.4685,
+      "macd_sinyal": 7.3651,
+      "macd_histogram": 0.1034,
+      "hacim_oran": 1.25,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -653,6 +835,10 @@
     "ATAGY": {
       "kapanis": 12.87,
       "rsi": 37.1,
+      "macd": -0.2755,
+      "macd_sinyal": -0.2171,
+      "macd_histogram": -0.0584,
+      "hacim_oran": 0.67,
       "sinyaller": [],
       "altin": null,
       "dip_vurusu": false,
@@ -666,6 +852,10 @@
     "ATAKP": {
       "kapanis": 54.3,
       "rsi": 32.1,
+      "macd": -1.3204,
+      "macd_sinyal": -0.9456,
+      "macd_histogram": -0.3749,
+      "hacim_oran": 0.91,
       "sinyaller": [
         "Fiyat SMA200 Ustunde",
         "RSI Asiri Satim"
@@ -682,6 +872,10 @@
     "ATATP": {
       "kapanis": 151.1,
       "rsi": 42.2,
+      "macd": -1.3788,
+      "macd_sinyal": -0.3205,
+      "macd_histogram": -1.0584,
+      "hacim_oran": 0.65,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde"
@@ -698,6 +892,10 @@
     "ATEKS": {
       "kapanis": 90.05,
       "rsi": 23.2,
+      "macd": -2.6708,
+      "macd_sinyal": 0.2036,
+      "macd_histogram": -2.8744,
+      "hacim_oran": 0.99,
       "sinyaller": [
         "Death Cross",
         "Fiyat SMA200 Ustunde",
@@ -715,6 +913,10 @@
     "ATLAS": {
       "kapanis": 9.0,
       "rsi": 51.6,
+      "macd": -0.0507,
+      "macd_sinyal": -0.0129,
+      "macd_histogram": -0.0378,
+      "hacim_oran": 1.52,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -734,6 +936,10 @@
     "ATSYH": {
       "kapanis": 52.0,
       "rsi": 26.0,
+      "macd": -2.9777,
+      "macd_sinyal": -2.5843,
+      "macd_histogram": -0.3934,
+      "hacim_oran": 0.77,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -749,6 +955,10 @@
     "AVHOL": {
       "kapanis": 36.16,
       "rsi": 38.5,
+      "macd": -0.7939,
+      "macd_sinyal": -0.7545,
+      "macd_histogram": -0.0394,
+      "hacim_oran": 1.08,
       "sinyaller": [],
       "altin": null,
       "dip_vurusu": false,
@@ -762,6 +972,10 @@
     "AVGYO": {
       "kapanis": 12.46,
       "rsi": 40.4,
+      "macd": 0.154,
+      "macd_sinyal": 0.2904,
+      "macd_histogram": -0.1364,
+      "hacim_oran": 0.69,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -779,6 +993,10 @@
     "AVOD": {
       "kapanis": 4.53,
       "rsi": 46.7,
+      "macd": -0.0165,
+      "macd_sinyal": -0.0211,
+      "macd_histogram": 0.0046,
+      "hacim_oran": 0.6,
       "sinyaller": [
         "MACD Pozitif",
         "EMA20 > EMA50",
@@ -797,6 +1015,10 @@
     "AVPGY": {
       "kapanis": 48.68,
       "rsi": 29.7,
+      "macd": -1.5786,
+      "macd_sinyal": -1.328,
+      "macd_histogram": -0.2507,
+      "hacim_oran": 0.95,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -812,6 +1034,10 @@
     "AVTUR": {
       "kapanis": 20.56,
       "rsi": 58.7,
+      "macd": 0.8874,
+      "macd_sinyal": 0.7288,
+      "macd_histogram": 0.1586,
+      "hacim_oran": 1.03,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -832,6 +1058,10 @@
     "AYCES": {
       "kapanis": 697.5,
       "rsi": 84.6,
+      "macd": 41.4467,
+      "macd_sinyal": 24.3145,
+      "macd_histogram": 17.1322,
+      "hacim_oran": 1.49,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -852,6 +1082,10 @@
     "AYEN": {
       "kapanis": 28.6,
       "rsi": 52.5,
+      "macd": 0.1516,
+      "macd_sinyal": 0.126,
+      "macd_histogram": 0.0255,
+      "hacim_oran": 0.58,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -872,6 +1106,10 @@
     "AYGAZ": {
       "kapanis": 256.5,
       "rsi": 54.3,
+      "macd": 5.2516,
+      "macd_sinyal": 6.1112,
+      "macd_histogram": -0.8596,
+      "hacim_oran": 1.08,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -890,6 +1128,10 @@
     "BAGFS": {
       "kapanis": 34.94,
       "rsi": 64.0,
+      "macd": 1.5279,
+      "macd_sinyal": 1.6159,
+      "macd_histogram": -0.0881,
+      "hacim_oran": 1.24,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -908,6 +1150,10 @@
     "BAKAB": {
       "kapanis": 38.14,
       "rsi": 40.0,
+      "macd": -0.8925,
+      "macd_sinyal": -0.7036,
+      "macd_histogram": -0.1889,
+      "hacim_oran": 0.64,
       "sinyaller": [
         "Fiyat SMA200 Ustunde",
         "Destek Testi"
@@ -924,6 +1170,10 @@
     "BALAT": {
       "kapanis": 90.0,
       "rsi": 22.9,
+      "macd": -2.9083,
+      "macd_sinyal": -2.0116,
+      "macd_histogram": -0.8967,
+      "hacim_oran": 1.1,
       "sinyaller": [
         "Fiyat SMA200 Ustunde",
         "RSI Asiri Satim"
@@ -940,6 +1190,10 @@
     "BANVT": {
       "kapanis": 157.3,
       "rsi": 29.7,
+      "macd": -4.6416,
+      "macd_sinyal": -3.7279,
+      "macd_histogram": -0.9137,
+      "hacim_oran": 0.66,
       "sinyaller": [
         "RSI Asiri Satim",
         "Ters Cekic"
@@ -956,6 +1210,10 @@
     "BARMA": {
       "kapanis": 47.0,
       "rsi": 52.8,
+      "macd": 0.6483,
+      "macd_sinyal": 0.7038,
+      "macd_histogram": -0.0555,
+      "hacim_oran": 1.11,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -974,6 +1232,10 @@
     "BASCM": {
       "kapanis": 14.31,
       "rsi": 42.4,
+      "macd": -0.1938,
+      "macd_sinyal": -0.1368,
+      "macd_histogram": -0.057,
+      "hacim_oran": 0.92,
       "sinyaller": [],
       "altin": null,
       "dip_vurusu": false,
@@ -987,6 +1249,10 @@
     "BASGZ": {
       "kapanis": 49.06,
       "rsi": 47.1,
+      "macd": 0.3176,
+      "macd_sinyal": 0.4568,
+      "macd_histogram": -0.1392,
+      "hacim_oran": 1.1,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -1004,6 +1270,10 @@
     "BAYRK": {
       "kapanis": 4.5,
       "rsi": 44.8,
+      "macd": -0.1016,
+      "macd_sinyal": -0.1152,
+      "macd_histogram": 0.0135,
+      "hacim_oran": 0.4,
       "sinyaller": [
         "MACD Pozitif"
       ],
@@ -1019,6 +1289,10 @@
     "BEGYO": {
       "kapanis": 4.24,
       "rsi": 31.3,
+      "macd": -0.1623,
+      "macd_sinyal": -0.1576,
+      "macd_histogram": -0.0047,
+      "hacim_oran": 0.46,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -1034,6 +1308,10 @@
     "BERA": {
       "kapanis": 19.0,
       "rsi": 52.4,
+      "macd": 0.2472,
+      "macd_sinyal": 0.0354,
+      "macd_histogram": 0.2117,
+      "hacim_oran": 2.45,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -1055,6 +1333,10 @@
     "BEYAZ": {
       "kapanis": 29.22,
       "rsi": 48.5,
+      "macd": -0.3521,
+      "macd_sinyal": -0.3304,
+      "macd_histogram": -0.0217,
+      "hacim_oran": 0.79,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "Fiyat SMA200 Ustunde",
@@ -1073,6 +1355,10 @@
     "BFREN": {
       "kapanis": 144.6,
       "rsi": 30.4,
+      "macd": -4.4152,
+      "macd_sinyal": -3.6369,
+      "macd_histogram": -0.7783,
+      "hacim_oran": 0.61,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -1088,6 +1374,10 @@
     "BIMAS": {
       "kapanis": 708.5,
       "rsi": 56.4,
+      "macd": 2.9743,
+      "macd_sinyal": 3.2133,
+      "macd_histogram": -0.239,
+      "hacim_oran": 1.35,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -1105,6 +1395,10 @@
     "BIOEN": {
       "kapanis": 16.21,
       "rsi": 44.1,
+      "macd": -0.4781,
+      "macd_sinyal": -0.5202,
+      "macd_histogram": 0.0421,
+      "hacim_oran": 0.71,
       "sinyaller": [
         "MACD Pozitif"
       ],
@@ -1120,6 +1414,10 @@
     "BIZIM": {
       "kapanis": 27.6,
       "rsi": 31.6,
+      "macd": -0.8807,
+      "macd_sinyal": -0.6226,
+      "macd_histogram": -0.258,
+      "hacim_oran": 0.82,
       "sinyaller": [
         "Fiyat SMA200 Ustunde",
         "RSI Asiri Satim"
@@ -1136,6 +1434,10 @@
     "BJKAS": {
       "kapanis": 1.5,
       "rsi": 41.4,
+      "macd": -0.0329,
+      "macd_sinyal": -0.0304,
+      "macd_histogram": -0.0026,
+      "hacim_oran": 0.68,
       "sinyaller": [
         "Yutan Boga",
         "Destek Testi"
@@ -1152,6 +1454,10 @@
     "BLCYT": {
       "kapanis": 42.78,
       "rsi": 72.7,
+      "macd": 0.4317,
+      "macd_sinyal": -0.1842,
+      "macd_histogram": 0.6159,
+      "hacim_oran": 0.57,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -1173,6 +1479,10 @@
     "BMSCH": {
       "kapanis": 18.98,
       "rsi": 71.5,
+      "macd": -0.0573,
+      "macd_sinyal": -0.3711,
+      "macd_histogram": 0.3138,
+      "hacim_oran": 0.61,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -1192,6 +1502,10 @@
     "BMSTL": {
       "kapanis": 85.6,
       "rsi": 44.2,
+      "macd": -4.5656,
+      "macd_sinyal": -5.3947,
+      "macd_histogram": 0.8291,
+      "hacim_oran": 0.75,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -1210,6 +1524,10 @@
     "BNTAS": {
       "kapanis": 6.4,
       "rsi": 25.8,
+      "macd": -0.1059,
+      "macd_sinyal": -0.0744,
+      "macd_histogram": -0.0315,
+      "hacim_oran": 0.96,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -1225,6 +1543,10 @@
     "BOBET": {
       "kapanis": 19.49,
       "rsi": 23.2,
+      "macd": -0.4552,
+      "macd_sinyal": -0.2685,
+      "macd_histogram": -0.1867,
+      "hacim_oran": 0.84,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -1240,6 +1562,10 @@
     "BOSSA": {
       "kapanis": 6.41,
       "rsi": 38.9,
+      "macd": -0.1438,
+      "macd_sinyal": -0.0982,
+      "macd_histogram": -0.0456,
+      "hacim_oran": 0.51,
       "sinyaller": [],
       "altin": null,
       "dip_vurusu": false,
@@ -1253,6 +1579,10 @@
     "BRISA": {
       "kapanis": 90.1,
       "rsi": 40.5,
+      "macd": -1.0664,
+      "macd_sinyal": -0.8068,
+      "macd_histogram": -0.2597,
+      "hacim_oran": 0.76,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -1271,6 +1601,10 @@
     "BRKO": {
       "kapanis": 13.76,
       "rsi": 48.6,
+      "macd": 0.4539,
+      "macd_sinyal": 0.8296,
+      "macd_histogram": -0.3757,
+      "hacim_oran": 0.7,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde"
@@ -1287,6 +1621,10 @@
     "BRKSN": {
       "kapanis": 9.0,
       "rsi": 54.4,
+      "macd": 0.0953,
+      "macd_sinyal": 0.119,
+      "macd_histogram": -0.0237,
+      "hacim_oran": 0.94,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -1306,6 +1644,10 @@
     "BRKVY": {
       "kapanis": 93.6,
       "rsi": 40.3,
+      "macd": -4.7426,
+      "macd_sinyal": -4.8629,
+      "macd_histogram": 0.1203,
+      "hacim_oran": 0.89,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -1323,6 +1665,10 @@
     "BRLSM": {
       "kapanis": 16.56,
       "rsi": 57.2,
+      "macd": 0.1965,
+      "macd_sinyal": 0.231,
+      "macd_histogram": -0.0345,
+      "hacim_oran": 0.96,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -1340,6 +1686,10 @@
     "BRMEN": {
       "kapanis": 8.72,
       "rsi": 49.1,
+      "macd": -0.6286,
+      "macd_sinyal": -0.7349,
+      "macd_histogram": 0.1062,
+      "hacim_oran": 1.03,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde"
@@ -1356,6 +1706,10 @@
     "BRSAN": {
       "kapanis": 529.0,
       "rsi": 33.0,
+      "macd": -39.1665,
+      "macd_sinyal": -24.9402,
+      "macd_histogram": -14.2263,
+      "hacim_oran": 0.9,
       "sinyaller": [
         "Fiyat SMA200 Ustunde",
         "RSI Asiri Satim"
@@ -1372,6 +1726,10 @@
     "BRYAT": {
       "kapanis": 2260.0,
       "rsi": 41.3,
+      "macd": -37.0203,
+      "macd_sinyal": -20.045,
+      "macd_histogram": -16.9753,
+      "hacim_oran": 0.67,
       "sinyaller": [
         "Fiyat SMA200 Ustunde"
       ],
@@ -1387,6 +1745,10 @@
     "BSOKE": {
       "kapanis": 34.32,
       "rsi": 80.5,
+      "macd": 1.7786,
+      "macd_sinyal": 1.4355,
+      "macd_histogram": 0.3431,
+      "hacim_oran": 1.47,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -1407,6 +1769,10 @@
     "BTCIM": {
       "kapanis": 6.29,
       "rsi": 82.7,
+      "macd": 0.3137,
+      "macd_sinyal": 0.2279,
+      "macd_histogram": 0.0858,
+      "hacim_oran": 1.23,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -1427,6 +1793,10 @@
     "BUCIM": {
       "kapanis": 6.19,
       "rsi": 28.3,
+      "macd": -0.2151,
+      "macd_sinyal": -0.1982,
+      "macd_histogram": -0.0169,
+      "hacim_oran": 0.55,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -1442,6 +1812,10 @@
     "BURCE": {
       "kapanis": 42.5,
       "rsi": 33.1,
+      "macd": -4.6639,
+      "macd_sinyal": -3.0581,
+      "macd_histogram": -1.6058,
+      "hacim_oran": 2.91,
       "sinyaller": [
         "Fiyat SMA200 Ustunde",
         "RSI Asiri Satim",
@@ -1460,6 +1834,10 @@
     "BURVA": {
       "kapanis": 825.5,
       "rsi": 58.8,
+      "macd": 59.6828,
+      "macd_sinyal": 48.615,
+      "macd_histogram": 11.0678,
+      "hacim_oran": 1.24,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -1480,6 +1858,10 @@
     "BVSAN": {
       "kapanis": 109.9,
       "rsi": 43.7,
+      "macd": -1.4981,
+      "macd_sinyal": -1.5872,
+      "macd_histogram": 0.0891,
+      "hacim_oran": 2.79,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -1500,6 +1882,10 @@
     "BYDNR": {
       "kapanis": 36.4,
       "rsi": 52.0,
+      "macd": 0.3527,
+      "macd_sinyal": 0.1583,
+      "macd_histogram": 0.1944,
+      "hacim_oran": 0.94,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -1519,6 +1905,10 @@
     "CANTE": {
       "kapanis": 1.6,
       "rsi": 35.9,
+      "macd": -0.0939,
+      "macd_sinyal": -0.0996,
+      "macd_histogram": 0.0057,
+      "hacim_oran": 1.82,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -1536,6 +1926,10 @@
     "CEMAS": {
       "kapanis": 4.75,
       "rsi": 21.9,
+      "macd": -0.1932,
+      "macd_sinyal": -0.1096,
+      "macd_histogram": -0.0836,
+      "hacim_oran": 0.41,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -1551,6 +1945,10 @@
     "CEMTS": {
       "kapanis": 10.67,
       "rsi": 23.0,
+      "macd": -0.4486,
+      "macd_sinyal": -0.378,
+      "macd_histogram": -0.0706,
+      "hacim_oran": 0.64,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -1566,6 +1964,10 @@
     "CEOEM": {
       "kapanis": 21.48,
       "rsi": 41.9,
+      "macd": -0.4934,
+      "macd_sinyal": -0.5401,
+      "macd_histogram": 0.0467,
+      "hacim_oran": 1.43,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -1584,6 +1986,10 @@
     "CIMSA": {
       "kapanis": 48.4,
       "rsi": 31.7,
+      "macd": -0.7244,
+      "macd_sinyal": -0.2541,
+      "macd_histogram": -0.4704,
+      "hacim_oran": 0.52,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -1601,6 +2007,10 @@
     "CLEBI": {
       "kapanis": 1819.0,
       "rsi": 50.7,
+      "macd": -0.401,
+      "macd_sinyal": -6.4042,
+      "macd_histogram": 6.0033,
+      "hacim_oran": 1.25,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -1620,6 +2030,10 @@
     "CMBTN": {
       "kapanis": 1716.0,
       "rsi": 28.6,
+      "macd": -64.2794,
+      "macd_sinyal": -52.1598,
+      "macd_histogram": -12.1196,
+      "hacim_oran": 0.41,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -1635,6 +2049,10 @@
     "CMENT": {
       "kapanis": 348.0,
       "rsi": 46.4,
+      "macd": -4.7555,
+      "macd_sinyal": -4.4887,
+      "macd_histogram": -0.2669,
+      "hacim_oran": 2.11,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "Hacim Alarmi"
@@ -1651,6 +2069,10 @@
     "CONSE": {
       "kapanis": 3.28,
       "rsi": 35.5,
+      "macd": -0.0475,
+      "macd_sinyal": -0.0222,
+      "macd_histogram": -0.0253,
+      "hacim_oran": 1.1,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -1668,6 +2090,10 @@
     "COSMO": {
       "kapanis": 193.3,
       "rsi": 23.4,
+      "macd": -13.1261,
+      "macd_sinyal": -11.4208,
+      "macd_histogram": -1.7054,
+      "hacim_oran": 0.6,
       "sinyaller": [
         "Fiyat SMA200 Ustunde",
         "RSI Asiri Satim"
@@ -1684,6 +2110,10 @@
     "CRDFA": {
       "kapanis": 75.4,
       "rsi": 48.6,
+      "macd": 1.4256,
+      "macd_sinyal": 1.52,
+      "macd_histogram": -0.0944,
+      "hacim_oran": 0.54,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -1701,6 +2131,10 @@
     "CRFSA": {
       "kapanis": 128.2,
       "rsi": 36.2,
+      "macd": -1.2747,
+      "macd_sinyal": -0.7813,
+      "macd_histogram": -0.4934,
+      "hacim_oran": 0.34,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -1718,6 +2152,10 @@
     "CUSAN": {
       "kapanis": 23.18,
       "rsi": 39.7,
+      "macd": -0.9223,
+      "macd_sinyal": -0.841,
+      "macd_histogram": -0.0813,
+      "hacim_oran": 0.41,
       "sinyaller": [],
       "altin": null,
       "dip_vurusu": false,
@@ -1731,6 +2169,10 @@
     "CVKMD": {
       "kapanis": 31.76,
       "rsi": 43.3,
+      "macd": -1.3722,
+      "macd_sinyal": -1.108,
+      "macd_histogram": -0.2642,
+      "hacim_oran": 0.45,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde"
@@ -1747,6 +2189,10 @@
     "CWENE": {
       "kapanis": 29.4,
       "rsi": 36.2,
+      "macd": -0.6145,
+      "macd_sinyal": -0.4876,
+      "macd_histogram": -0.1268,
+      "hacim_oran": 0.42,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -1764,6 +2210,10 @@
     "DAGI": {
       "kapanis": 5.85,
       "rsi": 36.0,
+      "macd": -0.1606,
+      "macd_sinyal": -0.1724,
+      "macd_histogram": 0.0118,
+      "hacim_oran": 1.04,
       "sinyaller": [
         "MACD Pozitif",
         "Destek Testi"
@@ -1780,6 +2230,10 @@
     "DARDL": {
       "kapanis": 2.05,
       "rsi": 30.6,
+      "macd": -0.0762,
+      "macd_sinyal": -0.0705,
+      "macd_histogram": -0.0056,
+      "hacim_oran": 0.81,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -1795,6 +2249,10 @@
     "DENGE": {
       "kapanis": 2.53,
       "rsi": 35.6,
+      "macd": -0.108,
+      "macd_sinyal": -0.1087,
+      "macd_histogram": 0.0007,
+      "hacim_oran": 0.76,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif"
@@ -1811,6 +2269,10 @@
     "DERHL": {
       "kapanis": 14.9,
       "rsi": 58.2,
+      "macd": 0.1773,
+      "macd_sinyal": 0.1375,
+      "macd_histogram": 0.0398,
+      "hacim_oran": 0.35,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -1830,6 +2292,10 @@
     "DERIM": {
       "kapanis": 35.98,
       "rsi": 39.7,
+      "macd": -0.5555,
+      "macd_sinyal": -0.3034,
+      "macd_histogram": -0.2521,
+      "hacim_oran": 0.82,
       "sinyaller": [
         "Boga Harami"
       ],
@@ -1845,6 +2311,10 @@
     "DESA": {
       "kapanis": 12.2,
       "rsi": 42.3,
+      "macd": -0.0688,
+      "macd_sinyal": -0.0611,
+      "macd_histogram": -0.0078,
+      "hacim_oran": 1.64,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "Destek Testi"
@@ -1861,6 +2331,10 @@
     "DESPC": {
       "kapanis": 38.96,
       "rsi": 17.2,
+      "macd": -2.6548,
+      "macd_sinyal": -1.8811,
+      "macd_histogram": -0.7737,
+      "hacim_oran": 0.78,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -1876,6 +2350,10 @@
     "DEVA": {
       "kapanis": 60.25,
       "rsi": 19.0,
+      "macd": -2.9704,
+      "macd_sinyal": -1.494,
+      "macd_histogram": -1.4764,
+      "hacim_oran": 1.85,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -1891,6 +2369,10 @@
     "DGATE": {
       "kapanis": 70.65,
       "rsi": 49.0,
+      "macd": -0.9856,
+      "macd_sinyal": -1.2939,
+      "macd_histogram": 0.3083,
+      "hacim_oran": 0.86,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -1908,6 +2390,10 @@
     "DGNMO": {
       "kapanis": 3.93,
       "rsi": 11.0,
+      "macd": -0.2547,
+      "macd_sinyal": -0.1962,
+      "macd_histogram": -0.0585,
+      "hacim_oran": 2.98,
       "sinyaller": [
         "RSI Asiri Satim",
         "Hacim Alarmi",
@@ -1925,6 +2411,10 @@
     "DIRIT": {
       "kapanis": 26.52,
       "rsi": 40.6,
+      "macd": 0.0627,
+      "macd_sinyal": 0.3629,
+      "macd_histogram": -0.3001,
+      "hacim_oran": 0.34,
       "sinyaller": [
         "EMA20 > EMA50"
       ],
@@ -1940,6 +2430,10 @@
     "DITAS": {
       "kapanis": 49.6,
       "rsi": 56.9,
+      "macd": 0.5746,
+      "macd_sinyal": 0.282,
+      "macd_histogram": 0.2926,
+      "hacim_oran": 3.37,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -1963,6 +2457,10 @@
     "DMSAS": {
       "kapanis": 8.47,
       "rsi": 31.2,
+      "macd": -0.332,
+      "macd_sinyal": -0.2874,
+      "macd_histogram": -0.0446,
+      "hacim_oran": 1.46,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -1978,6 +2476,10 @@
     "DNISI": {
       "kapanis": 19.96,
       "rsi": 30.2,
+      "macd": -0.5795,
+      "macd_sinyal": -0.4031,
+      "macd_histogram": -0.1764,
+      "hacim_oran": 0.6,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -1993,6 +2495,10 @@
     "DOAS": {
       "kapanis": 198.3,
       "rsi": 26.8,
+      "macd": -7.8325,
+      "macd_sinyal": -5.7514,
+      "macd_histogram": -2.0811,
+      "hacim_oran": 0.54,
       "sinyaller": [
         "Fiyat SMA200 Ustunde",
         "RSI Asiri Satim"
@@ -2009,6 +2515,10 @@
     "DOGUB": {
       "kapanis": 69.3,
       "rsi": 77.6,
+      "macd": 7.4803,
+      "macd_sinyal": 4.6013,
+      "macd_histogram": 2.879,
+      "hacim_oran": 1.11,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -2029,6 +2539,10 @@
     "DOHOL": {
       "kapanis": 21.28,
       "rsi": 57.9,
+      "macd": 0.0788,
+      "macd_sinyal": 0.0247,
+      "macd_histogram": 0.054,
+      "hacim_oran": 0.49,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -2049,6 +2563,10 @@
     "DURDO": {
       "kapanis": 3.72,
       "rsi": 47.7,
+      "macd": -0.027,
+      "macd_sinyal": -0.0293,
+      "macd_histogram": 0.0023,
+      "hacim_oran": 0.45,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat SMA200 Ustunde",
@@ -2066,6 +2584,10 @@
     "DYOBY": {
       "kapanis": 13.15,
       "rsi": 38.0,
+      "macd": -0.286,
+      "macd_sinyal": -0.2234,
+      "macd_histogram": -0.0625,
+      "hacim_oran": 0.67,
       "sinyaller": [],
       "altin": null,
       "dip_vurusu": false,
@@ -2079,6 +2601,10 @@
     "DZGYO": {
       "kapanis": 7.69,
       "rsi": 26.0,
+      "macd": -0.4025,
+      "macd_sinyal": -0.2369,
+      "macd_histogram": -0.1656,
+      "hacim_oran": 0.67,
       "sinyaller": [
         "Fiyat SMA200 Ustunde",
         "RSI Asiri Satim"
@@ -2095,6 +2621,10 @@
     "EBEBK": {
       "kapanis": 63.2,
       "rsi": 48.6,
+      "macd": 0.3475,
+      "macd_sinyal": 0.5917,
+      "macd_histogram": -0.2442,
+      "hacim_oran": 0.7,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -2114,6 +2644,10 @@
     "ECILC": {
       "kapanis": 117.1,
       "rsi": 47.9,
+      "macd": -0.0428,
+      "macd_sinyal": 0.5339,
+      "macd_histogram": -0.5768,
+      "hacim_oran": 1.19,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -2133,6 +2667,10 @@
     "ECZYT": {
       "kapanis": 300.0,
       "rsi": 44.2,
+      "macd": -8.4961,
+      "macd_sinyal": -8.8534,
+      "macd_histogram": 0.3572,
+      "hacim_oran": 0.93,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -2152,6 +2690,10 @@
     "EDATA": {
       "kapanis": 14.23,
       "rsi": 64.7,
+      "macd": 1.2661,
+      "macd_sinyal": 1.2274,
+      "macd_histogram": 0.0387,
+      "hacim_oran": 0.83,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -2172,6 +2714,10 @@
     "EDIP": {
       "kapanis": 36.96,
       "rsi": 43.4,
+      "macd": -0.5603,
+      "macd_sinyal": -0.4206,
+      "macd_histogram": -0.1397,
+      "hacim_oran": 0.74,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "Fiyat SMA200 Ustunde",
@@ -2189,6 +2735,10 @@
     "EGEEN": {
       "kapanis": 5870.0,
       "rsi": 18.4,
+      "macd": -398.9856,
+      "macd_sinyal": -343.7011,
+      "macd_histogram": -55.2844,
+      "hacim_oran": 0.61,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -2204,6 +2754,10 @@
     "EGGUB": {
       "kapanis": 112.0,
       "rsi": 79.8,
+      "macd": 3.1247,
+      "macd_sinyal": 0.7363,
+      "macd_histogram": 2.3884,
+      "hacim_oran": 2.03,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -2225,6 +2779,10 @@
     "EGPRO": {
       "kapanis": 27.82,
       "rsi": 53.1,
+      "macd": -0.0088,
+      "macd_sinyal": -0.0315,
+      "macd_histogram": 0.0227,
+      "hacim_oran": 1.9,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -2246,6 +2804,10 @@
     "EGSER": {
       "kapanis": 2.9,
       "rsi": 35.1,
+      "macd": -0.0769,
+      "macd_sinyal": -0.0593,
+      "macd_histogram": -0.0177,
+      "hacim_oran": 0.48,
       "sinyaller": [],
       "altin": null,
       "dip_vurusu": false,
@@ -2259,6 +2821,10 @@
     "EKGYO": {
       "kapanis": 20.5,
       "rsi": 19.1,
+      "macd": -0.8439,
+      "macd_sinyal": -0.4557,
+      "macd_histogram": -0.3882,
+      "hacim_oran": 0.95,
       "sinyaller": [
         "Fiyat SMA200 Ustunde",
         "RSI Asiri Satim",
@@ -2276,6 +2842,10 @@
     "EKSUN": {
       "kapanis": 5.59,
       "rsi": 44.2,
+      "macd": -0.0648,
+      "macd_sinyal": -0.0817,
+      "macd_histogram": 0.0169,
+      "hacim_oran": 0.79,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -2293,6 +2863,10 @@
     "ELITE": {
       "kapanis": 29.7,
       "rsi": 41.2,
+      "macd": -0.4898,
+      "macd_sinyal": -0.4258,
+      "macd_histogram": -0.0641,
+      "hacim_oran": 1.76,
       "sinyaller": [],
       "altin": null,
       "dip_vurusu": false,
@@ -2306,6 +2880,10 @@
     "EMKEL": {
       "kapanis": 18.94,
       "rsi": 29.6,
+      "macd": -1.5721,
+      "macd_sinyal": -1.8536,
+      "macd_histogram": 0.2814,
+      "hacim_oran": 0.82,
       "sinyaller": [
         "MACD Pozitif",
         "RSI Asiri Satim",
@@ -2323,6 +2901,10 @@
     "EMNIS": {
       "kapanis": 151.3,
       "rsi": 17.3,
+      "macd": -4.2645,
+      "macd_sinyal": -3.6437,
+      "macd_histogram": -0.6208,
+      "hacim_oran": 1.28,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -2338,6 +2920,10 @@
     "ENERY": {
       "kapanis": 9.27,
       "rsi": 36.1,
+      "macd": -0.1402,
+      "macd_sinyal": -0.0774,
+      "macd_histogram": -0.0627,
+      "hacim_oran": 0.7,
       "sinyaller": [],
       "altin": null,
       "dip_vurusu": false,
@@ -2351,6 +2937,10 @@
     "ENJSA": {
       "kapanis": 118.9,
       "rsi": 66.8,
+      "macd": 2.0073,
+      "macd_sinyal": 1.3754,
+      "macd_histogram": 0.6319,
+      "hacim_oran": 1.82,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -2372,6 +2962,10 @@
     "ENKAI": {
       "kapanis": 91.3,
       "rsi": 25.6,
+      "macd": -0.5435,
+      "macd_sinyal": 0.9054,
+      "macd_histogram": -1.4489,
+      "hacim_oran": 1.12,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -2389,6 +2983,10 @@
     "ENSRI": {
       "kapanis": 33.98,
       "rsi": 52.0,
+      "macd": 1.803,
+      "macd_sinyal": 1.6944,
+      "macd_histogram": 0.1085,
+      "hacim_oran": 0.88,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -2410,6 +3008,10 @@
     "EPLAS": {
       "kapanis": 6.23,
       "rsi": 45.8,
+      "macd": -0.1313,
+      "macd_sinyal": -0.1089,
+      "macd_histogram": -0.0223,
+      "hacim_oran": 1.13,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -2428,6 +3030,10 @@
     "ERBOS": {
       "kapanis": 173.9,
       "rsi": 31.4,
+      "macd": -7.0552,
+      "macd_sinyal": -6.5178,
+      "macd_histogram": -0.5374,
+      "hacim_oran": 0.53,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -2443,6 +3049,10 @@
     "ERCB": {
       "kapanis": 53.6,
       "rsi": 32.6,
+      "macd": -3.3935,
+      "macd_sinyal": -3.5499,
+      "macd_histogram": 0.1564,
+      "hacim_oran": 0.54,
       "sinyaller": [
         "MACD Pozitif",
         "RSI Asiri Satim"
@@ -2459,6 +3069,10 @@
     "EREGL": {
       "kapanis": 28.66,
       "rsi": 43.1,
+      "macd": 0.0897,
+      "macd_sinyal": 0.4611,
+      "macd_histogram": -0.3714,
+      "hacim_oran": 0.48,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde"
@@ -2475,6 +3089,10 @@
     "ERSU": {
       "kapanis": 21.58,
       "rsi": 62.7,
+      "macd": 0.5828,
+      "macd_sinyal": 0.2594,
+      "macd_histogram": 0.3234,
+      "hacim_oran": 1.2,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -2496,6 +3114,10 @@
     "ESCAR": {
       "kapanis": 27.8,
       "rsi": 64.4,
+      "macd": 0.4094,
+      "macd_sinyal": 0.3414,
+      "macd_histogram": 0.068,
+      "hacim_oran": 1.14,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -2515,6 +3137,10 @@
     "ESCOM": {
       "kapanis": 5.79,
       "rsi": 67.7,
+      "macd": 0.5779,
+      "macd_sinyal": 0.5295,
+      "macd_histogram": 0.0484,
+      "hacim_oran": 0.83,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -2535,6 +3161,10 @@
     "ESEN": {
       "kapanis": 3.92,
       "rsi": 50.5,
+      "macd": -0.1305,
+      "macd_sinyal": -0.1862,
+      "macd_histogram": 0.0557,
+      "hacim_oran": 0.63,
       "sinyaller": [
         "MACD Pozitif",
         "Destek Testi"
@@ -2551,6 +3181,10 @@
     "ETILR": {
       "kapanis": 3.9,
       "rsi": 45.8,
+      "macd": -0.0303,
+      "macd_sinyal": -0.0489,
+      "macd_histogram": 0.0187,
+      "hacim_oran": 1.37,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -2568,6 +3202,10 @@
     "ETYAT": {
       "kapanis": 22.46,
       "rsi": 33.5,
+      "macd": -0.6252,
+      "macd_sinyal": -0.5957,
+      "macd_histogram": -0.0295,
+      "hacim_oran": 1.28,
       "sinyaller": [
         "Fiyat SMA200 Ustunde",
         "RSI Asiri Satim"
@@ -2584,6 +3222,10 @@
     "EUHOL": {
       "kapanis": 15.01,
       "rsi": 53.6,
+      "macd": 0.4477,
+      "macd_sinyal": 0.5422,
+      "macd_histogram": -0.0945,
+      "hacim_oran": 1.8,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -2601,6 +3243,10 @@
     "EUKYO": {
       "kapanis": 17.91,
       "rsi": 42.1,
+      "macd": 0.1945,
+      "macd_sinyal": 0.3378,
+      "macd_histogram": -0.1433,
+      "hacim_oran": 0.4,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -2619,6 +3265,10 @@
     "EUPWR": {
       "kapanis": 37.02,
       "rsi": 46.5,
+      "macd": -0.8232,
+      "macd_sinyal": -0.9023,
+      "macd_histogram": 0.0791,
+      "hacim_oran": 1.36,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -2641,6 +3291,10 @@
     "EUREN": {
       "kapanis": 4.7,
       "rsi": 30.4,
+      "macd": -0.2382,
+      "macd_sinyal": -0.2146,
+      "macd_histogram": -0.0236,
+      "hacim_oran": 0.43,
       "sinyaller": [
         "RSI Asiri Satim",
         "Yutan Boga"
@@ -2657,6 +3311,10 @@
     "EUYO": {
       "kapanis": 17.78,
       "rsi": 36.4,
+      "macd": 0.3145,
+      "macd_sinyal": 0.5848,
+      "macd_histogram": -0.2703,
+      "hacim_oran": 0.43,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -2675,6 +3333,10 @@
     "EYGYO": {
       "kapanis": 3.42,
       "rsi": 52.0,
+      "macd": 0.0859,
+      "macd_sinyal": 0.074,
+      "macd_histogram": 0.012,
+      "hacim_oran": 4.3,
       "sinyaller": [
         "MACD Pozitif",
         "EMA20 > EMA50",
@@ -2693,6 +3355,10 @@
     "FADE": {
       "kapanis": 14.16,
       "rsi": 22.6,
+      "macd": -0.3452,
+      "macd_sinyal": -0.2219,
+      "macd_histogram": -0.1233,
+      "hacim_oran": 0.57,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -2708,6 +3374,10 @@
     "FENER": {
       "kapanis": 2.95,
       "rsi": 43.7,
+      "macd": -0.2126,
+      "macd_sinyal": -0.2533,
+      "macd_histogram": 0.0406,
+      "hacim_oran": 0.79,
       "sinyaller": [
         "MACD Pozitif"
       ],
@@ -2723,6 +3393,10 @@
     "FLAP": {
       "kapanis": 11.14,
       "rsi": 59.1,
+      "macd": 0.1983,
+      "macd_sinyal": 0.2043,
+      "macd_histogram": -0.006,
+      "hacim_oran": 0.57,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -2741,6 +3415,10 @@
     "FMIZP": {
       "kapanis": 295.5,
       "rsi": 38.0,
+      "macd": -8.7666,
+      "macd_sinyal": -8.4038,
+      "macd_histogram": -0.3628,
+      "hacim_oran": 0.74,
       "sinyaller": [
         "Ters Cekic"
       ],
@@ -2756,6 +3434,10 @@
     "FONET": {
       "kapanis": 4.39,
       "rsi": 70.1,
+      "macd": 0.3478,
+      "macd_sinyal": 0.2719,
+      "macd_histogram": 0.0759,
+      "hacim_oran": 1.04,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -2776,6 +3458,10 @@
     "FORMT": {
       "kapanis": 2.89,
       "rsi": 33.3,
+      "macd": -0.092,
+      "macd_sinyal": -0.0874,
+      "macd_histogram": -0.0046,
+      "hacim_oran": 0.48,
       "sinyaller": [
         "RSI Asiri Satim",
         "Bant Sikismasi"
@@ -2792,6 +3478,10 @@
     "FORTE": {
       "kapanis": 93.45,
       "rsi": 51.4,
+      "macd": -0.0441,
+      "macd_sinyal": -0.0679,
+      "macd_histogram": 0.0238,
+      "hacim_oran": 1.01,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -2813,6 +3503,10 @@
     "FROTO": {
       "kapanis": 112.0,
       "rsi": 33.1,
+      "macd": -0.9952,
+      "macd_sinyal": 0.088,
+      "macd_histogram": -1.0831,
+      "hacim_oran": 0.83,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -2831,6 +3525,10 @@
     "FZLGY": {
       "kapanis": 13.06,
       "rsi": 57.8,
+      "macd": 0.0329,
+      "macd_sinyal": -0.025,
+      "macd_histogram": 0.0579,
+      "hacim_oran": 0.64,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -2850,6 +3548,10 @@
     "GARAN": {
       "kapanis": 137.9,
       "rsi": 29.6,
+      "macd": -4.6035,
+      "macd_sinyal": -2.7387,
+      "macd_histogram": -1.8648,
+      "hacim_oran": 0.85,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -2865,6 +3567,10 @@
     "GARFA": {
       "kapanis": 26.4,
       "rsi": 29.3,
+      "macd": -0.7883,
+      "macd_sinyal": -0.6341,
+      "macd_histogram": -0.1541,
+      "hacim_oran": 0.48,
       "sinyaller": [
         "Fiyat SMA200 Ustunde",
         "RSI Asiri Satim"
@@ -2881,6 +3587,10 @@
     "GEDIK": {
       "kapanis": 5.56,
       "rsi": 37.0,
+      "macd": -0.1416,
+      "macd_sinyal": -0.1236,
+      "macd_histogram": -0.0179,
+      "hacim_oran": 0.76,
       "sinyaller": [],
       "altin": null,
       "dip_vurusu": false,
@@ -2894,6 +3604,10 @@
     "GEDZA": {
       "kapanis": 31.0,
       "rsi": 55.9,
+      "macd": 0.0783,
+      "macd_sinyal": 0.0281,
+      "macd_histogram": 0.0503,
+      "hacim_oran": 0.83,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -2916,6 +3630,10 @@
     "GENIL": {
       "kapanis": 9.23,
       "rsi": 84.4,
+      "macd": 0.0857,
+      "macd_sinyal": -0.1748,
+      "macd_histogram": 0.2605,
+      "hacim_oran": 0.82,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -2933,6 +3651,10 @@
     "GENTS": {
       "kapanis": 8.92,
       "rsi": 44.4,
+      "macd": -0.4549,
+      "macd_sinyal": -0.4423,
+      "macd_histogram": -0.0127,
+      "hacim_oran": 0.79,
       "sinyaller": [
         "Bant Sikismasi"
       ],
@@ -2948,6 +3670,10 @@
     "GEREL": {
       "kapanis": 30.02,
       "rsi": 77.7,
+      "macd": 1.9522,
+      "macd_sinyal": 1.5883,
+      "macd_histogram": 0.364,
+      "hacim_oran": 0.59,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -2968,6 +3694,10 @@
     "GESAN": {
       "kapanis": 45.98,
       "rsi": 41.1,
+      "macd": -2.146,
+      "macd_sinyal": -2.0465,
+      "macd_histogram": -0.0995,
+      "hacim_oran": 0.67,
       "sinyaller": [],
       "altin": null,
       "dip_vurusu": false,
@@ -2981,6 +3711,10 @@
     "GLBMD": {
       "kapanis": 11.98,
       "rsi": 41.7,
+      "macd": -0.2894,
+      "macd_sinyal": -0.2668,
+      "macd_histogram": -0.0226,
+      "hacim_oran": 0.93,
       "sinyaller": [
         "Destek Testi"
       ],
@@ -2996,6 +3730,10 @@
     "GLCVY": {
       "kapanis": 66.9,
       "rsi": 35.3,
+      "macd": -2.2865,
+      "macd_sinyal": -1.9393,
+      "macd_histogram": -0.3473,
+      "hacim_oran": 0.67,
       "sinyaller": [],
       "altin": null,
       "dip_vurusu": false,
@@ -3009,6 +3747,10 @@
     "GLRYH": {
       "kapanis": 4.69,
       "rsi": 59.4,
+      "macd": 0.0598,
+      "macd_sinyal": 0.0343,
+      "macd_histogram": 0.0255,
+      "hacim_oran": 1.44,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -3029,6 +3771,10 @@
     "GLYHO": {
       "kapanis": 14.36,
       "rsi": 34.2,
+      "macd": -0.1349,
+      "macd_sinyal": 0.1294,
+      "macd_histogram": -0.2643,
+      "hacim_oran": 0.82,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -3046,6 +3792,10 @@
     "GMTAS": {
       "kapanis": 29.66,
       "rsi": 80.5,
+      "macd": 0.8146,
+      "macd_sinyal": 0.5095,
+      "macd_histogram": 0.3051,
+      "hacim_oran": 0.98,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -3066,6 +3816,10 @@
     "GOKNR": {
       "kapanis": 21.22,
       "rsi": 38.1,
+      "macd": -0.0609,
+      "macd_sinyal": -0.0131,
+      "macd_histogram": -0.0478,
+      "hacim_oran": 5.11,
       "sinyaller": [
         "EMA20 > EMA50",
         "Hacim Alarmi",
@@ -3083,6 +3837,10 @@
     "GOLTS": {
       "kapanis": 341.75,
       "rsi": 38.4,
+      "macd": -4.7261,
+      "macd_sinyal": -3.0782,
+      "macd_histogram": -1.6479,
+      "hacim_oran": 1.66,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -3100,6 +3858,10 @@
     "GOODY": {
       "kapanis": 14.21,
       "rsi": 32.3,
+      "macd": -0.4464,
+      "macd_sinyal": -0.3272,
+      "macd_histogram": -0.1192,
+      "hacim_oran": 0.77,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -3115,6 +3877,10 @@
     "GOZDE": {
       "kapanis": 21.5,
       "rsi": 23.5,
+      "macd": -1.1048,
+      "macd_sinyal": -0.6759,
+      "macd_histogram": -0.4289,
+      "hacim_oran": 0.44,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -3130,6 +3896,10 @@
     "GRTHO": {
       "kapanis": 268.25,
       "rsi": 66.6,
+      "macd": 3.36,
+      "macd_sinyal": -0.7164,
+      "macd_histogram": 4.0764,
+      "hacim_oran": 1.8,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -3147,6 +3917,10 @@
     "GSDDE": {
       "kapanis": 10.3,
       "rsi": 51.7,
+      "macd": -0.1107,
+      "macd_sinyal": -0.1319,
+      "macd_histogram": 0.0212,
+      "hacim_oran": 4.99,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -3167,6 +3941,10 @@
     "GSDHO": {
       "kapanis": 4.75,
       "rsi": 44.8,
+      "macd": -0.087,
+      "macd_sinyal": -0.0848,
+      "macd_histogram": -0.0022,
+      "hacim_oran": 1.72,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "Fiyat SMA200 Ustunde",
@@ -3184,6 +3962,10 @@
     "GSRAY": {
       "kapanis": 1.14,
       "rsi": 22.2,
+      "macd": -0.0249,
+      "macd_sinyal": -0.0128,
+      "macd_histogram": -0.012,
+      "hacim_oran": 0.3,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -3199,6 +3981,10 @@
     "GUBRF": {
       "kapanis": 527.5,
       "rsi": 49.9,
+      "macd": 9.6723,
+      "macd_sinyal": 13.5977,
+      "macd_histogram": -3.9254,
+      "hacim_oran": 0.84,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -3217,6 +4003,10 @@
     "GWIND": {
       "kapanis": 25.4,
       "rsi": 49.6,
+      "macd": -0.2894,
+      "macd_sinyal": -0.2113,
+      "macd_histogram": -0.0781,
+      "hacim_oran": 0.83,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -3234,6 +4024,10 @@
     "GZNMI": {
       "kapanis": 63.8,
       "rsi": 54.4,
+      "macd": 1.6447,
+      "macd_sinyal": 0.7467,
+      "macd_histogram": 0.8981,
+      "hacim_oran": 1.02,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde"
@@ -3250,6 +4044,10 @@
     "HALKB": {
       "kapanis": 44.14,
       "rsi": 39.4,
+      "macd": 0.1423,
+      "macd_sinyal": 0.6158,
+      "macd_histogram": -0.4734,
+      "hacim_oran": 0.9,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde"
@@ -3266,6 +4064,10 @@
     "HATEK": {
       "kapanis": 14.44,
       "rsi": 40.2,
+      "macd": -0.3765,
+      "macd_sinyal": -0.2373,
+      "macd_histogram": -0.1393,
+      "hacim_oran": 0.64,
       "sinyaller": [],
       "altin": null,
       "dip_vurusu": false,
@@ -3279,6 +4081,10 @@
     "HDFGS": {
       "kapanis": 3.29,
       "rsi": 49.7,
+      "macd": -0.0304,
+      "macd_sinyal": -0.0062,
+      "macd_histogram": -0.0241,
+      "hacim_oran": 0.78,
       "sinyaller": [
         "Fiyat SMA200 Ustunde",
         "Destek Testi"
@@ -3295,6 +4101,10 @@
     "HEDEF": {
       "kapanis": 116.0,
       "rsi": 84.9,
+      "macd": 11.819,
+      "macd_sinyal": 11.7574,
+      "macd_histogram": 0.0615,
+      "hacim_oran": 0.85,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -3316,6 +4126,10 @@
     "HEKTS": {
       "kapanis": 3.1,
       "rsi": 39.6,
+      "macd": -0.0801,
+      "macd_sinyal": -0.0715,
+      "macd_histogram": -0.0085,
+      "hacim_oran": 2.45,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "Hacim Alarmi",
@@ -3334,6 +4148,10 @@
     "HLGYO": {
       "kapanis": 5.42,
       "rsi": 63.0,
+      "macd": 0.2229,
+      "macd_sinyal": 0.1631,
+      "macd_histogram": 0.0598,
+      "hacim_oran": 1.08,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -3354,6 +4172,10 @@
     "HOROZ": {
       "kapanis": 58.0,
       "rsi": 30.6,
+      "macd": -1.8572,
+      "macd_sinyal": -1.0678,
+      "macd_histogram": -0.7895,
+      "hacim_oran": 0.36,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -3369,6 +4191,10 @@
     "HRKET": {
       "kapanis": 66.95,
       "rsi": 17.5,
+      "macd": -3.1174,
+      "macd_sinyal": -2.3799,
+      "macd_histogram": -0.7374,
+      "hacim_oran": 1.68,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -3384,6 +4210,10 @@
     "HTTBT": {
       "kapanis": 38.66,
       "rsi": 33.3,
+      "macd": -1.6235,
+      "macd_sinyal": -1.2731,
+      "macd_histogram": -0.3504,
+      "hacim_oran": 0.47,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -3399,6 +4229,10 @@
     "HUBVC": {
       "kapanis": 4.99,
       "rsi": 68.3,
+      "macd": 0.3262,
+      "macd_sinyal": 0.3569,
+      "macd_histogram": -0.0307,
+      "hacim_oran": 0.86,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -3417,6 +4251,10 @@
     "HUNER": {
       "kapanis": 3.19,
       "rsi": 30.6,
+      "macd": -0.0567,
+      "macd_sinyal": -0.0486,
+      "macd_histogram": -0.0081,
+      "hacim_oran": 0.48,
       "sinyaller": [
         "RSI Asiri Satim",
         "Destek Testi"
@@ -3433,6 +4271,10 @@
     "HURGZ": {
       "kapanis": 5.99,
       "rsi": 66.5,
+      "macd": 0.0383,
+      "macd_sinyal": -0.0244,
+      "macd_histogram": 0.0627,
+      "hacim_oran": 2.97,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -3452,6 +4294,10 @@
     "ICBCT": {
       "kapanis": 14.7,
       "rsi": 56.0,
+      "macd": -0.1921,
+      "macd_sinyal": -0.1997,
+      "macd_histogram": 0.0076,
+      "hacim_oran": 1.51,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -3470,6 +4316,10 @@
     "ICUGS": {
       "kapanis": 2.9,
       "rsi": 41.7,
+      "macd": -0.0229,
+      "macd_sinyal": 0.0255,
+      "macd_histogram": -0.0485,
+      "hacim_oran": 0.61,
       "sinyaller": [
         "EMA20 > EMA50",
         "Yutan Boga",
@@ -3487,6 +4337,10 @@
     "IEYHO": {
       "kapanis": 86.55,
       "rsi": null,
+      "macd": 2.688,
+      "macd_sinyal": 2.7094,
+      "macd_histogram": -0.0214,
+      "hacim_oran": 0.55,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -3504,6 +4358,10 @@
     "IHAAS": {
       "kapanis": 84.75,
       "rsi": 68.1,
+      "macd": 8.3779,
+      "macd_sinyal": 8.0946,
+      "macd_histogram": 0.2833,
+      "hacim_oran": 0.36,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -3524,6 +4382,10 @@
     "IHEVA": {
       "kapanis": 2.25,
       "rsi": 28.6,
+      "macd": -0.0278,
+      "macd_sinyal": -0.0221,
+      "macd_histogram": -0.0057,
+      "hacim_oran": 1.0,
       "sinyaller": [
         "RSI Asiri Satim",
         "Destek Testi"
@@ -3540,6 +4402,10 @@
     "IHGZT": {
       "kapanis": 1.47,
       "rsi": 41.0,
+      "macd": -0.0371,
+      "macd_sinyal": -0.0352,
+      "macd_histogram": -0.0018,
+      "hacim_oran": 0.34,
       "sinyaller": [
         "Destek Testi"
       ],
@@ -3555,6 +4421,10 @@
     "IHLAS": {
       "kapanis": 2.05,
       "rsi": 28.0,
+      "macd": -0.0846,
+      "macd_sinyal": -0.0799,
+      "macd_histogram": -0.0047,
+      "hacim_oran": 0.61,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -3570,6 +4440,10 @@
     "IHLGM": {
       "kapanis": 2.04,
       "rsi": 47.3,
+      "macd": -0.0382,
+      "macd_sinyal": -0.0416,
+      "macd_histogram": 0.0034,
+      "hacim_oran": 0.64,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -3587,6 +4461,10 @@
     "IHYAY": {
       "kapanis": 1.77,
       "rsi": 37.2,
+      "macd": -0.0582,
+      "macd_sinyal": -0.0579,
+      "macd_histogram": -0.0003,
+      "hacim_oran": 0.85,
       "sinyaller": [
         "3 Beyaz Asker",
         "Destek Testi"
@@ -3603,6 +4481,10 @@
     "IMASM": {
       "kapanis": 3.72,
       "rsi": 29.0,
+      "macd": -0.2651,
+      "macd_sinyal": -0.2372,
+      "macd_histogram": -0.0279,
+      "hacim_oran": 1.05,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -3618,6 +4500,10 @@
     "INDES": {
       "kapanis": 8.65,
       "rsi": 56.1,
+      "macd": -0.0464,
+      "macd_sinyal": -0.0907,
+      "macd_histogram": 0.0444,
+      "hacim_oran": 4.07,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -3642,6 +4528,10 @@
     "INFO": {
       "kapanis": 3.62,
       "rsi": 32.0,
+      "macd": -0.1498,
+      "macd_sinyal": -0.0771,
+      "macd_histogram": -0.0726,
+      "hacim_oran": 0.83,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -3657,6 +4547,10 @@
     "INTEM": {
       "kapanis": 267.5,
       "rsi": 22.6,
+      "macd": -28.2325,
+      "macd_sinyal": -8.6271,
+      "macd_histogram": -19.6054,
+      "hacim_oran": 0.59,
       "sinyaller": [
         "Death Cross",
         "RSI Asiri Satim"
@@ -3673,6 +4567,10 @@
     "INVEO": {
       "kapanis": 7.42,
       "rsi": 29.1,
+      "macd": -0.4698,
+      "macd_sinyal": -0.4184,
+      "macd_histogram": -0.0514,
+      "hacim_oran": 0.46,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -3688,6 +4586,10 @@
     "INVES": {
       "kapanis": 389.0,
       "rsi": 86.6,
+      "macd": 27.5573,
+      "macd_sinyal": 11.8688,
+      "macd_histogram": 15.6885,
+      "hacim_oran": 2.62,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -3710,6 +4612,10 @@
     "ISATR": {
       "kapanis": 4950000.0,
       "rsi": null,
+      "macd": -67.5728,
+      "macd_sinyal": -99.3678,
+      "macd_histogram": 31.795,
+      "hacim_oran": null,
       "sinyaller": [
         "MACD Pozitif",
         "BB Alt Bant",
@@ -3727,6 +4633,10 @@
     "ISBIR": {
       "kapanis": 73.6,
       "rsi": 41.5,
+      "macd": -2.9356,
+      "macd_sinyal": -2.8069,
+      "macd_histogram": -0.1287,
+      "hacim_oran": 0.46,
       "sinyaller": [],
       "altin": null,
       "dip_vurusu": false,
@@ -3740,6 +4650,10 @@
     "ISYAT": {
       "kapanis": 8.58,
       "rsi": 39.9,
+      "macd": -0.1864,
+      "macd_sinyal": -0.1699,
+      "macd_histogram": -0.0165,
+      "hacim_oran": 2.05,
       "sinyaller": [
         "Hacim Alarmi",
         "Destek Testi"
@@ -3756,6 +4670,10 @@
     "IZENR": {
       "kapanis": 9.48,
       "rsi": 46.6,
+      "macd": -0.1109,
+      "macd_sinyal": -0.1162,
+      "macd_histogram": 0.0053,
+      "hacim_oran": 0.82,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -3774,6 +4692,10 @@
     "IZFAS": {
       "kapanis": 50.8,
       "rsi": 47.0,
+      "macd": -0.5753,
+      "macd_sinyal": -0.5428,
+      "macd_histogram": -0.0326,
+      "hacim_oran": 1.38,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -3791,6 +4713,10 @@
     "IZINV": {
       "kapanis": 58.75,
       "rsi": 34.8,
+      "macd": -2.0445,
+      "macd_sinyal": -1.7825,
+      "macd_histogram": -0.2619,
+      "hacim_oran": 0.49,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -3806,6 +4732,10 @@
     "IZMDC": {
       "kapanis": 6.56,
       "rsi": 30.2,
+      "macd": -0.2269,
+      "macd_sinyal": -0.1261,
+      "macd_histogram": -0.1008,
+      "hacim_oran": 1.06,
       "sinyaller": [
         "Fiyat SMA200 Ustunde",
         "RSI Asiri Satim"
@@ -3822,6 +4752,10 @@
     "JANTS": {
       "kapanis": 17.08,
       "rsi": 29.5,
+      "macd": -0.7595,
+      "macd_sinyal": -0.6531,
+      "macd_histogram": -0.1064,
+      "hacim_oran": 0.79,
       "sinyaller": [
         "RSI Asiri Satim",
         "Yutan Boga"
@@ -3838,6 +4772,10 @@
     "KAPLM": {
       "kapanis": 388.0,
       "rsi": 40.4,
+      "macd": -6.8938,
+      "macd_sinyal": -6.1882,
+      "macd_histogram": -0.7056,
+      "hacim_oran": 0.68,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "Fiyat SMA200 Ustunde"
@@ -3854,6 +4792,10 @@
     "KAREL": {
       "kapanis": 8.66,
       "rsi": 25.1,
+      "macd": -0.1614,
+      "macd_sinyal": -0.0555,
+      "macd_histogram": -0.1058,
+      "hacim_oran": 1.97,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -3869,6 +4811,10 @@
     "KARSN": {
       "kapanis": 10.44,
       "rsi": 44.8,
+      "macd": 0.0201,
+      "macd_sinyal": 0.0638,
+      "macd_histogram": -0.0437,
+      "hacim_oran": 0.62,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -3887,6 +4833,10 @@
     "KARTN": {
       "kapanis": 70.95,
       "rsi": 21.1,
+      "macd": -3.0133,
+      "macd_sinyal": -2.4264,
+      "macd_histogram": -0.5869,
+      "hacim_oran": 0.78,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -3902,6 +4852,10 @@
     "KATMR": {
       "kapanis": 2.82,
       "rsi": 49.4,
+      "macd": -0.0585,
+      "macd_sinyal": -0.0631,
+      "macd_histogram": 0.0046,
+      "hacim_oran": 0.91,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -3922,6 +4876,10 @@
     "KAYSE": {
       "kapanis": 5.21,
       "rsi": 30.0,
+      "macd": 0.0202,
+      "macd_sinyal": 0.0575,
+      "macd_histogram": -0.0373,
+      "hacim_oran": 0.27,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -3940,6 +4898,10 @@
     "KCAER": {
       "kapanis": 11.81,
       "rsi": 55.0,
+      "macd": 0.1029,
+      "macd_sinyal": 0.009,
+      "macd_histogram": 0.0939,
+      "hacim_oran": 1.9,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -3958,6 +4920,10 @@
     "KCHOL": {
       "kapanis": 195.5,
       "rsi": 31.2,
+      "macd": -3.4284,
+      "macd_sinyal": -1.7721,
+      "macd_histogram": -1.6563,
+      "hacim_oran": 1.18,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -3976,6 +4942,10 @@
     "KENT": {
       "kapanis": 476.0,
       "rsi": 29.7,
+      "macd": -47.5803,
+      "macd_sinyal": -50.3023,
+      "macd_histogram": 2.7219,
+      "hacim_oran": 0.88,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -3993,6 +4963,10 @@
     "KERVN": {
       "kapanis": 3.43,
       "rsi": 69.6,
+      "macd": 0.2546,
+      "macd_sinyal": 0.1913,
+      "macd_histogram": 0.0633,
+      "hacim_oran": 1.95,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -4013,6 +4987,10 @@
     "KFEIN": {
       "kapanis": 8.73,
       "rsi": 30.0,
+      "macd": -0.1922,
+      "macd_sinyal": -0.1181,
+      "macd_histogram": -0.0742,
+      "hacim_oran": 0.92,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -4028,6 +5006,10 @@
     "KGYO": {
       "kapanis": 7.99,
       "rsi": 72.1,
+      "macd": 0.2718,
+      "macd_sinyal": 0.2566,
+      "macd_histogram": 0.0152,
+      "hacim_oran": 0.41,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -4048,6 +5030,10 @@
     "KIMMR": {
       "kapanis": 18.55,
       "rsi": 64.9,
+      "macd": 0.3949,
+      "macd_sinyal": 0.2345,
+      "macd_histogram": 0.1604,
+      "hacim_oran": 2.32,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -4070,6 +5056,10 @@
     "KLGYO": {
       "kapanis": 6.04,
       "rsi": 34.5,
+      "macd": -0.2362,
+      "macd_sinyal": -0.2248,
+      "macd_histogram": -0.0114,
+      "hacim_oran": 0.75,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -4085,6 +5075,10 @@
     "KLKIM": {
       "kapanis": 40.16,
       "rsi": 46.9,
+      "macd": -0.4784,
+      "macd_sinyal": -0.4305,
+      "macd_histogram": -0.0478,
+      "hacim_oran": 1.26,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -4103,6 +5097,10 @@
     "KLMSN": {
       "kapanis": 30.42,
       "rsi": 49.5,
+      "macd": 0.0643,
+      "macd_sinyal": 0.203,
+      "macd_histogram": -0.1387,
+      "hacim_oran": 0.57,
       "sinyaller": [
         "EMA20 > EMA50"
       ],
@@ -4118,6 +5116,10 @@
     "KLNMA": {
       "kapanis": 10.9,
       "rsi": 54.2,
+      "macd": 0.5607,
+      "macd_sinyal": 0.5555,
+      "macd_histogram": 0.0053,
+      "hacim_oran": 1.82,
       "sinyaller": [
         "MACD Pozitif",
         "EMA20 > EMA50",
@@ -4135,6 +5137,10 @@
     "KLRHO": {
       "kapanis": 197.2,
       "rsi": 17.2,
+      "macd": -77.8024,
+      "macd_sinyal": -60.2365,
+      "macd_histogram": -17.5659,
+      "hacim_oran": 0.57,
       "sinyaller": [
         "Fiyat SMA200 Ustunde",
         "RSI Asiri Satim"
@@ -4151,6 +5157,10 @@
     "KLSER": {
       "kapanis": 25.6,
       "rsi": 27.6,
+      "macd": -0.7192,
+      "macd_sinyal": -0.5355,
+      "macd_histogram": -0.1838,
+      "hacim_oran": 1.15,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -4166,6 +5176,10 @@
     "KLSYN": {
       "kapanis": 9.5,
       "rsi": 57.0,
+      "macd": 0.3258,
+      "macd_sinyal": 0.3687,
+      "macd_histogram": -0.0429,
+      "hacim_oran": 0.58,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -4184,6 +5198,10 @@
     "KMPUR": {
       "kapanis": 15.35,
       "rsi": 51.9,
+      "macd": -0.4254,
+      "macd_sinyal": -0.4851,
+      "macd_histogram": 0.0597,
+      "hacim_oran": 3.4,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -4203,6 +5221,10 @@
     "KNFRT": {
       "kapanis": 10.9,
       "rsi": 34.6,
+      "macd": -0.3396,
+      "macd_sinyal": -0.3144,
+      "macd_histogram": -0.0251,
+      "hacim_oran": 0.7,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -4218,6 +5240,10 @@
     "KONYA": {
       "kapanis": 4080.0,
       "rsi": 21.4,
+      "macd": -123.1903,
+      "macd_sinyal": -100.1273,
+      "macd_histogram": -23.0629,
+      "hacim_oran": 0.48,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -4233,6 +5259,10 @@
     "KOPOL": {
       "kapanis": 6.3,
       "rsi": 47.3,
+      "macd": 0.0458,
+      "macd_sinyal": 0.0837,
+      "macd_histogram": -0.0379,
+      "hacim_oran": 0.5,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -4251,6 +5281,10 @@
     "KORDS": {
       "kapanis": 56.85,
       "rsi": 58.5,
+      "macd": -0.0037,
+      "macd_sinyal": -0.3563,
+      "macd_histogram": 0.3526,
+      "hacim_oran": 2.1,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -4273,6 +5307,10 @@
     "KOTON": {
       "kapanis": 14.91,
       "rsi": 29.9,
+      "macd": -0.5771,
+      "macd_sinyal": -0.51,
+      "macd_histogram": -0.0671,
+      "hacim_oran": 0.73,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -4288,6 +5326,10 @@
     "KRDMA": {
       "kapanis": 30.14,
       "rsi": 50.2,
+      "macd": 0.2806,
+      "macd_sinyal": 0.2671,
+      "macd_histogram": 0.0136,
+      "hacim_oran": 1.25,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -4307,6 +5349,10 @@
     "KRDMB": {
       "kapanis": 44.54,
       "rsi": 85.4,
+      "macd": 2.5433,
+      "macd_sinyal": 1.9529,
+      "macd_histogram": 0.5904,
+      "hacim_oran": 2.85,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -4329,6 +5375,10 @@
     "KRDMD": {
       "kapanis": 30.3,
       "rsi": 48.8,
+      "macd": 0.1423,
+      "macd_sinyal": 0.3426,
+      "macd_histogram": -0.2003,
+      "hacim_oran": 0.76,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -4346,6 +5396,10 @@
     "KRPLS": {
       "kapanis": 8.42,
       "rsi": 50.2,
+      "macd": -0.0603,
+      "macd_sinyal": -0.1234,
+      "macd_histogram": 0.0631,
+      "hacim_oran": 1.26,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -4364,6 +5418,10 @@
     "KRSTL": {
       "kapanis": 9.23,
       "rsi": 30.0,
+      "macd": -0.3952,
+      "macd_sinyal": -0.3031,
+      "macd_histogram": -0.0921,
+      "hacim_oran": 3.01,
       "sinyaller": [
         "RSI Asiri Satim",
         "Hacim Alarmi",
@@ -4381,6 +5439,10 @@
     "KRTEK": {
       "kapanis": 27.28,
       "rsi": 47.4,
+      "macd": -0.0537,
+      "macd_sinyal": -0.0303,
+      "macd_histogram": -0.0233,
+      "hacim_oran": 0.75,
       "sinyaller": [
         "EMA20 > EMA50",
         "Destek Testi"
@@ -4397,6 +5459,10 @@
     "KRVGD": {
       "kapanis": 2.95,
       "rsi": 34.7,
+      "macd": -0.014,
+      "macd_sinyal": 0.0091,
+      "macd_histogram": -0.0231,
+      "hacim_oran": 1.55,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -4414,6 +5480,10 @@
     "KSTUR": {
       "kapanis": 3100.0,
       "rsi": 33.7,
+      "macd": -114.1985,
+      "macd_sinyal": -98.0636,
+      "macd_histogram": -16.1349,
+      "hacim_oran": 1.02,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -4429,6 +5499,10 @@
     "KTLEV": {
       "kapanis": 53.55,
       "rsi": 76.4,
+      "macd": 5.0525,
+      "macd_sinyal": 3.7347,
+      "macd_histogram": 1.3178,
+      "hacim_oran": 1.95,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -4449,6 +5523,10 @@
     "KTSKR": {
       "kapanis": 74.6,
       "rsi": 48.6,
+      "macd": -1.5738,
+      "macd_sinyal": -1.5331,
+      "macd_histogram": -0.0407,
+      "hacim_oran": 2.22,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "Fiyat SMA200 Ustunde",
@@ -4467,6 +5545,10 @@
     "KUTPO": {
       "kapanis": 96.9,
       "rsi": 31.9,
+      "macd": -2.7152,
+      "macd_sinyal": -1.4841,
+      "macd_histogram": -1.2311,
+      "hacim_oran": 1.34,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -4482,6 +5564,10 @@
     "KUVVA": {
       "kapanis": 135.2,
       "rsi": 69.3,
+      "macd": 1.8535,
+      "macd_sinyal": -2.0229,
+      "macd_histogram": 3.8764,
+      "hacim_oran": 2.02,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -4501,6 +5587,10 @@
     "KUYAS": {
       "kapanis": 72.0,
       "rsi": 49.0,
+      "macd": 2.7199,
+      "macd_sinyal": 3.319,
+      "macd_histogram": -0.5991,
+      "hacim_oran": 1.42,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -4519,6 +5609,10 @@
     "KZBGY": {
       "kapanis": 3.44,
       "rsi": 40.5,
+      "macd": -0.0894,
+      "macd_sinyal": -0.0862,
+      "macd_histogram": -0.0032,
+      "hacim_oran": 3.0,
       "sinyaller": [
         "Hacim Alarmi",
         "Hacim Bombasi"
@@ -4535,6 +5629,10 @@
     "KZGYO": {
       "kapanis": 21.22,
       "rsi": 18.9,
+      "macd": -1.2512,
+      "macd_sinyal": -1.0368,
+      "macd_histogram": -0.2144,
+      "hacim_oran": 0.62,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -4550,6 +5648,10 @@
     "LIDER": {
       "kapanis": 85.6,
       "rsi": 63.3,
+      "macd": 2.3082,
+      "macd_sinyal": 2.3142,
+      "macd_histogram": -0.006,
+      "hacim_oran": 0.72,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -4568,6 +5670,10 @@
     "LIDFA": {
       "kapanis": 3.14,
       "rsi": 47.9,
+      "macd": 0.0438,
+      "macd_sinyal": 0.073,
+      "macd_histogram": -0.0292,
+      "hacim_oran": 0.93,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -4587,6 +5693,10 @@
     "LILAK": {
       "kapanis": 31.1,
       "rsi": 44.7,
+      "macd": -0.511,
+      "macd_sinyal": -0.3632,
+      "macd_histogram": -0.1478,
+      "hacim_oran": 0.85,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -4605,6 +5715,10 @@
     "LINK": {
       "kapanis": 241.0,
       "rsi": 52.6,
+      "macd": -1.7011,
+      "macd_sinyal": -2.8257,
+      "macd_histogram": 1.1246,
+      "hacim_oran": 2.35,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -4622,6 +5736,10 @@
     "LKMNH": {
       "kapanis": 16.26,
       "rsi": 30.9,
+      "macd": -0.3412,
+      "macd_sinyal": -0.3154,
+      "macd_histogram": -0.0258,
+      "hacim_oran": 0.47,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -4637,6 +5755,10 @@
     "LMKDC": {
       "kapanis": 34.9,
       "rsi": 71.7,
+      "macd": 0.8216,
+      "macd_sinyal": 0.3406,
+      "macd_histogram": 0.481,
+      "hacim_oran": 0.83,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -4657,6 +5779,10 @@
     "LOGO": {
       "kapanis": 137.6,
       "rsi": 28.7,
+      "macd": -5.399,
+      "macd_sinyal": -5.2558,
+      "macd_histogram": -0.1432,
+      "hacim_oran": 0.7,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -4672,6 +5798,10 @@
     "LUKSK": {
       "kapanis": 97.2,
       "rsi": 26.7,
+      "macd": -3.5468,
+      "macd_sinyal": -3.3874,
+      "macd_histogram": -0.1594,
+      "hacim_oran": 0.57,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -4687,6 +5817,10 @@
     "MAALT": {
       "kapanis": 998.5,
       "rsi": 57.9,
+      "macd": -4.4553,
+      "macd_sinyal": -10.488,
+      "macd_histogram": 6.0328,
+      "hacim_oran": 1.47,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -4706,6 +5840,10 @@
     "MACKO": {
       "kapanis": 33.4,
       "rsi": 45.0,
+      "macd": 0.587,
+      "macd_sinyal": 0.7823,
+      "macd_histogram": -0.1953,
+      "hacim_oran": 0.39,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50"
@@ -4722,6 +5860,10 @@
     "MAGEN": {
       "kapanis": 49.7,
       "rsi": 63.7,
+      "macd": 1.2416,
+      "macd_sinyal": 1.2697,
+      "macd_histogram": -0.0282,
+      "hacim_oran": 0.9,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -4739,6 +5881,10 @@
     "MAKIM": {
       "kapanis": 16.6,
       "rsi": 58.5,
+      "macd": -0.0094,
+      "macd_sinyal": -0.1395,
+      "macd_histogram": 0.13,
+      "hacim_oran": 0.58,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -4756,6 +5902,10 @@
     "MAKTK": {
       "kapanis": 13.62,
       "rsi": 31.2,
+      "macd": -0.6215,
+      "macd_sinyal": -0.4641,
+      "macd_histogram": -0.1574,
+      "hacim_oran": 0.42,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -4771,6 +5921,10 @@
     "MANAS": {
       "kapanis": 18.7,
       "rsi": 66.6,
+      "macd": 1.6653,
+      "macd_sinyal": 1.6242,
+      "macd_histogram": 0.0411,
+      "hacim_oran": 1.23,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -4792,6 +5946,10 @@
     "MARKA": {
       "kapanis": 24.2,
       "rsi": 13.4,
+      "macd": -2.1868,
+      "macd_sinyal": -1.143,
+      "macd_histogram": -1.0438,
+      "hacim_oran": 3.43,
       "sinyaller": [
         "RSI Asiri Satim",
         "BB Alt Bant",
@@ -4811,6 +5969,10 @@
     "MARTI": {
       "kapanis": 1.51,
       "rsi": 31.5,
+      "macd": -0.2996,
+      "macd_sinyal": -0.324,
+      "macd_histogram": 0.0244,
+      "hacim_oran": 3.54,
       "sinyaller": [
         "MACD Pozitif",
         "RSI Asiri Satim",
@@ -4830,6 +5992,10 @@
     "MAVI": {
       "kapanis": 41.36,
       "rsi": 30.4,
+      "macd": -1.5023,
+      "macd_sinyal": -1.0096,
+      "macd_histogram": -0.4927,
+      "hacim_oran": 0.61,
       "sinyaller": [
         "Fiyat SMA200 Ustunde",
         "RSI Asiri Satim"
@@ -4846,6 +6012,10 @@
     "MEDTR": {
       "kapanis": 29.0,
       "rsi": 44.4,
+      "macd": -0.3242,
+      "macd_sinyal": -0.2857,
+      "macd_histogram": -0.0385,
+      "hacim_oran": 0.68,
       "sinyaller": [
         "Yutan Boga",
         "Destek Testi"
@@ -4862,6 +6032,10 @@
     "MEGAP": {
       "kapanis": 2.86,
       "rsi": 47.7,
+      "macd": -0.0502,
+      "macd_sinyal": -0.0486,
+      "macd_histogram": -0.0016,
+      "hacim_oran": 0.89,
       "sinyaller": [
         "Destek Testi"
       ],
@@ -4877,6 +6051,10 @@
     "MEKAG": {
       "kapanis": 7.47,
       "rsi": 72.9,
+      "macd": 0.7028,
+      "macd_sinyal": 0.5891,
+      "macd_histogram": 0.1137,
+      "hacim_oran": 1.16,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -4897,6 +6075,10 @@
     "METRO": {
       "kapanis": 5.84,
       "rsi": 64.2,
+      "macd": 0.1268,
+      "macd_sinyal": 0.1001,
+      "macd_histogram": 0.0266,
+      "hacim_oran": 0.74,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -4917,6 +6099,10 @@
     "MGROS": {
       "kapanis": 607.5,
       "rsi": 31.1,
+      "macd": -12.0894,
+      "macd_sinyal": -4.2947,
+      "macd_histogram": -7.7948,
+      "hacim_oran": 1.16,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -4934,6 +6120,10 @@
     "MHRGY": {
       "kapanis": 3.42,
       "rsi": 43.3,
+      "macd": -0.0527,
+      "macd_sinyal": -0.0402,
+      "macd_histogram": -0.0125,
+      "hacim_oran": 0.39,
       "sinyaller": [],
       "altin": null,
       "dip_vurusu": false,
@@ -4947,6 +6137,10 @@
     "MIATK": {
       "kapanis": 40.6,
       "rsi": 57.8,
+      "macd": 0.2472,
+      "macd_sinyal": 0.0004,
+      "macd_histogram": 0.2468,
+      "hacim_oran": 0.99,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -4967,6 +6161,10 @@
     "MMCAS": {
       "kapanis": 97.15,
       "rsi": 52.8,
+      "macd": -2.7025,
+      "macd_sinyal": -3.5916,
+      "macd_histogram": 0.8891,
+      "hacim_oran": 0.3,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat SMA200 Ustunde",
@@ -4984,6 +6182,10 @@
     "MNDRS": {
       "kapanis": 14.1,
       "rsi": 33.2,
+      "macd": -0.2408,
+      "macd_sinyal": -0.1074,
+      "macd_histogram": -0.1334,
+      "hacim_oran": 1.06,
       "sinyaller": [
         "Fiyat SMA200 Ustunde",
         "RSI Asiri Satim"
@@ -5000,6 +6202,10 @@
     "MNDTR": {
       "kapanis": 5.86,
       "rsi": 21.7,
+      "macd": -0.2785,
+      "macd_sinyal": -0.2533,
+      "macd_histogram": -0.0252,
+      "hacim_oran": 0.68,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -5015,6 +6221,10 @@
     "MOBTL": {
       "kapanis": 10.0,
       "rsi": 35.7,
+      "macd": -0.0998,
+      "macd_sinyal": 0.0266,
+      "macd_histogram": -0.1264,
+      "hacim_oran": 1.02,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde"
@@ -5031,6 +6241,10 @@
     "MOGAN": {
       "kapanis": 9.94,
       "rsi": 43.8,
+      "macd": 0.1887,
+      "macd_sinyal": 0.2905,
+      "macd_histogram": -0.1019,
+      "hacim_oran": 0.71,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -5048,6 +6262,10 @@
     "MPARK": {
       "kapanis": 439.0,
       "rsi": 36.7,
+      "macd": -3.6582,
+      "macd_sinyal": -1.08,
+      "macd_histogram": -2.5782,
+      "hacim_oran": 1.3,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -5065,6 +6283,10 @@
     "MRGYO": {
       "kapanis": 1.48,
       "rsi": 40.4,
+      "macd": -0.2046,
+      "macd_sinyal": -0.2429,
+      "macd_histogram": 0.0383,
+      "hacim_oran": 1.06,
       "sinyaller": [
         "MACD Pozitif",
         "Bant Sikismasi"
@@ -5081,6 +6303,10 @@
     "MRSHL": {
       "kapanis": 1409.0,
       "rsi": 24.3,
+      "macd": -48.7952,
+      "macd_sinyal": -39.3531,
+      "macd_histogram": -9.442,
+      "hacim_oran": 0.33,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -5096,6 +6322,10 @@
     "MSGYO": {
       "kapanis": 6.67,
       "rsi": 55.8,
+      "macd": 0.0191,
+      "macd_sinyal": -0.0242,
+      "macd_histogram": 0.0433,
+      "hacim_oran": 1.04,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -5117,6 +6347,10 @@
     "MTRKS": {
       "kapanis": 21.32,
       "rsi": 37.6,
+      "macd": -0.5293,
+      "macd_sinyal": -0.5305,
+      "macd_histogram": 0.0012,
+      "hacim_oran": 0.57,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -5134,6 +6368,10 @@
     "MZHLD": {
       "kapanis": 6.25,
       "rsi": 40.7,
+      "macd": -0.1173,
+      "macd_sinyal": -0.1341,
+      "macd_histogram": 0.0167,
+      "hacim_oran": 1.0,
       "sinyaller": [
         "MACD Pozitif"
       ],
@@ -5149,6 +6387,10 @@
     "NATEN": {
       "kapanis": 7.2,
       "rsi": 22.2,
+      "macd": -0.3243,
+      "macd_sinyal": -0.2854,
+      "macd_histogram": -0.039,
+      "hacim_oran": 1.14,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -5164,6 +6406,10 @@
     "NETAS": {
       "kapanis": 57.25,
       "rsi": 39.1,
+      "macd": -1.828,
+      "macd_sinyal": -1.7381,
+      "macd_histogram": -0.0899,
+      "hacim_oran": 0.66,
       "sinyaller": [
         "Destek Testi"
       ],
@@ -5179,6 +6425,10 @@
     "NIBAS": {
       "kapanis": 8.02,
       "rsi": 69.6,
+      "macd": 0.9257,
+      "macd_sinyal": 0.8601,
+      "macd_histogram": 0.0657,
+      "hacim_oran": 0.16,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -5199,6 +6449,10 @@
     "NTHOL": {
       "kapanis": 44.48,
       "rsi": 35.2,
+      "macd": -1.0915,
+      "macd_sinyal": -0.8565,
+      "macd_histogram": -0.235,
+      "hacim_oran": 0.56,
       "sinyaller": [],
       "altin": null,
       "dip_vurusu": false,
@@ -5212,6 +6466,10 @@
     "NUGYO": {
       "kapanis": 9.04,
       "rsi": 28.1,
+      "macd": -0.4233,
+      "macd_sinyal": -0.3936,
+      "macd_histogram": -0.0297,
+      "hacim_oran": 0.5,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -5227,6 +6485,10 @@
     "NUHCM": {
       "kapanis": 308.75,
       "rsi": 73.3,
+      "macd": 15.0115,
+      "macd_sinyal": 11.407,
+      "macd_histogram": 3.6045,
+      "hacim_oran": 1.13,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -5248,6 +6510,10 @@
     "OBAMS": {
       "kapanis": 7.48,
       "rsi": 35.1,
+      "macd": -0.2308,
+      "macd_sinyal": -0.1599,
+      "macd_histogram": -0.0709,
+      "hacim_oran": 0.41,
       "sinyaller": [],
       "altin": null,
       "dip_vurusu": false,
@@ -5261,6 +6527,10 @@
     "OBASE": {
       "kapanis": 34.66,
       "rsi": 38.7,
+      "macd": -1.0697,
+      "macd_sinyal": -1.0142,
+      "macd_histogram": -0.0555,
+      "hacim_oran": 0.51,
       "sinyaller": [],
       "altin": null,
       "dip_vurusu": false,
@@ -5274,6 +6544,10 @@
     "ODAS": {
       "kapanis": 6.2,
       "rsi": 65.7,
+      "macd": 0.0791,
+      "macd_sinyal": 0.0758,
+      "macd_histogram": 0.0034,
+      "hacim_oran": 1.2,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -5295,6 +6569,10 @@
     "ODINE": {
       "kapanis": 679.0,
       "rsi": 74.1,
+      "macd": 72.7108,
+      "macd_sinyal": 68.3454,
+      "macd_histogram": 4.3654,
+      "hacim_oran": 1.15,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -5315,6 +6593,10 @@
     "OFSYM": {
       "kapanis": 63.4,
       "rsi": 32.8,
+      "macd": -1.8651,
+      "macd_sinyal": -1.5987,
+      "macd_histogram": -0.2665,
+      "hacim_oran": 0.53,
       "sinyaller": [
         "Fiyat SMA200 Ustunde",
         "RSI Asiri Satim"
@@ -5331,6 +6613,10 @@
     "ONCSM": {
       "kapanis": 240.2,
       "rsi": 37.4,
+      "macd": -18.1216,
+      "macd_sinyal": -13.331,
+      "macd_histogram": -4.7906,
+      "hacim_oran": 3.7,
       "sinyaller": [
         "Fiyat SMA200 Ustunde",
         "Hacim Alarmi",
@@ -5348,6 +6634,10 @@
     "ONRYT": {
       "kapanis": 58.15,
       "rsi": 27.7,
+      "macd": -2.5428,
+      "macd_sinyal": -1.7378,
+      "macd_histogram": -0.8051,
+      "hacim_oran": 0.98,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -5363,6 +6653,10 @@
     "ORCAY": {
       "kapanis": 3.45,
       "rsi": 45.4,
+      "macd": -0.1111,
+      "macd_sinyal": -0.1148,
+      "macd_histogram": 0.0038,
+      "hacim_oran": 1.35,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -5381,6 +6675,10 @@
     "ORGE": {
       "kapanis": 68.45,
       "rsi": 40.1,
+      "macd": -0.7372,
+      "macd_sinyal": -0.578,
+      "macd_histogram": -0.1592,
+      "hacim_oran": 0.85,
       "sinyaller": [
         "Destek Testi"
       ],
@@ -5396,6 +6694,10 @@
     "ORMA": {
       "kapanis": 163.4,
       "rsi": 44.9,
+      "macd": -1.2094,
+      "macd_sinyal": -1.0216,
+      "macd_histogram": -0.1878,
+      "hacim_oran": 0.92,
       "sinyaller": [
         "Destek Testi"
       ],
@@ -5411,6 +6713,10 @@
     "OSMEN": {
       "kapanis": 7.75,
       "rsi": 35.7,
+      "macd": -0.1857,
+      "macd_sinyal": -0.1267,
+      "macd_histogram": -0.0589,
+      "hacim_oran": 1.62,
       "sinyaller": [],
       "altin": null,
       "dip_vurusu": false,
@@ -5424,6 +6730,10 @@
     "OSTIM": {
       "kapanis": 2.97,
       "rsi": 46.3,
+      "macd": -0.0539,
+      "macd_sinyal": -0.059,
+      "macd_histogram": 0.0051,
+      "hacim_oran": 1.18,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -5442,6 +6752,10 @@
     "OTKAR": {
       "kapanis": 369.75,
       "rsi": 28.6,
+      "macd": -19.3422,
+      "macd_sinyal": -19.5001,
+      "macd_histogram": 0.1579,
+      "hacim_oran": 0.44,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -5459,6 +6773,10 @@
     "OTTO": {
       "kapanis": 307.5,
       "rsi": 36.7,
+      "macd": -9.7468,
+      "macd_sinyal": -11.8357,
+      "macd_histogram": 2.0888,
+      "hacim_oran": 0.83,
       "sinyaller": [
         "MACD Pozitif"
       ],
@@ -5474,6 +6792,10 @@
     "OYAKC": {
       "kapanis": 23.28,
       "rsi": 33.8,
+      "macd": -0.7355,
+      "macd_sinyal": -0.5636,
+      "macd_histogram": -0.172,
+      "hacim_oran": 0.74,
       "sinyaller": [
         "Fiyat SMA200 Ustunde",
         "RSI Asiri Satim"
@@ -5490,6 +6812,10 @@
     "OYAYO": {
       "kapanis": 58.5,
       "rsi": 39.8,
+      "macd": 0.8103,
+      "macd_sinyal": 1.3042,
+      "macd_histogram": -0.4939,
+      "hacim_oran": 0.38,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -5507,6 +6833,10 @@
     "OYLUM": {
       "kapanis": 8.16,
       "rsi": 51.1,
+      "macd": -0.0853,
+      "macd_sinyal": -0.1162,
+      "macd_histogram": 0.0309,
+      "hacim_oran": 0.74,
       "sinyaller": [
         "MACD Pozitif",
         "Destek Testi"
@@ -5523,6 +6853,10 @@
     "OYYAT": {
       "kapanis": 63.5,
       "rsi": 52.4,
+      "macd": 2.9146,
+      "macd_sinyal": 3.6619,
+      "macd_histogram": -0.7473,
+      "hacim_oran": 0.51,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -5541,6 +6875,10 @@
     "OZGYO": {
       "kapanis": 2.05,
       "rsi": 47.3,
+      "macd": -0.0226,
+      "macd_sinyal": -0.0298,
+      "macd_histogram": 0.0071,
+      "hacim_oran": 0.6,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -5559,6 +6897,10 @@
     "OZKGY": {
       "kapanis": 13.7,
       "rsi": 35.1,
+      "macd": -0.4081,
+      "macd_sinyal": -0.3619,
+      "macd_histogram": -0.0462,
+      "hacim_oran": 1.14,
       "sinyaller": [],
       "altin": null,
       "dip_vurusu": false,
@@ -5572,6 +6914,10 @@
     "OZRDN": {
       "kapanis": 31.1,
       "rsi": 61.0,
+      "macd": 2.2589,
+      "macd_sinyal": 2.1682,
+      "macd_histogram": 0.0906,
+      "hacim_oran": 1.1,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -5593,6 +6939,10 @@
     "OZSUB": {
       "kapanis": 23.06,
       "rsi": 67.2,
+      "macd": 0.4215,
+      "macd_sinyal": 0.084,
+      "macd_histogram": 0.3375,
+      "hacim_oran": 4.13,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -5616,6 +6966,10 @@
     "PAGYO": {
       "kapanis": 97.85,
       "rsi": 56.3,
+      "macd": 0.5739,
+      "macd_sinyal": 0.5197,
+      "macd_histogram": 0.0541,
+      "hacim_oran": 1.02,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -5638,6 +6992,10 @@
     "PAMEL": {
       "kapanis": 82.75,
       "rsi": 40.1,
+      "macd": -1.9796,
+      "macd_sinyal": -2.0245,
+      "macd_histogram": 0.0449,
+      "hacim_oran": 0.58,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -5655,6 +7013,10 @@
     "PAPIL": {
       "kapanis": 16.1,
       "rsi": 30.0,
+      "macd": -0.5276,
+      "macd_sinyal": -0.1672,
+      "macd_histogram": -0.3604,
+      "hacim_oran": 0.52,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -5670,6 +7032,10 @@
     "PARSN": {
       "kapanis": 82.0,
       "rsi": 28.8,
+      "macd": -4.8666,
+      "macd_sinyal": -4.4971,
+      "macd_histogram": -0.3695,
+      "hacim_oran": 0.83,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -5685,6 +7051,10 @@
     "PASEU": {
       "kapanis": 125.0,
       "rsi": 39.5,
+      "macd": -5.7938,
+      "macd_sinyal": -6.1789,
+      "macd_histogram": 0.3852,
+      "hacim_oran": 0.54,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat SMA200 Ustunde"
@@ -5701,6 +7071,10 @@
     "PCILT": {
       "kapanis": 27.4,
       "rsi": 56.7,
+      "macd": 0.6792,
+      "macd_sinyal": 0.6822,
+      "macd_histogram": -0.003,
+      "hacim_oran": 1.7,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -5718,6 +7092,10 @@
     "PEKGY": {
       "kapanis": 13.98,
       "rsi": 69.7,
+      "macd": 0.578,
+      "macd_sinyal": 0.4157,
+      "macd_histogram": 0.1623,
+      "hacim_oran": 1.28,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -5738,6 +7116,10 @@
     "PENGD": {
       "kapanis": 8.82,
       "rsi": 38.1,
+      "macd": 0.0043,
+      "macd_sinyal": 0.0652,
+      "macd_histogram": -0.0608,
+      "hacim_oran": 0.66,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -5755,6 +7137,10 @@
     "PENTA": {
       "kapanis": 13.45,
       "rsi": 38.3,
+      "macd": -0.3283,
+      "macd_sinyal": -0.2255,
+      "macd_histogram": -0.1028,
+      "hacim_oran": 0.63,
       "sinyaller": [],
       "altin": null,
       "dip_vurusu": false,
@@ -5768,6 +7154,10 @@
     "PETKM": {
       "kapanis": 18.9,
       "rsi": 60.0,
+      "macd": 0.0698,
+      "macd_sinyal": 0.0819,
+      "macd_histogram": -0.0121,
+      "hacim_oran": 1.52,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -5785,6 +7175,10 @@
     "PETUN": {
       "kapanis": 11.77,
       "rsi": 37.5,
+      "macd": -0.1993,
+      "macd_sinyal": -0.1538,
+      "macd_histogram": -0.0455,
+      "hacim_oran": 0.82,
       "sinyaller": [
         "Fiyat SMA200 Ustunde"
       ],
@@ -5800,6 +7194,10 @@
     "PGSUS": {
       "kapanis": 179.0,
       "rsi": 23.0,
+      "macd": -7.6846,
+      "macd_sinyal": -5.9046,
+      "macd_histogram": -1.78,
+      "hacim_oran": 0.55,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -5815,6 +7213,10 @@
     "PINSU": {
       "kapanis": 11.06,
       "rsi": 51.4,
+      "macd": -0.2261,
+      "macd_sinyal": -0.3377,
+      "macd_histogram": 0.1116,
+      "hacim_oran": 4.9,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -5834,6 +7236,10 @@
     "PKART": {
       "kapanis": 74.6,
       "rsi": 43.5,
+      "macd": 0.2915,
+      "macd_sinyal": 0.8941,
+      "macd_histogram": -0.6026,
+      "hacim_oran": 0.34,
       "sinyaller": [
         "EMA20 > EMA50",
         "Destek Testi"
@@ -5850,6 +7256,10 @@
     "PKENT": {
       "kapanis": 157.0,
       "rsi": 49.3,
+      "macd": -0.9039,
+      "macd_sinyal": -1.5734,
+      "macd_histogram": 0.6696,
+      "hacim_oran": 0.43,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -5867,6 +7277,10 @@
     "PLTUR": {
       "kapanis": 25.08,
       "rsi": 58.0,
+      "macd": 0.0696,
+      "macd_sinyal": -0.0371,
+      "macd_histogram": 0.1067,
+      "hacim_oran": 3.41,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -5891,6 +7305,10 @@
     "PNLSN": {
       "kapanis": 51.0,
       "rsi": 61.3,
+      "macd": 1.9045,
+      "macd_sinyal": 1.9245,
+      "macd_histogram": -0.02,
+      "hacim_oran": 0.55,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -5908,6 +7326,10 @@
     "POLHO": {
       "kapanis": 20.38,
       "rsi": 68.8,
+      "macd": 0.3894,
+      "macd_sinyal": 0.0018,
+      "macd_histogram": 0.3876,
+      "hacim_oran": 2.68,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -5930,6 +7352,10 @@
     "POLTK": {
       "kapanis": 5130.0,
       "rsi": 21.6,
+      "macd": -373.9499,
+      "macd_sinyal": -332.5189,
+      "macd_histogram": -41.4309,
+      "hacim_oran": 0.78,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -5945,6 +7371,10 @@
     "PRDGS": {
       "kapanis": 6.97,
       "rsi": 46.2,
+      "macd": -0.0015,
+      "macd_sinyal": 0.0055,
+      "macd_histogram": -0.007,
+      "hacim_oran": 0.91,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -5963,6 +7393,10 @@
     "PRZMA": {
       "kapanis": 15.6,
       "rsi": 92.2,
+      "macd": 0.8082,
+      "macd_sinyal": 0.4548,
+      "macd_histogram": 0.3534,
+      "hacim_oran": 2.28,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -5984,6 +7418,10 @@
     "PSDTC": {
       "kapanis": 125.3,
       "rsi": 50.1,
+      "macd": -1.83,
+      "macd_sinyal": -3.1105,
+      "macd_histogram": 1.2805,
+      "hacim_oran": 0.42,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -6001,6 +7439,10 @@
     "PSGYO": {
       "kapanis": 2.14,
       "rsi": 25.4,
+      "macd": -0.1318,
+      "macd_sinyal": -0.1253,
+      "macd_histogram": -0.0065,
+      "hacim_oran": 1.95,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -6016,6 +7458,10 @@
     "RALYH": {
       "kapanis": 138.2,
       "rsi": 38.1,
+      "macd": -10.7399,
+      "macd_sinyal": -10.9019,
+      "macd_histogram": 0.162,
+      "hacim_oran": 0.71,
       "sinyaller": [
         "MACD Pozitif"
       ],
@@ -6031,6 +7477,10 @@
     "RAYSG": {
       "kapanis": 202.0,
       "rsi": 30.9,
+      "macd": -7.6878,
+      "macd_sinyal": -5.6244,
+      "macd_histogram": -2.0634,
+      "hacim_oran": 0.62,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -6046,6 +7496,10 @@
     "REEDR": {
       "kapanis": 6.12,
       "rsi": 37.9,
+      "macd": -0.2304,
+      "macd_sinyal": -0.2243,
+      "macd_histogram": -0.0062,
+      "hacim_oran": 0.9,
       "sinyaller": [],
       "altin": null,
       "dip_vurusu": false,
@@ -6059,6 +7513,10 @@
     "RGYAS": {
       "kapanis": 159.5,
       "rsi": 50.4,
+      "macd": 0.4445,
+      "macd_sinyal": 1.2193,
+      "macd_histogram": -0.7748,
+      "hacim_oran": 0.79,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -6077,6 +7535,10 @@
     "RODRG": {
       "kapanis": 21.0,
       "rsi": 39.9,
+      "macd": -0.3629,
+      "macd_sinyal": -0.2901,
+      "macd_histogram": -0.0727,
+      "hacim_oran": 0.55,
       "sinyaller": [],
       "altin": null,
       "dip_vurusu": false,
@@ -6090,6 +7552,10 @@
     "RTALB": {
       "kapanis": 3.89,
       "rsi": 48.7,
+      "macd": -0.0149,
+      "macd_sinyal": 0.0071,
+      "macd_histogram": -0.022,
+      "hacim_oran": 0.58,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -6107,6 +7573,10 @@
     "RUBNS": {
       "kapanis": 32.88,
       "rsi": 29.7,
+      "macd": -0.0093,
+      "macd_sinyal": 0.526,
+      "macd_histogram": -0.5354,
+      "hacim_oran": 0.23,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -6124,6 +7594,10 @@
     "RYSAS": {
       "kapanis": 17.01,
       "rsi": 44.3,
+      "macd": -0.1973,
+      "macd_sinyal": 0.0818,
+      "macd_histogram": -0.2791,
+      "hacim_oran": 0.5,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde"
@@ -6140,6 +7614,10 @@
     "SAFKR": {
       "kapanis": 26.04,
       "rsi": 31.2,
+      "macd": -0.4885,
+      "macd_sinyal": -0.4444,
+      "macd_histogram": -0.0441,
+      "hacim_oran": 0.35,
       "sinyaller": [
         "Fiyat SMA200 Ustunde",
         "RSI Asiri Satim"
@@ -6156,6 +7634,10 @@
     "SAHOL": {
       "kapanis": 95.6,
       "rsi": 33.8,
+      "macd": -2.2929,
+      "macd_sinyal": -1.3901,
+      "macd_histogram": -0.9028,
+      "hacim_oran": 0.78,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -6173,6 +7655,10 @@
     "SAMAT": {
       "kapanis": 5.42,
       "rsi": 35.3,
+      "macd": -0.1298,
+      "macd_sinyal": -0.102,
+      "macd_histogram": -0.0277,
+      "hacim_oran": 0.49,
       "sinyaller": [],
       "altin": null,
       "dip_vurusu": false,
@@ -6186,6 +7672,10 @@
     "SANEL": {
       "kapanis": 36.58,
       "rsi": 41.5,
+      "macd": -0.4857,
+      "macd_sinyal": -0.3888,
+      "macd_histogram": -0.0968,
+      "hacim_oran": 1.07,
       "sinyaller": [
         "Fiyat SMA200 Ustunde",
         "Destek Testi"
@@ -6202,6 +7692,10 @@
     "SANFM": {
       "kapanis": 6.94,
       "rsi": 46.3,
+      "macd": -0.0847,
+      "macd_sinyal": -0.037,
+      "macd_histogram": -0.0478,
+      "hacim_oran": 0.56,
       "sinyaller": [],
       "altin": null,
       "dip_vurusu": false,
@@ -6215,6 +7709,10 @@
     "SANKO": {
       "kapanis": 20.3,
       "rsi": 32.7,
+      "macd": -0.494,
+      "macd_sinyal": -0.4011,
+      "macd_histogram": -0.0929,
+      "hacim_oran": 0.58,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -6230,6 +7728,10 @@
     "SARKY": {
       "kapanis": 30.72,
       "rsi": 32.5,
+      "macd": -1.4019,
+      "macd_sinyal": -0.587,
+      "macd_histogram": -0.8149,
+      "hacim_oran": 0.47,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -6247,6 +7749,10 @@
     "SASA": {
       "kapanis": 2.42,
       "rsi": 50.0,
+      "macd": -0.0753,
+      "macd_sinyal": -0.0714,
+      "macd_histogram": -0.0039,
+      "hacim_oran": 6.31,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "Hacim Alarmi",
@@ -6264,6 +7770,10 @@
     "SAYAS": {
       "kapanis": 41.1,
       "rsi": 42.3,
+      "macd": -0.6353,
+      "macd_sinyal": -0.6764,
+      "macd_histogram": 0.041,
+      "hacim_oran": 0.73,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -6281,6 +7791,10 @@
     "SDTTR": {
       "kapanis": 224.6,
       "rsi": 46.0,
+      "macd": 7.8175,
+      "macd_sinyal": 10.5663,
+      "macd_histogram": -2.7488,
+      "hacim_oran": 0.84,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde"
@@ -6297,6 +7811,10 @@
     "SEGYO": {
       "kapanis": 6.2,
       "rsi": 51.4,
+      "macd": 0.1884,
+      "macd_sinyal": 0.2169,
+      "macd_histogram": -0.0285,
+      "hacim_oran": 0.29,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -6315,6 +7833,10 @@
     "SEKFK": {
       "kapanis": 10.13,
       "rsi": 54.2,
+      "macd": 0.183,
+      "macd_sinyal": 0.2082,
+      "macd_histogram": -0.0252,
+      "hacim_oran": 0.97,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -6333,6 +7855,10 @@
     "SEKUR": {
       "kapanis": 5.64,
       "rsi": 51.8,
+      "macd": 0.2661,
+      "macd_sinyal": 0.3264,
+      "macd_histogram": -0.0603,
+      "hacim_oran": 0.6,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -6351,6 +7877,10 @@
     "SELEC": {
       "kapanis": 83.1,
       "rsi": 41.8,
+      "macd": -0.7216,
+      "macd_sinyal": 0.0027,
+      "macd_histogram": -0.7244,
+      "hacim_oran": 1.86,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -6368,6 +7898,10 @@
     "SELVA": {
       "kapanis": 2.28,
       "rsi": 47.5,
+      "macd": -0.1302,
+      "macd_sinyal": -0.1537,
+      "macd_histogram": 0.0234,
+      "hacim_oran": 0.5,
       "sinyaller": [
         "MACD Pozitif",
         "Bant Sikismasi"
@@ -6384,6 +7918,10 @@
     "SEYKM": {
       "kapanis": 4.76,
       "rsi": 42.3,
+      "macd": -0.1641,
+      "macd_sinyal": -0.1525,
+      "macd_histogram": -0.0117,
+      "hacim_oran": 0.58,
       "sinyaller": [],
       "altin": null,
       "dip_vurusu": false,
@@ -6397,6 +7935,10 @@
     "SILVR": {
       "kapanis": 2.47,
       "rsi": 28.6,
+      "macd": -0.0954,
+      "macd_sinyal": -0.0837,
+      "macd_histogram": -0.0117,
+      "hacim_oran": 0.68,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -6412,6 +7954,10 @@
     "SISE": {
       "kapanis": 42.0,
       "rsi": 30.5,
+      "macd": -0.8731,
+      "macd_sinyal": -0.4127,
+      "macd_histogram": -0.4605,
+      "hacim_oran": 0.43,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -6429,6 +7975,10 @@
     "SKBNK": {
       "kapanis": 11.06,
       "rsi": 43.5,
+      "macd": 0.2765,
+      "macd_sinyal": 0.4796,
+      "macd_histogram": -0.203,
+      "hacim_oran": 0.97,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -6447,6 +7997,10 @@
     "SKTAS": {
       "kapanis": 3.28,
       "rsi": 36.3,
+      "macd": -0.159,
+      "macd_sinyal": -0.1608,
+      "macd_histogram": 0.0018,
+      "hacim_oran": 0.62,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif"
@@ -6463,6 +8017,10 @@
     "SMART": {
       "kapanis": 34.78,
       "rsi": 62.2,
+      "macd": 2.915,
+      "macd_sinyal": 2.8644,
+      "macd_histogram": 0.0505,
+      "hacim_oran": 0.71,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -6483,6 +8041,10 @@
     "SNGYO": {
       "kapanis": 4.06,
       "rsi": 26.7,
+      "macd": -0.1873,
+      "macd_sinyal": -0.1622,
+      "macd_histogram": -0.0252,
+      "hacim_oran": 3.49,
       "sinyaller": [
         "RSI Asiri Satim",
         "Hacim Alarmi",
@@ -6500,6 +8062,10 @@
     "SNKRN": {
       "kapanis": 325.0,
       "rsi": 37.4,
+      "macd": -2.1431,
+      "macd_sinyal": 2.1589,
+      "macd_histogram": -4.3021,
+      "hacim_oran": 1.66,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -6517,6 +8083,10 @@
     "SODSN": {
       "kapanis": 9.97,
       "rsi": 21.9,
+      "macd": -0.6203,
+      "macd_sinyal": -0.5995,
+      "macd_histogram": -0.0207,
+      "hacim_oran": 0.93,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -6532,6 +8102,10 @@
     "SOKM": {
       "kapanis": 56.95,
       "rsi": 11.7,
+      "macd": -1.4613,
+      "macd_sinyal": -0.1478,
+      "macd_histogram": -1.3136,
+      "hacim_oran": 0.96,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -6549,6 +8123,10 @@
     "SONME": {
       "kapanis": 152.3,
       "rsi": 51.3,
+      "macd": -2.2435,
+      "macd_sinyal": -3.3073,
+      "macd_histogram": 1.0638,
+      "hacim_oran": 0.46,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -6567,6 +8145,10 @@
     "SRVGY": {
       "kapanis": 3.17,
       "rsi": 44.4,
+      "macd": -0.0975,
+      "macd_sinyal": -0.0974,
+      "macd_histogram": -0.0001,
+      "hacim_oran": 1.18,
       "sinyaller": [
         "Destek Testi"
       ],
@@ -6582,6 +8164,10 @@
     "SUMAS": {
       "kapanis": 277.5,
       "rsi": 48.8,
+      "macd": -2.1707,
+      "macd_sinyal": -3.0623,
+      "macd_histogram": 0.8916,
+      "hacim_oran": 0.55,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -6599,6 +8185,10 @@
     "SUNTK": {
       "kapanis": 38.0,
       "rsi": 43.3,
+      "macd": -1.1921,
+      "macd_sinyal": -1.468,
+      "macd_histogram": 0.2758,
+      "hacim_oran": 0.78,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -6616,6 +8206,10 @@
     "SURGY": {
       "kapanis": 57.5,
       "rsi": 26.6,
+      "macd": 0.7275,
+      "macd_sinyal": 3.033,
+      "macd_histogram": -2.3055,
+      "hacim_oran": 0.35,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -6633,6 +8227,10 @@
     "SUWEN": {
       "kapanis": 9.04,
       "rsi": 53.4,
+      "macd": 0.0071,
+      "macd_sinyal": 0.0295,
+      "macd_histogram": -0.0225,
+      "hacim_oran": 0.3,
       "sinyaller": [],
       "altin": null,
       "dip_vurusu": false,
@@ -6646,6 +8244,10 @@
     "TABGD": {
       "kapanis": 256.25,
       "rsi": 39.5,
+      "macd": -1.4105,
+      "macd_sinyal": -0.3915,
+      "macd_histogram": -1.0189,
+      "hacim_oran": 0.77,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -6663,6 +8265,10 @@
     "TARKM": {
       "kapanis": 378.0,
       "rsi": 23.5,
+      "macd": -6.26,
+      "macd_sinyal": -1.3563,
+      "macd_histogram": -4.9037,
+      "hacim_oran": 0.56,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -6680,6 +8286,10 @@
     "TATGD": {
       "kapanis": 18.5,
       "rsi": 58.9,
+      "macd": 0.9376,
+      "macd_sinyal": 0.8908,
+      "macd_histogram": 0.0468,
+      "hacim_oran": 0.3,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -6700,6 +8310,10 @@
     "TAVHL": {
       "kapanis": 297.25,
       "rsi": 34.2,
+      "macd": -10.9971,
+      "macd_sinyal": -8.6957,
+      "macd_histogram": -2.3014,
+      "hacim_oran": 0.62,
       "sinyaller": [
         "Fiyat SMA200 Ustunde",
         "RSI Asiri Satim"
@@ -6716,6 +8330,10 @@
     "TBORG": {
       "kapanis": 155.6,
       "rsi": 24.5,
+      "macd": -2.8512,
+      "macd_sinyal": -1.9481,
+      "macd_histogram": -0.9031,
+      "hacim_oran": 3.02,
       "sinyaller": [
         "RSI Asiri Satim",
         "Hacim Alarmi",
@@ -6733,6 +8351,10 @@
     "TCELL": {
       "kapanis": 111.3,
       "rsi": 27.6,
+      "macd": -1.6086,
+      "macd_sinyal": -0.2566,
+      "macd_histogram": -1.352,
+      "hacim_oran": 1.13,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -6751,6 +8373,10 @@
     "TCKRC": {
       "kapanis": 96.0,
       "rsi": 61.9,
+      "macd": 2.0431,
+      "macd_sinyal": 1.2154,
+      "macd_histogram": 0.8277,
+      "hacim_oran": 1.66,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -6771,6 +8397,10 @@
     "TDGYO": {
       "kapanis": 18.13,
       "rsi": 39.3,
+      "macd": -3.1256,
+      "macd_sinyal": -3.4752,
+      "macd_histogram": 0.3497,
+      "hacim_oran": 0.33,
       "sinyaller": [
         "MACD Pozitif",
         "Cekic"
@@ -6787,6 +8417,10 @@
     "TEKTU": {
       "kapanis": 9.47,
       "rsi": 53.7,
+      "macd": -0.0525,
+      "macd_sinyal": -0.132,
+      "macd_histogram": 0.0795,
+      "hacim_oran": 1.17,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -6804,6 +8438,10 @@
     "TERA": {
       "kapanis": 298.25,
       "rsi": 87.3,
+      "macd": 21.3748,
+      "macd_sinyal": 18.7904,
+      "macd_histogram": 2.5844,
+      "hacim_oran": 1.07,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -6824,6 +8462,10 @@
     "TEZOL": {
       "kapanis": 16.5,
       "rsi": 71.6,
+      "macd": 0.7368,
+      "macd_sinyal": 0.6553,
+      "macd_histogram": 0.0816,
+      "hacim_oran": 1.34,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -6844,6 +8486,10 @@
     "TGSAS": {
       "kapanis": 173.0,
       "rsi": 36.2,
+      "macd": 1.6734,
+      "macd_sinyal": 3.1072,
+      "macd_histogram": -1.4338,
+      "hacim_oran": 0.44,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -6861,6 +8507,10 @@
     "THYAO": {
       "kapanis": 292.75,
       "rsi": 32.4,
+      "macd": -6.2205,
+      "macd_sinyal": -4.1852,
+      "macd_histogram": -2.0353,
+      "hacim_oran": 0.72,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -6876,6 +8526,10 @@
     "TKFEN": {
       "kapanis": 85.3,
       "rsi": 52.7,
+      "macd": 0.5747,
+      "macd_sinyal": -0.2004,
+      "macd_histogram": 0.7751,
+      "hacim_oran": 0.92,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -6895,6 +8549,10 @@
     "TKNSA": {
       "kapanis": 23.82,
       "rsi": 55.8,
+      "macd": 0.0483,
+      "macd_sinyal": -0.1161,
+      "macd_histogram": 0.1644,
+      "hacim_oran": 0.77,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -6913,6 +8571,10 @@
     "TLMAN": {
       "kapanis": 89.0,
       "rsi": 29.4,
+      "macd": -3.2291,
+      "macd_sinyal": -2.7096,
+      "macd_histogram": -0.5195,
+      "hacim_oran": 0.76,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -6928,6 +8590,10 @@
     "TMSN": {
       "kapanis": 107.9,
       "rsi": 51.2,
+      "macd": -0.892,
+      "macd_sinyal": -1.2211,
+      "macd_histogram": 0.329,
+      "hacim_oran": 2.62,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -6947,6 +8613,10 @@
     "TOASO": {
       "kapanis": 305.75,
       "rsi": 33.2,
+      "macd": -3.2414,
+      "macd_sinyal": -0.3892,
+      "macd_histogram": -2.8522,
+      "hacim_oran": 0.82,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -6965,6 +8635,10 @@
     "TRCAS": {
       "kapanis": 43.9,
       "rsi": 28.1,
+      "macd": -1.1126,
+      "macd_sinyal": -0.3593,
+      "macd_histogram": -0.7533,
+      "hacim_oran": 1.37,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -6982,6 +8656,10 @@
     "TRGYO": {
       "kapanis": 84.35,
       "rsi": 50.6,
+      "macd": -0.3166,
+      "macd_sinyal": -0.1913,
+      "macd_histogram": -0.1253,
+      "hacim_oran": 1.77,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -7000,6 +8678,10 @@
     "TRILC": {
       "kapanis": 15.66,
       "rsi": 29.7,
+      "macd": -0.6769,
+      "macd_sinyal": -0.5925,
+      "macd_histogram": -0.0844,
+      "hacim_oran": 0.43,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -7015,6 +8697,10 @@
     "TSPOR": {
       "kapanis": 0.94,
       "rsi": 34.4,
+      "macd": -0.0364,
+      "macd_sinyal": -0.0325,
+      "macd_histogram": -0.0039,
+      "hacim_oran": 0.8,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -7030,6 +8716,10 @@
     "TTKOM": {
       "kapanis": 61.85,
       "rsi": 24.4,
+      "macd": -1.5221,
+      "macd_sinyal": -0.5455,
+      "macd_histogram": -0.9766,
+      "hacim_oran": 0.74,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -7047,6 +8737,10 @@
     "TTRAK": {
       "kapanis": 460.75,
       "rsi": 25.9,
+      "macd": -29.4315,
+      "macd_sinyal": -24.6865,
+      "macd_histogram": -4.745,
+      "hacim_oran": 0.68,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -7062,6 +8756,10 @@
     "TUCLK": {
       "kapanis": 4.32,
       "rsi": 28.9,
+      "macd": -0.219,
+      "macd_sinyal": -0.1967,
+      "macd_histogram": -0.0222,
+      "hacim_oran": 0.7,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -7077,6 +8775,10 @@
     "TUKAS": {
       "kapanis": 2.36,
       "rsi": 27.4,
+      "macd": -0.1282,
+      "macd_sinyal": -0.1119,
+      "macd_histogram": -0.0163,
+      "hacim_oran": 0.81,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -7092,6 +8794,10 @@
     "TUPRS": {
       "kapanis": 264.75,
       "rsi": 73.1,
+      "macd": 9.1249,
+      "macd_sinyal": 5.8188,
+      "macd_histogram": 3.306,
+      "hacim_oran": 1.22,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -7112,6 +8818,10 @@
     "TUREX": {
       "kapanis": 7.81,
       "rsi": 57.0,
+      "macd": -0.1153,
+      "macd_sinyal": -0.1466,
+      "macd_histogram": 0.0313,
+      "hacim_oran": 3.78,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -7132,6 +8842,10 @@
     "TURGG": {
       "kapanis": 26.98,
       "rsi": 23.1,
+      "macd": -0.5553,
+      "macd_sinyal": -0.2273,
+      "macd_histogram": -0.328,
+      "hacim_oran": 0.34,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -7147,6 +8861,10 @@
     "TURSG": {
       "kapanis": 12.9,
       "rsi": 62.6,
+      "macd": 0.0674,
+      "macd_sinyal": 0.0531,
+      "macd_histogram": 0.0144,
+      "hacim_oran": 1.93,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -7168,6 +8886,10 @@
     "ULUFA": {
       "kapanis": 3.9,
       "rsi": 40.4,
+      "macd": -0.05,
+      "macd_sinyal": -0.034,
+      "macd_histogram": -0.016,
+      "hacim_oran": 0.89,
       "sinyaller": [
         "Fiyat SMA200 Ustunde",
         "Destek Testi"
@@ -7184,6 +8906,10 @@
     "ULUSE": {
       "kapanis": 197.5,
       "rsi": 60.2,
+      "macd": 1.088,
+      "macd_sinyal": 0.2835,
+      "macd_histogram": 0.8045,
+      "hacim_oran": 1.32,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -7204,6 +8930,10 @@
     "ULUUN": {
       "kapanis": 8.0,
       "rsi": 64.0,
+      "macd": 0.1521,
+      "macd_sinyal": 0.0613,
+      "macd_histogram": 0.0908,
+      "hacim_oran": 1.48,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -7224,6 +8954,10 @@
     "UMPAS": {
       "kapanis": 9.3,
       "rsi": null,
+      "macd": -0.0,
+      "macd_sinyal": -0.0,
+      "macd_histogram": 0.0,
+      "hacim_oran": null,
       "sinyaller": [
         "MACD Pozitif",
         "BB Alt Bant",
@@ -7241,6 +8975,10 @@
     "UNLU": {
       "kapanis": 13.84,
       "rsi": 25.1,
+      "macd": -0.599,
+      "macd_sinyal": -0.4162,
+      "macd_histogram": -0.1828,
+      "hacim_oran": 1.45,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -7256,6 +8994,10 @@
     "USAK": {
       "kapanis": 1.64,
       "rsi": 40.0,
+      "macd": -0.1444,
+      "macd_sinyal": -0.1766,
+      "macd_histogram": 0.0322,
+      "hacim_oran": 0.85,
       "sinyaller": [
         "MACD Pozitif",
         "Yutan Boga",
@@ -7273,6 +9015,10 @@
     "USDTR": {
       "kapanis": 4131.0,
       "rsi": 56.8,
+      "macd": 16.0074,
+      "macd_sinyal": 17.0128,
+      "macd_histogram": -1.0053,
+      "hacim_oran": 0.72,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -7291,6 +9037,10 @@
     "VAKBN": {
       "kapanis": 33.8,
       "rsi": 25.7,
+      "macd": -0.6392,
+      "macd_sinyal": 0.1965,
+      "macd_histogram": -0.8356,
+      "hacim_oran": 0.98,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde",
@@ -7308,6 +9058,10 @@
     "VAKFN": {
       "kapanis": 1.91,
       "rsi": 33.3,
+      "macd": -0.0501,
+      "macd_sinyal": -0.0389,
+      "macd_histogram": -0.0112,
+      "hacim_oran": 0.47,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -7323,6 +9077,10 @@
     "VAKKO": {
       "kapanis": 69.0,
       "rsi": 46.1,
+      "macd": 0.6908,
+      "macd_sinyal": 1.9558,
+      "macd_histogram": -1.2649,
+      "hacim_oran": 0.59,
       "sinyaller": [
         "EMA20 > EMA50",
         "Fiyat SMA200 Ustunde"
@@ -7339,6 +9097,10 @@
     "VANGD": {
       "kapanis": 73.3,
       "rsi": 60.4,
+      "macd": 3.4858,
+      "macd_sinyal": 3.4673,
+      "macd_histogram": 0.0185,
+      "hacim_oran": 0.45,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -7360,6 +9122,10 @@
     "VERTU": {
       "kapanis": 38.86,
       "rsi": 41.4,
+      "macd": -0.692,
+      "macd_sinyal": -0.5684,
+      "macd_histogram": -0.1236,
+      "hacim_oran": 0.63,
       "sinyaller": [
         "Destek Testi"
       ],
@@ -7375,6 +9141,10 @@
     "VERUS": {
       "kapanis": 363.0,
       "rsi": 90.4,
+      "macd": 20.0153,
+      "macd_sinyal": 8.5723,
+      "macd_histogram": 11.443,
+      "hacim_oran": 2.02,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -7396,6 +9166,10 @@
     "VESBE": {
       "kapanis": 7.33,
       "rsi": 29.8,
+      "macd": -0.2676,
+      "macd_sinyal": -0.2044,
+      "macd_histogram": -0.0632,
+      "hacim_oran": 0.81,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -7411,6 +9185,10 @@
     "VESTL": {
       "kapanis": 28.84,
       "rsi": 42.6,
+      "macd": -0.7839,
+      "macd_sinyal": -0.6414,
+      "macd_histogram": -0.1425,
+      "hacim_oran": 0.96,
       "sinyaller": [
         "Yutan Boga",
         "Destek Testi"
@@ -7427,6 +9205,10 @@
     "VKFYO": {
       "kapanis": 31.6,
       "rsi": 33.2,
+      "macd": -2.8224,
+      "macd_sinyal": -2.732,
+      "macd_histogram": -0.0903,
+      "hacim_oran": 0.82,
       "sinyaller": [
         "Fiyat SMA200 Ustunde",
         "RSI Asiri Satim"
@@ -7443,6 +9225,10 @@
     "VKGYO": {
       "kapanis": 2.77,
       "rsi": 49.5,
+      "macd": -0.0239,
+      "macd_sinyal": -0.0343,
+      "macd_histogram": 0.0104,
+      "hacim_oran": 0.53,
       "sinyaller": [
         "MACD Pozitif",
         "Death Cross",
@@ -7461,6 +9247,10 @@
     "VRGYO": {
       "kapanis": 2.3,
       "rsi": 36.8,
+      "macd": -0.0776,
+      "macd_sinyal": -0.0766,
+      "macd_histogram": -0.0009,
+      "hacim_oran": 1.13,
       "sinyaller": [
         "Destek Testi"
       ],
@@ -7476,6 +9266,10 @@
     "YAPRK": {
       "kapanis": 13.83,
       "rsi": 46.1,
+      "macd": -0.3632,
+      "macd_sinyal": -0.286,
+      "macd_histogram": -0.0772,
+      "hacim_oran": 1.71,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "Fiyat SMA200 Ustunde"
@@ -7492,6 +9286,10 @@
     "YATAS": {
       "kapanis": 45.44,
       "rsi": 46.9,
+      "macd": -0.2462,
+      "macd_sinyal": -0.0935,
+      "macd_histogram": -0.1527,
+      "hacim_oran": 2.34,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -7510,6 +9308,10 @@
     "YAYLA": {
       "kapanis": 24.22,
       "rsi": 32.1,
+      "macd": -1.1012,
+      "macd_sinyal": -1.0749,
+      "macd_histogram": -0.0263,
+      "hacim_oran": 0.97,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -7525,6 +9327,10 @@
     "YBTAS": {
       "kapanis": 23.04,
       "rsi": 70.0,
+      "macd": -0.0191,
+      "macd_sinyal": -0.3886,
+      "macd_histogram": 0.3695,
+      "hacim_oran": 5.13,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -7544,6 +9350,10 @@
     "YESIL": {
       "kapanis": 1.79,
       "rsi": 42.6,
+      "macd": -0.0526,
+      "macd_sinyal": -0.0494,
+      "macd_histogram": -0.0032,
+      "hacim_oran": 0.0,
       "sinyaller": [],
       "altin": null,
       "dip_vurusu": false,
@@ -7557,6 +9367,10 @@
     "YGGYO": {
       "kapanis": 174.4,
       "rsi": 69.5,
+      "macd": 4.494,
+      "macd_sinyal": 2.8085,
+      "macd_histogram": 1.6854,
+      "hacim_oran": 2.21,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -7578,6 +9392,10 @@
     "YGYO": {
       "kapanis": 1.8,
       "rsi": null,
+      "macd": 0.0344,
+      "macd_sinyal": 0.0471,
+      "macd_histogram": -0.0127,
+      "hacim_oran": null,
       "sinyaller": [
         "Fiyat EMA20 Ustunde",
         "EMA20 > EMA50",
@@ -7597,6 +9415,10 @@
     "YKSLN": {
       "kapanis": 3.25,
       "rsi": 51.9,
+      "macd": -0.0344,
+      "macd_sinyal": -0.0397,
+      "macd_histogram": 0.0053,
+      "hacim_oran": 0.57,
       "sinyaller": [
         "MACD Al Kesisimi",
         "MACD Pozitif",
@@ -7615,6 +9437,10 @@
     "YONGA": {
       "kapanis": 53.0,
       "rsi": 24.3,
+      "macd": -1.3673,
+      "macd_sinyal": -1.1309,
+      "macd_histogram": -0.2364,
+      "hacim_oran": 1.47,
       "sinyaller": [
         "RSI Asiri Satim"
       ],
@@ -7630,6 +9456,10 @@
     "ZEDUR": {
       "kapanis": 8.19,
       "rsi": 34.8,
+      "macd": -0.1084,
+      "macd_sinyal": -0.0923,
+      "macd_histogram": -0.016,
+      "hacim_oran": 0.94,
       "sinyaller": [
         "RSI Asiri Satim",
         "Destek Testi"
@@ -7646,6 +9476,10 @@
     "ZRGYO": {
       "kapanis": 21.84,
       "rsi": 43.0,
+      "macd": -0.3351,
+      "macd_sinyal": -0.3561,
+      "macd_histogram": 0.021,
+      "hacim_oran": 1.38,
       "sinyaller": [
         "MACD Pozitif"
       ],
