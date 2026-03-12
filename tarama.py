@@ -361,7 +361,6 @@ for ticker in HISSELER:
             "hacim_oran":     hacim_oran,
             "sinyaller":      sinyaller,
             "altin":          seviye,
-            "dip_vurusu":     "Dip Vurusu"     in sinyaller,
             "bant_sikismasi": "Bant Sikismasi"  in sinyaller,
             "guc_patlamasi":  "Guc Patlamasi"   in sinyaller,
             "destek_testi":   "Destek Testi"    in sinyaller,
