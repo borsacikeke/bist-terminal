@@ -1,7 +1,7 @@
 name: BIST Gunluk Tarama
 on:
   schedule:
-    - cron: '0 17 * * 1-5'   # 20:00 TR - günlük kapanış taraması
+    - cron: '30 15 * * 1-5'   # 18:30 TR - günlük kapanış taraması
   workflow_dispatch:
 permissions:
   contents: write
