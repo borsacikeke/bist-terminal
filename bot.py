@@ -1,17 +1,21 @@
 import json
 import os
+import base64
 import requests
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, WebAppInfo
 from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandler, ContextTypes
 
-TOKEN = os.environ.get("TOKEN", "")
-WEBAPP_URL = "https://borsacikeke.github.io/bist-terminal"
+TOKEN       = os.environ.get("TOKEN", "")
+GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
+GITHUB_REPO  = os.environ.get("GITHUB_REPO", "borsacikeke/bist-terminal")
+DAVET_DOSYA_GITHUB = "davetler.json"
+
+WEBAPP_URL   = "https://borsacikeke.github.io/bist-terminal"
 BOT_USERNAME = "BistTerminalBot"
-KANAL = "@ekonomiveborsa"
-KANAL_LINK = "https://t.me/ekonomiveborsa"
+KANAL        = "@ekonomiveborsa"
+KANAL_LINK   = "https://t.me/ekonomiveborsa"
 SONUCLAR_URL = "https://borsacikeke.github.io/bist-terminal/sonuclar.json"
-DAVET_DOSYA = "/tmp/davetler.json"
-OZEL_KILIT = 10
+OZEL_KILIT   = 10
 
 YASAL_UYARI = (
     "⚠️ *YASAL UYARI*\n"
@@ -24,16 +28,52 @@ YASAL_UYARI = (
     "━━━━━━━━━━━━━━━━━━━━"
 )
 
-def davet_yukle():
-    try:
-        with open(DAVET_DOSYA, "r", encoding="utf-8") as f:
-            return json.load(f)
-    except:
-        return {}
+# ── GitHub okuma / yazma ──────────────────────────────────────────────────────
 
-def davet_kaydet(data):
-    with open(DAVET_DOSYA, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+def github_oku():
+    """davetler.json'ı GitHub'dan okur. Yoksa boş dict döner."""
+    try:
+        url = f"https://api.github.com/repos/{GITHUB_REPO}/contents/{DAVET_DOSYA_GITHUB}"
+        headers = {"Authorization": f"token {GITHUB_TOKEN}", "Accept": "application/vnd.github.v3+json"}
+        r = requests.get(url, headers=headers, timeout=10)
+        if r.status_code == 404:
+            return {}, None
+        r.raise_for_status()
+        data = r.json()
+        sha  = data["sha"]
+        icerik = base64.b64decode(data["content"]).decode("utf-8")
+        return json.loads(icerik), sha
+    except Exception as e:
+        print(f"GitHub okuma hatası: {e}")
+        return {}, None
+
+def github_yaz(data, sha=None):
+    """davetler.json'ı GitHub'a yazar."""
+    try:
+        url = f"https://api.github.com/repos/{GITHUB_REPO}/contents/{DAVET_DOSYA_GITHUB}"
+        headers = {"Authorization": f"token {GITHUB_TOKEN}", "Accept": "application/vnd.github.v3+json"}
+        icerik  = base64.b64encode(json.dumps(data, ensure_ascii=False, indent=2).encode("utf-8")).decode("utf-8")
+        payload = {
+            "message": "Davet guncelleme",
+            "content": icerik,
+        }
+        if sha:
+            payload["sha"] = sha
+        r = requests.put(url, headers=headers, json=payload, timeout=10)
+        r.raise_for_status()
+        return r.json()["content"]["sha"]
+    except Exception as e:
+        print(f"GitHub yazma hatası: {e}")
+        return sha
+
+def davet_yukle():
+    data, sha = github_oku()
+    return data, sha
+
+def davet_kaydet(data, sha=None):
+    return github_yaz(data, sha)
+
+# ── Yardımcı fonksiyonlar ─────────────────────────────────────────────────────
 
 def davet_sayisi(user_id, data):
     return len(data.get(str(user_id), {}).get("davet_edilenler", []))
@@ -58,11 +98,13 @@ async def kanal_uye_mi(context, user_id):
     except:
         return False
 
+# ── /start ────────────────────────────────────────────────────────────────────
+
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user    = update.effective_user
     user_id = str(user.id)
     isim    = user.first_name
-    data    = davet_yukle()
+    data, sha = davet_yukle()
 
     if context.args:
         davet_eden_id = context.args[0]
@@ -71,7 +113,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
             if user_id not in davet_edilenler:
                 davet_edilenler.append(user_id)
                 data[davet_eden_id]["davet_edilenler"] = davet_edilenler
-                davet_kaydet(data)
+                sha = davet_kaydet(data, sha)
                 try:
                     yeni_sayi = len(davet_edilenler)
                     mesaj = (
@@ -108,9 +150,11 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     if user_id not in data:
         data[user_id] = {"isim": isim, "davet_edilenler": []}
-        davet_kaydet(data)
+        sha = davet_kaydet(data, sha)
 
     await ana_menu_gonder(update.message, user_id, isim, data)
+
+# ── Ana menü ──────────────────────────────────────────────────────────────────
 
 async def ana_menu_gonder(message, user_id, isim, data):
     veri  = veri_yukle()
@@ -160,12 +204,14 @@ async def ana_menu_gonder(message, user_id, isim, data):
         parse_mode="Markdown"
     )
 
+# ── Buton işlemleri ───────────────────────────────────────────────────────────
+
 async def buton(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query   = update.callback_query
     user_id = str(query.from_user.id)
     isim    = query.from_user.first_name
     await query.answer()
-    data = davet_yukle()
+    data, sha = davet_yukle()
 
     if query.data == "kanal_kontrol":
         uye = await kanal_uye_mi(context, int(user_id))
@@ -173,7 +219,7 @@ async def buton(update: Update, context: ContextTypes.DEFAULT_TYPE):
             await query.message.delete()
             if user_id not in data:
                 data[user_id] = {"isim": isim, "davet_edilenler": []}
-                davet_kaydet(data)
+                davet_kaydet(data, sha)
             await ana_menu_gonder(query.message, user_id, isim, data)
         else:
             await query.answer("❌ Henüz kanala katılmadın!", show_alert=True)
@@ -287,6 +333,8 @@ async def buton(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 f"⚠️ _Yatırım tavsiyesi değildir._",
                 parse_mode="Markdown"
             )
+
+# ── Başlat ────────────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
     app = ApplicationBuilder().token(TOKEN).build()
