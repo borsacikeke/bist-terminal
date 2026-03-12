@@ -172,7 +172,7 @@ def mum_formasyonlari(df):
 
 def ozel_tarama_kontrol(df):
     try:
-        if len(df) < 35:
+        if len(df) < 15:
             return False
         close = df['Close'].astype(float)
         low   = df['Low'].astype(float)
@@ -338,7 +338,7 @@ for ticker in HISSELER:
             ticker, start="2023-01-01", end=bugun_str,
             interval="1d", progress=False, auto_adjust=True
         )
-        if df is None or len(df) < 30:
+        if df is None or len(df) < 10:
             continue
         df.columns = [c[0] if isinstance(c, tuple) else c for c in df.columns]
         g         = hesapla_gosterge(df)
