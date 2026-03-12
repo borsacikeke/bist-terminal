@@ -106,6 +106,13 @@ def hesapla_gosterge(df):
 
 
 def mum_formasyonlari(df):
+    """
+    Formasyonlar kaynaklar baz alınarak düzeltildi.
+    Yutan Boğa: Yeni mumun gövdesi önceki mumun gövdesini TAMAMEN yutmalı.
+                Yani açılış < önceki kapanış VE kapanış > önceki açılış (kesin eşitsizlik).
+    Boğa Haramisi: Yeni mumun gövdesi önceki mumun gövdesinin TAMAMEN içinde kalmalı.
+                   Yani açılış > önceki kapanış VE kapanış < önceki açılış (kesin eşitsizlik).
+    """
     sinyaller = []
     if len(df) < 3:
         return sinyaller
@@ -114,10 +121,12 @@ def mum_formasyonlari(df):
     h  = float(df['High'].iloc[-1])
     l  = float(df['Low'].iloc[-1])
     c  = float(df['Close'].iloc[-1])
+
     o1 = float(df['Open'].iloc[-2])
     h1 = float(df['High'].iloc[-2])
     l1 = float(df['Low'].iloc[-2])
     c1 = float(df['Close'].iloc[-2])
+
     o2 = float(df['Open'].iloc[-3])
     h2 = float(df['High'].iloc[-3])
     l2 = float(df['Low'].iloc[-3])
@@ -128,38 +137,81 @@ def mum_formasyonlari(df):
     body2 = abs(c2 - o2)
 
     ort_fiyat = float(df['Close'].tail(10).mean())
-    min_body  = ort_fiyat * 0.003
+    min_body  = ort_fiyat * 0.005  # minimum anlamlı gövde boyutu (%0.5)
 
-    boga  = c  > o
-    ayi1  = c1 < o1
-    ayi2  = c2 < o2
-    boga1 = c1 > o1
+    # Mum yönleri
+    boga  = c  > o   # son mum boğa (yeşil)
+    ayi   = c  < o   # son mum ayı (kırmızı)
+    boga1 = c1 > o1  # önceki mum boğa
+    ayi1  = c1 < o1  # önceki mum ayı
+    ayi2  = c2 < o2  # 3 mum öncesi ayı
 
+    # Gölge boyutları (son mum)
     ust_golge = h - max(o, c)
     alt_golge = min(o, c) - l
 
-    if body >= min_body and alt_golge >= body * 2.0 and ust_golge <= body * 0.3:
+    # ─── ÇEKİÇ ──────────────────────────────────────────────────────────────
+    # Düşüş trendinde, kısa gövde, alt gölge gövdenin en az 2 katı,
+    # üst gölge neredeyse yok
+    if (body >= min_body and
+            alt_golge >= body * 2.0 and
+            ust_golge <= body * 0.3):
         sinyaller.append("Cekic")
 
-    if ayi1 and body >= min_body and ust_golge >= body * 2.0 and alt_golge <= body * 0.3:
+    # ─── TERS ÇEKİÇ ─────────────────────────────────────────────────────────
+    # Önceki mum mutlaka ayı olmalı, üst gölge gövdenin en az 2 katı,
+    # alt gölge neredeyse yok
+    if (ayi1 and
+            body >= min_body and
+            ust_golge >= body * 2.0 and
+            alt_golge <= body * 0.3):
         sinyaller.append("Ters Cekic")
 
-    if body1 >= min_body and body >= min_body and ayi1 and boga and o <= c1 and c >= o1:
+    # ─── YUTAN BOĞA ─────────────────────────────────────────────────────────
+    # Önceki mum ayı, yeni mum boğa
+    # Yeni mumun AÇILIŞI önceki mumun KAPANIŞININ KESİNLİKLE ALTINDA
+    # Yeni mumun KAPANIŞI önceki mumun AÇILIŞININ KESİNLİKLE ÜSTÜNDE
+    # → Gövde tamamen yutulmuş olmalı, eşit olmamalı
+    if (body1 >= min_body and body >= min_body and
+            ayi1 and boga and
+            o < c1 and      # açılış < önceki kapanış (kesin)
+            c > o1):        # kapanış > önceki açılış (kesin)
         sinyaller.append("Yutan Boga")
 
-    if (body1 >= min_body and body >= min_body and ayi1 and boga and
-            o >= c1 and c <= o1 and body < body1 * 0.6):
+    # ─── BOĞA HARAMİSİ ──────────────────────────────────────────────────────
+    # Önceki mum büyük ayı, yeni mum küçük boğa
+    # Yeni mumun gövdesi önceki mumun gövdesinin TAMAMEN içinde
+    # → Açılış ve kapanış kesin olarak içeride olmalı
+    if (body1 >= min_body and body >= min_body and
+            ayi1 and boga and
+            o > c1 and      # açılış > önceki kapanış (kesin - içeride)
+            c < o1 and      # kapanış < önceki açılış (kesin - içeride)
+            body < body1 * 0.6):
         sinyaller.append("Boga Harami")
 
+    # ─── SABAH YILDIZI ──────────────────────────────────────────────────────
+    # 1. mum: büyük ayı
+    # 2. mum: küçük gövde (yıldız), gövdesi 1. mumun kapanışının altında
+    # 3. mum: boğa, 1. mumun orta noktasının üstünde kapanıyor
     orta2 = (o2 + c2) / 2
     yildiz_tepesi = max(o1, c1)
-    if (body2 >= min_body and ayi2 and body1 < body2 * 0.35 and
-            yildiz_tepesi < c2 and boga and body >= min_body and c > orta2):
+    if (body2 >= min_body and
+            ayi2 and
+            body1 < body2 * 0.35 and
+            yildiz_tepesi < c2 and   # yıldız gövdesi 1. mumun kapanışının altında
+            boga and body >= min_body and
+            c > orta2):
         sinyaller.append("Sabah Yildizi")
 
+    # ─── 3 BEYAZ ASKER ──────────────────────────────────────────────────────
+    # 3 ardışık boğa mum, her biri öncekinden yüksek açılış ve kapanış
+    # Her mumun açılışı önceki mumun gövdesi içinde olmalı
     if (body2 >= min_body and body1 >= min_body and body >= min_body and
-            c2 > o2 and boga1 and boga and c > c1 > c2 and o > o1 > o2 and
-            o <= c1 and o1 <= c2 + body2):
+            c2 > o2 and boga1 and boga and
+            c > c1 > c2 and
+            o > o1 > o2 and
+            o <= c1 and      # açılış önceki gövde içinde
+            o1 <= c2):       # önceki açılış ondan önceki gövde içinde
         sinyaller.append("3 Beyaz Asker")
 
     return sinyaller
@@ -322,12 +374,12 @@ for ticker in HISSELER:
             "rsi":            rsi_val,
             "sinyaller":      sinyaller,
             "altin":          seviye,
-            "dip_vurusu":     "Dip Vurusu"     in sinyaller,
-            "bant_sikismasi": "Bant Sikismasi"  in sinyaller,
-            "guc_patlamasi":  "Guc Patlamasi"   in sinyaller,
-            "destek_testi":   "Destek Testi"    in sinyaller,
-            "hacim_bombasi":  "Hacim Bombasi"   in sinyaller,
-            "trend_uyumu":    "Trend Uyumu"     in sinyaller,
+            "dip_vurusu":     "Dip Vurusu"    in sinyaller,
+            "bant_sikismasi": "Bant Sikismasi" in sinyaller,
+            "guc_patlamasi":  "Guc Patlamasi"  in sinyaller,
+            "destek_testi":   "Destek Testi"   in sinyaller,
+            "hacim_bombasi":  "Hacim Bombasi"  in sinyaller,
+            "trend_uyumu":    "Trend Uyumu"    in sinyaller,
             "ozel_tarama":    ozel_tarama_kontrol(df),
         }
 
