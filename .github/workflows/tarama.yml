@@ -1,10 +1,6 @@
 name: BIST Gunluk Tarama
 on:
   schedule:
-    - cron: '20 6 * * 1-5'   # 09:20 TR - 1. seans sonu
-    - cron: '20 10 * * 1-5'  # 13:20 TR - 2. seans sonu
-    - cron: '20 14 * * 1-5'  # 17:20 TR - 3. seans sonu
-    - cron: '30 15 * * 1-5'  # 18:30 TR - akşam seans sonu (4h)
     - cron: '0 17 * * 1-5'   # 20:00 TR - günlük kapanış taraması
   workflow_dispatch:
 permissions:
@@ -29,10 +25,10 @@ jobs:
         run: |
           git config user.name "BIST Bot"
           git config user.email "bot@bist.com"
-          git add -f sonuclar.json sonuclar4h.json
+          git add -f sonuclar.json
           git stash
           git pull --rebase origin main
           git stash pop
-          git add -f sonuclar.json sonuclar4h.json
+          git add -f sonuclar.json
           git commit --allow-empty -m "Otomatik guncelleme - $(date +'%d.%m.%Y %H:%M')"
           git push origin main
