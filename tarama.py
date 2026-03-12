@@ -260,18 +260,17 @@ def sinyal_uret(df, g):
         elif close.iloc[n] >= g['bb_upper'].iloc[n]:
             sinyaller.append("BB Ust Bant")
 
-    # Hacim
-    if vol_ort > 0 and g['volume'].iloc[n] > vol_ort * 2:
+    # Hacim — sadece yeşil veya nötr kapanışta (satış hacmi sinyal vermez)
+    mum_open  = float(df['Open'].iloc[n])
+    mum_close = float(df['Close'].iloc[n])
+    boga_mumu = mum_close >= mum_open  # yeşil veya nötr kapanış
+    if vol_ort > 0 and g['volume'].iloc[n] > vol_ort * 2 and boga_mumu:
         sinyaller.append("Hacim Alarmi")
 
     # Mum formasyonları
     sinyaller += mum_formasyonlari(df)
 
     # Kombine sinyaller
-    if pd.notna(g['rsi'].iloc[n]) and pd.notna(g['bb_lower'].iloc[n]):
-        if g['rsi'].iloc[n] < 35 and close.iloc[n] <= g['bb_lower'].iloc[n]:
-            sinyaller.append("Dip Vurusu")
-
     if pd.notna(g['bb_upper'].iloc[n]) and pd.notna(g['bb_lower'].iloc[n]):
         bb_width = g['bb_upper'] - g['bb_lower']
         bb_ort   = bb_width.rolling(20).mean()
@@ -289,7 +288,7 @@ def sinyal_uret(df, g):
         if close.iloc[n] > g['ema20'].iloc[n] * 0.98 and close.iloc[n] < g['ema20'].iloc[n] * 1.02:
             sinyaller.append("Destek Testi")
 
-    if vol_ort > 0 and g['volume'].iloc[n] > vol_ort * 2.5:
+    if vol_ort > 0 and g['volume'].iloc[n] > vol_ort * 2.5 and boga_mumu:
         sinyaller.append("Hacim Bombasi")
 
     if (pd.notna(g['ema20'].iloc[n]) and pd.notna(g['ema50'].iloc[n]) and
@@ -306,7 +305,7 @@ def altin_seviye(sinyaller):
     boga = [
         "Yutan Boga","Cekic","Ters Cekic","Sabah Yildizi","Boga Harami","3 Beyaz Asker",
         "MACD Al Kesisimi","Golden Cross","RSI Asiri Satim","BB Alt Bant",
-        "Hacim Alarmi","Dip Vurusu","Guc Patlamasi"
+        "Hacim Alarmi","Guc Patlamasi"
     ]
     puan = sum(1 for s in sinyaller if s in boga)
     if puan >= 5: return "Altin"
