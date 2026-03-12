@@ -1,5 +1,5 @@
 {
-  "tarih": "12.03.2026 23:21",
+  "tarih": "12.03.2026 23:26",
   "periyot": "gunluk",
   "hisseler": {
     "A1CAP": {
@@ -530,6 +530,31 @@
       "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false,
+      "ozel_tarama": false
+    },
+    "AKHAN": {
+      "kapanis": 27.44,
+      "rsi": 53.7,
+      "macd": 0.3061,
+      "macd_sinyal": 0.2374,
+      "macd_histogram": 0.0687,
+      "hacim_oran": 1.0,
+      "sinyaller": [
+        "MACD Al Kesisimi",
+        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "Fiyat EMA50 Ustunde",
+        "EMA20 > EMA50",
+        "RSI Yukseliyor",
+        "Trend Uyumu"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": false,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": true,
       "ozel_tarama": false
     },
     "AKMGY": {
@@ -1465,6 +1490,31 @@
       "trend_uyumu": false,
       "ozel_tarama": false
     },
+    "ATATR": {
+      "kapanis": 11.4,
+      "rsi": 41.6,
+      "macd": -0.3087,
+      "macd_sinyal": 0.0271,
+      "macd_histogram": -0.3358,
+      "hacim_oran": null,
+      "sinyaller": [
+        "MACD Negatif",
+        "Fiyat EMA20 Altinda",
+        "Fiyat EMA50 Altinda",
+        "EMA20 < EMA50",
+        "Death Cross",
+        "RSI Dusuyor",
+        "Ters Cekic"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": false,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": false,
+      "ozel_tarama": false
+    },
     "ATEKS": {
       "kapanis": 90.05,
       "rsi": 23.2,
@@ -2138,6 +2188,31 @@
       "hacim_bombasi": false,
       "trend_uyumu": false,
       "ozel_tarama": false
+    },
+    "BESTE": {
+      "kapanis": 23.44,
+      "rsi": 37.1,
+      "macd": 0.475,
+      "macd_sinyal": 1.5439,
+      "macd_histogram": -1.0689,
+      "hacim_oran": 0.99,
+      "sinyaller": [
+        "MACD Negatif",
+        "Fiyat EMA20 Altinda",
+        "Fiyat EMA50 Ustunde",
+        "EMA20 > EMA50",
+        "RSI Dusuyor",
+        "Yutan Boga",
+        "Destek Testi"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": false,
+      "destek_testi": true,
+      "hacim_bombasi": false,
+      "trend_uyumu": false,
+      "ozel_tarama": true
     },
     "BEYAZ": {
       "kapanis": 29.22,
@@ -4853,6 +4928,30 @@
       "destek_testi": false,
       "hacim_bombasi": false,
       "trend_uyumu": false,
+      "ozel_tarama": false
+    },
+    "EMPAE": {
+      "kapanis": 34.34,
+      "rsi": null,
+      "macd": 2.8467,
+      "macd_sinyal": 2.212,
+      "macd_histogram": 0.6347,
+      "hacim_oran": null,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "Fiyat EMA50 Ustunde",
+        "EMA20 > EMA50",
+        "Boga Harami",
+        "Trend Uyumu"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": false,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": true,
       "ozel_tarama": false
     },
     "ENDAE": {
@@ -10147,6 +10246,32 @@
       "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false,
+      "ozel_tarama": false
+    },
+    "NETCD": {
+      "kapanis": 145.8,
+      "rsi": 76.9,
+      "macd": 16.2929,
+      "macd_sinyal": 12.7251,
+      "macd_histogram": 3.5678,
+      "hacim_oran": 0.72,
+      "sinyaller": [
+        "MACD Pozitif",
+        "Fiyat EMA20 Ustunde",
+        "Fiyat EMA50 Ustunde",
+        "EMA20 > EMA50",
+        "RSI Asiri Alim",
+        "BB Ust Bant",
+        "Guc Patlamasi",
+        "Trend Uyumu"
+      ],
+      "altin": "Bronz",
+      "dip_vurusu": false,
+      "bant_sikismasi": false,
+      "guc_patlamasi": true,
+      "destek_testi": false,
+      "hacim_bombasi": false,
+      "trend_uyumu": true,
       "ozel_tarama": false
     },
     "NIBAS": {
