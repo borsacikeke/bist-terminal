@@ -1,5 +1,7 @@
 import json
 import math
+import os
+import requests
 import yfinance as yf
 import pandas as pd
 import numpy as np
@@ -8,6 +10,9 @@ import pytz
 
 TR_TZ = pytz.timezone('Europe/Istanbul')
 simdi = datetime.now(TR_TZ)
+
+TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN", "")
+TELEGRAM_KANAL = os.environ.get("TELEGRAM_KANAL", "@ekonomiveborsa")
 
 print(f"Tarama başlıyor... {simdi.strftime('%d.%m.%Y %H:%M')} | Periyot: Günlük")
 
@@ -93,26 +98,21 @@ def hesapla_gosterge(df):
     ema26  = close.ewm(span=26, adjust=False).mean()
     macd   = ema12 - ema26
     signal = macd.ewm(span=9, adjust=False).mean()
+    histogram = macd - signal
     sma20    = close.rolling(20).mean()
     std20    = close.rolling(20).std()
     bb_lower = sma20 - 2 * std20
     bb_upper = sma20 + 2 * std20
+    vol_ort  = volume.rolling(20).mean()
     return {
         'close': close, 'high': high, 'low': low, 'volume': volume,
         'ema20': ema20, 'ema50': ema50, 'sma200': sma200,
-        'rsi': rsi, 'macd': macd, 'signal': signal,
-        'bb_lower': bb_lower, 'bb_upper': bb_upper
+        'rsi': rsi, 'macd': macd, 'signal': signal, 'histogram': histogram,
+        'bb_lower': bb_lower, 'bb_upper': bb_upper, 'vol_ort': vol_ort
     }
 
 
 def mum_formasyonlari(df):
-    """
-    Formasyonlar kaynaklar baz alınarak düzeltildi.
-    Yutan Boğa: Yeni mumun gövdesi önceki mumun gövdesini TAMAMEN yutmalı.
-                Yani açılış < önceki kapanış VE kapanış > önceki açılış (kesin eşitsizlik).
-    Boğa Haramisi: Yeni mumun gövdesi önceki mumun gövdesinin TAMAMEN içinde kalmalı.
-                   Yani açılış > önceki kapanış VE kapanış < önceki açılış (kesin eşitsizlik).
-    """
     sinyaller = []
     if len(df) < 3:
         return sinyaller
@@ -121,12 +121,10 @@ def mum_formasyonlari(df):
     h  = float(df['High'].iloc[-1])
     l  = float(df['Low'].iloc[-1])
     c  = float(df['Close'].iloc[-1])
-
     o1 = float(df['Open'].iloc[-2])
     h1 = float(df['High'].iloc[-2])
     l1 = float(df['Low'].iloc[-2])
     c1 = float(df['Close'].iloc[-2])
-
     o2 = float(df['Open'].iloc[-3])
     h2 = float(df['High'].iloc[-3])
     l2 = float(df['Low'].iloc[-3])
@@ -137,96 +135,57 @@ def mum_formasyonlari(df):
     body2 = abs(c2 - o2)
 
     ort_fiyat = float(df['Close'].tail(10).mean())
-    min_body  = ort_fiyat * 0.005  # minimum anlamlı gövde boyutu (%0.5)
+    min_body  = ort_fiyat * 0.005
 
-    # Mum yönleri
-    boga  = c  > o   # son mum boğa (yeşil)
-    ayi   = c  < o   # son mum ayı (kırmızı)
-    boga1 = c1 > o1  # önceki mum boğa
-    ayi1  = c1 < o1  # önceki mum ayı
-    ayi2  = c2 < o2  # 3 mum öncesi ayı
+    boga  = c  > o
+    ayi1  = c1 < o1
+    ayi2  = c2 < o2
+    boga1 = c1 > o1
 
-    # Gölge boyutları (son mum)
     ust_golge = h - max(o, c)
     alt_golge = min(o, c) - l
 
-    # ─── ÇEKİÇ ──────────────────────────────────────────────────────────────
-    # Düşüş trendinde, kısa gövde, alt gölge gövdenin en az 2 katı,
-    # üst gölge neredeyse yok
-    if (body >= min_body and
-            alt_golge >= body * 2.0 and
-            ust_golge <= body * 0.3):
+    if body >= min_body and alt_golge >= body * 2.0 and ust_golge <= body * 0.3:
         sinyaller.append("Cekic")
 
-    # ─── TERS ÇEKİÇ ─────────────────────────────────────────────────────────
-    # Önceki mum mutlaka ayı olmalı, üst gölge gövdenin en az 2 katı,
-    # alt gölge neredeyse yok
-    if (ayi1 and
-            body >= min_body and
-            ust_golge >= body * 2.0 and
-            alt_golge <= body * 0.3):
+    if ayi1 and body >= min_body and ust_golge >= body * 2.0 and alt_golge <= body * 0.3:
         sinyaller.append("Ters Cekic")
 
-    # ─── YUTAN BOĞA ─────────────────────────────────────────────────────────
-    # Önceki mum ayı, yeni mum boğa
-    # Yeni mumun AÇILIŞI önceki mumun KAPANIŞININ KESİNLİKLE ALTINDA
-    # Yeni mumun KAPANIŞI önceki mumun AÇILIŞININ KESİNLİKLE ÜSTÜNDE
-    # → Gövde tamamen yutulmuş olmalı, eşit olmamalı
     if (body1 >= min_body and body >= min_body and
             ayi1 and boga and
-            o < c1 and      # açılış < önceki kapanış (kesin)
-            c > o1):        # kapanış > önceki açılış (kesin)
+            o < c1 and c > o1):
         sinyaller.append("Yutan Boga")
 
-    # ─── BOĞA HARAMİSİ ──────────────────────────────────────────────────────
-    # Önceki mum büyük ayı, yeni mum küçük boğa
-    # Yeni mumun gövdesi önceki mumun gövdesinin TAMAMEN içinde
-    # → Açılış ve kapanış kesin olarak içeride olmalı
     if (body1 >= min_body and body >= min_body and
             ayi1 and boga and
-            o > c1 and      # açılış > önceki kapanış (kesin - içeride)
-            c < o1 and      # kapanış < önceki açılış (kesin - içeride)
+            o > c1 and c < o1 and
             body < body1 * 0.6):
         sinyaller.append("Boga Harami")
 
-    # ─── SABAH YILDIZI ──────────────────────────────────────────────────────
-    # 1. mum: büyük ayı
-    # 2. mum: küçük gövde (yıldız), gövdesi 1. mumun kapanışının altında
-    # 3. mum: boğa, 1. mumun orta noktasının üstünde kapanıyor
     orta2 = (o2 + c2) / 2
     yildiz_tepesi = max(o1, c1)
-    if (body2 >= min_body and
-            ayi2 and
+    if (body2 >= min_body and ayi2 and
             body1 < body2 * 0.35 and
-            yildiz_tepesi < c2 and   # yıldız gövdesi 1. mumun kapanışının altında
-            boga and body >= min_body and
-            c > orta2):
+            yildiz_tepesi < c2 and
+            boga and body >= min_body and c > orta2):
         sinyaller.append("Sabah Yildizi")
 
-    # ─── 3 BEYAZ ASKER ──────────────────────────────────────────────────────
-    # 3 ardışık boğa mum, her biri öncekinden yüksek açılış ve kapanış
-    # Her mumun açılışı önceki mumun gövdesi içinde olmalı
     if (body2 >= min_body and body1 >= min_body and body >= min_body and
             c2 > o2 and boga1 and boga and
-            c > c1 > c2 and
-            o > o1 > o2 and
-            o <= c1 and      # açılış önceki gövde içinde
-            o1 <= c2):       # önceki açılış ondan önceki gövde içinde
+            c > c1 > c2 and o > o1 > o2 and
+            o <= c1 and o1 <= c2):
         sinyaller.append("3 Beyaz Asker")
 
     return sinyaller
 
 
 def ozel_tarama_kontrol(df):
-    """Gizli strateji — koşullar dışarıya gösterilmez."""
     try:
         if len(df) < 35:
             return False
-
         close = df['Close'].astype(float)
         low   = df['Low'].astype(float)
         high  = df['High'].astype(float)
-
         ema5  = close.ewm(span=5,  adjust=False).mean()
         ema8  = close.ewm(span=8,  adjust=False).mean()
         ema13 = close.ewm(span=13, adjust=False).mean()
@@ -235,21 +194,16 @@ def ozel_tarama_kontrol(df):
         def temas_var(ema_ser):
             e  = float(ema_ser.iloc[-1])
             e1 = float(ema_ser.iloc[-2])
-            l  = float(low.iloc[-1])
-            h  = float(high.iloc[-1])
-            c  = float(close.iloc[-1])
+            l_ = float(low.iloc[-1])
+            h_ = float(high.iloc[-1])
+            c_ = float(close.iloc[-1])
             c1 = float(close.iloc[-2])
-            temas   = l <= e <= h
-            kesisim = c > e and c1 <= e1
-            return temas or kesisim
+            return (l_ <= e <= h_) or (c_ > e and c1 <= e1)
 
-        ema_temas = any(temas_var(e) for e in [ema5, ema8, ema13, ema34])
-        if not ema_temas:
+        if not any(temas_var(e) for e in [ema5, ema8, ema13, ema34]):
             return False
-
         mumlar = mum_formasyonlari(df)
         return "Yutan Boga" in mumlar or "Sabah Yildizi" in mumlar
-
     except:
         return False
 
@@ -261,7 +215,7 @@ def sinyal_uret(df, g):
     if len(close) < 3:
         return sinyaller
 
-    vol_ort = float(g['volume'].rolling(20).mean().iloc[n])
+    vol_ort = float(g['vol_ort'].iloc[n]) if pd.notna(g['vol_ort'].iloc[n]) else 0
 
     if (pd.notna(g['macd'].iloc[n]) and pd.notna(g['signal'].iloc[n]) and
             pd.notna(g['macd'].iloc[n-1]) and pd.notna(g['signal'].iloc[n-1])):
@@ -291,7 +245,7 @@ def sinyal_uret(df, g):
     if pd.notna(g['bb_lower'].iloc[n]) and close.iloc[n] <= g['bb_lower'].iloc[n]:
         sinyaller.append("BB Alt Bant")
 
-    if pd.notna(vol_ort) and vol_ort > 0 and g['volume'].iloc[n] > vol_ort * 2:
+    if vol_ort > 0 and g['volume'].iloc[n] > vol_ort * 2:
         sinyaller.append("Hacim Alarmi")
 
     sinyaller += mum_formasyonlari(df)
@@ -302,7 +256,7 @@ def sinyal_uret(df, g):
 
     if pd.notna(g['bb_upper'].iloc[n]) and pd.notna(g['bb_lower'].iloc[n]):
         bb_width = g['bb_upper'] - g['bb_lower']
-        bb_ort = bb_width.rolling(20).mean()
+        bb_ort   = bb_width.rolling(20).mean()
         if pd.notna(bb_width.iloc[n]) and pd.notna(bb_ort.iloc[n]) and bb_ort.iloc[n] > 0:
             if bb_width.iloc[n] < bb_ort.iloc[n] * 0.7:
                 sinyaller.append("Bant Sikismasi")
@@ -318,7 +272,7 @@ def sinyal_uret(df, g):
             close.iloc[n] < g['ema20'].iloc[n] * 1.02):
         sinyaller.append("Destek Testi")
 
-    if pd.notna(vol_ort) and vol_ort > 0 and g['volume'].iloc[n] > vol_ort * 2.5:
+    if vol_ort > 0 and g['volume'].iloc[n] > vol_ort * 2.5:
         sinyaller.append("Hacim Bombasi")
 
     if (pd.notna(g['ema20'].iloc[n]) and pd.notna(g['ema50'].iloc[n]) and
@@ -333,9 +287,9 @@ def sinyal_uret(df, g):
 
 def altin_seviye(sinyaller):
     boga = [
-        "Yutan Boga", "Cekic", "Ters Cekic", "Sabah Yildizi",
-        "Boga Harami", "3 Beyaz Asker", "MACD Al Kesisimi", "Golden Cross",
-        "RSI Asiri Satim", "BB Alt Bant", "Hacim Alarmi", "Dip Vurusu", "Guc Patlamasi"
+        "Yutan Boga","Cekic","Ters Cekic","Sabah Yildizi","Boga Harami","3 Beyaz Asker",
+        "MACD Al Kesisimi","Golden Cross","RSI Asiri Satim","BB Alt Bant",
+        "Hacim Alarmi","Dip Vurusu","Guc Patlamasi"
     ]
     puan = sum(1 for s in sinyaller if s in boga)
     if puan >= 5: return "Altin"
@@ -344,18 +298,30 @@ def altin_seviye(sinyaller):
     return None
 
 
+def telegram_gonder(mesaj):
+    if not TELEGRAM_TOKEN:
+        return
+    try:
+        url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
+        requests.post(url, json={
+            "chat_id": TELEGRAM_KANAL,
+            "text": mesaj,
+            "parse_mode": "Markdown"
+        }, timeout=10)
+    except Exception as e:
+        print(f"Telegram bildirim hatası: {e}")
+
+
+# ── Ana tarama döngüsü ────────────────────────────────────────────────────────
+
 sonuclar = {}
 
 for ticker in HISSELER:
     try:
         bugun_str = (simdi + pd.Timedelta(days=1)).strftime('%Y-%m-%d')
         df = yf.download(
-            ticker,
-            start="2023-01-01",
-            end=bugun_str,
-            interval="1d",
-            progress=False,
-            auto_adjust=True
+            ticker, start="2023-01-01", end=bugun_str,
+            interval="1d", progress=False, auto_adjust=True
         )
         if df is None or len(df) < 30:
             continue
@@ -366,12 +332,23 @@ for ticker in HISSELER:
         seviye    = altin_seviye(sinyaller)
         ad        = ticker.replace(".IS", "")
 
-        rsi_raw = g['rsi'].iloc[-1]
-        rsi_val = None if not pd.notna(rsi_raw) else round(float(rsi_raw), 1)
+        n = -1
+        rsi_val    = round(float(g['rsi'].iloc[n]), 1)    if pd.notna(g['rsi'].iloc[n])    else None
+        macd_val   = round(float(g['macd'].iloc[n]), 4)   if pd.notna(g['macd'].iloc[n])   else None
+        signal_val = round(float(g['signal'].iloc[n]), 4) if pd.notna(g['signal'].iloc[n]) else None
+        hist_val   = round(float(g['histogram'].iloc[n]), 4) if pd.notna(g['histogram'].iloc[n]) else None
+
+        vol_bugun = float(g['volume'].iloc[n])
+        vol_ort   = float(g['vol_ort'].iloc[n]) if pd.notna(g['vol_ort'].iloc[n]) else 0
+        hacim_oran = round(vol_bugun / vol_ort, 2) if vol_ort > 0 else None
 
         sonuclar[ad] = {
-            "kapanis":        round(float(g['close'].iloc[-1]), 2),
+            "kapanis":        round(float(g['close'].iloc[n]), 2),
             "rsi":            rsi_val,
+            "macd":           macd_val,
+            "macd_sinyal":    signal_val,
+            "macd_histogram": hist_val,
+            "hacim_oran":     hacim_oran,
             "sinyaller":      sinyaller,
             "altin":          seviye,
             "dip_vurusu":     "Dip Vurusu"    in sinyaller,
@@ -386,6 +363,8 @@ for ticker in HISSELER:
     except Exception as e:
         print(f"Hata {ticker}: {e}")
 
+# ── Kaydet ────────────────────────────────────────────────────────────────────
+
 cikti = {
     "tarih":    simdi.strftime("%d.%m.%Y %H:%M"),
     "periyot":  "gunluk",
@@ -396,3 +375,31 @@ with open("sonuclar.json", "w", encoding="utf-8") as f:
     json.dump(nan_temizle(cikti), f, ensure_ascii=False, indent=2)
 
 print(f"Tamamlandı! {len(sonuclar)} hisse işlendi. → sonuclar.json")
+
+# ── Telegram bildirimi ────────────────────────────────────────────────────────
+
+altin_list = [k for k, v in sonuclar.items() if v.get("altin") == "Altin"]
+gumus_list = [k for k, v in sonuclar.items() if v.get("altin") == "Gumus"]
+ozel_list  = [k for k, v in sonuclar.items() if v.get("ozel_tarama")]
+
+mesaj = (
+    f"📊 *BIST Günlük Tarama Tamamlandı*\n"
+    f"━━━━━━━━━━━━━━━━━━━━\n"
+    f"🕐 {simdi.strftime('%d.%m.%Y %H:%M')}\n\n"
+    f"🏆 Altın Sinyal: *{len(altin_list)}* hisse\n"
+    f"🥈 Gümüş Sinyal: *{len(gumus_list)}* hisse\n"
+    f"🏅 Özel Tarama: *{len(ozel_list)}* hisse\n\n"
+)
+
+if altin_list:
+    mesaj += f"🔥 *Öne Çıkan Altın Hisseler:*\n"
+    for ad in altin_list[:5]:
+        h = sonuclar[ad]
+        mesaj += f"• *{ad}* — {h['kapanis']} TL | RSI: {h['rsi']}\n"
+    if len(altin_list) > 5:
+        mesaj += f"_...ve {len(altin_list)-5} hisse daha_\n"
+
+mesaj += f"\n📱 Detaylar için terminali aç!\n⚠️ _Yatırım tavsiyesi değildir._"
+
+telegram_gonder(mesaj)
+print("Telegram bildirimi gönderildi.")
