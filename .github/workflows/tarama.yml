@@ -1,10 +1,13 @@
 name: BIST Gunluk Tarama
+
 on:
   schedule:
     - cron: '30 15 * * 1-5'   # 18:30 TR - günlük kapanış taraması
   workflow_dispatch:
+
 permissions:
   contents: write
+
 jobs:
   tarama:
     runs-on: ubuntu-latest
@@ -13,25 +16,28 @@ jobs:
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Python kur
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+
       - name: Kütüphaneleri yükle
         run: pip install yfinance requests pandas numpy pytz
+
       - name: Taramayı çalıştır
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_KANAL: "@ekonomiveborsa"
         run: python tarama.py
+
       - name: Sonuçları kaydet
         run: |
           git config user.name "BIST Bot"
           git config user.email "bot@bist.com"
-          git add -f sonuclar.json
           git stash
           git pull --rebase origin main
-          git stash pop
+          git stash pop || true
           git add -f sonuclar.json
           git commit --allow-empty -m "Otomatik guncelleme - $(date +'%d.%m.%Y %H:%M')"
           git push origin main
