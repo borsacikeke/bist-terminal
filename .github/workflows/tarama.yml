@@ -20,6 +20,9 @@ jobs:
       - name: Kütüphaneleri yükle
         run: pip install yfinance requests pandas numpy pytz
       - name: Taramayı çalıştır
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_KANAL: "@ekonomiveborsa"
         run: python tarama.py
       - name: Sonuçları kaydet
         run: |
