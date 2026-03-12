@@ -113,14 +113,14 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await ana_menu_gonder(update.message, user_id, isim, data)
 
 async def ana_menu_gonder(message, user_id, isim, data):
-    veri   = veri_yukle()
-    tarih  = veri["tarih"] if veri else "—"
-    altin  = [k for k, v in veri["hisseler"].items() if v.get("altin") == "Altin"] if veri else []
-    gumus  = [k for k, v in veri["hisseler"].items() if v.get("altin") == "Gumus"] if veri else []
-    bronz  = [k for k, v in veri["hisseler"].items() if v.get("altin") == "Bronz"] if veri else []
-    ozel   = [k for k, v in veri["hisseler"].items() if v.get("ozel_tarama")] if veri else []
+    veri  = veri_yukle()
+    tarih = veri["tarih"] if veri else "—"
+    altin = [k for k, v in veri["hisseler"].items() if v.get("altin") == "Altin"] if veri else []
+    gumus = [k for k, v in veri["hisseler"].items() if v.get("altin") == "Gumus"] if veri else []
+    bronz = [k for k, v in veri["hisseler"].items() if v.get("altin") == "Bronz"] if veri else []
+    ozel  = [k for k, v in veri["hisseler"].items() if v.get("ozel_tarama")]       if veri else []
 
-    sayi         = davet_sayisi(user_id, data)
+    sayi          = davet_sayisi(user_id, data)
     altin_kilitli = kilitli_mi(user_id, data)
     ozel_kilitli  = ozel_kilitli_mi(user_id, data)
 
@@ -131,8 +131,7 @@ async def ana_menu_gonder(message, user_id, isim, data):
     else:
         durum = f"🔒 *{sayi}/5* davet — özellikler kilitli"
 
-    # WebApp URL'sine özel erişim parametresi ekle
-    ozel_param  = "1" if not ozel_kilitli else "0"
+    ozel_param  = "1" if not ozel_kilitli  else "0"
     altin_param = "1" if not altin_kilitli else "0"
     webapp_full = f"{WEBAPP_URL}?ozel={ozel_param}&altin={altin_param}"
 
@@ -211,7 +210,7 @@ async def buton(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     elif query.data == "altin_grafik":
         if kilitli_mi(user_id, data):
-            sayi = davet_sayisi(user_id, data)
+            sayi       = davet_sayisi(user_id, data)
             davet_link = f"https://t.me/{BOT_USERNAME}?start={user_id}"
             await query.message.reply_text(
                 f"🔒 *Bu özellik kilitli!*\n\n"
@@ -249,7 +248,7 @@ async def buton(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     elif query.data == "ozel_tarama":
         if ozel_kilitli_mi(user_id, data):
-            sayi = davet_sayisi(user_id, data)
+            sayi       = davet_sayisi(user_id, data)
             davet_link = f"https://t.me/{BOT_USERNAME}?start={user_id}"
             await query.message.reply_text(
                 f"🔒 *Özel Tarama Bölümü Kilitli!*\n\n"
