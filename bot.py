@@ -40,11 +40,10 @@ YASAL_UYARI = (
     "━━━━━━━━━━━━━━━━━━━━"
 )
 
-# ── GitHub API davet yönetimi (kalıcı depolama) ───────────────────────────────
+# ── GitHub API ────────────────────────────────────────────────────────────────
 GH_HEADERS = {"Authorization": f"token {GITHUB_TOKEN}", "Accept": "application/vnd.github.v3+json"}
 
 def gh_dosya_oku(dosya_adi):
-    """GitHub'dan JSON dosyası oku."""
     try:
         url = f"https://api.github.com/repos/{GITHUB_REPO}/contents/{dosya_adi}"
         r = requests.get(url, headers=GH_HEADERS, timeout=10)
@@ -57,23 +56,21 @@ def gh_dosya_oku(dosya_adi):
     return {}, None
 
 def gh_dosya_yaz(dosya_adi, veri, sha=None):
-    """GitHub'a JSON dosyası yaz."""
     try:
         url = f"https://api.github.com/repos/{GITHUB_REPO}/contents/{dosya_adi}"
         icerik = base64.b64encode(
             json.dumps(veri, ensure_ascii=False, indent=2).encode("utf-8")
         ).decode("utf-8")
-        payload = {
-            "message": f"Bot güncelleme - {dosya_adi}",
-            "content": icerik,
-        }
+        payload = {"message": f"Bot güncelleme - {dosya_adi}", "content": icerik}
         if sha:
             payload["sha"] = sha
         requests.put(url, headers=GH_HEADERS, json=payload, timeout=15)
     except:
         pass
 
+# ── Davet yönetimi ────────────────────────────────────────────────────────────
 def davet_yukle():
+    # davetler.json GitHub'dan okunur — mevcut verin KORUNUR
     veri, _ = gh_dosya_oku("davetler.json")
     return veri
 
@@ -85,12 +82,19 @@ def davet_sayisi(user_id, data):
     return len(data.get(str(user_id), {}).get("davet_edilenler", []))
 
 def ozel_erisim_var_mi(user_id, data):
-    """10 davet = özel tarama erişimi."""
     return davet_sayisi(user_id, data) >= DAVET_ESIK_OZEL
 
 def altin_erisim_var_mi(user_id, data):
-    """5 davet = altın grafik erişimi."""
     return davet_sayisi(user_id, data) >= DAVET_ESIK_ALTIN
+
+# ── Favori yönetimi ───────────────────────────────────────────────────────────
+def favori_yukle():
+    veri, _ = gh_dosya_oku("favoriler.json")
+    return veri
+
+def favori_kaydet(veri):
+    _, sha = gh_dosya_oku("favoriler.json")
+    gh_dosya_yaz("favoriler.json", veri, sha)
 
 # ── Veri çek ──────────────────────────────────────────────────────────────────
 def veri_yukle():
@@ -107,9 +111,23 @@ async def kanal_uye_mi(context, user_id):
     except:
         return False
 
+def macd_yorum(h):
+    if h.get("macd") is not None and h.get("macd_sinyal") is not None:
+        return "📈 Pozitif" if h["macd"] > h["macd_sinyal"] else "📉 Negatif"
+    return "—"
+
+def hacim_yorum(h):
+    oran = h.get("hacim_oran")
+    if oran is None:
+        return "—"
+    if oran >= 2.5:
+        return f"🔥 Çok Yüksek ({oran}x)"
+    elif oran >= 1.5:
+        return f"📊 Yüksek ({oran}x)"
+    return f"Normal ({oran}x)"
+
 # ── Grafik çizici ─────────────────────────────────────────────────────────────
 def grafik_ciz(ad, h):
-    """Bir hisse için basit sinyal grafiği oluştur, BytesIO döndür."""
     try:
         ticker = ad + ".IS"
         df = yf.download(ticker, period="3mo", interval="1d", progress=False, auto_adjust=True)
@@ -129,7 +147,6 @@ def grafik_ciz(ad, h):
             for spine in ax.spines.values():
                 spine.set_edgecolor("#2a2a3a")
 
-        # Fiyat + EMA
         ax1.plot(close.index, close.values, color="#e0e0e0", linewidth=1.5, label="Fiyat")
         ax1.plot(ema20.index, ema20.values, color="#2962ff", linewidth=1, linestyle="--", label="EMA20")
         ax1.plot(ema50.index, ema50.values, color="#f59e0b", linewidth=1, linestyle="--", label="EMA50")
@@ -138,7 +155,6 @@ def grafik_ciz(ad, h):
         ax1.legend(loc="upper left", fontsize=7, facecolor="#1a1a24", labelcolor="#ccc", framealpha=0.8)
         ax1.set_ylabel("Fiyat (TL)", color="#888", fontsize=8)
 
-        # Hacim
         ax2.bar(df.index, df["Volume"].astype(float), color="#2962ff", alpha=0.6, width=0.8)
         ax2.set_ylabel("Hacim", color="#888", fontsize=8)
 
@@ -163,18 +179,20 @@ def grafik_ciz(ad, h):
 
 # ── Ana menü ──────────────────────────────────────────────────────────────────
 async def ana_menu_gonder(message, user_id, isim, data):
-    veri = veri_yukle()
+    veri  = veri_yukle()
     tarih = veri["tarih"] if veri else "—"
     altin = [k for k, v in veri["hisseler"].items() if v.get("altin") == "Altin"] if veri else []
     gumus = [k for k, v in veri["hisseler"].items() if v.get("altin") == "Gumus"] if veri else []
-    ozel  = [k for k, v in veri["hisseler"].items() if v.get("ozel_tarama")] if veri else []
+    ozel  = [k for k, v in veri["hisseler"].items() if v.get("ozel_tarama")]       if veri else []
 
-    sayi          = davet_sayisi(user_id, data)
-    altin_acik    = altin_erisim_var_mi(user_id, data)
-    ozel_acik     = ozel_erisim_var_mi(user_id, data)
+    sayi       = davet_sayisi(user_id, data)
+    altin_acik = altin_erisim_var_mi(user_id, data)
+    ozel_acik  = ozel_erisim_var_mi(user_id, data)
 
-    # Terminal URL: özel erişim varsa ?ozel=1 ekle
-    terminal_url  = WEBAPP_URL + ("?ozel=1" if ozel_acik else "")
+    # Terminal URL'ye erişim parametreleri
+    ozel_param  = "1" if ozel_acik  else "0"
+    altin_param = "1" if altin_acik else "0"
+    terminal_url = f"{WEBAPP_URL}?ozel={ozel_param}&altin={altin_param}"
 
     if ozel_acik:
         durum = f"🔓 *{sayi}* davet — tüm özellikler açık 🏆"
@@ -193,7 +211,8 @@ async def ana_menu_gonder(message, user_id, isim, data):
             "🥇 Altın Grafikleri" + (" 🔒" if not altin_acik else ""),
             callback_data="altin_grafik"
         )],
-        [InlineKeyboardButton("👥 Davet Linkim", callback_data="davet_link")],
+        [InlineKeyboardButton("⭐ Favorilerim", callback_data="favorilerim"),
+         InlineKeyboardButton("👥 Davet Linkim", callback_data="davet_link")],
         [InlineKeyboardButton("⚠️ Yasal Uyarı", callback_data="yasal_uyari")],
     ]
 
@@ -205,12 +224,14 @@ async def ana_menu_gonder(message, user_id, isim, data):
         f"📅 Son güncelleme: `{tarih}`\n\n"
         f"🥇 Altın: *{len(altin)}* · 🥈 Gümüş: *{len(gumus)}* · 🏆 Özel: *{len(ozel)}*\n\n"
         f"{durum}\n\n"
+        f"💡 `/hisse THYAO` → anlık analiz\n"
+        f"⭐ `/favori THYAO` → favoriye ekle\n\n"
         f"_Bu platform yatırım tavsiyesi vermez. Risk içerir._",
         reply_markup=InlineKeyboardMarkup(keyboard),
         parse_mode="Markdown"
     )
 
-# ── Komutlar ──────────────────────────────────────────────────────────────────
+# ── /start ────────────────────────────────────────────────────────────────────
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user    = update.effective_user
     user_id = str(user.id)
@@ -265,7 +286,99 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     await ana_menu_gonder(update.message, user_id, isim, data)
 
+# ── /hisse ────────────────────────────────────────────────────────────────────
+async def hisse_komut(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    if not context.args:
+        await update.message.reply_text(
+            "📊 *Hisse Sorgula*\n\nKullanım: `/hisse THYAO`",
+            parse_mode="Markdown"
+        )
+        return
+    ad   = context.args[0].upper().strip()
+    veri = veri_yukle()
+    if not veri or ad not in veri.get("hisseler", {}):
+        await update.message.reply_text(f"❌ *{ad}* bulunamadı.", parse_mode="Markdown")
+        return
+    h         = veri["hisseler"][ad]
+    seviye    = {"Altin": "🥇 Altın", "Gumus": "🥈 Gümüş", "Bronz": "🥉 Bronz"}.get(h.get("altin"), "—")
+    sinyaller = "\n".join(f"• {s}" for s in h.get("sinyaller", [])) or "Aktif sinyal yok"
+    keyboard  = [[
+        InlineKeyboardButton("📈 TradingView", url=f"https://tr.tradingview.com/chart/?symbol=BIST:{ad}"),
+        InlineKeyboardButton("📰 KAP", url=f"https://www.kap.org.tr/tr/bildirim-sorgu?subjectTypes=FR,DR,IA&companies={ad}")
+    ]]
+    await update.message.reply_text(
+        f"📊 *{ad}* — {h.get('kapanis','—')} TL\n"
+        f"━━━━━━━━━━━━━━━━━━━━\n\n"
+        f"🏅 Seviye: {seviye}\n"
+        f"📈 RSI: `{h.get('rsi','—')}`\n"
+        f"⚡ MACD: {macd_yorum(h)}\n"
+        f"🔥 Hacim: {hacim_yorum(h)}\n\n"
+        f"*Sinyaller:*\n{sinyaller}\n\n"
+        f"📅 {veri.get('tarih','—')}\n"
+        f"_Yatırım tavsiyesi değildir._",
+        parse_mode="Markdown",
+        reply_markup=InlineKeyboardMarkup(keyboard)
+    )
 
+# ── /favori ───────────────────────────────────────────────────────────────────
+async def favori_ekle(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    user_id = str(update.effective_user.id)
+
+    # Argümansız → liste göster
+    if not context.args:
+        fav_data  = favori_yukle()
+        favoriler = fav_data.get(user_id, [])
+        if not favoriler:
+            await update.message.reply_text(
+                "⭐ *Favorilerin boş!*\n\n`/favori THYAO` ile ekle · `/favorisil THYAO` ile sil",
+                parse_mode="Markdown"
+            )
+            return
+        veri  = veri_yukle()
+        mesaj = f"⭐ *Favorilerin* ({len(favoriler)} hisse)\n━━━━━━━━━━━━━━━━━━━━\n\n"
+        for ad in favoriler:
+            if veri and ad in veri["hisseler"]:
+                h      = veri["hisseler"][ad]
+                seviye = {"Altin":"🥇","Gumus":"🥈","Bronz":"🥉"}.get(h.get("altin"),"—")
+                mesaj += f"{seviye} *{ad}* — {h['kapanis']} TL | RSI:`{h.get('rsi','—')}` | {hacim_yorum(h)}\n"
+            else:
+                mesaj += f"• *{ad}*\n"
+        mesaj += "\n_Yatırım tavsiyesi değildir._"
+        await update.message.reply_text(mesaj, parse_mode="Markdown")
+        return
+
+    ad   = context.args[0].upper().strip()
+    veri = veri_yukle()
+    if not veri or ad not in veri["hisseler"]:
+        await update.message.reply_text(f"❌ *{ad}* bulunamadı.", parse_mode="Markdown")
+        return
+    fav_data  = favori_yukle()
+    favoriler = fav_data.get(user_id, [])
+    if ad in favoriler:
+        await update.message.reply_text(f"ℹ️ *{ad}* zaten favorilerinde.", parse_mode="Markdown")
+        return
+    favoriler.append(ad)
+    fav_data[user_id] = favoriler
+    favori_kaydet(fav_data)
+    await update.message.reply_text(f"⭐ *{ad}* favorilerine eklendi!", parse_mode="Markdown")
+
+async def favori_sil(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    user_id = str(update.effective_user.id)
+    if not context.args:
+        await update.message.reply_text("Kullanım: `/favorisil THYAO`", parse_mode="Markdown")
+        return
+    ad        = context.args[0].upper().strip()
+    fav_data  = favori_yukle()
+    favoriler = fav_data.get(user_id, [])
+    if ad not in favoriler:
+        await update.message.reply_text(f"❌ *{ad}* favorilerinde yok.", parse_mode="Markdown")
+        return
+    favoriler.remove(ad)
+    fav_data[user_id] = favoriler
+    favori_kaydet(fav_data)
+    await update.message.reply_text(f"🗑️ *{ad}* favorilerinden silindi.", parse_mode="Markdown")
+
+# ── Buton işleyici ────────────────────────────────────────────────────────────
 async def buton(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query   = update.callback_query
     user_id = str(query.from_user.id)
@@ -315,10 +428,34 @@ async def buton(update: Update, context: ContextTypes.DEFAULT_TYPE):
             parse_mode="Markdown"
         )
 
+    elif query.data == "favorilerim":
+        fav_data  = favori_yukle()
+        favoriler = fav_data.get(user_id, [])
+        if not favoriler:
+            await query.message.reply_text(
+                "⭐ *Favorilerin boş!*\n\n`/favori THYAO` yazarak ekleyebilirsin.",
+                parse_mode="Markdown"
+            )
+            return
+        veri  = veri_yukle()
+        mesaj = f"⭐ *Favorilerin* ({len(favoriler)} hisse)\n━━━━━━━━━━━━━━━━━━━━\n\n"
+        for ad in favoriler:
+            if veri and ad in veri["hisseler"]:
+                h      = veri["hisseler"][ad]
+                seviye = {"Altin":"🥇","Gumus":"🥈","Bronz":"🥉"}.get(h.get("altin"),"—")
+                mesaj += (
+                    f"{seviye} *{ad}* — {h['kapanis']} TL\n"
+                    f"   RSI:`{h.get('rsi','—')}` | MACD:{macd_yorum(h)} | {hacim_yorum(h)}\n\n"
+                )
+            else:
+                mesaj += f"• *{ad}*\n"
+        mesaj += "_Yatırım tavsiyesi değildir._"
+        await query.message.reply_text(mesaj, parse_mode="Markdown")
+
     # ── Altın Grafikleri (5 davet) ────────────────────────────────────────────
     elif query.data == "altin_grafik":
         if not altin_erisim_var_mi(user_id, data):
-            sayi = davet_sayisi(user_id, data)
+            sayi      = davet_sayisi(user_id, data)
             davet_url = f"https://t.me/{BOT_USERNAME}?start={user_id}"
             await query.message.reply_text(
                 f"🔒 *Bu özellik kilitli!*\n\n"
@@ -344,26 +481,31 @@ async def buton(update: Update, context: ContextTypes.DEFAULT_TYPE):
             f"_Yatırım tavsiyesi değildir._",
             parse_mode="Markdown"
         )
-
-        for ad in altin_hisseler[:8]:  # max 8 grafik
-            h = veri["hisseler"][ad]
+        for ad in altin_hisseler[:8]:
+            h   = veri["hisseler"][ad]
             buf = grafik_ciz(ad, h)
             sinyaller_str = " · ".join(h.get("sinyaller", [])[:4])
             caption = (
-                f"🥇 *{ad}* — {h.get('kapanis', '—')} TL\n"
-                f"RSI: `{h.get('rsi', '—')}` · Hacim: `{h.get('hacim_oran', '—')}x`\n"
+                f"🥇 *{ad}* — {h.get('kapanis','—')} TL\n"
+                f"RSI:`{h.get('rsi','—')}` | MACD:{macd_yorum(h)} | {hacim_yorum(h)}\n"
                 f"📊 {sinyaller_str}\n"
                 f"_Yatırım tavsiyesi değildir._"
             )
+            keyboard = [[
+                InlineKeyboardButton("📈 TradingView", url=f"https://tr.tradingview.com/chart/?symbol=BIST:{ad}"),
+                InlineKeyboardButton("📰 KAP", url=f"https://www.kap.org.tr/tr/bildirim-sorgu?subjectTypes=FR,DR,IA&companies={ad}")
+            ]]
             if buf:
-                await query.message.reply_photo(photo=buf, caption=caption, parse_mode="Markdown")
+                await query.message.reply_photo(photo=buf, caption=caption, parse_mode="Markdown",
+                                                reply_markup=InlineKeyboardMarkup(keyboard))
             else:
-                await query.message.reply_text(caption, parse_mode="Markdown")
+                await query.message.reply_text(caption, parse_mode="Markdown",
+                                               reply_markup=InlineKeyboardMarkup(keyboard))
 
     # ── Tavan Tarama Grafikleri (10 davet) ────────────────────────────────────
     elif query.data == "tavan_grafik":
         if not ozel_erisim_var_mi(user_id, data):
-            sayi = davet_sayisi(user_id, data)
+            sayi      = davet_sayisi(user_id, data)
             davet_url = f"https://t.me/{BOT_USERNAME}?start={user_id}"
             await query.message.reply_text(
                 f"🔒 *Bu özellik kilitli!*\n\n"
@@ -389,55 +531,34 @@ async def buton(update: Update, context: ContextTypes.DEFAULT_TYPE):
             f"_Yatırım tavsiyesi değildir._",
             parse_mode="Markdown"
         )
-
-        for ad in ozel_hisseler[:8]:  # max 8 grafik
-            h = veri["hisseler"][ad]
+        for ad in ozel_hisseler[:8]:
+            h   = veri["hisseler"][ad]
             buf = grafik_ciz(ad, h)
             sinyaller_str = " · ".join(h.get("sinyaller", [])[:4])
             caption = (
-                f"🏆 *{ad}* — {h.get('kapanis', '—')} TL\n"
-                f"RSI: `{h.get('rsi', '—')}` · Hacim: `{h.get('hacim_oran', '—')}x`\n"
+                f"🏆 *{ad}* — {h.get('kapanis','—')} TL\n"
+                f"RSI:`{h.get('rsi','—')}` | MACD:{macd_yorum(h)} | {hacim_yorum(h)}\n"
                 f"📊 {sinyaller_str}\n"
                 f"_Yatırım tavsiyesi değildir._"
             )
+            keyboard = [[
+                InlineKeyboardButton("📈 TradingView", url=f"https://tr.tradingview.com/chart/?symbol=BIST:{ad}"),
+                InlineKeyboardButton("📰 KAP", url=f"https://www.kap.org.tr/tr/bildirim-sorgu?subjectTypes=FR,DR,IA&companies={ad}")
+            ]]
             if buf:
-                await query.message.reply_photo(photo=buf, caption=caption, parse_mode="Markdown")
+                await query.message.reply_photo(photo=buf, caption=caption, parse_mode="Markdown",
+                                                reply_markup=InlineKeyboardMarkup(keyboard))
             else:
-                await query.message.reply_text(caption, parse_mode="Markdown")
-
-
-# ── Hisse komutu ──────────────────────────────────────────────────────────────
-async def hisse_komut(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    if not context.args:
-        await update.message.reply_text("Kullanım: /hisse THYAO")
-        return
-    ad = context.args[0].upper()
-    veri = veri_yukle()
-    if not veri or ad not in veri.get("hisseler", {}):
-        await update.message.reply_text(f"❌ {ad} bulunamadı.")
-        return
-    h = veri["hisseler"][ad]
-    seviye = {"Altin": "🥇 Altın", "Gumus": "🥈 Gümüş", "Bronz": "🥉 Bronz"}.get(h.get("altin"), "—")
-    sinyaller_str = "\n".join(f"• {s}" for s in h.get("sinyaller", [])) or "Aktif sinyal yok"
-    await update.message.reply_text(
-        f"📊 *{ad}*\n"
-        f"━━━━━━━━━━━━━━━━━━━━\n"
-        f"💰 Fiyat: `{h.get('kapanis', '—')} TL`\n"
-        f"📈 RSI: `{h.get('rsi', '—')}`\n"
-        f"⚡ MACD: `{h.get('macd', '—')}`\n"
-        f"🔥 Hacim: `{h.get('hacim_oran', '—')}x`\n"
-        f"🏅 Seviye: {seviye}\n\n"
-        f"*Sinyaller:*\n{sinyaller_str}\n\n"
-        f"_Yatırım tavsiyesi değildir._",
-        parse_mode="Markdown"
-    )
-
+                await query.message.reply_text(caption, parse_mode="Markdown",
+                                               reply_markup=InlineKeyboardMarkup(keyboard))
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
     app = ApplicationBuilder().token(TOKEN).build()
-    app.add_handler(CommandHandler("start", start))
-    app.add_handler(CommandHandler("hisse", hisse_komut))
+    app.add_handler(CommandHandler("start",     start))
+    app.add_handler(CommandHandler("hisse",     hisse_komut))
+    app.add_handler(CommandHandler("favori",    favori_ekle))
+    app.add_handler(CommandHandler("favorisil", favori_sil))
     app.add_handler(CallbackQueryHandler(buton))
-    print("Bot başlatılıyor...")
+    print("✅ Bot çalışıyor...")
     app.run_polling()
