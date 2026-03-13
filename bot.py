@@ -129,12 +129,154 @@ def hacim_yorum(h):
 # ── Grafik çizici (Mum + Hacim + RSI + MACD) ─────────────────────────────────
 def grafik_ciz(ad, h):
     try:
-        import mplfinance as mpf
-
         ticker = ad + ".IS"
         df = yf.download(ticker, period="3mo", interval="1d", progress=False, auto_adjust=True)
         if df is None or len(df) < 20:
             return None
+        df.columns = [c[0] if isinstance(c, tuple) else c for c in df.columns]
+        df = df[["Open","High","Low","Close","Volume"]].astype(float).dropna()
+
+        close  = df["Close"]
+        ema20  = close.ewm(span=20, adjust=False).mean()
+        ema50  = close.ewm(span=50, adjust=False).mean()
+
+        # RSI
+        delta = close.diff()
+        gain  = delta.clip(lower=0).rolling(14).mean()
+        loss  = (-delta.clip(upper=0)).rolling(14).mean()
+        rs    = gain / loss.replace(0, np.nan)
+        rsi   = 100 - (100 / (1 + rs))
+
+        # MACD
+        ema12     = close.ewm(span=12, adjust=False).mean()
+        ema26     = close.ewm(span=26, adjust=False).mean()
+        macd_line = ema12 - ema26
+        sig_line  = macd_line.ewm(span=9, adjust=False).mean()
+        histogram = macd_line - sig_line
+
+        try:
+            # ── mplfinance ile mum grafiği ──────────────────
+            import mplfinance as mpf
+
+            mc = mpf.make_marketcolors(
+                up="#26a69a", down="#ef5350", edge="inherit",
+                wick={"up":"#26a69a","down":"#ef5350"},
+                volume={"up":"#26a69a","down":"#ef5350"},
+            )
+            style = mpf.make_mpf_style(
+                marketcolors=mc,
+                facecolor="#111118", edgecolor="#2a2a3a",
+                figcolor="#0a0a0f", gridcolor="#1a1a24",
+                gridstyle="--", gridaxis="both",
+                rc={"axes.labelcolor":"#888","xtick.color":"#888",
+                    "ytick.color":"#888","font.size":8}
+            )
+
+            hist_colors = ["#26a69a" if v >= 0 else "#ef5350" for v in histogram.fillna(0)]
+
+            ap = [
+                mpf.make_addplot(ema20, color="#2962ff", linewidth=1.2, linestyle="--"),
+                mpf.make_addplot(ema50, color="#f59e0b", linewidth=1.2, linestyle="--"),
+                mpf.make_addplot(rsi, panel=2, color="#c084fc", linewidth=1.2, ylabel="RSI", ylim=(0,100)),
+                mpf.make_addplot([70]*len(df), panel=2, color="#ef5350", linewidth=0.7, linestyle="--", secondary_y=False),
+                mpf.make_addplot([30]*len(df), panel=2, color="#26a69a", linewidth=0.7, linestyle="--", secondary_y=False),
+                mpf.make_addplot(macd_line, panel=3, color="#2962ff", linewidth=1.2, ylabel="MACD"),
+                mpf.make_addplot(sig_line,  panel=3, color="#f59e0b",  linewidth=1.0, linestyle="--"),
+                mpf.make_addplot(histogram, panel=3, type="bar", color=hist_colors, alpha=0.7),
+            ]
+
+            fig, axes = mpf.plot(
+                df, type="candle", style=style, addplot=ap,
+                volume=True, volume_panel=1,
+                panel_ratios=(4, 1.2, 1.2, 1.2),
+                figsize=(12, 10),
+                title=f"{ad}  |  {h.get('kapanis','—')} TL  |  RSI: {h.get('rsi','—')}",
+                returnfig=True, tight_layout=True,
+            )
+            fig.axes[0].title.set_color("#ffffff")
+            fig.axes[0].title.set_fontsize(11)
+
+            sinyaller = h.get("sinyaller", [])[:5]
+            if sinyaller:
+                fig.axes[0].annotate(
+                    "📊 " + " · ".join(sinyaller),
+                    xy=(0.01, 0.03), xycoords="axes fraction",
+                    fontsize=7, color="#f59e0b",
+                    bbox=dict(boxstyle="round,pad=0.3", facecolor="#1a1200", edgecolor="#3a2800", alpha=0.9)
+                )
+
+        except Exception as mpf_err:
+            # ── Fallback: düz matplotlib mum grafiği ────────
+            print(f"mplfinance hatası ({ad}), fallback kullanılıyor: {mpf_err}")
+
+            fig = plt.figure(figsize=(12, 10), facecolor="#0a0a0f")
+            ax1 = fig.add_axes([0.08, 0.52, 0.88, 0.40])  # fiyat+mum
+            ax2 = fig.add_axes([0.08, 0.38, 0.88, 0.12])  # hacim
+            ax3 = fig.add_axes([0.08, 0.22, 0.88, 0.13])  # rsi
+            ax4 = fig.add_axes([0.08, 0.06, 0.88, 0.13])  # macd
+
+            for ax in [ax1, ax2, ax3, ax4]:
+                ax.set_facecolor("#111118")
+                ax.tick_params(colors="#888", labelsize=7)
+                for spine in ax.spines.values():
+                    spine.set_edgecolor("#2a2a3a")
+
+            # Mum çiz
+            dates = np.arange(len(df))
+            for i, (_, row) in enumerate(df.iterrows()):
+                o, h_, l, c = row["Open"], row["High"], row["Low"], row["Close"]
+                color = "#26a69a" if c >= o else "#ef5350"
+                ax1.plot([i, i], [l, h_], color=color, linewidth=0.8)
+                ax1.add_patch(plt.Rectangle(
+                    (i - 0.3, min(o, c)), 0.6, abs(c - o),
+                    color=color, zorder=2
+                ))
+            ax1.plot(dates, ema20.values, color="#2962ff", linewidth=1, linestyle="--", label="EMA20")
+            ax1.plot(dates, ema50.values, color="#f59e0b", linewidth=1, linestyle="--", label="EMA50")
+            ax1.set_title(f"{ad}  |  {h.get('kapanis','—')} TL  |  RSI: {h.get('rsi','—')}",
+                          color="#fff", fontsize=11, pad=6)
+            ax1.legend(fontsize=7, facecolor="#1a1a24", labelcolor="#ccc")
+            ax1.set_ylabel("Fiyat (TL)", color="#888", fontsize=7)
+
+            # Hacim
+            vol_colors = ["#26a69a" if df["Close"].iloc[i] >= df["Open"].iloc[i] else "#ef5350"
+                          for i in range(len(df))]
+            ax2.bar(dates, df["Volume"].values, color=vol_colors, alpha=0.7, width=0.8)
+            ax2.set_ylabel("Hacim", color="#888", fontsize=7)
+
+            # RSI
+            ax3.plot(dates, rsi.values, color="#c084fc", linewidth=1)
+            ax3.axhline(70, color="#ef5350", linewidth=0.7, linestyle="--")
+            ax3.axhline(30, color="#26a69a", linewidth=0.7, linestyle="--")
+            ax3.set_ylim(0, 100)
+            ax3.set_ylabel("RSI", color="#888", fontsize=7)
+
+            # MACD
+            hist_colors = ["#26a69a" if v >= 0 else "#ef5350" for v in histogram.fillna(0)]
+            ax4.bar(dates, histogram.values, color=hist_colors, alpha=0.7, width=0.8)
+            ax4.plot(dates, macd_line.values, color="#2962ff", linewidth=1)
+            ax4.plot(dates, sig_line.values,  color="#f59e0b",  linewidth=1, linestyle="--")
+            ax4.axhline(0, color="#444", linewidth=0.5)
+            ax4.set_ylabel("MACD", color="#888", fontsize=7)
+
+            sinyaller = h.get("sinyaller", [])[:5]
+            if sinyaller:
+                ax1.annotate(
+                    "📊 " + " · ".join(sinyaller),
+                    xy=(0.01, 0.03), xycoords="axes fraction",
+                    fontsize=7, color="#f59e0b",
+                    bbox=dict(boxstyle="round,pad=0.3", facecolor="#1a1200", edgecolor="#3a2800", alpha=0.9)
+                )
+
+        buf = BytesIO()
+        fig.savefig(buf, format="png", dpi=110, bbox_inches="tight", facecolor="#0a0a0f")
+        plt.close(fig)
+        buf.seek(0)
+        return buf
+
+    except Exception as e:
+        print(f"Grafik hatası {ad}: {e}")
+        return None
         df.columns = [c[0] if isinstance(c, tuple) else c for c in df.columns]
         df = df[["Open","High","Low","Close","Volume"]].astype(float).dropna()
 
