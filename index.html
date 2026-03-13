@@ -1,571 +1,593 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BIST Teknik Analiz Terminali</title>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: #0a0a0f; color: #e0e0e0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
-        .header { padding: 20px 16px 8px; }
-        .header h1 { font-size: 12px; color: #ffffff; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; }
-        .header h2 { font-size: 22px; color: #fff; font-weight: 700; margin-top: 4px; }
-        .uyari-banner { background: #1a1200; border: 1px solid #3a2800; border-radius: 10px; margin: 8px 12px; padding: 10px 14px; font-size: 13px; color: #ffffff; font-weight: 700; line-height: 1.5; }
-        .bolum-baslik { font-size: 13px; color: #fff; text-transform: uppercase; letter-spacing: 1px; padding: 20px 16px 8px; font-weight: 800; border-bottom: 1px solid #1a1a24; margin-bottom: 4px; }
-        .bolum-baslik span { font-size: 16px; margin-right: 6px; }
-        .kategori-baslik { font-size: 11px; color: #888; text-transform: uppercase; letter-spacing: 1.5px; padding: 14px 16px 6px; font-weight: 700; }
-        .kart-listesi { padding: 0 12px; display: flex; flex-direction: column; gap: 2px; }
-        .kart { background: #111118; border-radius: 14px; padding: 14px 16px; display: flex; align-items: center; gap: 14px; cursor: pointer; transition: background 0.15s; }
-        .kart:active { background: #1a1a24; }
-        .kart-ikon { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
-        .ikon-ozel   { background: linear-gradient(135deg, #1a0a2e, #4a0080); }
-        .ikon-altin  { background: linear-gradient(135deg, #3d2e00, #7a5c00); }
-        .ikon-gumus  { background: linear-gradient(135deg, #1a1a2e, #2d2d4a); }
-        .ikon-bronz  { background: linear-gradient(135deg, #2e1a0a, #5a3a1a); }
-        .ikon-dip    { background: linear-gradient(135deg, #002e1a, #007a3d); }
-        .ikon-bant   { background: linear-gradient(135deg, #001a3d, #003d7a); }
-        .ikon-guc    { background: linear-gradient(135deg, #2e1000, #7a2800); }
-        .ikon-destek { background: linear-gradient(135deg, #1a002e, #4a007a); }
-        .ikon-hacim  { background: linear-gradient(135deg, #002e2e, #007a7a); }
-        .ikon-trend  { background: linear-gradient(135deg, #1a2e00, #3d7a00); }
-        .ikon-golden { background: linear-gradient(135deg, #2e2800, #7a6800); }
-        .ikon-death  { background: linear-gradient(135deg, #2e0000, #7a0000); }
-        .ikon-macd   { background: linear-gradient(135deg, #00182e, #003d6a); }
-        .ikon-rsi    { background: linear-gradient(135deg, #2e002e, #6a006a); }
-        .ikon-bb     { background: linear-gradient(135deg, #002e2a, #006a60); }
-        .ikon-mum    { background: linear-gradient(135deg, #0a2e1a, #1a6a3a); }
-        .ikon-fav    { background: linear-gradient(135deg, #2e2a00, #6a6000); }
-        .kart-icerik { flex: 1; }
-        .kart-baslik { font-size: 15px; font-weight: 600; color: #fff; }
-        .kart-aciklama { font-size: 12px; color: #555; margin-top: 3px; line-height: 1.4; }
-        .kart-durum { font-size: 10px; margin-top: 3px; }
-        .kart-durum.aktif-yazi { color: #a855f7; }
-        .kart-ok { color: #2a2a3a; font-size: 18px; }
-        .ayrac { height: 1px; background: #1a1a24; margin: 6px 16px; }
-        .bolum-ayrac { height: 6px; background: #050508; margin: 8px 0; }
-        .ozel-kilitli-banner { background: #0d0020; border: 1px solid #3a0060; border-radius: 14px; margin: 8px 12px; padding: 14px 16px; display: flex; align-items: center; gap: 12px; }
-        .ozel-kilitli-ikon { font-size: 28px; }
-        .ozel-kilitli-yazi { font-size: 12px; color: #7c3aed; line-height: 1.5; }
-        .ozel-kilitli-yazi strong { color: #c084fc; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BIST Teknik Analiz Terminali</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#0a0a0f; color:#e0e0e0; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; }
 
-        /* Sonuç ekranı */
-        .sonuc-ekran { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #0a0a0f; overflow-y: auto; z-index: 100; }
-        .sonuc-header { padding: 16px 16px 12px; background: #0a0a0f; position: sticky; top: 0; z-index: 10; border-bottom: 1px solid #1a1a24; }
-        .sonuc-baslik { font-size: 16px; font-weight: 600; color: #fff; }
-        .sonuc-tarih { font-size: 11px; color: #444; margin-top: 2px; }
-        .hisse-listesi { padding: 8px 12px 20px; }
-        .sayac { font-size: 11px; color: #444; padding: 6px 16px 2px; }
+/* ─── HEADER ───────────────────────────────────────── */
+.header { padding:20px 16px 8px; }
+.header h1 { font-size:12px; color:#fff; text-transform:uppercase; letter-spacing:2px; font-weight:700; }
+.header h2 { font-size:22px; color:#fff; font-weight:700; margin-top:4px; }
+.uyari-banner { background:#1a1200; border:1px solid #3a2800; border-radius:10px; margin:8px 12px; padding:10px 14px; font-size:13px; color:#fff; font-weight:700; line-height:1.5; }
 
-        /* Hisse kartı */
-        .hisse-kart { background: #111118; border-radius: 14px; padding: 14px; margin-bottom: 8px; }
-        .hisse-kart.ozel-kart { background: #0d0020; border: 1px solid #3a0060; }
-        .hisse-ust { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
-        .hisse-sol { flex: 1; min-width: 0; }
-        .hisse-ad { font-size: 16px; font-weight: 700; color: #fff; }
-        .hisse-fiyat { font-size: 12px; color: #666; margin-top: 2px; }
+/* ─── NAV KARTLAR ──────────────────────────────────── */
+.bolum-baslik { font-size:13px; color:#fff; text-transform:uppercase; letter-spacing:1px; padding:20px 16px 8px; font-weight:800; border-bottom:1px solid #1a1a24; margin-bottom:4px; }
+.bolum-baslik span { font-size:16px; margin-right:6px; }
+.kategori-baslik { font-size:11px; color:#888; text-transform:uppercase; letter-spacing:1.5px; padding:14px 16px 6px; font-weight:700; }
+.kart-listesi { padding:0 12px; display:flex; flex-direction:column; gap:2px; }
+.kart { background:#111118; border-radius:14px; padding:14px 16px; display:flex; align-items:center; gap:14px; cursor:pointer; transition:background .15s; }
+.kart:active { background:#1a1a24; }
+.kart-ikon { width:44px; height:44px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:22px; flex-shrink:0; }
+.ikon-ozel   { background:linear-gradient(135deg,#1a0a2e,#4a0080); }
+.ikon-altin  { background:linear-gradient(135deg,#3d2e00,#7a5c00); }
+.ikon-gumus  { background:linear-gradient(135deg,#1a1a2e,#2d2d4a); }
+.ikon-bronz  { background:linear-gradient(135deg,#2e1a0a,#5a3a1a); }
+.ikon-dip    { background:linear-gradient(135deg,#002e1a,#007a3d); }
+.ikon-bant   { background:linear-gradient(135deg,#001a3d,#003d7a); }
+.ikon-guc    { background:linear-gradient(135deg,#2e1000,#7a2800); }
+.ikon-destek { background:linear-gradient(135deg,#1a002e,#4a007a); }
+.ikon-hacim  { background:linear-gradient(135deg,#002e2e,#007a7a); }
+.ikon-trend  { background:linear-gradient(135deg,#1a2e00,#3d7a00); }
+.ikon-golden { background:linear-gradient(135deg,#2e2800,#7a6800); }
+.ikon-death  { background:linear-gradient(135deg,#2e0000,#7a0000); }
+.ikon-macd   { background:linear-gradient(135deg,#00182e,#003d6a); }
+.ikon-rsi    { background:linear-gradient(135deg,#2e002e,#6a006a); }
+.ikon-bb     { background:linear-gradient(135deg,#002e2a,#006a60); }
+.ikon-mum    { background:linear-gradient(135deg,#0a2e1a,#1a6a3a); }
+.ikon-fav    { background:linear-gradient(135deg,#2e2a00,#6a6000); }
+.ikon-ara    { background:linear-gradient(135deg,#002a2e,#006070); }
+.ikon-gecmis { background:linear-gradient(135deg,#1a1a2e,#3a3a5a); }
+.kart-icerik { flex:1; }
+.kart-baslik { font-size:15px; font-weight:600; color:#fff; }
+.kart-aciklama { font-size:12px; color:#555; margin-top:3px; line-height:1.4; }
+.kart-durum { font-size:10px; margin-top:3px; }
+.kart-durum.aktif-yazi { color:#a855f7; }
+.kart-ok { color:#2a2a3a; font-size:18px; }
+.ayrac { height:1px; background:#1a1a24; margin:6px 16px; }
+.bolum-ayrac { height:6px; background:#050508; margin:8px 0; }
+.ozel-kilitli-banner { background:#0d0020; border:1px solid #3a0060; border-radius:14px; margin:8px 12px; padding:14px 16px; display:flex; align-items:center; gap:12px; }
+.ozel-kilitli-ikon { font-size:28px; }
+.ozel-kilitli-yazi { font-size:12px; color:#7c3aed; line-height:1.5; }
+.ozel-kilitli-yazi strong { color:#c084fc; }
+.alt-uyari { font-size:10px; color:#333; text-align:center; padding:16px; line-height:1.6; margin-bottom:8px; }
 
-        /* Göstergeler satırı */
-        .gostergeler { display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
-        .gosterge-pill { display: flex; flex-direction: column; align-items: center; background: #0d0d18; border-radius: 8px; padding: 5px 10px; min-width: 60px; }
-        .gosterge-etiket { font-size: 9px; color: #444; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
-        .gosterge-deger { font-size: 13px; font-weight: 700; margin-top: 1px; }
-        .rsi-dusuk   { color: #26a69a; }
-        .rsi-orta    { color: #888; }
-        .rsi-yuksek  { color: #ef5350; }
-        .macd-pozitif { color: #26a69a; }
-        .macd-negatif { color: #ef5350; }
-        .hacim-yuksek { color: #f59e0b; }
-        .hacim-normal { color: #666; }
+/* ─── SONUÇ EKRANI ─────────────────────────────────── */
+.sonuc-ekran { display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:#0a0a0f; overflow-y:auto; z-index:100; }
+.sonuc-header { padding:16px 16px 12px; background:#0a0a0f; position:sticky; top:0; z-index:10; border-bottom:1px solid #1a1a24; }
+.sonuc-baslik { font-size:16px; font-weight:600; color:#fff; }
+.sonuc-tarih { font-size:11px; color:#444; margin-top:2px; }
+.hisse-listesi { padding:8px 12px 20px; }
+.sayac { font-size:11px; color:#444; padding:6px 16px 2px; }
 
-        /* Badge'ler */
-        .badge-listesi { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
-        .badge { font-size: 10px; padding: 3px 8px; border-radius: 6px; font-weight: 500; }
-        .badge-boga     { background: #0a2e1a; color: #26a69a; }
-        .badge-strateji { background: #1a1a0a; color: #f0c000; }
-        .badge-notr     { background: #1a1a2e; color: #5566aa; }
-        .badge-ozel     { background: #1a0030; color: #c084fc; }
+/* ─── HİSSE KARTI ──────────────────────────────────── */
+.hisse-kart { background:#111118; border-radius:14px; padding:14px; margin-bottom:10px; }
+.hisse-kart.ozel-kart { background:#0d0020; border:1px solid #3a0060; }
+.hisse-ust { display:flex; align-items:flex-start; justify-content:space-between; gap:8px; }
+.hisse-sol { flex:1; min-width:0; }
+.hisse-ad { font-size:17px; font-weight:700; color:#fff; }
+.hisse-fiyat { font-size:12px; color:#666; margin-top:2px; }
 
-        /* Linkler */
-        .hisse-linkler { display: flex; gap: 6px; margin-top: 10px; }
-        .hisse-link { flex: 1; display: flex; align-items: center; justify-content: center; gap: 5px; background: #1a1a24; border-radius: 8px; padding: 7px 10px; font-size: 11px; color: #888; text-decoration: none; font-weight: 600; cursor: pointer; transition: background 0.15s; }
-        .hisse-link:active { background: #252535; }
-        .hisse-link.tv { color: #2962ff; }
+/* göstergeler satırı */
+.gostergeler { display:flex; gap:8px; margin-top:10px; flex-wrap:wrap; }
+.gosterge-pill { display:flex; flex-direction:column; align-items:center; background:#0d0d18; border-radius:8px; padding:5px 12px; min-width:64px; }
+.gosterge-etiket { font-size:9px; color:#444; text-transform:uppercase; letter-spacing:.5px; font-weight:600; }
+.gosterge-deger { font-size:13px; font-weight:700; margin-top:1px; }
+.rsi-dusuk  { color:#26a69a; }
+.rsi-orta   { color:#888; }
+.rsi-yuksek { color:#ef5350; }
+.macd-pozitif { color:#26a69a; }
+.macd-negatif { color:#ef5350; }
+.hacim-yuksek { color:#f59e0b; }
+.hacim-normal { color:#666; }
 
-        /* Fav butonu */
-        .fav-btn { background: none; border: none; font-size: 22px; cursor: pointer; padding: 2px 4px; opacity: 0.25; transition: opacity 0.2s; flex-shrink: 0; }
-        .fav-btn.aktif { opacity: 1; }
-        .bos-mesaj { text-align: center; padding: 60px 20px; color: #333; font-size: 14px; }
-        .alt-uyari { font-size: 10px; color: #333; text-align: center; padding: 16px; line-height: 1.6; margin-bottom: 8px; }
+/* ─── SİNYAL BÖLÜMÜ ────────────────────────────────── */
+.sinyal-bolum { margin-top:12px; }
+.sinyal-grup-baslik { font-size:10px; color:#444; text-transform:uppercase; letter-spacing:1px; font-weight:700; margin-bottom:5px; margin-top:10px; }
+.sinyal-grid { display:flex; flex-wrap:wrap; gap:5px; }
+.sinyal-item { display:flex; align-items:center; gap:5px; background:#0d0d18; border-radius:8px; padding:5px 9px; font-size:11px; font-weight:600; }
+.sinyal-dot { width:7px; height:7px; border-radius:50%; flex-shrink:0; }
 
-        /* Arama */
-        .arama-kutusu { padding: 10px 12px 4px; position: relative; }
-        .arama-input { width: 100%; background: #111118; border: 1px solid #1a1a24; border-radius: 12px; padding: 12px 16px 12px 42px; font-size: 15px; color: #fff; outline: none; transition: border-color 0.2s; }
-        .arama-input:focus { border-color: #3a3a5a; }
-        .arama-input::placeholder { color: #333; }
-        .arama-ikon { position: absolute; left: 24px; top: 50%; transform: translateY(-50%); font-size: 16px; pointer-events: none; }
-        .arama-sonuc { background: #111118; border: 1px solid #1a1a24; border-radius: 12px; margin: 4px 12px 8px; overflow: hidden; display: none; }
-        .arama-sonuc-item { padding: 12px 16px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #0d0d18; transition: background 0.1s; }
-        .arama-sonuc-item:last-child { border-bottom: none; }
-        .arama-sonuc-item:active { background: #1a1a24; }
-        .arama-sonuc-ad { font-size: 15px; font-weight: 700; color: #fff; }
-        .arama-sonuc-fiyat { font-size: 12px; color: #555; margin-top: 2px; }
-        .arama-sonuc-sag { text-align: right; }
-        .arama-sonuc-seviye { font-size: 11px; }
-        .arama-bos { padding: 16px; text-align: center; color: #333; font-size: 13px; }
-    </style>
+.s-pozitif { color:#26a69a; }
+.s-pozitif .sinyal-dot { background:#26a69a; }
+.s-negatif { color:#ef5350; }
+.s-negatif .sinyal-dot { background:#ef5350; }
+.s-formasyon { color:#f59e0b; }
+.s-formasyon .sinyal-dot { background:#f59e0b; }
+.s-strateji { color:#c084fc; }
+.s-strateji .sinyal-dot { background:#c084fc; }
+.s-notr { color:#5566aa; }
+.s-notr .sinyal-dot { background:#5566aa; }
+
+.fav-btn { background:none; border:none; font-size:22px; cursor:pointer; padding:2px 4px; opacity:.25; transition:opacity .2s; flex-shrink:0; }
+.fav-btn.aktif { opacity:1; }
+.bos-mesaj { text-align:center; padding:60px 20px; color:#333; font-size:14px; }
+
+/* ─── ARAMA EKRANI ─────────────────────────────────── */
+.arama-ekran { display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:#0a0a0f; overflow-y:auto; z-index:200; }
+.arama-ekran-header { padding:14px 12px 10px; background:#0a0a0f; position:sticky; top:0; z-index:10; border-bottom:1px solid #1a1a24; display:flex; align-items:center; gap:10px; }
+.arama-geri { background:none; border:none; color:#888; font-size:26px; cursor:pointer; padding:0 6px 0 0; line-height:1; }
+.arama-ekran-input { flex:1; background:#1a1a24; border:1px solid #2a2a3a; border-radius:10px; padding:10px 14px; font-size:15px; color:#fff; outline:none; }
+.arama-ekran-input::placeholder { color:#333; }
+.arama-sonuc-listesi { padding:8px 12px 20px; }
+
+.arama-sonuc-kart { background:#111118; border-radius:14px; padding:13px 16px; margin-bottom:6px; cursor:pointer; display:flex; align-items:center; justify-content:space-between; gap:10px; transition:background .15s; }
+.arama-sonuc-kart:active { background:#1a1a24; }
+.arama-sonuc-sol { flex:1; }
+.arama-sonuc-ad { font-size:16px; font-weight:700; color:#fff; }
+.arama-sonuc-detay { font-size:11px; color:#555; margin-top:3px; }
+.arama-sonuc-sag { text-align:right; flex-shrink:0; }
+.arama-sonuc-fiyat { font-size:14px; font-weight:700; color:#fff; }
+.arama-sonuc-seviye { font-size:12px; margin-top:2px; }
+.arama-bos { text-align:center; padding:50px 20px; color:#333; font-size:14px; }
+
+/* ─── GEÇMİŞ ARAMALAR ─────────────────────────────── */
+.gecmis-liste { padding:0 12px 4px; display:flex; flex-direction:column; gap:4px; }
+.gecmis-kart { background:#111118; border-radius:12px; padding:11px 14px; display:flex; align-items:center; justify-content:space-between; cursor:pointer; transition:background .15s; }
+.gecmis-kart:active { background:#1a1a24; }
+.gecmis-sol { display:flex; align-items:center; gap:10px; }
+.gecmis-ad { font-size:15px; font-weight:700; color:#fff; }
+.gecmis-fiyat { font-size:11px; color:#555; margin-top:2px; }
+.gecmis-sag { text-align:right; }
+.gecmis-sil { background:none; border:none; color:#333; font-size:18px; cursor:pointer; padding:4px; }
+.gecmis-bos { font-size:12px; color:#333; padding:10px 16px 6px; }
+
+/* ─── HİSSE DETAY EKRANI ───────────────────────────── */
+.detay-ekran { display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:#0a0a0f; overflow-y:auto; z-index:300; }
+.detay-header { padding:16px 16px 12px; background:#0a0a0f; position:sticky; top:0; z-index:10; border-bottom:1px solid #1a1a24; display:flex; align-items:center; gap:10px; }
+.detay-geri { background:none; border:none; color:#888; font-size:26px; cursor:pointer; padding:0; line-height:1; }
+.detay-baslik { font-size:16px; font-weight:700; color:#fff; }
+.detay-icerik { padding:12px 12px 30px; }
+</style>
 </head>
 <body>
 
+<!-- ═══ ANA EKRAN ═══════════════════════════════════════════ -->
 <div id="ana">
-    <div class="header">
-        <h1>BIST Teknik Analiz</h1>
-        <h2 id="karsilama_baslik">Terminali</h2>
-    </div>
-    <div class="uyari-banner">
-        ⚠️ Bu platform yatırım tavsiyesi vermez. Tüm göstergeler algoritmik olup hata içerebilir.
-    </div>
+  <div class="header">
+    <h1>BIST Teknik Analiz</h1>
+    <h2 id="karsilama_baslik">Terminali</h2>
+  </div>
+  <div class="uyari-banner">⚠️ Bu platform yatırım tavsiyesi vermez. Göstergeler algoritmik olup hata içerebilir.</div>
 
-    <!-- ARAMA CUBUĞU -->
-    <div class="arama-kutusu">
-        <span class="arama-ikon">🔍</span>
-        <input class="arama-input" type="text" id="arama-input" placeholder="Hisse ara... (THYAO, GARAN...)" oninput="aramaYap(this.value)" autocomplete="off" autocorrect="off" autocapitalize="characters" spellcheck="false">
-    </div>
-    <div class="arama-sonuc" id="arama-sonuc"></div>
-
-    <!-- OZEL BOLUM ACIK -->
-    <div id="ozel-bolum-acik" style="display:none;">
-        <div class="bolum-baslik" style="color:#ffffff;border-color:#3a0060;">
-            <span>🏅</span> TAVAN TARAMA ÖZEL BÖLÜM
-        </div>
-        <div class="kart-listesi">
-            <div class="kart" style="background:#0d0020;border:1px solid #3a0060;" onclick="goster('ozel_tarama')">
-                <div class="kart-ikon ikon-ozel">🏅</div>
-                <div class="kart-icerik">
-                    <div class="kart-baslik" style="color:#c084fc;">Özel Tarama</div>
-                    <div class="kart-aciklama" style="color:#5b21b6;">Algoritmik özel sinyal listesi</div>
-                    <div class="kart-durum aktif-yazi" id="d-ozel"></div>
-                </div>
-                <div class="kart-ok" style="color:#3a0060;">›</div>
-            </div>
-        </div>
-        <div class="bolum-ayrac"></div>
-    </div>
-
-    <!-- ÖZEL BÖLÜM KİLİTLİ -->
-    <div id="ozel-bolum-kilitli" style="display:none;">
-        <div class="bolum-baslik" style="color:#ffffff;border-color:#1a0030;">
-            <span>🔒</span> TAVAN TARAMA ÖZEL BÖLÜM
-        </div>
-        <div class="ozel-kilitli-banner">
-            <div class="ozel-kilitli-ikon">🔒</div>
-            <div class="ozel-kilitli-yazi">
-                <strong>Bu bölüm kilitli</strong><br>
-                Özel taramaya erişmek için<br>
-                <strong>10 farklı kişiyi</strong> davet et
-            </div>
-        </div>
-        <div class="bolum-ayrac"></div>
-    </div>
-
-    <!-- GÜNLÜK ANALİZ -->
-    <div class="bolum-baslik"><span>📅</span> GÜNLÜK ANALİZ</div>
-
-    <div class="kategori-baslik">Sinyal Gücü</div>
+  <!-- ÖZEL BÖLÜM -->
+  <div id="ozel-bolum-acik" style="display:none;">
+    <div class="bolum-baslik" style="color:#fff;border-color:#3a0060;"><span>🏅</span> TAVAN TARAMA ÖZEL BÖLÜM</div>
     <div class="kart-listesi">
-        <div class="kart" onclick="goster('altin')">
-            <div class="kart-ikon ikon-altin">🏆</div>
-            <div class="kart-icerik">
-                <div class="kart-baslik">Altın Tarama</div>
-                <div class="kart-aciklama">Çoklu göstergenin uyum sağladığı hisseler</div>
-                <div class="kart-durum aktif-yazi" id="d-altin"></div>
-            </div>
-            <div class="kart-ok">›</div>
+      <div class="kart" style="background:#0d0020;border:1px solid #3a0060;" onclick="goster('ozel_tarama')">
+        <div class="kart-ikon ikon-ozel">🏅</div>
+        <div class="kart-icerik">
+          <div class="kart-baslik" style="color:#c084fc;">Özel Tarama</div>
+          <div class="kart-aciklama" style="color:#5b21b6;">Algoritmik özel sinyal listesi</div>
+          <div class="kart-durum aktif-yazi" id="d-ozel"></div>
         </div>
-        <div class="kart" onclick="goster('gumus')">
-            <div class="kart-ikon ikon-gumus">🥈</div>
-            <div class="kart-icerik">
-                <div class="kart-baslik">Gümüş Tarama</div>
-                <div class="kart-aciklama">Güçlü teknik sinyal veren hisseler</div>
-                <div class="kart-durum aktif-yazi" id="d-gumus"></div>
-            </div>
-            <div class="kart-ok">›</div>
-        </div>
-        <div class="kart" onclick="goster('bronz')">
-            <div class="kart-ikon ikon-bronz">🥉</div>
-            <div class="kart-icerik">
-                <div class="kart-baslik">Bronz Tarama</div>
-                <div class="kart-aciklama">Sinyal başlangıcındaki hisseler</div>
-                <div class="kart-durum aktif-yazi" id="d-bronz"></div>
-            </div>
-            <div class="kart-ok">›</div>
-        </div>
+        <div class="kart-ok" style="color:#3a0060;">›</div>
+      </div>
     </div>
+    <div class="bolum-ayrac"></div>
+  </div>
+  <div id="ozel-bolum-kilitli" style="display:none;">
+    <div class="bolum-baslik" style="color:#fff;border-color:#1a0030;"><span>🔒</span> TAVAN TARAMA ÖZEL BÖLÜM</div>
+    <div class="ozel-kilitli-banner">
+      <div class="ozel-kilitli-ikon">🔒</div>
+      <div class="ozel-kilitli-yazi"><strong>Bu bölüm kilitli</strong><br>Özel taramaya erişmek için<br><strong>10 farklı kişiyi</strong> davet et</div>
+    </div>
+    <div class="bolum-ayrac"></div>
+  </div>
 
-    <div class="ayrac"></div>
-    <div class="kategori-baslik">Stratejiler</div>
-    <div class="kart-listesi">
-        <div class="kart" onclick="goster('dip_vurusu')">
-            <div class="kart-ikon ikon-dip">🎣</div>
-            <div class="kart-icerik"><div class="kart-baslik">Dip Vuruşu</div><div class="kart-aciklama">Olası dönüş noktasına yaklaşan hisseler</div></div>
-            <div class="kart-ok">›</div>
-        </div>
-        <div class="kart" onclick="goster('bant_sikismasi')">
-            <div class="kart-ikon ikon-bant">💥</div>
-            <div class="kart-icerik"><div class="kart-baslik">Bant Sıkışması</div><div class="kart-aciklama">Yakında sert hareket beklenen hisseler</div></div>
-            <div class="kart-ok">›</div>
-        </div>
-        <div class="kart" onclick="goster('guc_patlamasi')">
-            <div class="kart-ikon ikon-guc">🚀</div>
-            <div class="kart-icerik"><div class="kart-baslik">Güç Patlaması</div><div class="kart-aciklama">Güçlü momentum sinyali veren hisseler</div></div>
-            <div class="kart-ok">›</div>
-        </div>
-        <div class="kart" onclick="goster('destek_testi')">
-            <div class="kart-ikon ikon-destek">🛡️</div>
-            <div class="kart-icerik"><div class="kart-baslik">Destek Testi</div><div class="kart-aciklama">Kritik destek bölgesini test eden hisseler</div></div>
-            <div class="kart-ok">›</div>
-        </div>
-        <div class="kart" onclick="goster('hacim_bombasi')">
-            <div class="kart-ikon ikon-hacim">💰</div>
-            <div class="kart-icerik"><div class="kart-baslik">Hacim Bombası</div><div class="kart-aciklama">Dikkat çekici hacim hareketi olan hisseler</div></div>
-            <div class="kart-ok">›</div>
-        </div>
-        <div class="kart" onclick="goster('trend_uyumu')">
-            <div class="kart-ikon ikon-trend">🏄</div>
-            <div class="kart-icerik"><div class="kart-baslik">Trend Uyumu</div><div class="kart-aciklama">Trend ile uyumlu hareket eden hisseler</div></div>
-            <div class="kart-ok">›</div>
-        </div>
+  <!-- ARAMA -->
+  <div class="bolum-baslik"><span>🔍</span> HİSSE ARA</div>
+  <div class="kart-listesi">
+    <div class="kart" onclick="aramaEkraniAc()">
+      <div class="kart-ikon ikon-ara">🔍</div>
+      <div class="kart-icerik">
+        <div class="kart-baslik">Manuel Hisse Arama</div>
+        <div class="kart-aciklama">İstediğin hisseyi adıyla ara, tüm sinyalleri gör</div>
+      </div>
+      <div class="kart-ok">›</div>
     </div>
+  </div>
 
-    <div class="ayrac"></div>
-    <div class="kategori-baslik">Teknik Göstergeler</div>
-    <div class="kart-listesi">
-        <div class="kart" onclick="goster('golden_cross')">
-            <div class="kart-ikon ikon-golden">✨</div>
-            <div class="kart-icerik"><div class="kart-baslik">Golden Cross</div><div class="kart-aciklama">Kısa vade uzun vadeyi yukarı kesti</div></div>
-            <div class="kart-ok">›</div>
-        </div>
-        <div class="kart" onclick="goster('death_cross')">
-            <div class="kart-ikon ikon-death">💀</div>
-            <div class="kart-icerik"><div class="kart-baslik">Death Cross</div><div class="kart-aciklama">Kısa vade uzun vadeyi aşağı kesti</div></div>
-            <div class="kart-ok">›</div>
-        </div>
-        <div class="kart" onclick="goster('macd_al')">
-            <div class="kart-ikon ikon-macd">📉</div>
-            <div class="kart-icerik"><div class="kart-baslik">MACD Al Kesişimi</div><div class="kart-aciklama">Momentum göstergesi al sinyali verdi</div></div>
-            <div class="kart-ok">›</div>
-        </div>
-        <div class="kart" onclick="goster('rsi_satim')">
-            <div class="kart-ikon ikon-rsi">📊</div>
-            <div class="kart-icerik"><div class="kart-baslik">RSI Aşırı Satım</div><div class="kart-aciklama">Güç göstergesi aşırı satım bölgesinde</div></div>
-            <div class="kart-ok">›</div>
-        </div>
-        <div class="kart" onclick="goster('bb_alt')">
-            <div class="kart-ikon ikon-bb">🎯</div>
-            <div class="kart-icerik"><div class="kart-baslik">Volatilite Alt Bandı</div><div class="kart-aciklama">Fiyat volatilite alt bandına ulaştı</div></div>
-            <div class="kart-ok">›</div>
-        </div>
-        <div class="kart" onclick="goster('hacim_alarmi')">
-            <div class="kart-ikon ikon-hacim">🔥</div>
-            <div class="kart-icerik"><div class="kart-baslik">Hacim Alarmı</div><div class="kart-aciklama">Dikkat çekici hacim hareketi tespit edildi</div></div>
-            <div class="kart-ok">›</div>
-        </div>
-        <div class="kart" onclick="goster('mum_boga')">
-            <div class="kart-ikon ikon-mum">🕯️</div>
-            <div class="kart-icerik"><div class="kart-baslik">Boğa Formasyonları</div><div class="kart-aciklama">Yükseliş mum formasyonu tespit edildi</div></div>
-            <div class="kart-ok">›</div>
-        </div>
-    </div>
+  <!-- SON ARANANLAR -->
+  <div id="gecmis-bolum" style="display:none;">
+    <div class="bolum-baslik" style="padding-bottom:4px;"><span>🕐</span> SON ARANANLAR</div>
+    <div class="gecmis-liste" id="gecmis-liste"></div>
+  </div>
+  <div class="bolum-ayrac"></div>
 
-    <div class="ayrac"></div>
-    <div class="kategori-baslik">Favoriler</div>
-    <div class="kart-listesi">
-        <div class="kart" onclick="goster('favoriler')">
-            <div class="kart-ikon ikon-fav">⭐</div>
-            <div class="kart-icerik"><div class="kart-baslik">Favorilerim</div><div class="kart-aciklama">Yıldızladığın hisseler</div></div>
-            <div class="kart-ok">›</div>
-        </div>
+  <!-- GÜNLÜK ANALİZ -->
+  <div class="bolum-baslik"><span>📅</span> GÜNLÜK ANALİZ</div>
+  <div class="kategori-baslik">Sinyal Gücü</div>
+  <div class="kart-listesi">
+    <div class="kart" onclick="goster('altin')">
+      <div class="kart-ikon ikon-altin">🏆</div>
+      <div class="kart-icerik"><div class="kart-baslik">Altın Tarama</div><div class="kart-aciklama">Çoklu göstergenin uyum sağladığı hisseler</div><div class="kart-durum aktif-yazi" id="d-altin"></div></div>
+      <div class="kart-ok">›</div>
     </div>
+    <div class="kart" onclick="goster('gumus')">
+      <div class="kart-ikon ikon-gumus">🥈</div>
+      <div class="kart-icerik"><div class="kart-baslik">Gümüş Tarama</div><div class="kart-aciklama">Güçlü teknik sinyal veren hisseler</div><div class="kart-durum aktif-yazi" id="d-gumus"></div></div>
+      <div class="kart-ok">›</div>
+    </div>
+    <div class="kart" onclick="goster('bronz')">
+      <div class="kart-ikon ikon-bronz">🥉</div>
+      <div class="kart-icerik"><div class="kart-baslik">Bronz Tarama</div><div class="kart-aciklama">Sinyal başlangıcındaki hisseler</div><div class="kart-durum aktif-yazi" id="d-bronz"></div></div>
+      <div class="kart-ok">›</div>
+    </div>
+  </div>
 
-    <div class="alt-uyari">
-        Bu platform yalnızca teknik analiz sinyalleri sunar.<br>
-        Yatırım tavsiyesi değildir. Sermaye piyasası işlemleri risk içerir.
-    </div>
+  <div class="ayrac"></div>
+  <div class="kategori-baslik">Stratejiler</div>
+  <div class="kart-listesi">
+    <div class="kart" onclick="goster('bant_sikismasi')"><div class="kart-ikon ikon-bant">💥</div><div class="kart-icerik"><div class="kart-baslik">Bant Sıkışması</div><div class="kart-aciklama">Yakında sert hareket beklenen hisseler</div></div><div class="kart-ok">›</div></div>
+    <div class="kart" onclick="goster('guc_patlamasi')"><div class="kart-ikon ikon-guc">🚀</div><div class="kart-icerik"><div class="kart-baslik">Güç Patlaması</div><div class="kart-aciklama">Güçlü momentum sinyali veren hisseler</div></div><div class="kart-ok">›</div></div>
+    <div class="kart" onclick="goster('destek_testi')"><div class="kart-ikon ikon-destek">🛡️</div><div class="kart-icerik"><div class="kart-baslik">Destek Testi</div><div class="kart-aciklama">Kritik destek bölgesini test eden hisseler</div></div><div class="kart-ok">›</div></div>
+    <div class="kart" onclick="goster('hacim_bombasi')"><div class="kart-ikon ikon-hacim">💰</div><div class="kart-icerik"><div class="kart-baslik">Hacim Bombası</div><div class="kart-aciklama">Dikkat çekici hacim hareketi olan hisseler</div></div><div class="kart-ok">›</div></div>
+    <div class="kart" onclick="goster('trend_uyumu')"><div class="kart-ikon ikon-trend">🏄</div><div class="kart-icerik"><div class="kart-baslik">Trend Uyumu</div><div class="kart-aciklama">Trend ile uyumlu hareket eden hisseler</div></div><div class="kart-ok">›</div></div>
+  </div>
+
+  <div class="ayrac"></div>
+  <div class="kategori-baslik">Teknik Göstergeler</div>
+  <div class="kart-listesi">
+    <div class="kart" onclick="goster('golden_cross')"><div class="kart-ikon ikon-golden">✨</div><div class="kart-icerik"><div class="kart-baslik">Golden Cross</div><div class="kart-aciklama">Kısa vade uzun vadeyi yukarı kesti</div></div><div class="kart-ok">›</div></div>
+    <div class="kart" onclick="goster('death_cross')"><div class="kart-ikon ikon-death">💀</div><div class="kart-icerik"><div class="kart-baslik">Death Cross</div><div class="kart-aciklama">Kısa vade uzun vadeyi aşağı kesti</div></div><div class="kart-ok">›</div></div>
+    <div class="kart" onclick="goster('macd_al')"><div class="kart-ikon ikon-macd">📉</div><div class="kart-icerik"><div class="kart-baslik">MACD Al Kesişimi</div><div class="kart-aciklama">Momentum göstergesi al sinyali verdi</div></div><div class="kart-ok">›</div></div>
+    <div class="kart" onclick="goster('rsi_satim')"><div class="kart-ikon ikon-rsi">📊</div><div class="kart-icerik"><div class="kart-baslik">RSI Aşırı Satım</div><div class="kart-aciklama">Güç göstergesi aşırı satım bölgesinde</div></div><div class="kart-ok">›</div></div>
+    <div class="kart" onclick="goster('bb_alt')"><div class="kart-ikon ikon-bb">🎯</div><div class="kart-icerik"><div class="kart-baslik">Volatilite Alt Bandı</div><div class="kart-aciklama">Fiyat volatilite alt bandına ulaştı</div></div><div class="kart-ok">›</div></div>
+    <div class="kart" onclick="goster('hacim_alarmi')"><div class="kart-ikon ikon-hacim">🔥</div><div class="kart-icerik"><div class="kart-baslik">Hacim Alarmı</div><div class="kart-aciklama">Dikkat çekici hacim hareketi tespit edildi</div></div><div class="kart-ok">›</div></div>
+    <div class="kart" onclick="goster('mum_boga')"><div class="kart-ikon ikon-mum">🕯️</div><div class="kart-icerik"><div class="kart-baslik">Boğa Formasyonları</div><div class="kart-aciklama">Yükseliş mum formasyonu tespit edildi</div></div><div class="kart-ok">›</div></div>
+  </div>
+
+  <div class="ayrac"></div>
+  <div class="kategori-baslik">Favoriler</div>
+  <div class="kart-listesi">
+    <div class="kart" onclick="goster('favoriler')"><div class="kart-ikon ikon-fav">⭐</div><div class="kart-icerik"><div class="kart-baslik">Favorilerim</div><div class="kart-aciklama">Yıldızladığın hisseler</div></div><div class="kart-ok">›</div></div>
+  </div>
+  <div class="alt-uyari">Bu platform yalnızca teknik analiz sinyalleri sunar.<br>Yatırım tavsiyesi değildir. Sermaye piyasası işlemleri risk içerir.</div>
 </div>
 
-<!-- SONUÇ EKRANI -->
+<!-- ═══ TARAMA SONUÇ EKRANI ════════════════════════════════ -->
 <div class="sonuc-ekran" id="sonuc">
-    <div class="sonuc-header">
-        <div class="sonuc-baslik" id="sonuc-baslik">Sonuçlar</div>
-        <div class="sonuc-tarih" id="sonuc-tarih"></div>
-    </div>
-    <div class="sayac" id="sayac"></div>
-    <div class="hisse-listesi" id="liste"></div>
-    <div class="alt-uyari">⚠️ Yatırım tavsiyesi değildir.</div>
+  <div class="sonuc-header">
+    <div class="sonuc-baslik" id="sonuc-baslik">Sonuçlar</div>
+    <div class="sonuc-tarih" id="sonuc-tarih"></div>
+  </div>
+  <div class="sayac" id="sayac"></div>
+  <div class="hisse-listesi" id="liste"></div>
+  <div class="alt-uyari">⚠️ Yatırım tavsiyesi değildir.</div>
+</div>
+
+<!-- ═══ ARAMA EKRANI ══════════════════════════════════════ -->
+<div class="arama-ekran" id="arama-ekran">
+  <div class="arama-ekran-header">
+    <button class="arama-geri" onclick="aramaEkraniKapat()">‹</button>
+    <input class="arama-ekran-input" type="text" id="arama-ekran-input"
+      placeholder="Hisse ara... (THYAO, GARAN, SISE...)"
+      oninput="aramaYap(this.value)"
+      autocomplete="off" autocorrect="off" autocapitalize="characters" spellcheck="false">
+  </div>
+  <div class="arama-sonuc-listesi" id="arama-sonuc-listesi">
+    <div class="arama-bos">🔍 Hisse kodu yazın</div>
+  </div>
+</div>
+
+<!-- ═══ HİSSE DETAY EKRANI ════════════════════════════════ -->
+<div class="detay-ekran" id="detay-ekran">
+  <div class="detay-header">
+    <button class="detay-geri" onclick="detayKapat()">‹</button>
+    <div class="detay-baslik" id="detay-baslik">Hisse Detayı</div>
+  </div>
+  <div class="detay-icerik" id="detay-icerik"></div>
 </div>
 
 <script>
-    const tg = window.Telegram.WebApp;
-    tg.expand();
-    const isim = tg.initDataUnsafe?.user?.first_name || "Yatırımcı";
-    document.getElementById('karsilama_baslik').textContent = 'Merhaba, ' + isim + '!';
+const tg = window.Telegram.WebApp;
+tg.expand();
+const isim = tg.initDataUnsafe?.user?.first_name || "Yatırımcı";
+document.getElementById('karsilama_baslik').textContent = 'Merhaba, ' + isim + '!';
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const ozelAcik = urlParams.get('ozel') === '1';
+const urlParams = new URLSearchParams(window.location.search);
+const ozelAcik  = urlParams.get('ozel') === '1';
+document.getElementById('ozel-bolum-acik').style.display   = ozelAcik  ? 'block' : 'none';
+document.getElementById('ozel-bolum-kilitli').style.display = !ozelAcik ? 'block' : 'none';
 
-    document.getElementById('ozel-bolum-acik').style.display   = ozelAcik  ? 'block' : 'none';
-    document.getElementById('ozel-bolum-kilitli').style.display = !ozelAcik ? 'block' : 'none';
+let veri        = null;
+let favoriler   = JSON.parse(localStorage.getItem('favoriler') || '[]');
+let aktifTip    = null;
+let aramaAktif  = false;
+let detayGerisi = null;
 
-    let veri = null;
-    let favoriler = JSON.parse(localStorage.getItem('favoriler') || '[]');
-    let aktifTip = null;
+const MAX_GECMIS = 5;
+let sonArananlar = JSON.parse(localStorage.getItem('sonArananlar') || '[]');
 
-    function veriCek() {
-        fetch('sonuclar.json?t=' + Date.now())
-            .then(r => r.json())
-            .then(d => {
-                veri = d;
-                durumGuncelle();
-                if (aktifTip) goster(aktifTip);
-            }).catch(() => {});
-    }
+function gecmisEkle(ad) {
+  sonArananlar = [ad, ...sonArananlar.filter(x => x !== ad)].slice(0, MAX_GECMIS);
+  localStorage.setItem('sonArananlar', JSON.stringify(sonArananlar));
+  gecmisRender();
+}
+function gecmisSil(ad, e) {
+  e.stopPropagation();
+  sonArananlar = sonArananlar.filter(x => x !== ad);
+  localStorage.setItem('sonArananlar', JSON.stringify(sonArananlar));
+  gecmisRender();
+}
+function gecmisRender() {
+  const bolum = document.getElementById('gecmis-bolum');
+  const liste = document.getElementById('gecmis-liste');
+  if (!sonArananlar.length) { bolum.style.display = 'none'; return; }
+  bolum.style.display = 'block';
+  liste.innerHTML = sonArananlar.map(ad => {
+    const h = veri?.hisseler?.[ad];
+    const fiyat = h ? h.kapanis + ' TL' : '—';
+    const sev   = {'Altin':'🏆','Gumus':'🥈','Bronz':'🥉'}[h?.altin] || '';
+    return `<div class="gecmis-kart" onclick="aramaHisseDetay('${ad}')">
+      <div class="gecmis-sol">
+        <div style="font-size:18px;">${sev || '🔍'}</div>
+        <div><div class="gecmis-ad">${ad}</div><div class="gecmis-fiyat">${fiyat}</div></div>
+      </div>
+      <button class="gecmis-sil" onclick="gecmisSil('${ad}',event)">✕</button>
+    </div>`;
+  }).join('');
+}
 
-    veriCek();
-    setInterval(veriCek, 5 * 60 * 1000);
-    tg.BackButton.onClick(function() { geriDon(); });
+function veriCek() {
+  fetch('sonuclar.json?t=' + Date.now())
+    .then(r => r.json())
+    .then(d => { veri = d; durumGuncelle(); gecmisRender(); if (aktifTip) goster(aktifTip); })
+    .catch(() => {});
+}
+veriCek();
+setInterval(veriCek, 5 * 60 * 1000);
 
-    function durumGuncelle() {
-        if (!veri) return;
-        ['altin','gumus','bronz'].forEach(id => {
-            const d = document.getElementById('d-' + id);
-            if (d) { d.textContent = '✅ ' + (veri.tarih || ''); d.className = 'kart-durum aktif-yazi'; }
-        });
-        if (ozelAcik) {
-            const ozelSayi = Object.values(veri.hisseler || {}).filter(h => h.ozel_tarama).length;
-            const d = document.getElementById('d-ozel');
-            if (d) d.textContent = '✅ ' + ozelSayi + ' hisse · ' + (veri.tarih || '');
-        }
-    }
+tg.BackButton.onClick(function() {
+  if (document.getElementById('detay-ekran').style.display === 'block') { detayKapat(); }
+  else if (aramaAktif) { aramaEkraniKapat(); }
+  else if (aktifTip) { geriDon(); }
+});
 
-    const BOGA_LIST     = ["Yutan Boga","Cekic","Ters Cekic","Sabah Yildizi","Boga Harami","3 Beyaz Asker"];
-    const STRATEJI_LIST = ["Dip Vurusu","Bant Sikismasi","Guc Patlamasi","Destek Testi","Hacim Bombasi","Trend Uyumu"];
+function durumGuncelle() {
+  if (!veri) return;
+  ['altin','gumus','bronz'].forEach(id => {
+    const d = document.getElementById('d-' + id);
+    if (d) { d.textContent = '✅ ' + (veri.tarih || ''); d.className = 'kart-durum aktif-yazi'; }
+  });
+  if (ozelAcik) {
+    const ozelSayi = Object.values(veri.hisseler || {}).filter(h => h.ozel_tarama).length;
+    const d = document.getElementById('d-ozel');
+    if (d) d.textContent = '✅ ' + ozelSayi + ' hisse · ' + (veri.tarih || '');
+  }
+}
 
-    const BASLIKLAR = {
-        ozel_tarama:    "🏅 Özel Tarama",
-        altin:          "🏆 Altın Tarama",
-        gumus:          "🥈 Gümüş Tarama",
-        bronz:          "🥉 Bronz Tarama",
-        dip_vurusu:     "🎣 Dip Vuruşu",
-        bant_sikismasi: "💥 Bant Sıkışması",
-        guc_patlamasi:  "🚀 Güç Patlaması",
-        destek_testi:   "🛡️ Destek Testi",
-        hacim_bombasi:  "💰 Hacim Bombası",
-        trend_uyumu:    "🏄 Trend Uyumu",
-        golden_cross:   "✨ Golden Cross",
-        death_cross:    "💀 Death Cross",
-        macd_al:        "📉 MACD Al Kesişimi",
-        rsi_satim:      "📊 RSI Aşırı Satım",
-        bb_alt:         "🎯 Volatilite Alt Bandı",
-        hacim_alarmi:   "🔥 Hacim Alarmı",
-        mum_boga:       "🕯️ Boğa Formasyonları",
-        favoriler:      "⭐ Favorilerim"
-    };
+const BOGA_LIST     = ["Yutan Boga","Cekic","Ters Cekic","Sabah Yildizi","Boga Harami","3 Beyaz Asker"];
+const STRATEJI_LIST = ["Dip Vurusu","Bant Sikismasi","Guc Patlamasi","Destek Testi","Hacim Bombasi","Trend Uyumu"];
+const NEGATIF_LIST  = ["MACD Negatif","Death Cross","RSI Asiri Alim","BB Ust Bant",
+                       "Fiyat EMA20 Altinda","Fiyat EMA50 Altinda","Fiyat SMA200 Altinda",
+                       "EMA20 < EMA50","RSI Dusuyor"];
 
-    function rsiRenk(rsi) {
-        if (rsi === null || rsi === undefined) return 'rsi-orta';
-        if (rsi < 35) return 'rsi-dusuk';
-        if (rsi > 65) return 'rsi-yuksek';
-        return 'rsi-orta';
-    }
+function sinyal_sinif(s) {
+  if (BOGA_LIST.includes(s) || ["MACD Al Kesisimi","Golden Cross","RSI Asiri Satim",
+      "BB Alt Bant","Hacim Alarmi","MACD Pozitif","Fiyat EMA20 Ustunde",
+      "Fiyat EMA50 Ustunde","Fiyat SMA200 Ustunde","EMA20 > EMA50",
+      "RSI Yukseliyor"].includes(s)) return 's-pozitif';
+  if (NEGATIF_LIST.includes(s)) return 's-negatif';
+  if (STRATEJI_LIST.includes(s)) return 's-strateji';
+  return 's-notr';
+}
 
-    function macdDeger(h) {
-        if (h.macd === null || h.macd === undefined) return { metin: '—', renk: 'hacim-normal' };
-        if (h.macd > (h.macd_sinyal || 0)) return { metin: '▲ +', renk: 'macd-pozitif' };
-        return { metin: '▼ −', renk: 'macd-negatif' };
-    }
+const SINYAL_GRUPLARI = [
+  { baslik: "📈 EMA / Trend", liste: ["Golden Cross","Death Cross","EMA20 > EMA50","EMA20 < EMA50",
+    "Fiyat EMA20 Ustunde","Fiyat EMA20 Altinda","Fiyat EMA50 Ustunde","Fiyat EMA50 Altinda",
+    "Fiyat SMA200 Ustunde","Fiyat SMA200 Altinda","Trend Uyumu"] },
+  { baslik: "⚡ MACD", liste: ["MACD Al Kesisimi","MACD Pozitif","MACD Negatif"] },
+  { baslik: "📊 RSI", liste: ["RSI Asiri Satim","RSI Asiri Alim","RSI Yukseliyor","RSI Dusuyor"] },
+  { baslik: "🎯 Bollinger", liste: ["BB Alt Bant","BB Ust Bant","Bant Sikismasi"] },
+  { baslik: "🕯️ Mum Formasyonları", liste: BOGA_LIST },
+  { baslik: "💡 Strateji Sinyalleri", liste: STRATEJI_LIST },
+  { baslik: "🔥 Hacim", liste: ["Hacim Alarmi","Hacim Bombasi"] },
+];
 
-    function hacimMetin(oran) {
-        if (oran === null || oran === undefined) return { metin: '—', renk: 'hacim-normal' };
-        if (oran >= 2.5) return { metin: '🔥 ' + oran + 'x', renk: 'hacim-yuksek' };
-        if (oran >= 1.5) return { metin: '↑ ' + oran + 'x', renk: 'hacim-yuksek' };
-        return { metin: oran + 'x', renk: 'hacim-normal' };
-    }
+function sinyal_html_tum(sinyaller) {
+  if (!sinyaller || !sinyaller.length)
+    return '<div style="color:#333;font-size:12px;padding:4px 0;">Aktif sinyal yok</div>';
+  let html = '';
+  SINYAL_GRUPLARI.forEach(grup => {
+    const uyesler = sinyaller.filter(s => grup.liste.includes(s));
+    if (!uyesler.length) return;
+    html += `<div class="sinyal-grup-baslik">${grup.baslik}</div><div class="sinyal-grid">`;
+    uyesler.forEach(s => {
+      html += `<div class="sinyal-item ${sinyal_sinif(s)}"><div class="sinyal-dot"></div>${s}</div>`;
+    });
+    html += '</div>';
+  });
+  const gruplananlar = SINYAL_GRUPLARI.flatMap(g => g.liste);
+  const diger = sinyaller.filter(s => !gruplananlar.includes(s));
+  if (diger.length) {
+    html += '<div class="sinyal-grup-baslik">🔹 Diğer</div><div class="sinyal-grid">';
+    diger.forEach(s => { html += `<div class="sinyal-item s-notr"><div class="sinyal-dot"></div>${s}</div>`; });
+    html += '</div>';
+  }
+  return html;
+}
 
-    function getBadgeClass(s) {
-        if (STRATEJI_LIST.includes(s)) return "badge-strateji";
-        if (BOGA_LIST.includes(s) || ["MACD Al Kesisimi","Golden Cross","RSI Asiri Satim","BB Alt Bant","Hacim Alarmi"].includes(s)) return "badge-boga";
-        return "badge-notr";
-    }
+function rsiRenk(rsi) {
+  if (rsi === null || rsi === undefined) return 'rsi-orta';
+  if (rsi < 35) return 'rsi-dusuk';
+  if (rsi > 65) return 'rsi-yuksek';
+  return 'rsi-orta';
+}
+function macdDeger(h) {
+  if (h.macd === null || h.macd === undefined) return { metin:'—', renk:'hacim-normal' };
+  const sin = h.macd_sinyal !== null && h.macd_sinyal !== undefined ? h.macd_sinyal : 0;
+  return h.macd > sin ? { metin:'▲ Pozitif', renk:'macd-pozitif' } : { metin:'▼ Negatif', renk:'macd-negatif' };
+}
+function hacimMetin(oran) {
+  if (oran === null || oran === undefined) return { metin:'—', renk:'hacim-normal' };
+  if (oran >= 2.5) return { metin:'🔥 '+oran+'x', renk:'hacim-yuksek' };
+  if (oran >= 1.5) return { metin:'↑ '+oran+'x', renk:'hacim-yuksek' };
+  return { metin:oran+'x', renk:'hacim-normal' };
+}
 
-    function goster(tip) {
-        aktifTip = tip;
-        document.getElementById('ana').style.display = 'none';
-        const sonucEkran = document.getElementById('sonuc');
-        sonucEkran.style.display = 'block';
-        sonucEkran.scrollTop = 0;
-        tg.BackButton.show();
+function hisseKartHTML(ad, h, isOzel) {
+  const favAktif  = favoriler.includes(ad);
+  const kartClass = isOzel ? 'hisse-kart ozel-kart' : 'hisse-kart';
+  const rRenk     = rsiRenk(h.rsi);
+  const macd      = macdDeger(h);
+  const hacim     = hacimMetin(h.hacim_oran);
+  return `
+  <div class="${kartClass}">
+    <div class="hisse-ust">
+      <div class="hisse-sol">
+        <div class="hisse-ad">${ad}</div>
+        <div class="hisse-fiyat">${h.kapanis} TL${h.altin ? ' · ' + {'Altin':'🏆','Gumus':'🥈','Bronz':'🥉'}[h.altin] : ''}</div>
+      </div>
+      <button class="fav-btn ${favAktif?'aktif':''}" onclick="favToggle('${ad}')" id="fav_${ad}">⭐</button>
+    </div>
+    <div class="gostergeler">
+      <div class="gosterge-pill">
+        <span class="gosterge-etiket">RSI</span>
+        <span class="gosterge-deger ${rRenk}">${h.rsi !== null && h.rsi !== undefined ? h.rsi : '—'}</span>
+      </div>
+      <div class="gosterge-pill">
+        <span class="gosterge-etiket">MACD</span>
+        <span class="gosterge-deger ${macd.renk}">${macd.metin}</span>
+      </div>
+      <div class="gosterge-pill">
+        <span class="gosterge-etiket">HACİM</span>
+        <span class="gosterge-deger ${hacim.renk}">${hacim.metin}</span>
+      </div>
+    </div>
+    <div class="sinyal-bolum">${sinyal_html_tum(h.sinyaller)}</div>
+  </div>`;
+}
 
-        const isOzel = tip === 'ozel_tarama';
-        document.getElementById('sonuc-baslik').textContent = BASLIKLAR[tip] || tip;
-        document.getElementById('sonuc-tarih').textContent = veri ? '📅 Günlük — ' + veri.tarih : '';
+const BASLIKLAR = {
+  ozel_tarama:'🏅 Özel Tarama', altin:'🏆 Altın Tarama', gumus:'🥈 Gümüş Tarama',
+  bronz:'🥉 Bronz Tarama', bant_sikismasi:'💥 Bant Sıkışması',
+  guc_patlamasi:'🚀 Güç Patlaması', destek_testi:'🛡️ Destek Testi',
+  hacim_bombasi:'💰 Hacim Bombası', trend_uyumu:'🏄 Trend Uyumu',
+  golden_cross:'✨ Golden Cross', death_cross:'💀 Death Cross',
+  macd_al:'📉 MACD Al Kesişimi', rsi_satim:'📊 RSI Aşırı Satım',
+  bb_alt:'🎯 Volatilite Alt Bandı', hacim_alarmi:'🔥 Hacim Alarmı',
+  mum_boga:'🕯️ Boğa Formasyonları', favoriler:'⭐ Favorilerim'
+};
 
-        const liste = document.getElementById('liste');
-        if (!veri) { liste.innerHTML = '<div class="bos-mesaj">Veri bulunamadı.</div>'; return; }
+function goster(tip) {
+  aktifTip = tip;
+  document.getElementById('ana').style.display = 'none';
+  const se = document.getElementById('sonuc');
+  se.style.display = 'block'; se.scrollTop = 0;
+  tg.BackButton.show();
+  document.getElementById('sonuc-baslik').textContent = BASLIKLAR[tip] || tip;
+  document.getElementById('sonuc-tarih').textContent  = veri ? '📅 Günlük — ' + veri.tarih : '';
+  const liste = document.getElementById('liste');
+  if (!veri) { liste.innerHTML = '<div class="bos-mesaj">Veri yükleniyor...</div>'; return; }
+  const isOzel = tip === 'ozel_tarama';
+  let html = ''; let sayac = 0;
+  for (const [ad, h] of Object.entries(veri.hisseler)) {
+    let gm = false;
+    if (tip==='ozel_tarama'    && h.ozel_tarama)                            gm=true;
+    if (tip==='altin'          && h.altin==='Altin')                        gm=true;
+    if (tip==='gumus'          && h.altin==='Gumus')                        gm=true;
+    if (tip==='bronz'          && h.altin==='Bronz')                        gm=true;
+    if (tip==='bant_sikismasi' && h.bant_sikismasi)                          gm=true;
+    if (tip==='guc_patlamasi'  && h.guc_patlamasi)                           gm=true;
+    if (tip==='destek_testi'   && h.destek_testi)                            gm=true;
+    if (tip==='hacim_bombasi'  && h.hacim_bombasi)                           gm=true;
+    if (tip==='trend_uyumu'    && h.trend_uyumu)                             gm=true;
+    if (tip==='golden_cross'   && h.sinyaller.includes('Golden Cross'))      gm=true;
+    if (tip==='death_cross'    && h.sinyaller.includes('Death Cross'))       gm=true;
+    if (tip==='macd_al'        && h.sinyaller.includes('MACD Al Kesisimi'))  gm=true;
+    if (tip==='rsi_satim'      && h.sinyaller.includes('RSI Asiri Satim'))   gm=true;
+    if (tip==='bb_alt'         && h.sinyaller.includes('BB Alt Bant'))       gm=true;
+    if (tip==='hacim_alarmi'   && h.sinyaller.includes('Hacim Alarmi'))      gm=true;
+    if (tip==='mum_boga'       && h.sinyaller.some(s=>BOGA_LIST.includes(s))) gm=true;
+    if (tip==='favoriler'      && favoriler.includes(ad))                    gm=true;
+    if (gm) { sayac++; html += hisseKartHTML(ad, h, isOzel); }
+  }
+  document.getElementById('sayac').textContent = sayac > 0 ? sayac + ' hisse bulundu' : '';
+  liste.innerHTML = html || '<div class="bos-mesaj">Bu kategoride sinyal bulunamadı.</div>';
+}
 
-        const hisseler = veri.hisseler;
-        let html = ''; let sayac = 0;
+function geriDon() {
+  aktifTip = null;
+  document.getElementById('ana').style.display = 'block';
+  document.getElementById('sonuc').style.display = 'none';
+  tg.BackButton.hide();
+}
 
-        for (const [ad, h] of Object.entries(hisseler)) {
-            let goster_mi = false;
-            if (tip === 'ozel_tarama'    && h.ozel_tarama) goster_mi = true;
-            if (tip === 'altin'          && h.altin === 'Altin') goster_mi = true;
-            if (tip === 'gumus'          && h.altin === 'Gumus') goster_mi = true;
-            if (tip === 'bronz'          && h.altin === 'Bronz') goster_mi = true;
-            if (tip === 'dip_vurusu'     && h.dip_vurusu) goster_mi = true;
-            if (tip === 'bant_sikismasi' && h.bant_sikismasi) goster_mi = true;
-            if (tip === 'guc_patlamasi'  && h.guc_patlamasi) goster_mi = true;
-            if (tip === 'destek_testi'   && h.destek_testi) goster_mi = true;
-            if (tip === 'hacim_bombasi'  && h.hacim_bombasi) goster_mi = true;
-            if (tip === 'trend_uyumu'    && h.trend_uyumu) goster_mi = true;
-            if (tip === 'golden_cross'   && h.sinyaller.includes('Golden Cross')) goster_mi = true;
-            if (tip === 'death_cross'    && h.sinyaller.includes('Death Cross')) goster_mi = true;
-            if (tip === 'macd_al'        && h.sinyaller.includes('MACD Al Kesisimi')) goster_mi = true;
-            if (tip === 'rsi_satim'      && h.sinyaller.includes('RSI Asiri Satim')) goster_mi = true;
-            if (tip === 'bb_alt'         && h.sinyaller.includes('BB Alt Bant')) goster_mi = true;
-            if (tip === 'hacim_alarmi'   && h.sinyaller.includes('Hacim Alarmi')) goster_mi = true;
-            if (tip === 'mum_boga'       && h.sinyaller.some(s => BOGA_LIST.includes(s))) goster_mi = true;
-            if (tip === 'favoriler'      && favoriler.includes(ad)) goster_mi = true;
+function aramaEkraniAc() {
+  aramaAktif = true;
+  document.getElementById('arama-ekran').style.display = 'block';
+  tg.BackButton.show();
+  setTimeout(() => document.getElementById('arama-ekran-input').focus(), 150);
+}
+function aramaEkraniKapat() {
+  aramaAktif = false;
+  document.getElementById('arama-ekran').style.display = 'none';
+  document.getElementById('arama-ekran-input').value = '';
+  document.getElementById('arama-sonuc-listesi').innerHTML = '<div class="arama-bos">🔍 Hisse kodu yazın</div>';
+  if (!aktifTip) tg.BackButton.hide();
+}
 
-            if (goster_mi) {
-                sayac++;
-                const favAktif  = favoriler.includes(ad);
-                const kartClass = isOzel ? 'hisse-kart ozel-kart' : 'hisse-kart';
+function aramaYap(kelime) {
+  kelime = kelime.trim().toUpperCase();
+  const liste = document.getElementById('arama-sonuc-listesi');
+  if (!kelime) { liste.innerHTML = '<div class="arama-bos">🔍 Hisse kodu yazın</div>'; return; }
+  if (!veri)   { liste.innerHTML = '<div class="arama-bos">⏳ Veri yükleniyor...</div>'; return; }
+  const eslesler = Object.entries(veri.hisseler).filter(([ad]) => ad.includes(kelime));
+  if (!eslesler.length) { liste.innerHTML = '<div class="arama-bos">❌ "'+kelime+'" bulunamadı</div>'; return; }
+  const sevEmo = {'Altin':'🏆','Gumus':'🥈','Bronz':'🥉'};
+  liste.innerHTML = eslesler.slice(0,20).map(([ad, h]) => {
+    const rRenk  = h.rsi < 35 ? '#26a69a' : h.rsi > 65 ? '#ef5350' : '#666';
+    const macdOk = (h.macd !== null && h.macd !== undefined)
+      ? (h.macd > (h.macd_sinyal||0) ? '<span style="color:#26a69a">▲</span>' : '<span style="color:#ef5350">▼</span>') : '—';
+    const hacimStr = h.hacim_oran >= 2
+      ? `<span style="color:#f59e0b">🔥${h.hacim_oran}x</span>`
+      : (h.hacim_oran ? h.hacim_oran+'x' : '—');
+    return `<div class="arama-sonuc-kart" onclick="aramaHisseDetay('${ad}')">
+      <div class="arama-sonuc-sol">
+        <div class="arama-sonuc-ad">${ad}</div>
+        <div class="arama-sonuc-detay">RSI: <span style="color:${rRenk}">${h.rsi||'—'}</span> · MACD: ${macdOk} · Hacim: ${hacimStr} · ${h.sinyaller.length} sinyal</div>
+      </div>
+      <div class="arama-sonuc-sag">
+        <div class="arama-sonuc-fiyat">${h.kapanis} TL</div>
+        <div class="arama-sonuc-seviye">${sevEmo[h.altin]||'—'} ${h.altin||'Sinyal Yok'}</div>
+      </div>
+    </div>`;
+  }).join('');
+}
 
-                const rRenk = rsiRenk(h.rsi);
-                const macd  = macdDeger(h);
-                const hacim = hacimMetin(h.hacim_oran);
+function aramaHisseDetay(ad) {
+  if (!veri || !veri.hisseler[ad]) return;
+  gecmisEkle(ad);
+  detayGerisi = aramaAktif ? 'arama' : 'ana';
+  const h = veri.hisseler[ad];
+  document.getElementById('detay-baslik').textContent = '🔍 ' + ad;
+  document.getElementById('detay-icerik').innerHTML =
+    hisseKartHTML(ad, h, false) +
+    '<div class="alt-uyari" style="margin-top:4px;">⚠️ Yatırım tavsiyesi değildir.</div>';
+  document.getElementById('detay-ekran').style.display = 'block';
+  document.getElementById('detay-ekran').scrollTop = 0;
+  tg.BackButton.show();
+}
 
-                let badgeHTML = '';
-                if (isOzel) {
-                    badgeHTML = '<span class="badge badge-ozel">🏅 Özel Sinyal</span>';
-                } else {
-                    const gosterilecek = h.sinyaller.filter(s => getBadgeClass(s) !== 'badge-notr').slice(0, 5);
-                    badgeHTML = gosterilecek.map(s => `<span class="badge ${getBadgeClass(s)}">${s}</span>`).join('');
-                }
+function detayKapat() {
+  document.getElementById('detay-ekran').style.display = 'none';
+  if (detayGerisi === 'arama') document.getElementById('arama-ekran').style.display = 'block';
+  detayGerisi = null;
+}
 
-                html += `
-                <div class="${kartClass}">
-                    <div class="hisse-ust">
-                        <div class="hisse-sol">
-                            <div class="hisse-ad">${ad}</div>
-                            <div class="hisse-fiyat">${h.kapanis} TL</div>
-                        </div>
-                        <button class="fav-btn ${favAktif ? 'aktif' : ''}" onclick="favToggle('${ad}')" id="fav_${ad}">⭐</button>
-                    </div>
-                    <div class="gostergeler">
-                        <div class="gosterge-pill">
-                            <span class="gosterge-etiket">RSI</span>
-                            <span class="gosterge-deger ${rRenk}">${h.rsi !== null && h.rsi !== undefined ? h.rsi : '—'}</span>
-                        </div>
-                        <div class="gosterge-pill">
-                            <span class="gosterge-etiket">MACD</span>
-                            <span class="gosterge-deger ${macd.renk}">${macd.metin}</span>
-                        </div>
-                        <div class="gosterge-pill">
-                            <span class="gosterge-etiket">HACİM</span>
-                            <span class="gosterge-deger ${hacim.renk}">${hacim.metin}</span>
-                        </div>
-                    </div>
-                    <div class="badge-listesi">${badgeHTML}</div>
-                    <div class="hisse-linkler">
-                        <a class="hisse-link tv" href="https://tr.tradingview.com/chart/?symbol=BIST:${ad}" target="_blank">
-                            📈 TradingView
-                        </a>
-                    </div>
-                </div>`;
-            }
-        }
-
-        document.getElementById('sayac').textContent = sayac > 0 ? sayac + ' hisse bulundu' : '';
-        liste.innerHTML = html || '<div class="bos-mesaj">Bu kategoride sinyal bulunamadı.</div>';
-    }
-
-    function favToggle(ad) {
-        favoriler = favoriler.includes(ad) ? favoriler.filter(f => f !== ad) : [...favoriler, ad];
-        localStorage.setItem('favoriler', JSON.stringify(favoriler));
-        const btn = document.getElementById('fav_' + ad);
-        if (btn) btn.classList.toggle('aktif', favoriler.includes(ad));
-    }
-
-    function geriDon() {
-        aktifTip = null;
-        document.getElementById('ana').style.display = 'block';
-        document.getElementById('sonuc').style.display = 'none';
-        tg.BackButton.hide();
-    }
-    function aramaYap(kelime) {
-        const kutu = document.getElementById('arama-sonuc');
-        kelime = kelime.trim().toUpperCase();
-        if (!kelime) { kutu.style.display='none'; kutu.innerHTML=''; return; }
-        if (!veri) { kutu.style.display='block'; kutu.innerHTML='<div class="arama-bos">Veri yükleniyor...</div>'; return; }
-        const eslesler = Object.entries(veri.hisseler).filter(([ad]) => ad.includes(kelime)).slice(0,6);
-        if (!eslesler.length) { kutu.style.display='block'; kutu.innerHTML='<div class="arama-bos">Hisse bulunamadı</div>'; return; }
-        kutu.style.display='block';
-        kutu.innerHTML = eslesler.map(([ad, h]) => {
-            const seviye = {'Altin':'🏆','Gumus':'🥈','Bronz':'🥉'}[h.altin] || '—';
-            const rRenk = h.rsi < 35 ? '#26a69a' : h.rsi > 65 ? '#ef5350' : '#888';
-            const macdOk = (h.macd !== null && h.macd !== undefined && h.macd_sinyal !== null)
-                ? (h.macd > h.macd_sinyal ? '<span style="color:#26a69a">▲</span>' : '<span style="color:#ef5350">▼</span>') : '—';
-            const hacimStr = h.hacim_oran >= 2 ? `<span style="color:#f59e0b">🔥${h.hacim_oran}x</span>` : `${h.hacim_oran || '—'}x`;
-            return `<div class="arama-sonuc-item" onclick="aramaSecim('${ad}')">
-                <div><div class="arama-sonuc-ad">${ad}</div>
-                <div class="arama-sonuc-fiyat">${h.kapanis} TL · RSI:<span style="color:${rRenk}">${h.rsi}</span> · MACD:${macdOk} · Hacim:${hacimStr}</div></div>
-                <div class="arama-sonuc-seviye">${seviye}</div></div>`;
-        }).join('');
-    }
-
-    function aramaSecim(ad) {
-        document.getElementById('arama-input').value = '';
-        document.getElementById('arama-sonuc').style.display = 'none';
-        if (!veri || !veri.hisseler[ad]) return;
-        const h = veri.hisseler[ad];
-        const rRenk  = h.rsi < 35 ? '#26a69a' : h.rsi > 65 ? '#ef5350' : '#888';
-        const macd   = macdDeger(h);
-        const hacim  = hacimMetin(h.hacim_oran);
-        const seviye = {'Altin':'🏆 Altın','Gumus':'🥈 Gümüş','Bronz':'🥉 Bronz'}[h.altin] || '— Sinyal Yok';
-        const badgeHTML = h.sinyaller.filter(s => getBadgeClass(s) !== 'badge-notr').slice(0,6)
-            .map(s => `<span class="badge ${getBadgeClass(s)}">${s}</span>`).join('');
-        aktifTip = '_arama_';
-        document.getElementById('ana').style.display = 'none';
-        const se = document.getElementById('sonuc');
-        se.style.display = 'block'; se.scrollTop = 0;
-        tg.BackButton.show();
-        document.getElementById('sonuc-baslik').textContent = '🔍 ' + ad;
-        document.getElementById('sonuc-tarih').textContent  = veri ? '📅 ' + veri.tarih : '';
-        document.getElementById('sayac').textContent = '';
-        document.getElementById('liste').innerHTML = `
-        <div class="hisse-kart" style="margin-top:8px;">
-            <div class="hisse-ust">
-                <div class="hisse-sol"><div class="hisse-ad">${ad}</div>
-                <div class="hisse-fiyat">${h.kapanis} TL · ${seviye}</div></div>
-                <button class="fav-btn ${favoriler.includes(ad)?'aktif':''}" onclick="favToggle('${ad}')" id="fav_${ad}">⭐</button>
-            </div>
-            <div class="gostergeler">
-                <div class="gosterge-pill"><span class="gosterge-etiket">RSI</span>
-                    <span class="gosterge-deger" style="color:${rRenk}">${h.rsi !== null ? h.rsi : '—'}</span></div>
-                <div class="gosterge-pill"><span class="gosterge-etiket">MACD</span>
-                    <span class="gosterge-deger ${macd.renk}">${macd.metin}</span></div>
-                <div class="gosterge-pill"><span class="gosterge-etiket">HACİM</span>
-                    <span class="gosterge-deger ${hacim.renk}">${hacim.metin}</span></div>
-            </div>
-            <div class="badge-listesi">${badgeHTML || '<span style="color:#333;font-size:11px;">Sinyal yok</span>'}</div>
-            <div class="hisse-linkler">
-                <a class="hisse-link tv" href="https://tr.tradingview.com/chart/?symbol=BIST:${ad}" target="_blank">📈 TradingView</a>
-            </div>
-        </div>
-        <div class="alt-uyari">⚠️ Yatırım tavsiyesi değildir.</div>`;
-    }
-
+function favToggle(ad) {
+  favoriler = favoriler.includes(ad) ? favoriler.filter(f=>f!==ad) : [...favoriler, ad];
+  localStorage.setItem('favoriler', JSON.stringify(favoriler));
+  document.querySelectorAll('#fav_'+ad).forEach(btn => {
+    btn.classList.toggle('aktif', favoriler.includes(ad));
+  });
+}
 </script>
 </body>
 </html>
