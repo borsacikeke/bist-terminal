@@ -126,50 +126,114 @@ def hacim_yorum(h):
         return f"📊 Yüksek ({oran}x)"
     return f"Normal ({oran}x)"
 
-# ── Grafik çizici ─────────────────────────────────────────────────────────────
+# ── Grafik çizici (Mum + Hacim + RSI + MACD) ─────────────────────────────────
 def grafik_ciz(ad, h):
     try:
+        import mplfinance as mpf
+
         ticker = ad + ".IS"
         df = yf.download(ticker, period="3mo", interval="1d", progress=False, auto_adjust=True)
-        if df is None or len(df) < 10:
+        if df is None or len(df) < 20:
             return None
         df.columns = [c[0] if isinstance(c, tuple) else c for c in df.columns]
-        close = df["Close"].astype(float)
-        ema20 = close.ewm(span=20, adjust=False).mean()
-        ema50 = close.ewm(span=50, adjust=False).mean()
+        df = df[["Open","High","Low","Close","Volume"]].astype(float).dropna()
 
-        fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 6),
-                                        gridspec_kw={"height_ratios": [3, 1]},
-                                        facecolor="#0a0a0f")
-        for ax in (ax1, ax2):
-            ax.set_facecolor("#111118")
-            ax.tick_params(colors="#888", labelsize=8)
-            for spine in ax.spines.values():
-                spine.set_edgecolor("#2a2a3a")
+        close  = df["Close"]
+        ema20  = close.ewm(span=20, adjust=False).mean()
+        ema50  = close.ewm(span=50, adjust=False).mean()
 
-        ax1.plot(close.index, close.values, color="#e0e0e0", linewidth=1.5, label="Fiyat")
-        ax1.plot(ema20.index, ema20.values, color="#2962ff", linewidth=1, linestyle="--", label="EMA20")
-        ax1.plot(ema50.index, ema50.values, color="#f59e0b", linewidth=1, linestyle="--", label="EMA50")
-        ax1.set_title(f"{ad}  |  {h.get('kapanis', '—')} TL  |  RSI: {h.get('rsi', '—')}",
-                      color="#fff", fontsize=12, pad=8)
-        ax1.legend(loc="upper left", fontsize=7, facecolor="#1a1a24", labelcolor="#ccc", framealpha=0.8)
-        ax1.set_ylabel("Fiyat (TL)", color="#888", fontsize=8)
+        # RSI hesapla
+        delta = close.diff()
+        gain  = delta.clip(lower=0).rolling(14).mean()
+        loss  = (-delta.clip(upper=0)).rolling(14).mean()
+        rs    = gain / loss.replace(0, np.nan)
+        rsi   = 100 - (100 / (1 + rs))
 
-        ax2.bar(df.index, df["Volume"].astype(float), color="#2962ff", alpha=0.6, width=0.8)
-        ax2.set_ylabel("Hacim", color="#888", fontsize=8)
+        # MACD hesapla
+        ema12     = close.ewm(span=12, adjust=False).mean()
+        ema26     = close.ewm(span=26, adjust=False).mean()
+        macd_line = ema12 - ema26
+        sig_line  = macd_line.ewm(span=9, adjust=False).mean()
+        histogram = macd_line - sig_line
 
+        # mplfinance dark tema
+        mc = mpf.make_marketcolors(
+            up="#26a69a", down="#ef5350",
+            edge="inherit",
+            wick={"up":"#26a69a","down":"#ef5350"},
+            volume={"up":"#26a69a","down":"#ef5350"},
+        )
+        style = mpf.make_mpf_style(
+            marketcolors=mc,
+            facecolor="#111118",
+            edgecolor="#2a2a3a",
+            figcolor="#0a0a0f",
+            gridcolor="#1a1a24",
+            gridstyle="--",
+            gridaxis="both",
+            rc={
+                "axes.labelcolor": "#888",
+                "xtick.color": "#888",
+                "ytick.color": "#888",
+                "font.size": 8,
+            }
+        )
+
+        # Ek paneller (RSI + MACD)
+        # MACD histogram renkleri
+        hist_colors = ["#26a69a" if v >= 0 else "#ef5350" for v in histogram.fillna(0)]
+
+        ap = [
+            mpf.make_addplot(ema20, color="#2962ff",  linewidth=1.2, linestyle="--", label="EMA20"),
+            mpf.make_addplot(ema50, color="#f59e0b",  linewidth=1.2, linestyle="--", label="EMA50"),
+            # RSI paneli
+            mpf.make_addplot(rsi, panel=2, color="#c084fc", linewidth=1.2, ylabel="RSI",
+                             ylim=(0, 100)),
+            mpf.make_addplot([70]*len(df), panel=2, color="#ef5350", linewidth=0.7,
+                             linestyle="--", secondary_y=False),
+            mpf.make_addplot([30]*len(df), panel=2, color="#26a69a", linewidth=0.7,
+                             linestyle="--", secondary_y=False),
+            # MACD çizgileri
+            mpf.make_addplot(macd_line, panel=3, color="#2962ff", linewidth=1.2, ylabel="MACD"),
+            mpf.make_addplot(sig_line,  panel=3, color="#f59e0b",  linewidth=1.0, linestyle="--"),
+            mpf.make_addplot(histogram, panel=3, type="bar", color=hist_colors, alpha=0.7),
+        ]
+
+        rsi_val = h.get("rsi", "—")
+        title = f"{ad}  |  {h.get('kapanis','—')} TL  |  RSI: {rsi_val}"
+
+        fig, axes = mpf.plot(
+            df,
+            type="candle",
+            style=style,
+            addplot=ap,
+            volume=True,
+            volume_panel=1,
+            panel_ratios=(4, 1.2, 1.2, 1.2),
+            figsize=(12, 10),
+            title=title,
+            returnfig=True,
+            tight_layout=True,
+        )
+
+        # Başlık rengi
+        fig.axes[0].title.set_color("#ffffff")
+        fig.axes[0].title.set_fontsize(11)
+
+        # Sinyal notu
         sinyaller = h.get("sinyaller", [])[:5]
         if sinyaller:
-            ax1.annotate(
+            fig.axes[0].annotate(
                 "📊 " + " · ".join(sinyaller),
-                xy=(0.01, 0.05), xycoords="axes fraction",
+                xy=(0.01, 0.03), xycoords="axes fraction",
                 fontsize=7, color="#f59e0b",
-                bbox=dict(boxstyle="round,pad=0.3", facecolor="#1a1200", edgecolor="#3a2800", alpha=0.9)
+                bbox=dict(boxstyle="round,pad=0.3", facecolor="#1a1200",
+                          edgecolor="#3a2800", alpha=0.9)
             )
 
-        plt.tight_layout(pad=1.5)
         buf = BytesIO()
-        plt.savefig(buf, format="png", dpi=110, bbox_inches="tight", facecolor="#0a0a0f")
+        fig.savefig(buf, format="png", dpi=110, bbox_inches="tight",
+                    facecolor="#0a0a0f")
         plt.close(fig)
         buf.seek(0)
         return buf
@@ -477,28 +541,42 @@ async def buton(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
         await query.message.reply_text(
             f"🥇 *{len(altin_hisseler)} Altın Sinyal* — Grafikler hazırlanıyor...\n"
-            f"_Yatırım tavsiyesi değildir._",
+            f"_Bu işlem {len(altin_hisseler)} hisse için biraz sürebilir._",
             parse_mode="Markdown"
         )
-        for ad in altin_hisseler[:8]:
-            h   = veri["hisseler"][ad]
-            buf = grafik_ciz(ad, h)
-            sinyaller_str = " · ".join(h.get("sinyaller", [])[:4])
-            caption = (
-                f"🥇 *{ad}* — {h.get('kapanis','—')} TL\n"
-                f"RSI:`{h.get('rsi','—')}` | MACD:{macd_yorum(h)} | {hacim_yorum(h)}\n"
-                f"📊 {sinyaller_str}\n"
-                f"_Yatırım tavsiyesi değildir._"
-            )
-            keyboard = [[
-                InlineKeyboardButton("📈 TradingView", url=f"https://tr.tradingview.com/chart/?symbol=BIST:{ad}"),
-            ]]
-            if buf:
-                await query.message.reply_photo(photo=buf, caption=caption, parse_mode="Markdown",
-                                                reply_markup=InlineKeyboardMarkup(keyboard))
-            else:
-                await query.message.reply_text(caption, parse_mode="Markdown",
-                                               reply_markup=InlineKeyboardMarkup(keyboard))
+        basarili = 0
+        for i, ad in enumerate(altin_hisseler):
+            try:
+                h   = veri["hisseler"][ad]
+                buf = grafik_ciz(ad, h)
+                sinyaller_str = " · ".join(h.get("sinyaller", [])[:4])
+                caption = (
+                    f"🥇 *{ad}* — {h.get('kapanis','—')} TL\n"
+                    f"RSI:`{h.get('rsi','—')}` | MACD:{macd_yorum(h)} | {hacim_yorum(h)}\n"
+                    f"📊 {sinyaller_str}\n"
+                    f"_Yatırım tavsiyesi değildir._"
+                )
+                keyboard = [[
+                    InlineKeyboardButton("📈 TradingView", url=f"https://tr.tradingview.com/chart/?symbol=BIST:{ad}"),
+                ]]
+                if buf:
+                    await query.message.reply_photo(photo=buf, caption=caption, parse_mode="Markdown",
+                                                    reply_markup=InlineKeyboardMarkup(keyboard))
+                    basarili += 1
+                else:
+                    await query.message.reply_text(caption, parse_mode="Markdown",
+                                                   reply_markup=InlineKeyboardMarkup(keyboard))
+                    basarili += 1
+                # Telegram flood koruması: her grafik sonrası 3 saniye bekle
+                import asyncio
+                await asyncio.sleep(5)
+            except Exception as e:
+                print(f"Grafik gönderilemedi {ad}: {e}")
+                continue
+        await query.message.reply_text(
+            f"✅ *{basarili}/{len(altin_hisseler)}* grafik gönderildi.\n_Yatırım tavsiyesi değildir._",
+            parse_mode="Markdown"
+        )
 
     # ── Tavan Tarama Grafikleri (10 davet) ────────────────────────────────────
     elif query.data == "tavan_grafik":
@@ -526,28 +604,42 @@ async def buton(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
         await query.message.reply_text(
             f"🏆 *{len(ozel_hisseler)} Tavan Tarama Sinyali* — Grafikler hazırlanıyor...\n"
-            f"_Yatırım tavsiyesi değildir._",
+            f"_Bu işlem {len(ozel_hisseler)} hisse için biraz sürebilir._",
             parse_mode="Markdown"
         )
-        for ad in ozel_hisseler[:8]:
-            h   = veri["hisseler"][ad]
-            buf = grafik_ciz(ad, h)
-            sinyaller_str = " · ".join(h.get("sinyaller", [])[:4])
-            caption = (
-                f"🏆 *{ad}* — {h.get('kapanis','—')} TL\n"
-                f"RSI:`{h.get('rsi','—')}` | MACD:{macd_yorum(h)} | {hacim_yorum(h)}\n"
-                f"📊 {sinyaller_str}\n"
-                f"_Yatırım tavsiyesi değildir._"
-            )
-            keyboard = [[
-                InlineKeyboardButton("📈 TradingView", url=f"https://tr.tradingview.com/chart/?symbol=BIST:{ad}"),
-            ]]
-            if buf:
-                await query.message.reply_photo(photo=buf, caption=caption, parse_mode="Markdown",
-                                                reply_markup=InlineKeyboardMarkup(keyboard))
-            else:
-                await query.message.reply_text(caption, parse_mode="Markdown",
-                                               reply_markup=InlineKeyboardMarkup(keyboard))
+        basarili = 0
+        for i, ad in enumerate(ozel_hisseler):
+            try:
+                h   = veri["hisseler"][ad]
+                buf = grafik_ciz(ad, h)
+                sinyaller_str = " · ".join(h.get("sinyaller", [])[:4])
+                caption = (
+                    f"🏆 *{ad}* — {h.get('kapanis','—')} TL\n"
+                    f"RSI:`{h.get('rsi','—')}` | MACD:{macd_yorum(h)} | {hacim_yorum(h)}\n"
+                    f"📊 {sinyaller_str}\n"
+                    f"_Yatırım tavsiyesi değildir._"
+                )
+                keyboard = [[
+                    InlineKeyboardButton("📈 TradingView", url=f"https://tr.tradingview.com/chart/?symbol=BIST:{ad}"),
+                ]]
+                if buf:
+                    await query.message.reply_photo(photo=buf, caption=caption, parse_mode="Markdown",
+                                                    reply_markup=InlineKeyboardMarkup(keyboard))
+                    basarili += 1
+                else:
+                    await query.message.reply_text(caption, parse_mode="Markdown",
+                                                   reply_markup=InlineKeyboardMarkup(keyboard))
+                    basarili += 1
+                # Telegram flood koruması: her grafik sonrası 3 saniye bekle
+                import asyncio
+                await asyncio.sleep(5)
+            except Exception as e:
+                print(f"Grafik gönderilemedi {ad}: {e}")
+                continue
+        await query.message.reply_text(
+            f"✅ *{basarili}/{len(ozel_hisseler)}* grafik gönderildi.\n_Yatırım tavsiyesi değildir._",
+            parse_mode="Markdown"
+        )
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
