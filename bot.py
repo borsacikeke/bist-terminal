@@ -304,7 +304,6 @@ async def hisse_komut(update: Update, context: ContextTypes.DEFAULT_TYPE):
     sinyaller = "\n".join(f"• {s}" for s in h.get("sinyaller", [])) or "Aktif sinyal yok"
     keyboard  = [[
         InlineKeyboardButton("📈 TradingView", url=f"https://tr.tradingview.com/chart/?symbol=BIST:{ad}"),
-        InlineKeyboardButton("📰 KAP", url=f"https://www.kap.org.tr/tr/bildirim-sorgu?subjectTypes=FR,DR,IA&companies={ad}")
     ]]
     await update.message.reply_text(
         f"📊 *{ad}* — {h.get('kapanis','—')} TL\n"
@@ -493,7 +492,6 @@ async def buton(update: Update, context: ContextTypes.DEFAULT_TYPE):
             )
             keyboard = [[
                 InlineKeyboardButton("📈 TradingView", url=f"https://tr.tradingview.com/chart/?symbol=BIST:{ad}"),
-                InlineKeyboardButton("📰 KAP", url=f"https://www.kap.org.tr/tr/bildirim-sorgu?subjectTypes=FR,DR,IA&companies={ad}")
             ]]
             if buf:
                 await query.message.reply_photo(photo=buf, caption=caption, parse_mode="Markdown",
@@ -543,7 +541,6 @@ async def buton(update: Update, context: ContextTypes.DEFAULT_TYPE):
             )
             keyboard = [[
                 InlineKeyboardButton("📈 TradingView", url=f"https://tr.tradingview.com/chart/?symbol=BIST:{ad}"),
-                InlineKeyboardButton("📰 KAP", url=f"https://www.kap.org.tr/tr/bildirim-sorgu?subjectTypes=FR,DR,IA&companies={ad}")
             ]]
             if buf:
                 await query.message.reply_photo(photo=buf, caption=caption, parse_mode="Markdown",
