@@ -1,5 +1,5 @@
 {
-  "tarih": "19.03.2026 21:07",
+  "tarih": "20.03.2026 20:26",
   "periyot": "gunluk",
   "hisseler": {
     "A1CAP": {
@@ -7115,9 +7115,9 @@
     "ISATR": {
       "kapanis": 4950000.0,
       "rsi": null,
-      "macd": -45.9893,
-      "macd_sinyal": -67.6297,
-      "macd_histogram": 21.6403,
+      "macd": -42.5828,
+      "macd_sinyal": -62.6203,
+      "macd_histogram": 20.0375,
       "hacim_oran": null,
       "sinyaller": [
         "MACD Pozitif",
