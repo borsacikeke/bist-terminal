@@ -1,5 +1,5 @@
 {
-  "tarih": "07.04.2026 18:43",
+  "tarih": "07.04.2026 21:13",
   "periyot": "gunluk",
   "hisseler": {
     "A1CAP": {
@@ -7227,7 +7227,7 @@
       "macd": -5946.5253,
       "macd_sinyal": -6740.4378,
       "macd_histogram": 793.9125,
-      "hacim_oran": 1.47,
+      "hacim_oran": 0.66,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Altinda",
