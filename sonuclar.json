@@ -1,5 +1,5 @@
 {
-  "tarih": "22.04.2026 19:38",
+  "tarih": "23.04.2026 20:01",
   "periyot": "gunluk",
   "hisseler": {
     "A1CAP": {
@@ -2496,29 +2496,26 @@
       "ozel_tarama": false
     },
     "BLUME": {
-      "kapanis": 40.4,
-      "rsi": 0.0,
-      "macd": -1.6273,
-      "macd_sinyal": -0.3253,
-      "macd_histogram": -1.3019,
-      "hacim_oran": 20.0,
+      "kapanis": 60.8,
+      "rsi": null,
+      "macd": 0.0001,
+      "macd_sinyal": 0.0001,
+      "macd_histogram": -0.0,
+      "hacim_oran": null,
       "sinyaller": [
         "MACD Negatif",
-        "Fiyat EMA20 Altinda",
-        "Fiyat EMA50 Altinda",
-        "Fiyat SMA200 Altinda",
-        "EMA20 < EMA50",
-        "Death Cross",
-        "RSI Asiri Satim",
+        "Fiyat EMA20 Ustunde",
+        "Fiyat EMA50 Ustunde",
+        "Fiyat SMA200 Ustunde",
+        "EMA20 > EMA50",
         "BB Alt Bant",
-        "Hacim Alarmi",
-        "Hacim Bombasi"
+        "Destek Testi"
       ],
-      "altin": "Gumus",
+      "altin": "Bronz",
       "bant_sikismasi": false,
       "guc_patlamasi": false,
-      "destek_testi": false,
-      "hacim_bombasi": true,
+      "destek_testi": true,
+      "hacim_bombasi": false,
       "trend_uyumu": false,
       "ozel_tarama": false
     },
@@ -5242,7 +5239,7 @@
       "macd": 0.1164,
       "macd_sinyal": 0.0528,
       "macd_histogram": 0.0636,
-      "hacim_oran": 7.14,
+      "hacim_oran": 7.83,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -6052,7 +6049,7 @@
       "macd": 12.8004,
       "macd_sinyal": 14.2043,
       "macd_histogram": -1.4038,
-      "hacim_oran": 2.46,
+      "hacim_oran": 4.87,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -6402,7 +6399,7 @@
       "macd": 7.3453,
       "macd_sinyal": 3.1666,
       "macd_histogram": 4.1787,
-      "hacim_oran": 0.89,
+      "hacim_oran": 0.93,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -7293,9 +7290,9 @@
     "ISATR": {
       "kapanis": 4950000.0,
       "rsi": null,
-      "macd": 3.148,
-      "macd_sinyal": -0.1624,
-      "macd_histogram": 3.3103,
+      "macd": 3.2208,
+      "macd_sinyal": 0.5143,
+      "macd_histogram": 2.7065,
       "hacim_oran": null,
       "sinyaller": [
         "MACD Pozitif",
@@ -7944,7 +7941,7 @@
       "macd": 4.3222,
       "macd_sinyal": 3.6299,
       "macd_histogram": 0.6924,
-      "hacim_oran": 0.56,
+      "hacim_oran": 0.57,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -12213,7 +12210,7 @@
       "macd": 0.1693,
       "macd_sinyal": 0.1159,
       "macd_histogram": 0.0535,
-      "hacim_oran": 7.79,
+      "hacim_oran": 0.0,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
