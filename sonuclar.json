@@ -1,5 +1,5 @@
 {
-  "tarih": "18.05.2026 20:39",
+  "tarih": "19.05.2026 20:51",
   "periyot": "gunluk",
   "hisseler": {
     "A1CAP": {
@@ -2433,29 +2433,26 @@
       "ozel_tarama": false
     },
     "BLUME": {
-      "kapanis": 39.4,
-      "rsi": 0.0,
-      "macd": -1.7071,
-      "macd_sinyal": -0.3414,
-      "macd_histogram": -1.3657,
-      "hacim_oran": 20.0,
+      "kapanis": 60.8,
+      "rsi": null,
+      "macd": 0.0,
+      "macd_sinyal": 0.0,
+      "macd_histogram": -0.0,
+      "hacim_oran": null,
       "sinyaller": [
         "MACD Negatif",
-        "Fiyat EMA20 Altinda",
-        "Fiyat EMA50 Altinda",
-        "Fiyat SMA200 Altinda",
-        "EMA20 < EMA50",
-        "Death Cross",
-        "RSI Asiri Satim",
+        "Fiyat EMA20 Ustunde",
+        "Fiyat EMA50 Ustunde",
+        "Fiyat SMA200 Ustunde",
+        "EMA20 > EMA50",
         "BB Alt Bant",
-        "Hacim Alarmi",
-        "Hacim Bombasi"
+        "Destek Testi"
       ],
-      "altin": "Gumus",
+      "altin": "Bronz",
       "bant_sikismasi": false,
       "guc_patlamasi": false,
-      "destek_testi": false,
-      "hacim_bombasi": true,
+      "destek_testi": true,
+      "hacim_bombasi": false,
       "trend_uyumu": false,
       "ozel_tarama": false
     },
@@ -2780,7 +2777,7 @@
       "macd": -5.124,
       "macd_sinyal": 3.1343,
       "macd_histogram": -8.2583,
-      "hacim_oran": 0.72,
+      "hacim_oran": 0.79,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -6260,20 +6257,22 @@
       "macd": 18.5583,
       "macd_sinyal": 27.0122,
       "macd_histogram": -8.4539,
-      "hacim_oran": 0.57,
+      "hacim_oran": 8.53,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Ustunde",
         "Fiyat EMA50 Ustunde",
         "Fiyat SMA200 Ustunde",
         "EMA20 > EMA50",
-        "RSI Yukseliyor"
+        "RSI Yukseliyor",
+        "Hacim Alarmi",
+        "Hacim Bombasi"
       ],
-      "altin": null,
+      "altin": "Bronz",
       "bant_sikismasi": false,
       "guc_patlamasi": false,
       "destek_testi": false,
-      "hacim_bombasi": false,
+      "hacim_bombasi": true,
       "trend_uyumu": false,
       "ozel_tarama": false
     },
@@ -7107,9 +7106,9 @@
     "ISATR": {
       "kapanis": 4950000.0,
       "rsi": null,
-      "macd": 1.558,
-      "macd_sinyal": 1.9401,
-      "macd_histogram": -0.3821,
+      "macd": 1.4577,
+      "macd_sinyal": 1.8437,
+      "macd_histogram": -0.3859,
       "hacim_oran": null,
       "sinyaller": [
         "MACD Negatif",
@@ -8538,7 +8537,7 @@
       "macd": 12.3898,
       "macd_sinyal": 12.1268,
       "macd_histogram": 0.2631,
-      "hacim_oran": 0.6,
+      "hacim_oran": 1.05,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -11873,7 +11872,7 @@
       "macd": 0.0585,
       "macd_sinyal": 0.136,
       "macd_histogram": -0.0776,
-      "hacim_oran": 20.0,
+      "hacim_oran": null,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
