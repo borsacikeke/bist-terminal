@@ -1,5 +1,5 @@
 {
-  "tarih": "27.05.2026 21:10",
+  "tarih": "28.05.2026 21:23",
   "periyot": "gunluk",
   "hisseler": {
     "A1CAP": {
@@ -4109,7 +4109,6 @@
         "MACD Negatif",
         "Fiyat EMA20 Ustunde",
         "Fiyat EMA50 Ustunde",
-        "Fiyat SMA200 Ustunde",
         "EMA20 > EMA50",
         "BB Alt Bant",
         "Destek Testi"
@@ -7035,9 +7034,9 @@
     "ISATR": {
       "kapanis": 4950000.0,
       "rsi": null,
-      "macd": 0.9608,
-      "macd_sinyal": 1.2974,
-      "macd_histogram": -0.3365,
+      "macd": 0.8944,
+      "macd_sinyal": 1.2168,
+      "macd_histogram": -0.3224,
       "hacim_oran": null,
       "sinyaller": [
         "MACD Negatif",
@@ -13202,15 +13201,14 @@
     "TRMET": {
       "kapanis": 107.9,
       "rsi": 42.5,
-      "macd": -5.5779,
-      "macd_sinyal": -4.3373,
-      "macd_histogram": -1.2406,
+      "macd": -5.5782,
+      "macd_sinyal": -4.3378,
+      "macd_histogram": -1.2405,
       "hacim_oran": 0.41,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
         "Fiyat EMA50 Altinda",
-        "Fiyat SMA200 Altinda",
         "EMA20 < EMA50",
         "RSI Dusuyor"
       ],
