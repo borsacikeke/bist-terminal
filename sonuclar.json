@@ -1,5 +1,5 @@
 {
-  "tarih": "14.07.2026 19:46",
+  "tarih": "15.07.2026 19:51",
   "periyot": "gunluk",
   "hisseler": {
     "A1CAP": {
@@ -2812,7 +2812,7 @@
       "macd": -0.0253,
       "macd_sinyal": -0.0187,
       "macd_histogram": -0.0066,
-      "hacim_oran": 2.21,
+      "hacim_oran": 3.89,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Ustunde",
@@ -2821,13 +2821,14 @@
         "EMA20 > EMA50",
         "RSI Yukseliyor",
         "Hacim Alarmi",
-        "Destek Testi"
+        "Destek Testi",
+        "Hacim Bombasi"
       ],
       "altin": "Bronz",
       "bant_sikismasi": false,
       "guc_patlamasi": false,
       "destek_testi": true,
-      "hacim_bombasi": false,
+      "hacim_bombasi": true,
       "trend_uyumu": false,
       "ozel_tarama": false
     },
@@ -3248,7 +3249,7 @@
       "macd": -1.222,
       "macd_sinyal": -1.1032,
       "macd_histogram": -0.1188,
-      "hacim_oran": 1.26,
+      "hacim_oran": 1.33,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -4100,7 +4101,7 @@
       "macd": 237.1379,
       "macd_sinyal": 311.8974,
       "macd_histogram": -74.7595,
-      "hacim_oran": 0.01,
+      "hacim_oran": 0.2,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -4118,30 +4119,27 @@
       "ozel_tarama": false
     },
     "DUNYH": {
-      "kapanis": 140.6,
+      "kapanis": 109.1,
       "rsi": null,
-      "macd": 2.5128,
-      "macd_sinyal": 0.5026,
-      "macd_histogram": 2.0103,
-      "hacim_oran": 20.0,
+      "macd": 0.0,
+      "macd_sinyal": 0.0,
+      "macd_histogram": -0.0,
+      "hacim_oran": null,
       "sinyaller": [
-        "MACD Al Kesisimi",
-        "MACD Pozitif",
+        "MACD Negatif",
         "Fiyat EMA20 Ustunde",
         "Fiyat EMA50 Ustunde",
         "Fiyat SMA200 Ustunde",
         "EMA20 > EMA50",
-        "BB Ust Bant",
-        "Hacim Alarmi",
-        "Hacim Bombasi",
-        "Trend Uyumu"
+        "BB Alt Bant",
+        "Destek Testi"
       ],
       "altin": "Bronz",
       "bant_sikismasi": false,
       "guc_patlamasi": false,
-      "destek_testi": false,
-      "hacim_bombasi": true,
-      "trend_uyumu": true,
+      "destek_testi": true,
+      "hacim_bombasi": false,
+      "trend_uyumu": false,
       "ozel_tarama": false
     },
     "DURDO": {
@@ -4387,7 +4385,7 @@
       "macd": 0.4104,
       "macd_sinyal": 0.6038,
       "macd_histogram": -0.1934,
-      "hacim_oran": 0.72,
+      "hacim_oran": 1.08,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Ustunde",
@@ -5534,7 +5532,7 @@
       "macd": -1.3479,
       "macd_sinyal": 0.0721,
       "macd_histogram": -1.42,
-      "hacim_oran": 0.81,
+      "hacim_oran": 0.84,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -6080,7 +6078,7 @@
       "macd": 3.5505,
       "macd_sinyal": 3.921,
       "macd_histogram": -0.3705,
-      "hacim_oran": 0.47,
+      "hacim_oran": 1.04,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Ustunde",
@@ -6175,7 +6173,7 @@
       "macd": -23.6044,
       "macd_sinyal": -20.6501,
       "macd_histogram": -2.9543,
-      "hacim_oran": 1.29,
+      "hacim_oran": 1.31,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -7030,9 +7028,9 @@
     "ISATR": {
       "kapanis": 4950000.0,
       "rsi": null,
-      "macd": 0.0743,
-      "macd_sinyal": 0.1088,
-      "macd_histogram": -0.0345,
+      "macd": 0.0688,
+      "macd_sinyal": 0.1008,
+      "macd_histogram": -0.032,
       "hacim_oran": null,
       "sinyaller": [
         "MACD Negatif",
@@ -10744,7 +10742,7 @@
       "macd": 0.328,
       "macd_sinyal": 0.232,
       "macd_histogram": 0.096,
-      "hacim_oran": 0.69,
+      "hacim_oran": 0.82,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -11720,7 +11718,7 @@
       "macd": -0.0686,
       "macd_sinyal": -0.0849,
       "macd_histogram": 0.0163,
-      "hacim_oran": 6.3,
+      "hacim_oran": 0.0,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
