@@ -1,5 +1,5 @@
 {
-  "tarih": "28.10.2026 23:28",
+  "tarih": "29.10.2026 23:28",
   "periyot": "gunluk",
   "hisseler": {
     "A1CAP": {
@@ -194,7 +194,7 @@
       "macd": -10.3551,
       "macd_sinyal": -8.0674,
       "macd_histogram": -2.2876,
-      "hacim_oran": 0.95,
+      "hacim_oran": 1.95,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -1265,7 +1265,7 @@
       "macd": -22.4708,
       "macd_sinyal": -25.4177,
       "macd_histogram": 2.947,
-      "hacim_oran": 0.98,
+      "hacim_oran": 1.0,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Altinda",
@@ -1405,7 +1405,7 @@
       "macd": -3.9234,
       "macd_sinyal": -2.881,
       "macd_histogram": -1.0424,
-      "hacim_oran": 0.36,
+      "hacim_oran": 0.39,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -1569,7 +1569,7 @@
       "macd": -0.9995,
       "macd_sinyal": -0.9281,
       "macd_histogram": -0.0714,
-      "hacim_oran": 0.24,
+      "hacim_oran": 0.25,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -1754,7 +1754,7 @@
       "macd": -4.8542,
       "macd_sinyal": -4.4035,
       "macd_histogram": -0.4507,
-      "hacim_oran": 0.12,
+      "hacim_oran": 0.13,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -2063,7 +2063,7 @@
       "macd": -1.7251,
       "macd_sinyal": -1.6444,
       "macd_histogram": -0.0807,
-      "hacim_oran": 0.29,
+      "hacim_oran": 0.3,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -3245,7 +3245,7 @@
       "macd": -6.0113,
       "macd_sinyal": -6.5032,
       "macd_histogram": 0.4919,
-      "hacim_oran": 0.1,
+      "hacim_oran": 0.12,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Altinda",
@@ -3529,7 +3529,7 @@
       "macd": -0.2186,
       "macd_sinyal": -0.1816,
       "macd_histogram": -0.037,
-      "hacim_oran": 0.58,
+      "hacim_oran": 0.59,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -4045,26 +4045,25 @@
       "ozel_tarama": false
     },
     "DUNYH": {
-      "kapanis": 13.1,
-      "rsi": 0.0,
-      "macd": -7.6581,
-      "macd_sinyal": -1.5316,
-      "macd_histogram": -6.1265,
-      "hacim_oran": 20.0,
+      "kapanis": 109.1,
+      "rsi": null,
+      "macd": 0.0,
+      "macd_sinyal": 0.0,
+      "macd_histogram": -0.0,
+      "hacim_oran": null,
       "sinyaller": [
         "MACD Negatif",
-        "Fiyat EMA20 Altinda",
-        "Fiyat EMA50 Altinda",
+        "Fiyat EMA20 Ustunde",
+        "Fiyat EMA50 Ustunde",
         "Fiyat SMA200 Altinda",
-        "EMA20 < EMA50",
-        "Death Cross",
-        "RSI Asiri Satim",
-        "BB Alt Bant"
+        "EMA20 > EMA50",
+        "BB Alt Bant",
+        "Destek Testi"
       ],
       "altin": "Bronz",
       "bant_sikismasi": false,
       "guc_patlamasi": false,
-      "destek_testi": false,
+      "destek_testi": true,
       "hacim_bombasi": false,
       "trend_uyumu": false,
       "ozel_tarama": false
@@ -6921,7 +6920,7 @@
     "ISATR": {
       "kapanis": 4950000.0,
       "rsi": null,
-      "macd": 0.0004,
+      "macd": 0.0003,
       "macd_sinyal": 0.0005,
       "macd_histogram": -0.0002,
       "hacim_oran": null,
@@ -7017,7 +7016,7 @@
       "macd": -1.9969,
       "macd_sinyal": -0.8922,
       "macd_histogram": -1.1047,
-      "hacim_oran": 0.34,
+      "hacim_oran": 0.35,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -7137,7 +7136,7 @@
       "macd": -1.7114,
       "macd_sinyal": -1.4474,
       "macd_histogram": -0.264,
-      "hacim_oran": 0.48,
+      "hacim_oran": 0.5,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -8892,12 +8891,12 @@
       "ozel_tarama": false
     },
     "MARKA": {
-      "kapanis": 69.35,
-      "rsi": 74.6,
-      "macd": 1.4702,
-      "macd_sinyal": -0.1196,
-      "macd_histogram": 1.5898,
-      "hacim_oran": 1.25,
+      "kapanis": 75.0,
+      "rsi": 78.2,
+      "macd": 1.9728,
+      "macd_sinyal": 0.2989,
+      "macd_histogram": 1.674,
+      "hacim_oran": 0.72,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Ustunde",
@@ -10595,7 +10594,7 @@
       "macd": -0.3099,
       "macd_sinyal": -0.3543,
       "macd_histogram": 0.0444,
-      "hacim_oran": 0.74,
+      "hacim_oran": 0.75,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Altinda",
@@ -11045,7 +11044,7 @@
       "macd": -1.6432,
       "macd_sinyal": -1.1856,
       "macd_histogram": -0.4576,
-      "hacim_oran": 0.09,
+      "hacim_oran": 0.12,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -12047,10 +12046,9 @@
         "Fiyat EMA50 Altinda",
         "Fiyat SMA200 Altinda",
         "EMA20 < EMA50",
-        "RSI Asiri Satim",
-        "Cekic"
+        "RSI Asiri Satim"
       ],
-      "altin": "Gumus",
+      "altin": "Bronz",
       "bant_sikismasi": false,
       "guc_patlamasi": false,
       "destek_testi": false,
@@ -12580,10 +12578,10 @@
     "TERA": {
       "kapanis": 10.64,
       "rsi": 0.0,
-      "macd": -30.0743,
-      "macd_sinyal": -32.681,
-      "macd_histogram": 2.6067,
-      "hacim_oran": 0.76,
+      "macd": -28.9056,
+      "macd_sinyal": -31.9259,
+      "macd_histogram": 3.0203,
+      "hacim_oran": 0.0,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Altinda",
@@ -12931,10 +12929,10 @@
     "TRHOL": {
       "kapanis": 192.0,
       "rsi": 0.0,
-      "macd": -542.9422,
-      "macd_sinyal": -577.4532,
-      "macd_histogram": 34.5111,
-      "hacim_oran": 1.09,
+      "macd": -522.5571,
+      "macd_sinyal": -566.474,
+      "macd_histogram": 43.9169,
+      "hacim_oran": 0.0,
       "sinyaller": [
         "MACD Pozitif",
         "Fiyat EMA20 Altinda",
@@ -13618,7 +13616,7 @@
       "macd": -5.098,
       "macd_sinyal": -3.911,
       "macd_histogram": -1.1869,
-      "hacim_oran": 0.23,
+      "hacim_oran": 0.24,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
@@ -14104,7 +14102,7 @@
       "macd": -3.3859,
       "macd_sinyal": -2.7621,
       "macd_histogram": -0.6238,
-      "hacim_oran": 0.06,
+      "hacim_oran": 0.07,
       "sinyaller": [
         "MACD Negatif",
         "Fiyat EMA20 Altinda",
